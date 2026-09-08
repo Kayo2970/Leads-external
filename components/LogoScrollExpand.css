@@ -27,7 +27,7 @@
   will-change: opacity;
 }
 
-/* The frame revealing the underlying content through the razor-sharp vector SVG mask */
+/* The frame revealing the underlying content through the logo PNG luminance mask */
 .logo-scroll-expand__frame {
   position: absolute;
   inset: 0;
@@ -38,8 +38,10 @@
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-position: center;
-  mask-image: url('/leads-mask.svg');
-  -webkit-mask-image: url('/leads-mask.svg');
+  mask-mode: luminance;
+  -webkit-mask-mode: luminance;
+  mask-image: url('/leads-mask.png');
+  -webkit-mask-image: url('/leads-mask.png');
 }
 
 /* Strong solid white layer inside the mask cutout, fading out as the camera zooms in */

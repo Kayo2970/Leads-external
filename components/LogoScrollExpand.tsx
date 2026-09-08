@@ -23,7 +23,7 @@ export interface LogoScrollExpandProps {
 
 export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   logoSrc = "/leads-logo.png",
-  maskSrc = "/leads-mask.svg",
+  maskSrc = "/leads-mask.png",
   scrollDistance = 1.0,
   holdDistance = 0.2,
   smoothing = 0.1,
@@ -109,6 +109,8 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     } else {
       frame.style.maskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
+      frame.style.maskMode = "luminance";
+      (frame.style as any).webkitMaskMode = "luminance";
       frame.style.maskSize = `${currentSize}px auto`;
       frame.style.webkitMaskSize = `${currentSize}px auto`;
       frame.style.pointerEvents = e > 0.65 ? "auto" : "none";
