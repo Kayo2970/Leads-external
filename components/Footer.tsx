@@ -72,7 +72,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
-                  href="https://github.com/Kayo2970/Leads-external.git"
+                  href="https://www.bharatleadsummit.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-amber-300 hover:text-amber-200 transition-colors"

@@ -36,7 +36,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
       "Startup leadership mentoring sessions",
     ],
     speakers: ["Dr. M. S. Ramaiah Faculty", "Industry CEOs & Founders", "Government Policy Advisors"],
-    externalLink: "https://github.com/Kayo2970/Leads-external.git",
+    externalLink: "https://www.bharatleadsummit.com/",
   },
   {
     id: "catalyst-workshop-2025",

@@ -148,7 +148,7 @@ export default function Nav() {
 
             {/* External Nav Link: BLS */}
             <a
-              href="https://github.com/Kayo2970/Leads-external.git"
+              href="https://www.bharatleadsummit.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-amber-700 dark:text-amber-300 hover:bg-amber-500/10 transition-colors"
@@ -238,7 +238,7 @@ export default function Nav() {
 
           <div className="pt-2 border-t border-brand-violet/10 space-y-2">
             <a
-              href="https://github.com/Kayo2970/Leads-external.git"
+              href="https://www.bharatleadsummit.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-amber-600 dark:text-amber-400 bg-amber-500/10"
