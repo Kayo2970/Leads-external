@@ -13,8 +13,6 @@ import {
   Calendar,
   FileCheck,
   Database,
-  ExternalLink,
-  RotateCcw,
   Sparkles,
 } from "lucide-react";
 
@@ -27,7 +25,6 @@ export default function PortalGatewayPage() {
   const physicsRef = useRef<{
     engine: Matter.Engine;
     runner: Matter.Runner;
-    render?: Matter.Render;
     animId: number;
     elements: { body: Matter.Body; elem: HTMLElement; w: number; h: number }[];
   } | null>(null);
@@ -75,7 +72,7 @@ export default function PortalGatewayPage() {
     if (isFallen) return;
     setIsFallen(true);
 
-    // Prevent body scroll during physics simulation
+    // Prevent body scroll during physics scatter
     document.body.style.overflow = "hidden";
 
     const {
@@ -84,42 +81,13 @@ export default function PortalGatewayPage() {
       Bodies,
       Body,
       Runner,
-      Mouse,
-      MouseConstraint,
     } = Matter;
 
     const engine = Engine.create();
-    // Gravity matching React Bits FallingText spec (0.84)
-    engine.gravity.y = 0.84;
+    // Strong gravity so everything falls completely off screen within 3 seconds
+    engine.gravity.y = 1.35;
 
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    // Floor and walls to keep elements within screen bounds
-    const floorThickness = 80;
-    const floor = Bodies.rectangle(
-      width / 2,
-      height + floorThickness / 2 - 20,
-      width * 2,
-      floorThickness,
-      { isStatic: true, friction: 0.8, restitution: 0.3 }
-    );
-    const leftWall = Bodies.rectangle(
-      -30,
-      height / 2,
-      60,
-      height * 2,
-      { isStatic: true }
-    );
-    const rightWall = Bodies.rectangle(
-      width + 30,
-      height / 2,
-      60,
-      height * 2,
-      { isStatic: true }
-    );
-
-    World.add(engine.world, [floor, leftWall, rightWall]);
+    // Notice: NO floor or walls added — elements will scatter and fall off the screen completely!
 
     // Select all interactive portal items marked for falling
     const items = document.querySelectorAll<HTMLElement>(".portal-fall-item");
@@ -132,7 +100,6 @@ export default function PortalGatewayPage() {
 
     items.forEach((elem) => {
       const rect = elem.getBoundingClientRect();
-      // Skip invisible elements
       if (rect.width === 0 || rect.height === 0) return;
 
       const x = rect.left + rect.width / 2;
@@ -140,21 +107,20 @@ export default function PortalGatewayPage() {
 
       // Create Matter physics body
       const body = Bodies.rectangle(x, y, rect.width, rect.height, {
-        restitution: 0.45,
-        friction: 0.15,
-        frictionAir: 0.012,
-        density: 0.0018,
-        angle: (Math.random() - 0.5) * 0.12,
+        restitution: 0.5,
+        friction: 0.05,
+        frictionAir: 0.005, // low air drag so it plunges fast
+        density: 0.002,
+        angle: (Math.random() - 0.5) * 0.2,
       });
 
-      // Initial impulse & spin for realistic physical detachment
-      Body.setVelocity(body, {
-        x: (Math.random() - 0.5) * 6,
-        y: -1.5 - Math.random() * 2,
-      });
-      Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.07);
+      // Dramatic scatter impulse: explode outwards in X and pop upwards in Y before plunging
+      const scatterX = (Math.random() - 0.5) * 22; // strong left/right scatter
+      const scatterY = -4 - Math.random() * 8;     // pop up into the air
+      Body.setVelocity(body, { x: scatterX, y: scatterY });
+      Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.25); // rapid tumble
 
-      // Convert element to fixed position
+      // Fix element in place at current viewport coordinates
       elem.style.position = "fixed";
       elem.style.left = "0px";
       elem.style.top = "0px";
@@ -164,25 +130,13 @@ export default function PortalGatewayPage() {
       elem.style.zIndex = "40";
       elem.style.boxSizing = "border-box";
       elem.style.transformOrigin = "center center";
-      elem.style.pointerEvents = "auto";
-      elem.style.cursor = "grab";
-      elem.style.willChange = "transform";
-      elem.style.boxShadow = "0 20px 40px rgba(0,0,0,0.5)";
+      elem.style.pointerEvents = "none";
+      elem.style.willChange = "transform, opacity";
+      elem.style.boxShadow = "0 25px 50px rgba(0,0,0,0.6)";
 
       World.add(engine.world, body);
       physicsElements.push({ body, elem, w: rect.width, h: rect.height });
     });
-
-    // Mouse constraint for interactive dragging
-    const mouse = Mouse.create(document.body);
-    const mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 1.4, // matching React Bits mouseConstraintStiffness
-        render: { visible: false },
-      },
-    });
-    World.add(engine.world, mouseConstraint);
 
     const runner = Runner.create();
     Runner.run(runner, engine);
@@ -205,24 +159,11 @@ export default function PortalGatewayPage() {
       animId,
       elements: physicsElements,
     };
-  };
 
-  const resetFallingPhysics = () => {
-    if (physicsRef.current) {
-      const { engine, runner, animId, elements } = physicsRef.current;
-      cancelAnimationFrame(animId);
-      Matter.Runner.stop(runner);
-      Matter.Composite.clear(engine.world, false);
-      Matter.Engine.clear(engine);
-
-      // Reset inline styles on all elements
-      elements.forEach(({ elem }) => {
-        elem.removeAttribute("style");
-      });
-      physicsRef.current = null;
-    }
-    document.body.style.overflow = "";
-    setIsFallen(false);
+    // Auto-redirect to ERP portal URL precisely after 3 seconds
+    setTimeout(() => {
+      window.location.href = ERP_PORTAL_URL;
+    }, 3000);
   };
 
   useEffect(() => {
@@ -238,10 +179,10 @@ export default function PortalGatewayPage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#241147] text-white overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#241147] text-white overflow-hidden">
       {/* ─────────────────────────────────────────────────────────────
           BACKGROUND LAYER: Live LEADS ERP Portal
-          Shows https://leadsnextgencentre.online/ directly in the bg
+          Shows https://leadsnextgencentre.online/ immediately in the bg
       ───────────────────────────────────────────────────────────── */}
       <div
         className={`fixed inset-0 w-full h-full z-0 transition-opacity duration-700 ease-out ${
@@ -258,38 +199,8 @@ export default function PortalGatewayPage() {
       </div>
 
       {/* ─────────────────────────────────────────────────────────────
-          FLOATING CONTROL BAR (Appears when elements fall down)
-      ───────────────────────────────────────────────────────────── */}
-      {isFallen && (
-        <div className="fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#1A0B2E]/90 backdrop-blur-xl border border-white/20 shadow-[0_10px_35px_rgba(0,0,0,0.6)] animate-in fade-in slide-in-from-top-4 duration-500">
-          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-emerald-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]" />
-            <span>Portal Unlocked · Ready to Login</span>
-          </div>
-          <span className="text-white/20">|</span>
-          <button
-            onClick={resetFallingPhysics}
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-white/80 hover:text-white bg-white/10 hover:bg-white/20 transition-all cursor-pointer"
-            title="Restore page elements"
-          >
-            <RotateCcw className="w-3.5 h-3.5" />
-            <span>Reset View</span>
-          </button>
-          <a
-            href={ERP_PORTAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-[#9C1256] to-[#DE3F11] hover:brightness-110 shadow-sm transition-all"
-          >
-            <span>Open Fullscreen</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </div>
-      )}
-
-      {/* ─────────────────────────────────────────────────────────────
           PORTAL GATEWAY FOREGROUND
-          When Login button is clicked, elements tumble down with physics
+          When Login button is clicked, all elements scatter and fall off screen
       ───────────────────────────────────────────────────────────── */}
       <div
         ref={containerRef}
@@ -299,7 +210,7 @@ export default function PortalGatewayPage() {
       >
         {/* Ambient background glow (fades out on collapse) */}
         <div
-          className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none transition-opacity duration-700 ${
+          className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none transition-opacity duration-500 ${
             isFallen ? "opacity-0" : "opacity-100"
           }`}
         />
