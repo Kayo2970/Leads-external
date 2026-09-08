@@ -1,42 +1,21 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import BorderGlow from "@/components/BorderGlow";
 import {
   ShieldCheck,
-  ExternalLink,
   Lock,
-  Server,
   Layers,
   Users,
   DollarSign,
   Calendar,
   FileCheck,
-  CheckCircle,
-  Sparkles,
   ArrowRight,
   Database,
+  Sparkles,
 } from "lucide-react";
 
 export default function PortalGatewayPage() {
-  const [portalOnline, setPortalOnline] = useState<boolean | null>(null);
-  const portalUrl = "http://localhost:3030";
-
-  useEffect(() => {
-    // Check if local ERP server on port 3030 is reachable
-    const checkPortal = async () => {
-      try {
-        await fetch("http://localhost:3030", { mode: "no-cors" });
-        setPortalOnline(true);
-      } catch (err) {
-        setPortalOnline(false);
-      }
-    };
-    checkPortal();
-    const interval = setInterval(checkPortal, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   const erpModules = [
     {
       title: "Events & Task Engine",
@@ -86,14 +65,14 @@ export default function PortalGatewayPage() {
         <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16">
           <div className="inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-1.5 3xl:px-6 3xl:py-3 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-lg font-semibold mb-6 shadow-sm">
             <ShieldCheck className="w-4 h-4 text-[#DE3F11]" />
-            <span>LEADS Internal Enterprise Resource Gateway</span>
+            <span>LEADS Enterprise Resource Platform</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl font-extrabold text-white tracking-tight">
-            LEADS Member & ERP Portal
+            LEADS Members ERP Portal
           </h1>
           <p className="mt-4 3xl:mt-6 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] leading-relaxed">
-            The private operational platform for LEADS executive council, faculty leads, committee members, and student officers.
+            The integrated operational and resource platform for LEADS executive council, faculty leads, committee members, and student officers.
           </p>
         </div>
 
@@ -110,63 +89,35 @@ export default function PortalGatewayPage() {
             animated={true}
             className="shadow-2xl"
           >
-            <div className="p-8 sm:p-14 3xl:p-20 relative overflow-hidden">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 border-b border-white/10 pb-8 mb-8">
-                <div>
-                  <div className="flex items-center space-x-3 mb-2">
-                    <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11]">
-                      Local Enterprise Subsystem
-                    </span>
-                    <span className="inline-flex items-center space-x-1.5 px-3 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>{portalOnline === false ? "Ready to Launch" : "Subsystem Active"}</span>
-                    </span>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-extrabold text-white">
-                    Direct ERP Console Access
-                  </h2>
-                  <p className="text-sm 2xl:text-base text-[#E2D9F3]/80 mt-1">
-                    Port: <code className="px-2 py-0.5 rounded bg-black/40 text-brand-gold font-mono">http://localhost:3030</code>
-                  </p>
-                </div>
-
-                {/* Launch Button */}
-                <a
-                  href={portalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 rounded-2xl font-bold text-base 2xl:text-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group shrink-0"
-                >
-                  <Lock className="w-5 h-5 2xl:w-6 2xl:h-6" />
-                  <span>Launch ERP Portal</span>
-                  <ArrowRight className="w-5 h-5 2xl:w-6 2xl:h-6 group-hover:translate-x-1 transition-transform" />
-                </a>
+            <div className="p-8 sm:p-14 3xl:p-20 text-center relative overflow-hidden flex flex-col items-center justify-center">
+              <div className="w-16 h-16 3xl:w-20 3xl:h-20 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-6 shadow-lg">
+                <Lock className="w-8 h-8 3xl:w-10 3xl:h-10 text-white" />
               </div>
 
-              {/* Quick CLI launch instructions */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs 2xl:text-sm text-[#E2D9F3]/90 bg-[#1A0A33] p-5 3xl:p-8 rounded-2xl border border-white/10">
-                <div>
-                  <div className="font-bold text-white mb-1 flex items-center gap-1.5">
-                    <Server className="w-4 h-4 text-[#DE3F11]" />
-                    <span>How to Start ERP Subsystem</span>
-                  </div>
-                  <p className="text-[#E2D9F3]/70">Run from workspace root:</p>
-                  <code className="block mt-1 p-2 rounded bg-black/50 text-emerald-400 font-mono">
-                    npm run dev:portal
-                  </code>
-                </div>
-
-                <div>
-                  <div className="font-bold text-white mb-1 flex items-center gap-1.5">
-                    <Sparkles className="w-4 h-4 text-[#DE3F11]" />
-                    <span>Create Superuser / Reset Password</span>
-                  </div>
-                  <p className="text-[#E2D9F3]/70">Run interactive superuser script:</p>
-                  <code className="block mt-1 p-2 rounded bg-black/50 text-emerald-400 font-mono">
-                    npm run setup:portal
-                  </code>
-                </div>
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs 3xl:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-4">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Enterprise Portal Active & Deployed</span>
               </div>
+
+              <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-extrabold text-white mb-3">
+                Authorized Executive Gateway
+              </h2>
+              <p className="text-sm sm:text-base 2xl:text-lg text-[#E2D9F3]/90 max-w-xl mx-auto mb-8 leading-relaxed">
+                Access secure event logistics, real-time budgets, council resolutions, and committee asset repositories with your official LEADS credentials.
+              </p>
+
+              {/* Login Button */}
+              <button
+                type="button"
+                onClick={() => {
+                  window.location.href = "/portal/login";
+                }}
+                className="px-10 py-5 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-lg sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
+              >
+                <Lock className="w-6 h-6" />
+                <span>Login for Members</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
+              </button>
             </div>
           </BorderGlow>
         </div>

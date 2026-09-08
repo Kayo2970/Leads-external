@@ -26,10 +26,10 @@ export default function AboutPage() {
     { label: "All Members", value: "All" },
     { label: "Patron & Chief Advisor", value: "Patron & Chief Advisor" },
     { label: "Centre Head & Faculty Leads", value: "Centre Head & Faculty Leads" },
+    { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Student Core Council", value: "Student Core Council" },
     { label: "Student Advisory Council", value: "Student Advisory Council" },
     { label: "Student Trainee Associates", value: "Student Trainee Associates" },
-    { label: "Governing & Advisory", value: "Governing & Advisory" },
   ];
 
   // Partition member categories
@@ -57,10 +57,21 @@ export default function AboutPage() {
       columns: 3,
     },
     {
+      id: "governing-advisory",
+      group: "Governing & Advisory" as const,
+      title: "Governing & Corporate Advisory Board",
+      badge: "Governance Tier 03",
+      count: "6 Distinguished Advisors",
+      description:
+        "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Governing & Advisory"),
+      columns: 3,
+    },
+    {
       id: "core-council",
       group: "Student Core Council" as const,
       title: "Student Core Council",
-      badge: "Governance Tier 03",
+      badge: "Governance Tier 04",
       count: "8 Senior Officers",
       description:
         "Senior student executive leadership spearheading national summits, public relations, operations, finance, design, and research initiatives.",
@@ -71,7 +82,7 @@ export default function AboutPage() {
       id: "student-advisory",
       group: "Student Advisory Council" as const,
       title: "Student Advisory Council",
-      badge: "Governance Tier 04",
+      badge: "Governance Tier 05",
       count: "2 Senior Advisors",
       description:
         "Experienced student leaders providing strategic counsel, institutional continuity, and mentorship across committees.",
@@ -82,23 +93,12 @@ export default function AboutPage() {
       id: "trainee-associates",
       group: "Student Trainee Associates" as const,
       title: "Student Trainee Associates & Organizing Committee",
-      badge: "Governance Tier 05",
+      badge: "Governance Tier 06",
       count: "17 Associates",
       description:
         "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Trainee Associates"),
       columns: 4,
-    },
-    {
-      id: "governing-advisory",
-      group: "Governing & Advisory" as const,
-      title: "Governing & Corporate Advisory Board",
-      badge: "Governance Tier 06",
-      count: "6 Distinguished Advisors",
-      description:
-        "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Governing & Advisory"),
-      columns: 3,
     },
   ];
 
@@ -186,7 +186,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 2 [WHITE/LIGHT]: STORY, VISION & MISSION BENTO */}
+      {/* SECTION 2 [WHITE/LIGHT]: VISION & MISSION BENTO */}
       <section className="py-24 3xl:py-36 bg-[#FDFBFF] text-[#1E0C3D] border-y border-purple-100">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-16 3xl:mb-24">
@@ -201,33 +201,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 3xl:gap-12">
-            {/* Origin Story Card */}
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={28}
-              glowRadius={40}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-md hover:shadow-xl transition-all"
-            >
-              <div className="p-8 3xl:p-12 space-y-4 3xl:space-y-6">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
-                  <BookOpen className="w-6 h-6 3xl:w-8 3xl:h-8 text-white" />
-                </div>
-                <h3 className="text-2xl 3xl:text-3xl font-bold text-[#1E0C3D]">Our Foundation</h3>
-                <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
-                  Established as a premier leadership hub, LEADS Next-Gen Centre addresses a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership, ethical governance, and strategic management skills.
-                </p>
-                <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
-                  Through experiential learning, executive roundtables, and industry-aligned summits, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
-                </p>
-              </div>
-            </BorderGlow>
-
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 3xl:gap-12">
             {/* Vision Card */}
             <BorderGlow
               edgeSensitivity={30}
@@ -242,7 +216,7 @@ export default function AboutPage() {
             >
               <div className="p-8 3xl:p-12 space-y-4 3xl:space-y-6">
                 <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
-                  <Compass className="w-6 h-6 3xl:w-8 3xl:h-8 text-white" />
+                  <Sparkles className="w-6 h-6 3xl:w-8 3xl:h-8 text-white" />
                 </div>
                 <h3 className="text-2xl 3xl:text-3xl font-bold text-[#1E0C3D]">Our Vision</h3>
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
