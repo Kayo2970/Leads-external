@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Threads from "@/components/Threads";
+import SoftAurora from "@/components/SoftAurora";
 import EventCard from "@/components/EventCard";
 import EventModal from "@/components/EventModal";
 import { EVENTS_DATA, LEADSEvent } from "@/lib/events-data";
@@ -30,10 +30,27 @@ export default function Home() {
       {/* Event Detail Modal */}
       <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
 
-      {/* HERO SECTION WITH THREADS BACKGROUND */}
+      {/* HERO SECTION WITH SOFTAURORA BACKGROUND */}
       <section className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-gradient-to-b from-transparent via-brand-violet/5 to-transparent">
-        {/* WebGL Canvas Background */}
-        <Threads amplitude={1.2} distance={0} enableMouseInteraction={true} />
+        {/* SoftAurora WebGL Background */}
+        <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-90">
+          <SoftAurora
+            speed={0.6}
+            scale={1.5}
+            brightness={1.3}
+            color1="#00cfff"
+            color2="#3B82F6"
+            noiseFrequency={2.5}
+            noiseAmplitude={1}
+            bandHeight={0.5}
+            bandSpread={1}
+            octaveDecay={0.1}
+            layerOffset={0}
+            colorSpeed={3}
+            enableMouseInteraction
+            mouseInfluence={0.25}
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* Top Pill Badge */}
