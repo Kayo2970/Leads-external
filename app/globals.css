@@ -11,7 +11,7 @@
   --text-muted: #555555;
   --nav-bg: rgba(255, 255, 255, 0.85);
   --nav-border: rgba(54, 27, 106, 0.1);
-  --gold-accent: #d4a537;
+  --gold-accent: #f55439;
   --violet-brand: #361b6a;
 }
 
@@ -24,7 +24,7 @@
   --text-muted: #a0a0a0;
   --nav-bg: rgba(20, 11, 41, 0.85);
   --nav-border: rgba(122, 77, 210, 0.2);
-  --gold-accent: #d4a537;
+  --gold-accent: #f55439;
   --violet-brand: #7a4dd2;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #d4a537 0%, #f7e08b 50%, #b38722 100%);
+  background: linear-gradient(135deg, #a5346d 0%, #e2533c 50%, #f55439 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -64,7 +64,7 @@ body {
 }
 
 [data-theme="dark"] .violet-gradient-text {
-  background: linear-gradient(135deg, #9b6fe6 0%, #d4a537 100%);
+  background: linear-gradient(135deg, #9b6fe6 0%, #f55439 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
