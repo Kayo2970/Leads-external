@@ -23,7 +23,7 @@ export interface LogoScrollExpandProps {
 
 export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   logoSrc = "/leads-logo.png",
-  maskSrc = "/leads-mask.png",
+  maskSrc = "/leads-mask.svg",
   scrollDistance = 1.0,
   holdDistance = 0.2,
   smoothing = 0.1,
@@ -87,9 +87,9 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     // Smooth power curve for cinematic zoom acceleration
     const currentSize = startSize + (endSize - startSize) * Math.pow(e, 2.5);
 
-    // Fade white backdrop smoothly from 1.0 to 0.0 as the user scrolls into the logo
+    // Fade backdrop smoothly as the user scrolls into the logo
     if (bg) {
-      const bgFade = smoothstep(0.15, 0.75, p);
+      const bgFade = smoothstep(0.45, 0.95, p);
       bg.style.opacity = `${1 - bgFade}`;
     }
 

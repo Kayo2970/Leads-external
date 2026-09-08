@@ -14,20 +14,20 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #361C6A;
+  background-color: #241147;
 }
 
-/* Background overlay before mask expands - Pristine White that fades smoothly */
+/* Deep Backdrop behind the masked content */
 .logo-scroll-expand__bg {
   position: absolute;
   inset: 0;
-  background: #FFFFFF;
+  background: radial-gradient(circle at center, #361C6A 0%, #241147 70%, #15082E 100%);
   z-index: 1;
   pointer-events: none;
   will-change: opacity;
 }
 
-/* The frame revealing the underlying content through the logo alpha mask */
+/* The frame revealing the underlying content through the razor-sharp vector SVG mask */
 .logo-scroll-expand__frame {
   position: absolute;
   inset: 0;
@@ -38,8 +38,8 @@
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-position: center;
-  mask-image: url('/leads-mask.png');
-  -webkit-mask-image: url('/leads-mask.png');
+  mask-image: url('/leads-mask.svg');
+  -webkit-mask-image: url('/leads-mask.svg');
 }
 
 .logo-scroll-expand__scroll-hint {

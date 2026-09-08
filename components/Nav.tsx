@@ -13,23 +13,37 @@ import { REPORTS_DATA } from "@/lib/reports-data";
 
 export default function Nav() {
   const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [reportsDropdownOpen, setReportsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showHeader, setShowHeader] = useState(!isHomePage);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const y = window.scrollY;
+      setScrolled(y > 20);
+      if (isHomePage) {
+        // Only show header once the user scrolls down into the experience
+        setShowHeader(y > 80);
+      } else {
+        setShowHeader(true);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const isActive = (path: string) => pathname === path;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+        !showHeader
+          ? "opacity-0 -translate-y-full pointer-events-none"
+          : "opacity-100 translate-y-0 pointer-events-auto"
+      } ${
         scrolled ? "glass-nav py-3 shadow-lg" : "bg-transparent py-5"
       }`}
     >
