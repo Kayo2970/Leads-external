@@ -1,7 +1,7 @@
 {
   "app/about/page.tsx": {
-    "mtime": 1788877783.2807176,
-    "ast_hash": "a1cb0c2bc6ad3b15bc13cbb06f4d2625",
+    "mtime": 1788878586.9933786,
+    "ast_hash": "df8521b9cfa81a6b2a06f36c77ce37f8",
     "semantic_hash": ""
   },
   "app/api/contact/route.ts": {
@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "components/BoardMemberCard.tsx": {
-    "mtime": 1788877765.9555943,
-    "ast_hash": "45dbf5d1b8e57d700b06a8c4751c1e57",
+    "mtime": 1788878565.8589134,
+    "ast_hash": "d656ef924541c353a1f8a7d4fc8bf3f9",
     "semantic_hash": ""
   },
   "components/ContactForm.tsx": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "lib/board-data.ts": {
-    "mtime": 1788875477.8724809,
-    "ast_hash": "fa3c902439a6a973273aa1827c868a8a",
+    "mtime": 1788878544.834944,
+    "ast_hash": "a77321293bbf20484110c865ec6ce9e6",
     "semantic_hash": ""
   },
   "lib/events-data.ts": {
@@ -367,6 +367,526 @@
   "public/events/roundtable-exec.jpg": {
     "mtime": 1788878199.887814,
     "ast_hash": "c8d4b542333fc5341edaef8834e8869a",
+    "semantic_hash": ""
+  },
+  "public/images/committee/abhijit-arya.jpg": {
+    "mtime": 1788878418.7446506,
+    "ast_hash": "b54f122b923ded906f8811072bb5cef3",
+    "semantic_hash": ""
+  },
+  "public/images/committee/abhijit-arya.webp": {
+    "mtime": 1788878418.7446506,
+    "ast_hash": "6827465d3ea82e2bf8e6fa58c9179bc2",
+    "semantic_hash": ""
+  },
+  "public/images/committee/ajay-r.jpg": {
+    "mtime": 1788878418.7466915,
+    "ast_hash": "76c194989880717eefe232d74e0445f6",
+    "semantic_hash": ""
+  },
+  "public/images/committee/ajay-r.webp": {
+    "mtime": 1788878418.7482617,
+    "ast_hash": "551ace5a29732fab0b8eb09a6f2bc995",
+    "semantic_hash": ""
+  },
+  "public/images/committee/anurag-pandey.webp": {
+    "mtime": 1788878418.7522786,
+    "ast_hash": "03723b24a93f1b54159ef4dc087f8662",
+    "semantic_hash": ""
+  },
+  "public/images/committee/arvind-manashetti.webp": {
+    "mtime": 1788878418.75429,
+    "ast_hash": "f8cb02d5d94213b1980721275ce95279",
+    "semantic_hash": ""
+  },
+  "public/images/committee/arvind-rakshith.jpg": {
+    "mtime": 1788878418.7573915,
+    "ast_hash": "f715338fbe5d082b65f01bca2fcfe1c9",
+    "semantic_hash": ""
+  },
+  "public/images/committee/arvind-rakshith.webp": {
+    "mtime": 1788878418.765436,
+    "ast_hash": "021eadcbfeac21ebbb80e4914a9f5d68",
+    "semantic_hash": ""
+  },
+  "public/images/committee/bharvi-padia.jpg": {
+    "mtime": 1788878418.7669399,
+    "ast_hash": "8ed849799dd277c35c74a29ac259532f",
+    "semantic_hash": ""
+  },
+  "public/images/committee/bharvi-padia.webp": {
+    "mtime": 1788878418.7685356,
+    "ast_hash": "1e48b33c623e1bda69cba99285b1d1c8",
+    "semantic_hash": ""
+  },
+  "public/images/committee/bhavya-shree.webp": {
+    "mtime": 1788878418.7700398,
+    "ast_hash": "917208c71ba912be3f578f8e286bd45e",
+    "semantic_hash": ""
+  },
+  "public/images/committee/bhawen-maroo.jpg": {
+    "mtime": 1788878418.7705543,
+    "ast_hash": "c3e22759b499da662ebdecf646f7931b",
+    "semantic_hash": ""
+  },
+  "public/images/committee/bhawen-maroo.webp": {
+    "mtime": 1788878418.7730742,
+    "ast_hash": "2d824cc1a09d26924f58893feb512f5a",
+    "semantic_hash": ""
+  },
+  "public/images/committee/gurutejas-c.jpg": {
+    "mtime": 1788878418.7730742,
+    "ast_hash": "9344765e3dece0a172296f4bd49279fe",
+    "semantic_hash": ""
+  },
+  "public/images/committee/gurutejas-c.webp": {
+    "mtime": 1788878418.7753375,
+    "ast_hash": "344a8d8a44c3bfd405e4cfd196cb38ed",
+    "semantic_hash": ""
+  },
+  "public/images/committee/jyotsna-karn.webp": {
+    "mtime": 1788878418.7813518,
+    "ast_hash": "86d6732cb10a5384554d3250968761d7",
+    "semantic_hash": ""
+  },
+  "public/images/committee/kayomarz-pavri.webp": {
+    "mtime": 1788878418.7843657,
+    "ast_hash": "47f0a4b24d0b775b64970e9490c78f7b",
+    "semantic_hash": ""
+  },
+  "public/images/committee/kiran-kumar.jpg": {
+    "mtime": 1788878418.7853653,
+    "ast_hash": "da9f3092f7398d6d7744a7bf49e80213",
+    "semantic_hash": ""
+  },
+  "public/images/committee/kiran-kumar.webp": {
+    "mtime": 1788878418.7868698,
+    "ast_hash": "bbc95a6794e9101a4e7417348a3d4e55",
+    "semantic_hash": ""
+  },
+  "public/images/committee/kishan-kp.webp": {
+    "mtime": 1788878418.7913985,
+    "ast_hash": "d86cb20f97d98b280460c387b02b896b",
+    "semantic_hash": ""
+  },
+  "public/images/committee/kunal-bhadauria.webp": {
+    "mtime": 1788878418.797413,
+    "ast_hash": "271c47409bbee66b04c6400577169a7f",
+    "semantic_hash": ""
+  },
+  "public/images/committee/laksh-soorya-singh.jpg": {
+    "mtime": 1788878418.7995343,
+    "ast_hash": "2172ede2b7aef15d50e6b1a7fc2b287b",
+    "semantic_hash": ""
+  },
+  "public/images/committee/laksh-soorya-singh.webp": {
+    "mtime": 1788878418.8010457,
+    "ast_hash": "aa651c8a7aad2e2440ee7b084f6b9c88",
+    "semantic_hash": ""
+  },
+  "public/images/committee/manoj-petakamsetty.webp": {
+    "mtime": 1788878418.8025556,
+    "ast_hash": "d9c9976e8f2c4ed5c972d3f9acddd533",
+    "semantic_hash": ""
+  },
+  "public/images/committee/nimisha-km.webp": {
+    "mtime": 1788878418.8040621,
+    "ast_hash": "92aa5bd555fb27ed052309e67ba2f2f9",
+    "semantic_hash": ""
+  },
+  "public/images/committee/niyati-chawra.webp": {
+    "mtime": 1788878418.8070693,
+    "ast_hash": "544eae8c295e611841d0c2437f172fba",
+    "semantic_hash": ""
+  },
+  "public/images/committee/nuthan-h.webp": {
+    "mtime": 1788878418.8080673,
+    "ast_hash": "7239d7568d467552457ed56680e9e1d9",
+    "semantic_hash": ""
+  },
+  "public/images/committee/pallabi-mund.jpg": {
+    "mtime": 1788878418.8101823,
+    "ast_hash": "58b73e13acfb01e324dea49057cbc20f",
+    "semantic_hash": ""
+  },
+  "public/images/committee/pallabi-mund.webp": {
+    "mtime": 1788878418.816857,
+    "ast_hash": "75a3584dfaf3f6a5c43803a909c56bd9",
+    "semantic_hash": ""
+  },
+  "public/images/committee/pranav-pj.webp": {
+    "mtime": 1788878418.8198755,
+    "ast_hash": "a23393d8a32d3a8ff7472e1a74a54337",
+    "semantic_hash": ""
+  },
+  "public/images/committee/sadiya-sawood.webp": {
+    "mtime": 1788878418.8208804,
+    "ast_hash": "f1919e38652b5429f7e3e6bc26179172",
+    "semantic_hash": ""
+  },
+  "public/images/committee/sahana-mahadev.webp": {
+    "mtime": 1788878418.8233917,
+    "ast_hash": "a767a65076a28c043fa8395b0ae41b5d",
+    "semantic_hash": ""
+  },
+  "public/images/committee/shravya-t.webp": {
+    "mtime": 1788878418.8311045,
+    "ast_hash": "662158e6568a5afd6f19e1416d73aaf1",
+    "semantic_hash": ""
+  },
+  "public/images/committee/shreesha-sn.jpg": {
+    "mtime": 1788878418.8316095,
+    "ast_hash": "8bc9efb287badaa1ced532bca2282160",
+    "semantic_hash": ""
+  },
+  "public/images/committee/shreesha-sn.webp": {
+    "mtime": 1788878418.8336217,
+    "ast_hash": "158ba016aa569605c78b7c298a9991cc",
+    "semantic_hash": ""
+  },
+  "public/images/committee/shriram-sg.webp": {
+    "mtime": 1788878418.8346212,
+    "ast_hash": "d6c856b3a87a3c2417fa27df56032ade",
+    "semantic_hash": ""
+  },
+  "public/images/committee/shwetha-s.webp": {
+    "mtime": 1788878418.8447778,
+    "ast_hash": "53ab0e0a86a0166577d3b3717c638243",
+    "semantic_hash": ""
+  },
+  "public/images/committee/sudev-mitra.webp": {
+    "mtime": 1788878418.848459,
+    "ast_hash": "7ce1a37656bfe4d60ac386bc1befa96c",
+    "semantic_hash": ""
+  },
+  "public/images/committee/sujata-bijwe.jpg": {
+    "mtime": 1788878418.8499634,
+    "ast_hash": "b575645a68ba8518f3330a561c9f598e",
+    "semantic_hash": ""
+  },
+  "public/images/committee/sujata-bijwe.webp": {
+    "mtime": 1788878418.8504822,
+    "ast_hash": "3cd08289e4c2e56a8e39616f19ee3daa",
+    "semantic_hash": ""
+  },
+  "public/images/committee/syed-furqaan.webp": {
+    "mtime": 1788878418.8519955,
+    "ast_hash": "9d84203db882895e7163a3d0d5b204b5",
+    "semantic_hash": ""
+  },
+  "public/images/committee/yash-chandak.webp": {
+    "mtime": 1788878418.853501,
+    "ast_hash": "591f7b3b3d48d58d86f998f0a1a88847",
+    "semantic_hash": ""
+  },
+  "public/images/core/logo.webp": {
+    "mtime": 1788878418.861529,
+    "ast_hash": "e6801e0f5544457d500cf7d06029bdda",
+    "semantic_hash": ""
+  },
+  "public/images/core/og-banner.jpg": {
+    "mtime": 1788878418.863041,
+    "ast_hash": "bdee3a14c39d962fd3e2393383d9f566",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g1.webp": {
+    "mtime": 1788878418.885799,
+    "ast_hash": "ab24239944423e528aaffe5bbe7fab66",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g10.webp": {
+    "mtime": 1788878418.8930418,
+    "ast_hash": "0f075d6ee68b921e2ab065760cda45be",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g11.webp": {
+    "mtime": 1788878418.9031978,
+    "ast_hash": "6bd07d4d29eef23cd475f73875471786",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g12.webp": {
+    "mtime": 1788878418.9098577,
+    "ast_hash": "60634f782d7d9fdc51530f325eca6661",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g13.webp": {
+    "mtime": 1788878418.9154477,
+    "ast_hash": "5a446e22099ca321f364ae184ce7fbb3",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g14.webp": {
+    "mtime": 1788878418.923107,
+    "ast_hash": "bcc84afc67ce64b6c6794f0ac737379f",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g15.webp": {
+    "mtime": 1788878418.9286275,
+    "ast_hash": "e0398dae61213ee3fca7c82468a5a36f",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g16.webp": {
+    "mtime": 1788878418.9342945,
+    "ast_hash": "5b6119cd1f6f394debcc8ea8d1a0175f",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g2.webp": {
+    "mtime": 1788878418.9446673,
+    "ast_hash": "c4c2bd56536a8b0f3235f918d2aa024a",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g3.webp": {
+    "mtime": 1788878418.9506657,
+    "ast_hash": "cfded9cedb06d6da8348f75589d55f09",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g4.webp": {
+    "mtime": 1788878418.9549606,
+    "ast_hash": "a82413495467768af01270af8039c718",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g5.webp": {
+    "mtime": 1788878418.9721124,
+    "ast_hash": "0a9326d19a2101629573cd9c3a4a2952",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g6.webp": {
+    "mtime": 1788878418.9781618,
+    "ast_hash": "eaf9db644a4bff758604246393606be7",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g7.webp": {
+    "mtime": 1788878418.9970858,
+    "ast_hash": "db5438baed43072bf55c333d908b3d36",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g8.webp": {
+    "mtime": 1788878419.003603,
+    "ast_hash": "0b6eca62997f7db4d2e7282878e90a8c",
+    "semantic_hash": ""
+  },
+  "public/images/gallery/g9.webp": {
+    "mtime": 1788878419.0204463,
+    "ast_hash": "63f2506f4247f0e54d4cf3b13e19847c",
+    "semantic_hash": ""
+  },
+  "public/images/leadership/kuldeep-raina.jpg": {
+    "mtime": 1788878419.0219574,
+    "ast_hash": "8dcefdb841097794dfa6a180f86f39b8",
+    "semantic_hash": ""
+  },
+  "public/images/leadership/kuldeep-raina.webp": {
+    "mtime": 1788878419.0239635,
+    "ast_hash": "600e993a73c02e61b46fe8a275e88521",
+    "semantic_hash": ""
+  },
+  "public/images/leadership/sharath-kumar.jpg": {
+    "mtime": 1788878419.025468,
+    "ast_hash": "e8e5760d7246052ce0e2979784441ca1",
+    "semantic_hash": ""
+  },
+  "public/images/leadership/sharath-kumar.webp": {
+    "mtime": 1788878419.0264745,
+    "ast_hash": "d23469c11f3f4224fbcfe3424de243ba",
+    "semantic_hash": ""
+  },
+  "public/images/leadership/subhadeep-mukherjee.jpg": {
+    "mtime": 1788878419.0274744,
+    "ast_hash": "ca60a957c049a343ddba548b76667153",
+    "semantic_hash": ""
+  },
+  "public/images/leadership/subhadeep-mukherjee.webp": {
+    "mtime": 1788878419.028474,
+    "ast_hash": "7132ca41ae3307b8cfaef6230f0035d1",
+    "semantic_hash": ""
+  },
+  "public/images/partners/bma.webp": {
+    "mtime": 1788878419.0304768,
+    "ast_hash": "10ab6deb997531b3557f1c8123814ea6",
+    "semantic_hash": ""
+  },
+  "public/images/partners/business-standard.webp": {
+    "mtime": 1788878419.0314894,
+    "ast_hash": "22ffa01b3bac71eccdf10b481370d8fe",
+    "semantic_hash": ""
+  },
+  "public/images/partners/govt-karnataka.png": {
+    "mtime": 1788878419.0334992,
+    "ast_hash": "5bf4e5718c162dfc8ddd2098f73fd0e2",
+    "semantic_hash": ""
+  },
+  "public/images/partners/iic.webp": {
+    "mtime": 1788878419.0334992,
+    "ast_hash": "ddfcfdd88b1df4c4966d7e90512ddb01",
+    "semantic_hash": ""
+  },
+  "public/images/partners/k-tech.png": {
+    "mtime": 1788878419.0344956,
+    "ast_hash": "ae521bfc753ae6aaa9830ee824036316",
+    "semantic_hash": ""
+  },
+  "public/images/partners/leads-logo.png": {
+    "mtime": 1788878419.0359998,
+    "ast_hash": "0bd63616343cd249830335ef9eeeccef",
+    "semantic_hash": ""
+  },
+  "public/images/partners/rtbi.png": {
+    "mtime": 1788878419.0375116,
+    "ast_hash": "116ed823c10e6903b40d4df2f9d1bc97",
+    "semantic_hash": ""
+  },
+  "public/images/partners/ruas-fmc.png": {
+    "mtime": 1788878419.0385191,
+    "ast_hash": "b2048d0208015b7b9e6be6fe45c73b04",
+    "semantic_hash": ""
+  },
+  "public/images/partners/startup-karnataka.png": {
+    "mtime": 1788878419.039518,
+    "ast_hash": "8eb7372d304f85092e3aa2ecc28e81e9",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/abhay-tiwari.webp": {
+    "mtime": 1788878419.041541,
+    "ast_hash": "9a3856405bf286e27908b40897c2e160",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/aman-bhaiya.webp": {
+    "mtime": 1788878419.042903,
+    "ast_hash": "d315cc92eda5198743a6e7ee0fdcb214",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/apurva-mishra.webp": {
+    "mtime": 1788878419.048549,
+    "ast_hash": "f95b2e7cfb446a28db2e55fd5df9b194",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/arun-sreedharan.webp": {
+    "mtime": 1788878419.0510528,
+    "ast_hash": "eb7499be55f947f0a14be42d56580a4d",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/ashish-somani.webp": {
+    "mtime": 1788878419.0525627,
+    "ast_hash": "3e91a1f6331154640793ccedc2da2393",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/bala-subramanya.webp": {
+    "mtime": 1788878419.0540688,
+    "ast_hash": "f18f660ce67b6e2a5881577f6dc9d7fa",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/balakrisnan-i.webp": {
+    "mtime": 1788878419.0548618,
+    "ast_hash": "35f9268fab4cf136d9a6c4936180eb3c",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/ganesaraman-k.webp": {
+    "mtime": 1788878419.0569756,
+    "ast_hash": "76777b827cf525ac8eb57357443c71a0",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/govind-kadambi.webp": {
+    "mtime": 1788878419.0584888,
+    "ast_hash": "91996515d64d5548ec0ca6a30a5165da",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/jon-thomas.webp": {
+    "mtime": 1788878419.0594945,
+    "ast_hash": "20764a831b1c912fe46e31dcdc7a8f05",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/kuldeep-raina.webp": {
+    "mtime": 1788878419.061002,
+    "ast_hash": "600e993a73c02e61b46fe8a275e88521",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/manoj-prasad.webp": {
+    "mtime": 1788878419.0625148,
+    "ast_hash": "e62b29f28ccaf4a72abcac01dc24cd07",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/muthukumaraswamy-dpk.webp": {
+    "mtime": 1788878419.0635293,
+    "ast_hash": "216674505bdec1498f8e9acc4c3572b5",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/naganagouda.webp": {
+    "mtime": 1788878419.064611,
+    "ast_hash": "c967d069901993f1b6d86037a7f8c587",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/nishant-niranjan.webp": {
+    "mtime": 1788878419.0653002,
+    "ast_hash": "75338d95d84513c6d245a9bc7c97239c",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/padmaja-narsipur.webp": {
+    "mtime": 1788878419.0653002,
+    "ast_hash": "061a6edbe981fd645d8cefbf38ff3458",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/prateek-madhav.webp": {
+    "mtime": 1788878419.0674014,
+    "ast_hash": "e952aa7aae09b8171234eb1f827b1714",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/praveen-kamath.webp": {
+    "mtime": 1788878419.0684073,
+    "ast_hash": "cb98def5e8f348e6ad5418020526b0b1",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/ramana-kumar-musunuru.webp": {
+    "mtime": 1788878419.0699139,
+    "ast_hash": "cc1b424f404a2c7da9a30a8e9eced2ab",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/ramanan-ramanathan.webp": {
+    "mtime": 1788878419.0714269,
+    "ast_hash": "b7604268bd38207994960976ace98a70",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/rishikesh-patankar.webp": {
+    "mtime": 1788878419.0724332,
+    "ast_hash": "d31f765ffd197b316b33503d045171ad",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/roy.webp": {
+    "mtime": 1788878419.0734339,
+    "ast_hash": "94860abc5c814ad8e21fc0efc3582a41",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/sandeep-ori.webp": {
+    "mtime": 1788878419.0734339,
+    "ast_hash": "0c969254163d462447e1bed6e1ee46a9",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/sharath-kumar.webp": {
+    "mtime": 1788878419.0759451,
+    "ast_hash": "d23469c11f3f4224fbcfe3424de243ba",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/shivakumar-venkateswaran.webp": {
+    "mtime": 1788878419.0769465,
+    "ast_hash": "322c4c7df0f77c24fd224dd2d40d8021",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/subhadeep-mukherjee.webp": {
+    "mtime": 1788878419.0780582,
+    "ast_hash": "7132ca41ae3307b8cfaef6230f0035d1",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/suchit-ahuja.webp": {
+    "mtime": 1788878419.0795717,
+    "ast_hash": "3349d24846311c1ae018611c39ce5c41",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/vidur-dewan.webp": {
+    "mtime": 1788878419.081076,
+    "ast_hash": "ccd8fd36a3823eaee9576683f2c35989",
+    "semantic_hash": ""
+  },
+  "public/images/speakers/vithal-madyalkar.webp": {
+    "mtime": 1788878419.082587,
+    "ast_hash": "fe6a436b980a56c41a95d54977c8decf",
     "semantic_hash": ""
   }
 }

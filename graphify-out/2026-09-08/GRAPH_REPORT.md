@@ -1,16 +1,16 @@
 # Graph Report - Leads-external  (2026-09-08)
 
 ## Corpus Check
-- 57 files · ~212,629 words
+- 57 files · ~2,104,161 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 772 nodes · 774 edges · 72 communities (67 shown, 5 thin omitted)
+- 777 nodes · 784 edges · 72 communities (67 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `264bbcbb`
+- Built from commit: `3dfef22c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -172,8 +172,8 @@ Cohesion: 0.05
 Nodes (43): 1. Logo Cover, 1. Monogram + Meaning, 2 × 3 REFERENCE-STYLE LAYOUT, 2. Logo Construction, 2. Product Action, 3. Digital Application, 3. Metaphor Fusion, 4. Brand Essence (+35 more)
 
 ### Community 15 - "page.tsx"
-Cohesion: 0.43
-Nodes (4): BoardMemberCard(), BoardMemberCardProps, BOARD_MEMBERS_DATA, BoardMember
+Cohesion: 0.28
+Nodes (8): BoardMemberCardProps, BOARD_MEMBERS_DATA, BoardMember, CORE_LEADERSHIP, EXECUTIVE_COUNCIL, GOVERNING_ADVISORS, LEADERSHIP_MESSAGES, ORGANIZING_COMMITTEE
 
 ### Community 16 - "layout.tsx"
 Cohesion: 0.06

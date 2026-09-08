@@ -46,6 +46,18 @@ body {
   border: 1px solid var(--card-border);
 }
 
+.light-panel {
+  background: #FFFFFF;
+  color: #1E0C3D;
+  border: 1px solid rgba(54, 28, 106, 0.12);
+  box-shadow: 0 10px 35px -5px rgba(54, 28, 106, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.light-section {
+  background: #FDFBFF;
+  color: #1E0C3D;
+}
+
 .glass-nav {
   background: var(--nav-bg);
   backdrop-filter: blur(16px);

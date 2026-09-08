@@ -1,16 +1,16 @@
 # Graph Report - Leads-external  (2026-09-08)
 
 ## Corpus Check
-- 57 files · ~2,104,161 words
+- 57 files · ~2,105,434 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 777 nodes · 784 edges · 72 communities (67 shown, 5 thin omitted)
+- 778 nodes · 781 edges · 72 communities (66 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3dfef22c`
+- Built from commit: `5c38efee`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,6 +32,7 @@
 - [[_COMMUNITY_devDependencies|devDependencies]]
 - [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_layout.tsx|layout.tsx]]
+- [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_next.config.js|next.config.js]]
@@ -109,7 +110,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (72 total, 5 thin omitted)
+## Communities (72 total, 6 thin omitted)
 
 ### Community 0 - "compilerOptions"
 Cohesion: 0.10
@@ -172,7 +173,7 @@ Cohesion: 0.05
 Nodes (43): 1. Logo Cover, 1. Monogram + Meaning, 2 × 3 REFERENCE-STYLE LAYOUT, 2. Logo Construction, 2. Product Action, 3. Digital Application, 3. Metaphor Fusion, 4. Brand Essence (+35 more)
 
 ### Community 15 - "page.tsx"
-Cohesion: 0.28
+Cohesion: 0.23
 Nodes (8): BoardMemberCardProps, BOARD_MEMBERS_DATA, BoardMember, CORE_LEADERSHIP, EXECUTIVE_COUNCIL, GOVERNING_ADVISORS, LEADERSHIP_MESSAGES, ORGANIZING_COMMITTEE
 
 ### Community 16 - "layout.tsx"
@@ -356,9 +357,9 @@ Cohesion: 0.50
 Nodes (4): 20. EXAMPLE INTERPRETATIONS, Example 1, Example 2, Example 3
 
 ## Knowledge Gaps
-- **592 isolated node(s):** `inter`, `playfair`, `metadata`, `BorderGlowProps`, `GRADIENT_POSITIONS` (+587 more)
+- **597 isolated node(s):** `inter`, `playfair`, `metadata`, `BorderGlowProps`, `GRADIENT_POSITIONS` (+592 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -370,7 +371,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `CORE DIRECTIVE: PREMIUM MOBILE APP IMAGE DIRECTION` connect `CORE DIRECTIVE: PREMIUM MOBILE APP IMAGE DIRECTION` to `2. PLATFORM MODE RULE`, `37. EXAMPLE INTERPRETATIONS`, `22. STYLE VARIATION ENGINE`, `33. CATEGORY-SPECIFIC BIAS`, `21. MOBILE ANTI-AI-TELLS RULE`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `inter`, `playfair`, `metadata` to the rest of the system?**
-  _592 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _597 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `PART 2 — COMPANY PROFILE` be split into smaller, more focused modules?**
