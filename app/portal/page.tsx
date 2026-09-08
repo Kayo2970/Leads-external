@@ -21,7 +21,6 @@ const ERP_PORTAL_URL = "https://leadsnextgencentre.online/";
 export default function PortalGatewayPage() {
   const [isFallen, setIsFallen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
   const physicsRef = useRef<{
     engine: Matter.Engine;
     runner: Matter.Runner;
@@ -78,7 +77,7 @@ export default function PortalGatewayPage() {
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
 
-    // Create a dedicated full-screen overlay that covers Nav, Footer, and entire viewport (z-[9999])
+    // Create a dedicated full-screen overlay covering Nav, Footer, and viewport
     const overlay = document.createElement("div");
     overlay.className = "fixed inset-0 w-screen h-[100dvh] z-[9999] pointer-events-none overflow-hidden";
     overlay.style.position = "fixed";
@@ -100,7 +99,7 @@ export default function PortalGatewayPage() {
     } = Matter;
 
     const engine = Engine.create();
-    // Gravity calibrated for a cinematic 4-second float & drop off-screen
+    // Calibrated gravity for a dynamic 4-second float, spin & plunge off screen
     engine.gravity.y = isMobile ? 0.95 : 0.85;
 
     const items = document.querySelectorAll<HTMLElement>(".portal-fall-item");
@@ -111,19 +110,18 @@ export default function PortalGatewayPage() {
       h: number;
     }[] = [];
 
-    // Clone each element into the overlay at its exact viewport coordinates
-    items.forEach((elem) => {
+    // Clone each element into the overlay with randomized initial position displacement & impulse
+    items.forEach((elem, index) => {
       const rect = elem.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) return;
 
-      // Only clone elements that are visible or near current viewport
-      if (rect.bottom < -100 || rect.top > window.innerHeight + 200) {
+      // Only clone elements near or within viewport
+      if (rect.bottom < -150 || rect.top > window.innerHeight + 300) {
         elem.style.visibility = "hidden";
         return;
       }
 
       const clone = elem.cloneNode(true) as HTMLElement;
-      // Remove portal-fall-item class to prevent duplicate query
       clone.classList.remove("portal-fall-item");
 
       clone.style.position = "absolute";
@@ -135,29 +133,41 @@ export default function PortalGatewayPage() {
       clone.style.boxSizing = "border-box";
       clone.style.transformOrigin = "center center";
       clone.style.willChange = "transform";
-      clone.style.boxShadow = "0 20px 45px rgba(0,0,0,0.65)";
+      clone.style.boxShadow = "0 25px 50px rgba(0,0,0,0.7)";
       clone.style.pointerEvents = "none";
 
       overlay.appendChild(clone);
-      // Hide the original in-flow element without collapsing document height
       elem.style.visibility = "hidden";
 
-      const x = rect.left + rect.width / 2;
-      const y = rect.top + rect.height / 2;
+      // Randomized initial position displacement (shatters the grid instantly)
+      const randOffsetX = (Math.random() - 0.5) * (isMobile ? 25 : 50);
+      const randOffsetY = (Math.random() - 0.5) * (isMobile ? 20 : 40);
+      const x = rect.left + rect.width / 2 + randOffsetX;
+      const y = rect.top + rect.height / 2 + randOffsetY;
+
+      // Highly varied tilt angle (-25deg to +25deg)
+      const initialAngle = (Math.random() - 0.5) * 0.85;
+
+      // Varied air drag so elements float or drop at different rates
+      const frictionAir = 0.004 + Math.random() * 0.009;
 
       const body = Bodies.rectangle(x, y, rect.width, rect.height, {
-        restitution: 0.4,
+        restitution: 0.3 + Math.random() * 0.4,
         friction: 0.05,
-        frictionAir: 0.008,
-        density: 0.002,
-        angle: (Math.random() - 0.5) * 0.15,
+        frictionAir,
+        density: 0.0015 + Math.random() * 0.002,
+        angle: initialAngle,
       });
 
-      // Scatter impulse: tuned for mobile screen width so elements don't cause horizontal overflow
-      const scatterX = (Math.random() - 0.5) * (isMobile ? 8 : 16);
-      const scatterY = -(Math.random() * (isMobile ? 3.5 : 6) + 2);
+      // Wildly randomized explosive scatter impulse
+      const scatterAngle = (Math.random() - 0.5) * Math.PI * 0.9;
+      const scatterPower = Math.random() * (isMobile ? 12 : 22) + 6;
+      const scatterX = Math.sin(scatterAngle) * scatterPower + (Math.random() - 0.5) * (isMobile ? 12 : 24);
+      const scatterY = -Math.abs(Math.cos(scatterAngle)) * (isMobile ? 7 : 14) - (Math.random() * 5 + 2);
+      const spinVelocity = (Math.random() - 0.5) * (isMobile ? 0.32 : 0.55);
+
       Body.setVelocity(body, { x: scatterX, y: scatterY });
-      Body.setAngularVelocity(body, (Math.random() - 0.5) * (isMobile ? 0.15 : 0.22));
+      Body.setAngularVelocity(body, spinVelocity);
 
       World.add(engine.world, body);
       physicsElements.push({ body, elem: clone, w: rect.width, h: rect.height });
@@ -253,50 +263,48 @@ export default function PortalGatewayPage() {
             </p>
           </div>
 
-          {/* Main Launcher Card */}
+          {/* Main Launcher Card with independent fall items */}
           <div className="max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl mx-auto mb-16 sm:mb-20">
-            <div className="portal-fall-item">
-              <BorderGlow
-                edgeSensitivity={35}
-                glowColor="330 85 50"
-                backgroundColor="#2A1454"
-                borderRadius={32}
-                glowRadius={50}
-                glowIntensity={1.2}
-                colors={["#9C1256", "#DE3F11", "#FFFFFF"]}
-                animated={!isFallen}
-                className="shadow-2xl"
-              >
-                <div className="p-6 sm:p-14 3xl:p-20 text-center relative overflow-hidden flex flex-col items-center justify-center">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 3xl:w-20 3xl:h-20 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-6 shadow-lg">
-                    <Lock className="w-7 h-7 sm:w-8 sm:h-8 3xl:w-10 3xl:h-10 text-white" />
-                  </div>
-
-                  <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs 3xl:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-4">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>Enterprise Portal Active &amp; Deployed</span>
-                  </div>
-
-                  <h2 className="text-xl sm:text-3xl 2xl:text-4xl font-extrabold text-white mb-3">
-                    Authorized Executive Gateway
-                  </h2>
-                  <p className="text-xs sm:text-base 2xl:text-lg text-[#E2D9F3]/90 max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-                    Access secure event logistics, real-time budgets, council resolutions, and committee asset repositories with your official LEADS credentials.
-                  </p>
-
-                  {/* Physics Trigger Button */}
-                  <button
-                    onClick={triggerFallingPhysics}
-                    type="button"
-                    className="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-base sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
-                  >
-                    <Lock className="w-5 h-5 sm:w-6 sm:h-6" />
-                    <span>Login for Members</span>
-                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300 group-hover:rotate-12 transition-transform" />
-                  </button>
+            <BorderGlow
+              edgeSensitivity={35}
+              glowColor="330 85 50"
+              backgroundColor="#2A1454"
+              borderRadius={32}
+              glowRadius={50}
+              glowIntensity={1.2}
+              colors={["#9C1256", "#DE3F11", "#FFFFFF"]}
+              animated={!isFallen}
+              className="shadow-2xl"
+            >
+              <div className="p-6 sm:p-14 3xl:p-20 text-center relative overflow-hidden flex flex-col items-center justify-center">
+                <div className="portal-fall-item w-14 h-14 sm:w-16 sm:h-16 3xl:w-20 3xl:h-20 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-6 shadow-lg">
+                  <Lock className="w-7 h-7 sm:w-8 sm:h-8 3xl:w-10 3xl:h-10 text-white" />
                 </div>
-              </BorderGlow>
-            </div>
+
+                <div className="portal-fall-item inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs 3xl:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-4">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Enterprise Portal Active &amp; Deployed</span>
+                </div>
+
+                <h2 className="portal-fall-item text-xl sm:text-3xl 2xl:text-4xl font-extrabold text-white mb-3">
+                  Authorized Executive Gateway
+                </h2>
+                <p className="portal-fall-item text-xs sm:text-base 2xl:text-lg text-[#E2D9F3]/90 max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+                  Access secure event logistics, real-time budgets, council resolutions, and committee asset repositories with your official LEADS credentials.
+                </p>
+
+                {/* Physics Trigger Button */}
+                <button
+                  onClick={triggerFallingPhysics}
+                  type="button"
+                  className="portal-fall-item w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-base sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
+                >
+                  <Lock className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span>Login for Members</span>
+                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300 group-hover:rotate-12 transition-transform" />
+                </button>
+              </div>
+            </BorderGlow>
           </div>
 
           {/* Modules Section Header */}
