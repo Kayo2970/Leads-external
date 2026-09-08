@@ -95,9 +95,9 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* MSRUAS Affiliation Note */}
+            {/* FMC Collaboration Note */}
             <p className="mt-12 3xl:mt-16 text-xs 2xl:text-base 3xl:text-lg text-[#E2D9F3]/80 font-medium">
-              Part of the Faculty of Management and Commerce ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru
+              In collaboration with Faculty of Management and Commerce (FMC)
             </p>
           </div>
         </section>

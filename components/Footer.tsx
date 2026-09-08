@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
             <div className="pt-2 flex items-center space-x-2 text-xs text-white font-medium">
               <Shield className="w-4 h-4 text-[#DE3F11]" />
-              <span>Faculty of Management & Commerce, MSRUAS</span>
+              <span>In collaboration with Faculty of Management and Commerce, RUAS</span>
             </div>
           </div>
 

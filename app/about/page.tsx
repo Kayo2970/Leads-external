@@ -138,7 +138,7 @@ export default function AboutPage() {
             Centre for Leadership Empowering Attitude Development for Sustainability
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 2xl:max-w-5xl 3xl:max-w-6xl mx-auto leading-relaxed font-normal">
-            LEADS Next-Gen Centre is a premier leadership and executive empowerment centre at RUAS, dedicated to fostering multidisciplinary non-technical leadership, strategic governance, and future-ready capabilities across India.
+            LEADS Next-Gen Centre is a premier leadership and executive empowerment centre, dedicated to fostering multidisciplinary non-technical leadership, strategic governance, and future-ready capabilities across India.
           </p>
 
           {/* Official Centre & FMC Animated Logo Banners */}
@@ -220,7 +220,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl 3xl:text-3xl font-bold text-[#1E0C3D]">Our Foundation</h3>
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
-                  Established under the Faculty of Management and Commerce (FMC) at RUAS, LEADS Next-Gen Centre addresses a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership, ethical governance, and strategic management skills.
+                  Established in collaboration with Faculty of Management and Commerce (FMC), LEADS Next-Gen Centre addresses a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership, ethical governance, and strategic management skills.
                 </p>
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
                   Through experiential learning, executive roundtables, and industry-aligned summits, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
@@ -417,10 +417,10 @@ export default function AboutPage() {
                 <Building2 className="w-8 h-8 3xl:w-10 3xl:h-10" />
               </div>
               <h2 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-extrabold text-white mb-3 3xl:mb-6">
-                Academic & Institutional Affiliation
+                Academic & Institutional Collaboration
               </h2>
               <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] max-w-2xl 3xl:max-w-4xl mx-auto leading-relaxed">
-                LEADS Next Gen Centre proudly operates within the Faculty of Management and Commerce (FMC) ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru, combining empirical academic rigor with practical national leadership execution.
+                LEADS Next Gen Centre operates in collaboration with Faculty of Management and Commerce (FMC), combining empirical academic rigor with practical national leadership execution.
               </p>
             </div>
           </BorderGlow>
