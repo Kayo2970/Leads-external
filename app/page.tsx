@@ -39,23 +39,23 @@ export default function Home() {
         holdDistance={0.2}
       >
         <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 3xl:pt-48 3xl:pb-36 overflow-hidden bg-[#361C6A]">
-          {/* SoftAurora WebGL Background (Blue Wave) */}
-          <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-90">
+          {/* SoftAurora WebGL Background (Blue Wave) - Refined compact beam */}
+          <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-85">
             <SoftAurora
-              speed={0.6}
-              scale={2.0}
-              brightness={1.3}
+              speed={0.55}
+              scale={1.35}
+              brightness={1.15}
               color1="#00cfff"
               color2="#3B82F6"
-              noiseFrequency={2.2}
-              noiseAmplitude={1.1}
-              bandHeight={0.6}
-              bandSpread={1.2}
-              octaveDecay={0.1}
+              noiseFrequency={2.4}
+              noiseAmplitude={0.9}
+              bandHeight={0.35}
+              bandSpread={0.7}
+              octaveDecay={0.12}
               layerOffset={0}
-              colorSpeed={3}
+              colorSpeed={2.5}
               enableMouseInteraction
-              mouseInfluence={0.25}
+              mouseInfluence={0.2}
             />
           </div>
 
@@ -94,11 +94,6 @@ export default function Home() {
                 Get in Touch
               </Link>
             </div>
-
-            {/* FMC Collaboration Note */}
-            <p className="mt-12 3xl:mt-16 text-xs 2xl:text-base 3xl:text-lg text-[#E2D9F3]/80 font-medium">
-              In collaboration with Faculty of Management and Commerce (FMC)
-            </p>
           </div>
         </section>
       </LogoScrollExpand>

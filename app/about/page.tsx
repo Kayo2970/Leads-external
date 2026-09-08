@@ -220,7 +220,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl 3xl:text-3xl font-bold text-[#1E0C3D]">Our Foundation</h3>
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
-                  Established in collaboration with Faculty of Management and Commerce (FMC), LEADS Next-Gen Centre addresses a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership, ethical governance, and strategic management skills.
+                  Established as a premier leadership hub, LEADS Next-Gen Centre addresses a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership, ethical governance, and strategic management skills.
                 </p>
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
                   Through experiential learning, executive roundtables, and industry-aligned summits, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
@@ -417,10 +417,10 @@ export default function AboutPage() {
                 <Building2 className="w-8 h-8 3xl:w-10 3xl:h-10" />
               </div>
               <h2 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-extrabold text-white mb-3 3xl:mb-6">
-                Academic & Institutional Collaboration
+                Academic & Leadership Rigor
               </h2>
               <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] max-w-2xl 3xl:max-w-4xl mx-auto leading-relaxed">
-                LEADS Next Gen Centre operates in collaboration with Faculty of Management and Commerce (FMC), combining empirical academic rigor with practical national leadership execution.
+                LEADS Next Gen Centre combines empirical academic rigor with practical national leadership execution to empower future founders and institutional changemakers.
               </p>
             </div>
           </BorderGlow>
