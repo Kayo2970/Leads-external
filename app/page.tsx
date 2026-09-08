@@ -38,8 +38,8 @@ export default function Home() {
             speed={0.6}
             scale={1.5}
             brightness={1.3}
-            color1="#A5346D"
-            color2="#F55439"
+            color1="#00cfff"
+            color2="#3B82F6"
             noiseFrequency={2.5}
             noiseAmplitude={1}
             bandHeight={0.5}

@@ -15,9 +15,9 @@ module.exports = {
           "violet-light": "#9B6FE6",
           "violet-dark": "#140B29",
           "violet-surface": "#231245",
-          gold: "#F55439",
-          "gold-light": "#FF7E67",
-          "gold-dark": "#A5346D",
+          gold: "#D4A537",
+          "gold-light": "#E5BE5E",
+          "gold-dark": "#B38722",
         },
       },
       fontFamily: {
@@ -26,9 +26,9 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "violet-gold": "linear-gradient(135deg, #361B6A 0%, #A5346D 50%, #F55439 100%)",
+        "violet-gold": "linear-gradient(135deg, #361B6A 0%, #140B29 50%, #D4A537 100%)",
         "violet-card": "linear-gradient(180deg, rgba(54,27,106,0.08) 0%, rgba(54,27,106,0.02) 100%)",
-        "gold-shimmer": "linear-gradient(90deg, #A5346D 0%, #F55439 50%, #A5346D 100%)",
+        "gold-shimmer": "linear-gradient(90deg, #D4A537 0%, #FFF3B0 50%, #D4A537 100%)",
       },
       animation: {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
