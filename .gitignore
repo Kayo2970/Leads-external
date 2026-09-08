@@ -15,6 +15,7 @@ out
 .env*.local
 
 # large binary / media files — keep out of git
+reports/
 *.zip
 *.mp4
 *.mov
