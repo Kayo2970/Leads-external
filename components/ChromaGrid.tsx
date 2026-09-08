@@ -29,11 +29,11 @@ interface ChromaGridProps {
 export const ChromaGrid: React.FC<ChromaGridProps> = ({
   items,
   className = "",
-  radius = 320,
+  radius = 625,
   columns = 3,
   rows = 2,
-  damping = 0.45,
-  fadeOut = 0.6,
+  damping = 1.05,
+  fadeOut = 1.15,
   ease = "power3.out",
 }) => {
   const rootRef = useRef<HTMLDivElement | null>(null);

@@ -249,10 +249,10 @@ export default function AboutPage() {
           <div className="relative min-h-[440px]">
             <ChromaGrid
               items={chromaLeadershipItems}
-              radius={340}
+              radius={625}
               columns={3}
-              damping={0.45}
-              fadeOut={0.6}
+              damping={1.05}
+              fadeOut={1.15}
               ease="power3.out"
             />
           </div>
@@ -301,10 +301,10 @@ export default function AboutPage() {
           <div className="relative min-h-[400px]">
             <ChromaGrid
               items={chromaDirectoryItems}
-              radius={340}
+              radius={625}
               columns={4}
-              damping={0.45}
-              fadeOut={0.6}
+              damping={1.05}
+              fadeOut={1.15}
               ease="power3.out"
             />
           </div>
