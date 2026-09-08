@@ -1,22 +1,17 @@
 .logo-scroll-expand {
   position: relative;
   width: 100%;
-  max-width: 100vw;
-  overflow-x: clip;
 }
 
 .logo-scroll-expand__track {
   position: relative;
   width: 100%;
-  max-width: 100vw;
-  overflow-x: clip;
 }
 
 .logo-scroll-expand__stage {
   position: sticky;
   top: 0;
   width: 100%;
-  max-width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #241147;
@@ -32,7 +27,7 @@
   will-change: opacity;
 }
 
-/* The frame revealing the underlying content through the razor-sharp SVG logo mask */
+/* The frame revealing the underlying content through the razor-sharp vector SVG logo mask */
 .logo-scroll-expand__frame {
   position: absolute;
   inset: 0;
@@ -47,7 +42,7 @@
   -webkit-mask-image: url('/leads-mask.svg');
 }
 
-/* Pure solid white fill inside the logo cutout, reducing opacity as camera zooms in */
+/* Pure solid white fill inside the logo cutout that reduces opacity as you scroll */
 .logo-scroll-expand__white-overlay {
   position: absolute;
   inset: 0;

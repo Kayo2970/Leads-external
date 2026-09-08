@@ -95,10 +95,11 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     if (whiteOverlay) {
       const whiteFade = smoothstep(0.0, 0.45, p);
       whiteOverlay.style.opacity = `${1 - whiteFade}`;
+      whiteOverlay.style.display = whiteFade >= 1 ? "none" : "block";
     }
 
     // Camera flythrough - mask expands continuously and unlocks pointer events when open
-    if (e >= 0.98) {
+    if (e >= 0.95) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
       frame.style.pointerEvents = "auto";
