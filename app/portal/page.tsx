@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import BorderGlow from "@/components/BorderGlow";
 import {
   ShieldCheck,
@@ -13,8 +12,12 @@ import {
   FileCheck,
   ArrowRight,
   Database,
-  Sparkles,
+  ExternalLink,
 } from "lucide-react";
+
+// ─── UPDATE THIS URL WHEN PROVIDED ──────────────────────────────────────────
+const ERP_PORTAL_URL = "#"; // Replace with actual ERP portal URL
+// ────────────────────────────────────────────────────────────────────────────
 
 export default function PortalGatewayPage() {
   const erpModules = [
@@ -97,7 +100,7 @@ export default function PortalGatewayPage() {
 
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs 3xl:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-4">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Enterprise Portal Active & Deployed</span>
+                <span>Enterprise Portal Active &amp; Deployed</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-extrabold text-white mb-3">
@@ -107,15 +110,17 @@ export default function PortalGatewayPage() {
                 Access secure event logistics, real-time budgets, council resolutions, and committee asset repositories with your official LEADS credentials.
               </p>
 
-              {/* Login Button */}
-              <Link
-                href="/portal/login"
+              {/* External ERP Portal Button */}
+              <a
+                href={ERP_PORTAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-10 py-5 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-lg sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
               >
                 <Lock className="w-6 h-6" />
                 <span>Login for Members</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
-              </Link>
+                <ExternalLink className="w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
+              </a>
             </div>
           </BorderGlow>
         </div>

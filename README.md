@@ -159,6 +159,31 @@ For administrative inquiries and official correspondence:
 - **Email**: `leads@msruas.ac.in`
 - **Location**: Gnanagangothri & Ramaiah Technology Campuses, Bengaluru, Karnataka, India.
 
+
 ---
 
 © 2026 LEADS Next-Gen Centre · Faculty of Management and Commerce · RUAS. All Rights Reserved.
+
+---
+
+## 🔧 Pending Configuration
+
+> **For AI / Developer**: The following items are intentionally left as placeholders and must be updated before the next deployment.
+
+### ERP Portal External Link
+
+The **"Login for Members"** button on the `/portal` page currently points to a placeholder URL (`#`).  
+When the ERP portal URL is available, update the constant at the **top of this file**:
+
+```
+File: app/portal/page.tsx
+Line: const ERP_PORTAL_URL = "#";
+```
+
+Replace `"#"` with the actual external ERP portal URL, for example:
+
+```ts
+const ERP_PORTAL_URL = "https://erp.leadsnextgen.in"; // ← set this
+```
+
+The button already opens in a new tab (`target="_blank"`) and has the correct styling. No other changes are needed.
