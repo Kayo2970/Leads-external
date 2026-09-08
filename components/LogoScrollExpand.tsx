@@ -106,12 +106,16 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     if (e >= 0.98) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
+      frame.style.opacity = "1";
       frame.style.pointerEvents = "auto";
     } else {
       frame.style.maskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.maskSize = `${currentSize}px auto`;
       frame.style.webkitMaskSize = `${currentSize}px auto`;
+      // Smoothly fade in the hero frame content as the camera zooms into the logo
+      const frameFade = smoothstep(0.15, 0.65, p);
+      frame.style.opacity = `${frameFade}`;
       frame.style.pointerEvents = e > 0.65 ? "auto" : "none";
     }
 

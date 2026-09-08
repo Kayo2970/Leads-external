@@ -38,7 +38,8 @@
   inset: 0;
   z-index: 2;
   overflow: hidden;
-  will-change: mask-size, -webkit-mask-size, transform;
+  opacity: 0;
+  will-change: mask-size, -webkit-mask-size, transform, opacity;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
