@@ -1,0 +1,115 @@
+.logo-scroll-expand {
+  position: relative;
+  width: 100%;
+}
+
+.logo-scroll-expand__track {
+  position: relative;
+  width: 100%;
+}
+
+.logo-scroll-expand__stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #241147;
+}
+
+/* Background overlay before mask expands */
+.logo-scroll-expand__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, #361C6A 0%, #241147 70%, #15082E 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* The frame revealing the underlying content */
+.logo-scroll-expand__frame {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  will-change: clip-path, mask-size, -webkit-mask-size, transform;
+}
+
+/* Floating Logo Outline on top of the mask at start */
+.logo-scroll-expand__emblem-outline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  will-change: opacity, transform;
+}
+
+.logo-scroll-expand__emblem-box {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 36px;
+  background: linear-gradient(145deg, rgba(156, 18, 86, 0.4), rgba(222, 63, 17, 0.4));
+  border: 2px solid rgba(222, 63, 17, 0.7);
+  box-shadow: 0 0 50px rgba(222, 63, 17, 0.5), inset 0 0 30px rgba(156, 18, 86, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.logo-scroll-expand__emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+}
+
+.logo-scroll-expand__scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.logo-scroll-expand__scroll-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(222, 63, 17, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes floatPill {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.animate-pulse-down {
+  animation: floatPill 2s ease-in-out infinite;
+}

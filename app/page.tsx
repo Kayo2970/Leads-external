@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import SoftAurora from "@/components/SoftAurora";
 import BorderGlow from "@/components/BorderGlow";
+import LogoScrollExpand from "@/components/LogoScrollExpand";
 import EventCard from "@/components/EventCard";
 import EventModal from "@/components/EventModal";
 import { EVENTS_DATA, LEADSEvent } from "@/lib/events-data";
@@ -31,70 +32,76 @@ export default function Home() {
       {/* Event Detail Modal */}
       <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
 
-      {/* SECTION 1 [PURPLE]: HERO WITH SOFTAURORA BACKGROUND */}
-      <section className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-[#361C6A]">
-        {/* SoftAurora WebGL Background (Blue Wave) */}
-        <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-90">
-          <SoftAurora
-            speed={0.6}
-            scale={1.5}
-            brightness={1.3}
-            color1="#00cfff"
-            color2="#3B82F6"
-            noiseFrequency={2.5}
-            noiseAmplitude={1}
-            bandHeight={0.5}
-            bandSpread={1}
-            octaveDecay={0.1}
-            layerOffset={0}
-            colorSpeed={3}
-            enableMouseInteraction
-            mouseInfluence={0.25}
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          {/* Top Pill Badge */}
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border-[#DE3F11]/40 text-white font-semibold text-xs mb-8 shadow-lg animate-float">
-            <Sparkles className="w-4 h-4 text-[#DE3F11] animate-spin" />
-            <span>India's First Leadership & Non-Technical Skill Upliftment Centre</span>
+      {/* SECTION 1 [PURPLE]: OPENING HERO WITH LOGO OUTLINE SCROLLEXPAND & SOFTAURORA */}
+      <LogoScrollExpand
+        logoSrc="/leads-logo.png"
+        scrollDistance={0.9}
+        holdDistance={0.2}
+      >
+        <section className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-[#361C6A]">
+          {/* SoftAurora WebGL Background (Blue Wave) */}
+          <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-90">
+            <SoftAurora
+              speed={0.6}
+              scale={1.5}
+              brightness={1.3}
+              color1="#00cfff"
+              color2="#3B82F6"
+              noiseFrequency={2.5}
+              noiseAmplitude={1}
+              bandHeight={0.5}
+              bandSpread={1}
+              octaveDecay={0.1}
+              layerOffset={0}
+              colorSpeed={3}
+              enableMouseInteraction
+              mouseInfluence={0.25}
+            />
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.15]">
-            Building India's <br className="hidden sm:block" />
-            <span className="gold-gradient-text">Next Generation of Leaders</span>
-          </h1>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            {/* Top Pill Badge */}
+            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border-[#DE3F11]/40 text-white font-semibold text-xs mb-8 shadow-lg animate-float">
+              <Sparkles className="w-4 h-4 text-[#DE3F11] animate-spin" />
+              <span>India's First Leadership & Non-Technical Skill Upliftment Centre</span>
+            </div>
 
-          {/* Subheading */}
-          <p className="mt-6 text-base sm:text-xl text-[#E2D9F3] max-w-3xl mx-auto leading-relaxed font-normal">
-            A national centre for leadership and non-technical skill upliftment — for founders, professionals, government leaders, students, and researchers who want to achieve something more.
-          </p>
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.15]">
+              Building India's <br className="hidden sm:block" />
+              <span className="gold-gradient-text">Next Generation of Leaders</span>
+            </h1>
 
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/events"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 group"
-            >
-              <span>Explore Our Events</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            {/* Subheading */}
+            <p className="mt-6 text-base sm:text-xl text-[#E2D9F3] max-w-3xl mx-auto leading-relaxed font-normal">
+              A national centre for leadership and non-technical skill upliftment — for founders, professionals, government leaders, students, and researchers who want to achieve something more.
+            </p>
 
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl font-semibold text-base glass-panel hover:bg-white/10 text-white border border-white/20 hover:border-[#DE3F11]/50 transition-all duration-300 flex items-center justify-center"
-            >
-              Get in Touch
-            </Link>
+            {/* CTA Buttons */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/events"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 group"
+              >
+                <span>Explore Our Events</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl font-semibold text-base glass-panel hover:bg-white/10 text-white border border-white/20 hover:border-[#DE3F11]/50 transition-all duration-300 flex items-center justify-center"
+              >
+                Get in Touch
+              </Link>
+            </div>
+
+            {/* MSRUAS Affiliation Note */}
+            <p className="mt-12 text-xs text-[#E2D9F3]/80 font-medium">
+              Part of the Faculty of Management and Commerce ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru
+            </p>
           </div>
-
-          {/* MSRUAS Affiliation Note */}
-          <p className="mt-12 text-xs text-[#E2D9F3]/80 font-medium">
-            Part of the Faculty of Management and Commerce ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru
-          </p>
-        </div>
-      </section>
+        </section>
+      </LogoScrollExpand>
 
       {/* SECTION 2 [WHITE/LIGHT]: STATS STRIP / BY THE NUMBERS */}
       <section className="relative z-10 py-16 bg-[#FDFBFF] text-[#1E0C3D] border-y border-purple-100 shadow-sm">
