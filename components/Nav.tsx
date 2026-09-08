@@ -157,16 +157,14 @@ export default function Nav() {
               <span>BLS</span>
             </a>
 
-            {/* External Nav Link: LEADS Portal */}
-            <a
-              href="https://github.com/Kayo2970/Leads-external.git"
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* ERP Subsystem Portal Link */}
+            <Link
+              href="/portal"
               className="inline-flex items-center px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg text-sm 3xl:text-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
-              title="Access LEADS Member & ERP Portal"
+              title="Access LEADS Internal ERP & Member Management Portal"
             >
               LEADS Portal
-            </a>
+            </Link>
           </nav>
 
           {/* Right Action Bar */}
@@ -249,14 +247,13 @@ export default function Nav() {
               <span>Bharath Leadership Summit (BLS)</span>
             </a>
 
-            <a
-              href="https://github.com/Kayo2970/Leads-external.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-white/10"
+            <Link
+              href="/portal"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-white/10 hover:bg-white/15 transition-colors"
             >
-              <span>LEADS Portal (ERP Login)</span>
-            </a>
+              <span>LEADS Portal (ERP Gateway)</span>
+            </Link>
 
             <Link
               href="/contact"

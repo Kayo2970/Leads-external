@@ -87,14 +87,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/Kayo2970/Leads-external.git"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/portal"
                   className="inline-flex items-center text-white/90 hover:text-[#DE3F11] transition-colors"
                 >
-                  LEADS Member Portal
-                </a>
+                  LEADS Member & ERP Portal
+                </Link>
               </li>
               <li>
                 <Link href="/events" className="text-white/80 hover:text-[#DE3F11] transition-colors">
