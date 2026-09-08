@@ -8,35 +8,35 @@ interface ReportCardProps {
 
 export default function ReportCard({ report }: ReportCardProps) {
   return (
-    <div className="glass-panel rounded-3xl p-6 hover:border-brand-gold/60 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+    <div className="glass-panel rounded-3xl p-6 border border-white/15 hover:border-[#DE3F11]/60 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between bg-[#2A1454]/90">
       <div>
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-2xl bg-brand-violet/10 dark:bg-brand-violet/30 border border-brand-violet/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <FileText className="w-6 h-6 text-brand-gold" />
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 border border-[#DE3F11]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <FileText className="w-6 h-6 text-[#DE3F11]" />
           </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/15 text-brand-gold border border-brand-gold/30">
+          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/40">
             Year {report.year}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-violet dark:group-hover:text-brand-gold transition-colors mb-2">
+        <h3 className="text-lg font-bold text-white group-hover:text-[#DE3F11] transition-colors mb-2">
           {report.title}
         </h3>
 
         {/* Summary */}
-        <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+        <p className="text-xs text-[#E2D9F3] leading-relaxed mb-4">
           {report.summary}
         </p>
 
         {/* Stats */}
-        <div className="flex items-center space-x-4 text-xs text-slate-400 mb-6 pt-2 border-t border-brand-violet/10">
+        <div className="flex items-center space-x-4 text-xs text-[#E2D9F3]/80 mb-6 pt-2 border-t border-white/10">
           <span>{report.fileSize} PDF</span>
           <span>•</span>
           <span>{report.pages} Pages</span>
           <span>•</span>
-          <span className="text-emerald-500 font-medium">Verified Official</span>
+          <span className="text-white font-medium flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-[#DE3F11]" /> Verified Official</span>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ export default function ReportCard({ report }: ReportCardProps) {
       <a
         href={report.fileUrl}
         download
-        className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-brand-gold to-brand-gold-dark text-slate-950 hover:shadow-lg flex items-center justify-center space-x-2 transition-all duration-300 group-hover:scale-[1.02]"
+        className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white hover:opacity-95 shadow-md flex items-center justify-center space-x-2 transition-all duration-300 group-hover:scale-[1.02]"
       >
         <ArrowDownToLine className="w-4 h-4" />
         <span>Download Official Report</span>

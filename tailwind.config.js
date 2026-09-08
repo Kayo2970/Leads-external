@@ -10,14 +10,17 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          violet: "#361B6A",
+          violet: "#361C6A",
+          purple: "#361C6A",
           "violet-soft": "#7A4DD2",
           "violet-light": "#9B6FE6",
-          "violet-dark": "#140B29",
-          "violet-surface": "#231245",
-          gold: "#D4A537",
-          "gold-light": "#E5BE5E",
-          "gold-dark": "#B38722",
+          "violet-dark": "#241147",
+          "violet-surface": "#2A1454",
+          magenta: "#9C1256",
+          coral: "#DE3F11",
+          gold: "#DE3F11",
+          "gold-light": "#FF5E2E",
+          "gold-dark": "#9C1256",
         },
       },
       fontFamily: {
@@ -26,9 +29,10 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "violet-gold": "linear-gradient(135deg, #361B6A 0%, #140B29 50%, #D4A537 100%)",
-        "violet-card": "linear-gradient(180deg, rgba(54,27,106,0.08) 0%, rgba(54,27,106,0.02) 100%)",
-        "gold-shimmer": "linear-gradient(90deg, #D4A537 0%, #FFF3B0 50%, #D4A537 100%)",
+        "brand-gradient": "linear-gradient(135deg, #9C1256 0%, #DE3F11 100%)",
+        "violet-gold": "linear-gradient(135deg, #361C6A 0%, #9C1256 50%, #DE3F11 100%)",
+        "violet-card": "linear-gradient(180deg, rgba(54,28,106,0.9) 0%, rgba(36,17,71,0.9) 100%)",
+        "gold-shimmer": "linear-gradient(90deg, #9C1256 0%, #DE3F11 50%, #9C1256 100%)",
       },
       animation: {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",

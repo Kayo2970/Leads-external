@@ -57,8 +57,8 @@ export default function Nav() {
               href="/"
               className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                 isActive("/")
-                  ? "text-brand-violet dark:text-brand-gold bg-brand-violet/10 font-semibold"
-                  : "text-slate-700 dark:text-slate-200 hover:text-brand-violet dark:hover:text-brand-gold hover:bg-brand-violet/5"
+                  ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
+                  : "text-white/90 hover:text-white hover:bg-white/10"
               }`}
             >
               Home
@@ -68,8 +68,8 @@ export default function Nav() {
               href="/events"
               className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                 isActive("/events")
-                  ? "text-brand-violet dark:text-brand-gold bg-brand-violet/10 font-semibold"
-                  : "text-slate-700 dark:text-slate-200 hover:text-brand-violet dark:hover:text-brand-gold hover:bg-brand-violet/5"
+                  ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
+                  : "text-white/90 hover:text-white hover:bg-white/10"
               }`}
             >
               Events
@@ -79,8 +79,8 @@ export default function Nav() {
               href="/about"
               className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                 isActive("/about")
-                  ? "text-brand-violet dark:text-brand-gold bg-brand-violet/10 font-semibold"
-                  : "text-slate-700 dark:text-slate-200 hover:text-brand-violet dark:hover:text-brand-gold hover:bg-brand-violet/5"
+                  ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
+                  : "text-white/90 hover:text-white hover:bg-white/10"
               }`}
             >
               About Us
@@ -96,22 +96,22 @@ export default function Nav() {
                 href="/reports"
                 className={`inline-flex items-center space-x-1 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive("/reports")
-                    ? "text-brand-violet dark:text-brand-gold bg-brand-violet/10 font-semibold"
-                    : "text-slate-700 dark:text-slate-200 hover:text-brand-violet dark:hover:text-brand-gold hover:bg-brand-violet/5"
+                    ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
+                    : "text-white/90 hover:text-white hover:bg-white/10"
                 }`}
               >
                 <span>Reports</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    reportsDropdownOpen ? "rotate-180 text-brand-gold" : ""
+                    reportsDropdownOpen ? "rotate-180 text-[#DE3F11]" : ""
                   }`}
                 />
               </Link>
 
               {/* Dropdown Menu Box */}
               {reportsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 rounded-2xl glass-panel p-3 shadow-2xl border border-brand-violet/20 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-brand-gold px-3 py-1.5 border-b border-brand-violet/10 mb-1">
+                <div className="absolute top-full left-0 mt-1 w-80 rounded-2xl bg-[#241147]/95 glass-panel p-3 shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                  <div className="text-xs font-semibold uppercase tracking-wider gold-gradient-text px-3 py-1.5 border-b border-white/10 mb-1">
                     Downloadable Impact Reports
                   </div>
                   {REPORTS_DATA.map((report) => (
@@ -119,25 +119,25 @@ export default function Nav() {
                       key={report.id}
                       href={report.fileUrl}
                       download
-                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-brand-violet/10 dark:hover:bg-brand-violet-surface transition-colors group"
+                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
                     >
-                      <div className="p-2 rounded-lg bg-brand-violet/10 dark:bg-brand-violet/30 text-brand-violet dark:text-brand-gold group-hover:bg-brand-gold group-hover:text-black transition-colors mt-0.5">
-                        <FileText className="w-4 h-4" />
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30 mt-0.5">
+                        <FileText className="w-4 h-4 text-[#DE3F11]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs font-semibold text-slate-800 dark:text-slate-100 group-hover:text-brand-violet dark:group-hover:text-brand-gold truncate">
+                        <div className="text-xs font-semibold text-white group-hover:text-[#DE3F11] truncate">
                           {report.title}
                         </div>
-                        <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                        <div className="text-[11px] text-[#E2D9F3]">
                           {report.year} · {report.fileSize} PDF
                         </div>
                       </div>
                     </a>
                   ))}
-                  <div className="mt-2 pt-2 border-t border-brand-violet/10 text-center">
+                  <div className="mt-2 pt-2 border-t border-white/10 text-center">
                     <Link
                       href="/reports"
-                      className="text-xs font-semibold text-brand-violet dark:text-brand-gold hover:underline"
+                      className="text-xs font-semibold text-white hover:text-[#DE3F11] hover:underline"
                     >
                       View All Reports →
                     </Link>
@@ -151,11 +151,11 @@ export default function Nav() {
               href="https://www.bharatleadsummit.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-amber-700 dark:text-amber-300 hover:bg-amber-500/10 transition-colors"
+              className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
               title="Visit Bharath Leadership Summit website"
             >
               <span>BLS</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+              <ExternalLink className="w-3.5 h-3.5 opacity-70 text-[#DE3F11]" />
             </a>
 
             {/* External Nav Link: LEADS Portal */}
@@ -163,11 +163,11 @@ export default function Nav() {
               href="https://github.com/Kayo2970/Leads-external.git"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-indigo-700 dark:text-indigo-300 hover:bg-indigo-500/10 transition-colors"
-              title="Access LEADS Member & ERP Portal (Coming Soon)"
+              className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+              title="Access LEADS Member & ERP Portal"
             >
               <span>LEADS Portal</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+              <ExternalLink className="w-3.5 h-3.5 opacity-70 text-[#DE3F11]" />
             </a>
           </nav>
 
@@ -176,7 +176,7 @@ export default function Nav() {
             <ThemeToggle />
             <Link
               href="/contact"
-              className="inline-flex items-center px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-gold to-brand-gold-dark text-slate-950 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300"
+              className="inline-flex items-center px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300"
             >
               Contact Us
             </Link>
@@ -187,7 +187,7 @@ export default function Nav() {
             <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl glass-panel text-slate-700 dark:text-slate-200 hover:text-brand-gold"
+              className="p-2 rounded-xl glass-panel text-white hover:text-[#DE3F11]"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -198,12 +198,12 @@ export default function Nav() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden glass-panel border-t border-brand-violet/10 mt-3 px-4 pt-4 pb-6 space-y-3 animate-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden glass-panel border-t border-white/15 mt-3 px-4 pt-4 pb-6 space-y-3 bg-[#241147]/95 animate-in slide-in-from-top-4 duration-300">
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
             className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
-              isActive("/") ? "bg-brand-violet/15 text-brand-gold font-bold" : "text-slate-700 dark:text-slate-200"
+              isActive("/") ? "bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white font-bold" : "text-white/90"
             }`}
           >
             Home
@@ -212,7 +212,7 @@ export default function Nav() {
             href="/events"
             onClick={() => setMobileMenuOpen(false)}
             className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
-              isActive("/events") ? "bg-brand-violet/15 text-brand-gold font-bold" : "text-slate-700 dark:text-slate-200"
+              isActive("/events") ? "bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white font-bold" : "text-white/90"
             }`}
           >
             Events
@@ -221,7 +221,7 @@ export default function Nav() {
             href="/about"
             onClick={() => setMobileMenuOpen(false)}
             className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
-              isActive("/about") ? "bg-brand-violet/15 text-brand-gold font-bold" : "text-slate-700 dark:text-slate-200"
+              isActive("/about") ? "bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white font-bold" : "text-white/90"
             }`}
           >
             About Us
@@ -230,37 +230,37 @@ export default function Nav() {
             href="/reports"
             onClick={() => setMobileMenuOpen(false)}
             className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
-              isActive("/reports") ? "bg-brand-violet/15 text-brand-gold font-bold" : "text-slate-700 dark:text-slate-200"
+              isActive("/reports") ? "bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white font-bold" : "text-white/90"
             }`}
           >
             Impact Reports
           </Link>
 
-          <div className="pt-2 border-t border-brand-violet/10 space-y-2">
+          <div className="pt-2 border-t border-white/15 space-y-2">
             <a
               href="https://www.bharatleadsummit.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-amber-600 dark:text-amber-400 bg-amber-500/10"
+              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-white/10"
             >
               <span>Bharath Leadership Summit (BLS)</span>
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-4 h-4 text-[#DE3F11]" />
             </a>
 
             <a
               href="https://github.com/Kayo2970/Leads-external.git"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-500/10"
+              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-white/10"
             >
               <span>LEADS Portal (ERP Login)</span>
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-4 h-4 text-[#DE3F11]" />
             </a>
 
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-center w-full py-3 mt-4 rounded-xl font-bold bg-gradient-to-r from-brand-gold to-brand-gold-dark text-slate-950 shadow-md"
+              className="block text-center w-full py-3 mt-4 rounded-xl font-bold bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md"
             >
               Contact Us
             </Link>
