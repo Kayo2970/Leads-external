@@ -59,12 +59,34 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
 
     const e = smoothstep(0, 1, p);
 
-    // Initial mask size 280px expanding to 5200px to fully reveal through logo cutout
-    const startSize = 280;
-    const endSize = 5200;
+    // Responsive initial mask size calculated dynamically per screen width & 4K displays
+    const w = typeof window !== "undefined" ? window.innerWidth : 1440;
+    const h = typeof window !== "undefined" ? window.innerHeight : 900;
+    const maxDim = Math.max(w, h);
+
+    let startSize = 520;
+    if (w < 640) {
+      // Mobile: 85% of screen width (clamped for comfortable padding)
+      startSize = clamp(w * 0.85, 300, 360);
+    } else if (w < 1024) {
+      // Tablet: 52% of screen width
+      startSize = clamp(w * 0.52, 420, 560);
+    } else if (w < 1920) {
+      // Standard Desktop / Laptop: 36% of screen width
+      startSize = clamp(w * 0.36, 520, 700);
+    } else if (w < 2560) {
+      // 2K / Quad-HD: 30% of screen width
+      startSize = clamp(w * 0.30, 680, 850);
+    } else {
+      // 4K & Ultrawide: 25% of screen width
+      startSize = clamp(w * 0.25, 850, 1200);
+    }
+
+    // End size scales to fully cover any monitor resolution (including 4K/8K)
+    const endSize = Math.max(7000, maxDim * 4.2);
     const currentSize = startSize + (endSize - startSize) * Math.pow(e, 1.8);
 
-    if (e >= 0.96) {
+    if (e >= 0.95) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
       frame.style.pointerEvents = "auto";
@@ -83,7 +105,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     }
 
     if (bg) {
-      const bgFade = smoothstep(0.5, 0.95, p);
+      const bgFade = smoothstep(0.45, 0.95, p);
       bg.style.opacity = `${1 - bgFade}`;
     }
   }, []);
