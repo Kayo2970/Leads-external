@@ -20,13 +20,13 @@ const ERP_PORTAL_URL = "https://leadsnextgencentre.online/";
 
 export default function PortalGatewayPage() {
   const [isFallen, setIsFallen] = useState(false);
-  const [iframeLoaded, setIframeLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const physicsRef = useRef<{
     engine: Matter.Engine;
     runner: Matter.Runner;
     animId: number;
-    elements: { body: Matter.Body; elem: HTMLElement; w: number; h: number }[];
+    overlay: HTMLDivElement;
   } | null>(null);
 
   const erpModules = [
@@ -72,8 +72,24 @@ export default function PortalGatewayPage() {
     if (isFallen) return;
     setIsFallen(true);
 
-    // Prevent body scroll during physics scatter
+    const isMobile = window.innerWidth < 768;
+
+    // Lock page scroll cleanly without layout jumping
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+
+    // Create a dedicated full-screen overlay that covers Nav, Footer, and entire viewport (z-[9999])
+    const overlay = document.createElement("div");
+    overlay.className = "fixed inset-0 w-screen h-[100dvh] z-[9999] pointer-events-none overflow-hidden";
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100dvh";
+    overlay.style.zIndex = "9999";
+    overlay.style.pointerEvents = "none";
+    overlay.style.overflow = "hidden";
+    document.body.appendChild(overlay);
 
     const {
       Engine,
@@ -84,12 +100,9 @@ export default function PortalGatewayPage() {
     } = Matter;
 
     const engine = Engine.create();
-    // Strong gravity so everything falls completely off screen within 3 seconds
-    engine.gravity.y = 1.35;
+    // Gravity scaled so items cleanly accelerate and plunge off the screen in ~2.5s
+    engine.gravity.y = isMobile ? 1.6 : 1.4;
 
-    // Notice: NO floor or walls added — elements will scatter and fall off the screen completely!
-
-    // Select all interactive portal items marked for falling
     const items = document.querySelectorAll<HTMLElement>(".portal-fall-item");
     const physicsElements: {
       body: Matter.Body;
@@ -98,50 +111,61 @@ export default function PortalGatewayPage() {
       h: number;
     }[] = [];
 
+    // Clone each element into the overlay at its exact viewport coordinates
     items.forEach((elem) => {
       const rect = elem.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) return;
 
+      // Only clone elements that are visible or near current viewport
+      if (rect.bottom < -100 || rect.top > window.innerHeight + 200) {
+        elem.style.visibility = "hidden";
+        return;
+      }
+
+      const clone = elem.cloneNode(true) as HTMLElement;
+      // Remove portal-fall-item class to prevent duplicate query
+      clone.classList.remove("portal-fall-item");
+
+      clone.style.position = "absolute";
+      clone.style.left = "0px";
+      clone.style.top = "0px";
+      clone.style.width = `${rect.width}px`;
+      clone.style.height = `${rect.height}px`;
+      clone.style.margin = "0px";
+      clone.style.boxSizing = "border-box";
+      clone.style.transformOrigin = "center center";
+      clone.style.willChange = "transform";
+      clone.style.boxShadow = "0 20px 45px rgba(0,0,0,0.65)";
+      clone.style.pointerEvents = "none";
+
+      overlay.appendChild(clone);
+      // Hide the original in-flow element without collapsing document height
+      elem.style.visibility = "hidden";
+
       const x = rect.left + rect.width / 2;
       const y = rect.top + rect.height / 2;
 
-      // Create Matter physics body
       const body = Bodies.rectangle(x, y, rect.width, rect.height, {
-        restitution: 0.5,
+        restitution: 0.4,
         friction: 0.05,
-        frictionAir: 0.005, // low air drag so it plunges fast
+        frictionAir: 0.005,
         density: 0.002,
-        angle: (Math.random() - 0.5) * 0.2,
+        angle: (Math.random() - 0.5) * 0.15,
       });
 
-      // Dramatic scatter impulse: explode outwards in X and pop upwards in Y before plunging
-      const scatterX = (Math.random() - 0.5) * 22; // strong left/right scatter
-      const scatterY = -4 - Math.random() * 8;     // pop up into the air
+      // Scatter impulse: tuned for mobile screen width so elements don't cause horizontal overflow
+      const scatterX = (Math.random() - 0.5) * (isMobile ? 10 : 20);
+      const scatterY = -(Math.random() * (isMobile ? 4 : 7) + 2);
       Body.setVelocity(body, { x: scatterX, y: scatterY });
-      Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.25); // rapid tumble
-
-      // Fix element in place at current viewport coordinates
-      elem.style.position = "fixed";
-      elem.style.left = "0px";
-      elem.style.top = "0px";
-      elem.style.width = `${rect.width}px`;
-      elem.style.height = `${rect.height}px`;
-      elem.style.margin = "0px";
-      elem.style.zIndex = "40";
-      elem.style.boxSizing = "border-box";
-      elem.style.transformOrigin = "center center";
-      elem.style.pointerEvents = "none";
-      elem.style.willChange = "transform, opacity";
-      elem.style.boxShadow = "0 25px 50px rgba(0,0,0,0.6)";
+      Body.setAngularVelocity(body, (Math.random() - 0.5) * (isMobile ? 0.18 : 0.25));
 
       World.add(engine.world, body);
-      physicsElements.push({ body, elem, w: rect.width, h: rect.height });
+      physicsElements.push({ body, elem: clone, w: rect.width, h: rect.height });
     });
 
     const runner = Runner.create();
     Runner.run(runner, engine);
 
-    // RAF loop syncing DOM elements with physics bodies
     let animId: number;
     const tick = () => {
       physicsElements.forEach(({ body, elem, w, h }) => {
@@ -157,10 +181,10 @@ export default function PortalGatewayPage() {
       engine,
       runner,
       animId,
-      elements: physicsElements,
+      overlay,
     };
 
-    // Auto-redirect to ERP portal URL precisely after 3 seconds
+    // Auto-redirect to ERP portal URL after 3 seconds
     setTimeout(() => {
       window.location.href = ERP_PORTAL_URL;
     }, 3000);
@@ -173,7 +197,11 @@ export default function PortalGatewayPage() {
         Matter.Runner.stop(physicsRef.current.runner);
         Matter.Composite.clear(physicsRef.current.engine.world, false);
         Matter.Engine.clear(physicsRef.current.engine);
+        if (physicsRef.current.overlay && physicsRef.current.overlay.parentNode) {
+          physicsRef.current.overlay.parentNode.removeChild(physicsRef.current.overlay);
+        }
       }
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     };
   }, []);
@@ -182,57 +210,51 @@ export default function PortalGatewayPage() {
     <div className="relative min-h-screen bg-[#241147] text-white overflow-hidden">
       {/* ─────────────────────────────────────────────────────────────
           BACKGROUND LAYER: Live LEADS ERP Portal
-          Shows https://leadsnextgencentre.online/ immediately in the bg
+          Takes over the FULL screen (covering Nav & Footer) when triggered
       ───────────────────────────────────────────────────────────── */}
       <div
-        className={`fixed inset-0 w-full h-full z-0 transition-opacity duration-700 ease-out ${
-          isFallen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 w-screen h-[100dvh] z-[90] transition-opacity duration-700 ease-out bg-[#1A0B2E] ${
+          isFallen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
         <iframe
           src={ERP_PORTAL_URL}
           className="w-full h-full border-0"
           title="LEADS ERP Members Portal"
-          onLoad={() => setIframeLoaded(true)}
           allow="clipboard-write; fullscreen"
         />
       </div>
 
       {/* ─────────────────────────────────────────────────────────────
           PORTAL GATEWAY FOREGROUND
-          When Login button is clicked, all elements scatter and fall off screen
       ───────────────────────────────────────────────────────────── */}
       <div
         ref={containerRef}
-        className={`relative z-10 min-h-screen pt-32 pb-24 transition-colors duration-700 ${
-          isFallen ? "pointer-events-none" : ""
+        className={`relative z-10 min-h-screen pt-28 sm:pt-32 pb-24 transition-opacity duration-500 ${
+          isFallen ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        {/* Ambient background glow (fades out on collapse) */}
-        <div
-          className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none transition-opacity duration-500 ${
-            isFallen ? "opacity-0" : "opacity-100"
-          }`}
-        />
+        {/* Ambient background glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 relative">
           {/* Gateway Header */}
-          <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16">
+          <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-12 sm:mb-16">
             <div className="portal-fall-item inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-1.5 3xl:px-6 3xl:py-3 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-lg font-semibold mb-6 shadow-sm">
               <ShieldCheck className="w-4 h-4 text-[#DE3F11]" />
               <span>LEADS Enterprise Resource Platform</span>
             </div>
 
-            <h1 className="portal-fall-item text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl font-extrabold text-white tracking-tight">
+            <h1 className="portal-fall-item text-3xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl font-extrabold text-white tracking-tight leading-tight">
               LEADS Members ERP Portal
             </h1>
-            <p className="portal-fall-item mt-4 3xl:mt-6 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] leading-relaxed">
+            <p className="portal-fall-item mt-4 3xl:mt-6 text-sm sm:text-lg 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] leading-relaxed">
               The integrated operational and resource platform for LEADS executive council, faculty leads, committee members, and student officers.
             </p>
           </div>
 
           {/* Main Launcher Card */}
-          <div className="max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl mx-auto mb-20">
+          <div className="max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl mx-auto mb-16 sm:mb-20">
             <div className="portal-fall-item">
               <BorderGlow
                 edgeSensitivity={35}
@@ -245,9 +267,9 @@ export default function PortalGatewayPage() {
                 animated={!isFallen}
                 className="shadow-2xl"
               >
-                <div className="p-8 sm:p-14 3xl:p-20 text-center relative overflow-hidden flex flex-col items-center justify-center">
-                  <div className="w-16 h-16 3xl:w-20 3xl:h-20 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-6 shadow-lg">
-                    <Lock className="w-8 h-8 3xl:w-10 3xl:h-10 text-white" />
+                <div className="p-6 sm:p-14 3xl:p-20 text-center relative overflow-hidden flex flex-col items-center justify-center">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 3xl:w-20 3xl:h-20 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-6 shadow-lg">
+                    <Lock className="w-7 h-7 sm:w-8 sm:h-8 3xl:w-10 3xl:h-10 text-white" />
                   </div>
 
                   <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs 3xl:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-4">
@@ -255,10 +277,10 @@ export default function PortalGatewayPage() {
                     <span>Enterprise Portal Active &amp; Deployed</span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-extrabold text-white mb-3">
+                  <h2 className="text-xl sm:text-3xl 2xl:text-4xl font-extrabold text-white mb-3">
                     Authorized Executive Gateway
                   </h2>
-                  <p className="text-sm sm:text-base 2xl:text-lg text-[#E2D9F3]/90 max-w-xl mx-auto mb-8 leading-relaxed">
+                  <p className="text-xs sm:text-base 2xl:text-lg text-[#E2D9F3]/90 max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
                     Access secure event logistics, real-time budgets, council resolutions, and committee asset repositories with your official LEADS credentials.
                   </p>
 
@@ -266,11 +288,11 @@ export default function PortalGatewayPage() {
                   <button
                     onClick={triggerFallingPhysics}
                     type="button"
-                    className="px-10 py-5 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-lg sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
+                    className="w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-base sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
                   >
-                    <Lock className="w-6 h-6" />
+                    <Lock className="w-5 h-5 sm:w-6 sm:h-6" />
                     <span>Login for Members</span>
-                    <Sparkles className="w-6 h-6 text-yellow-300 group-hover:rotate-12 transition-transform" />
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300 group-hover:rotate-12 transition-transform" />
                   </button>
                 </div>
               </BorderGlow>
@@ -278,30 +300,30 @@ export default function PortalGatewayPage() {
           </div>
 
           {/* Modules Section Header */}
-          <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-10">
+          <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-8 sm:mb-10">
             <div className="portal-fall-item text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-1">
               Enterprise Feature Suite
             </div>
-            <h2 className="portal-fall-item text-2xl sm:text-3xl 2xl:text-4xl font-extrabold text-white">
+            <h2 className="portal-fall-item text-xl sm:text-3xl 2xl:text-4xl font-extrabold text-white">
               Available Modules in LEADS ERP
             </h2>
           </div>
 
           {/* Modules Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 3xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 3xl:gap-8">
             {erpModules.map((mod, idx) => {
               const Icon = mod.icon;
               return (
                 <div
                   key={idx}
-                  className="portal-fall-item p-6 3xl:p-10 rounded-2xl bg-[#2A1454]/80 border border-white/10 hover:border-[#DE3F11]/50 hover:bg-[#361C6A]/60 transition-all duration-300 group"
+                  className="portal-fall-item p-5 sm:p-6 3xl:p-10 rounded-2xl bg-[#2A1454]/80 border border-white/10 hover:border-[#DE3F11]/50 hover:bg-[#361C6A]/60 transition-all duration-300 group"
                 >
                   <div
-                    className={`w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r ${mod.color} flex items-center justify-center text-white mb-4 3xl:mb-6 shadow-md group-hover:scale-110 transition-transform`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r ${mod.color} flex items-center justify-center text-white mb-3 sm:mb-4 3xl:mb-6 shadow-md group-hover:scale-110 transition-transform`}
                   >
-                    <Icon className="w-6 h-6 3xl:w-8 3xl:h-8 text-white" />
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 3xl:w-8 3xl:h-8 text-white" />
                   </div>
-                  <h3 className="text-lg 2xl:text-xl 3xl:text-2xl font-bold text-white mb-2">
+                  <h3 className="text-base sm:text-lg 2xl:text-xl 3xl:text-2xl font-bold text-white mb-1.5 sm:mb-2">
                     {mod.title}
                   </h3>
                   <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">

@@ -38,8 +38,6 @@
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-position: center;
-  mask-mode: luminance;
-  -webkit-mask-mode: luminance;
   mask-image: url('/leads-mask.png');
   -webkit-mask-image: url('/leads-mask.png');
 }

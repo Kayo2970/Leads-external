@@ -109,8 +109,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     } else {
       frame.style.maskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
-      frame.style.maskMode = "luminance";
-      (frame.style as any).webkitMaskMode = "luminance";
       frame.style.maskSize = `${currentSize}px auto`;
       frame.style.webkitMaskSize = `${currentSize}px auto`;
       frame.style.pointerEvents = e > 0.65 ? "auto" : "none";
