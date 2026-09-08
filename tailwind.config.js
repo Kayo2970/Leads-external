@@ -14,6 +14,16 @@ module.exports = {
         '5xl': '3440px',
       },
       colors: {
+        primary: "#0F2A47",
+        "primary-light": "#1E4D7B",
+        accent: "#1D64B2",
+        success: "#15803D",
+        warning: "#B45309",
+        danger: "#BE123C",
+        "theme-background": "var(--bg-color)",
+        "theme-text-primary": "#FFFFFF",
+        "theme-text-secondary": "#E2D9F3",
+        "theme-card-border": "rgba(255, 255, 255, 0.15)",
         brand: {
           violet: "#361C6A",
           purple: "#361C6A",

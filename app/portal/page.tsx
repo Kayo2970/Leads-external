@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import BorderGlow from "@/components/BorderGlow";
 import {
   ShieldCheck,
@@ -107,17 +108,14 @@ export default function PortalGatewayPage() {
               </p>
 
               {/* Login Button */}
-              <button
-                type="button"
-                onClick={() => {
-                  window.location.href = "/portal/login";
-                }}
+              <Link
+                href="/portal/login"
                 className="px-10 py-5 sm:px-12 sm:py-6 rounded-2xl font-extrabold text-lg sm:text-xl 2xl:text-2xl bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#9C1256] bg-size-200 text-white shadow-2xl hover:shadow-[0_0_35px_rgba(222,63,17,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 group cursor-pointer"
               >
                 <Lock className="w-6 h-6" />
                 <span>Login for Members</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
-              </button>
+              </Link>
             </div>
           </BorderGlow>
         </div>
