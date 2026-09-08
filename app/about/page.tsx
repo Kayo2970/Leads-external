@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import ChromaGrid, { ChromaItem } from "@/components/ChromaGrid";
+import OrganogramChart from "@/components/OrganogramChart";
 import {
   LEADERSHIP_MESSAGES,
   BOARD_MEMBERS_DATA,
@@ -22,21 +23,19 @@ export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<string>("All");
 
   const tabOptions = [
-    { label: "All Leaders & Council", value: "All" },
-    { label: "Executive Council", value: "Executive Council" },
-    { label: "Core Committee", value: "Core Committee" },
-    { label: "Organizing Team", value: "Organizing Team" },
+    { label: "All Members", value: "All" },
+    { label: "Patron & Chief Advisor", value: "Patron & Chief Advisor" },
+    { label: "Centre Head & Faculty Leads", value: "Centre Head & Faculty Leads" },
+    { label: "Student Core Council", value: "Student Core Council" },
+    { label: "Student Advisory Council", value: "Student Advisory Council" },
+    { label: "Student Trainee Associates", value: "Student Trainee Associates" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
   ];
 
   const filteredMembers: BoardMember[] =
     activeTab === "All"
       ? BOARD_MEMBERS_DATA
-      : BOARD_MEMBERS_DATA.filter(
-          (m) =>
-            m.roleGroup === activeTab ||
-            (activeTab === "Executive Council" && m.roleGroup === "Patron & Executive")
-        );
+      : BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === activeTab);
 
   // Convert board members into ChromaGrid items with large photos & highlighted name/designation
   const chromaLeadershipItems: ChromaItem[] = LEADERSHIP_MESSAGES.map((m, idx) => ({
@@ -257,6 +256,12 @@ export default function AboutPage() {
               ease="power3.out"
             />
           </div>
+
+          {/* Interactive Governance Hierarchy & Organogram */}
+          <OrganogramChart
+            activeRoleGroup={activeTab}
+            onSelectRoleGroup={(group) => setActiveTab(group)}
+          />
         </div>
       </section>
 
@@ -275,13 +280,13 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Filter Tabs */}
+          {/* Filter Tabs matching the official Organogram */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
             {tabOptions.map((tab) => (
               <button
                 key={tab.value}
                 onClick={() => setActiveTab(tab.value)}
-                className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 ${
                   activeTab === tab.value
                     ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md scale-105"
                     : "bg-white text-[#361C6A] border border-purple-200 shadow-sm hover:border-[#DE3F11]/50 hover:bg-purple-50/50"
@@ -293,7 +298,7 @@ export default function AboutPage() {
           </div>
 
           {/* Members ChromaGrid with Large Photos and Highlighted Details */}
-          <div className="relative">
+          <div className="relative min-h-[400px]">
             <ChromaGrid
               items={chromaDirectoryItems}
               radius={340}
