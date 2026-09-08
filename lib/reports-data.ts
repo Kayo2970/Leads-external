@@ -18,7 +18,7 @@ export const REPORTS_DATA: ImpactReport[] = [
     year: "2025–2026",
     summary:
       "The definitive annual impact report for LEADS Next Gen Centre's 2025–26 academic year — documenting institutional growth, flagship programme outcomes, national leadership initiatives, partnership milestones, and the measurable upliftment impact across student, faculty, and executive cohorts.",
-    fileSize: "298 MB",
+    fileSize: "12.4 MB",
     fileUrl: "/reports/LEADS-Impact-Report-2025-2026.pdf",
     pages: 0,
     featured: true,
