@@ -36,7 +36,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   const frameRef = useRef<HTMLDivElement | null>(null);
   const hintRef = useRef<HTMLDivElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
-  const logoOverlayRef = useRef<HTMLDivElement | null>(null);
+  const whiteOverlayRef = useRef<HTMLDivElement | null>(null);
 
   const propsRef = useRef({
     scrollDistance,
@@ -56,7 +56,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     const frame = frameRef.current;
     const hint = hintRef.current;
     const bg = bgRef.current;
-    const logoOverlay = logoOverlayRef.current;
+    const whiteOverlay = whiteOverlayRef.current;
     if (!frame) return;
 
     const e = smoothstep(0, 1, p);
@@ -81,7 +81,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       startSize = clamp(w * 0.24, 650, 950);
     }
 
-    // Dynamic zoom end size
+    // Dynamic zoom end size so camera zooms completely through the logo contours
     const endSize = Math.max(22000, maxDim * 14);
     const currentSize = startSize + (endSize - startSize) * Math.pow(e, 2.5);
 
@@ -91,31 +91,22 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       bg.style.opacity = `${1 - bgFade}`;
     }
 
-    // Real transparent logo overlay scales and reduces opacity smoothly
-    if (logoOverlay) {
-      const logoFade = smoothstep(0.0, 0.42, p);
-      const logoScale = 1 + e * 3.5;
-      logoOverlay.style.width = `${startSize}px`;
-      logoOverlay.style.height = `${startSize}px`;
-      logoOverlay.style.opacity = `${1 - logoFade}`;
-      logoOverlay.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
-      logoOverlay.style.display = logoFade >= 1 ? "none" : "flex";
+    // White fill style: solid white inside logo silhouette that smoothly reduces opacity as you scroll
+    if (whiteOverlay) {
+      const whiteFade = smoothstep(0.0, 0.45, p);
+      whiteOverlay.style.opacity = `${1 - whiteFade}`;
     }
 
     // Camera flythrough - mask expands continuously and unlocks pointer events when open
     if (e >= 0.98) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
-      frame.style.opacity = "1";
       frame.style.pointerEvents = "auto";
     } else {
       frame.style.maskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.maskSize = `${currentSize}px auto`;
       frame.style.webkitMaskSize = `${currentSize}px auto`;
-      // Smoothly fade in the hero frame content as the camera zooms into the logo
-      const frameFade = smoothstep(0.15, 0.65, p);
-      frame.style.opacity = `${frameFade}`;
       frame.style.pointerEvents = e > 0.65 ? "auto" : "none";
     }
 
@@ -215,15 +206,8 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
           {/* Masked Frame containing the hero content */}
           <div ref={frameRef} className="logo-scroll-expand__frame">
             {children}
-          </div>
-
-          {/* Transparent Logo Overlay that reduces opacity as you scroll */}
-          <div ref={logoOverlayRef} className="logo-scroll-expand__logo-layer">
-            <img
-              src={logoSrc}
-              alt="LEADS Next Gen Centre"
-              className="w-full h-full object-contain pointer-events-none"
-            />
+            {/* White Fill Layer inside the logo cutout that reduces opacity as you scroll */}
+            <div ref={whiteOverlayRef} className="logo-scroll-expand__white-overlay" />
           </div>
 
           {/* Scroll Down Indicator */}

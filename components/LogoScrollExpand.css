@@ -32,14 +32,13 @@
   will-change: opacity;
 }
 
-/* The frame revealing the underlying content through the logo cutout mask */
+/* The frame revealing the underlying content through the razor-sharp SVG logo mask */
 .logo-scroll-expand__frame {
   position: absolute;
   inset: 0;
   z-index: 2;
   overflow: hidden;
-  opacity: 0;
-  will-change: mask-size, -webkit-mask-size, transform, opacity;
+  will-change: mask-size, -webkit-mask-size, transform;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
@@ -48,25 +47,15 @@
   -webkit-mask-image: url('/leads-mask.svg');
 }
 
-/* Transparent Logo Layer that fades in opacity as camera zooms in */
-.logo-scroll-expand__logo-layer {
+/* Pure solid white fill inside the logo cutout, reducing opacity as camera zooms in */
+.logo-scroll-expand__white-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
+  inset: 0;
+  background-color: #FFFFFF;
+  z-index: 20;
   pointer-events: none;
-  will-change: transform, opacity;
-  display: flex;
-  items-center: center;
-  justify-content: center;
-}
-
-.logo-scroll-expand__logo-layer img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: transparent !important;
+  opacity: 1;
+  will-change: opacity;
 }
 
 .logo-scroll-expand__scroll-hint {
