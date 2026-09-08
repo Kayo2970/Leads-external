@@ -12,13 +12,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-brand-violet/20">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-900/90 flex items-center justify-center p-1 border border-brand-gold/40">
-                <img src="/leads-logo.png" alt="LEADS Logo" className="w-full h-full object-contain" />
+            <Link href="/" className="inline-block group">
+              <div className="bg-white/95 px-4 py-2 rounded-2xl border border-brand-gold/40 inline-block shadow-md group-hover:scale-105 transition-transform duration-300">
+                <img
+                  src="/leads-header-logo.png"
+                  alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
+                  className="h-11 sm:h-12 w-auto object-contain"
+                />
               </div>
-              <span className="font-extrabold text-2xl tracking-tight text-white">
-                LEADS <span className="text-brand-gold text-base font-medium ml-1">Next Gen Centre</span>
-              </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-md">
               India's first dedicated centre for leadership and non-technical skill upliftment. Developed to empower founders, government leaders, industry professionals, students, and researchers.

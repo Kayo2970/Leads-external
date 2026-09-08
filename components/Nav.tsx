@@ -41,22 +41,13 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo & Identity */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-900/90 flex items-center justify-center p-1 border border-brand-gold/40 shadow-md group-hover:scale-105 transition-transform duration-300">
-              <img src="/leads-logo.png" alt="LEADS Logo" className="w-full h-full object-contain" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-1.5">
-                <span className="font-extrabold text-lg sm:text-xl tracking-tight text-brand-violet dark:text-white">
-                  LEADS
-                </span>
-                <span className="font-medium text-xs px-2 py-0.5 rounded-full bg-brand-gold/15 text-brand-gold border border-brand-gold/30">
-                  Next Gen Centre
-                </span>
-              </div>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 hidden md:block">
-                M. S. Ramaiah University of Applied Sciences (RUAS)
-              </p>
+          <Link href="/" className="flex items-center group">
+            <div className="bg-white/95 dark:bg-white/90 px-3 py-1.5 rounded-xl border border-brand-gold/30 shadow-sm group-hover:scale-105 transition-transform duration-300">
+              <img
+                src="/leads-header-logo.png"
+                alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
+                className="h-9 sm:h-10 w-auto object-contain"
+              />
             </div>
           </Link>
 

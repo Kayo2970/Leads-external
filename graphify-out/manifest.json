@@ -1,7 +1,7 @@
 {
   "app/about/page.tsx": {
-    "mtime": 1788875477.8619645,
-    "ast_hash": "993e2ae757b00f61502b5ea4d4608735",
+    "mtime": 1788877048.492082,
+    "ast_hash": "afecb62a31974d15a08afc14586376e4",
     "semantic_hash": ""
   },
   "app/api/contact/route.ts": {
@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "components/Footer.tsx": {
-    "mtime": 1788876801.2412038,
-    "ast_hash": "cc37337805e56474891ffab129dbf200",
+    "mtime": 1788877037.427015,
+    "ast_hash": "b9a7efd55dbf81170cf2c8fbe1abe7ce",
     "semantic_hash": ""
   },
   "components/Nav.tsx": {
-    "mtime": 1788876795.610075,
-    "ast_hash": "9333aa9b21f84c49cdc19efc12ea6232",
+    "mtime": 1788877031.431364,
+    "ast_hash": "23f809ebebdd04845df71e7e7bc07f05",
     "semantic_hash": ""
   },
   "components/ReportCard.tsx": {
@@ -247,6 +247,16 @@
   "public/leads-logo.png": {
     "mtime": 1788876773.641875,
     "ast_hash": "f7a11231b6a2742e259318ee421c0efc",
+    "semantic_hash": ""
+  },
+  "public/leads-header-logo-transparent.png": {
+    "mtime": 1788877007.373828,
+    "ast_hash": "dcfd79dc589dced37f44bb4717358ad4",
+    "semantic_hash": ""
+  },
+  "public/leads-header-logo.png": {
+    "mtime": 1788877007.363361,
+    "ast_hash": "2dcdcf275e9faf7abe5a455ec27b25f6",
     "semantic_hash": ""
   }
 }

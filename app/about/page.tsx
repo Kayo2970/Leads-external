@@ -20,6 +20,17 @@ export default function AboutPage() {
         </p>
       </div>
 
+      {/* Official Centre Identity Banner */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14 flex justify-center">
+        <div className="bg-white/95 dark:bg-white/90 p-4 sm:p-6 rounded-3xl border border-brand-gold/30 shadow-xl inline-block max-w-2xl text-center hover:scale-[1.02] transition-transform duration-300">
+          <img
+            src="/leads-header-logo.png"
+            alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
+            className="h-14 sm:h-20 w-auto mx-auto object-contain"
+          />
+        </div>
+      </div>
+
       {/* Story & Mission Split */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
