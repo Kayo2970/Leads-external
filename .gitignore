@@ -14,6 +14,9 @@ out
 # local env files
 .env*.local
 
+# TypeScript cache
+tsconfig.tsbuildinfo
+
 # large binary / media files — keep out of git
 reports/
 *.zip
