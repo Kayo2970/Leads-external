@@ -32,39 +32,95 @@ export default function AboutPage() {
     { label: "Governing & Advisory", value: "Governing & Advisory" },
   ];
 
-  const filteredMembers: BoardMember[] =
+  // Partition member categories
+  const partitions = [
+    {
+      id: "patron-advisors",
+      group: "Patron & Chief Advisor" as const,
+      title: "Patron & Chief Advisor",
+      badge: "Governance Tier 01",
+      count: "2 Leaders",
+      description:
+        "High-level institutional patronage and strategic stewardship guiding the academic and national mission of LEADS.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Patron & Chief Advisor"),
+      columns: 2,
+    },
+    {
+      id: "faculty-leads",
+      group: "Centre Head & Faculty Leads" as const,
+      title: "Centre Leadership & Faculty Leads",
+      badge: "Governance Tier 02",
+      count: "5 Faculty Heads",
+      description:
+        "Faculty leadership driving daily centre operations, inter-campus event execution, corporate collaborations, and fiscal governance.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centre Head & Faculty Leads"),
+      columns: 3,
+    },
+    {
+      id: "core-council",
+      group: "Student Core Council" as const,
+      title: "Student Core Council",
+      badge: "Governance Tier 03",
+      count: "8 Senior Officers",
+      description:
+        "Senior student executive leadership spearheading national summits, public relations, operations, finance, design, and research initiatives.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Core Council"),
+      columns: 4,
+    },
+    {
+      id: "student-advisory",
+      group: "Student Advisory Council" as const,
+      title: "Student Advisory Council",
+      badge: "Governance Tier 04",
+      count: "2 Senior Advisors",
+      description:
+        "Experienced student leaders providing strategic counsel, institutional continuity, and mentorship across committees.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Advisory Council"),
+      columns: 2,
+    },
+    {
+      id: "trainee-associates",
+      group: "Student Trainee Associates" as const,
+      title: "Student Trainee Associates & Organizing Committee",
+      badge: "Governance Tier 05",
+      count: "17 Associates",
+      description:
+        "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Trainee Associates"),
+      columns: 4,
+    },
+    {
+      id: "governing-advisory",
+      group: "Governing & Advisory" as const,
+      title: "Governing & Corporate Advisory Board",
+      badge: "Governance Tier 06",
+      count: "6 Distinguished Advisors",
+      description:
+        "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Governing & Advisory"),
+      columns: 3,
+    },
+  ];
+
+  const mapToChromaItems = (members: BoardMember[]): ChromaItem[] =>
+    members.map((m, idx) => ({
+      image: m.image || "/images/leadership/subhadeep-mukherjee.webp",
+      title: m.name,
+      subtitle: m.designation,
+      handle: m.role,
+      location: m.affiliation,
+      borderColor: idx % 3 === 0 ? "#DE3F11" : idx % 3 === 1 ? "#9C1256" : "#E2D9F3",
+      gradient:
+        idx % 2 === 0
+          ? "linear-gradient(165deg, #361C6A, #180A30)"
+          : "linear-gradient(165deg, #2A1454, #120726)",
+      url: m.linkedin,
+    }));
+
+  const visiblePartitions =
     activeTab === "All"
-      ? BOARD_MEMBERS_DATA
-      : BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === activeTab);
-
-  // Convert board members into ChromaGrid items with large photos & highlighted name/designation
-  const chromaLeadershipItems: ChromaItem[] = LEADERSHIP_MESSAGES.map((m, idx) => ({
-    image: m.image || "/images/leadership/subhadeep-mukherjee.webp",
-    title: m.name,
-    subtitle: m.designation,
-    handle: m.role,
-    location: m.affiliation,
-    borderColor: idx % 2 === 0 ? "#DE3F11" : "#9C1256",
-    gradient:
-      idx % 2 === 0
-        ? "linear-gradient(165deg, #361C6A, #180A30)"
-        : "linear-gradient(165deg, #2A1454, #120726)",
-    url: m.linkedin,
-  }));
-
-  const chromaDirectoryItems: ChromaItem[] = filteredMembers.map((m, idx) => ({
-    image: m.image || "/images/leadership/subhadeep-mukherjee.webp",
-    title: m.name,
-    subtitle: m.designation,
-    handle: m.role,
-    location: m.affiliation,
-    borderColor: idx % 3 === 0 ? "#DE3F11" : idx % 3 === 1 ? "#9C1256" : "#E2D9F3",
-    gradient:
-      idx % 2 === 0
-        ? "linear-gradient(165deg, #361C6A, #180A30)"
-        : "linear-gradient(165deg, #2A1454, #120726)",
-    url: m.linkedin,
-  }));
+      ? partitions
+      : partitions.filter((p) => p.group === activeTab);
 
   return (
     <div className="min-h-screen">
@@ -229,59 +285,56 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 3 [PURPLE]: EXECUTIVE PATRONS & LEADERSHIP (CHROMA GRID WITH LARGE PHOTOS) */}
+      {/* SECTION 3 [PURPLE]: EXECUTIVE PATRONS & ORGANOGRAM */}
       <section className="py-24 bg-[#241147] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="text-xs font-bold uppercase tracking-wider text-[#DE3F11] mb-2 flex items-center justify-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
-              <span>Executive Leadership & Guidance</span>
+              <span>Governance Architecture & Hierarchy</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-              Leadership Vision
+              Institutional Governance Structure
             </h2>
             <p className="text-sm text-[#E2D9F3] mt-2">
-              Guidance from the architects of futuristic management education and leadership development at Ramaiah University of Applied Sciences.
+              Comprehensive structural organogram representing the executive leadership, faculty leads, and student council governance at LEADS Next-Gen Centre.
             </p>
-          </div>
-
-          {/* Interactive ChromaGrid Spotlight for Key Leadership */}
-          <div className="relative min-h-[440px]">
-            <ChromaGrid
-              items={chromaLeadershipItems}
-              radius={625}
-              columns={3}
-              damping={1.05}
-              fadeOut={1.15}
-              ease="power3.out"
-            />
           </div>
 
           {/* Interactive Governance Hierarchy & Organogram */}
           <OrganogramChart
             activeRoleGroup={activeTab}
-            onSelectRoleGroup={(group) => setActiveTab(group)}
+            onSelectRoleGroup={(group) => {
+              setActiveTab(group);
+              const el = document.getElementById("members-directory-section");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           />
         </div>
       </section>
 
-      {/* SECTION 4 [WHITE/LIGHT]: GOVERNANCE, COMMITTEES & ADVISORY DIRECTORY (CHROMA GRID) */}
-      <section className="py-24 bg-[#F7F4FC] text-[#1E0C3D] border-y border-purple-100">
+      {/* SECTION 4 [WHITE/LIGHT]: PARTITIONS OF ALL MEMBERS DIRECTORY */}
+      <section
+        id="members-directory-section"
+        className="py-24 bg-[#F7F4FC] text-[#1E0C3D] border-y border-purple-100 scroll-mt-20"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <div className="text-xs font-bold uppercase tracking-wider text-[#9C1256] mb-2">
-              Governance & Mentorship
+              Members Directory & Governance Tiers
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E0C3D]">
               Leadership, Committees & Advisory Board
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
-              Meet the faculty deans, executive committee members, and national advisors driving the LEADS mission.
+              Explore the partitioned councils, faculty committees, and student executive teams driving LEADS initiatives.
             </p>
           </div>
 
-          {/* Filter Tabs matching the official Organogram */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+          {/* Partition Filter Tabs matching the official Organogram */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-16">
             {tabOptions.map((tab) => (
               <button
                 key={tab.value}
@@ -297,16 +350,50 @@ export default function AboutPage() {
             ))}
           </div>
 
-          {/* Members ChromaGrid with Large Photos and Highlighted Details */}
-          <div className="relative min-h-[400px]">
-            <ChromaGrid
-              items={chromaDirectoryItems}
-              radius={625}
-              columns={4}
-              damping={1.05}
-              fadeOut={1.15}
-              ease="power3.out"
-            />
+          {/* PARTITIONS CONTAINER */}
+          <div className="space-y-20">
+            {visiblePartitions.map((partition) => {
+              const chromaItems = mapToChromaItems(partition.members);
+              return (
+                <div
+                  key={partition.id}
+                  id={partition.id}
+                  className="p-6 sm:p-10 rounded-3xl bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  {/* Partition Header */}
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between border-b border-purple-100 pb-6 mb-8 gap-4">
+                    <div>
+                      <div className="flex items-center gap-2.5 mb-2">
+                        <span className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#361C6A] text-white">
+                          {partition.badge}
+                        </span>
+                        <span className="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20">
+                          {partition.count}
+                        </span>
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E0C3D]">
+                        {partition.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl">
+                        {partition.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Partition ChromaGrid */}
+                  <div className="relative">
+                    <ChromaGrid
+                      items={chromaItems}
+                      radius={625}
+                      columns={partition.columns}
+                      damping={1.05}
+                      fadeOut={1.15}
+                      ease="power3.out"
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
