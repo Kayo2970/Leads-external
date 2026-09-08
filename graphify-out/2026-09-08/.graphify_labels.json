@@ -24,5 +24,6 @@
   "22": "next.config.js",
   "23": "next-env.d.ts",
   "24": "postcss.config.js",
-  "25": "tailwind.config.js"
+  "25": "tailwind.config.js",
+  "26": "Threads.tsx"
 }

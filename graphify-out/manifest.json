@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "app/layout.tsx": {
-    "mtime": 1788875477.8649633,
-    "ast_hash": "e5d5aff2a61f6d9094d66d7b763f0e8d",
+    "mtime": 1788876781.183172,
+    "ast_hash": "8942b92aa5ce08531395c196a169a22d",
     "semantic_hash": ""
   },
   "app/page.tsx": {
@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "components/Footer.tsx": {
-    "mtime": 1788875477.8694682,
-    "ast_hash": "6dfd081e96cc5bd97701704a095fcb5e",
+    "mtime": 1788876801.2412038,
+    "ast_hash": "cc37337805e56474891ffab129dbf200",
     "semantic_hash": ""
   },
   "components/Nav.tsx": {
-    "mtime": 1788875477.8694682,
-    "ast_hash": "4d0518db4ec50d05fde1fa4763a24065",
+    "mtime": 1788876795.610075,
+    "ast_hash": "9333aa9b21f84c49cdc19efc12ea6232",
     "semantic_hash": ""
   },
   "components/ReportCard.tsx": {
@@ -222,6 +222,31 @@
   "components/SoftAurora.tsx": {
     "mtime": 1788876424.6862404,
     "ast_hash": "b55b3de847f6896c5f48ec76c3cf1de6",
+    "semantic_hash": ""
+  },
+  "app/apple-icon.png": {
+    "mtime": 1788876774.1880803,
+    "ast_hash": "d328e3699aa55cf4a3a0223560e1bb5d",
+    "semantic_hash": ""
+  },
+  "app/icon.png": {
+    "mtime": 1788876774.1950867,
+    "ast_hash": "abb088b9dad0b3c89e5ade701e6504ef",
+    "semantic_hash": ""
+  },
+  "public/favicon-16x16.png": {
+    "mtime": 1788876774.1765435,
+    "ast_hash": "3c269aff789c1c64c9ba0c91e335ba21",
+    "semantic_hash": ""
+  },
+  "public/favicon-32x32.png": {
+    "mtime": 1788876774.1700382,
+    "ast_hash": "abb088b9dad0b3c89e5ade701e6504ef",
+    "semantic_hash": ""
+  },
+  "public/leads-logo.png": {
+    "mtime": 1788876773.641875,
+    "ast_hash": "f7a11231b6a2742e259318ee421c0efc",
     "semantic_hash": ""
   }
 }

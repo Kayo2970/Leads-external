@@ -1,7 +1,7 @@
 # Graph Report - Leads-external  (2026-09-08)
 
 ## Corpus Check
-- 41 files · ~19,482 words
+- 41 files · ~28,624 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `24b2e0b0`
+- Built from commit: `ab3e2536`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

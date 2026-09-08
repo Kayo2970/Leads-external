@@ -1,11 +1,11 @@
 # Graph Report - Leads-external  (2026-09-08)
 
 ## Corpus Check
-- 40 files · ~18,199 words
+- 41 files · ~19,482 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 243 nodes · 252 edges · 26 communities (23 shown, 3 thin omitted)
+- 248 nodes · 257 edges · 27 communities (23 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -35,6 +35,7 @@
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_next.config.js|next.config.js]]
+- [[_COMMUNITY_Threads.tsx|Threads.tsx]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Post-Launch Maintenance Guide` - 17 edges
@@ -63,7 +64,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (26 total, 3 thin omitted)
+## Communities (27 total, 4 thin omitted)
 
 ### Community 0 - "compilerOptions"
 Cohesion: 0.10
@@ -82,8 +83,8 @@ Cohesion: 0.12
 Nodes (16): 10. Environment Variables, 11. Performance Checklist, 12. Accessibility Checklist, 13. SEO Checklist, 14. Deployment Guide, 15. Open Technical Questions, 1. Project Overview, 2. Recommended Tech Stack (+8 more)
 
 ### Community 4 - "page.tsx"
-Cohesion: 0.25
-Nodes (7): EventCard(), EventCardProps, EventModalProps, Threads(), ThreadsProps, EVENTS_DATA, LEADSEvent
+Cohesion: 0.24
+Nodes (8): EventCard(), EventCardProps, EventModalProps, hexToVec3(), SoftAurora(), SoftAuroraProps, EVENTS_DATA, LEADSEvent
 
 ### Community 5 - "Nav.tsx"
 Cohesion: 0.23
@@ -91,7 +92,7 @@ Nodes (8): ReportCard(), ReportCardProps, ThemeToggle(), ImpactReport, REPORTS_D
 
 ### Community 6 - "package.json"
 Cohesion: 0.12
-Nodes (15): dependencies, framer-motion, lucide-react, next, react, react-dom, name, private (+7 more)
+Nodes (16): dependencies, framer-motion, lucide-react, next, ogl, react, react-dom, name (+8 more)
 
 ### Community 7 - "Competitor Research Brief"
 Cohesion: 0.15
@@ -134,9 +135,9 @@ Cohesion: 0.33
 Nodes (4): inter, metadata, playfair, Footer()
 
 ## Knowledge Gaps
-- **157 isolated node(s):** `inter`, `playfair`, `metadata`, `ThreadsProps`, `nextConfig` (+152 more)
+- **159 isolated node(s):** `inter`, `playfair`, `metadata`, `SoftAuroraProps`, `ThreadsProps` (+154 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -144,7 +145,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `inter`, `playfair`, `metadata` to the rest of the system?**
-  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _159 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `PART 2 — COMPANY PROFILE` be split into smaller, more focused modules?**
@@ -154,4 +155,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Technical Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._

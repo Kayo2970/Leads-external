@@ -354,6 +354,46 @@
       "norm_label": "reportcard()"
     },
     {
+      "label": "SoftAurora.tsx",
+      "file_type": "code",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_softaurora",
+      "community": 4,
+      "norm_label": "softaurora.tsx"
+    },
+    {
+      "label": "hexToVec3()",
+      "file_type": "code",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "components_softaurora_hextovec3",
+      "community": 4,
+      "norm_label": "hextovec3()"
+    },
+    {
+      "label": "SoftAuroraProps",
+      "file_type": "code",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "components_softaurora_softauroraprops",
+      "community": 4,
+      "norm_label": "softauroraprops"
+    },
+    {
+      "label": "SoftAurora()",
+      "file_type": "code",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "components_softaurora_softaurora",
+      "community": 4,
+      "norm_label": "softaurora()"
+    },
+    {
       "label": "ThemeToggle.tsx",
       "file_type": "code",
       "source_file": "components/ThemeToggle.tsx",
@@ -380,7 +420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_threads",
-      "community": 4,
+      "community": 26,
       "norm_label": "threads.tsx"
     },
     {
@@ -390,7 +430,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_threads_threadsprops",
-      "community": 4,
+      "community": 26,
       "norm_label": "threadsprops"
     },
     {
@@ -400,7 +440,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "components_threads_threads",
-      "community": 4,
+      "community": 26,
       "norm_label": "threads()"
     },
     {
@@ -724,10 +764,20 @@
       "norm_label": "next"
     },
     {
-      "label": "react",
+      "label": "ogl",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L16",
+      "_origin": "ast",
+      "id": "package_dependencies_ogl",
+      "community": 6,
+      "norm_label": "ogl"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 6,
@@ -737,7 +787,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 6,
@@ -747,7 +797,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 14,
@@ -757,7 +807,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 14,
@@ -767,7 +817,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 14,
@@ -777,7 +827,7 @@
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 14,
@@ -787,7 +837,7 @@
       "label": "autoprefixer",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_devdependencies_autoprefixer",
       "community": 14,
@@ -797,7 +847,7 @@
       "label": "postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_devdependencies_postcss",
       "community": 14,
@@ -807,7 +857,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 14,
@@ -817,7 +867,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 14,
@@ -827,7 +877,7 @@
       "label": "wrangler",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_devdependencies_wrangler",
       "community": 14,
@@ -2720,7 +2770,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "source": "app_page",
-      "target": "components_threads",
+      "target": "components_softaurora",
       "confidence_score": 1.0
     },
     {
@@ -2731,7 +2781,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "source": "app_page",
-      "target": "components_threads_threads",
+      "target": "components_softaurora_softaurora",
       "confidence_score": 1.0
     },
     {
@@ -3110,6 +3160,47 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_softaurora",
+      "target": "components_softaurora_hextovec3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "components_softaurora",
+      "target": "components_softaurora_softaurora",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "components_softaurora",
+      "target": "components_softaurora_softauroraprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/SoftAurora.tsx",
+      "source_location": "L262",
+      "weight": 1.0,
+      "source": "components_softaurora_softaurora",
+      "target": "components_softaurora_hextovec3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "components/ThemeToggle.tsx",
       "source_location": "L7",
       "weight": 1.0,
@@ -3327,7 +3418,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -3460,7 +3551,7 @@
       "source_location": "L16",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
+      "target": "package_dependencies_ogl",
       "confidence_score": 1.0
     },
     {
@@ -3470,17 +3561,17 @@
       "source_location": "L17",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
+      "target": "package_dependencies_react",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L18",
       "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_autoprefixer",
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
       "confidence_score": 1.0
     },
     {
@@ -3490,7 +3581,7 @@
       "source_location": "L24",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_postcss",
+      "target": "package_devdependencies_autoprefixer",
       "confidence_score": 1.0
     },
     {
@@ -3500,37 +3591,7 @@
       "source_location": "L25",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_postcss",
       "confidence_score": 1.0
     },
     {
@@ -3540,7 +3601,37 @@
       "source_location": "L26",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
       "confidence_score": 1.0
     },
     {
@@ -3548,6 +3639,16 @@
       "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_wrangler",

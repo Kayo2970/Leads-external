@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     "Non-Technical Leadership",
   ],
   authors: [{ name: "Kayomarz Pavri" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "LEADS Next Gen Centre | India's Leadership & Skill Upliftment Hub",
     description: "Building India's Next Generation of Leaders — summits, workshops, and skill upliftment.",

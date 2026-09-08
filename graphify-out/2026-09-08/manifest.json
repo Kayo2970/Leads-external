@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1788875477.8659654,
-    "ast_hash": "ece986afcff5359a0cb14b3840d90d09",
+    "mtime": 1788876433.753035,
+    "ast_hash": "bc887ab7bee9f3cf12d6f7e7cf6aaf7b",
     "semantic_hash": ""
   },
   "app/reports/page.tsx": {
@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1788875477.8769696,
-    "ast_hash": "4cf018dd849ce4e0432e81aa58de4bba",
+    "mtime": 1788876411.6651125,
+    "ast_hash": "c031f5c408d8e155fba252187fcd84cf",
     "semantic_hash": ""
   },
   "postcss.config.js": {
@@ -217,6 +217,11 @@
   "public/reports/LEADS-Strategic-Roadmap-2025-2030.pdf": {
     "mtime": 1788875477.880522,
     "ast_hash": "c7d915b17be121ef2e6756810f5e3bbd",
+    "semantic_hash": ""
+  },
+  "components/SoftAurora.tsx": {
+    "mtime": 1788876424.6862404,
+    "ast_hash": "b55b3de847f6896c5f48ec76c3cf1de6",
     "semantic_hash": ""
   }
 }

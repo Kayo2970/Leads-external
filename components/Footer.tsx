@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-violet to-brand-violet-soft flex items-center justify-center border border-brand-gold/40">
-                <Sparkles className="w-5 h-5 text-brand-gold" />
+              <div className="w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-900/90 flex items-center justify-center p-1 border border-brand-gold/40">
+                <img src="/leads-logo.png" alt="LEADS Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-extrabold text-2xl tracking-tight text-white">
                 LEADS <span className="text-brand-gold text-base font-medium ml-1">Next Gen Centre</span>
