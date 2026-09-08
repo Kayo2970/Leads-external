@@ -1,0 +1,210 @@
+"use client";
+
+import React, { useState } from "react";
+import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organisation: "",
+    interestArea: "Events",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (error) setError("");
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    if (!formData.name.trim() || !formData.email.trim()) {
+      setError("Please fill in all required fields (Name and Email).");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          organisation: "",
+          interestArea: "Events",
+          message: "",
+        });
+      } else {
+        const data = await res.json();
+        setError(data.message || "Failed to submit form. Please try again.");
+      }
+    } catch (err) {
+      setError("An unexpected network error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-brand-violet/20 shadow-2xl relative">
+      {success ? (
+        <div className="text-center py-10 space-y-4 animate-in fade-in duration-300">
+          <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 flex items-center justify-center mx-auto">
+            <CheckCircle2 className="w-8 h-8" />
+          </div>
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+            Thank You for Reaching Out!
+          </h3>
+          <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+            Your enquiry has been submitted to the LEADS Next Gen Centre team. We will review your message and get back to you shortly.
+          </p>
+          <button
+            onClick={() => setSuccess(false)}
+            className="mt-6 px-6 py-2.5 rounded-xl font-semibold text-xs bg-brand-violet/10 text-brand-violet dark:text-brand-gold hover:bg-brand-gold hover:text-slate-950 transition-all"
+          >
+            Send Another Message
+          </button>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="border-b border-brand-violet/10 pb-4 mb-2">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+              Send a Message to LEADS
+            </h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Whether exploring a partnership, summit attendance, or general inquiries — we respond within 24 hours.
+            </p>
+          </div>
+
+          {error && (
+            <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-xs flex items-center space-x-2">
+              <AlertCircle className="w-4 h-4 shrink-0" />
+              <span>{error}</span>
+            </div>
+          )}
+
+          {/* Full Name */}
+          <div>
+            <label htmlFor="name" className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Full Name <span className="text-brand-gold">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="e.g. Dr. Aravind Sharma"
+              required
+              className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-brand-violet-surface/60 border border-slate-200 dark:border-brand-violet/30 text-slate-900 dark:text-slate-100 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label htmlFor="email" className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Email Address <span className="text-brand-gold">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="name@organisation.in"
+              required
+              className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-brand-violet-surface/60 border border-slate-200 dark:border-brand-violet/30 text-slate-900 dark:text-slate-100 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all"
+            />
+          </div>
+
+          {/* Organisation / Role */}
+          <div>
+            <label htmlFor="organisation" className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Organisation / Designation <span className="text-slate-400 font-normal">(Optional)</span>
+            </label>
+            <input
+              type="text"
+              id="organisation"
+              name="organisation"
+              value={formData.organisation}
+              onChange={handleChange}
+              placeholder="e.g. Dept. of Higher Education / Startup Co-Founder"
+              className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-brand-violet-surface/60 border border-slate-200 dark:border-brand-violet/30 text-slate-900 dark:text-slate-100 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all"
+            />
+          </div>
+
+          {/* Area of Interest */}
+          <div>
+            <label htmlFor="interestArea" className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Area of Interest
+            </label>
+            <select
+              id="interestArea"
+              name="interestArea"
+              value={formData.interestArea}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-brand-violet-surface/60 border border-slate-200 dark:border-brand-violet/30 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all"
+            >
+              <option value="Events">Bharath Leadership Summit & Events</option>
+              <option value="Partnerships">Institutional & Government Partnerships</option>
+              <option value="Workshops">Catalyst Skill Upliftment Workshops</option>
+              <option value="Media">Media & Academic Research</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
+
+          {/* Message */}
+          <div>
+            <label htmlFor="message" className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+              Your Message <span className="text-slate-400 font-normal">(Optional)</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Tell us how LEADS can collaborate with your team..."
+              className="w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-brand-violet-surface/60 border border-slate-200 dark:border-brand-violet/30 text-slate-900 dark:text-slate-100 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all resize-none"
+            />
+          </div>
+
+          {/* CTA Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-3.5 px-6 rounded-xl font-bold text-sm bg-gradient-to-r from-brand-gold to-brand-gold-dark text-slate-950 shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50"
+          >
+            {loading ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Sending Message...</span>
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4" />
+                <span>Send Message</span>
+              </>
+            )}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
