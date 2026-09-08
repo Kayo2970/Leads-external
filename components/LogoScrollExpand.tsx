@@ -84,19 +84,19 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     logoBox.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
 
     // Curtain opacity reduces smoothly as user scrolls, revealing the full hero section
-    const curtainFade = smoothstep(0.02, 0.6, p);
+    const curtainFade = smoothstep(0.0, 0.45, p);
     curtain.style.opacity = `${1 - curtainFade}`;
     curtain.style.display = curtainFade >= 1 ? "none" : "flex";
 
-    // Hero content subtly scales from 0.94 up to 1.0 and becomes fully interactive
-    const frameScale = 0.94 + e * 0.06;
+    // Hero content subtly scales from 0.95 up to 1.0 and becomes fully interactive
+    const frameScale = 0.95 + e * 0.05;
     frame.style.transform = `scale(${frameScale})`;
-    frame.style.opacity = `${smoothstep(0.0, 0.5, p)}`;
-    frame.style.pointerEvents = p > 0.4 ? "auto" : "none";
+    frame.style.opacity = `${smoothstep(0.0, 0.35, p)}`;
+    frame.style.pointerEvents = p > 0.3 ? "auto" : "none";
 
     // Scroll hint pill fades out early
     if (hint) {
-      const hintFade = smoothstep(0, 0.12, p);
+      const hintFade = smoothstep(0, 0.1, p);
       hint.style.opacity = `${1 - hintFade}`;
       hint.style.transform = `translateX(-50%) translateY(${25 * hintFade}px)`;
     }
@@ -196,7 +196,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
               <img
                 src={propsRef.current.logoSrc}
                 alt="LEADS Next Gen Centre"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain brightness-0 invert filter"
               />
             </div>
 

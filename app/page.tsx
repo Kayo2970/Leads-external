@@ -35,10 +35,10 @@ export default function Home() {
       {/* SECTION 1 [PURPLE]: OPENING HERO WITH LOGO OUTLINE SCROLLEXPAND & SOFTAURORA */}
       <LogoScrollExpand
         logoSrc="/leads-logo.png"
-        scrollDistance={0.9}
-        holdDistance={0.2}
+        scrollDistance={0.8}
+        holdDistance={0.15}
       >
-        <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 3xl:pt-48 3xl:pb-36 overflow-hidden bg-[#361C6A]">
+        <section className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 3xl:pt-48 3xl:pb-36 overflow-hidden bg-[#361C6A]">
           {/* SoftAurora WebGL Background (Blue Wave) - Refined compact beam */}
           <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-85">
             <SoftAurora
