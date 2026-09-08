@@ -52,7 +52,7 @@ export default function AboutPage() {
             Centre for Leadership Empowering Attitude Development for Sustainability
           </h1>
           <p className="mt-5 text-base sm:text-xl text-[#E2D9F3] max-w-3xl mx-auto leading-relaxed font-normal">
-            LEADS Next-Gen Centre is a premier initiative at RUAS, strategically evolved from the E-Cell to foster multidisciplinary non-technical leadership and future-ready capabilities across India.
+            LEADS Next-Gen Centre is a premier leadership and executive empowerment centre at RUAS, dedicated to fostering multidisciplinary non-technical leadership, strategic governance, and future-ready capabilities across India.
           </p>
 
           {/* Official Centre & FMC Logo Banners */}
@@ -107,12 +107,12 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Evolution</h3>
+                <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Foundation</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Strategically evolved from the RUAS Entrepreneurship Cell (E-Cell), LEADS Next-Gen Centre was established under the Faculty of Management and Commerce (FMC) to address a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership skills.
+                  Established under the Faculty of Management and Commerce (FMC) at RUAS, LEADS Next-Gen Centre addresses a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership, ethical governance, and strategic management skills.
                 </p>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Through experiential learning, ethical mentorship, and industry-aligned projects, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
+                  Through experiential learning, executive roundtables, and industry-aligned summits, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
                 </p>
               </div>
             </BorderGlow>

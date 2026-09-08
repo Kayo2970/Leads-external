@@ -76,9 +76,14 @@ export default function Footer() {
                   href="https://www.bharatleadsummit.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-white/90 hover:text-[#DE3F11] transition-colors"
+                  className="inline-flex items-center space-x-2 text-white/90 hover:text-[#DE3F11] transition-colors group"
                 >
-                  Bharath Leadership Summit
+                  <img
+                    src="/bls-logo.webp"
+                    alt="BLS Logo"
+                    className="w-4 h-4 object-contain rounded-full bg-white/20 p-0.5 group-hover:scale-110 transition-transform"
+                  />
+                  <span>Bharath Leadership Summit</span>
                 </a>
               </li>
               <li>
