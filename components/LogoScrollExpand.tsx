@@ -13,6 +13,7 @@ const smoothstep = (edge0: number, edge1: number, x: number) => {
 
 export interface LogoScrollExpandProps {
   logoSrc?: string;
+  maskSrc?: string;
   scrollDistance?: number;
   holdDistance?: number;
   smoothing?: number;
@@ -22,6 +23,7 @@ export interface LogoScrollExpandProps {
 
 export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   logoSrc = "/leads-logo.png",
+  maskSrc = "/leads-mask.png",
   scrollDistance = 1.0,
   holdDistance = 0.2,
   smoothing = 0.1,
@@ -40,12 +42,14 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     scrollDistance,
     holdDistance,
     smoothing,
+    maskSrc,
   });
 
   propsRef.current = {
     scrollDistance,
     holdDistance,
     smoothing,
+    maskSrc,
   };
 
   const applyProgress = useCallback((p: number) => {
@@ -57,18 +61,20 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
 
     const e = smoothstep(0, 1, p);
 
-    // Initial mask size 220px expanding to 4500px to fully reveal
-    const startSize = 220;
-    const endSize = 4600;
+    // Initial mask size 280px expanding to 5200px to fully reveal through logo
+    const startSize = 280;
+    const endSize = 5200;
     const currentSize = startSize + (endSize - startSize) * Math.pow(e, 1.8);
 
-    if (e >= 0.99) {
+    if (e >= 0.96) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
       frame.style.pointerEvents = "auto";
     } else {
-      frame.style.maskImage = `radial-gradient(circle ${currentSize}px at 50% 50%, black 100%, transparent 100%)`;
-      frame.style.webkitMaskImage = `radial-gradient(circle ${currentSize}px at 50% 50%, black 100%, transparent 100%)`;
+      frame.style.maskImage = `url('${propsRef.current.maskSrc}')`;
+      frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
+      frame.style.maskSize = `${currentSize}px auto`;
+      frame.style.webkitMaskSize = `${currentSize}px auto`;
       frame.style.pointerEvents = e > 0.6 ? "auto" : "none";
     }
 

@@ -26,13 +26,19 @@
   pointer-events: none;
 }
 
-/* The frame revealing the underlying content */
+/* The frame revealing the underlying content through the logo alpha mask */
 .logo-scroll-expand__frame {
   position: absolute;
   inset: 0;
   z-index: 2;
   overflow: hidden;
-  will-change: clip-path, mask-size, -webkit-mask-size, transform;
+  will-change: mask-size, -webkit-mask-size, transform;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-image: url('/leads-mask.png');
+  -webkit-mask-image: url('/leads-mask.png');
 }
 
 /* Floating Logo Outline on top of the mask at start */
@@ -52,16 +58,16 @@
 
 .logo-scroll-expand__emblem-box {
   position: relative;
-  width: 220px;
-  height: 220px;
-  border-radius: 36px;
-  background: linear-gradient(145deg, rgba(156, 18, 86, 0.4), rgba(222, 63, 17, 0.4));
-  border: 2px solid rgba(222, 63, 17, 0.7);
-  box-shadow: 0 0 50px rgba(222, 63, 17, 0.5), inset 0 0 30px rgba(156, 18, 86, 0.5);
+  width: 280px;
+  height: 280px;
+  border-radius: 40px;
+  background: linear-gradient(145deg, rgba(156, 18, 86, 0.35), rgba(222, 63, 17, 0.35));
+  border: 2px solid rgba(222, 63, 17, 0.8);
+  box-shadow: 0 0 60px rgba(222, 63, 17, 0.6), inset 0 0 40px rgba(156, 18, 86, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 28px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -70,7 +76,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8));
 }
 
 .logo-scroll-expand__scroll-hint {
@@ -83,7 +89,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -96,13 +102,13 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.4rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(222, 63, 17, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(36, 17, 71, 0.85);
+  border: 1px solid rgba(222, 63, 17, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes floatPill {
