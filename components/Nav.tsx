@@ -107,14 +107,13 @@ export default function Nav() {
               {/* Dropdown Menu Box */}
               {reportsDropdownOpen && (
                 <div className="absolute top-full left-0 mt-1 w-80 rounded-2xl bg-[#241147]/95 glass-panel p-3 shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                  <div className="text-xs font-semibold uppercase tracking-wider gold-gradient-text px-3 py-1.5 border-b border-white/10 mb-1">
-                    Downloadable Impact Reports
+                  <div className="text-xs font-semibold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text px-3 py-1.5 border-b border-white/10 mb-1">
+                    Official Impact Publication
                   </div>
                   {REPORTS_DATA.map((report) => (
-                    <a
+                    <Link
                       key={report.id}
-                      href={report.fileUrl}
-                      download
+                      href="/reports"
                       className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-white/10 transition-colors group"
                     >
                       <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30 mt-0.5">
@@ -125,17 +124,17 @@ export default function Nav() {
                           {report.title}
                         </div>
                         <div className="text-[11px] text-[#E2D9F3]">
-                          {report.year} · {report.fileSize} PDF
+                          {report.year} · {report.fileSize} PDF · Read Online
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   ))}
                   <div className="mt-2 pt-2 border-t border-white/10 text-center">
                     <Link
                       href="/reports"
                       className="text-xs font-semibold text-white hover:text-[#DE3F11] hover:underline"
                     >
-                      View All Reports →
+                      Open Interactive Reader →
                     </Link>
                   </div>
                 </div>
