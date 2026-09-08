@@ -17,7 +17,7 @@
       "label": "AboutPage()",
       "file_type": "code",
       "source_file": "app/about/page.tsx",
-      "source_location": "L6",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "app_about_page_aboutpage",
       "community": 15,
@@ -624,10 +624,60 @@
       "norm_label": "boardmember"
     },
     {
+      "label": "LEADERSHIP_MESSAGES",
+      "file_type": "code",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "lib_board_data_leadership_messages",
+      "community": 15,
+      "norm_label": "leadership_messages"
+    },
+    {
+      "label": "EXECUTIVE_COUNCIL",
+      "file_type": "code",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "lib_board_data_executive_council",
+      "community": 15,
+      "norm_label": "executive_council"
+    },
+    {
+      "label": "CORE_LEADERSHIP",
+      "file_type": "code",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "lib_board_data_core_leadership",
+      "community": 15,
+      "norm_label": "core_leadership"
+    },
+    {
+      "label": "ORGANIZING_COMMITTEE",
+      "file_type": "code",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "lib_board_data_organizing_committee",
+      "community": 15,
+      "norm_label": "organizing_committee"
+    },
+    {
+      "label": "GOVERNING_ADVISORS",
+      "file_type": "code",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L384",
+      "_origin": "ast",
+      "id": "lib_board_data_governing_advisors",
+      "community": 15,
+      "norm_label": "governing_advisors"
+    },
+    {
       "label": "BOARD_MEMBERS_DATA",
       "file_type": "code",
       "source_file": "lib/board-data.ts",
-      "source_location": "L12",
+      "source_location": "L453",
       "_origin": "ast",
       "id": "lib_board_data_board_members_data",
       "community": 15,
@@ -7729,7 +7779,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/about/page.tsx",
-      "source_location": "L6",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "app_about_page",
       "target": "app_about_page_aboutpage",
@@ -7740,21 +7790,10 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/about/page.tsx",
-      "source_location": "L2",
+      "source_location": "L4",
       "weight": 1.0,
       "source": "app_about_page",
       "target": "components_boardmembercard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/about/page.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "app_about_page",
-      "target": "components_boardmembercard_boardmembercard",
       "confidence_score": 1.0
     },
     {
@@ -7762,7 +7801,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/about/page.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "app_about_page",
       "target": "lib_board_data",
@@ -7773,10 +7812,76 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/about/page.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "app_about_page",
       "target": "lib_board_data_board_members_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_about_page",
+      "target": "lib_board_data_boardmember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_about_page",
+      "target": "lib_board_data_core_leadership",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_about_page",
+      "target": "lib_board_data_executive_council",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_about_page",
+      "target": "lib_board_data_governing_advisors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_about_page",
+      "target": "lib_board_data_leadership_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_about_page",
+      "target": "lib_board_data_organizing_committee",
       "confidence_score": 1.0
     },
     {
@@ -8766,7 +8871,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/board-data.ts",
-      "source_location": "L12",
+      "source_location": "L453",
       "weight": 1.0,
       "source": "lib_board_data",
       "target": "lib_board_data_board_members_data",
@@ -8780,6 +8885,56 @@
       "weight": 1.0,
       "source": "lib_board_data",
       "target": "lib_board_data_boardmember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "lib_board_data",
+      "target": "lib_board_data_core_leadership",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "lib_board_data",
+      "target": "lib_board_data_executive_council",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "lib_board_data",
+      "target": "lib_board_data_governing_advisors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "lib_board_data",
+      "target": "lib_board_data_leadership_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/board-data.ts",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "lib_board_data",
+      "target": "lib_board_data_organizing_committee",
       "confidence_score": 1.0
     },
     {
@@ -15524,5 +15679,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "264bbcbbb13bc71e02afe7041a0fe362f0c86d4c"
+  "built_at_commit": "3dfef22c39e415560a1cf3ee35551e7cd0e11e61"
 }

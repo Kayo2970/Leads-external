@@ -1,6 +1,6 @@
 import React from "react";
 import { BoardMember } from "@/lib/board-data";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, Linkedin, ExternalLink } from "lucide-react";
 
 interface BoardMemberCardProps {
   member: BoardMember;
@@ -8,36 +8,70 @@ interface BoardMemberCardProps {
 
 export default function BoardMemberCard({ member }: BoardMemberCardProps) {
   return (
-    <div className="glass-panel rounded-3xl p-6 hover:border-[#DE3F11]/60 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between border border-[#9C1256]/30">
+    <div className="glass-panel rounded-3xl p-6 hover:border-[#DE3F11]/60 transition-all duration-300 hover:shadow-2xl group flex flex-col justify-between border border-[#9C1256]/30 bg-[#2A1454]/85">
       <div>
-        {/* Avatar & Badge */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#361C6A] to-[#241147] text-white font-extrabold text-xl flex items-center justify-center border border-[#DE3F11]/40 shadow-md group-hover:scale-105 transition-transform duration-300">
-            {member.initials}
+        {/* Avatar / Photo & Role Badge */}
+        <div className="flex items-start justify-between mb-4">
+          <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-[#DE3F11]/40 shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#361C6A] flex items-center justify-center text-white font-extrabold text-xl shrink-0">
+            {member.image ? (
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            ) : (
+              <span>{member.initials}</span>
+            )}
           </div>
-          <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/25 to-[#DE3F11]/25 text-white border border-[#DE3F11]/40">
+
+          <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/40 text-right max-w-[140px] truncate">
             {member.roleGroup}
           </span>
         </div>
 
-        {/* Member Name & Title */}
-        <h3 className="text-lg font-bold text-white group-hover:text-[#DE3F11] transition-colors">
+        {/* Member Name */}
+        <h3 className="text-lg font-bold text-white group-hover:text-[#DE3F11] transition-colors leading-snug">
           {member.name}
         </h3>
-        <p className="text-xs font-semibold text-white/80 mb-2">
-          {member.title}
+
+        {/* Role & Designation */}
+        <p className="text-xs font-bold text-[#DE3F11] mt-1 mb-0.5">
+          {member.role}
+        </p>
+        <p className="text-xs text-white/70 italic mb-3">
+          {member.designation}
         </p>
 
-        {/* Bio */}
-        <p className="text-xs text-white/75 leading-relaxed mb-4">
-          {member.bio}
-        </p>
+        {/* Message or Bio */}
+        {member.message ? (
+          <p className="text-xs text-white/85 leading-relaxed mb-4 border-l-2 border-[#DE3F11]/60 pl-3 italic">
+            "{member.message}"
+          </p>
+        ) : member.bio ? (
+          <p className="text-xs text-white/75 leading-relaxed mb-4">
+            {member.bio}
+          </p>
+        ) : null}
       </div>
 
-      {/* Affiliation footer */}
-      <div className="pt-3 border-t border-white/10 flex items-center space-x-2 text-[11px] text-white/60">
-        <ShieldCheck className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
-        <span className="truncate">{member.affiliation}</span>
+      {/* Affiliation & Social Footer */}
+      <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60">
+        <div className="flex items-center space-x-1.5 truncate mr-2">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
+          <span className="truncate">{member.affiliation}</span>
+        </div>
+
+        {member.linkedin && (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5 rounded-lg bg-white/10 hover:bg-[#DE3F11] text-white transition-colors shrink-0"
+            title="LinkedIn Profile"
+          >
+            <Linkedin className="w-3.5 h-3.5" />
+          </a>
+        )}
       </div>
     </div>
   );

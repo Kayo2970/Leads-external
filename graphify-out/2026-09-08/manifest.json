@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "app/events/page.tsx": {
-    "mtime": 1788877800.25796,
-    "ast_hash": "8788c75a8a45911d2368a1607d84694a",
+    "mtime": 1788878320.3752618,
+    "ast_hash": "16bd11e822e1190520831d3c6bde8011",
     "semantic_hash": ""
   },
   "app/layout.tsx": {
@@ -45,13 +45,13 @@
     "semantic_hash": ""
   },
   "components/EventCard.tsx": {
-    "mtime": 1788877646.8218162,
-    "ast_hash": "6e019d4bc9c5b3d49712f09d528f0ca9",
+    "mtime": 1788878302.7670994,
+    "ast_hash": "de985ebe5b01fd857047cad334b05ba2",
     "semantic_hash": ""
   },
   "components/EventModal.tsx": {
-    "mtime": 1788877758.8173342,
-    "ast_hash": "6dcf276b6a547055e03240054e9b95e5",
+    "mtime": 1788878281.3792033,
+    "ast_hash": "241e265d6cb444fe5f1adfcff1e6aad9",
     "semantic_hash": ""
   },
   "components/Footer.tsx": {
@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "lib/events-data.ts": {
-    "mtime": 1788877143.9776876,
-    "ast_hash": "278978fe3b4aa029a713fe57970557c8",
+    "mtime": 1788878256.1214504,
+    "ast_hash": "ebeef5321a4ff494e55916f9de5065ab",
     "semantic_hash": ""
   },
   "lib/reports-data.ts": {
@@ -272,6 +272,101 @@
   "public/fmc-logo-white.png": {
     "mtime": 1788877772.7758665,
     "ast_hash": "d5a41a70f9a12ef850067cba52c237a9",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1788878115.355437,
+    "ast_hash": "d5ab6ed19e5a015de89521b2014fe3d0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/brandkit/SKILL.md": {
+    "mtime": 1788878114.3034155,
+    "ast_hash": "7491f8fb77b0ebf517b758d096ac4ab4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend-v1/SKILL.md": {
+    "mtime": 1788878114.315657,
+    "ast_hash": "05b271f9985412ac9c081a0511bb6cbe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend/SKILL.md": {
+    "mtime": 1788878114.3166547,
+    "ast_hash": "648c8bf98f84fbe7f14bf2da035c57fe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/full-output-enforcement/SKILL.md": {
+    "mtime": 1788878114.309973,
+    "ast_hash": "2072dc2c1357dc9cd6384d1f441e05c3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gpt-taste/SKILL.md": {
+    "mtime": 1788878114.3044202,
+    "ast_hash": "e2a7560cbfce7a853dd8f65eca12c103",
+    "semantic_hash": ""
+  },
+  ".agents/skills/high-end-visual-design/SKILL.md": {
+    "mtime": 1788878114.3126554,
+    "ast_hash": "64f7c1069a5a3d18797950d8fac7b63a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/image-to-code/SKILL.md": {
+    "mtime": 1788878114.3064194,
+    "ast_hash": "b18a810930da9c6b558b15c85bc74007",
+    "semantic_hash": ""
+  },
+  ".agents/skills/imagegen-frontend-mobile/SKILL.md": {
+    "mtime": 1788878114.3064194,
+    "ast_hash": "6253c18387ca5d561a945ffe14e70d54",
+    "semantic_hash": ""
+  },
+  ".agents/skills/imagegen-frontend-web/SKILL.md": {
+    "mtime": 1788878114.3079221,
+    "ast_hash": "728f55ab7e44330e78aac4ca8331d83a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/industrial-brutalist-ui/SKILL.md": {
+    "mtime": 1788878114.3044202,
+    "ast_hash": "da7f92d7e3b8b526ecbd71009fe973ca",
+    "semantic_hash": ""
+  },
+  ".agents/skills/minimalist-ui/SKILL.md": {
+    "mtime": 1788878114.3094532,
+    "ast_hash": "32f8681f79a681d00a4b72ddce4415b1",
+    "semantic_hash": ""
+  },
+  ".agents/skills/redesign-existing-projects/SKILL.md": {
+    "mtime": 1788878114.3116481,
+    "ast_hash": "c8d729e3e807df37dcd5e6262c9b8843",
+    "semantic_hash": ""
+  },
+  ".agents/skills/stitch-design-taste/DESIGN.md": {
+    "mtime": 1788878114.3141222,
+    "ast_hash": "7f8c91aeecc8983b687965c2fc23438c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/stitch-design-taste/SKILL.md": {
+    "mtime": 1788878114.3146567,
+    "ast_hash": "fcbb4f37d67a66a53013b484dcfc9f25",
+    "semantic_hash": ""
+  },
+  "public/events/bharath-summit.jpg": {
+    "mtime": 1788878176.9453743,
+    "ast_hash": "8261e230d065321160c0cbf20d254ccf",
+    "semantic_hash": ""
+  },
+  "public/events/catalyst-workshop.jpg": {
+    "mtime": 1788878157.8013494,
+    "ast_hash": "a387245ea8d3cf0485f8603cefb255b5",
+    "semantic_hash": ""
+  },
+  "public/events/founders-sprint.jpg": {
+    "mtime": 1788878223.6889808,
+    "ast_hash": "c076f369e31727472c4b99ba3a27660a",
+    "semantic_hash": ""
+  },
+  "public/events/roundtable-exec.jpg": {
+    "mtime": 1788878199.887814,
+    "ast_hash": "c8d4b542333fc5341edaef8834e8869a",
     "semantic_hash": ""
   }
 }
