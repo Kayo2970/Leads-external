@@ -90,7 +90,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_layout",
-      "community": 16,
+      "community": 5,
       "norm_label": "layout.tsx"
     },
     {
@@ -100,7 +100,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_layout_inter",
-      "community": 16,
+      "community": 5,
       "norm_label": "inter"
     },
     {
@@ -110,7 +110,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_layout_playfair",
-      "community": 16,
+      "community": 5,
       "norm_label": "playfair"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_layout_metadata",
-      "community": 16,
+      "community": 5,
       "norm_label": "metadata"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
-      "community": 16,
+      "community": 5,
       "norm_label": "rootlayout()"
     },
     {
@@ -147,7 +147,7 @@
       "label": "Home()",
       "file_type": "code",
       "source_file": "app/page.tsx",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "app_page_home",
       "community": 4,
@@ -202,6 +202,146 @@
       "id": "components_boardmembercard_boardmembercard",
       "community": 15,
       "norm_label": "boardmembercard()"
+    },
+    {
+      "label": "BorderGlow.tsx",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_borderglow",
+      "community": 16,
+      "norm_label": "borderglow.tsx"
+    },
+    {
+      "label": "BorderGlowProps",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "components_borderglow_borderglowprops",
+      "community": 16,
+      "norm_label": "borderglowprops"
+    },
+    {
+      "label": "parseHSL()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "components_borderglow_parsehsl",
+      "community": 16,
+      "norm_label": "parsehsl()"
+    },
+    {
+      "label": "buildGlowVars()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "components_borderglow_buildglowvars",
+      "community": 16,
+      "norm_label": "buildglowvars()"
+    },
+    {
+      "label": "GRADIENT_POSITIONS",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "components_borderglow_gradient_positions",
+      "community": 16,
+      "norm_label": "gradient_positions"
+    },
+    {
+      "label": "GRADIENT_KEYS",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "components_borderglow_gradient_keys",
+      "community": 16,
+      "norm_label": "gradient_keys"
+    },
+    {
+      "label": "COLOR_MAP",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "components_borderglow_color_map",
+      "community": 16,
+      "norm_label": "color_map"
+    },
+    {
+      "label": "buildGradientVars()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "components_borderglow_buildgradientvars",
+      "community": 16,
+      "norm_label": "buildgradientvars()"
+    },
+    {
+      "label": "isLightColor()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "components_borderglow_islightcolor",
+      "community": 16,
+      "norm_label": "islightcolor()"
+    },
+    {
+      "label": "easeOutCubic()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "components_borderglow_easeoutcubic",
+      "community": 16,
+      "norm_label": "easeoutcubic()"
+    },
+    {
+      "label": "easeInCubic()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "components_borderglow_easeincubic",
+      "community": 16,
+      "norm_label": "easeincubic()"
+    },
+    {
+      "label": "AnimateValueOptions",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "components_borderglow_animatevalueoptions",
+      "community": 16,
+      "norm_label": "animatevalueoptions"
+    },
+    {
+      "label": "animateValue()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "components_borderglow_animatevalue",
+      "community": 16,
+      "norm_label": "animatevalue()"
+    },
+    {
+      "label": "BorderGlow()",
+      "file_type": "code",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "components_borderglow_borderglow",
+      "community": 16,
+      "norm_label": "borderglow()"
     },
     {
       "label": "ContactForm.tsx",
@@ -290,7 +430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_footer",
-      "community": 16,
+      "community": 5,
       "norm_label": "footer.tsx"
     },
     {
@@ -300,7 +440,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "components_footer_footer",
-      "community": 16,
+      "community": 5,
       "norm_label": "footer()"
     },
     {
@@ -317,7 +457,7 @@
       "label": "Nav()",
       "file_type": "code",
       "source_file": "components/Nav.tsx",
-      "source_location": "L19",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "components_nav_nav",
       "community": 5,
@@ -2723,7 +2863,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "app_page",
       "target": "app_page_home",
@@ -2737,7 +2877,7 @@
       "source_location": "L6",
       "weight": 1.0,
       "source": "app_page",
-      "target": "components_eventcard",
+      "target": "components_borderglow",
       "confidence_score": 1.0
     },
     {
@@ -2748,7 +2888,7 @@
       "source_location": "L6",
       "weight": 1.0,
       "source": "app_page",
-      "target": "components_eventcard_eventcard",
+      "target": "components_borderglow_borderglow",
       "confidence_score": 1.0
     },
     {
@@ -2757,6 +2897,28 @@
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
       "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_eventcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_eventcard_eventcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "app_page",
       "target": "components_eventmodal",
@@ -2789,7 +2951,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "app_page",
       "target": "lib_events_data",
@@ -2800,7 +2962,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "app_page",
       "target": "lib_events_data_events_data",
@@ -2811,7 +2973,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/page.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "app_page",
       "target": "lib_events_data_leadsevent",
@@ -2922,6 +3084,213 @@
       "weight": 1.0,
       "source": "components_boardmembercard_boardmembercardprops",
       "target": "lib_board_data_boardmember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_animatevalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_animatevalueoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_borderglow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_borderglowprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_buildglowvars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_buildgradientvars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_color_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_easeincubic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_easeoutcubic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_gradient_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_gradient_positions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_islightcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "components_borderglow",
+      "target": "components_borderglow_parsehsl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "components_borderglow_buildglowvars",
+      "target": "components_borderglow_parsehsl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "components_borderglow_borderglow",
+      "target": "components_borderglow_buildglowvars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "components_borderglow_borderglow",
+      "target": "components_borderglow_buildgradientvars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "components_borderglow_borderglow",
+      "target": "components_borderglow_islightcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "components_borderglow_borderglow",
+      "target": "components_borderglow_easeoutcubic",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "components_borderglow_borderglow",
+      "target": "components_borderglow_easeincubic",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BorderGlow.tsx",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "components_borderglow_borderglow",
+      "target": "components_borderglow_animatevalue",
       "confidence_score": 1.0
     },
     {
@@ -3054,7 +3423,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Nav.tsx",
-      "source_location": "L19",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "components_nav",
       "target": "components_nav_nav",
@@ -3065,7 +3434,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Nav.tsx",
-      "source_location": "L16",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "components_nav",
       "target": "components_themetoggle",
@@ -3076,7 +3445,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Nav.tsx",
-      "source_location": "L16",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "components_nav",
       "target": "components_themetoggle_themetoggle",
@@ -3087,7 +3456,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Nav.tsx",
-      "source_location": "L17",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "components_nav",
       "target": "lib_reports_data",
@@ -3098,7 +3467,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Nav.tsx",
-      "source_location": "L17",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "components_nav",
       "target": "lib_reports_data_reports_data",
@@ -5106,5 +5475,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ab3e253624062f65a9abf6a67c16d3b3e758abc7"
+  "built_at_commit": "13c99969546254619c781aff84d606c15e3ae5ae"
 }

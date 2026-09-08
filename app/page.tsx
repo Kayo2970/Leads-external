@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import SoftAurora from "@/components/SoftAurora";
+import BorderGlow from "@/components/BorderGlow";
 import EventCard from "@/components/EventCard";
 import EventModal from "@/components/EventModal";
 import { EVENTS_DATA, LEADSEvent } from "@/lib/events-data";
@@ -106,9 +107,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-1">
-              <div className="text-3xl sm:text-4xl font-extrabold gold-gradient-text">
-                1st
-              </div>
+              <div className="text-3xl sm:text-4xl font-extrabold gold-gradient-text">1st</div>
               <div className="text-xs sm:text-sm text-[#E2D9F3] font-medium">
                 Inaugural Bharath Leadership Summit
               </div>
@@ -120,9 +119,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-1">
-              <div className="text-3xl sm:text-4xl font-extrabold gold-gradient-text">
-                100%
-              </div>
+              <div className="text-3xl sm:text-4xl font-extrabold gold-gradient-text">100%</div>
               <div className="text-xs sm:text-sm text-[#E2D9F3] font-medium">
                 Focus on Non-Technical Skill Upliftment
               </div>
@@ -131,11 +128,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT IS LEADS SECTION */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* WHY NON-TECHNICAL SKILLS MATTER */}
+      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 text-white border border-[#DE3F11]/40 text-xs font-semibold">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-white border border-white/20 text-xs font-semibold">
               <Compass className="w-3.5 h-3.5 text-[#DE3F11]" />
               <span>Closing the Critical Skill Gap</span>
             </div>
@@ -167,44 +164,53 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Visual Highlight Card */}
+          {/* Visual Highlight Card with BorderGlow */}
           <div className="relative">
-            <div className="glass-panel rounded-3xl p-8 border border-white/20 shadow-2xl relative z-10 space-y-6">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="text-xs font-bold uppercase tracking-wider gold-gradient-text">
-                  Core Pillar Breakdown
-                </span>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30">
-                  National Impact
-                </span>
+            <BorderGlow
+              edgeSensitivity={35}
+              glowColor="330 85 50"
+              backgroundColor="#361C6A"
+              borderRadius={28}
+              glowRadius={45}
+              glowIntensity={1.2}
+              colors={["#9C1256", "#DE3F11", "#FFFFFF"]}
+              animated={true}
+              className="shadow-2xl"
+            >
+              <div className="p-8 space-y-6">
+                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                  <span className="text-xs font-bold uppercase tracking-wider gold-gradient-text">
+                    Core Pillar Breakdown
+                  </span>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30">
+                    National Impact
+                  </span>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10">
+                    <div className="text-sm font-bold text-white">Bharath Leadership Summit (BLS)</div>
+                    <div className="text-xs text-[#E2D9F3]/80 mt-1">
+                      India's flagship annual summit convening policy makers, CEOs, and academia.
+                    </div>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10">
+                    <div className="text-sm font-bold text-white">Catalyst Skill Workshops</div>
+                    <div className="text-xs text-[#E2D9F3]/80 mt-1">
+                      Hands-on masterclasses in negotiation, executive presence, and team dynamics.
+                    </div>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10">
+                    <div className="text-sm font-bold text-white">Research & Policy Insights</div>
+                    <div className="text-xs text-[#E2D9F3]/80 mt-1">
+                      Publishing verified national impact reports on leadership competency.
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div className="space-y-4">
-                <div className="p-4 rounded-2xl bg-[#2A1454]/80 border border-white/10">
-                  <div className="text-sm font-bold text-white">Bharath Leadership Summit (BLS)</div>
-                  <div className="text-xs text-[#E2D9F3]/80 mt-1">
-                    India's flagship annual summit convening policy makers, CEOs, and academia.
-                  </div>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-[#2A1454]/80 border border-white/10">
-                  <div className="text-sm font-bold text-white">Catalyst Skill Workshops</div>
-                  <div className="text-xs text-[#E2D9F3]/80 mt-1">
-                    Hands-on masterclasses in negotiation, executive presence, and team dynamics.
-                  </div>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-[#2A1454]/80 border border-white/10">
-                  <div className="text-sm font-bold text-white">Research & Policy Insights</div>
-                  <div className="text-xs text-[#E2D9F3]/80 mt-1">
-                    Publishing verified national impact reports on leadership competency.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Decorative background blur */}
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-[#DE3F11]/20 rounded-full blur-3xl pointer-events-none" />
+            </BorderGlow>
           </div>
         </div>
       </section>

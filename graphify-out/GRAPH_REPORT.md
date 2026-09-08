@@ -1,16 +1,16 @@
 # Graph Report - Leads-external  (2026-09-08)
 
 ## Corpus Check
-- 41 files · ~28,624 words
+- 42 files · ~41,029 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 248 nodes · 257 edges · 27 communities (23 shown, 4 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 262 nodes · 279 edges · 27 communities (23 shown, 4 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ab3e2536`
+- Built from commit: `13c99969`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,7 +47,7 @@
 7. `PART 2 — COMPANY PROFILE` - 10 edges
 8. `Launch Checklist` - 10 edges
 9. `Analytics & Tracking Plan` - 9 edges
-10. `Competitor Research Brief` - 8 edges
+10. `BorderGlow()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `EventCardProps` --references--> `LEADSEvent`  [EXTRACTED]
@@ -87,8 +87,8 @@ Cohesion: 0.24
 Nodes (8): EventCard(), EventCardProps, EventModalProps, hexToVec3(), SoftAurora(), SoftAuroraProps, EVENTS_DATA, LEADSEvent
 
 ### Community 5 - "Nav.tsx"
-Cohesion: 0.23
-Nodes (8): ReportCard(), ReportCardProps, ThemeToggle(), ImpactReport, REPORTS_DATA, getInitialTheme(), setThemeAttr(), Theme
+Cohesion: 0.14
+Nodes (12): inter, metadata, playfair, Footer(), ReportCard(), ReportCardProps, ThemeToggle(), ImpactReport (+4 more)
 
 ### Community 6 - "package.json"
 Cohesion: 0.12
@@ -131,11 +131,11 @@ Cohesion: 0.43
 Nodes (4): BoardMemberCard(), BoardMemberCardProps, BOARD_MEMBERS_DATA, BoardMember
 
 ### Community 16 - "layout.tsx"
-Cohesion: 0.33
-Nodes (4): inter, metadata, playfair, Footer()
+Cohesion: 0.22
+Nodes (13): animateValue(), AnimateValueOptions, BorderGlow(), BorderGlowProps, buildGlowVars(), buildGradientVars(), COLOR_MAP, easeInCubic() (+5 more)
 
 ## Knowledge Gaps
-- **159 isolated node(s):** `inter`, `playfair`, `metadata`, `SoftAuroraProps`, `ThreadsProps` (+154 more)
+- **164 isolated node(s):** `inter`, `playfair`, `metadata`, `BorderGlowProps`, `GRADIENT_POSITIONS` (+159 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -145,7 +145,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `inter`, `playfair`, `metadata` to the rest of the system?**
-  _159 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _164 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `PART 2 — COMPANY PROFILE` be split into smaller, more focused modules?**
@@ -154,5 +154,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `Technical Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
-- **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+- **Should `Nav.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.1383399209486166 - nodes in this community are weakly interconnected._
