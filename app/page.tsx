@@ -109,37 +109,85 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="text-3xl sm:text-4xl font-black gold-gradient-text">30+</div>
-              <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
-                Events Hosted in Year 1
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="p-6 text-center">
+                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">30+</div>
+                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+                  Events Hosted in Year 1
+                </div>
+                <div className="text-[11px] text-slate-500 mt-1">Masterclasses & Summits</div>
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">Masterclasses & Summits</div>
-            </div>
+            </BorderGlow>
 
-            <div className="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="text-3xl sm:text-4xl font-black gold-gradient-text">1st</div>
-              <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
-                Inaugural Bharath Leadership Summit
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="p-6 text-center">
+                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">1st</div>
+                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+                  Inaugural Bharath Leadership Summit
+                </div>
+                <div className="text-[11px] text-slate-500 mt-1">Signature Annual Flagship</div>
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">Signature Annual Flagship</div>
-            </div>
+            </BorderGlow>
 
-            <div className="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="text-3xl sm:text-4xl font-black gold-gradient-text">5,000+</div>
-              <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
-                Leaders & Delegates Impacted
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="p-6 text-center">
+                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">5,000+</div>
+                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+                  Leaders & Delegates Impacted
+                </div>
+                <div className="text-[11px] text-slate-500 mt-1">Nationwide Participation</div>
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">Nationwide Participation</div>
-            </div>
+            </BorderGlow>
 
-            <div className="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="text-3xl sm:text-4xl font-black gold-gradient-text">100%</div>
-              <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
-                Non-Technical Skill Focus
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="p-6 text-center">
+                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">100%</div>
+                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+                  Non-Technical Skill Focus
+                </div>
+                <div className="text-[11px] text-slate-500 mt-1">Leadership & Acumen</div>
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">Leadership & Acumen</div>
-            </div>
+            </BorderGlow>
           </div>
         </div>
       </section>
@@ -249,45 +297,93 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-7 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl hover:border-[#DE3F11]/50 transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <Building2 className="w-6 h-6 text-[#9C1256]" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all group"
+            >
+              <div className="p-7">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <Building2 className="w-6 h-6 text-[#9C1256]" />
+                </div>
+                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Government & Policy</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Public sector leaders shaping national policy, institutional frameworks, and public administration excellence.
+                </p>
               </div>
-              <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Government & Policy</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Public sector leaders shaping national policy, institutional frameworks, and public administration excellence.
-              </p>
-            </div>
+            </BorderGlow>
 
-            <div className="bg-white p-7 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl hover:border-[#DE3F11]/50 transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <Briefcase className="w-6 h-6 text-[#9C1256]" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all group"
+            >
+              <div className="p-7">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <Briefcase className="w-6 h-6 text-[#9C1256]" />
+                </div>
+                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Industry Leaders</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Corporate executives and managers seeking to sharpen non-technical strategy, communication, and governance.
+                </p>
               </div>
-              <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Industry Leaders</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Corporate executives and managers seeking to sharpen non-technical strategy, communication, and governance.
-              </p>
-            </div>
+            </BorderGlow>
 
-            <div className="bg-white p-7 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl hover:border-[#DE3F11]/50 transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <TrendingUp className="w-6 h-6 text-[#9C1256]" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all group"
+            >
+              <div className="p-7">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-6 h-6 text-[#9C1256]" />
+                </div>
+                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Startup Founders</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Entrepreneurs building high-growth ventures, managing teams under uncertainty, and raising venture capital.
+                </p>
               </div>
-              <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Startup Founders</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Entrepreneurs building high-growth ventures, managing teams under uncertainty, and raising venture capital.
-              </p>
-            </div>
+            </BorderGlow>
 
-            <div className="bg-white p-7 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl hover:border-[#DE3F11]/50 transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <GraduationCap className="w-6 h-6 text-[#9C1256]" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={24}
+              glowRadius={35}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all group"
+            >
+              <div className="p-7">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-6 h-6 text-[#9C1256]" />
+                </div>
+                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Students & Scholars</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Aspiring young leaders gaining essential business acumen, confidence, and real-world networking opportunities.
+                </p>
               </div>
-              <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Students & Scholars</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Aspiring young leaders gaining essential business acumen, confidence, and real-world networking opportunities.
-              </p>
-            </div>
+            </BorderGlow>
           </div>
         </div>
       </section>

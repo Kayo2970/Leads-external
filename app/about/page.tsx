@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import BorderGlow from "@/components/BorderGlow";
 import BoardMemberCard from "@/components/BoardMemberCard";
 import {
   LEADERSHIP_MESSAGES,
@@ -91,48 +92,84 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Origin Story Card */}
-            <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl transition-all space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
-                <BookOpen className="w-6 h-6 text-white" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={28}
+              glowRadius={40}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all"
+            >
+              <div className="p-8 space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Evolution</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Strategically evolved from the RUAS Entrepreneurship Cell (E-Cell), LEADS Next-Gen Centre was established under the Faculty of Management and Commerce (FMC) to address a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership skills.
+                </p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Through experiential learning, ethical mentorship, and industry-aligned projects, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Evolution</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Strategically evolved from the RUAS Entrepreneurship Cell (E-Cell), LEADS Next-Gen Centre was established under the Faculty of Management and Commerce (FMC) to address a crucial national imperative: empowering emerging executives, founders, and scholars with holistic, non-technical leadership skills.
-              </p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Through experiential learning, ethical mentorship, and industry-aligned projects, LEADS cultivates leaders equipped to drive measurable impact across public and private sectors.
-              </p>
-            </div>
+            </BorderGlow>
 
             {/* Vision Card */}
-            <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl transition-all space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
-                <Compass className="w-6 h-6 text-white" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={28}
+              glowRadius={40}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all"
+            >
+              <div className="p-8 space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
+                  <Compass className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Vision</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  To empower future leaders to be purpose-driven, ethical changemakers who champion sustainable innovation, non-technical capability excellence, and shape an equitable, resilient future for Bharat and the world.
+                </p>
+                <div className="pt-2 flex items-center space-x-2 text-xs font-bold text-[#9C1256]">
+                  <CheckCircle className="w-4 h-4 text-[#DE3F11]" />
+                  <span>Reshaping India's Human Capital Frontier</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Vision</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                To empower future leaders to be purpose-driven, ethical changemakers who champion sustainable innovation, non-technical capability excellence, and shape an equitable, resilient future for Bharat and the world.
-              </p>
-              <div className="pt-2 flex items-center space-x-2 text-xs font-bold text-[#9C1256]">
-                <CheckCircle className="w-4 h-4 text-[#DE3F11]" />
-                <span>Reshaping India's Human Capital Frontier</span>
-              </div>
-            </div>
+            </BorderGlow>
 
             {/* Mission Card */}
-            <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl transition-all space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
-                <Target className="w-6 h-6 text-white" />
+            <BorderGlow
+              edgeSensitivity={30}
+              glowColor="330 85 50"
+              backgroundColor="#FFFFFF"
+              borderRadius={28}
+              glowRadius={40}
+              glowIntensity={1.0}
+              colors={["#9C1256", "#DE3F11", "#361C6A"]}
+              animated={true}
+              className="h-full shadow-md hover:shadow-xl transition-all"
+            >
+              <div className="p-8 space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shadow-md">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Mission</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  To build an active ecosystem where experiential learning, high-stakes leadership simulations, and executive mentorship elevate individuals, enterprises, and communities — turning raw knowledge into purposeful, sustainable leadership action.
+                </p>
+                <div className="pt-2 flex items-center space-x-2 text-xs font-bold text-[#9C1256]">
+                  <Award className="w-4 h-4 text-[#DE3F11]" />
+                  <span>Nation Building Through Skill Excellence</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-[#1E0C3D]">Our Mission</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                To build an active ecosystem where experiential learning, high-stakes leadership simulations, and executive mentorship elevate individuals, enterprises, and communities — turning raw knowledge into purposeful, sustainable leadership action.
-              </p>
-              <div className="pt-2 flex items-center space-x-2 text-xs font-bold text-[#9C1256]">
-                <Award className="w-4 h-4 text-[#DE3F11]" />
-                <span>Nation Building Through Skill Excellence</span>
-              </div>
-            </div>
+            </BorderGlow>
           </div>
         </div>
       </section>
@@ -154,37 +191,47 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {LEADERSHIP_MESSAGES.map((leader) => (
-              <div
+              <BorderGlow
                 key={leader.id}
-                className="glass-panel p-8 rounded-3xl border border-[#9C1256]/30 hover:border-[#DE3F11]/60 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative bg-[#2A1454]/90 group"
+                edgeSensitivity={30}
+                glowColor="330 85 50"
+                backgroundColor="#2A1454"
+                borderRadius={28}
+                glowRadius={45}
+                glowIntensity={1.1}
+                colors={["#9C1256", "#DE3F11", "#FFFFFF"]}
+                animated={true}
+                className="shadow-xl hover:shadow-2xl transition-all duration-300"
               >
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-white/10 group-hover:text-[#DE3F11]/20 transition-colors" />
-                <div>
-                  <div className="relative w-24 h-24 rounded-2xl overflow-hidden mb-6 border-2 border-[#DE3F11]/40 shadow-lg group-hover:scale-105 transition-transform bg-[#361C6A]">
-                    <img
-                      src={leader.image}
-                      alt={leader.name}
-                      className="w-full h-full object-cover"
-                    />
+                <div className="p-8 flex flex-col justify-between h-full relative group text-white">
+                  <Quote className="absolute top-6 right-6 w-8 h-8 text-white/10 group-hover:text-[#DE3F11]/20 transition-colors" />
+                  <div>
+                    <div className="relative w-24 h-24 rounded-2xl overflow-hidden mb-6 border-2 border-[#DE3F11]/40 shadow-lg group-hover:scale-105 transition-transform bg-[#361C6A]">
+                      <img
+                        src={leader.image}
+                        alt={leader.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-white/90 italic leading-relaxed mb-6 font-light">
+                      "{leader.message}"
+                    </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-white/90 italic leading-relaxed mb-6 font-light">
-                    "{leader.message}"
-                  </p>
+                  <div className="pt-4 border-t border-white/10">
+                    <h3 className="text-lg font-bold text-white group-hover:text-[#DE3F11] transition-colors">
+                      {leader.name}
+                    </h3>
+                    <p className="text-xs font-bold text-[#DE3F11] mt-0.5">
+                      {leader.role}
+                    </p>
+                    <p className="text-xs text-[#E2D9F3]/70 italic mt-0.5">
+                      {leader.designation}
+                    </p>
+                  </div>
                 </div>
-
-                <div className="pt-4 border-t border-white/10">
-                  <h3 className="text-lg font-bold text-white group-hover:text-[#DE3F11] transition-colors">
-                    {leader.name}
-                  </h3>
-                  <p className="text-xs font-bold text-[#DE3F11] mt-0.5">
-                    {leader.role}
-                  </p>
-                  <p className="text-xs text-[#E2D9F3]/70 italic mt-0.5">
-                    {leader.designation}
-                  </p>
-                </div>
-              </div>
+              </BorderGlow>
             ))}
           </div>
         </div>
@@ -234,17 +281,29 @@ export default function AboutPage() {
       {/* SECTION 5 [PURPLE]: INSTITUTIONAL AFFILIATION SHOWCASE */}
       <section className="py-20 bg-[#241147] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-[#9C1256]/30 text-center relative overflow-hidden bg-[#2A1454]/90">
-            <div className="w-16 h-16 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mx-auto mb-6 shadow-md">
-              <Building2 className="w-8 h-8" />
+          <BorderGlow
+            edgeSensitivity={30}
+            glowColor="330 85 50"
+            backgroundColor="#2A1454"
+            borderRadius={28}
+            glowRadius={45}
+            glowIntensity={1.1}
+            colors={["#9C1256", "#DE3F11", "#FFFFFF"]}
+            animated={true}
+            className="shadow-2xl"
+          >
+            <div className="p-8 sm:p-12 text-center relative overflow-hidden">
+              <div className="w-16 h-16 rounded-2xl bg-[#361C6A] border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mx-auto mb-6 shadow-md">
+                <Building2 className="w-8 h-8" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
+                Academic & Institutional Affiliation
+              </h2>
+              <p className="text-sm sm:text-base text-[#E2D9F3] max-w-2xl mx-auto leading-relaxed">
+                LEADS Next Gen Centre proudly operates within the Faculty of Management and Commerce (FMC) ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru, combining empirical academic rigor with practical national leadership execution.
+              </p>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
-              Academic & Institutional Affiliation
-            </h2>
-            <p className="text-sm sm:text-base text-[#E2D9F3] max-w-2xl mx-auto leading-relaxed">
-              LEADS Next Gen Centre proudly operates within the Faculty of Management and Commerce (FMC) ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru, combining empirical academic rigor with practical national leadership execution.
-            </p>
-          </div>
+          </BorderGlow>
         </div>
       </section>
     </div>

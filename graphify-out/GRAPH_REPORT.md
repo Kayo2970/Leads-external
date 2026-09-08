@@ -1,16 +1,16 @@
 # Graph Report - Leads-external  (2026-09-08)
 
 ## Corpus Check
-- 57 files · ~2,105,434 words
+- 57 files · ~2,105,690 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 778 nodes · 781 edges · 72 communities (66 shown, 6 thin omitted)
+- 778 nodes · 793 edges · 70 communities (65 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5c38efee`
+- Built from commit: `61cd27eb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -30,9 +30,7 @@
 - [[_COMMUNITY_Analytics & Tracking Plan|Analytics & Tracking Plan]]
 - [[_COMMUNITY_Sitemap & URL Structure|Sitemap & URL Structure]]
 - [[_COMMUNITY_devDependencies|devDependencies]]
-- [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_layout.tsx|layout.tsx]]
-- [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_next.config.js|next.config.js]]
@@ -92,8 +90,8 @@
 6. `tasteskill: Anti-Slop Frontend Skill` - 16 edges
 7. `Technical Specification` - 16 edges
 8. `Appendix B - Canonical Sources (read these before reinventing)` - 15 edges
-9. `2. THE COMBINATORIAL VARIATION ENGINE` - 14 edges
-10. `4. DESIGN ENGINEERING DIRECTIVES (Bias Correction)` - 12 edges
+9. `BorderGlow()` - 14 edges
+10. `2. THE COMBINATORIAL VARIATION ENGINE` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `EventCardProps` --references--> `LEADSEvent`  [EXTRACTED]
@@ -110,7 +108,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (72 total, 6 thin omitted)
+## Communities (70 total, 5 thin omitted)
 
 ### Community 0 - "compilerOptions"
 Cohesion: 0.10
@@ -129,8 +127,8 @@ Cohesion: 0.12
 Nodes (16): 10. Environment Variables, 11. Performance Checklist, 12. Accessibility Checklist, 13. SEO Checklist, 14. Deployment Guide, 15. Open Technical Questions, 1. Project Overview, 2. Recommended Tech Stack (+8 more)
 
 ### Community 4 - "page.tsx"
-Cohesion: 0.11
-Nodes (22): animateValue(), AnimateValueOptions, BorderGlow(), BorderGlowProps, buildGlowVars(), buildGradientVars(), COLOR_MAP, easeInCubic() (+14 more)
+Cohesion: 0.07
+Nodes (31): BoardMemberCardProps, animateValue(), AnimateValueOptions, BorderGlow(), BorderGlowProps, buildGlowVars(), buildGradientVars(), COLOR_MAP (+23 more)
 
 ### Community 5 - "Nav.tsx"
 Cohesion: 0.14
@@ -171,10 +169,6 @@ Nodes (8): 1. Site Architecture, 2. Full URL Map, 3. Navigation Structure, 4. UR
 ### Community 14 - "devDependencies"
 Cohesion: 0.05
 Nodes (43): 1. Logo Cover, 1. Monogram + Meaning, 2 × 3 REFERENCE-STYLE LAYOUT, 2. Logo Construction, 2. Product Action, 3. Digital Application, 3. Metaphor Fusion, 4. Brand Essence (+35 more)
-
-### Community 15 - "page.tsx"
-Cohesion: 0.23
-Nodes (8): BoardMemberCardProps, BOARD_MEMBERS_DATA, BoardMember, CORE_LEADERSHIP, EXECUTIVE_COUNCIL, GOVERNING_ADVISORS, LEADERSHIP_MESSAGES, ORGANIZING_COMMITTEE
 
 ### Community 16 - "layout.tsx"
 Cohesion: 0.06
@@ -359,7 +353,7 @@ Nodes (4): 20. EXAMPLE INTERPRETATIONS, Example 1, Example 2, Example 3
 ## Knowledge Gaps
 - **597 isolated node(s):** `inter`, `playfair`, `metadata`, `BorderGlowProps`, `GRADIENT_POSITIONS` (+592 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
