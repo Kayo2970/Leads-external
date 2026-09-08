@@ -42,6 +42,17 @@
   -webkit-mask-image: url('/leads-mask.svg');
 }
 
+/* Strong solid white layer inside the mask cutout, fading out as the camera zooms in */
+.logo-scroll-expand__white-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #FFFFFF;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 1;
+  will-change: opacity;
+}
+
 .logo-scroll-expand__scroll-hint {
   position: absolute;
   bottom: 2.5rem;

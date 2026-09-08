@@ -36,6 +36,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   const frameRef = useRef<HTMLDivElement | null>(null);
   const hintRef = useRef<HTMLDivElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
+  const whiteOverlayRef = useRef<HTMLDivElement | null>(null);
 
   const propsRef = useRef({
     scrollDistance,
@@ -55,6 +56,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     const frame = frameRef.current;
     const hint = hintRef.current;
     const bg = bgRef.current;
+    const whiteOverlay = whiteOverlayRef.current;
     if (!frame) return;
 
     const e = smoothstep(0, 1, p);
@@ -91,6 +93,12 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     if (bg) {
       const bgFade = smoothstep(0.45, 0.95, p);
       bg.style.opacity = `${1 - bgFade}`;
+    }
+
+    // Solid white inside the logo mask starts strong and fades smoothly as camera zooms in
+    if (whiteOverlay) {
+      const whiteFade = smoothstep(0.0, 0.55, p);
+      whiteOverlay.style.opacity = `${1 - whiteFade}`;
     }
 
     // Camera flythrough - mask expands continuously and only unlocks pointer events when fully open
@@ -202,6 +210,8 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
           {/* Masked Frame containing the hero content */}
           <div ref={frameRef} className="logo-scroll-expand__frame">
             {children}
+            {/* Solid white layer inside the mask cutout that fades out as camera zooms in */}
+            <div ref={whiteOverlayRef} className="logo-scroll-expand__white-overlay" />
           </div>
 
           {/* Scroll Down Indicator */}
