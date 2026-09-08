@@ -1,8 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { Mail, MapPin, Shield, Handshake } from "lucide-react";
+import { Mail, MapPin, Shield, Handshake, Sliders } from "lucide-react";
 
 export default function Footer() {
+  const openCookiePreferences = () => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("leads_open_cookie_preferences"));
+    }
+  };
+
   return (
     <footer className="bg-[#241147] text-white border-t border-white/15 pt-16 pb-12 relative overflow-hidden">
       {/* Soft background glow */}
@@ -150,10 +158,27 @@ export default function Footer() {
           <div>
             © {new Date().getFullYear()} LEADS Next Gen Centre. All rights reserved. Prepared by Kayomarz Pavri.
           </div>
-          <div className="flex space-x-6">
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer">Terms of Engagement</span>
-            <span className="hover:text-white cursor-pointer">Accessibility</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors">
+              Terms of Engagement
+            </Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">
+              Cookie Policy
+            </Link>
+            <Link href="/accessibility" className="hover:text-white transition-colors">
+              Accessibility
+            </Link>
+            <button
+              type="button"
+              onClick={openCookiePreferences}
+              className="hover:text-[#DE3F11] inline-flex items-center space-x-1 transition-colors"
+            >
+              <Sliders className="w-3 h-3" />
+              <span>Cookie Settings</span>
+            </button>
           </div>
         </div>
       </div>
