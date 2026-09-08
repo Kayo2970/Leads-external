@@ -3,7 +3,7 @@
 import React from "react";
 import BorderGlow from "@/components/BorderGlow";
 import { LEADSEvent } from "@/lib/events-data";
-import { Calendar, MapPin, Users, Crown, Zap, Shield, Rocket, Sparkles, UserCheck, ArrowUpRight } from "lucide-react";
+import { Calendar, MapPin, Users, Crown, Zap, Shield, Rocket, Sparkles, UserCheck, Star, ArrowUpRight } from "lucide-react";
 
 interface EventCardProps {
   event: LEADSEvent;
@@ -23,6 +23,8 @@ export default function EventCard({ event, onOpenModal }: EventCardProps) {
         return <Rocket className="w-5 h-5 text-[#DE3F11]" />;
       case "sparkles":
         return <Sparkles className="w-5 h-5 text-[#DE3F11]" />;
+      case "star":
+        return <Star className="w-5 h-5 text-[#DE3F11]" />;
       default:
         return <UserCheck className="w-5 h-5 text-[#DE3F11]" />;
     }

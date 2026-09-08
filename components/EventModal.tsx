@@ -14,6 +14,7 @@ import {
   Shield,
   Rocket,
   Sparkles,
+  Star,
   UserCheck,
   ChevronRight,
   Layers,
@@ -61,6 +62,8 @@ export default function EventModal({ event, onClose }: EventModalProps) {
         return <Rocket className="w-8 h-8 text-[#DE3F11]" />;
       case "sparkles":
         return <Sparkles className="w-8 h-8 text-[#DE3F11]" />;
+      case "star":
+        return <Star className="w-8 h-8 text-[#DE3F11]" />;
       default:
         return <UserCheck className="w-8 h-8 text-[#DE3F11]" />;
     }

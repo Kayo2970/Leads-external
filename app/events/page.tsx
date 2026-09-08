@@ -16,6 +16,7 @@ import {
   Zap,
   Shield,
   Rocket,
+  Star,
   UserCheck,
 } from "lucide-react";
 
@@ -33,6 +34,8 @@ export default function EventsPage() {
         return <Shield className={iconClass} />;
       case "rocket":
         return <Rocket className={iconClass} />;
+      case "star":
+        return <Star className={iconClass} />;
       default:
         return <UserCheck className={iconClass} />;
     }
