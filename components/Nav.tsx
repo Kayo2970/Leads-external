@@ -4,14 +4,10 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  ExternalLink,
   ChevronDown,
   FileText,
   Menu,
   X,
-  Compass,
-  Award,
-  Sparkles,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { REPORTS_DATA } from "@/lib/reports-data";
@@ -151,11 +147,10 @@ export default function Nav() {
               href="https://www.bharatleadsummit.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center px-3.5 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
               title="Visit Bharath Leadership Summit website"
             >
-              <span>BLS</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-70 text-[#DE3F11]" />
+              BLS
             </a>
 
             {/* External Nav Link: LEADS Portal */}
@@ -163,11 +158,10 @@ export default function Nav() {
               href="https://github.com/Kayo2970/Leads-external.git"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center px-3.5 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
               title="Access LEADS Member & ERP Portal"
             >
-              <span>LEADS Portal</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-70 text-[#DE3F11]" />
+              LEADS Portal
             </a>
           </nav>
 
@@ -244,7 +238,6 @@ export default function Nav() {
               className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-white/10"
             >
               <span>Bharath Leadership Summit (BLS)</span>
-              <ExternalLink className="w-4 h-4 text-[#DE3F11]" />
             </a>
 
             <a
@@ -254,7 +247,6 @@ export default function Nav() {
               className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-white/10"
             >
               <span>LEADS Portal (ERP Login)</span>
-              <ExternalLink className="w-4 h-4 text-[#DE3F11]" />
             </a>
 
             <Link
