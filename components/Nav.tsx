@@ -9,7 +9,6 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import { REPORTS_DATA } from "@/lib/reports-data";
 
 export default function Nav() {
@@ -169,7 +168,6 @@ export default function Nav() {
 
           {/* Right Action Bar */}
           <div className="hidden lg:flex items-center space-x-3 3xl:space-x-5">
-            <ThemeToggle />
             <Link
               href="/contact"
               className="inline-flex items-center px-5 py-2.5 3xl:px-8 3xl:py-3.5 rounded-xl 3xl:rounded-2xl font-semibold text-sm 3xl:text-lg bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300"
@@ -178,9 +176,8 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Mobile Menu & Theme Toggle Trigger */}
+          {/* Mobile Menu Trigger */}
           <div className="flex items-center space-x-2 lg:hidden">
-            <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl glass-panel text-white hover:text-[#DE3F11]"

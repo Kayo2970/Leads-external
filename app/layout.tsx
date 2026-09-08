@@ -48,26 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('leads_theme_pref');
-                  if (!theme) {
-                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  }
-                  document.documentElement.setAttribute('data-theme', theme);
-                  if (theme === 'dark') document.documentElement.classList.add('dark');
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body className="min-h-screen flex flex-col antialiased selection:bg-brand-gold selection:text-slate-950">
+    <html lang="en" data-theme="dark" className={`dark ${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col antialiased bg-[#1E0C3D] text-white selection:bg-brand-gold selection:text-slate-950">
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

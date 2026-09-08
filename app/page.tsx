@@ -98,108 +98,68 @@ export default function Home() {
         </section>
       </LogoScrollExpand>
 
-      {/* SECTION 2 [WHITE/LIGHT]: STATS STRIP / BY THE NUMBERS */}
-      <section className="relative z-10 py-16 3xl:py-28 bg-[#FDFBFF] text-[#1E0C3D] border-y border-purple-100 shadow-sm">
+      {/* SECTION 2: STATS STRIP / BY THE NUMBERS */}
+      <section className="relative z-10 py-16 3xl:py-28 bg-[#1E0C3D] text-white border-y border-white/10 shadow-lg">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-10 3xl:mb-16">
-            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-1">
+            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-1">
               National Footprint & Impact
             </div>
-            <h2 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-extrabold text-[#1E0C3D]">
+            <h2 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-extrabold text-white">
               LEADS by the Numbers
             </h2>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-10">
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
-                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">30+</div>
-                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
-                  Events Hosted in Year 1
-                </div>
-                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Masterclasses & Summits</div>
+            <div className="liquid-glass-card rounded-3xl p-6 2xl:p-8 3xl:p-12 text-center group">
+              <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text group-hover:scale-105 transition-transform duration-300">
+                30+
               </div>
-            </BorderGlow>
+              <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-white font-bold mt-2">
+                Events Hosted in Year 1
+              </div>
+              <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#E2D9F3]/70 mt-1">Masterclasses & Summits</div>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
-                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">1st</div>
-                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
-                  Inaugural Bharath Leadership Summit
-                </div>
-                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Signature Annual Flagship</div>
+            <div className="liquid-glass-card rounded-3xl p-6 2xl:p-8 3xl:p-12 text-center group">
+              <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text group-hover:scale-105 transition-transform duration-300">
+                1st
               </div>
-            </BorderGlow>
+              <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-white font-bold mt-2">
+                Inaugural Bharath Leadership Summit
+              </div>
+              <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#E2D9F3]/70 mt-1">Signature Annual Flagship</div>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
-                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">5,000+</div>
-                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
-                  Leaders & Delegates Impacted
-                </div>
-                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Nationwide Participation</div>
+            <div className="liquid-glass-card rounded-3xl p-6 2xl:p-8 3xl:p-12 text-center group">
+              <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text group-hover:scale-105 transition-transform duration-300">
+                5,000+
               </div>
-            </BorderGlow>
+              <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-white font-bold mt-2">
+                Leaders & Delegates Impacted
+              </div>
+              <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#E2D9F3]/70 mt-1">Nationwide Participation</div>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
-                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">100%</div>
-                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
-                  Non-Technical Skill Focus
-                </div>
-                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Leadership & Acumen</div>
+            <div className="liquid-glass-card rounded-3xl p-6 2xl:p-8 3xl:p-12 text-center group">
+              <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text group-hover:scale-105 transition-transform duration-300">
+                100%
               </div>
-            </BorderGlow>
+              <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-white font-bold mt-2">
+                Non-Technical Skill Focus
+              </div>
+              <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#E2D9F3]/70 mt-1">Leadership & Acumen</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 [PURPLE]: WHY NON-TECHNICAL SKILLS MATTER */}
-      <section className="py-24 3xl:py-36 bg-[#241147] text-white">
-        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+      {/* SECTION 3: WHY NON-TECHNICAL SKILLS MATTER */}
+      <section className="py-24 3xl:py-36 bg-[#241147] text-white relative overflow-hidden">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 3xl:gap-20 items-center">
             <div className="space-y-6 3xl:space-y-8">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 3xl:px-5 3xl:py-2 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-base font-semibold">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 3xl:px-5 3xl:py-2 rounded-full liquid-glass text-white border border-[#DE3F11]/40 text-xs 3xl:text-base font-semibold shadow-md">
                 <Compass className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
                 <span>Closing the Critical Skill Gap</span>
               </div>
@@ -214,15 +174,15 @@ export default function Home() {
               </p>
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 3xl:gap-6">
-                <div className="flex items-start space-x-3 p-4 3xl:p-6 rounded-2xl bg-white/5 border border-white/10">
-                  <CheckCircle className="w-5 h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] shrink-0 mt-0.5" />
+                <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 flex items-start space-x-3 group">
+                  <CheckCircle className="w-5 h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                   <div>
                     <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Leadership Capability</div>
                     <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80">Executive decision making under uncertainty</div>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-4 3xl:p-6 rounded-2xl bg-white/5 border border-white/10">
-                  <CheckCircle className="w-5 h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] shrink-0 mt-0.5" />
+                <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 flex items-start space-x-3 group">
+                  <CheckCircle className="w-5 h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                   <div>
                     <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Business Acumen</div>
                     <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80">Venture scaling & resource strategy</div>
@@ -231,167 +191,121 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Visual Highlight Card with BorderGlow */}
+            {/* Visual Highlight Card with Liquid Glass */}
             <div className="relative">
-              <BorderGlow
-                edgeSensitivity={35}
-                glowColor="330 85 50"
-                backgroundColor="#361C6A"
-                borderRadius={28}
-                glowRadius={45}
-                glowIntensity={1.2}
-                colors={["#9C1256", "#DE3F11", "#FFFFFF"]}
-                animated={true}
-                className="shadow-2xl"
-              >
-                <div className="p-8 3xl:p-12 space-y-6 3xl:space-y-8">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider gold-gradient-text">
-                      Core Pillar Breakdown
-                    </span>
-                    <span className="text-xs 3xl:text-base font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30">
-                      National Impact
-                    </span>
+              <div className="liquid-glass rounded-3xl p-8 3xl:p-12 space-y-6 3xl:space-y-8 border border-white/20 shadow-2xl">
+                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                  <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider gold-gradient-text">
+                    Core Pillar Breakdown
+                  </span>
+                  <span className="text-xs 3xl:text-base font-semibold px-3 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white border border-[#DE3F11]/40 shadow-sm">
+                    National Impact
+                  </span>
+                </div>
+
+                <div className="space-y-4 3xl:space-y-6">
+                  <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 group">
+                    <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white group-hover:text-[#DE3F11] transition-colors">
+                      Bharath Leadership Summit (BLS)
+                    </div>
+                    <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
+                      India's flagship annual summit convening policy makers, CEOs, and academia.
+                    </div>
                   </div>
 
-                  <div className="space-y-4 3xl:space-y-6">
-                    <div className="p-4 3xl:p-6 rounded-2xl bg-[#241147]/80 border border-white/10">
-                      <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Bharath Leadership Summit (BLS)</div>
-                      <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
-                        India's flagship annual summit convening policy makers, CEOs, and academia.
-                      </div>
+                  <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 group">
+                    <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white group-hover:text-[#DE3F11] transition-colors">
+                      Catalyst Skill Workshops
                     </div>
-
-                    <div className="p-4 3xl:p-6 rounded-2xl bg-[#241147]/80 border border-white/10">
-                      <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Catalyst Skill Workshops</div>
-                      <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
-                        Hands-on masterclasses in negotiation, executive presence, and team dynamics.
-                      </div>
+                    <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
+                      Hands-on masterclasses in negotiation, executive presence, and team dynamics.
                     </div>
+                  </div>
 
-                    <div className="p-4 3xl:p-6 rounded-2xl bg-[#241147]/80 border border-white/10">
-                      <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Research & Policy Insights</div>
-                      <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
-                        Publishing verified national impact reports on leadership competency.
-                      </div>
+                  <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 group">
+                    <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white group-hover:text-[#DE3F11] transition-colors">
+                      Research & Policy Insights
+                    </div>
+                    <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
+                      Publishing verified national impact reports on leadership competency.
                     </div>
                   </div>
                 </div>
-              </BorderGlow>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4 [WHITE/LIGHT]: WHO IT'S FOR */}
-      <section className="py-24 3xl:py-36 bg-[#F7F4FC] text-[#1E0C3D] border-y border-purple-100">
+      {/* SECTION 4: WHO IT'S FOR */}
+      <section className="py-24 3xl:py-36 bg-[#1E0C3D] text-white border-y border-white/10">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16 3xl:mb-24">
-            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
+            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-2">
               Cross-Sector Ecosystem
             </div>
-            <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
+            <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
               Built for Every Leader Across India
             </h2>
-            <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-slate-600 mt-3 leading-relaxed">
+            <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] mt-3 leading-relaxed">
               Whether shaping national policy, scaling a startup, or preparing for your first executive role — LEADS provides the platform you need.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-8">
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-md hover:shadow-xl transition-all group"
-            >
-              <div className="p-7 3xl:p-10">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
-                  <Building2 className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
-                </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Government & Policy</h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Public sector leaders shaping national policy, institutional frameworks, and public administration excellence.
-                </p>
+            <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
+              <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                <Building2 className="w-6 h-6 3xl:w-8 3xl:h-8" />
               </div>
-            </BorderGlow>
+              <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                Government & Policy
+              </h3>
+              <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                Public sector leaders shaping national policy, institutional frameworks, and public administration excellence.
+              </p>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-md hover:shadow-xl transition-all group"
-            >
-              <div className="p-7 3xl:p-10">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
-                  <Briefcase className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
-                </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Industry Leaders</h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Corporate executives and managers seeking to sharpen non-technical strategy, communication, and governance.
-                </p>
+            <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
+              <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                <Briefcase className="w-6 h-6 3xl:w-8 3xl:h-8" />
               </div>
-            </BorderGlow>
+              <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                Industry Leaders
+              </h3>
+              <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                Corporate executives and managers seeking to sharpen non-technical strategy, communication, and governance.
+              </p>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-md hover:shadow-xl transition-all group"
-            >
-              <div className="p-7 3xl:p-10">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
-                </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Startup Founders</h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Entrepreneurs building high-growth ventures, managing teams under uncertainty, and raising venture capital.
-                </p>
+            <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
+              <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                <TrendingUp className="w-6 h-6 3xl:w-8 3xl:h-8" />
               </div>
-            </BorderGlow>
+              <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                Startup Founders
+              </h3>
+              <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                Entrepreneurs building high-growth ventures, managing teams under uncertainty, and raising venture capital.
+              </p>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={24}
-              glowRadius={35}
-              glowIntensity={1.0}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="h-full shadow-md hover:shadow-xl transition-all group"
-            >
-              <div className="p-7 3xl:p-10">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
-                  <GraduationCap className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
-                </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Students & Scholars</h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Aspiring young leaders gaining essential business acumen, confidence, and real-world networking opportunities.
-                </p>
+            <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
+              <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                <GraduationCap className="w-6 h-6 3xl:w-8 3xl:h-8" />
               </div>
-            </BorderGlow>
+              <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                Students & Scholars
+              </h3>
+              <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                Aspiring young leaders gaining essential business acumen, confidence, and real-world networking opportunities.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5 [PURPLE]: FEATURED EVENTS PREVIEW */}
-      <section className="py-24 3xl:py-36 bg-[#361C6A] text-white">
+      {/* SECTION 5: FEATURED EVENTS PREVIEW */}
+      <section className="py-24 3xl:py-36 bg-[#241147] text-white">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 3xl:mb-16">
             <div>
@@ -419,9 +333,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 6 [WHITE/LIGHT]: CALL TO ACTION BANNER */}
-      <section className="py-24 3xl:py-36 px-4 sm:px-6 lg:px-8 3xl:px-12 bg-[#FDFBFF] border-t border-purple-100">
-        <div className="max-w-5xl 2xl:max-w-6xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto rounded-3xl 3xl:rounded-[40px] bg-gradient-to-r from-[#241147] via-[#361C6A] to-[#241147] p-8 sm:p-14 3xl:p-24 border border-[#DE3F11]/40 shadow-2xl text-center relative overflow-hidden text-white">
+      {/* SECTION 6: CALL TO ACTION BANNER */}
+      <section className="py-24 3xl:py-36 px-4 sm:px-6 lg:px-8 3xl:px-12 bg-[#1E0C3D]">
+        <div className="max-w-5xl 2xl:max-w-6xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto rounded-3xl 3xl:rounded-[40px] liquid-glass p-8 sm:p-14 3xl:p-24 border border-white/20 shadow-2xl text-center relative overflow-hidden text-white group">
+          {/* Subtle iridescent glow accent in background */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#9C1256]/30 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700" />
+          <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-[#DE3F11]/30 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700" />
+
           <div className="relative z-10 space-y-6 3xl:space-y-10">
             <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
               Ready to Uplift Your Leadership Potential?
@@ -432,13 +350,13 @@ export default function Home() {
             <div className="pt-4 3xl:pt-8 flex flex-col sm:flex-row justify-center gap-4 3xl:gap-8">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-xl 3xl:rounded-2xl font-bold text-sm 2xl:text-lg 3xl:text-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg hover:scale-105 transition-all"
+                className="px-8 py-3.5 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-2xl 3xl:rounded-3xl font-bold text-sm 2xl:text-lg 3xl:text-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
               >
                 Connect With Our Team
               </Link>
               <Link
                 href="/about"
-                className="px-8 py-3.5 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-xl 3xl:rounded-2xl font-semibold text-sm 2xl:text-lg 3xl:text-xl glass-panel text-white hover:bg-white/10 transition-all border border-white/20"
+                className="liquid-glass px-8 py-3.5 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-2xl 3xl:rounded-3xl font-semibold text-sm 2xl:text-lg 3xl:text-xl text-white hover:border-[#DE3F11]/60 hover:bg-white/10 hover:scale-105 active:scale-95 transition-all duration-300 shadow-md"
               >
                 Learn About Our Story
               </Link>
