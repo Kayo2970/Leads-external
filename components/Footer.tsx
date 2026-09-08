@@ -136,31 +136,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Institutional Collaboration Strip */}
-        <div className="py-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-3 text-center sm:text-left">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#9C1256] to-[#DE3F11] flex items-center justify-center text-white shrink-0 shadow-sm">
-              <Handshake className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#DE3F11]">
-                Institutional Partnership
-              </div>
-              <div className="text-sm font-bold text-white">
-                In collaboration with FMC (Faculty of Management and Commerce, RUAS)
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/95 px-4 py-2 rounded-2xl border border-white/20 shadow-md inline-flex items-center justify-center hover:scale-105 transition-transform duration-300">
-            <img
-              src="/fmc-logo-white.png"
-              alt="Faculty of Management and Commerce - M. S. Ramaiah University of Applied Sciences"
-              className="h-8 sm:h-9 w-auto object-contain"
-            />
-          </div>
-        </div>
-
         {/* Social Media Bar */}
         <div className="py-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#E2D9F3]/70 uppercase tracking-wider font-semibold">Follow &amp; Connect</p>
@@ -218,6 +193,31 @@ export default function Footer() {
               <span className="text-xs font-semibold text-white/80 group-hover:text-white">leads.ngc@msruas.ac.in</span>
             </a>
 
+          </div>
+        </div>
+
+        {/* Institutional Collaboration Strip */}
+        <div className="py-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center space-x-3 text-center sm:text-left">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#9C1256] to-[#DE3F11] flex items-center justify-center text-white shrink-0 shadow-sm">
+              <Handshake className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#DE3F11]">
+                Institutional Partnership
+              </div>
+              <div className="text-sm font-bold text-white">
+                In collaboration with FMC (Faculty of Management and Commerce, RUAS)
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/95 px-4 py-2 rounded-2xl border border-white/20 shadow-md inline-flex items-center justify-center hover:scale-105 transition-transform duration-300">
+            <img
+              src="/fmc-logo-white.png"
+              alt="Faculty of Management and Commerce - M. S. Ramaiah University of Applied Sciences"
+              className="h-8 sm:h-9 w-auto object-contain"
+            />
           </div>
         </div>
 
