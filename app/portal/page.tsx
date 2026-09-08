@@ -100,8 +100,8 @@ export default function PortalGatewayPage() {
     } = Matter;
 
     const engine = Engine.create();
-    // Gravity scaled so items cleanly accelerate and plunge off the screen in ~2.5s
-    engine.gravity.y = isMobile ? 1.6 : 1.4;
+    // Gravity calibrated for a cinematic 4-second float & drop off-screen
+    engine.gravity.y = isMobile ? 0.95 : 0.85;
 
     const items = document.querySelectorAll<HTMLElement>(".portal-fall-item");
     const physicsElements: {
@@ -148,16 +148,16 @@ export default function PortalGatewayPage() {
       const body = Bodies.rectangle(x, y, rect.width, rect.height, {
         restitution: 0.4,
         friction: 0.05,
-        frictionAir: 0.005,
+        frictionAir: 0.008,
         density: 0.002,
         angle: (Math.random() - 0.5) * 0.15,
       });
 
       // Scatter impulse: tuned for mobile screen width so elements don't cause horizontal overflow
-      const scatterX = (Math.random() - 0.5) * (isMobile ? 10 : 20);
-      const scatterY = -(Math.random() * (isMobile ? 4 : 7) + 2);
+      const scatterX = (Math.random() - 0.5) * (isMobile ? 8 : 16);
+      const scatterY = -(Math.random() * (isMobile ? 3.5 : 6) + 2);
       Body.setVelocity(body, { x: scatterX, y: scatterY });
-      Body.setAngularVelocity(body, (Math.random() - 0.5) * (isMobile ? 0.18 : 0.25));
+      Body.setAngularVelocity(body, (Math.random() - 0.5) * (isMobile ? 0.15 : 0.22));
 
       World.add(engine.world, body);
       physicsElements.push({ body, elem: clone, w: rect.width, h: rect.height });
@@ -184,10 +184,10 @@ export default function PortalGatewayPage() {
       overlay,
     };
 
-    // Auto-redirect to ERP portal URL after 3 seconds
+    // Auto-redirect to ERP portal URL after 4 seconds
     setTimeout(() => {
       window.location.href = ERP_PORTAL_URL;
-    }, 3000);
+    }, 4000);
   };
 
   useEffect(() => {
