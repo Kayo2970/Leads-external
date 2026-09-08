@@ -38,19 +38,19 @@ export default function Home() {
         scrollDistance={0.9}
         holdDistance={0.2}
       >
-        <section className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-[#361C6A]">
+        <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 3xl:pt-48 3xl:pb-36 overflow-hidden bg-[#361C6A]">
           {/* SoftAurora WebGL Background (Blue Wave) */}
           <div className="absolute inset-0 w-full h-full pointer-events-auto z-0 overflow-hidden opacity-90">
             <SoftAurora
               speed={0.6}
-              scale={1.5}
+              scale={2.0}
               brightness={1.3}
               color1="#00cfff"
               color2="#3B82F6"
-              noiseFrequency={2.5}
-              noiseAmplitude={1}
-              bandHeight={0.5}
-              bandSpread={1}
+              noiseFrequency={2.2}
+              noiseAmplitude={1.1}
+              bandHeight={0.6}
+              bandSpread={1.2}
               octaveDecay={0.1}
               layerOffset={0}
               colorSpeed={3}
@@ -59,44 +59,44 @@ export default function Home() {
             />
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 relative z-10 text-center">
             {/* Top Pill Badge */}
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border-[#DE3F11]/40 text-white font-semibold text-xs mb-8 shadow-lg animate-float">
-              <Sparkles className="w-4 h-4 text-[#DE3F11] animate-spin" />
+            <div className="inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-2 2xl:px-6 2xl:py-3 3xl:px-8 3xl:py-4 rounded-full glass-panel border-[#DE3F11]/40 text-white font-semibold text-xs 2xl:text-base 3xl:text-xl mb-8 3xl:mb-12 shadow-lg animate-float">
+              <Sparkles className="w-4 h-4 2xl:w-5 2xl:h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] animate-spin" />
               <span>India's First Leadership & Non-Technical Skill Upliftment Centre</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.15]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl 2xl:text-8xl 3xl:text-9xl 4xl:text-[7.5rem] font-extrabold tracking-tight text-white max-w-5xl 2xl:max-w-7xl 3xl:max-w-[1800px] mx-auto leading-[1.12]">
               Building India's <br className="hidden sm:block" />
               <span className="gold-gradient-text">Next Generation of Leaders</span>
             </h1>
 
             {/* Subheading */}
-            <p className="mt-6 text-base sm:text-xl text-[#E2D9F3] max-w-3xl mx-auto leading-relaxed font-normal">
+            <p className="mt-6 3xl:mt-10 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl text-[#E2D9F3] max-w-3xl 2xl:max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl mx-auto leading-relaxed font-normal">
               A national centre for leadership and non-technical skill upliftment — for founders, professionals, government leaders, students, and researchers who want to achieve something more.
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-10 3xl:mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 3xl:gap-8">
               <Link
                 href="/events"
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 group"
+                className="w-full sm:w-auto px-8 py-4 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-2xl 3xl:rounded-3xl font-bold text-base 2xl:text-xl 3xl:text-2xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 3xl:space-x-4 group"
               >
                 <span>Explore Our Events</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7 group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link
                 href="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl font-semibold text-base glass-panel hover:bg-white/10 text-white border border-white/20 hover:border-[#DE3F11]/50 transition-all duration-300 flex items-center justify-center"
+                className="w-full sm:w-auto px-8 py-4 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-2xl 3xl:rounded-3xl font-semibold text-base 2xl:text-xl 3xl:text-2xl glass-panel hover:bg-white/10 text-white border border-white/20 hover:border-[#DE3F11]/50 transition-all duration-300 flex items-center justify-center"
               >
                 Get in Touch
               </Link>
             </div>
 
             {/* MSRUAS Affiliation Note */}
-            <p className="mt-12 text-xs text-[#E2D9F3]/80 font-medium">
+            <p className="mt-12 3xl:mt-16 text-xs 2xl:text-base 3xl:text-lg text-[#E2D9F3]/80 font-medium">
               Part of the Faculty of Management and Commerce ecosystem at M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru
             </p>
           </div>
@@ -104,18 +104,18 @@ export default function Home() {
       </LogoScrollExpand>
 
       {/* SECTION 2 [WHITE/LIGHT]: STATS STRIP / BY THE NUMBERS */}
-      <section className="relative z-10 py-16 bg-[#FDFBFF] text-[#1E0C3D] border-y border-purple-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <div className="text-xs font-bold uppercase tracking-wider text-[#9C1256] mb-1">
+      <section className="relative z-10 py-16 3xl:py-28 bg-[#FDFBFF] text-[#1E0C3D] border-y border-purple-100 shadow-sm">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+          <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-10 3xl:mb-16">
+            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-1">
               National Footprint & Impact
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E0C3D]">
+            <h2 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-extrabold text-[#1E0C3D]">
               LEADS by the Numbers
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-10">
             <BorderGlow
               edgeSensitivity={30}
               glowColor="330 85 50"
@@ -127,12 +127,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">30+</div>
-                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
+                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">30+</div>
+                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
                   Events Hosted in Year 1
                 </div>
-                <div className="text-[11px] text-slate-500 mt-1">Masterclasses & Summits</div>
+                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Masterclasses & Summits</div>
               </div>
             </BorderGlow>
 
@@ -147,12 +147,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">1st</div>
-                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
+                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">1st</div>
+                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
                   Inaugural Bharath Leadership Summit
                 </div>
-                <div className="text-[11px] text-slate-500 mt-1">Signature Annual Flagship</div>
+                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Signature Annual Flagship</div>
               </div>
             </BorderGlow>
 
@@ -167,12 +167,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">5,000+</div>
-                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
+                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">5,000+</div>
+                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
                   Leaders & Delegates Impacted
                 </div>
-                <div className="text-[11px] text-slate-500 mt-1">Nationwide Participation</div>
+                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Nationwide Participation</div>
               </div>
             </BorderGlow>
 
@@ -187,12 +187,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-black gold-gradient-text">100%</div>
-                <div className="text-xs sm:text-sm text-[#361C6A] font-bold mt-2">
+              <div className="p-6 2xl:p-8 3xl:p-12 text-center">
+                <div className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black gold-gradient-text">100%</div>
+                <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-[#361C6A] font-bold mt-2">
                   Non-Technical Skill Focus
                 </div>
-                <div className="text-[11px] text-slate-500 mt-1">Leadership & Acumen</div>
+                <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-slate-500 mt-1">Leadership & Acumen</div>
               </div>
             </BorderGlow>
           </div>
@@ -200,37 +200,37 @@ export default function Home() {
       </section>
 
       {/* SECTION 3 [PURPLE]: WHY NON-TECHNICAL SKILLS MATTER */}
-      <section className="py-24 bg-[#241147] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-semibold">
-                <Compass className="w-3.5 h-3.5 text-[#DE3F11]" />
+      <section className="py-24 3xl:py-36 bg-[#241147] text-white">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 3xl:gap-20 items-center">
+            <div className="space-y-6 3xl:space-y-8">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 3xl:px-5 3xl:py-2 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-base font-semibold">
+                <Compass className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
                 <span>Closing the Critical Skill Gap</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white leading-tight">
                 Why Non-Technical Skills Matter More Than Ever
               </h2>
-              <p className="text-sm sm:text-base text-[#E2D9F3] leading-relaxed">
+              <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] leading-relaxed">
                 LEADS Next Gen Centre exists to close a gap most institutions overlook: the non-technical skills — leadership, entrepreneurship, executive communication, and business acumen — that turn technical knowledge into real-world impact.
               </p>
-              <p className="text-sm sm:text-base text-[#E2D9F3] leading-relaxed">
+              <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] leading-relaxed">
                 In just one year, LEADS has grown into a thriving national ecosystem for anyone in India ready to lead teams, guide public policy, or build transformative ventures.
               </p>
 
-              <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-start space-x-3 p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <CheckCircle className="w-5 h-5 text-[#DE3F11] shrink-0 mt-0.5" />
+              <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 3xl:gap-6">
+                <div className="flex items-start space-x-3 p-4 3xl:p-6 rounded-2xl bg-white/5 border border-white/10">
+                  <CheckCircle className="w-5 h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] shrink-0 mt-0.5" />
                   <div>
-                    <div className="text-sm font-bold text-white">Leadership Capability</div>
-                    <div className="text-xs text-[#E2D9F3]/80">Executive decision making under uncertainty</div>
+                    <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Leadership Capability</div>
+                    <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80">Executive decision making under uncertainty</div>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <CheckCircle className="w-5 h-5 text-[#DE3F11] shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-4 3xl:p-6 rounded-2xl bg-white/5 border border-white/10">
+                  <CheckCircle className="w-5 h-5 3xl:w-6 3xl:h-6 text-[#DE3F11] shrink-0 mt-0.5" />
                   <div>
-                    <div className="text-sm font-bold text-white">Business Acumen</div>
-                    <div className="text-xs text-[#E2D9F3]/80">Venture scaling & resource strategy</div>
+                    <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Business Acumen</div>
+                    <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80">Venture scaling & resource strategy</div>
                   </div>
                 </div>
               </div>
@@ -249,34 +249,34 @@ export default function Home() {
                 animated={true}
                 className="shadow-2xl"
               >
-                <div className="p-8 space-y-6">
+                <div className="p-8 3xl:p-12 space-y-6 3xl:space-y-8">
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <span className="text-xs font-bold uppercase tracking-wider gold-gradient-text">
+                    <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider gold-gradient-text">
                       Core Pillar Breakdown
                     </span>
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30">
+                    <span className="text-xs 3xl:text-base font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white border border-[#DE3F11]/30">
                       National Impact
                     </span>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10">
-                      <div className="text-sm font-bold text-white">Bharath Leadership Summit (BLS)</div>
-                      <div className="text-xs text-[#E2D9F3]/80 mt-1">
+                  <div className="space-y-4 3xl:space-y-6">
+                    <div className="p-4 3xl:p-6 rounded-2xl bg-[#241147]/80 border border-white/10">
+                      <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Bharath Leadership Summit (BLS)</div>
+                      <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
                         India's flagship annual summit convening policy makers, CEOs, and academia.
                       </div>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10">
-                      <div className="text-sm font-bold text-white">Catalyst Skill Workshops</div>
-                      <div className="text-xs text-[#E2D9F3]/80 mt-1">
+                    <div className="p-4 3xl:p-6 rounded-2xl bg-[#241147]/80 border border-white/10">
+                      <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Catalyst Skill Workshops</div>
+                      <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
                         Hands-on masterclasses in negotiation, executive presence, and team dynamics.
                       </div>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10">
-                      <div className="text-sm font-bold text-white">Research & Policy Insights</div>
-                      <div className="text-xs text-[#E2D9F3]/80 mt-1">
+                    <div className="p-4 3xl:p-6 rounded-2xl bg-[#241147]/80 border border-white/10">
+                      <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white">Research & Policy Insights</div>
+                      <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
                         Publishing verified national impact reports on leadership competency.
                       </div>
                     </div>
@@ -289,21 +289,21 @@ export default function Home() {
       </section>
 
       {/* SECTION 4 [WHITE/LIGHT]: WHO IT'S FOR */}
-      <section className="py-24 bg-[#F7F4FC] text-[#1E0C3D] border-y border-purple-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="text-xs font-bold uppercase tracking-wider text-[#9C1256] mb-2">
+      <section className="py-24 3xl:py-36 bg-[#F7F4FC] text-[#1E0C3D] border-y border-purple-100">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+          <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16 3xl:mb-24">
+            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
               Cross-Sector Ecosystem
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E0C3D]">
+            <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
               Built for Every Leader Across India
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+            <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-slate-600 mt-3 leading-relaxed">
               Whether shaping national policy, scaling a startup, or preparing for your first executive role — LEADS provides the platform you need.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-8">
             <BorderGlow
               edgeSensitivity={30}
               glowColor="330 85 50"
@@ -315,12 +315,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-md hover:shadow-xl transition-all group"
             >
-              <div className="p-7">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <Building2 className="w-6 h-6 text-[#9C1256]" />
+              <div className="p-7 3xl:p-10">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
+                  <Building2 className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
                 </div>
-                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Government & Policy</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Government & Policy</h3>
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Public sector leaders shaping national policy, institutional frameworks, and public administration excellence.
                 </p>
               </div>
@@ -337,12 +337,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-md hover:shadow-xl transition-all group"
             >
-              <div className="p-7">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <Briefcase className="w-6 h-6 text-[#9C1256]" />
+              <div className="p-7 3xl:p-10">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
+                  <Briefcase className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
                 </div>
-                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Industry Leaders</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Industry Leaders</h3>
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Corporate executives and managers seeking to sharpen non-technical strategy, communication, and governance.
                 </p>
               </div>
@@ -359,12 +359,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-md hover:shadow-xl transition-all group"
             >
-              <div className="p-7">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-6 h-6 text-[#9C1256]" />
+              <div className="p-7 3xl:p-10">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
                 </div>
-                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Startup Founders</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Startup Founders</h3>
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Entrepreneurs building high-growth ventures, managing teams under uncertainty, and raising venture capital.
                 </p>
               </div>
@@ -381,12 +381,12 @@ export default function Home() {
               animated={true}
               className="h-full shadow-md hover:shadow-xl transition-all group"
             >
-              <div className="p-7">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <GraduationCap className="w-6 h-6 text-[#9C1256]" />
+              <div className="p-7 3xl:p-10">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 border border-[#DE3F11]/30 text-[#9C1256] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-6 h-6 3xl:w-8 3xl:h-8 text-[#9C1256]" />
                 </div>
-                <h3 className="font-bold text-lg text-[#1E0C3D] mb-2">Students & Scholars</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2">Students & Scholars</h3>
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Aspiring young leaders gaining essential business acumen, confidence, and real-world networking opportunities.
                 </p>
               </div>
@@ -396,27 +396,27 @@ export default function Home() {
       </section>
 
       {/* SECTION 5 [PURPLE]: FEATURED EVENTS PREVIEW */}
-      <section className="py-24 bg-[#361C6A] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <section className="py-24 3xl:py-36 bg-[#361C6A] text-white">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 3xl:mb-16">
             <div>
-              <div className="text-xs font-bold uppercase tracking-wider gold-gradient-text mb-2">
+              <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider gold-gradient-text mb-2">
                 National Event Calendar
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
                 Featured Summits & Masterclasses
               </h2>
             </div>
             <Link
               href="/events"
-              className="mt-4 md:mt-0 text-sm font-bold text-white hover:text-[#DE3F11] hover:underline inline-flex items-center space-x-1"
+              className="mt-4 md:mt-0 text-sm 2xl:text-base 3xl:text-xl font-bold text-white hover:text-[#DE3F11] hover:underline inline-flex items-center space-x-1"
             >
               <span>Explore All Events</span>
-              <ChevronRight className="w-4 h-4 text-[#DE3F11]" />
+              <ChevronRight className="w-4 h-4 3xl:w-6 3xl:h-6 text-[#DE3F11]" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 3xl:gap-12">
             {featuredEvents.map((event) => (
               <EventCard key={event.id} event={event} onOpenModal={(e) => setSelectedEvent(e)} />
             ))}
@@ -425,25 +425,25 @@ export default function Home() {
       </section>
 
       {/* SECTION 6 [WHITE/LIGHT]: CALL TO ACTION BANNER */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#FDFBFF] border-t border-purple-100">
-        <div className="max-w-5xl mx-auto rounded-3xl bg-gradient-to-r from-[#241147] via-[#361C6A] to-[#241147] p-8 sm:p-14 border border-[#DE3F11]/40 shadow-2xl text-center relative overflow-hidden text-white">
-          <div className="relative z-10 space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+      <section className="py-24 3xl:py-36 px-4 sm:px-6 lg:px-8 3xl:px-12 bg-[#FDFBFF] border-t border-purple-100">
+        <div className="max-w-5xl 2xl:max-w-6xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto rounded-3xl 3xl:rounded-[40px] bg-gradient-to-r from-[#241147] via-[#361C6A] to-[#241147] p-8 sm:p-14 3xl:p-24 border border-[#DE3F11]/40 shadow-2xl text-center relative overflow-hidden text-white">
+          <div className="relative z-10 space-y-6 3xl:space-y-10">
+            <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
               Ready to Uplift Your Leadership Potential?
             </h2>
-            <p className="text-sm sm:text-base text-[#E2D9F3] max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] max-w-2xl 3xl:max-w-4xl mx-auto">
               Partner with LEADS Next Gen Centre for institutional programs, summit registrations, or research collaborations.
             </p>
-            <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+            <div className="pt-4 3xl:pt-8 flex flex-col sm:flex-row justify-center gap-4 3xl:gap-8">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg hover:scale-105 transition-all"
+                className="px-8 py-3.5 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-xl 3xl:rounded-2xl font-bold text-sm 2xl:text-lg 3xl:text-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg hover:scale-105 transition-all"
               >
                 Connect With Our Team
               </Link>
               <Link
                 href="/about"
-                className="px-8 py-3.5 rounded-xl font-semibold text-sm glass-panel text-white hover:bg-white/10 transition-all border border-white/20"
+                className="px-8 py-3.5 2xl:px-12 2xl:py-5 3xl:px-16 3xl:py-6 rounded-xl 3xl:rounded-2xl font-semibold text-sm 2xl:text-lg 3xl:text-xl glass-panel text-white hover:bg-white/10 transition-all border border-white/20"
               >
                 Learn About Our Story
               </Link>

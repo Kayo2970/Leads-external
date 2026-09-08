@@ -17,25 +17,25 @@ export default function ReportsPage() {
         {/* Subtle background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-semibold mb-6 shadow-sm">
-            <FileText className="w-3.5 h-3.5 text-[#DE3F11]" />
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 text-center relative z-10">
+          <div className="inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-1.5 3xl:px-6 3xl:py-3 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-lg font-semibold mb-6 3xl:mb-10 shadow-sm">
+            <FileText className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
             <span>Official Publications & Transparency</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
+          <h1 className="text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-extrabold text-white tracking-tight max-w-4xl 3xl:max-w-6xl mx-auto leading-tight">
             Our Impact, <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">In Verified Numbers</span>
           </h1>
-          <p className="mt-5 text-base sm:text-lg text-[#E2D9F3] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 3xl:mt-8 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] max-w-2xl 3xl:max-w-4xl mx-auto leading-relaxed">
             Read online or download our official verified report to inspect what a year of non-technical leadership upliftment looks like across India.
           </p>
         </div>
       </section>
 
       {/* SECTION 2 [LIGHT]: FEATURED REPORT & LIVE ONLINE PDF READER */}
-      <section className="py-20 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 3xl:py-32 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-14 3xl:mb-20">
             <div className="text-xs font-bold uppercase tracking-wider text-[#9C1256] mb-2 flex items-center justify-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
               <span>Official Annual Release</span>

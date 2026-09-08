@@ -8,6 +8,11 @@ module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2560px',
+        '5xl': '3440px',
+      },
       colors: {
         brand: {
           violet: "#361C6A",

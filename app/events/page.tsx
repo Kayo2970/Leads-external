@@ -52,31 +52,31 @@ export default function EventsPage() {
       <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
 
       {/* Header Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-semibold mb-4 shadow-sm">
-          <Calendar className="w-3.5 h-3.5 text-[#DE3F11]" />
+      <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 text-center mb-16 3xl:mb-24">
+        <div className="inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-1.5 3xl:px-6 3xl:py-3 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-lg font-semibold mb-4 3xl:mb-8 shadow-sm">
+          <Calendar className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
           <span>LEADS National Initiative Calendar & Archives</span>
         </div>
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+        <h1 className="text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-extrabold text-white tracking-tight">
           Where Leaders Come Together
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-4 3xl:mt-8 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-white/80 max-w-2xl 3xl:max-w-4xl mx-auto leading-relaxed">
           Explore our signature leadership summits, intensive workshops, and executive roundtables. Click any series to open the full-screen interactive archive with photographs and edition breakdowns.
         </p>
       </div>
 
       {/* Category Filter Pills */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-          <span className="text-xs font-semibold text-white/70 mr-2 flex items-center space-x-1">
-            <Filter className="w-3.5 h-3.5 text-[#DE3F11]" />
+      <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 mb-16 3xl:mb-24">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 3xl:gap-5">
+          <span className="text-xs 3xl:text-lg font-semibold text-white/70 mr-2 flex items-center space-x-1">
+            <Filter className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
             <span>Filter Series:</span>
           </span>
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 ${
+              className={`px-5 py-2.5 3xl:px-8 3xl:py-4 rounded-xl 3xl:rounded-2xl text-xs 3xl:text-lg font-bold transition-all duration-300 ${
                 selectedCategory === cat
                   ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg scale-105"
                   : "glass-panel text-white/80 border border-white/15 hover:border-[#DE3F11]/50"
@@ -89,7 +89,7 @@ export default function EventsPage() {
       </div>
 
       {/* ALTERNATING EVENT SERIES SHOWCASE ROWS */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 space-y-16 3xl:space-y-24">
         {filteredEvents.map((event, index) => {
           const isImageLeft = index % 2 === 0;
           const isLightCard = index % 2 !== 0; // Alternating white card for odd indices

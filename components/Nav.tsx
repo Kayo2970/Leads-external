@@ -34,24 +34,24 @@ export default function Nav() {
         scrolled ? "glass-nav py-3 shadow-lg" : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
         <div className="flex items-center justify-between">
           {/* Logo & Identity */}
           <Link href="/" className="flex items-center group">
-            <div className="bg-white/95 dark:bg-white/90 px-3 py-1.5 rounded-xl border border-brand-gold/30 shadow-sm group-hover:scale-105 transition-transform duration-300">
+            <div className="bg-white/95 dark:bg-white/90 px-3 py-1.5 3xl:px-5 3xl:py-2.5 rounded-xl 3xl:rounded-2xl border border-brand-gold/30 shadow-sm group-hover:scale-105 transition-transform duration-300">
               <img
                 src="/leads-header-logo.png"
                 alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
-                className="h-9 sm:h-10 w-auto object-contain"
+                className="h-9 sm:h-10 3xl:h-14 w-auto object-contain"
               />
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 3xl:space-x-4">
             <Link
               href="/"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
                 isActive("/")
                   ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
                   : "text-white/90 hover:text-white hover:bg-white/10"
@@ -62,7 +62,7 @@ export default function Nav() {
 
             <Link
               href="/events"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
                 isActive("/events")
                   ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
                   : "text-white/90 hover:text-white hover:bg-white/10"
@@ -73,7 +73,7 @@ export default function Nav() {
 
             <Link
               href="/about"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
                 isActive("/about")
                   ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
                   : "text-white/90 hover:text-white hover:bg-white/10"
@@ -90,7 +90,7 @@ export default function Nav() {
             >
               <Link
                 href="/reports"
-                className={`inline-flex items-center space-x-1 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`inline-flex items-center space-x-1 px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
                   isActive("/reports")
                     ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
                     : "text-white/90 hover:text-white hover:bg-white/10"
@@ -98,7 +98,7 @@ export default function Nav() {
               >
                 <span>Reports</span>
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
+                  className={`w-4 h-4 3xl:w-5 3xl:h-5 transition-transform duration-200 ${
                     reportsDropdownOpen ? "rotate-180 text-[#DE3F11]" : ""
                   }`}
                 />
@@ -106,8 +106,8 @@ export default function Nav() {
 
               {/* Dropdown Menu Box */}
               {reportsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 rounded-2xl bg-[#241147]/95 glass-panel p-3 shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text px-3 py-1.5 border-b border-white/10 mb-1">
+                <div className="absolute top-full left-0 mt-1 w-80 3xl:w-96 rounded-2xl bg-[#241147]/95 glass-panel p-3 shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                  <div className="text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text px-3 py-1.5 border-b border-white/10 mb-1">
                     Official Impact Publication
                   </div>
                   {REPORTS_DATA.map((report) => (
@@ -120,10 +120,10 @@ export default function Nav() {
                         <FileText className="w-4 h-4 text-[#DE3F11]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs font-semibold text-white group-hover:text-[#DE3F11] truncate">
+                        <div className="text-xs 3xl:text-sm font-semibold text-white group-hover:text-[#DE3F11] truncate">
                           {report.title}
                         </div>
-                        <div className="text-[11px] text-[#E2D9F3]">
+                        <div className="text-[11px] 3xl:text-xs text-[#E2D9F3]">
                           {report.year} · {report.fileSize} PDF · Read Online
                         </div>
                       </div>
@@ -132,7 +132,7 @@ export default function Nav() {
                   <div className="mt-2 pt-2 border-t border-white/10 text-center">
                     <Link
                       href="/reports"
-                      className="text-xs font-semibold text-white hover:text-[#DE3F11] hover:underline"
+                      className="text-xs 3xl:text-sm font-semibold text-white hover:text-[#DE3F11] hover:underline"
                     >
                       Open Interactive Reader →
                     </Link>
@@ -146,13 +146,13 @@ export default function Nav() {
               href="https://www.bharatleadsummit.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors group"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 3xl:px-4 3xl:py-2 rounded-lg text-sm 3xl:text-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors group"
               title="Visit Bharath Leadership Summit website"
             >
               <img
                 src="/bls-logo.webp"
                 alt="BLS Logo"
-                className="w-5 h-5 object-contain rounded-full bg-white/20 p-0.5 group-hover:scale-110 transition-transform"
+                className="w-5 h-5 3xl:w-6 3xl:h-6 object-contain rounded-full bg-white/20 p-0.5 group-hover:scale-110 transition-transform"
               />
               <span>BLS</span>
             </a>
@@ -162,7 +162,7 @@ export default function Nav() {
               href="https://github.com/Kayo2970/Leads-external.git"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-3.5 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+              className="inline-flex items-center px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg text-sm 3xl:text-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors"
               title="Access LEADS Member & ERP Portal"
             >
               LEADS Portal
@@ -170,11 +170,11 @@ export default function Nav() {
           </nav>
 
           {/* Right Action Bar */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3 3xl:space-x-5">
             <ThemeToggle />
             <Link
               href="/contact"
-              className="inline-flex items-center px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300"
+              className="inline-flex items-center px-5 py-2.5 3xl:px-8 3xl:py-3.5 rounded-xl 3xl:rounded-2xl font-semibold text-sm 3xl:text-lg bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300"
             >
               Contact Us
             </Link>
