@@ -34,7 +34,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   const trackRef = useRef<HTMLDivElement | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
   const frameRef = useRef<HTMLDivElement | null>(null);
-  const emblemRef = useRef<HTMLDivElement | null>(null);
   const hintRef = useRef<HTMLDivElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
 
@@ -54,14 +53,13 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
 
   const applyProgress = useCallback((p: number) => {
     const frame = frameRef.current;
-    const emblem = emblemRef.current;
     const hint = hintRef.current;
     const bg = bgRef.current;
     if (!frame) return;
 
     const e = smoothstep(0, 1, p);
 
-    // Initial mask size 280px expanding to 5200px to fully reveal through logo
+    // Initial mask size 280px expanding to 5200px to fully reveal through logo cutout
     const startSize = 280;
     const endSize = 5200;
     const currentSize = startSize + (endSize - startSize) * Math.pow(e, 1.8);
@@ -76,14 +74,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       frame.style.maskSize = `${currentSize}px auto`;
       frame.style.webkitMaskSize = `${currentSize}px auto`;
       frame.style.pointerEvents = e > 0.6 ? "auto" : "none";
-    }
-
-    if (emblem) {
-      // Emblem outline scales up and fades away smoothly
-      const emblemFade = smoothstep(0.05, 0.45, p);
-      const emblemScale = 1 + e * 4.5;
-      emblem.style.opacity = `${1 - emblemFade}`;
-      emblem.style.transform = `translate(-50%, -50%) scale(${emblemScale})`;
     }
 
     if (hint) {
@@ -187,17 +177,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
           {/* Masked Frame containing the hero content */}
           <div ref={frameRef} className="logo-scroll-expand__frame">
             {children}
-          </div>
-
-          {/* Glowing Emblem Outline resting over the mask center */}
-          <div ref={emblemRef} className="logo-scroll-expand__emblem-outline">
-            <div className="logo-scroll-expand__emblem-box animate-pulse">
-              <img
-                src={logoSrc}
-                alt="LEADS Emblem"
-                className="logo-scroll-expand__emblem-img"
-              />
-            </div>
           </div>
 
           {/* Scroll Down Indicator */}
