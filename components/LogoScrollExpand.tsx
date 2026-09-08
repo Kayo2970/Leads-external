@@ -82,11 +82,19 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       startSize = clamp(w * 0.25, 850, 1200);
     }
 
-    // End size scales to fully cover any monitor resolution (including 4K/8K)
-    const endSize = Math.max(7000, maxDim * 4.2);
-    const currentSize = startSize + (endSize - startSize) * Math.pow(e, 1.8);
+    // Dynamic massive end size so the camera flies completely through the logo contours
+    const endSize = Math.max(26000, maxDim * 16);
+    // Smooth power curve for cinematic zoom acceleration
+    const currentSize = startSize + (endSize - startSize) * Math.pow(e, 2.5);
 
-    if (e >= 0.95) {
+    // Fade white backdrop smoothly from 1.0 to 0.0 as the user scrolls into the logo
+    if (bg) {
+      const bgFade = smoothstep(0.15, 0.75, p);
+      bg.style.opacity = `${1 - bgFade}`;
+    }
+
+    // Camera flythrough - mask expands continuously and only unlocks pointer events when fully open
+    if (e >= 0.99) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
       frame.style.pointerEvents = "auto";
@@ -95,18 +103,13 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
       frame.style.maskSize = `${currentSize}px auto`;
       frame.style.webkitMaskSize = `${currentSize}px auto`;
-      frame.style.pointerEvents = e > 0.6 ? "auto" : "none";
+      frame.style.pointerEvents = e > 0.65 ? "auto" : "none";
     }
 
     if (hint) {
-      const hintFade = smoothstep(0, 0.15, p);
+      const hintFade = smoothstep(0, 0.12, p);
       hint.style.opacity = `${1 - hintFade}`;
-      hint.style.transform = `translateX(-50%) translateY(${20 * hintFade}px)`;
-    }
-
-    if (bg) {
-      const bgFade = smoothstep(0.45, 0.95, p);
-      bg.style.opacity = `${1 - bgFade}`;
+      hint.style.transform = `translateX(-50%) translateY(${25 * hintFade}px)`;
     }
   }, []);
 

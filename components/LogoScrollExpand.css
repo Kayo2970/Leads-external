@@ -14,16 +14,17 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #241147;
+  background-color: #361C6A;
 }
 
-/* Background overlay before mask expands */
+/* Background overlay before mask expands - Pristine White that fades smoothly */
 .logo-scroll-expand__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, #361C6A 0%, #241147 70%, #15082E 100%);
+  background: #FFFFFF;
   z-index: 1;
   pointer-events: none;
+  will-change: opacity;
 }
 
 /* The frame revealing the underlying content through the logo alpha mask */
@@ -64,13 +65,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 1.4rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 9999px;
-  background: rgba(36, 17, 71, 0.85);
-  border: 1px solid rgba(222, 63, 17, 0.6);
+  background: rgba(30, 12, 61, 0.94);
+  border: 1.5px solid rgba(222, 63, 17, 0.7);
+  color: #FFFFFF;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
 @keyframes floatPill {
