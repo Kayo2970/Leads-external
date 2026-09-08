@@ -1,17 +1,22 @@
 .logo-scroll-expand {
   position: relative;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
 .logo-scroll-expand__track {
   position: relative;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
 .logo-scroll-expand__stage {
   position: sticky;
   top: 0;
   width: 100%;
+  max-width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #241147;
@@ -27,7 +32,7 @@
   will-change: opacity;
 }
 
-/* The frame revealing the underlying content through the logo PNG luminance mask */
+/* The frame revealing the underlying content through the logo cutout mask */
 .logo-scroll-expand__frame {
   position: absolute;
   inset: 0;
@@ -38,19 +43,29 @@
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-position: center;
-  mask-image: url('/leads-mask.png');
-  -webkit-mask-image: url('/leads-mask.png');
+  mask-image: url('/leads-mask.svg');
+  -webkit-mask-image: url('/leads-mask.svg');
 }
 
-/* Strong solid white layer inside the mask cutout, fading out as the camera zooms in */
-.logo-scroll-expand__white-overlay {
+/* Transparent Logo Layer that fades in opacity as camera zooms in */
+.logo-scroll-expand__logo-layer {
   position: absolute;
-  inset: 0;
-  background-color: #FFFFFF;
-  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
   pointer-events: none;
-  opacity: 1;
-  will-change: opacity;
+  will-change: transform, opacity;
+  display: flex;
+  items-center: center;
+  justify-content: center;
+}
+
+.logo-scroll-expand__logo-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent !important;
 }
 
 .logo-scroll-expand__scroll-hint {

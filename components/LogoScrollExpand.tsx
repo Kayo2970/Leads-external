@@ -23,7 +23,7 @@ export interface LogoScrollExpandProps {
 
 export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   logoSrc = "/leads-logo.png",
-  maskSrc = "/leads-mask.png",
+  maskSrc = "/leads-mask.svg",
   scrollDistance = 1.0,
   holdDistance = 0.2,
   smoothing = 0.1,
@@ -36,7 +36,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   const frameRef = useRef<HTMLDivElement | null>(null);
   const hintRef = useRef<HTMLDivElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
-  const whiteOverlayRef = useRef<HTMLDivElement | null>(null);
+  const logoOverlayRef = useRef<HTMLDivElement | null>(null);
 
   const propsRef = useRef({
     scrollDistance,
@@ -56,53 +56,54 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     const frame = frameRef.current;
     const hint = hintRef.current;
     const bg = bgRef.current;
-    const whiteOverlay = whiteOverlayRef.current;
+    const logoOverlay = logoOverlayRef.current;
     if (!frame) return;
 
     const e = smoothstep(0, 1, p);
 
-    // Responsive initial mask size calculated dynamically per screen width & 4K displays
+    // Responsive initial mask size calculated dynamically per screen width
     const w = typeof window !== "undefined" ? window.innerWidth : 1440;
     const h = typeof window !== "undefined" ? window.innerHeight : 900;
     const maxDim = Math.max(w, h);
 
-    let startSize = 520;
+    let startSize = 480;
     if (w < 640) {
-      // Mobile: 85% of screen width (clamped for comfortable padding)
-      startSize = clamp(w * 0.85, 300, 360);
+      // Mobile: 78% of screen width, clamped between 260px and 330px
+      startSize = clamp(w * 0.78, 260, 330);
     } else if (w < 1024) {
-      // Tablet: 52% of screen width
-      startSize = clamp(w * 0.52, 420, 560);
+      // Tablet
+      startSize = clamp(w * 0.48, 380, 500);
     } else if (w < 1920) {
-      // Standard Desktop / Laptop: 36% of screen width
-      startSize = clamp(w * 0.36, 520, 700);
-    } else if (w < 2560) {
-      // 2K / Quad-HD: 30% of screen width
-      startSize = clamp(w * 0.30, 680, 850);
+      // Standard Desktop / Laptop
+      startSize = clamp(w * 0.32, 450, 600);
     } else {
-      // 4K & Ultrawide: 25% of screen width
-      startSize = clamp(w * 0.25, 850, 1200);
+      // 2K / 4K Ultrawide
+      startSize = clamp(w * 0.24, 650, 950);
     }
 
-    // Dynamic massive end size so the camera flies completely through the logo contours
-    const endSize = Math.max(26000, maxDim * 16);
-    // Smooth power curve for cinematic zoom acceleration
+    // Dynamic zoom end size
+    const endSize = Math.max(22000, maxDim * 14);
     const currentSize = startSize + (endSize - startSize) * Math.pow(e, 2.5);
 
-    // Fade backdrop smoothly as the user scrolls into the logo
+    // Fade backdrop as camera zooms in
     if (bg) {
-      const bgFade = smoothstep(0.45, 0.95, p);
+      const bgFade = smoothstep(0.4, 0.9, p);
       bg.style.opacity = `${1 - bgFade}`;
     }
 
-    // Solid white inside the logo mask starts strong and fades smoothly as camera zooms in
-    if (whiteOverlay) {
-      const whiteFade = smoothstep(0.0, 0.55, p);
-      whiteOverlay.style.opacity = `${1 - whiteFade}`;
+    // Real transparent logo overlay scales and reduces opacity smoothly
+    if (logoOverlay) {
+      const logoFade = smoothstep(0.0, 0.42, p);
+      const logoScale = 1 + e * 3.5;
+      logoOverlay.style.width = `${startSize}px`;
+      logoOverlay.style.height = `${startSize}px`;
+      logoOverlay.style.opacity = `${1 - logoFade}`;
+      logoOverlay.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
+      logoOverlay.style.display = logoFade >= 1 ? "none" : "flex";
     }
 
-    // Camera flythrough - mask expands continuously and only unlocks pointer events when fully open
-    if (e >= 0.99) {
+    // Camera flythrough - mask expands continuously and unlocks pointer events when open
+    if (e >= 0.98) {
       frame.style.maskImage = "none";
       frame.style.webkitMaskImage = "none";
       frame.style.pointerEvents = "auto";
@@ -210,8 +211,15 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
           {/* Masked Frame containing the hero content */}
           <div ref={frameRef} className="logo-scroll-expand__frame">
             {children}
-            {/* Solid white layer inside the mask cutout that fades out as camera zooms in */}
-            <div ref={whiteOverlayRef} className="logo-scroll-expand__white-overlay" />
+          </div>
+
+          {/* Transparent Logo Overlay that reduces opacity as you scroll */}
+          <div ref={logoOverlayRef} className="logo-scroll-expand__logo-layer">
+            <img
+              src={logoSrc}
+              alt="LEADS Next Gen Centre"
+              className="w-full h-full object-contain pointer-events-none"
+            />
           </div>
 
           {/* Scroll Down Indicator */}
