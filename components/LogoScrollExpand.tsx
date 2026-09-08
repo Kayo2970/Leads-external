@@ -13,7 +13,6 @@ const smoothstep = (edge0: number, edge1: number, x: number) => {
 
 export interface LogoScrollExpandProps {
   logoSrc?: string;
-  maskSrc?: string;
   scrollDistance?: number;
   holdDistance?: number;
   smoothing?: number;
@@ -22,8 +21,7 @@ export interface LogoScrollExpandProps {
 }
 
 export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
-  logoSrc = "/leads-logo.png",
-  maskSrc = "/leads-mask.svg",
+  logoSrc = "/leads-white-logo.png",
   scrollDistance = 1.0,
   holdDistance = 0.2,
   smoothing = 0.1,
@@ -34,83 +32,69 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   const trackRef = useRef<HTMLDivElement | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
   const frameRef = useRef<HTMLDivElement | null>(null);
+  const curtainRef = useRef<HTMLDivElement | null>(null);
+  const logoBoxRef = useRef<HTMLDivElement | null>(null);
   const hintRef = useRef<HTMLDivElement | null>(null);
-  const bgRef = useRef<HTMLDivElement | null>(null);
-  const whiteOverlayRef = useRef<HTMLDivElement | null>(null);
 
   const propsRef = useRef({
     scrollDistance,
     holdDistance,
     smoothing,
-    maskSrc,
+    logoSrc,
   });
 
   propsRef.current = {
     scrollDistance,
     holdDistance,
     smoothing,
-    maskSrc,
+    logoSrc,
   };
 
   const applyProgress = useCallback((p: number) => {
     const frame = frameRef.current;
+    const curtain = curtainRef.current;
+    const logoBox = logoBoxRef.current;
     const hint = hintRef.current;
-    const bg = bgRef.current;
-    const whiteOverlay = whiteOverlayRef.current;
-    if (!frame) return;
+    if (!frame || !curtain || !logoBox) return;
 
     const e = smoothstep(0, 1, p);
 
-    // Responsive initial mask size calculated dynamically per screen width
+    // Responsive initial logo size per screen width
     const w = typeof window !== "undefined" ? window.innerWidth : 1440;
-    const h = typeof window !== "undefined" ? window.innerHeight : 900;
-    const maxDim = Math.max(w, h);
-
-    let startSize = 480;
+    let startSize = 440;
     if (w < 640) {
-      // Mobile: 78% of screen width, clamped between 260px and 330px
-      startSize = clamp(w * 0.78, 260, 330);
+      // Mobile
+      startSize = clamp(w * 0.75, 250, 310);
     } else if (w < 1024) {
       // Tablet
-      startSize = clamp(w * 0.48, 380, 500);
+      startSize = clamp(w * 0.45, 360, 460);
     } else if (w < 1920) {
-      // Standard Desktop / Laptop
-      startSize = clamp(w * 0.32, 450, 600);
+      // Laptop / Desktop
+      startSize = clamp(w * 0.3, 420, 540);
     } else {
-      // 2K / 4K Ultrawide
-      startSize = clamp(w * 0.24, 650, 950);
+      // 4K
+      startSize = clamp(w * 0.22, 600, 850);
     }
 
-    // Dynamic zoom end size so camera zooms completely through the logo contours
-    const endSize = Math.max(22000, maxDim * 14);
-    const currentSize = startSize + (endSize - startSize) * Math.pow(e, 2.5);
+    logoBox.style.width = `${startSize}px`;
+    logoBox.style.height = `${startSize}px`;
 
-    // Fade backdrop as camera zooms in
-    if (bg) {
-      const bgFade = smoothstep(0.4, 0.9, p);
-      bg.style.opacity = `${1 - bgFade}`;
-    }
+    // Flythrough: white logo scales up toward the camera while curtain fades out smoothly
+    const logoScale = 1 + Math.pow(e, 1.8) * 4.5;
+    logoBox.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
 
-    // White fill style: solid white inside logo silhouette that smoothly reduces opacity as you scroll
-    if (whiteOverlay) {
-      const whiteFade = smoothstep(0.0, 0.45, p);
-      whiteOverlay.style.opacity = `${1 - whiteFade}`;
-      whiteOverlay.style.display = whiteFade >= 1 ? "none" : "block";
-    }
+    // Curtain opacity reduces smoothly as user scrolls, revealing the full hero section
+    const curtainFade = smoothstep(0.02, 0.6, p);
+    curtain.style.opacity = `${1 - curtainFade}`;
+    curtain.style.display = curtainFade >= 1 ? "none" : "flex";
 
-    // Camera flythrough - mask expands continuously and unlocks pointer events when open
-    if (e >= 0.95) {
-      frame.style.maskImage = "none";
-      frame.style.webkitMaskImage = "none";
-      frame.style.pointerEvents = "auto";
-    } else {
-      frame.style.maskImage = `url('${propsRef.current.maskSrc}')`;
-      frame.style.webkitMaskImage = `url('${propsRef.current.maskSrc}')`;
-      frame.style.maskSize = `${currentSize}px auto`;
-      frame.style.webkitMaskSize = `${currentSize}px auto`;
-      frame.style.pointerEvents = e > 0.65 ? "auto" : "none";
-    }
+    // Hero content subtly scales from 0.94 up to 1.0 and becomes fully interactive
+    const frameScale = 0.94 + e * 0.06;
+    frame.style.transform = `scale(${frameScale})`;
+    frame.style.opacity = `${smoothstep(0.0, 0.5, p)}`;
+    frame.style.pointerEvents = p > 0.4 ? "auto" : "none";
 
+    // Scroll hint pill fades out early
     if (hint) {
       const hintFade = smoothstep(0, 0.12, p);
       hint.style.opacity = `${1 - hintFade}`;
@@ -201,22 +185,28 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     <div ref={rootRef} className={`logo-scroll-expand ${className}`}>
       <div ref={trackRef} className="logo-scroll-expand__track">
         <div ref={stageRef} className="logo-scroll-expand__stage">
-          {/* Deep Backdrop behind the masked content */}
-          <div ref={bgRef} className="logo-scroll-expand__bg" />
-
-          {/* Masked Frame containing the hero content */}
+          {/* Hero Content Section - 100% visible and interactive behind the curtain */}
           <div ref={frameRef} className="logo-scroll-expand__frame">
             {children}
-            {/* White Fill Layer inside the logo cutout that reduces opacity as you scroll */}
-            <div ref={whiteOverlayRef} className="logo-scroll-expand__white-overlay" />
           </div>
 
-          {/* Scroll Down Indicator */}
-          <div ref={hintRef} className="logo-scroll-expand__scroll-hint">
-            <div className="logo-scroll-expand__scroll-pill animate-pulse-down">
-              <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
-              <span>Scroll to Explore</span>
-              <ChevronDown className="w-4 h-4 text-[#DE3F11] animate-bounce" />
+          {/* Opening Splash Curtain: Royal Purple Backdrop with Pure White Logo */}
+          <div ref={curtainRef} className="logo-scroll-expand__curtain">
+            <div ref={logoBoxRef} className="logo-scroll-expand__logo-box">
+              <img
+                src={propsRef.current.logoSrc}
+                alt="LEADS Next Gen Centre"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Scroll Down Indicator */}
+            <div ref={hintRef} className="logo-scroll-expand__scroll-hint">
+              <div className="logo-scroll-expand__scroll-pill animate-pulse-down">
+                <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
+                <span>Scroll to Explore</span>
+                <ChevronDown className="w-4 h-4 text-[#DE3F11] animate-bounce" />
+              </div>
             </div>
           </div>
         </div>
