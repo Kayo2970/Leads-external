@@ -122,7 +122,7 @@ const PARTNERS_DATA: PartnerItem[] = [
     category: "Industry & Corporate",
     name: "National HRD Network (NHRDN)",
     type: "Human Capital & Leadership Partner",
-    logo: "/images/partners/nhrd.svg",
+    logo: "/images/partners/nhrd.png",
     description:
       "National apex body of HR professionals advancing human resource development, executive talent management, and strategic leadership.",
     collaborationScope: "Leadership Capability Studies & Human Capital Conclaves",
@@ -133,7 +133,7 @@ const PARTNERS_DATA: PartnerItem[] = [
     category: "Academic & Institution",
     name: "Association of Indian Management Schools (AIMS)",
     type: "Academic Management Association",
-    logo: "/images/partners/aims.svg",
+    logo: "/images/partners/aims.png",
     description:
       "Network of management schools promoting excellence in business education, dean leadership, research publications, and academic quality.",
     collaborationScope: "FDP Pedagogy, Academic Deanship & B-School Research",
@@ -144,7 +144,7 @@ const PARTNERS_DATA: PartnerItem[] = [
     category: "Academic & Institution",
     name: "All India Management Association (AIMA)",
     type: "Apex National Management Body",
-    logo: "/images/partners/aima.png",
+    logo: "/images/partners/aima.webp",
     description:
       "Apex national body for management profession in India, collaborating on national management conventions, skill certifications, and leadership benchmarks.",
     collaborationScope: "National Management Conventions & Leadership Benchmarking",
