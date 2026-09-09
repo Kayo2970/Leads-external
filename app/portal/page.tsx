@@ -73,11 +73,15 @@ export default function PortalGatewayPage() {
 
     const isMobile = window.innerWidth < 768;
 
-    // Lock page scroll cleanly without layout jumping
+    // Prevent scrollbar layout shift when locking page scroll
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
-    // Create a dedicated full-screen overlay covering Nav, Footer, and viewport
+    // Dedicated full-screen overlay covering the viewport cleanly
     const overlay = document.createElement("div");
     overlay.className = "fixed inset-0 w-screen h-[100dvh] z-[9999] pointer-events-none overflow-hidden";
     overlay.style.position = "fixed";
@@ -99,10 +103,25 @@ export default function PortalGatewayPage() {
     } = Matter;
 
     const engine = Engine.create();
-    // Calibrated gravity for a dynamic 4-second float, spin & plunge off screen
     engine.gravity.y = isMobile ? 0.95 : 0.85;
 
-    const items = document.querySelectorAll<HTMLElement>(".portal-fall-item");
+    // Batch Step 1: Read all bounding rects first to prevent layout trashing
+    const rawItems = Array.from(document.querySelectorAll<HTMLElement>(".portal-fall-item"));
+    const measurements = rawItems
+      .map((elem) => {
+        const rect = elem.getBoundingClientRect();
+        return { elem, rect };
+      })
+      .filter(
+        ({ rect }) =>
+          rect.width > 0 &&
+          rect.height > 0 &&
+          rect.bottom >= -100 &&
+          rect.top <= window.innerHeight + 250
+      );
+
+    // Batch Step 2: Build physics bodies & DOM clones without layout jump
+    const fragment = document.createDocumentFragment();
     const physicsElements: {
       body: Matter.Body;
       elem: HTMLElement;
@@ -110,20 +129,11 @@ export default function PortalGatewayPage() {
       h: number;
     }[] = [];
 
-    // Clone each element into the overlay with randomized initial position displacement & impulse
-    items.forEach((elem, index) => {
-      const rect = elem.getBoundingClientRect();
-      if (rect.width === 0 || rect.height === 0) return;
-
-      // Only clone elements near or within viewport
-      if (rect.bottom < -150 || rect.top > window.innerHeight + 300) {
-        elem.style.visibility = "hidden";
-        return;
-      }
-
+    measurements.forEach(({ elem, rect }) => {
       const clone = elem.cloneNode(true) as HTMLElement;
       clone.classList.remove("portal-fall-item");
 
+      // Strip all CSS transitions/animations to prevent frame interpolation glitches
       clone.style.position = "absolute";
       clone.style.left = "0px";
       clone.style.top = "0px";
@@ -132,45 +142,46 @@ export default function PortalGatewayPage() {
       clone.style.margin = "0px";
       clone.style.boxSizing = "border-box";
       clone.style.transformOrigin = "center center";
+      clone.style.transition = "none";
+      clone.style.animation = "none";
       clone.style.willChange = "transform";
-      clone.style.boxShadow = "0 25px 50px rgba(0,0,0,0.7)";
+      clone.style.boxShadow = "0 20px 40px rgba(0,0,0,0.6)";
       clone.style.pointerEvents = "none";
 
-      overlay.appendChild(clone);
-      elem.style.visibility = "hidden";
+      fragment.appendChild(clone);
 
-      // Randomized initial position displacement (shatters the grid instantly)
-      const randOffsetX = (Math.random() - 0.5) * (isMobile ? 25 : 50);
-      const randOffsetY = (Math.random() - 0.5) * (isMobile ? 20 : 40);
-      const x = rect.left + rect.width / 2 + randOffsetX;
-      const y = rect.top + rect.height / 2 + randOffsetY;
+      // Exact pixel center (0px teleport offset)
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
 
-      // Highly varied tilt angle (-25deg to +25deg)
-      const initialAngle = (Math.random() - 0.5) * 0.85;
-
-      // Varied air drag so elements float or drop at different rates
-      const frictionAir = 0.004 + Math.random() * 0.009;
-
+      // Realistic physics body starting exactly at rest position
       const body = Bodies.rectangle(x, y, rect.width, rect.height, {
-        restitution: 0.3 + Math.random() * 0.4,
+        restitution: 0.25 + Math.random() * 0.25,
         friction: 0.05,
-        frictionAir,
-        density: 0.0015 + Math.random() * 0.002,
-        angle: initialAngle,
+        frictionAir: 0.005 + Math.random() * 0.008,
+        density: 0.002,
+        angle: (Math.random() - 0.5) * 0.1,
       });
 
-      // Wildly randomized explosive scatter impulse
-      const scatterAngle = (Math.random() - 0.5) * Math.PI * 0.9;
-      const scatterPower = Math.random() * (isMobile ? 12 : 22) + 6;
-      const scatterX = Math.sin(scatterAngle) * scatterPower + (Math.random() - 0.5) * (isMobile ? 12 : 24);
-      const scatterY = -Math.abs(Math.cos(scatterAngle)) * (isMobile ? 7 : 14) - (Math.random() * 5 + 2);
-      const spinVelocity = (Math.random() - 0.5) * (isMobile ? 0.32 : 0.55);
+      // Smooth outward scatter velocity
+      const scatterAngle = (Math.random() - 0.5) * Math.PI * 0.7;
+      const scatterPower = Math.random() * (isMobile ? 8 : 16) + 4;
+      const scatterX = Math.sin(scatterAngle) * scatterPower;
+      const scatterY = -Math.abs(Math.cos(scatterAngle)) * (isMobile ? 5 : 9) - 3;
+      const spinVelocity = (Math.random() - 0.5) * (isMobile ? 0.2 : 0.35);
 
       Body.setVelocity(body, { x: scatterX, y: scatterY });
       Body.setAngularVelocity(body, spinVelocity);
 
       World.add(engine.world, body);
       physicsElements.push({ body, elem: clone, w: rect.width, h: rect.height });
+    });
+
+    overlay.appendChild(fragment);
+
+    // Batch Step 3: Hide original elements seamlessly after clones are attached
+    measurements.forEach(({ elem }) => {
+      elem.style.visibility = "hidden";
     });
 
     const runner = Runner.create();
@@ -194,10 +205,10 @@ export default function PortalGatewayPage() {
       overlay,
     };
 
-    // Auto-redirect to ERP portal URL after 4 seconds
+    // Seamless navigation after 3.8 seconds
     setTimeout(() => {
       window.location.href = ERP_PORTAL_URL;
-    }, 4000);
+    }, 3800);
   };
 
   useEffect(() => {
@@ -213,6 +224,7 @@ export default function PortalGatewayPage() {
       }
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     };
   }, []);
 
@@ -240,9 +252,7 @@ export default function PortalGatewayPage() {
       ───────────────────────────────────────────────────────────── */}
       <div
         ref={containerRef}
-        className={`relative z-10 min-h-screen pt-28 sm:pt-32 pb-24 transition-opacity duration-500 ${
-          isFallen ? "opacity-0 pointer-events-none" : "opacity-100"
-        }`}
+        className="relative z-10 min-h-screen pt-28 sm:pt-32 pb-24"
       >
         {/* Ambient background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none" />
