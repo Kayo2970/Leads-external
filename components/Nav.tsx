@@ -96,78 +96,80 @@ export default function Nav() {
 
               {/* Programs Dropdown Box */}
               {programsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-84 3xl:w-96 rounded-2xl bg-white/98 backdrop-blur-xl p-3 shadow-2xl border border-purple-100 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                  <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
-                    LEADS Initiatives & Summits
-                  </div>
+                <div className="absolute top-full left-0 pt-1.5 z-50">
+                  <div className="w-88 3xl:w-96 rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
+                      LEADS Initiatives & Summits
+                    </div>
 
-                  <Link
-                    href="/programs"
-                    className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
-                      <FileText className="w-4 h-4 text-[#DE3F11]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
-                        Programs Overview
-                      </div>
-                      <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
-                        FDP, LDP, MDP, Vanguard, SIKHI (FICCI) & SDP
-                      </div>
-                    </div>
-                  </Link>
-
-                  <a
-                    href="https://www.bharatleadsummit.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
-                  >
-                    <div className="p-1.5 rounded-lg bg-purple-100 border border-purple-200 mt-0.5 shrink-0">
-                      <img
-                        src="/bls-logo.webp"
-                        alt="BLS Logo"
-                        className="w-5 h-5 object-contain rounded-full"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] flex items-center gap-1.5">
-                        <span>Bharath Leadership Summit</span>
-                        <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-1.5 py-0.5 rounded font-extrabold uppercase">
-                          Summit
-                        </span>
-                      </div>
-                      <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
-                        India's premier annual policy & leadership convention
-                      </div>
-                    </div>
-                  </a>
-
-                  <Link
-                    href="/programs"
-                    className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
-                      <FileText className="w-4 h-4 text-[#DE3F11]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
-                        Catalyst Leadership Talk Series
-                      </div>
-                      <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
-                        Monthly executive & non-technical masterclass series
-                      </div>
-                    </div>
-                  </Link>
-
-                  <div className="mt-2 pt-2 border-t border-purple-100 text-center">
                     <Link
                       href="/programs"
-                      className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
+                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
                     >
-                      View All Capability Programs →
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
+                        <FileText className="w-4 h-4 text-[#DE3F11]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
+                          Programs Overview
+                        </div>
+                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                          FDP, LDP, MDP, Vanguard, SIKHI (FICCI) & SDP
+                        </div>
+                      </div>
                     </Link>
+
+                    <a
+                      href="https://www.bharatleadsummit.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                    >
+                      <div className="p-1.5 rounded-lg bg-purple-100 border border-purple-200 mt-0.5 shrink-0">
+                        <img
+                          src="/bls-logo.webp"
+                          alt="BLS Logo"
+                          className="w-5 h-5 object-contain rounded-full"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] flex items-center gap-1.5">
+                          <span>Bharath Leadership Summit</span>
+                          <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-1.5 py-0.5 rounded font-extrabold uppercase">
+                            Summit
+                          </span>
+                        </div>
+                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                          India's premier annual policy & leadership convention
+                        </div>
+                      </div>
+                    </a>
+
+                    <Link
+                      href="/programs"
+                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                    >
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
+                        <FileText className="w-4 h-4 text-[#DE3F11]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
+                          Catalyst Leadership Talk Series
+                        </div>
+                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                          Monthly executive & non-technical masterclass series
+                        </div>
+                      </div>
+                    </Link>
+
+                    <div className="mt-2 pt-2 border-t border-purple-100 text-center">
+                      <Link
+                        href="/programs"
+                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
+                      >
+                        View All Capability Programs →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -198,36 +200,38 @@ export default function Nav() {
 
               {/* Dropdown Menu Box */}
               {reportsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 3xl:w-96 rounded-2xl bg-white/98 backdrop-blur-xl p-3 shadow-2xl border border-purple-100 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-                  <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
-                    Official Impact Publication
-                  </div>
-                  {REPORTS_DATA.map((report) => (
-                    <Link
-                      key={report.id}
-                      href="/reports"
-                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
-                    >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
-                        <FileText className="w-4 h-4 text-[#DE3F11]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] truncate">
-                          {report.title}
+                <div className="absolute top-full left-0 pt-1.5 z-50">
+                  <div className="w-84 3xl:w-96 rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
+                      Official Impact Publication
+                    </div>
+                    {REPORTS_DATA.map((report) => (
+                      <Link
+                        key={report.id}
+                        href="/reports"
+                        className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                      >
+                        <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
+                          <FileText className="w-4 h-4 text-[#DE3F11]" />
                         </div>
-                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
-                          {report.year} · {report.fileSize} PDF · Read Online
+                        <div className="flex-1 min-w-0">
+                          <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] truncate">
+                            {report.title}
+                          </div>
+                          <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                            {report.year} · {report.fileSize} PDF · Read Online
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  ))}
-                  <div className="mt-2 pt-2 border-t border-purple-100 text-center">
-                    <Link
-                      href="/reports"
-                      className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
-                    >
-                      Open Interactive Reader →
-                    </Link>
+                      </Link>
+                    ))}
+                    <div className="mt-2 pt-2 border-t border-purple-100 text-center">
+                      <Link
+                        href="/reports"
+                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
+                      >
+                        Open Interactive Reader →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -268,7 +272,7 @@ export default function Nav() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-purple-100 mt-3 px-4 pt-4 pb-6 space-y-2.5 text-[#1E0C3D] shadow-2xl animate-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden bg-white/95 backdrop-blur-2xl border-t border-purple-200/90 mt-3 px-4 pt-4 pb-6 space-y-2.5 text-[#1E0C3D] shadow-2xl animate-in slide-in-from-top-4 duration-300">
           <Link href="/" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/")}>
             Home
           </Link>
