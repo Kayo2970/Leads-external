@@ -28,7 +28,7 @@ export default function OrganogramChart({
           LEADS Organogram & Operational Structure
         </h3>
         <p className="text-xs sm:text-sm 2xl:text-base text-[#E2D9F3] mt-2 max-w-2xl mx-auto leading-relaxed">
-          Integrated hierarchy linking University Leadership, Centre Faculty Heads, Governing Advisors, and Student Executive Wings. Click any tier to filter the directory below.
+          Integrated hierarchy linking University Leadership, Centre Faculty Heads, and Student Executive Wings. Click any tier to filter the directory below.
         </p>
       </div>
 
@@ -201,43 +201,10 @@ export default function OrganogramChart({
           <div className="w-0.5 h-6 bg-gradient-to-b from-[#9C1256] to-[#DE3F11]" />
         </div>
 
-        {/* TIER 3: GOVERNING & ADVISORY BOARD (Right After Faculty Leadership) */}
+        {/* TIER 3: STUDENT EXECUTIVE WINGS */}
         <div>
           <div className="text-[11px] 2xl:text-xs uppercase font-bold tracking-widest text-[#DE3F11] text-center mb-3">
-            Tier 03 · Governing & Strategic Advisory Board
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <button
-              type="button"
-              onClick={() => onSelectRoleGroup?.("Governing & Advisory")}
-              className={`w-full p-5 rounded-2xl 3xl:rounded-3xl text-center transition-all duration-300 border cursor-pointer liquid-glass-card group ${
-                activeRoleGroup === "Governing & Advisory"
-                  ? "bg-gradient-to-r from-[#9C1256]/60 to-[#DE3F11]/60 border-white scale-[1.02] shadow-2xl"
-                  : "border-white/15 hover:border-[#DE3F11]/50"
-              }`}
-            >
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#DE3F11] shrink-0">
-                  <Shield className="w-5 h-5" />
-                </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-sm sm:text-base font-bold text-white">Governing & Advisory Board</div>
-                  <div className="text-xs text-[#E2D9F3]">Eminent Corporate Leaders, Public Policy Dignitaries & Academic Counselors</div>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-
-        {/* Connector Line */}
-        <div className="flex justify-center">
-          <div className="w-0.5 h-6 bg-gradient-to-b from-[#DE3F11] to-[#9C1256]" />
-        </div>
-
-        {/* TIER 4: STUDENT EXECUTIVE WINGS */}
-        <div>
-          <div className="text-[11px] 2xl:text-xs uppercase font-bold tracking-widest text-[#DE3F11] text-center mb-3">
-            Tier 04 · Student Executive Wings & Operations
+            Tier 03 · Student Executive Wings & Operations
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <button
