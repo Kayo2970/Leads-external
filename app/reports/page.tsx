@@ -33,38 +33,38 @@ export default function ReportsPage() {
 
       {/* SECTION 2 [LIGHT]: FEATURED REPORT & LIVE ONLINE PDF READER */}
       <section className="py-20 3xl:py-32 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
-        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 flex flex-col items-center">
           
-          <div className="text-center max-w-2xl 3xl:max-w-4xl mx-auto mb-14 3xl:mb-20">
+          <div className="text-center max-w-3xl 3xl:max-w-4xl mx-auto mb-14 3xl:mb-20">
             <div className="text-xs font-bold uppercase tracking-wider text-[#9C1256] mb-2 flex items-center justify-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
               <span>Official Annual Release</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E0C3D]">
-              Verified Annual Report
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#1E0C3D]">
+              Verified Annual Impact Report
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
-              Browse the complete 28-page report directly online below, or download the high-resolution PDF.
+            <p className="text-sm sm:text-base 3xl:text-lg text-slate-600 mt-3 max-w-2xl mx-auto leading-relaxed">
+              Browse the complete 28-page report directly in the interactive central document reader below, or download the official high-resolution PDF.
             </p>
           </div>
 
-          {/* 2-Column Layout: Report Details + Embedded Live PDF Reader */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Centered 2-Column Layout: Report Details + Embedded Live PDF Reader */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 3xl:gap-12 items-stretch max-w-6xl 2xl:max-w-7xl mx-auto w-full">
             
             {/* Left Column: Report Card & Highlights */}
-            <div className="lg:col-span-5 h-full">
+            <div className="lg:col-span-5 flex flex-col h-full">
               <ReportCard report={report} lightMode={true} />
             </div>
 
-            {/* Right Column: Live Embedded PDF Viewer */}
-            <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl border border-purple-200 shadow-xl overflow-hidden flex flex-col">
+            {/* Right Column: Expanded Centered Live PDF Viewer */}
+            <div className="lg:col-span-7 flex flex-col h-full">
+              <div className="bg-white rounded-3xl border border-purple-200 shadow-2xl overflow-hidden flex flex-col h-full">
                 {/* PDF Viewer Header Toolbar */}
-                <div className="px-5 py-3.5 bg-[#2A1454] text-white flex items-center justify-between">
+                <div className="px-5 py-4 bg-[#2A1454] text-white flex items-center justify-between shadow-md">
                   <div className="flex items-center space-x-2.5 min-w-0">
                     <BookOpen className="w-4 h-4 text-[#DE3F11] flex-shrink-0" />
                     <span className="text-xs sm:text-sm font-bold truncate">
-                      Live Document Preview
+                      Live Document Reader
                     </span>
                     <span className="hidden sm:inline-block text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-white/10 text-[#E2D9F3]">
                       Interactive
@@ -78,7 +78,7 @@ export default function ReportsPage() {
                       className="inline-flex items-center space-x-1 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"
                       title="Open Fullscreen Viewer"
                     >
-                      <Eye className="w-3.5 h-3.5" />
+                      <Eye className="w-3.5 h-3.5 text-[#DE3F11]" />
                       <span className="hidden sm:inline">Fullscreen</span>
                     </button>
 
@@ -104,8 +104,8 @@ export default function ReportsPage() {
                   </div>
                 </div>
 
-                {/* Embedded PDF iframe */}
-                <div className="w-full h-[580px] bg-[#120726] relative">
+                {/* Embedded PDF iframe - Expanded Height */}
+                <div className="w-full h-[650px] sm:h-[720px] 3xl:h-[800px] bg-[#120726] relative flex-1">
                   <iframe
                     src={`${report.fileUrl}#toolbar=1&navpanes=0`}
                     title={report.title}
@@ -114,10 +114,10 @@ export default function ReportsPage() {
                 </div>
 
                 {/* PDF Viewer Footer bar */}
-                <div className="px-5 py-3 bg-purple-50/80 border-t border-purple-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-2">
+                <div className="px-5 py-3.5 bg-purple-50/80 border-t border-purple-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-2">
                   <div className="flex items-center gap-1.5">
                     <CheckCircle className="w-4 h-4 text-[#DE3F11]" />
-                    <span>Viewing page 1 of {report.pages} · Verified Public Release</span>
+                    <span>Viewing page 1 of {report.pages} · Official Public Release</span>
                   </div>
                   <button
                     onClick={() => setIsViewerModalOpen(true)}
@@ -132,12 +132,12 @@ export default function ReportsPage() {
           </div>
 
           {/* Section 3: Verification Guarantee & Institutional Transparency */}
-          <div className="mt-16 text-center bg-white p-8 rounded-3xl max-w-3xl mx-auto border border-purple-200 shadow-md">
-            <div className="flex items-center justify-center space-x-2 text-xs font-bold text-[#9C1256] mb-2">
+          <div className="mt-16 text-center bg-white p-8 sm:p-10 rounded-3xl max-w-3xl mx-auto border border-purple-200 shadow-lg">
+            <div className="flex items-center justify-center space-x-2 text-xs sm:text-sm font-bold text-[#9C1256] mb-2">
               <ShieldCheck className="w-4 h-4 text-[#DE3F11]" />
               <span>Open Access Academic & Institutional Policy</span>
             </div>
-            <p className="text-xs text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
               All reports published by LEADS Next Gen Centre are verified and released under Creative Commons for public policy, academic citation, and research use in collaboration with national and international partner bodies.
             </p>
           </div>

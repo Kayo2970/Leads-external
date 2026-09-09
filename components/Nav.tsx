@@ -15,6 +15,7 @@ export default function Nav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [reportsDropdownOpen, setReportsDropdownOpen] = useState(false);
+  const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function Nav() {
   const isActive = (path: string) => pathname === path;
 
   const navLinkClass = (path: string) =>
-    `px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
+    `px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors inline-flex items-center space-x-1 ${
       isActive(path)
         ? "bg-gradient-to-r from-[#9C1256]/15 to-[#DE3F11]/15 text-[#9C1256] font-bold border border-[#DE3F11]/30 shadow-sm"
         : "text-[#1E0C3D]/90 hover:text-[#9C1256] hover:bg-purple-50/80"
@@ -74,9 +75,99 @@ export default function Nav() {
               Events
             </Link>
 
-            <Link href="/programs" className={navLinkClass("/programs")}>
-              Programs
-            </Link>
+            {/* Programs Dropdown Menu */}
+            <div
+              className="relative"
+              onMouseEnter={() => setProgramsDropdownOpen(true)}
+              onMouseLeave={() => setProgramsDropdownOpen(false)}
+            >
+              <Link href="/programs" className={navLinkClass("/programs")}>
+                <span>Programs</span>
+                <ChevronDown
+                  className={`w-4 h-4 3xl:w-5 3xl:h-5 transition-transform duration-200 ${
+                    programsDropdownOpen ? "rotate-180 text-[#DE3F11]" : ""
+                  }`}
+                />
+              </Link>
+
+              {/* Programs Dropdown Box */}
+              {programsDropdownOpen && (
+                <div className="absolute top-full left-0 mt-1 w-84 3xl:w-96 rounded-2xl bg-white/98 backdrop-blur-xl p-3 shadow-2xl border border-purple-100 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                  <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
+                    LEADS Initiatives & Summits
+                  </div>
+
+                  <Link
+                    href="/programs"
+                    className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
+                      <FileText className="w-4 h-4 text-[#DE3F11]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
+                        Programs Overview
+                      </div>
+                      <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                        FDP, LDP, MDP, Startup SDP & Fellowships
+                      </div>
+                    </div>
+                  </Link>
+
+                  <a
+                    href="https://www.bharatleadsummit.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
+                  >
+                    <div className="p-1.5 rounded-lg bg-purple-100 border border-purple-200 mt-0.5 shrink-0">
+                      <img
+                        src="/bls-logo.webp"
+                        alt="BLS Logo"
+                        className="w-5 h-5 object-contain rounded-full"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] flex items-center gap-1.5">
+                        <span>Bharath Leadership Summit</span>
+                        <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-1.5 py-0.5 rounded font-extrabold uppercase">
+                          Summit
+                        </span>
+                      </div>
+                      <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                        India's premier annual policy & leadership convention
+                      </div>
+                    </div>
+                  </a>
+
+                  <Link
+                    href="/programs"
+                    className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50/80 transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
+                      <FileText className="w-4 h-4 text-[#DE3F11]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
+                        Catalyst Leadership Talk Series
+                      </div>
+                      <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                        Monthly executive & non-technical masterclass series
+                      </div>
+                    </div>
+                  </Link>
+
+                  <div className="mt-2 pt-2 border-t border-purple-100 text-center">
+                    <Link
+                      href="/programs"
+                      className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
+                    >
+                      View All Capability Programs →
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link href="/partners" className={navLinkClass("/partners")}>
               Our Partners
@@ -138,22 +229,6 @@ export default function Nav() {
               )}
             </div>
 
-            {/* External Nav Link: BLS */}
-            <a
-              href="https://www.bharatleadsummit.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 3xl:px-4 3xl:py-2 rounded-lg text-sm 3xl:text-lg font-medium text-[#1E0C3D]/90 hover:text-[#9C1256] hover:bg-purple-50/80 transition-colors group"
-              title="Visit Bharath Leadership Summit website"
-            >
-              <img
-                src="/bls-logo.webp"
-                alt="BLS Logo"
-                className="w-5 h-5 3xl:w-6 3xl:h-6 object-contain rounded-full bg-purple-100 p-0.5 group-hover:scale-110 transition-transform"
-              />
-              <span>BLS</span>
-            </a>
-
             {/* ERP Subsystem Portal Link */}
             <Link
               href="/portal"
@@ -196,9 +271,24 @@ export default function Nav() {
           <Link href="/events" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/events")}>
             Events
           </Link>
-          <Link href="/programs" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/programs")}>
-            Programs
-          </Link>
+          <div>
+            <Link href="/programs" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/programs")}>
+              Programs Overview
+            </Link>
+            <a
+              href="https://www.bharatleadsummit.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2.5 px-6 py-2 rounded-xl text-sm font-medium text-[#1E0C3D] hover:bg-purple-50/80 transition-colors"
+            >
+              <img
+                src="/bls-logo.webp"
+                alt="BLS Logo"
+                className="w-4 h-4 object-contain rounded-full bg-purple-200 p-0.5"
+              />
+              <span>Bharath Leadership Summit</span>
+            </a>
+          </div>
           <Link href="/partners" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/partners")}>
             Our Partners
           </Link>
@@ -210,20 +300,6 @@ export default function Nav() {
           </Link>
 
           <div className="pt-2 border-t border-purple-100 space-y-2">
-            <a
-              href="https://www.bharatleadsummit.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2.5 px-4 py-2.5 rounded-xl text-sm font-medium text-[#1E0C3D] bg-purple-50/80 hover:bg-purple-100/80 transition-colors"
-            >
-              <img
-                src="/bls-logo.webp"
-                alt="BLS Logo"
-                className="w-5 h-5 object-contain rounded-full bg-purple-200 p-0.5"
-              />
-              <span>Bharath Leadership Summit (BLS)</span>
-            </a>
-
             <Link
               href="/portal"
               onClick={() => setMobileMenuOpen(false)}
