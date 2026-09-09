@@ -3,7 +3,7 @@
 import React from "react";
 import BorderGlow from "@/components/BorderGlow";
 import { LEADSEvent } from "@/lib/events-data";
-import { Calendar, MapPin, Users, Crown, Zap, Shield, Rocket, Sparkles, UserCheck, Star, ArrowUpRight } from "lucide-react";
+import { Calendar, MapPin, Users, Crown, Zap, Shield, Rocket, Sparkles, UserCheck, Star, ArrowUpRight, Compass, GraduationCap } from "lucide-react";
 
 interface EventCardProps {
   event: LEADSEvent;
@@ -26,6 +26,12 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
         return <Sparkles className="w-5 h-5 text-[#DE3F11]" />;
       case "star":
         return <Star className="w-5 h-5 text-[#DE3F11]" />;
+      case "compass":
+        return <Compass className="w-5 h-5 text-[#DE3F11]" />;
+      case "users":
+        return <Users className="w-5 h-5 text-[#DE3F11]" />;
+      case "graduation-cap":
+        return <GraduationCap className="w-5 h-5 text-[#DE3F11]" />;
       default:
         return <UserCheck className="w-5 h-5 text-[#DE3F11]" />;
     }
