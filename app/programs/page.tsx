@@ -236,132 +236,134 @@ export default function ProgramsPage() {
       : PROGRAMS_DATA.filter((p) => p.category === activeTab);
 
   return (
-    <div className="pt-28 pb-24 min-h-screen bg-[#1E0C3D] text-white">
-      {/* Header Banner */}
-      <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 text-center mb-16 3xl:mb-24">
-        <div className="inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-1.5 3xl:px-6 3xl:py-3 rounded-full liquid-glass text-white border border-[#DE3F11]/40 text-xs 3xl:text-lg font-semibold mb-4 3xl:mb-8 shadow-sm">
-          <GraduationCap className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
-          <span>LEADS National Leadership & Capability Programs</span>
-        </div>
-        <h1 className="text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-extrabold text-white tracking-tight">
-          Executive & Academic <span className="gold-gradient-text">Development Programs</span>
-        </h1>
-        <p className="mt-4 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
-          From Faculty Development (FDP), Management Development (MDP & MDB), and Vanguard Executive Track to Leadership Development (LDP), Startup SDP & SIKHI Initiative — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
-        </p>
-      </div>
+    <div className="min-h-screen bg-[#FDFBFF]">
+      {/* SECTION 1 [PURPLE 30%]: HERO HEADER */}
+      <section className="pt-32 pb-20 bg-[#361C6A] text-white relative overflow-hidden">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Category Filter Pills */}
-      <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 mb-12">
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`px-5 py-2.5 3xl:px-8 3xl:py-4 rounded-xl 3xl:rounded-2xl font-bold text-xs sm:text-sm 3xl:text-xl transition-all duration-300 cursor-pointer ${
-                activeTab === cat
-                  ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg scale-105"
-                  : "glass-panel text-white/80 hover:text-white hover:bg-white/10"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 text-center relative z-10">
+          <div className="inline-flex items-center space-x-2 3xl:space-x-3 px-4 py-1.5 3xl:px-6 3xl:py-3 rounded-full bg-white/10 text-white border border-white/20 text-xs 3xl:text-lg font-semibold mb-6 3xl:mb-10 shadow-sm">
+            <GraduationCap className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
+            <span>LEADS National Leadership & Capability Programs</span>
+          </div>
+          <h1 className="text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-extrabold text-white tracking-tight max-w-5xl mx-auto leading-tight">
+            Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Development Programs</span>
+          </h1>
+          <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
+            From Faculty Development (FDP), Management Development (MDP & MDB), and Vanguard Executive Track to Leadership Development (LDP), Startup SDP & SIKHI Initiative — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
+          </p>
 
-      {/* Programs Grid */}
-      <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:gap-12">
-          {filteredPrograms.map((program) => (
-            <div
-              key={program.id}
-              className="liquid-glass rounded-3xl p-7 sm:p-9 3xl:p-12 border border-white/15 shadow-2xl flex flex-col justify-between group hover:border-[#DE3F11]/50 transition-all duration-300"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-[#241147] border border-[#DE3F11]/40 flex items-center justify-center shadow-md">
-                      {program.icon}
+          {/* Category Filter Pills in Hero */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveTab(cat)}
+                className={`px-5 py-2.5 3xl:px-8 3xl:py-4 rounded-xl 3xl:rounded-2xl font-bold text-xs sm:text-sm 3xl:text-xl transition-all duration-300 cursor-pointer ${
+                  activeTab === cat
+                    ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg scale-105"
+                    : "bg-white/10 hover:bg-white/20 text-white border border-white/20"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2 [WHITE 70%]: PROGRAMS GRID */}
+      <section className="py-20 3xl:py-32 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:gap-12">
+            {filteredPrograms.map((program) => (
+              <div
+                key={program.id}
+                className="bg-white rounded-3xl p-7 sm:p-9 3xl:p-12 border border-purple-200 shadow-xl flex flex-col justify-between group hover:border-[#DE3F11]/50 hover:shadow-2xl transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center shadow-sm">
+                        {program.icon}
+                      </div>
+                      <div>
+                        <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256]">
+                          {program.badge}
+                        </span>
+                        <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-extrabold text-[#1E0C3D] leading-snug group-hover:text-[#DE3F11] transition-colors">
+                          {program.title}
+                        </h3>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11]">
-                        {program.badge}
-                      </span>
-                      <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-extrabold text-white leading-snug group-hover:text-[#DE3F11] transition-colors">
-                        {program.title}
-                      </h3>
+                  </div>
+
+                  <p className="text-xs sm:text-sm 3xl:text-base font-semibold text-[#DE3F11] mb-4">
+                    {program.subtitle}
+                  </p>
+
+                  <p className="text-xs sm:text-sm 3xl:text-base text-slate-600 leading-relaxed mb-6">
+                    {program.description}
+                  </p>
+
+                  {/* Target Audience Badge */}
+                  <div className="mb-6 p-3 rounded-xl bg-purple-50/80 border border-purple-100 flex items-center space-x-2 text-xs sm:text-sm 3xl:text-base text-[#1E0C3D]">
+                    <Users className="w-4 h-4 text-[#DE3F11] shrink-0" />
+                    <span>
+                      <strong className="text-[#1E0C3D] font-bold">Target Audience:</strong> {program.audience}
+                    </span>
+                  </div>
+
+                  {/* Program Highlights */}
+                  <div className="space-y-2.5 mb-8">
+                    <div className="text-xs uppercase font-bold tracking-wider text-[#9C1256]">
+                      Key Highlights
                     </div>
+                    {program.highlights.map((h, i) => (
+                      <div key={i} className="flex items-start space-x-2 text-xs sm:text-sm 3xl:text-base text-slate-700">
+                        <CheckCircle className="w-4 h-4 text-[#DE3F11] shrink-0 mt-0.5" />
+                        <span>{h}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm 3xl:text-base font-medium text-[#E2D9F3]/90 mb-4">
-                  {program.subtitle}
-                </p>
-
-                <p className="text-xs sm:text-sm 3xl:text-base text-slate-300 leading-relaxed mb-6">
-                  {program.description}
-                </p>
-
-                {/* Target Audience Badge */}
-                <div className="mb-6 p-3 rounded-xl bg-white/5 border border-white/10 flex items-center space-x-2 text-xs sm:text-sm 3xl:text-base text-[#E2D9F3]">
-                  <Users className="w-4 h-4 text-[#DE3F11] shrink-0" />
-                  <span>
-                    <strong className="text-white font-semibold">Target Audience:</strong> {program.audience}
+                {/* Card Footer Action */}
+                <div className="pt-6 border-t border-purple-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <span className="text-xs 3xl:text-base font-semibold text-slate-500">
+                    🗓️ {program.duration}
                   </span>
-                </div>
 
-                {/* Program Highlights */}
-                <div className="space-y-2.5 mb-8">
-                  <div className="text-xs uppercase font-bold tracking-wider text-slate-300">
-                    Key Highlights
-                  </div>
-                  {program.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start space-x-2 text-xs sm:text-sm 3xl:text-base text-slate-200">
-                      <CheckCircle className="w-4 h-4 text-[#DE3F11] shrink-0 mt-0.5" />
-                      <span>{h}</span>
-                    </div>
-                  ))}
+                  <Link
+                    href="/contact"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm 3xl:text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2 group/btn"
+                  >
+                    <span>Enquire / Register</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
+            ))}
+          </div>
 
-              {/* Card Footer Action */}
-              <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <span className="text-xs 3xl:text-base font-semibold text-slate-400">
-                  🗓️ {program.duration}
-                </span>
-
+          {/* CTA Bottom Banner */}
+          <div className="mt-20 rounded-3xl p-8 sm:p-12 3xl:p-16 bg-[#361C6A] text-white border border-purple-300 shadow-2xl text-center relative overflow-hidden">
+            <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+              <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
+                Partner with LEADS for Institutional & Corporate Programs
+              </h2>
+              <p className="text-sm sm:text-lg text-[#E2D9F3] leading-relaxed">
+                We customize Faculty Development (FDP), Executive Leadership (LDP), MDP/MDB, Vanguard, and Startup SDP programs for universities, government departments, and corporate enterprises across India.
+              </p>
+              <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm 3xl:text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2 group/btn"
+                  className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:scale-105 transition-all"
                 >
-                  <span>Enquire / Register</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  <span>Request Custom Program Brochure</span>
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* CTA Bottom Banner */}
-      <section className="mt-24 3xl:mt-36 max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="liquid-glass rounded-3xl p-8 sm:p-12 3xl:p-16 border border-[#DE3F11]/40 text-center relative overflow-hidden">
-          <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-              Partner with LEADS for Institutional & Corporate Programs
-            </h2>
-            <p className="text-sm sm:text-lg text-[#E2D9F3] leading-relaxed">
-              We customize Faculty Development (FDP), Executive Leadership (LDP), MDP, and Startup SDP programs for universities, government departments, and corporate enterprises across India.
-            </p>
-            <div className="pt-2">
-              <Link
-                href="/contact"
-                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:scale-105 transition-all"
-              >
-                <span>Request Custom Program Brochure</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
             </div>
           </div>
         </div>
