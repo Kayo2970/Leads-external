@@ -103,7 +103,7 @@ export default function PortalGatewayPage() {
     } = Matter;
 
     const engine = Engine.create();
-    engine.gravity.y = isMobile ? 0.95 : 0.85;
+    engine.gravity.y = isMobile ? 1.8 : 1.6;
 
     // Batch Step 1: Read all bounding rects first to prevent layout trashing
     const rawItems = Array.from(document.querySelectorAll<HTMLElement>(".portal-fall-item"));
@@ -205,10 +205,10 @@ export default function PortalGatewayPage() {
       overlay,
     };
 
-    // Seamless navigation after 3.8 seconds
+    // Fast, seamless navigation after 2.0 seconds
     setTimeout(() => {
       window.location.href = ERP_PORTAL_URL;
-    }, 3800);
+    }, 2000);
   };
 
   useEffect(() => {
