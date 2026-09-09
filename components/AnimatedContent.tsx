@@ -21,16 +21,16 @@ export interface AnimatedContentProps {
 
 export default function AnimatedContent({
   children,
-  distance = 100,
-  direction = "vertical",
+  distance = 130,
+  direction = "horizontal",
   reverse = false,
   duration = 0.6,
-  ease = "power2.out",
-  initialOpacity = 0,
+  ease = "bounce.out",
+  initialOpacity = 0.2,
   animateOpacity = true,
-  scale = 1,
-  threshold = 0.1,
-  delay = 0,
+  scale = 0.2,
+  threshold = 0.3,
+  delay = 0.3,
   className = "",
   onAnimationComplete,
 }: AnimatedContentProps) {
