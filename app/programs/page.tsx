@@ -150,6 +150,62 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: true,
   },
   {
+    id: "vanguard-program",
+    category: "Leadership",
+    title: "Vanguard Executive Leadership Track",
+    subtitle: "Elite Strategic Governance & C-Suite Excellence Initiative",
+    badge: "Executive Vanguard Track",
+    icon: <Award className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Board Members, C-Suite Executives, & Senior Institutional Fellows",
+    description:
+      "An elite executive vanguard track empowering C-suite executives, directors, and institutional stalwarts to master board governance, strategic realignment, high-stakes negotiation, and disruptive venture stewardship.",
+    highlights: [
+      "Boardroom dynamics & strategic governance masterclasses",
+      "Enterprise resilience, ethics, & crisis scenario navigation",
+      "Peer-to-peer executive roundtables & global benchmarking",
+      "Exclusive access to LEADS senior advisory & policy networks",
+    ],
+    duration: "6-Month Modular Executive Track",
+    featured: true,
+  },
+  {
+    id: "mdb-program",
+    category: "Faculty & MDP",
+    title: "Management Development Board (MDB)",
+    subtitle: "Executive Management & Organizational Board Excellence",
+    badge: "Corporate & MDB Governance",
+    icon: <Building2 className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Corporate Directors, Department Heads, & Business Unit Leaders",
+    description:
+      "A specialized advisory board and capability development module delivering corporate leadership discipline, operational agility, resource optimization, and non-technical financial stewardship for enterprise department heads.",
+    highlights: [
+      "Executive decision-making frameworks & fiscal discipline",
+      "Cross-departmental alignment & high-performance culture",
+      "In-depth enterprise case studies & operational audits",
+      "Recognized MDB Executive Management Certification",
+    ],
+    duration: "Modular Executive Workshops",
+  },
+  {
+    id: "sikhi-program",
+    category: "Startup & Student",
+    title: "SIKHI / SHIKSHA Youth Leadership Initiative",
+    subtitle: "Values-Based Leadership, Ethics & Non-Technical Capability",
+    badge: "Ethical & Youth Capability",
+    icon: <Compass className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Academic Scholars, Student Leaders, & Emerging Innovators",
+    description:
+      "A dedicated capability framework fostering values-based leadership, emotional intelligence, ethical decision-making, and holistic communication skills for university scholars and youth leaders across India.",
+    highlights: [
+      "Values-driven leadership & ethical governance workshops",
+      "Emotional intelligence, conflict resolution & team synergy",
+      "Mentorship connecting student scholars with industry mentors",
+      "National Youth Leadership certification & project showcase",
+    ],
+    duration: "4-Week Capacity Accelerator",
+    featured: true,
+  },
+  {
     id: "research-fellowships",
     category: "Faculty & MDP",
     title: "Research & Policy Fellowships",
@@ -191,7 +247,7 @@ export default function ProgramsPage() {
           Executive & Academic <span className="gold-gradient-text">Development Programs</span>
         </h1>
         <p className="mt-4 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
-          From Faculty Development (FDP) and Management Development (MDP) to Leadership Development (LDP) and Startup SDP — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
+          From Faculty Development (FDP), Management Development (MDP & MDB), and Vanguard Executive Track to Leadership Development (LDP), Startup SDP & SIKHI Initiative — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
         </p>
       </div>
 

@@ -387,9 +387,9 @@ export const EVENTS_DATA: LEADSEvent[] = [
     ],
   },
   {
-    id: "annual-day",
-    name: "LEADS Annual Day",
-    seriesName: "LEADS Annual Day",
+    id: "annual-impact",
+    name: "LEADS Annual Impact",
+    seriesName: "LEADS Annual Impact",
     category: "Conclave",
     tagline: "Honouring Excellence, Inspiring Legacy & Celebrating the LEADS Spirit",
     date: "Annual Flagship · April 2026",
@@ -406,7 +406,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     ],
     featured: true,
     description:
-      "The LEADS Annual Day is the Centre's flagship year-end celebration — a prestigious gala evening that honours the outstanding contributions of students, faculty mentors, and industry partners across the academic year. The event culminates with the formal induction of the incoming LEADS Executive Student Council, the public release of the Year-in-Review Impact Report, and a cultural showcase that reflects the values and vision of LEADS Next Gen Centre.",
+      "The LEADS Annual Impact is the Centre's flagship year-end celebration — a prestigious gala evening that honours the outstanding contributions of students, faculty mentors, and industry partners across the academic year. The event culminates with the formal induction of the incoming LEADS Executive Student Council, the public release of the Year-in-Review Impact Report, and a cultural showcase that reflects the values and vision of LEADS Next Gen Centre.",
     seriesHighlights: [
       "LEADS Excellence Awards honouring top performers across all cohorts",
       "Annual Impact Report public release and year-in-review showcase",
@@ -428,14 +428,14 @@ export const EVENTS_DATA: LEADSEvent[] = [
     ],
     editions: [
       {
-        id: "annual-day-2025",
-        title: "LEADS Annual Day 2025: A Year of Impact",
+        id: "annual-impact-2025",
+        title: "LEADS Annual Impact 2025: A Year of Impact",
         date: "April 2025",
         location: "University House, Mathikere Campus, RUAS, Bengaluru",
         attendees: "800+ Members, Alumni, Faculty & Industry Partners",
         photo: "/images/gallery/g6.webp",
         overview:
-          "The first Annual Day celebration of LEADS Next Gen Centre — a gala evening commemorating one full year of transformative programmes, honouring top achievers, welcoming a new executive council, and unveiling the Centre's Year 1 Impact Report.",
+          "The first Annual Impact celebration of LEADS Next Gen Centre — a gala evening commemorating one full year of transformative programmes, honouring top achievers, welcoming a new executive council, and unveiling the Centre's Year 1 Impact Report.",
         keyTopics: [
           "Year 1 Impact: Programmes, Milestones & National Reach",
           "LEADS Excellence Awards Ceremony",
