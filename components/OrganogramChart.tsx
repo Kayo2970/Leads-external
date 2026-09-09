@@ -33,16 +33,18 @@ export default function OrganogramChart({
       </div>
 
       <div className="relative z-10 space-y-8">
-        {/* TIER 1: UNIVERSITY PATRONAGE & DEANSHIP (Full Width Dual Grid) */}
-        <div>
+        {/* TIER 1: UNIVERSITY PATRONAGE & DEANSHIP (Vertical Hierarchy) */}
+        <div className="space-y-4">
           <div className="text-[11px] 2xl:text-xs uppercase font-bold tracking-widest text-[#DE3F11] text-center mb-3">
             Tier 01 · University Patronage & Advisory
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          
+          {/* Patron: Hon. Vice Chancellor */}
+          <div className="max-w-xl mx-auto">
             <button
               type="button"
               onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
-              className={`p-6 rounded-2xl 3xl:rounded-3xl text-left transition-all duration-300 border cursor-pointer liquid-glass-card group ${
+              className={`w-full p-6 rounded-2xl 3xl:rounded-3xl text-left transition-all duration-300 border cursor-pointer liquid-glass-card group ${
                 activeRoleGroup === "Patron & Chief Advisor"
                   ? "bg-gradient-to-r from-[#9C1256]/60 to-[#DE3F11]/60 border-white scale-[1.02] shadow-2xl"
                   : "border-white/15 hover:border-[#DE3F11]/50"
@@ -59,11 +61,19 @@ export default function OrganogramChart({
                 </div>
               </div>
             </button>
+          </div>
 
+          {/* Connector Line VC -> Dean */}
+          <div className="flex justify-center">
+            <div className="w-0.5 h-5 bg-gradient-to-b from-[#DE3F11] to-[#9C1256]" />
+          </div>
+
+          {/* Chief Advisor: Dean, FMC */}
+          <div className="max-w-xl mx-auto">
             <button
               type="button"
               onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
-              className={`p-6 rounded-2xl 3xl:rounded-3xl text-left transition-all duration-300 border cursor-pointer liquid-glass-card group ${
+              className={`w-full p-6 rounded-2xl 3xl:rounded-3xl text-left transition-all duration-300 border cursor-pointer liquid-glass-card group ${
                 activeRoleGroup === "Patron & Chief Advisor"
                   ? "bg-gradient-to-r from-[#9C1256]/60 to-[#DE3F11]/60 border-white scale-[1.02] shadow-2xl"
                   : "border-white/15 hover:border-[#DE3F11]/50"
