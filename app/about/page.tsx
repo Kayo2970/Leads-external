@@ -127,16 +127,11 @@ export default function AboutPage() {
             Centre for Leadership Empowering Attitude Development for Sustainability
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 2xl:max-w-5xl 3xl:max-w-6xl mx-auto leading-relaxed font-normal">
-            LEADS Next-Gen Centre is a premier leadership and executive empowerment centre, dedicated to fostering multidisciplinary non-technical leadership, strategic governance, and future-ready capabilities across India.
+            The Next-Gen Centre is a premier centre for excellence that develops leadership and executive empowering programs dedicated to fostering multidisciplinary, non-technical leadership skill development towards strategic governance and future-ready capabilities across India.
           </p>
 
-          {/* Official Centre & FMC Animated Logo Banners - Explicitly stating Collaboration */}
+          {/* Official Centre & FMC Animated Logo Banners */}
           <div className="mt-10 3xl:mt-14 flex flex-col items-center justify-center space-y-5">
-            <div className="inline-flex items-center space-x-2 px-5 py-2 3xl:px-7 3xl:py-3 rounded-full glass-panel border-[#DE3F11]/40 text-white font-semibold text-xs sm:text-sm 3xl:text-xl shadow-lg">
-              <Sparkles className="w-4 h-4 3xl:w-6 3xl:h-6 text-[#DE3F11] animate-spin" />
-              <span>In Collaboration with Faculty of Management and Commerce (FMC)</span>
-            </div>
-
             <div className="flex flex-wrap items-center justify-center gap-6 3xl:gap-10 pt-2">
               <BorderGlow
                 edgeSensitivity={30}
