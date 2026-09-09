@@ -78,7 +78,7 @@ const PARTNERS_DATA: PartnerItem[] = [
     category: "Industry & Corporate",
     name: "Federation of Indian Chambers of Commerce & Industry (FICCI)",
     type: "Apex Industry & Commerce Partner",
-    logo: "/images/partners/ficci.png",
+    logo: "/images/partners/ficci.webp",
     description:
       "Apex national industry chamber collaborating on SIKHI executive development programs, trade leadership, and policy forums.",
     collaborationScope: "SIKHI Executive Track, Policy Roundtables & Industry Summit",
