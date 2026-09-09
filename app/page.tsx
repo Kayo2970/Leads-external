@@ -250,10 +250,10 @@ export default function Home() {
 
                     <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 group">
                       <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white group-hover:text-[#DE3F11] transition-colors">
-                        FDP, LDP, MDP/MDB, Vanguard & SIKHI
+                        FDP, LDP, MDP, Vanguard & SIKHI (FICCI Program)
                       </div>
                       <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
-                        Faculty Development (FDP), Leadership (LDP), Management & Board Development (MDP/MDB), Vanguard Executive Track, Startup SDP, and SIKHI Youth Initiative.
+                        Faculty Development (FDP), Leadership (LDP), Management Development (MDP), Vanguard Executive Track, SIKHI (FICCI Program), and Startup SDP.
                       </div>
                     </div>
 

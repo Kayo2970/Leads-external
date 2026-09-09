@@ -169,40 +169,22 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: true,
   },
   {
-    id: "mdb-program",
-    category: "Faculty & MDP",
-    title: "Management Development Board (MDB)",
-    subtitle: "Executive Management & Organizational Board Excellence",
-    badge: "Corporate & MDB Governance",
-    icon: <Building2 className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Corporate Directors, Department Heads, & Business Unit Leaders",
-    description:
-      "A specialized advisory board and capability development module delivering corporate leadership discipline, operational agility, resource optimization, and non-technical financial stewardship for enterprise department heads.",
-    highlights: [
-      "Executive decision-making frameworks & fiscal discipline",
-      "Cross-departmental alignment & high-performance culture",
-      "In-depth enterprise case studies & operational audits",
-      "Recognized MDB Executive Management Certification",
-    ],
-    duration: "Modular Executive Workshops",
-  },
-  {
     id: "sikhi-program",
-    category: "Startup & Student",
-    title: "SIKHI / SHIKSHA Youth Leadership Initiative",
-    subtitle: "Values-Based Leadership, Ethics & Non-Technical Capability",
-    badge: "Ethical & Youth Capability",
+    category: "Faculty & MDP",
+    title: "SIKHI (FICCI Development Program)",
+    subtitle: "FICCI & LEADS Executive Skill & Leadership Development Initiative",
+    badge: "FICCI Development Track",
     icon: <Compass className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Academic Scholars, Student Leaders, & Emerging Innovators",
+    audience: "Corporate Professionals, Industry Executives, & Academic Leaders",
     description:
-      "A dedicated capability framework fostering values-based leadership, emotional intelligence, ethical decision-making, and holistic communication skills for university scholars and youth leaders across India.",
+      "A prestigious executive development programme conducted in collaboration with FICCI (Federation of Indian Chambers of Commerce & Industry) to elevate managerial capability, non-technical leadership acumen, and institutional excellence across sectors.",
     highlights: [
-      "Values-driven leadership & ethical governance workshops",
-      "Emotional intelligence, conflict resolution & team synergy",
-      "Mentorship connecting student scholars with industry mentors",
-      "National Youth Leadership certification & project showcase",
+      "FICCI-aligned executive leadership & management modules",
+      "Strategic decision-making & non-technical capability building",
+      "Keynotes & networking with FICCI industry stalwarts",
+      "Joint SIKHI - FICCI & LEADS Executive Certification",
     ],
-    duration: "4-Week Capacity Accelerator",
+    duration: "Modular Executive Cohorts",
     featured: true,
   },
   {
@@ -250,7 +232,7 @@ export default function ProgramsPage() {
             Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Development Programs</span>
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
-            From Faculty Development (FDP), Management Development (MDP & MDB), and Vanguard Executive Track to Leadership Development (LDP), Startup SDP & SIKHI Initiative — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
+            From Faculty Development (FDP), Management Development (MDP), Vanguard Track, and SIKHI (FICCI Development Program) to Leadership Development (LDP) & Startup SDP — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
           </p>
 
           {/* Category Filter Pills in Hero */}
@@ -353,7 +335,7 @@ export default function ProgramsPage() {
                 Partner with LEADS for Institutional & Corporate Programs
               </h2>
               <p className="text-sm sm:text-lg text-[#E2D9F3] leading-relaxed">
-                We customize Faculty Development (FDP), Executive Leadership (LDP), MDP/MDB, Vanguard, and Startup SDP programs for universities, government departments, and corporate enterprises across India.
+                We customize Faculty Development (FDP), Executive Leadership (LDP), MDP, Vanguard, SIKHI (FICCI Program), and Startup SDP programs for universities, government departments, and corporate enterprises across India.
               </p>
               <div className="pt-2">
                 <Link
