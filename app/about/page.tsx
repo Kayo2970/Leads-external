@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import ChromaGrid, { ChromaItem } from "@/components/ChromaGrid";
 import OrganogramChart from "@/components/OrganogramChart";
+import AnimatedContent from "@/components/AnimatedContent";
 import {
   LEADERSHIP_MESSAGES,
   BOARD_MEMBERS_DATA,
@@ -259,34 +260,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 3 [PURPLE]: EXECUTIVE PATRONS & ORGANOGRAM */}
-      <section className="py-24 3xl:py-36 bg-[#241147] text-white relative overflow-hidden">
-        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
-          <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-14 3xl:mb-20">
-            <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-2 flex items-center justify-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
-              <span>Governance Architecture & Hierarchy</span>
+      {/* SECTION 3 [PURPLE]: ORGANOGRAM / STRUCTURE CHART */}
+      <section className="py-24 3xl:py-36 bg-[#241147] text-white">
+        <AnimatedContent
+          distance={130}
+          direction="vertical"
+          duration={1.2}
+          ease="bounce.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.05}
+          threshold={0.2}
+        >
+          <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+            <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16 3xl:mb-24">
+              <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-2">
+                Organizational Hierarchy
+              </div>
+              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
+                Institutional Governance Structure
+              </h2>
+              <p className="text-sm 2xl:text-base 3xl:text-xl text-[#E2D9F3] mt-2">
+                Comprehensive structural organogram representing the executive leadership, faculty leads, and student council governance at LEADS Next-Gen Centre.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
-              Institutional Governance Structure
-            </h2>
-            <p className="text-sm 2xl:text-base 3xl:text-xl text-[#E2D9F3] mt-2">
-              Comprehensive structural organogram representing the executive leadership, faculty leads, and student council governance at LEADS Next-Gen Centre.
-            </p>
-          </div>
 
-          {/* Interactive Governance Hierarchy & Organogram */}
-          <OrganogramChart
-            activeRoleGroup={activeTab}
-            onSelectRoleGroup={(group) => {
-              setActiveTab(group);
-              const el = document.getElementById("members-directory-section");
-              if (el) {
-                el.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          />
-        </div>
+            {/* Interactive Governance Hierarchy & Organogram */}
+            <OrganogramChart
+              activeRoleGroup={activeTab}
+              onSelectRoleGroup={(group) => {
+                setActiveTab(group);
+                const el = document.getElementById("members-directory-section");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
+          </div>
+        </AnimatedContent>
       </section>
 
       {/* SECTION 4 [WHITE/LIGHT]: PARTITIONS OF ALL MEMBERS DIRECTORY */}
