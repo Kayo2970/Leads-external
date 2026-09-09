@@ -23,27 +23,17 @@ export default function Nav() {
     const handleScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 20);
-      if (isHomePage) {
-        // Only show header once the user scrolls down into the experience
-        setShowHeader(y > 80);
-      } else {
-        setShowHeader(true);
-      }
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isHomePage]);
+  }, []);
 
   const isActive = (path: string) => pathname === path;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
-        !showHeader
-          ? "opacity-0 -translate-y-full pointer-events-none"
-          : "opacity-100 translate-y-0 pointer-events-auto"
-      } ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out opacity-100 translate-y-0 pointer-events-auto ${
         scrolled ? "glass-nav py-3 shadow-lg" : "bg-transparent py-5"
       }`}
     >
@@ -82,6 +72,17 @@ export default function Nav() {
               }`}
             >
               Events
+            </Link>
+
+            <Link
+              href="/programs"
+              className={`px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
+                isActive("/programs")
+                  ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
+                  : "text-white/90 hover:text-white hover:bg-white/10"
+              }`}
+            >
+              Programs
             </Link>
 
             <Link
@@ -223,6 +224,15 @@ export default function Nav() {
             }`}
           >
             Events
+          </Link>
+          <Link
+            href="/programs"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
+              isActive("/programs") ? "bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white font-bold" : "text-white/90"
+            }`}
+          >
+            Programs
           </Link>
           <Link
             href="/about"
