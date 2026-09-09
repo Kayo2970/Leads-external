@@ -17,11 +17,13 @@ export default function Nav() {
   const [reportsDropdownOpen, setReportsDropdownOpen] = useState(false);
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const isHomePage = pathname === "/";
+  const showNav = !isHomePage || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 20);
+      setScrolled(y > 80);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -46,10 +48,14 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ease-out opacity-100 translate-y-0 pointer-events-auto ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ease-out ${
+        showNav
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 -translate-y-full pointer-events-none"
+      } ${
         scrolled
-          ? "bg-white/95 backdrop-blur-xl py-3 shadow-xl border-b border-purple-100"
-          : "bg-white/90 backdrop-blur-md py-4 shadow-md border-b border-purple-100/70"
+          ? "liquid-glass-header py-3 shadow-xl"
+          : "liquid-glass-header py-4 shadow-md"
       }`}
     >
       <div className="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
