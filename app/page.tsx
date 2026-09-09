@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* SECTION 1 [PURPLE]: OPENING HERO WITH LOGO OUTLINE SCROLLEXPAND & SOFTAURORA */}
       <LogoScrollExpand
-        logoSrc="/leads-logo.png"
+        logoSrc="/leads-white-logo.png"
         scrollDistance={0.8}
         holdDistance={0.15}
       >

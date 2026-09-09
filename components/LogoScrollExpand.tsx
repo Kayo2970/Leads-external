@@ -194,7 +194,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
           <div ref={curtainRef} className="logo-scroll-expand__curtain">
             <div ref={logoBoxRef} className="logo-scroll-expand__logo-box">
               <img
-                src={propsRef.current.logoSrc}
+                src={logoSrc}
                 alt="LEADS Next Gen Centre"
                 className="w-full h-full object-contain brightness-0 invert filter"
               />
