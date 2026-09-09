@@ -30,6 +30,17 @@ interface PartnerItem {
 
 const PARTNERS_DATA: PartnerItem[] = [
   {
+    id: "fmc-ruas",
+    category: "Academic & Institution",
+    name: "Faculty of Management and Commerce (FMC), RUAS",
+    type: "Academic Collaboration Partner",
+    logo: "/images/partners/ruas-fmc.png",
+    description:
+      "Primary academic collaboration partner providing institutional deanship, faculty mentorship, curriculum design, and accredited executive certification.",
+    collaborationScope: "FDP, MDP, Joint Research Whitepapers & Academic Governance",
+    featured: true,
+  },
+  {
     id: "rtbi",
     category: "Startup & Incubation",
     name: "Ramaiah Technology Business Incubator (RTBI)",
@@ -52,14 +63,14 @@ const PARTNERS_DATA: PartnerItem[] = [
     featured: true,
   },
   {
-    id: "fmc-ruas",
-    category: "Academic & Institution",
-    name: "Faculty of Management and Commerce (FMC), RUAS",
-    type: "Academic Collaboration Partner",
-    logo: "/images/partners/ruas-fmc.png",
+    id: "k-tech",
+    category: "Government & Missions",
+    name: "K-TECH (Karnataka Innovation & Technology Society)",
+    type: "State Innovation & Tech Partner",
+    logo: "/images/partners/k-tech.png",
     description:
-      "Primary academic collaboration partner providing institutional deanship, faculty mentorship, curriculum design, and accredited executive certification.",
-    collaborationScope: "FDP, MDP, Joint Research Whitepapers & Academic Governance",
+      "Government of Karnataka technology flagship powering deep-tech entrepreneurship, innovation hubs, and skill development.",
+    collaborationScope: "Technology Incubation, Skill Missions & Innovation Grants",
     featured: true,
   },
   {
