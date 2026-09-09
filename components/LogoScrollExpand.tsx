@@ -289,12 +289,12 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
               <button
                 type="button"
                 onClick={handleScrollDown}
-                aria-label="Scroll down to explore website content"
-                title="Scroll down to explore website"
+                aria-label="Scroll or click here to explore website content"
+                title="Scroll or click here to explore website"
                 className="logo-scroll-expand__scroll-pill animate-pulse-down hover:scale-105 hover:border-[#DE3F11] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#DE3F11] focus:ring-offset-2 focus:ring-offset-[#1E0C3D]"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
-                <span>Scroll to Explore</span>
+                <span>Scroll or Click Here to Explore</span>
                 <ChevronDown className="w-4 h-4 text-[#DE3F11] animate-bounce" />
               </button>
             </div>
