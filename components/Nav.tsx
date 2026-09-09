@@ -33,8 +33,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out opacity-100 translate-y-0 pointer-events-auto ${
-        scrolled ? "glass-nav py-3 shadow-lg" : "bg-transparent py-5"
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ease-out opacity-100 translate-y-0 pointer-events-auto ${
+        scrolled
+          ? "glass-nav py-3 shadow-xl bg-[#241147]/90 backdrop-blur-xl border-b border-white/15"
+          : "glass-nav py-4 shadow-lg bg-[#241147]/80 backdrop-blur-md border-b border-white/10"
       }`}
     >
       <div className="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
