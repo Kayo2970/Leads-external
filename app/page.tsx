@@ -263,8 +263,8 @@ export default function Home() {
         </AnimatedContent>
       </section>
 
-      {/* SECTION 4: WHO IT'S FOR */}
-      <section className="py-24 3xl:py-36 bg-[#1E0C3D] text-white border-y border-white/10">
+      {/* SECTION 4 [LIGHT/WHITE BG]: WHO IT'S FOR */}
+      <section className="py-24 3xl:py-36 bg-[#FDFBFF] text-[#1E0C3D] border-y border-purple-100/60 relative overflow-hidden">
         <AnimatedContent
           distance={130}
           direction="horizontal"
@@ -279,62 +279,62 @@ export default function Home() {
         >
           <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
             <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16 3xl:mb-24">
-              <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-2">
+              <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
                 Cross-Sector Ecosystem
               </div>
-              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
+              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
                 Built for Every Leader Across India
               </h2>
-              <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-[#E2D9F3] mt-3 leading-relaxed">
+              <p className="text-sm sm:text-base 2xl:text-xl 3xl:text-2xl text-slate-600 mt-3 leading-relaxed">
                 Whether shaping national policy, scaling a startup, or preparing for your first executive role — LEADS provides the platform you need.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-8">
-              <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
                   <Building2 className="w-6 h-6 3xl:w-8 3xl:h-8" />
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
                   Government & Policy
                 </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Public sector leaders shaping national policy, institutional frameworks, and public administration excellence.
                 </p>
               </div>
 
-              <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
                   <Briefcase className="w-6 h-6 3xl:w-8 3xl:h-8" />
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
                   Industry Leaders
                 </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Corporate executives and managers seeking to sharpen non-technical strategy, communication, and governance.
                 </p>
               </div>
 
-              <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
                   <TrendingUp className="w-6 h-6 3xl:w-8 3xl:h-8" />
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
                   Startup Founders
                 </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Entrepreneurs building high-growth ventures, managing teams under uncertainty, and raising venture capital.
                 </p>
               </div>
 
-              <div className="liquid-glass-card rounded-3xl p-7 3xl:p-10 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 border border-[#DE3F11]/40 text-[#DE3F11] flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
+                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
                   <GraduationCap className="w-6 h-6 3xl:w-8 3xl:h-8" />
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-white mb-2 group-hover:text-[#DE3F11] transition-colors">
+                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
                   Students & Scholars
                 </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 leading-relaxed">
+                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
                   Aspiring young leaders gaining essential business acumen, confidence, and real-world networking opportunities.
                 </p>
               </div>
