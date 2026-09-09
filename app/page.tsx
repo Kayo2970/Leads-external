@@ -106,7 +106,7 @@ export default function Home() {
           direction="vertical"
           reverse={false}
           duration={1.2}
-          ease="bounce.out"
+          ease="power3.out"
           initialOpacity={0.2}
           animateOpacity
           scale={1.05}
@@ -174,7 +174,7 @@ export default function Home() {
           direction="horizontal"
           reverse={false}
           duration={1.2}
-          ease="bounce.out"
+          ease="power3.out"
           initialOpacity={0.2}
           animateOpacity
           scale={1.05}
@@ -270,7 +270,7 @@ export default function Home() {
           direction="horizontal"
           reverse={true}
           duration={1.2}
-          ease="bounce.out"
+          ease="power3.out"
           initialOpacity={0.2}
           animateOpacity
           scale={1.05}
@@ -349,7 +349,7 @@ export default function Home() {
           distance={130}
           direction="vertical"
           duration={1.2}
-          ease="bounce.out"
+          ease="power3.out"
           initialOpacity={0.2}
           animateOpacity
           scale={1.05}
@@ -389,7 +389,7 @@ export default function Home() {
           distance={130}
           direction="vertical"
           duration={1.2}
-          ease="bounce.out"
+          ease="power3.out"
           initialOpacity={0.2}
           animateOpacity
           scale={1.05}

@@ -266,7 +266,7 @@ export default function AboutPage() {
           distance={130}
           direction="vertical"
           duration={1.2}
-          ease="bounce.out"
+          ease="power3.out"
           initialOpacity={0.2}
           animateOpacity
           scale={1.05}
