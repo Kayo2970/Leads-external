@@ -179,7 +179,7 @@ export default function ContactForm({ lightMode = false }: ContactFormProps) {
             >
               <option value="Events" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Bharath Leadership Summit & Events</option>
               <option value="Partnerships" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Institutional & Government Partnerships</option>
-              <option value="Workshops" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Catalyst Skill Upliftment Workshops</option>
+              <option value="Leadership Talk Series" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Catalyst Leadership Talk Series</option>
               <option value="Media" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Media & Academic Research</option>
               <option value="General Enquiry" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>General Enquiry</option>
             </select>

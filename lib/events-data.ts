@@ -36,8 +36,8 @@ export interface LEADSEvent {
 export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "catalyst-series",
-    name: "Catalyst: Non-Technical Skill Upliftment Series",
-    seriesName: "Catalyst Series",
+    name: "Catalyst: Leadership Talk Series",
+    seriesName: "Catalyst Leadership Talk Series",
     category: "Workshop",
     tagline: "Transforming Technical Expertise into High-Impact Strategic Leadership",
     date: "Monthly Cohorts · Next: Nov 08, 2025",

@@ -142,47 +142,62 @@ export default function AboutPage() {
             LEADS Next-Gen Centre is a premier leadership and executive empowerment centre, dedicated to fostering multidisciplinary non-technical leadership, strategic governance, and future-ready capabilities across India.
           </p>
 
-          {/* Official Centre & FMC Animated Logo Banners */}
-          <div className="mt-12 3xl:mt-16 flex flex-wrap items-center justify-center gap-6 3xl:gap-10">
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={28}
-              glowRadius={40}
-              glowIntensity={1.2}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="shadow-xl hover:scale-105 transition-transform duration-300"
-            >
-              <div className="p-4 sm:p-5 3xl:p-8 flex items-center justify-center">
-                <img
-                  src="/leads-header-logo.png"
-                  alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
-                  className="h-12 sm:h-16 3xl:h-20 w-auto object-contain"
-                />
-              </div>
-            </BorderGlow>
+          {/* Official Centre & FMC Animated Logo Banners - Explicitly stating Collaboration */}
+          <div className="mt-10 3xl:mt-14 flex flex-col items-center justify-center space-y-5">
+            <div className="inline-flex items-center space-x-2 px-5 py-2 3xl:px-7 3xl:py-3 rounded-full glass-panel border-[#DE3F11]/40 text-white font-semibold text-xs sm:text-sm 3xl:text-xl shadow-lg">
+              <Sparkles className="w-4 h-4 3xl:w-6 3xl:h-6 text-[#DE3F11] animate-spin" />
+              <span>In Collaboration with Faculty of Management and Commerce (FMC)</span>
+            </div>
 
-            <BorderGlow
-              edgeSensitivity={30}
-              glowColor="330 85 50"
-              backgroundColor="#FFFFFF"
-              borderRadius={28}
-              glowRadius={40}
-              glowIntensity={1.2}
-              colors={["#9C1256", "#DE3F11", "#361C6A"]}
-              animated={true}
-              className="shadow-xl hover:scale-105 transition-transform duration-300"
-            >
-              <div className="p-4 sm:p-5 3xl:p-8 flex items-center justify-center">
-                <img
-                  src="/fmc-logo-white.png"
-                  alt="Faculty of Management and Commerce - RUAS"
-                  className="h-12 sm:h-16 3xl:h-20 w-auto object-contain"
-                />
+            <div className="flex flex-wrap items-center justify-center gap-6 3xl:gap-10 pt-2">
+              <BorderGlow
+                edgeSensitivity={30}
+                glowColor="330 85 50"
+                backgroundColor="#FFFFFF"
+                borderRadius={28}
+                glowRadius={40}
+                glowIntensity={1.2}
+                colors={["#9C1256", "#DE3F11", "#361C6A"]}
+                animated={true}
+                className="shadow-xl hover:scale-105 transition-transform duration-300"
+              >
+                <div className="p-4 sm:p-5 3xl:p-8 flex items-center justify-center">
+                  <img
+                    src="/leads-header-logo.png"
+                    alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
+                    className="h-12 sm:h-16 3xl:h-20 w-auto object-contain"
+                  />
+                </div>
+              </BorderGlow>
+
+              <div className="text-white/80 font-bold text-xs sm:text-sm 3xl:text-base uppercase tracking-widest px-3 py-1 rounded-full bg-white/10 border border-white/20">
+                In Collaboration With
               </div>
-            </BorderGlow>
+
+              <BorderGlow
+                edgeSensitivity={30}
+                glowColor="330 85 50"
+                backgroundColor="#FFFFFF"
+                borderRadius={28}
+                glowRadius={40}
+                glowIntensity={1.2}
+                colors={["#9C1256", "#DE3F11", "#361C6A"]}
+                animated={true}
+                className="shadow-xl hover:scale-105 transition-transform duration-300"
+              >
+                <div className="p-4 sm:p-5 3xl:p-8 flex items-center justify-center">
+                  <img
+                    src="/fmc-logo-white.png"
+                    alt="Faculty of Management and Commerce - RUAS"
+                    className="h-12 sm:h-16 3xl:h-20 w-auto object-contain"
+                  />
+                </div>
+              </BorderGlow>
+            </div>
+
+            <p className="text-xs sm:text-sm 3xl:text-lg text-[#E2D9F3]/90 max-w-2xl mx-auto pt-2 font-medium">
+              LEADS Next-Gen Centre operates in strategic academic collaboration with the Faculty of Management and Commerce (FMC) at M. S. Ramaiah University of Applied Sciences (RUAS).
+            </p>
           </div>
         </div>
       </section>

@@ -104,7 +104,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/events" className="text-white/80 hover:text-[#DE3F11] transition-colors">
-                  Catalyst Skill Series
+                  Catalyst Leadership Talk Series
                 </Link>
               </li>
             </ul>
