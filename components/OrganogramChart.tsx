@@ -98,16 +98,18 @@ export default function OrganogramChart({
           <div className="w-0.5 h-6 bg-gradient-to-b from-[#DE3F11] to-[#9C1256]" />
         </div>
 
-        {/* TIER 2: CENTRE HEAD & FACULTY LEADS (Full Width 5-Card Grid) */}
-        <div>
+        {/* TIER 2: CENTRE HEAD & FACULTY LEADS */}
+        <div className="space-y-4">
           <div className="text-[11px] 2xl:text-xs uppercase font-bold tracking-widest text-[#DE3F11] text-center mb-3">
             Tier 02 · Centre Leadership & Faculty Heads
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+
+          {/* Centre Head (Positioned above Faculty Leads) */}
+          <div className="max-w-md mx-auto">
             <button
               type="button"
               onClick={() => onSelectRoleGroup?.("Centre Head & Faculty Leads")}
-              className={`p-5 rounded-2xl text-center transition-all duration-300 border cursor-pointer liquid-glass-card ${
+              className={`w-full p-5 rounded-2xl text-center transition-all duration-300 border cursor-pointer liquid-glass-card ${
                 activeRoleGroup === "Centre Head & Faculty Leads"
                   ? "bg-gradient-to-b from-[#9C1256]/60 to-[#DE3F11]/60 border-white scale-[1.02] shadow-xl"
                   : "border-white/15 hover:border-[#DE3F11]/50"
@@ -116,10 +118,18 @@ export default function OrganogramChart({
               <div className="w-10 h-10 rounded-xl bg-white/10 mx-auto mb-2 flex items-center justify-center text-[#DE3F11]">
                 <UserCheck className="w-5 h-5" />
               </div>
-              <div className="text-sm font-bold text-white leading-tight">Centre Head</div>
+              <div className="text-base font-bold text-white leading-tight">Centre Head</div>
               <div className="text-xs text-[#E2D9F3]/80 mt-1">LEADS Operational Lead</div>
             </button>
+          </div>
 
+          {/* Connector Line Centre Head -> Faculty Leads */}
+          <div className="flex justify-center">
+            <div className="w-0.5 h-5 bg-gradient-to-b from-[#DE3F11] to-[#9C1256]" />
+          </div>
+
+          {/* Faculty Leads Grid (4 Cards) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <button
               type="button"
               onClick={() => onSelectRoleGroup?.("Centre Head & Faculty Leads")}
