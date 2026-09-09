@@ -381,7 +381,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 5: FEATURED EVENTS PREVIEW */}
-      <section className="py-24 3xl:py-36 bg-[#241147] text-white">
+      <section className="py-24 3xl:py-36 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
         <AnimatedContent
           distance={130}
           direction="vertical"
@@ -395,16 +395,16 @@ export default function Home() {
           <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 3xl:mb-16">
               <div>
-                <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider gold-gradient-text mb-2">
+                <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
                   National Event Calendar
                 </div>
-                <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
+                <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
                   Featured Summits & Masterclasses
                 </h2>
               </div>
               <Link
                 href="/events"
-                className="mt-4 md:mt-0 text-sm 2xl:text-base 3xl:text-xl font-bold text-white hover:text-[#DE3F11] hover:underline inline-flex items-center space-x-1"
+                className="mt-4 md:mt-0 text-sm 2xl:text-base 3xl:text-xl font-bold text-[#1E0C3D] hover:text-[#DE3F11] hover:underline inline-flex items-center space-x-1"
               >
                 <span>Explore All Events</span>
                 <ChevronRight className="w-4 h-4 3xl:w-6 3xl:h-6 text-[#DE3F11]" />
@@ -413,7 +413,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 3xl:gap-12">
               {featuredEvents.map((event) => (
-                <EventCard key={event.id} event={event} onOpenModal={(e) => setSelectedEvent(e)} />
+                <EventCard key={event.id} event={event} lightMode={true} onOpenModal={(e) => setSelectedEvent(e)} />
               ))}
             </div>
           </div>
