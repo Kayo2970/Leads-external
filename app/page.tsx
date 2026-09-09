@@ -300,57 +300,80 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 3xl:gap-8">
               {/* Box 1: Government Leaders */}
-              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
-                  <Building2 className="w-6 h-6 3xl:w-8 3xl:h-8" />
+              <div className="bg-white rounded-3xl p-6 sm:p-7 3xl:p-9 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                    <Building2 className="w-6 h-6 3xl:w-8 3xl:h-8" />
+                  </div>
+                  <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
+                    Government Leaders
+                  </h3>
+                  <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
+                    Public sector leaders, administrative officials, and policy makers shaping national governance and institutional frameworks.
+                  </p>
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
-                  Government Leaders
-                </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Public sector leaders, administrative officials, and policy makers shaping national governance and institutional frameworks.
-                </p>
               </div>
 
               {/* Box 2: Industry Leaders */}
-              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
-                  <Briefcase className="w-6 h-6 3xl:w-8 3xl:h-8" />
+              <div className="bg-white rounded-3xl p-6 sm:p-7 3xl:p-9 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                    <Briefcase className="w-6 h-6 3xl:w-8 3xl:h-8" />
+                  </div>
+                  <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
+                    Industry Leaders
+                  </h3>
+                  <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
+                    Corporate executives, enterprise managers, and industry directors sharpening non-technical strategy, executive presence, and governance.
+                  </p>
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
-                  Industry Leaders
-                </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Corporate executives, enterprise managers, and industry directors sharpening non-technical strategy, executive presence, and governance.
-                </p>
               </div>
 
               {/* Box 3: Academic Leaders & Founders */}
-              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
-                  <TrendingUp className="w-6 h-6 3xl:w-8 3xl:h-8" />
+              <div className="bg-white rounded-3xl p-6 sm:p-7 3xl:p-9 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                    <Award className="w-6 h-6 3xl:w-8 3xl:h-8" />
+                  </div>
+                  <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
+                    Academic Leaders & Founders
+                  </h3>
+                  <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
+                    Deans, university professors, institution heads, educational visionaries, and academic founders driving multidisciplinary research and leadership.
+                  </p>
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
-                  Academic Leaders & Founders
-                </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Deans, university professors, institution heads, educational visionaries, and academic founders driving multidisciplinary research and leadership.
-                </p>
               </div>
 
-              {/* Box 4: Startup Founders, Students & Scholars */}
-              <div className="bg-white rounded-3xl p-7 3xl:p-10 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer">
-                <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
-                  <GraduationCap className="w-6 h-6 3xl:w-8 3xl:h-8" />
+              {/* Box 4: Startup Founders */}
+              <div className="bg-white rounded-3xl p-6 sm:p-7 3xl:p-9 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                    <TrendingUp className="w-6 h-6 3xl:w-8 3xl:h-8" />
+                  </div>
+                  <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
+                    Startup Founders
+                  </h3>
+                  <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
+                    Entrepreneurs building high-growth ventures, scaling non-technical business strategy, team dynamics, and investor readiness.
+                  </p>
                 </div>
-                <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
-                  Startup Founders, Students & Scholars
-                </h3>
-                <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
-                  Entrepreneurs, startup founders, research scholars, and aspiring young leaders gaining essential non-technical skills, business acumen, and executive capability.
-                </p>
+              </div>
+
+              {/* Box 5: Students & Scholars */}
+              <div className="bg-white rounded-3xl p-6 sm:p-7 3xl:p-9 border border-purple-100 shadow-lg hover:shadow-2xl hover:border-[#DE3F11]/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 rounded-2xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center mb-5 3xl:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-md">
+                    <GraduationCap className="w-6 h-6 3xl:w-8 3xl:h-8" />
+                  </div>
+                  <h3 className="font-bold text-lg 2xl:text-xl 3xl:text-2xl text-[#1E0C3D] mb-2 group-hover:text-[#DE3F11] transition-colors">
+                    Students & Scholars
+                  </h3>
+                  <p className="text-xs 2xl:text-sm 3xl:text-base text-slate-600 leading-relaxed">
+                    Research scholars, university students, and aspiring young leaders gaining essential non-technical skills, business acumen, and executive capability.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
