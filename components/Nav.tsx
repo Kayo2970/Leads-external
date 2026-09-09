@@ -88,6 +88,17 @@ export default function Nav() {
             </Link>
 
             <Link
+              href="/partners"
+              className={`px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
+                isActive("/partners")
+                  ? "bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 text-white font-bold border border-[#DE3F11]/40"
+                  : "text-white/90 hover:text-white hover:bg-white/10"
+              }`}
+            >
+              Our Partners
+            </Link>
+
+            <Link
               href="/about"
               className={`px-3.5 py-2 3xl:px-5 3xl:py-3 rounded-lg 3xl:rounded-xl text-sm 3xl:text-lg font-medium transition-colors ${
                 isActive("/about")
@@ -235,6 +246,15 @@ export default function Nav() {
             }`}
           >
             Programs
+          </Link>
+          <Link
+            href="/partners"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
+              isActive("/partners") ? "bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white font-bold" : "text-white/90"
+            }`}
+          >
+            Our Partners
           </Link>
           <Link
             href="/about"
