@@ -61,14 +61,12 @@ export default function Nav() {
       <div className="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
         <div className="flex items-center justify-between">
           {/* Logo & Identity */}
-          <Link href="/" className="flex items-center group">
-            <div className="bg-white px-3 py-1.5 3xl:px-5 3xl:py-2.5 rounded-xl 3xl:rounded-2xl border border-purple-100 shadow-sm group-hover:scale-105 transition-transform duration-300">
-              <img
-                src="/leads-header-logo.png"
-                alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
-                className="h-9 sm:h-10 3xl:h-14 w-auto object-contain"
-              />
-            </div>
+          <Link href="/" className="flex items-center group py-0.5">
+            <img
+              src="/leads-header-logo-transparent.png"
+              alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
+              className="h-12 sm:h-14 lg:h-16 3xl:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}
