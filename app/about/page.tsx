@@ -29,7 +29,6 @@ export default function AboutPage() {
     { label: "Centre Head & Faculty Leads", value: "Centre Head & Faculty Leads" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Student Core Council", value: "Student Core Council" },
-    { label: "Student Advisory Council", value: "Student Advisory Council" },
     { label: "Student Trainee Associates", value: "Student Trainee Associates" },
   ];
 
@@ -80,21 +79,10 @@ export default function AboutPage() {
       columns: 4,
     },
     {
-      id: "student-advisory",
-      group: "Student Advisory Council" as const,
-      title: "Student Advisory Council",
-      badge: "Governance Tier 05",
-      count: "2 Senior Advisors",
-      description:
-        "Experienced student leaders providing strategic counsel, institutional continuity, and mentorship across committees.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Advisory Council"),
-      columns: 2,
-    },
-    {
       id: "trainee-associates",
       group: "Student Trainee Associates" as const,
       title: "Student Trainee Associates & Organizing Committee",
-      badge: "Governance Tier 06",
+      badge: "Governance Tier 05",
       count: "17 Associates",
       description:
         "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
