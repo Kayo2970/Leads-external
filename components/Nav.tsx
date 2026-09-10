@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import { REPORTS_DATA } from "@/lib/reports-data";
+import PlaceholderBadge from "@/components/PlaceholderBadge";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -61,12 +62,21 @@ export default function Nav() {
       <div className="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
         <div className="flex items-center justify-between">
           {/* Logo & Identity */}
-          <Link href="/" className="flex items-center group py-0.5">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3.5 group py-0.5 relative shrink-0">
+            <img
+              src="/ruas-logo.png"
+              alt="Ramaiah University of Applied Sciences"
+              className="h-8 sm:h-11 lg:h-13 3xl:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+
+            <span className="h-6 sm:h-9 lg:h-10 w-[1.5px] bg-slate-300/80 rounded-full shrink-0" />
+
             <img
               src="/leads-header-logo-transparent.png"
               alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
-              className="h-12 sm:h-14 lg:h-16 3xl:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-9 sm:h-12 lg:h-14 3xl:h-18 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
+            <PlaceholderBadge id={85} position="top-left" className="scale-75 origin-top-left" />
           </Link>
 
           {/* Desktop Navigation Links */}

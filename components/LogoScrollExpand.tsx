@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useRef } from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
+import PlaceholderBadge from "@/components/PlaceholderBadge";
 import "./LogoScrollExpand.css";
 
 const clamp = (v: number, a: number, b: number) => (v < a ? a : v > b ? b : v);
@@ -276,12 +277,13 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
             </svg>
 
             {/* White Logo Outline Overlay - Aligned with the Layer Mask */}
-            <div ref={logoBoxRef} className="logo-scroll-expand__logo-box">
+            <div ref={logoBoxRef} className="logo-scroll-expand__logo-box relative">
               <img
                 src={logoSrc}
                 alt="LEADS Next Gen Centre Logo Mask"
                 className="w-full h-full object-contain brightness-0 invert filter drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]"
               />
+              <PlaceholderBadge id={84} position="top-left" className="scale-75 origin-top-left" />
             </div>
 
             {/* Clickable Scroll Down Indicator & Button (Accessibility Feature) */}

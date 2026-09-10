@@ -93,6 +93,7 @@ export default function AboutPage() {
 
   const mapToChromaItems = (members: BoardMember[]): ChromaItem[] =>
     members.map((m, idx) => ({
+      placeholderId: m.placeholderId,
       image: m.image || "/images/leadership/subhadeep-mukherjee.webp",
       title: m.name,
       subtitle: m.designation,

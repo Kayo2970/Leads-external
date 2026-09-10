@@ -1,5 +1,6 @@
 export interface LEADSEventEdition {
   id: string;
+  placeholderId?: number;
   title: string;
   date: string;
   location: string;
@@ -13,6 +14,7 @@ export interface LEADSEventEdition {
 
 export interface LEADSEvent {
   id: string;
+  placeholderId?: number;
   name: string;
   seriesName: string;
   category: "Summit" | "Workshop" | "Roundtable" | "Conclave";
@@ -36,6 +38,7 @@ export interface LEADSEvent {
 export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "catalyst-series",
+    placeholderId: 44,
     name: "Catalyst: Leadership Talk Series",
     seriesName: "Catalyst Leadership Talk Series",
     category: "Workshop",
@@ -75,6 +78,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "catalyst-vol-1",
+        placeholderId: 45,
         title: "Catalyst Vol. 1: Strategic Decision Making & Crisis Leadership",
         date: "May 14, 2025",
         location: "RUAS Main Auditorium, Bengaluru",
@@ -95,6 +99,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
       },
       {
         id: "catalyst-vol-2",
+        placeholderId: 46,
         title: "Catalyst Vol. 2: Executive Presence, Storytelling & Negotiation",
         date: "August 22, 2025",
         location: "LEADS Executive Training Wing, Bengaluru",
@@ -115,6 +120,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
       },
       {
         id: "catalyst-vol-3",
+        placeholderId: 47,
         title: "Catalyst Vol. 3: Advanced Organizational Psychology & Culture",
         date: "November 08, 2025",
         location: "LEADS Convention Centre, Bengaluru",
@@ -137,6 +143,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "mdp-series",
+    placeholderId: 48,
     name: "Management Development Programs (MDP)",
     seriesName: "Management Development Programs",
     category: "Workshop",
@@ -174,6 +181,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "mdp-q3-2025",
+        placeholderId: 49,
         title: "MDP Cohort 2025: Strategic Enterprise Leadership & Governance",
         date: "September 12–14, 2025",
         location: "LEADS Executive Suite, Bengaluru",
@@ -195,6 +203,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "vanguard-series",
+    placeholderId: 50,
     name: "Vanguard: Off-Campus Outreach & Experiential Leadership",
     seriesName: "Vanguard Outreach Series",
     category: "Workshop",
@@ -232,6 +241,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "vanguard-expedition-1",
+        placeholderId: 51,
         title: "Vanguard Expedition 2025: Western Ghats Leadership Challenge",
         date: "January 24–26, 2025",
         location: "Western Ghats Outdoor Base, Karnataka",
@@ -253,6 +263,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "startup-founders-sprint",
+    placeholderId: 52,
     name: "Startup Founders Leadership & Venture Sprint",
     seriesName: "Founders Sprint Series",
     category: "Conclave",
@@ -290,6 +301,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "sprint-2025",
+        placeholderId: 53,
         title: "Founders Sprint 2025: From Product Builder to Executive CEO",
         date: "July 12, 2025",
         location: "LEADS Innovation Hub, Bengaluru",
@@ -310,6 +322,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "annual-impact-meet",
+    placeholderId: 54,
     name: "LEADS Annual Impact Meet",
     seriesName: "Annual Impact Meet",
     category: "Conclave",
@@ -349,6 +362,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "annual-impact-meet-2025",
+        placeholderId: 55,
         title: "LEADS Annual Impact Meet 2025: A Year of Transformation",
         date: "April 2025",
         location: "University House, Mathikere Campus, RUAS, Bengaluru",
@@ -374,6 +388,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "leads-outreach",
+    placeholderId: 56,
     name: "LEADS Outreach Activities & Field Initiatives",
     seriesName: "LEADS Outreach Series",
     category: "Workshop",
@@ -410,6 +425,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "outreach-2025",
+        placeholderId: 57,
         title: "LEADS Youth Leadership & Skill Outreach Drive 2025",
         date: "March 15, 2025",
         location: "Mandya & Ramanagara Regional Centers",
@@ -430,6 +446,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "leads-conferences",
+    placeholderId: 58,
     name: "LEADS Academic & National Policy Conferences",
     seriesName: "National Policy Conferences",
     category: "Conclave",
@@ -466,6 +483,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: [
       {
         id: "conference-2025",
+        placeholderId: 59,
         title: "1st National Conference on Non-Technical Leadership & Governance",
         date: "February 20, 2025",
         location: "RUAS Convention Centre, Bengaluru",

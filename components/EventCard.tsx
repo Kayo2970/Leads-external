@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import { LEADSEvent } from "@/lib/events-data";
+import PlaceholderBadge from "@/components/PlaceholderBadge";
+import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 import { Calendar, MapPin, Users, Crown, Zap, Shield, Rocket, Sparkles, UserCheck, Star, ArrowUpRight, Compass, GraduationCap } from "lucide-react";
 
 interface EventCardProps {
@@ -12,6 +14,16 @@ interface EventCardProps {
 }
 
 export default function EventCard({ event, onOpenModal, lightMode = false }: EventCardProps) {
+  const placeholderId = event.placeholderId || 44;
+  const placeholderSvg = generateNumberedPlaceholderSvg({
+    id: placeholderId,
+    title: event.name,
+    subtitle: event.seriesName,
+    category: event.category,
+  });
+
+  const [imgSrc, setImgSrc] = useState<string>(event.photo || placeholderSvg);
+
   const getLogoIcon = (name: string) => {
     switch (name) {
       case "crown":
@@ -58,10 +70,13 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
           {/* Card Photo Header */}
           <div className="relative rounded-2xl overflow-hidden mb-4 border border-purple-200/60 h-44">
             <img
-              src={event.photo}
+              src={imgSrc}
+              onError={() => setImgSrc(placeholderSvg)}
               alt={event.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
+            <PlaceholderBadge id={placeholderId} position="top-left" />
+
             <div
               className={`absolute inset-0 ${
                 lightMode
@@ -98,49 +113,60 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
 
           {/* Title & Tagline */}
           <h3
-            className={`text-lg font-extrabold transition-colors line-clamp-2 ${
-              lightMode ? "text-[#1E0C3D] group-hover:text-[#DE3F11]" : "text-white group-hover:text-[#DE3F11]"
+            className={`text-xl font-black mb-1.5 leading-snug group-hover:text-[#DE3F11] transition-colors ${
+              lightMode ? "text-[#1E0C3D]" : "text-white"
             }`}
           >
             {event.name}
           </h3>
+
           <p
-            className={`text-xs font-semibold mt-1 mb-3 line-clamp-2 ${
-              lightMode ? "text-[#DE3F11]" : "text-[#E2D9F3]"
+            className={`text-xs leading-relaxed mb-4 ${
+              lightMode ? "text-slate-600" : "text-white/70"
             }`}
           >
             {event.tagline}
           </p>
 
-          {/* Quick Details */}
-          <div
-            className={`space-y-1.5 text-xs mb-4 pt-2 border-t ${
-              lightMode ? "text-slate-600 border-purple-100" : "text-[#E2D9F3] border-white/10"
-            }`}
-          >
-            <div className="flex items-center space-x-2">
+          {/* Event Quick Snapshot */}
+          <div className="space-y-2 mb-5">
+            <div className="flex items-center space-x-2 text-xs">
               <Calendar className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
-              <span className="truncate">{event.date}</span>
+              <span className={lightMode ? "text-slate-700 font-medium" : "text-white/80 font-medium"}>
+                {event.date}
+              </span>
             </div>
-            <div className="flex items-center space-x-2">
+
+            <div className="flex items-center space-x-2 text-xs truncate">
               <MapPin className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
-              <span className="truncate">{event.location}</span>
+              <span className={`truncate ${lightMode ? "text-slate-600" : "text-white/70"}`}>
+                {event.location}
+              </span>
             </div>
-            <div className="flex items-center space-x-2">
+
+            <div className="flex items-center space-x-2 text-xs">
               <Users className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
-              <span>{event.attendees}</span>
+              <span className={`font-semibold ${lightMode ? "text-[#9C1256]" : "text-white/90"}`}>
+                {event.attendees}
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Action Trigger */}
-        <button
-          onClick={() => onOpenModal(event)}
-          className="w-full mt-2 py-2.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white hover:opacity-95 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
-        >
-          <span>Explore Series & Editions</span>
-          <ArrowUpRight className="w-4 h-4" />
-        </button>
+        {/* Footer Action Bar */}
+        <div className={`pt-3 border-t flex items-center justify-between ${lightMode ? "border-purple-100" : "border-white/10"}`}>
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[#DE3F11]">
+            {event.editions ? `${event.editions.length} Editions` : "Flagship Event"}
+          </span>
+
+          <button
+            onClick={() => onOpenModal(event)}
+            className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer"
+          >
+            <span>Explore Event</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
     </BorderGlow>
   );

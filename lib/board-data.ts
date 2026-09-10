@@ -1,5 +1,6 @@
 export interface BoardMember {
   id: string;
+  placeholderId?: number;
   name: string;
   role: string;
   designation: string;
@@ -21,6 +22,7 @@ export interface BoardMember {
 export const LEADERSHIP_MESSAGES: BoardMember[] = [
   {
     id: "kuldeep-raina",
+    placeholderId: 1,
     name: "Prof. Kuldeep Kumar Raina",
     role: "PATRON",
     designation: "Hon. Vice Chancellor, RUAS",
@@ -35,6 +37,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
   },
   {
     id: "sharath-kumar",
+    placeholderId: 2,
     name: "Dr. K. M. Sharath Kumar",
     role: "CHIEF ADVISOR",
     designation: "Dean, FMC - RUAS",
@@ -49,6 +52,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
   },
   {
     id: "subhadeep-mukherjee",
+    placeholderId: 3,
     name: "Dr. Subhadeep Mukherjee",
     role: "CENTRE HEAD",
     designation: "Associate Professor of FMC, RUAS",
@@ -67,6 +71,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
   ...LEADERSHIP_MESSAGES,
   {
     id: "pallabi-mund",
+    placeholderId: 4,
     name: "Dr. Pallabi Mund",
     role: "Event Head (GG Campus)",
     designation: "Associate Professor of FMC, RUAS",
@@ -79,6 +84,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
   },
   {
     id: "kiran-kumar",
+    placeholderId: 5,
     name: "Dr. Kiran Kumar B M",
     role: "Event Head (RTC Campus)",
     designation: "Associate Professor of FET, RUAS",
@@ -91,6 +97,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
   },
   {
     id: "sujata-bijwe",
+    placeholderId: 6,
     name: "Ms. Sujata Bijwe",
     role: "Head Industry Collaboration",
     designation: "Adjunct Faculty of FMC, RUAS",
@@ -103,6 +110,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
   },
   {
     id: "ajay-r",
+    placeholderId: 7,
     name: "Mr. Ajay R",
     role: "Head Finance",
     designation: "Assistant Professor of FMC, RUAS",
@@ -118,6 +126,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
 export const CORE_LEADERSHIP: BoardMember[] = [
   {
     id: "gurutejas-c",
+    placeholderId: 8,
     name: "Mr. Gurutejas C",
     role: "Sr. President",
     designation: "LEADS Next Gen Centre",
@@ -130,6 +139,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "abhijit-arya",
+    placeholderId: 9,
     name: "Mr. Abhijit Arya",
     role: "Sr. Vice President",
     designation: "LEADS Next Gen Centre",
@@ -142,6 +152,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "laksh-soorya-singh",
+    placeholderId: 10,
     name: "Mr. Laksh Soorya Singh",
     role: "Sr. Events & Operations Head",
     designation: "LEADS Next Gen Centre",
@@ -154,6 +165,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "bhawen-maroo",
+    placeholderId: 11,
     name: "Mr. Bhawen Maroo",
     role: "Sr. Events & Operations Head",
     designation: "LEADS Next Gen Centre",
@@ -166,6 +178,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "shreesha-sn",
+    placeholderId: 12,
     name: "Ms. Shreesha S.N",
     role: "Sr. Social Media & Design Head",
     designation: "LEADS Next Gen Centre",
@@ -178,6 +191,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "bharvi-padia",
+    placeholderId: 13,
     name: "Ms. Bharvi A Padia",
     role: "Sr. PR Head",
     designation: "LEADS Next Gen Centre",
@@ -190,6 +204,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "arvind-rakshith",
+    placeholderId: 14,
     name: "Mr. Arvind Rakshith G",
     role: "Sr. Finance & Sponsorship Head",
     designation: "LEADS Next Gen Centre",
@@ -202,6 +217,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
   },
   {
     id: "syed-furqaan",
+    placeholderId: 15,
     name: "Mr. Syed Furqaan Ahmed",
     role: "Sr. Research & Development Head",
     designation: "LEADS Next Gen Centre",
@@ -217,6 +233,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
 export const ORGANIZING_COMMITTEE: BoardMember[] = [
   {
     id: "nuthan-h",
+    placeholderId: 16,
     name: "Nuthan H",
     role: "President",
     designation: "Organizing Committee, LEADS",
@@ -227,6 +244,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "kunal-bhadauria",
+    placeholderId: 17,
     name: "Kunal Bhadauria",
     role: "Vice President",
     designation: "Organizing Committee, LEADS",
@@ -237,6 +255,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "kayomarz-pavri",
+    placeholderId: 18,
     name: "Kayomarz Pavri",
     role: "Head - Design & Digital Media",
     designation: "Organizing Committee & Tech Lead",
@@ -247,6 +266,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "shwetha-s",
+    placeholderId: 19,
     name: "Shwetha S",
     role: "Head - Design and Social Media",
     designation: "Organizing Committee",
@@ -257,6 +277,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "sudev-mitra",
+    placeholderId: 20,
     name: "Sudev Mitra",
     role: "Chief Coordinator",
     designation: "Organizing Committee",
@@ -267,6 +288,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "jyotsna-karn",
+    placeholderId: 21,
     name: "Jyotsna Karn",
     role: "Chief Coordinator",
     designation: "Organizing Committee",
@@ -277,6 +299,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "pranav-pj",
+    placeholderId: 22,
     name: "Pranav P J",
     role: "Chief Coordinator",
     designation: "Organizing Committee",
@@ -287,6 +310,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "shravya-t",
+    placeholderId: 23,
     name: "Shravya T",
     role: "Chief Coordinator",
     designation: "Organizing Committee",
@@ -297,6 +321,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "shriram-sg",
+    placeholderId: 24,
     name: "Shriram SG",
     role: "General Secretary",
     designation: "Organizing Committee",
@@ -307,6 +332,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "bhavya-shree",
+    placeholderId: 25,
     name: "S Bhavya Shree",
     role: "General Secretary",
     designation: "Organizing Committee",
@@ -317,6 +343,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "manoj-petakamsetty",
+    placeholderId: 26,
     name: "Manoj Petakamsetty",
     role: "General Secretary",
     designation: "Organizing Committee",
@@ -327,6 +354,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "yash-chandak",
+    placeholderId: 27,
     name: "Yash Chandak",
     role: "Head - Operations and Logistics",
     designation: "Organizing Committee",
@@ -337,6 +365,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "niyati-chawra",
+    placeholderId: 28,
     name: "Niyati Chawra",
     role: "Head - Leadership and Development",
     designation: "Organizing Committee",
@@ -347,6 +376,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "sadiya-sawood",
+    placeholderId: 29,
     name: "Sadiya Sawood",
     role: "Head - Leadership and Development",
     designation: "Organizing Committee",
@@ -357,6 +387,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "nimisha-km",
+    placeholderId: 30,
     name: "Nimisha K M",
     role: "Head - Sustainability and Innovation",
     designation: "Organizing Committee",
@@ -367,6 +398,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "kishan-kp",
+    placeholderId: 31,
     name: "Kishan KP",
     role: "Head - Marketing and Branding",
     designation: "Organizing Committee",
@@ -377,6 +409,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
   },
   {
     id: "aravind-manashetti",
+    placeholderId: 32,
     name: "Aravind Manashetti",
     role: "Head - Finance and Sponsorship",
     designation: "Organizing Committee",
@@ -390,6 +423,7 @@ export const ORGANIZING_COMMITTEE: BoardMember[] = [
 export const STUDENT_ADVISORY_COUNCIL: BoardMember[] = [
   {
     id: "sahana-mahadev",
+    placeholderId: 33,
     name: "Sahana Mahadev",
     role: "Senior Student Advisor",
     designation: "Student Advisory Council, LEADS",
@@ -400,6 +434,7 @@ export const STUDENT_ADVISORY_COUNCIL: BoardMember[] = [
   },
   {
     id: "anurag-pandey",
+    placeholderId: 34,
     name: "Anurag Pandey",
     role: "Senior Student Advisor",
     designation: "Student Advisory Council, LEADS",
@@ -413,6 +448,7 @@ export const STUDENT_ADVISORY_COUNCIL: BoardMember[] = [
 export const GOVERNING_ADVISORS: BoardMember[] = [
   {
     id: "ramanan-ramanathan",
+    placeholderId: 35,
     name: "Mr. Ramanan Ramanathan",
     role: "Governing Advisory Board",
     designation: "Mission Director, Atal Innovation Mission | Chairperson, DST, GoI",
@@ -424,6 +460,7 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
   },
   {
     id: "rishikesh-patankar",
+    placeholderId: 36,
     name: "Mr. Rishikesh Patankar",
     role: "Governing Advisory Board",
     designation: "Vice President, National Skill Development Corporation (NSDC)",
@@ -435,6 +472,7 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
   },
   {
     id: "balakrishnan-i",
+    placeholderId: 37,
     name: "Mr. Balakrishnan I",
     role: "Governing Advisory Board",
     designation: "Joint Director / Scientist, Ministry of Electronics & IT, GoI",
@@ -446,6 +484,7 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
   },
   {
     id: "anisshh-somani",
+    placeholderId: 38,
     name: "Mr. Anisshh Somani",
     role: "Governing Advisory Board",
     designation: "Program Director, INDIAai, Govt of India",
@@ -457,6 +496,7 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
   },
   {
     id: "vidur-dewan",
+    placeholderId: 39,
     name: "Mr. Vidur Dewan",
     role: "Corporate Advisory Board",
     designation: "Associate VP, Edelman Global Advisory",
@@ -468,6 +508,7 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
   },
   {
     id: "praveen-kamath",
+    placeholderId: 40,
     name: "Dr. Praveen Kamath Kumbla",
     role: "Corporate Advisory Board",
     designation: "General Manager HR, Wipro",

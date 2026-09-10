@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import { BoardMember } from "@/lib/board-data";
 import { ShieldCheck, Linkedin } from "lucide-react";
+import PlaceholderBadge from "@/components/PlaceholderBadge";
+import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 
 interface BoardMemberCardProps {
   member: BoardMember;
@@ -9,6 +13,25 @@ interface BoardMemberCardProps {
 }
 
 export default function BoardMemberCard({ member, lightMode = false }: BoardMemberCardProps) {
+  const placeholderSvg = member.placeholderId
+    ? generateNumberedPlaceholderSvg({
+        id: member.placeholderId,
+        title: member.name,
+        subtitle: member.role,
+        category: member.roleGroup,
+      })
+    : null;
+
+  const [imgSrc, setImgSrc] = useState<string>(
+    member.image || placeholderSvg || ""
+  );
+
+  const handleImageError = () => {
+    if (placeholderSvg && imgSrc !== placeholderSvg) {
+      setImgSrc(placeholderSvg);
+    }
+  };
+
   if (lightMode) {
     return (
       <BorderGlow
@@ -22,19 +45,23 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
         animated={true}
         className="h-full shadow-md hover:shadow-xl transition-shadow duration-300"
       >
-        <div className="p-6 group flex flex-col justify-between h-full text-[#1E0C3D]">
+        <div className="p-6 group flex flex-col justify-between h-full text-[#1E0C3D] relative">
           <div>
             {/* Avatar / Photo & Role Badge */}
             <div className="flex items-start justify-between mb-4">
               <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 border-[#DE3F11]/40 shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#361C6A] flex items-center justify-center text-white font-extrabold text-xl shrink-0">
-                {member.image ? (
+                {imgSrc ? (
                   <img
-                    src={member.image}
+                    src={imgSrc}
+                    onError={handleImageError}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 ) : (
                   <span>{member.initials}</span>
+                )}
+                {member.placeholderId && (
+                  <PlaceholderBadge id={member.placeholderId} position="bottom-right" className="scale-75 origin-bottom-right" />
                 )}
               </div>
 
@@ -104,19 +131,23 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
       animated={true}
       className="h-full shadow-lg hover:shadow-2xl transition-shadow duration-300"
     >
-      <div className="p-6 group flex flex-col justify-between h-full text-white">
+      <div className="p-6 group flex flex-col justify-between h-full text-white relative">
         <div>
           {/* Avatar / Photo & Role Badge */}
           <div className="flex items-start justify-between mb-4">
             <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-[#DE3F11]/40 shadow-md group-hover:scale-105 transition-transform duration-300 bg-[#361C6A] flex items-center justify-center text-white font-extrabold text-xl shrink-0">
-              {member.image ? (
+              {imgSrc ? (
                 <img
-                  src={member.image}
+                  src={imgSrc}
+                  onError={handleImageError}
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               ) : (
                 <span>{member.initials}</span>
+              )}
+              {member.placeholderId && (
+                <PlaceholderBadge id={member.placeholderId} position="bottom-right" className="scale-75 origin-bottom-right" />
               )}
             </div>
 
@@ -140,11 +171,11 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
 
           {/* Message or Bio */}
           {member.message ? (
-            <p className="text-xs text-white/85 leading-relaxed mb-4 border-l-2 border-[#DE3F11]/60 pl-3 italic">
+            <p className="text-xs text-white/80 leading-relaxed mb-4 border-l-2 border-[#DE3F11] pl-3 italic bg-white/5 py-1 rounded-r-lg">
               "{member.message}"
             </p>
           ) : member.bio ? (
-            <p className="text-xs text-white/75 leading-relaxed mb-4">
+            <p className="text-xs text-white/70 leading-relaxed mb-4">
               {member.bio}
             </p>
           ) : null}
@@ -154,7 +185,7 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
         <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60">
           <div className="flex items-center space-x-1.5 truncate mr-2">
             <ShieldCheck className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
-            <span className="truncate">{member.affiliation}</span>
+            <span className="truncate font-medium">{member.affiliation}</span>
           </div>
 
           {member.linkedin && (
