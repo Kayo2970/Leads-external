@@ -277,13 +277,12 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
             </svg>
 
             {/* White Logo Outline Overlay - Aligned with the Layer Mask */}
-            <div ref={logoBoxRef} className="logo-scroll-expand__logo-box relative">
+            <div ref={logoBoxRef} className="logo-scroll-expand__logo-box">
               <img
                 src={logoSrc}
                 alt="LEADS Next Gen Centre Logo Mask"
                 className="w-full h-full object-contain brightness-0 invert filter drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]"
               />
-              <PlaceholderBadge id={84} position="top-left" className="scale-75 origin-top-left" />
             </div>
 
             {/* Clickable Scroll Down Indicator & Button (Accessibility Feature) */}

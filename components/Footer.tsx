@@ -23,13 +23,12 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block group">
-              <div className="bg-white/95 px-4 py-2 rounded-2xl border border-white/20 inline-block shadow-md group-hover:scale-105 transition-transform duration-300 relative">
+              <div className="bg-white/95 px-4 py-2 rounded-2xl border border-white/20 inline-block shadow-md group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/leads-header-logo.png"
                   alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
                   className="h-11 sm:h-12 w-auto object-contain"
                 />
-                <PlaceholderBadge id={87} position="top-left" className="scale-75 origin-top-left" />
               </div>
             </Link>
             <p className="text-sm text-[#E2D9F3] leading-relaxed max-w-md">
@@ -214,13 +213,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="bg-white/95 px-4 py-2 rounded-2xl border border-white/20 shadow-md inline-flex items-center justify-center hover:scale-105 transition-transform duration-300 relative">
+          <div className="bg-white/95 px-4 py-2 rounded-2xl border border-white/20 shadow-md inline-flex items-center justify-center hover:scale-105 transition-transform duration-300">
             <img
               src="/fmc-logo-white.png"
               alt="Faculty of Management and Commerce - M. S. Ramaiah University of Applied Sciences"
               className="h-8 sm:h-9 w-auto object-contain"
             />
-            <PlaceholderBadge id={89} position="top-right" className="scale-75 origin-top-right" />
           </div>
         </div>
 
