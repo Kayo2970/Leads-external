@@ -283,7 +283,7 @@ export default function OrganogramChart({
             <div className="text-sm font-extrabold text-white">Student Advisory Committee</div>
           </button>
 
-          {/* Core Council */}
+          {/* Student Core Council */}
           <button
             type="button"
             onClick={() => onSelectRoleGroup?.("Student Core Council")}
@@ -294,10 +294,10 @@ export default function OrganogramChart({
             }`}
           >
             <Crown className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-white">Core Council</div>
+            <div className="text-sm font-extrabold text-white">Student Core Council</div>
           </button>
 
-          {/* Trainee Associate */}
+          {/* Student Trainee Associates */}
           <button
             type="button"
             onClick={() => onSelectRoleGroup?.("Student Trainee Associates")}
@@ -308,7 +308,7 @@ export default function OrganogramChart({
             }`}
           >
             <UserPlus className="w-6 h-6 text-purple-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-white">Trainee Associate</div>
+            <div className="text-sm font-extrabold text-white">Student Trainee Associates</div>
           </button>
           </div>
         </div>
