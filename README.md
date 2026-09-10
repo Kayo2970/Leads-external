@@ -1,4 +1,4 @@
-# LEADS Next-Gen Centre — External Web Platform & Governance Portal
+# LEADS Next-Gen Centre — External Web Platform & Governance Hub
 
 > **Centre for Leadership Empowering Attitude Development for Sustainability (LEADS)**  
 > *Faculty of Management and Commerce (FMC) · M. S. Ramaiah University of Applied Sciences (RUAS), Bengaluru, India*
@@ -7,12 +7,13 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.12-88CE02?style=flat-square&logo=greensock)](https://greensock.com/gsap/)
+[![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=flat-square)](#)
 
 ---
 
 ## 📌 Overview
 
-The **LEADS External Web Platform** is the flagship public-facing web presence and governance showcase for the **LEADS Next-Gen Centre** at Ramaiah University of Applied Sciences. 
+The **LEADS External Web Platform** is the flagship public-facing digital platform and governance showcase for the **LEADS Next-Gen Centre** at Ramaiah University of Applied Sciences (RUAS). 
 
 Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`, Imperial Violet `#361C6A`, Crimson Rose `#9C1256`, and Radiant Orange `#DE3F11`), the platform bridges empirical academic rigor with real-world executive empowerment and multidisciplinary non-technical leadership.
 
@@ -20,38 +21,51 @@ Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`
 
 ## ✨ Key Features & Architecture
 
-### 1. 🎬 Cinematic Hero with Logo Scroll Mask (`LogoScrollExpand`)
-- **Custom Vector Mask**: Incorporates the official LEADS insignia as an SVG alpha channel mask (`public/leads-mask.svg`).
-- **GSAP Scroll-Triggered Zoom**: As users scroll down the hero section, the logo dynamically zooms and opens up from a centered icon to reveal full-stage campus media and institutional headlines.
+### 1. 🧭 Rounded Floating Glassmorphic Navigation (`Nav.tsx`)
+- **Floating Pill Header**: Modern floating navigation bar with rounded borders (`rounded-2xl lg:rounded-full`), saturated backdrop blur, and 360° glassmorphic border highlights.
+- **Dynamic Dropdowns**: Instant access to LEADS Initiatives, Summits (Bharath Leadership Summit), and Official Impact Publications.
+- **Responsive Mobile Drawer**: Matching rounded drawer menu with direct access to all flagship programs and documents.
 
-### 2. 🏛️ Interactive Institutional Organogram (`OrganogramChart`)
-- **Full-Width Visual Hierarchy**: Spans 4 distinct governance tiers:
-  - **Tier 01: University Patronage & Advisory** (Honourable Vice-Chancellor & Dean FMC).
-  - **Tier 02: Centre Leadership & Faculty Heads** (Centre Head, Campus Event Leads, Industry Relations, Fiscal Governance).
-  - **Tier 03: Governing & Corporate Advisory Board** (Dignitaries from AIM, NSDC, MeitY, INDIAai, and industry leaders).
-  - **Tier 04: Student Executive Wings** (Student Core Council, Student Advisory Council, Student Trainee Associates).
-- **Interactive Deep Linking**: Clicking any governance level in the organogram smoothly navigates to and filters the directory below.
+### 2. 🎬 Cinematic Hero with Logo Scroll Mask (`LogoScrollExpand.tsx`)
+- **Custom Vector Mask**: Official LEADS insignia SVG alpha-channel mask (`public/leads-mask.svg`).
+- **GSAP Scroll-Triggered Zoom**: As visitors scroll, the logo dynamically zooms and expands to reveal campus media, video reels, and institutional headlines.
 
-### 3. 👥 Interactive Dynamic Member Cards (`ChromaGrid`)
-- **Cursor-Tracking Spotlight**: Interactive GSAP quickSetter spotlighting that tracks pointer coordinates across cards.
-- **Portrait Executive Format**: Optimized `3:3.8` portrait vertical ratio cards for all university patrons, faculty heads, advisors, and student council members.
-- **Partitioned Councils**: Organized governance tiers with filter tabs and LinkedIn links.
+### 3. 🏛️ Interactive Governance Organogram (`OrganogramChart.tsx`)
+- **Full-Width Hierarchy**: Multi-tier flowchart connecting:
+  - **Patron & Chief Advisory**: Vice-Chancellor, Dean FMC & Strategic Leadership.
+  - **Centre Leadership & Faculty Leads**: Centre Head, Campus Event Leads, Industry Relations & Fiscal Governance.
+  - **Governing & Corporate Advisory Board**: Dignitaries from AIM, NSDC, MeitY, INDIAai, and industry captains.
+  - **Student Councils**: Student Core Council, Advisory Council, and Student Trainees.
+- **Deep-Linked Interactions**: Clicking any governance level smoothly highlights the corresponding directory section.
 
-### 4. 📅 Chronological Alternating Events Engine (`/events`)
-- **Alternating Zigzag Layout**: High-impact event cards alternating content and event photographs (Item 1: Content Left / Photo Right; Item 2: Photo Left / Content Right).
-- **Comprehensive Metadata**: Date, venue, attendee statistics, keynote dignitaries, and registration pathways.
+### 4. 👥 Interactive Executive Member Cards (`ChromaGrid.tsx` & `BoardMemberCard.tsx`)
+- **Cursor-Tracking Spotlight**: GSAP quickSetter spotlight lighting following the user's cursor across cards.
+- **Portrait Executive Format**: Optimized `3:3.8` portrait vertical ratio cards for all patrons, faculty heads, advisors, and student council members.
+- **Verified Metadata**: Categorized role badges, designations, campus affiliations, and direct LinkedIn profile integration.
 
-### 5. 🔐 Streamlined LEADS Member ERP Portal Gateway (`/portal`)
-- **Production-Ready Enterprise Portal**: Dedicated gateway for LEADS executive council, faculty leads, and student officers.
-- **Direct Single Launch**: Direct authentication launcher to access event management, task engines, budget tracking, minutes archive, and design asset approvals.
+### 5. 📅 Alternating Events Engine & Modal Showcase (`/events`)
+- **Chronological Alternating Grid**: Alternating layout with high-resolution event media, date/venue metadata, and attendee metrics.
+- **Rich Event Modal (`EventModal.tsx`)**: Fullscreen inspection modals with multi-photo carousels, schedule breakdowns, and registration pathways.
 
-### 6. 📊 Institutional Reports & Publications (`/reports`)
-- **Audits & Whitepapers**: Central repository for annual governance reports, leadership summits, student development reviews, and policy documents with live downloadable briefs.
+### 6. 🎓 Comprehensive Capability Programs (`/programs`)
+- **Flagship Modules**: Comprehensive review of Executive FDP (Faculty Development), LDP (Leadership Development), MDP (Management Development), Vanguard Series, SIKHI FICCI Initiatives, and SDP (Student Development).
+- **Bharath Leadership Summit (BLS)**: Direct integration with India's premier annual leadership convention.
 
-### 7. 🚀 Production SEO & Search Indexing
-- **Dynamic XML Sitemap**: Generated via `app/sitemap.ts` mapping all static and dynamic routes.
-- **Robots Protocol**: Managed via `app/robots.ts` configured for search crawler indexing.
-- **4K Ultra-Wide Optimized**: Layout utilities spanning up to `4xl` breakpoints (3840px) to prevent empty margins on large display monitors.
+### 7. 🤝 Institutional & Industry Partners (`/partners`)
+- **Multi-Tier Alliances**: Academic collaborations, corporate partners, industry apex bodies (FICCI, NHRD, AIMS), and government missions.
+- **Interactive Alliances Directory**: Filterable catalog of partner organizations with partnership scopes and verification details.
+
+### 8. 📊 Verified Impact Publications & Interactive Reader (`/reports`)
+- **Official Annual Impact Report**: Showcases the verified **`LEADS Impact Report 2025–2026`** (12.4 MB PDF).
+- **Interactive Central Reader**: Embedded live PDF reader with fullscreen modal inspection, page jump, and direct verified downloads.
+
+### 9. 🔐 LEADS Member ERP Gateway (`/portal`)
+- **Internal System Hub**: Access point for executive council members, event managers, attendance registers, and resource vaults.
+
+### 10. 🚀 Performance, Accessibility & SEO
+- **Automated Sitemap & Robots**: Generated dynamically via `app/sitemap.ts` and `app/robots.ts`.
+- **4K Ultra-Wide Screen Optimization**: Dedicated layout utilities up to `4xl` breakpoints (3840px) to prevent empty margins on ultra-wide displays.
+- **Full Legal Compliance**: Integrated Cookie Consent Banner, Privacy Policy, Terms of Service, and Accessibility Statement.
 
 ---
 
@@ -60,67 +74,71 @@ Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`
 ```text
 Leads-external/
 ├── app/
-│   ├── layout.tsx              # Root Layout with Navbar, Footer, and Fonts
-│   ├── page.tsx                # Home Page with LogoScrollExpand Hero & Flagships
-│   ├── sitemap.ts              # Automated XML Sitemap generation for SEO
-│   ├── robots.ts               # Robots.txt crawler configuration
-│   ├── about/
-│   │   └── page.tsx            # Vision, Mission, Organogram & Partitioned Members Directory
-│   ├── events/
-│   │   └── page.tsx            # Chronological Alternating Event Showcase
-│   ├── reports/
-│   │   └── page.tsx            # Annual Audits, Whitepapers, and Impact Publications
-│   ├── portal/
-│   │   └── page.tsx            # LEADS Members ERP Portal Gateway
-│   ├── contact/
-│   │   └── page.tsx            # Executive Communication Desk & Campus Maps
+│   ├── layout.tsx              # Root layout with fonts, metadata, navbar, and footer
+│   ├── page.tsx                # Home page with hero, values, pillars & flagships
+│   ├── about/page.tsx          # Vision, mission, organogram & leadership directory
+│   ├── events/page.tsx         # Chronological events showcase & modal triggers
+│   ├── programs/page.tsx       # Capability programs (FDP, LDP, MDP, Vanguard, SDP)
+│   ├── partners/page.tsx       # Academic, industry & government alliances directory
+│   ├── reports/page.tsx        # Official annual impact report & interactive reader
+│   ├── portal/page.tsx         # LEADS internal ERP member portal gateway
+│   ├── contact/page.tsx        # Executive communication desk, inquiry form & campus maps
 │   ├── privacy/page.tsx        # Privacy Policy
 │   ├── terms/page.tsx          # Terms of Service
 │   ├── cookies/page.tsx        # Cookie Policy
-│   └── accessibility/page.tsx  # Digital Accessibility Statement
+│   ├── accessibility/page.tsx  # Accessibility Statement
+│   ├── sitemap.ts              # Automated XML sitemap generation
+│   └── robots.ts               # Web crawler search configuration
 ├── components/
-│   ├── LogoScrollExpand.tsx    # GSAP Scroll-triggered SVG Logo Mask Opening
-│   ├── LogoScrollExpand.css    # Responsive styles for logo mask transformation
-│   ├── ChromaGrid.tsx          # GSAP Spotlight Interactive Portrait Member Grid
-│   ├── ChromaGrid.css          # Dynamic lighting & portrait styling
-│   ├── OrganogramChart.tsx     # 4-Tier Interactive Governance Structure
-│   ├── BorderGlow.tsx          # Multi-color animated glowing borders
-│   ├── Nav.tsx                 # Responsive executive navigation bar
-│   └── Footer.tsx              # Comprehensive footer with official FMC & RUAS affiliations
+│   ├── Nav.tsx                 # Rounded floating glassmorphic navigation bar
+│   ├── Footer.tsx              # Comprehensive footer with official FMC & RUAS affiliations
+│   ├── LogoScrollExpand.tsx    # GSAP scroll-triggered SVG logo zoom mask
+│   ├── OrganogramChart.tsx     # Multi-tier interactive governance tree
+│   ├── ChromaGrid.tsx          # Cursor-tracking spotlight member directory
+│   ├── BoardMemberCard.tsx     # Executive portrait profile card
+│   ├── EventCard.tsx           # Alternating event showcase card
+│   ├── EventModal.tsx          # Rich modal viewer for event details and media
+│   ├── ReportCard.tsx          # Verified publication highlight card
+│   ├── PdfViewerModal.tsx      # Fullscreen interactive PDF viewer modal
+│   ├── CookieBanner.tsx        # GDPR/India compliance cookie banner
+│   └── BorderGlow.tsx          # Hardware-accelerated glowing gradient borders
 ├── lib/
-│   ├── board-data.ts           # Comprehensive member database & roles
-│   └── events-data.ts          # Summit, masterclass, and workshop records
+│   ├── board-data.ts           # Complete leadership and governance registry
+│   ├── events-data.ts          # Summits, masterclasses, and workshop archives
+│   ├── reports-data.ts         # Verified impact report catalog
+│   └── placeholders.ts         # Numbered visual placeholder system
 ├── public/
-│   ├── leads-mask.svg          # Official vector alpha-channel mask
-│   ├── leads-header-logo.png   # Centre logo asset
-│   ├── fmc-logo-white.png      # FMC institutional logo
-│   └── images/                 # Leadership, summit, and event visual assets
-├── tailwind.config.js          # Custom theme tokens, colors, and 4K breakpoints
-└── package.json                # Project dependencies & scripts
+│   ├── leads-short-logo.png    # LEADS insignia logo
+│   ├── ruas-logo.png           # Ramaiah University official seal
+│   ├── bls-logo.webp           # Bharath Leadership Summit emblem
+│   ├── reports/                # Official verified PDF publications
+│   └── images/                 # Committee portraits, summits, and campus assets
+├── tailwind.config.js          # Extended brand colors, shadows, and breakpoints
+└── package.json                # Project dependencies and build scripts
 ```
 
 ---
 
-## 🎨 Color Palette & Design System
+## 🎨 Color Palette & Visual System
 
-| Token | Hex | Role |
+| Color Name | Hex Code | Purpose & Usage |
 | :--- | :--- | :--- |
-| **Deep Royal Purple** | `#241147` | Background foundation & Dark Mode Sections |
-| **Imperial Violet** | `#361C6A` | Hero sections, cards, and primary containers |
-| **Crimson Rose** | `#9C1256` | Primary accents, gradients, and badge highlights |
-| **Radiant Orange** | `#DE3F11` | Action accents, glow highlights, and CTA buttons |
-| **Soft Lilac Light** | `#FDFBFF` / `#F7F4FC` | Light content section backdrops |
-| **Crisp White** | `#FFFFFF` | Primary headings and container surfaces |
+| **Deep Royal Purple** | `#1E0C3D` / `#241147` | Primary background foundation & dark mode sections |
+| **Imperial Violet** | `#361C6A` | Hero headers, card backgrounds, and primary containers |
+| **Crimson Rose** | `#9C1256` | Primary accents, gradients, badges, and brand highlights |
+| **Radiant Orange** | `#DE3F11` | Action accents, glow effects, and primary CTA buttons |
+| **Lilac Mist** | `#E2D9F3` | Secondary text, subtle descriptions, and borders |
+| **Pure White** | `#FFFFFF` | Primary headlines and high-contrast surfaces |
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Getting Started & Local Development
 
 ### Prerequisites
-- **Node.js**: `v18.17.0` or later
-- **npm** or **pnpm** / **yarn**
+- **Node.js**: `v18.17.0` or higher
+- **npm**, **pnpm**, or **yarn**
 
-### Installation
+### Quick Start
 
 1. **Clone the repository**:
    ```bash
@@ -133,18 +151,18 @@ Leads-external/
    npm install
    ```
 
-3. **Start the development server**:
+3. **Run development server**:
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) (or the assigned port) in your browser.
+   Open [http://localhost:3001](http://localhost:3001) in your browser.
 
-4. **Build for production**:
+4. **Build production bundle**:
    ```bash
    npm run build
    ```
 
-5. **Start production server**:
+5. **Run production build**:
    ```bash
    npm start
    ```
@@ -155,35 +173,11 @@ Leads-external/
 
 **LEADS Next-Gen Centre** operates under the academic deanship of the **Faculty of Management and Commerce (FMC)** at **M. S. Ramaiah University of Applied Sciences (RUAS)**, Bengaluru.
 
-For administrative inquiries and official correspondence:
-- **Email**: `leads@msruas.ac.in`
-- **Location**: Gnanagangothri & Ramaiah Technology Campuses, Bengaluru, Karnataka, India.
-
+- **Official Email**: `leads@msruas.ac.in`
+- **Campuses**: 
+  - Gnanagangothri Campus (GG Campus), New BEL Road, Bengaluru
+  - Ramaiah Technology Campus (RTC Campus), Peenya, Bengaluru
 
 ---
 
 © 2026 LEADS Next-Gen Centre · Faculty of Management and Commerce · RUAS. All Rights Reserved.
-
----
-
-## 🔧 Pending Configuration
-
-> **For AI / Developer**: The following items are intentionally left as placeholders and must be updated before the next deployment.
-
-### ERP Portal External Link
-
-The **"Login for Members"** button on the `/portal` page currently points to a placeholder URL (`#`).  
-When the ERP portal URL is available, update the constant at the **top of this file**:
-
-```
-File: app/portal/page.tsx
-Line: const ERP_PORTAL_URL = "#";
-```
-
-Replace `"#"` with the actual external ERP portal URL, for example:
-
-```ts
-const ERP_PORTAL_URL = "https://erp.leadsnextgen.in"; // ← set this
-```
-
-The button already opens in a new tab (`target="_blank"`) and has the correct styling. No other changes are needed.
