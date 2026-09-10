@@ -141,7 +141,7 @@ export default function OrganogramChart({
             <UserCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
             <div className="text-base font-black text-white">Advisor</div>
             <div className="text-xs text-emerald-300 font-bold mt-0.5">Dr. Subhadeep Mukherjee</div>
-            <div className="text-[11px] text-emerald-100/90 font-medium">CEO of RTBI</div>
+            <div className="text-[11px] text-emerald-100/90 font-medium">CEO of Ramaiah Technology Business Incubator</div>
           </button>
         </div>
 

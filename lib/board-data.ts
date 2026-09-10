@@ -55,7 +55,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     placeholderId: 3,
     name: "Dr. Subhadeep Mukherjee",
     role: "ADVISOR",
-    designation: "CEO of RTBI",
+    designation: "CEO of Ramaiah Technology Business Incubator",
     roleGroup: "Centers Leadership",
     initials: "SM",
     image: "/images/leadership/subhadeep-mukherjee.webp",
