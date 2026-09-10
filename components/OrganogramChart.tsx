@@ -45,9 +45,9 @@ export default function OrganogramChart({
         </p>
       </div>
 
-      <div className="relative z-10 space-y-8">
+      <div className="relative z-10 flex flex-col items-center">
         {/* Tier 1: Patron (Vice Chancellor) */}
-        <div className="max-w-md mx-auto">
+        <div className="w-full max-w-md">
           <button
             type="button"
             onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
@@ -64,43 +64,54 @@ export default function OrganogramChart({
           </button>
         </div>
 
-        {/* Connector Line Patron -> BoG & BoA */}
-        <div className="flex justify-center">
-          <div className="w-0.5 h-6 bg-gradient-to-b from-amber-400 to-blue-400" />
-        </div>
+        {/* Vertical Spine from Patron with Dotted Horizontal Line to BoG & BoA on Right */}
+        <div className="w-full max-w-4xl relative flex flex-col items-center">
+          {/* Top Line Segment touching Patron */}
+          <div className="w-0.5 h-8 bg-gradient-to-b from-amber-400 to-blue-400" />
 
-        {/* Tier 2: BoG & BoA below Vice Chancellor */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-          {/* BoG */}
-          <div className="p-4 rounded-2xl bg-blue-950/40 border border-blue-400/30 text-center flex flex-col items-center justify-center shadow-lg">
-            <Landmark className="w-6 h-6 text-blue-400 mb-1.5" />
-            <div className="text-sm font-extrabold text-blue-100">BoG</div>
-            <div className="text-[11px] text-blue-200/80 font-medium">Board of Governors</div>
+          {/* Intermediate Junction with Dotted Branch to Right */}
+          <div className="w-full relative flex items-center justify-center">
+            {/* Vertical Flowchart Line Segment */}
+            <div className="w-0.5 h-24 bg-gradient-to-b from-blue-400 to-emerald-400" />
+
+            {/* Dotted Horizontal Branch to Right for BoG & BoA */}
+            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 flex items-center">
+              {/* Dotted Line */}
+              <div className="w-6 sm:w-12 md:w-20 border-t-2 border-dashed border-blue-400/80" />
+
+              {/* BoG & BoA Box */}
+              <div className="flex flex-col sm:flex-row gap-3 p-3 rounded-2xl bg-blue-950/60 border border-blue-400/40 backdrop-blur-md shadow-2xl">
+                {/* BoG */}
+                <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-400/30 text-center min-w-[120px] sm:min-w-[140px]">
+                  <Landmark className="w-5 h-5 text-blue-400 mx-auto mb-1" />
+                  <div className="text-xs font-black text-blue-100">BoG</div>
+                  <div className="text-[10px] text-blue-200/80 font-medium">Board of Governors</div>
+                </div>
+
+                {/* BoA */}
+                <button
+                  type="button"
+                  onClick={() => onSelectRoleGroup?.("Governing & Advisory")}
+                  className={`p-3 rounded-xl text-center min-w-[120px] sm:min-w-[140px] border transition-all cursor-pointer ${
+                    activeRoleGroup === "Governing & Advisory"
+                      ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-lg"
+                      : "bg-blue-900/40 border-blue-400/30 hover:border-blue-300"
+                  }`}
+                >
+                  <Users className="w-5 h-5 text-blue-400 mx-auto mb-1" />
+                  <div className="text-xs font-black text-blue-100">BoA</div>
+                  <div className="text-[10px] text-blue-200/80 font-medium">Board of Advisors</div>
+                </button>
+              </div>
+            </div>
           </div>
 
-          {/* BoA */}
-          <button
-            type="button"
-            onClick={() => onSelectRoleGroup?.("Governing & Advisory")}
-            className={`p-4 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Governing & Advisory"
-                ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                : "bg-blue-950/40 border-blue-400/30 hover:border-blue-300 shadow-lg"
-            }`}
-          >
-            <Users className="w-6 h-6 text-blue-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-blue-100">BoA</div>
-            <div className="text-[11px] text-blue-200/80 font-medium">Board of Advisors</div>
-          </button>
+          {/* Bottom Line Segment touching Chief Advisor / Advisor */}
+          <div className="w-0.5 h-6 bg-emerald-400" />
         </div>
 
-        {/* Connector Line -> Deanship & Incubation */}
-        <div className="flex justify-center">
-          <div className="w-0.5 h-6 bg-gradient-to-b from-blue-400 to-emerald-400" />
-        </div>
-
-        {/* Chief Advisor | Advisor */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        {/* Tier 2: Chief Advisor & Advisor */}
+        <div className="w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Chief Advisor */}
           <button
             type="button"
@@ -134,13 +145,11 @@ export default function OrganogramChart({
           </button>
         </div>
 
-        {/* Connector Line -> Centre Head */}
-        <div className="flex justify-center">
-          <div className="w-0.5 h-6 bg-gradient-to-b from-emerald-400 to-purple-400" />
-        </div>
+        {/* Connector Line -> Centre Head (touching boxes) */}
+        <div className="w-0.5 h-8 bg-gradient-to-b from-emerald-400 to-purple-400" />
 
-        {/* Centre Head */}
-        <div className="max-w-md mx-auto">
+        {/* Tier 3: Centre Head */}
+        <div className="w-full max-w-md">
           <button
             type="button"
             onClick={() => onSelectRoleGroup?.("Centers Leadership")}
@@ -157,13 +166,11 @@ export default function OrganogramChart({
           </button>
         </div>
 
-        {/* Connector Line -> Functional Heads */}
-        <div className="flex justify-center">
-          <div className="w-0.5 h-6 bg-gradient-to-b from-purple-400 to-amber-400" />
-        </div>
+        {/* Connector Line -> Functional Heads (touching boxes) */}
+        <div className="w-0.5 h-8 bg-gradient-to-b from-purple-400 to-amber-400" />
 
-        {/* Functional Heads & Finance Hierarchy */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto items-start">
+        {/* Tier 4: Functional Heads & Finance Hierarchy */}
+        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
           {/* Column 1: Unified Finance Department Block */}
           <div className="flex flex-col gap-3 p-4 rounded-3xl bg-amber-950/20 border border-amber-500/30 shadow-lg">
             <div className="text-center text-[11px] font-black text-amber-400 uppercase tracking-widest mb-0.5">
@@ -188,9 +195,9 @@ export default function OrganogramChart({
               </div>
             </button>
 
-            {/* Vertical Connector Line */}
-            <div className="flex justify-center">
-              <div className="w-0.5 h-5 bg-gradient-to-b from-amber-400 to-amber-500" />
+            {/* Vertical Connector Line touching Dr. Ajay and Dr. Tapas boxes */}
+            <div className="flex justify-center my-0">
+              <div className="w-0.5 h-6 bg-gradient-to-b from-amber-400 to-amber-500" />
             </div>
 
             {/* Finance Officer (Dr. Tapas Kumar Sahoo) - Level Down */}
@@ -248,13 +255,11 @@ export default function OrganogramChart({
           </button>
         </div>
 
-        {/* Connector Line -> Councils & Wings */}
-        <div className="flex justify-center">
-          <div className="w-0.5 h-6 bg-gradient-to-b from-amber-400 to-[#DE3F11]" />
-        </div>
+        {/* Connector Line -> Councils & Wings (touching boxes) */}
+        <div className="w-0.5 h-8 bg-gradient-to-b from-amber-400 to-[#DE3F11]" />
 
-        {/* Councils & Wings */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {/* Tier 5: Councils & Wings */}
+        <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Alumni Student Council */}
           <button
             type="button"
@@ -310,8 +315,8 @@ export default function OrganogramChart({
             <UserPlus className="w-6 h-6 text-purple-400 mx-auto mb-1.5" />
             <div className="text-sm font-extrabold text-white">Student Trainee Associates</div>
           </button>
-          </div>
         </div>
       </div>
+    </div>
   );
 }
