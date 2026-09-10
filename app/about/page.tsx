@@ -26,7 +26,7 @@ export default function AboutPage() {
   const tabOptions = [
     { label: "All Members", value: "All" },
     { label: "Patron & Chief Advisor", value: "Patron & Chief Advisor" },
-    { label: "Centre Head & Faculty Leads", value: "Centre Head & Faculty Leads" },
+    { label: "Centers Leadership", value: "Centers Leadership" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Student Core Council", value: "Student Core Council" },
     { label: "Student Trainee Associates", value: "Student Trainee Associates" },
@@ -46,14 +46,14 @@ export default function AboutPage() {
       columns: 2,
     },
     {
-      id: "faculty-leads",
-      group: "Centre Head & Faculty Leads" as const,
-      title: "Centre Leadership & Faculty Leads",
+      id: "centers-leadership",
+      group: "Centers Leadership" as const,
+      title: "Centers Leadership",
       badge: "Governance Tier 02",
-      count: "5 Faculty Heads",
+      count: "6 Leaders",
       description:
-        "Faculty leadership driving daily centre operations, inter-campus event execution, corporate collaborations, and fiscal governance.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centre Head & Faculty Leads"),
+        "Executive centre leadership and faculty leads driving daily centre operations, incubation programs, event execution, and fiscal governance.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centers Leadership"),
       columns: 3,
     },
     {

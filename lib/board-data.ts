@@ -6,7 +6,7 @@ export interface BoardMember {
   designation: string;
   roleGroup:
     | "Patron & Chief Advisor"
-    | "Centre Head & Faculty Leads"
+    | "Centers Leadership"
     | "Student Core Council"
     | "Student Advisory Council"
     | "Student Trainee Associates"
@@ -54,15 +54,15 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     id: "subhadeep-mukherjee",
     placeholderId: 3,
     name: "Dr. Subhadeep Mukherjee",
-    role: "CENTRE HEAD",
-    designation: "Associate Professor of FMC, RUAS",
-    roleGroup: "Centre Head & Faculty Leads",
+    role: "CEO OF RTBI",
+    designation: "CEO of RTBI",
+    roleGroup: "Centers Leadership",
     initials: "SM",
     image: "/images/leadership/subhadeep-mukherjee.webp",
     message:
       "We unite industry leaders and young change-makers to discuss innovative solutions, emphasizing dialogue, collaborative execution, and ethical leadership.",
-    bio: "Leading daily academic operations, student leadership incubation, national summit execution, and institutional research roadmaps.",
-    affiliation: "LEADS Next Gen Centre / FMC, RUAS",
+    bio: "Chief Executive Officer of Ramaiah Technology Business Incubator (RTBI), guiding technology acceleration, strategic incubation, and enterprise innovation.",
+    affiliation: "Ramaiah Technology Business Incubator (RTBI) / RUAS",
     linkedin: "https://www.linkedin.com/in/dr-subhadeep-mukherjee-aa78a182",
   },
 ];
@@ -73,13 +73,15 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     id: "pallabi-mund",
     placeholderId: 4,
     name: "Dr. Pallabi Mund",
-    role: "Head Events (GG Campus)",
-    designation: "Associate Professor of FMC, RUAS",
-    roleGroup: "Centre Head & Faculty Leads",
+    role: "CENTRE HEAD",
+    designation: "Centre Head, LEADS Next-Gen Centre",
+    roleGroup: "Centers Leadership",
     initials: "PM",
     image: "/images/committee/pallabi-mund.webp",
-    bio: "Head of Events and Campus Engagement at Gnanagangothri Campus, leading flagship summit coordination and reporting.",
-    affiliation: "Faculty of Management and Commerce, RUAS",
+    message:
+      "Empowering students and faculty to build transformational leadership initiatives across campuses.",
+    bio: "Centre Head of LEADS Next Gen Centre & Associate Professor at FMC, directing day-to-day operations, multi-campus student leadership programs, and flagship summits.",
+    affiliation: "LEADS Next Gen Centre / FMC, RUAS",
     linkedin: "https://www.linkedin.com/in/dr-pallabi-mund-53163a20",
   },
   {
@@ -88,7 +90,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     name: "Dr. Kiran Kumar B M",
     role: "Head Events (RTC Campus)",
     designation: "Associate Professor of FET, RUAS",
-    roleGroup: "Centre Head & Faculty Leads",
+    roleGroup: "Centers Leadership",
     initials: "KK",
     image: "/images/committee/kiran-kumar.webp",
     bio: "Directing multi-campus operations, engineering school collaborations, and technical-to-leadership transition programs.",
@@ -101,7 +103,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     name: "Ms. Sujata Bijwe",
     role: "Head Incubation, Industry Connect",
     designation: "Adjunct Faculty of FMC, RUAS",
-    roleGroup: "Centre Head & Faculty Leads",
+    roleGroup: "Centers Leadership",
     initials: "SB",
     image: "/images/committee/sujata-bijwe.webp",
     bio: "Facilitating corporate sponsorships, executive masterclasses, and national leadership board advisory partnerships.",
@@ -114,7 +116,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     name: "Mr. Ajay R",
     role: "Finance Officer",
     designation: "Assistant Professor of FMC, RUAS",
-    roleGroup: "Centre Head & Faculty Leads",
+    roleGroup: "Centers Leadership",
     initials: "AR",
     image: "/images/committee/ajay-r.webp",
     bio: "Managing institutional fiscal compliance, budgeting, and financial governance for all LEADS summits and workshops.",
@@ -127,7 +129,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     name: "Dr. Tapas Kumar Sahoo",
     role: "Finance Officer",
     designation: "Assistant Professor of FMC, RUAS",
-    roleGroup: "Centre Head & Faculty Leads",
+    roleGroup: "Centers Leadership",
     initials: "TS",
     image: "/images/committee/tapas-kumar-sahoo.webp",
     bio: "Academician and researcher in Commerce & Management, specializing in corporate finance, financial econometrics, and quantitative research at FMC, RUAS.",

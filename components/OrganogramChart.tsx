@@ -97,12 +97,12 @@ export default function OrganogramChart({
           <div className="w-0.5 h-6 bg-gradient-to-b from-blue-400 to-emerald-400" />
         </div>
 
-        {/* LEVEL 2: Chief Advisor | Advisor */}
+        {/* LEVEL 2: Chief Advisor | CEO of RTBI | Advisor */}
         <div className="space-y-3">
           <div className="text-[11px] 2xl:text-xs uppercase font-bold tracking-widest text-emerald-400 text-center">
-            Level 02 · Executive Deanship & Advisory Leadership
+            Level 02 · Executive Deanship & Incubation Leadership
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {/* Chief Advisor */}
             <button
               type="button"
@@ -114,9 +114,25 @@ export default function OrganogramChart({
               }`}
             >
               <Shield className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
-              <div className="text-lg font-black text-white">Chief Advisor</div>
+              <div className="text-base font-black text-white">Chief Advisor</div>
               <div className="text-xs text-emerald-300 font-bold mt-0.5">Dr. K. M. Sharath Kumar</div>
-              <div className="text-[11px] text-emerald-100/90 font-medium">Dean, Faculty of Management & Commerce</div>
+              <div className="text-[11px] text-emerald-100/90 font-medium">Dean, FMC - RUAS</div>
+            </button>
+
+            {/* CEO of RTBI */}
+            <button
+              type="button"
+              onClick={() => onSelectRoleGroup?.("Centers Leadership")}
+              className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
+                activeRoleGroup === "Centers Leadership"
+                  ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
+                  : "bg-emerald-950/50 border-emerald-400/50 hover:border-emerald-300 shadow-lg"
+              }`}
+            >
+              <Building className="w-6 h-6 text-emerald-300 mx-auto mb-1.5" />
+              <div className="text-base font-black text-white">CEO of RTBI</div>
+              <div className="text-xs text-emerald-200 font-bold mt-0.5">Dr. Subhadeep Mukherjee</div>
+              <div className="text-[11px] text-emerald-300/90 font-medium">Ramaiah Tech Business Incubator</div>
             </button>
 
             {/* Advisor */}
@@ -131,7 +147,7 @@ export default function OrganogramChart({
             >
               <UserCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
               <div className="text-base font-extrabold text-emerald-100">Advisor</div>
-              <div className="text-xs text-emerald-200/90 mt-0.5 font-medium">Academic & Institutional Mentors</div>
+              <div className="text-xs text-emerald-200/90 mt-0.5 font-medium">Academic & Mentors</div>
               <div className="text-[11px] text-emerald-300/80">Governing & Corporate Advisory</div>
             </button>
           </div>
@@ -150,17 +166,17 @@ export default function OrganogramChart({
           <div className="max-w-md mx-auto">
             <button
               type="button"
-              onClick={() => onSelectRoleGroup?.("Centre Head & Faculty Leads")}
+              onClick={() => onSelectRoleGroup?.("Centers Leadership")}
               className={`w-full p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-                activeRoleGroup === "Centre Head & Faculty Leads"
+                activeRoleGroup === "Centers Leadership"
                   ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                   : "bg-purple-950/50 border-purple-400/50 hover:border-purple-300 shadow-xl"
               }`}
             >
               <Crown className="w-7 h-7 text-purple-300 mx-auto mb-1.5" />
               <div className="text-xl font-black text-white">Centre Head</div>
-              <div className="text-sm text-purple-200 font-extrabold mt-0.5">Dr. Subhadeep Mukherjee</div>
-              <div className="text-xs text-purple-300/90 font-medium">Associate Professor of FMC, RUAS</div>
+              <div className="text-sm text-purple-200 font-extrabold mt-0.5">Dr. Pallabi Mund</div>
+              <div className="text-xs text-purple-300/90 font-medium">Centre Head, LEADS Next-Gen Centre</div>
             </button>
           </div>
         </div>
@@ -192,7 +208,7 @@ export default function OrganogramChart({
               {/* Finance Officer Nested Box */}
               <button
                 type="button"
-                onClick={() => onSelectRoleGroup?.("Centre Head & Faculty Leads")}
+                onClick={() => onSelectRoleGroup?.("Centers Leadership")}
                 className="p-3 rounded-xl bg-amber-900/50 border border-amber-400/50 hover:bg-amber-800/60 transition-all text-center cursor-pointer"
               >
                 <div className="text-xs font-black text-amber-200">Finance Officer</div>
@@ -204,9 +220,9 @@ export default function OrganogramChart({
             {/* Head Incubation, Industry Connect */}
             <button
               type="button"
-              onClick={() => onSelectRoleGroup?.("Centre Head & Faculty Leads")}
+              onClick={() => onSelectRoleGroup?.("Centers Leadership")}
               className={`p-5 rounded-2xl text-center border transition-all duration-300 flex flex-col items-center justify-center cursor-pointer ${
-                activeRoleGroup === "Centre Head & Faculty Leads"
+                activeRoleGroup === "Centers Leadership"
                   ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                   : "bg-blue-950/40 border-blue-400/40 hover:border-blue-300 shadow-lg"
               }`}
@@ -220,9 +236,9 @@ export default function OrganogramChart({
             {/* Head Events RTC */}
             <button
               type="button"
-              onClick={() => onSelectRoleGroup?.("Centre Head & Faculty Leads")}
+              onClick={() => onSelectRoleGroup?.("Centers Leadership")}
               className={`p-5 rounded-2xl text-center border transition-all duration-300 flex flex-col items-center justify-center cursor-pointer ${
-                activeRoleGroup === "Centre Head & Faculty Leads"
+                activeRoleGroup === "Centers Leadership"
                   ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                   : "bg-rose-950/40 border-rose-400/40 hover:border-rose-300 shadow-lg"
               }`}
