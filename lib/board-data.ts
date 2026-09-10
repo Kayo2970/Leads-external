@@ -115,7 +115,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     placeholderId: 7,
     name: "Dr. Ajay R",
     role: "Finance Advisor & Auditor",
-    designation: "Assistant Professor of Faculty of Management and Commerce, RUAS",
+    designation: "Senior Assistant Professor & Program Head - BCom, Faculty of Management and Commerce, RUAS",
     roleGroup: "Centers Leadership",
     initials: "AR",
     image: "/images/committee/ajay-r.webp",
