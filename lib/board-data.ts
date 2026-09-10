@@ -121,6 +121,19 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     affiliation: "Faculty of Management and Commerce, RUAS",
     linkedin: "https://www.linkedin.com/in/ajay-r-50b467270",
   },
+  {
+    id: "tapas-kumar-sahoo",
+    placeholderId: 8,
+    name: "Dr. Tapas Kumar Sahoo",
+    role: "Faculty Lead - Research & Academics",
+    designation: "Assistant Professor of FMC, RUAS",
+    roleGroup: "Centre Head & Faculty Leads",
+    initials: "TS",
+    image: "/images/committee/tapas-kumar-sahoo.webp",
+    bio: "Academician and researcher in Commerce & Management, specializing in corporate finance, financial econometrics, and quantitative research at FMC, RUAS.",
+    affiliation: "Faculty of Management and Commerce, RUAS",
+    linkedin: null,
+  },
 ];
 
 export const CORE_LEADERSHIP: BoardMember[] = [
