@@ -181,8 +181,7 @@ export default function OrganogramChart({
               <div>
                 <Coins className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
                 <div className="text-sm font-extrabold text-amber-100">Finance Advisor and Auditor</div>
-                <div className="text-xs text-amber-300 font-bold mt-1">Dr. Tapas Kumar Sahoo</div>
-                <div className="text-[11px] text-amber-200/80 font-medium">Assistant Professor, FMC</div>
+                <div className="text-[11px] text-amber-200/80 font-medium mt-1">Institutional Audit & Fiscal Governance</div>
               </div>
 
               {/* Arrow Connector to Finance Officer */}
@@ -197,8 +196,8 @@ export default function OrganogramChart({
                 className="p-3 rounded-xl bg-amber-900/50 border border-amber-400/50 hover:bg-amber-800/60 transition-all text-center cursor-pointer"
               >
                 <div className="text-xs font-black text-amber-200">Finance Officer</div>
-                <div className="text-xs text-white font-extrabold">Mr. Ajay R</div>
-                <div className="text-[10px] text-amber-300/90 font-medium">Assistant Professor, FMC</div>
+                <div className="text-xs text-white font-extrabold">Dr. Tapas Kumar Sahoo & Mr. Ajay R</div>
+                <div className="text-[10px] text-amber-300/90 font-medium">Assistant Professors of FMC, RUAS</div>
               </button>
             </div>
 

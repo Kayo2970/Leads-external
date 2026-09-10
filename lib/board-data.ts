@@ -125,7 +125,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     id: "tapas-kumar-sahoo",
     placeholderId: 8,
     name: "Dr. Tapas Kumar Sahoo",
-    role: "Finance Advisor & Auditor",
+    role: "Finance Officer",
     designation: "Assistant Professor of FMC, RUAS",
     roleGroup: "Centre Head & Faculty Leads",
     initials: "TS",
