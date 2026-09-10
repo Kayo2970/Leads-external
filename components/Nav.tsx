@@ -69,12 +69,12 @@ export default function Nav() {
               className="h-8 sm:h-11 lg:h-13 3xl:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
 
-            <span className="h-6 sm:h-9 lg:h-10 w-[1.5px] bg-slate-300/80 rounded-full shrink-0" />
+            <span className="h-8 sm:h-11 lg:h-12 w-[1.5px] bg-slate-300/80 rounded-full shrink-0" />
 
             <img
               src="/leads-short-logo.png"
               alt="LEADS Next Gen Centre - RUAS"
-              className="h-9 sm:h-12 lg:h-14 3xl:h-18 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-13 sm:h-16 lg:h-20 3xl:h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <PlaceholderBadge id={85} position="bottom-right" className="scale-75 origin-bottom-right opacity-70 pointer-events-none" />
           </Link>
