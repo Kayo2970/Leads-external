@@ -191,7 +191,7 @@ export default function OrganogramChart({
               <div className="text-sm font-extrabold text-amber-100">Finance Advisor and Auditor</div>
               <div className="text-xs text-amber-300 font-bold mt-1">Dr. Ajay R</div>
               <div className="text-[11px] text-amber-200/80 font-medium mt-0.5 leading-snug">
-                Senior Assistant Professor & Program Head (BCom), Faculty of Management and Commerce, RUAS
+                Sr. Assistant Professor & Program Head (BCom), Faculty of Management and Commerce, RUAS
               </div>
             </button>
 
