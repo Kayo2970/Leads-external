@@ -72,8 +72,8 @@ export default function Nav() {
             <span className="h-6 sm:h-9 lg:h-10 w-[1.5px] bg-slate-300/80 rounded-full shrink-0" />
 
             <img
-              src="/leads-header-logo-transparent.png"
-              alt="LEADS Next Gen Centre - Ramaiah University of Applied Sciences"
+              src="/leads-short-logo.png"
+              alt="LEADS Next Gen Centre - RUAS"
               className="h-9 sm:h-12 lg:h-14 3xl:h-18 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <PlaceholderBadge id={85} position="top-left" className="scale-75 origin-top-left" />
