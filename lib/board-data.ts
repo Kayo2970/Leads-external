@@ -87,7 +87,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
   {
     id: "kiran-kumar",
     placeholderId: 5,
-    name: "Dr. Kiran Kumar B M",
+    name: "Dr. Kiran Kumar B.M.",
     role: "Head Events (RTC Campus)",
     designation: "Associate Professor of FET, RUAS",
     roleGroup: "Centers Leadership",

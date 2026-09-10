@@ -15,7 +15,7 @@ Every image and image slot across the website now features a **unique, high-visi
 | **`#2`** | **Dr. K. M. Sharath Kumar** | Chief Advisor (Dean, FMC) | Patron & Chief Advisor | `BoardMemberCard` |
 | **`#3`** | **Dr. Subhadeep Mukherjee** | Centre Head | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#4`** | **Dr. Pallabi Mund** | Event Head (GG Campus) | Centre Head & Faculty Leads | `BoardMemberCard` |
-| **`#5`** | **Dr. Kiran Kumar B M** | Event Head (RTC Campus) | Centre Head & Faculty Leads | `BoardMemberCard` |
+| **`#5`** | **Dr. Kiran Kumar B.M.** | Event Head (RTC Campus) | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#6`** | **Ms. Sujata Bijwe** | Head Industry Collaboration | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#7`** | **Dr. Ajay R** | Head Finance | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#8`** | **Dr. Tapas Kumar Sahoo** | Faculty Lead - Research & Academics | Centre Head & Faculty Leads | `BoardMemberCard` |

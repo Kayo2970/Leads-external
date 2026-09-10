@@ -218,7 +218,7 @@ export default function OrganogramChart({
           >
             <CalendarDays className="w-6 h-6 text-rose-400 mb-2" />
             <div className="text-sm font-extrabold text-white">Head Events RTC</div>
-            <div className="text-xs text-rose-300 font-bold mt-2">Dr. Kiran Kumar B M</div>
+            <div className="text-xs text-rose-300 font-bold mt-2">Dr. Kiran Kumar B.M.</div>
             <div className="text-[11px] text-rose-200/90 font-medium">Associate Professor, FET</div>
           </button>
         </div>

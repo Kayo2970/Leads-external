@@ -86,7 +86,7 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 2, title: "Dr. K. M. Sharath Kumar", subtitle: "Chief Advisor", category: "Leadership", page: "/about", component: "BoardMemberCard" },
   { id: 3, title: "Dr. Subhadeep Mukherjee", subtitle: "Centre Head", category: "Leadership", page: "/about", component: "BoardMemberCard" },
   { id: 4, title: "Dr. Pallabi Mund", subtitle: "Event Head (GG Campus)", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
-  { id: 5, title: "Dr. Kiran Kumar B M", subtitle: "Event Head (RTC Campus)", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
+  { id: 5, title: "Dr. Kiran Kumar B.M.", subtitle: "Event Head (RTC Campus)", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 6, title: "Ms. Sujata Bijwe", subtitle: "Head Industry Collaboration", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 7, title: "Dr. Ajay R", subtitle: "Head Finance", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 8, title: "Dr. Tapas Kumar Sahoo", subtitle: "Faculty Lead - Research & Academics", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
