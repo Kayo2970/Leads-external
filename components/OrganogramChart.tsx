@@ -251,7 +251,7 @@ export default function OrganogramChart({
             <div className="text-sm font-extrabold text-white">Head Events RTC</div>
             <div className="text-xs text-rose-300 font-bold mt-2">Dr. Kiran Kumar B.M.</div>
             <div className="text-[11px] text-rose-200/90 font-medium leading-snug">Associate Professor, FET</div>
-            <div className="text-[10px] text-rose-300/90 font-semibold mt-0.5">Head - ISC, RUAS</div>
+            <div className="text-[10px] text-rose-300/90 font-semibold mt-0.5">Head - IISc, RUAS</div>
           </button>
         </div>
 
