@@ -114,7 +114,7 @@ export default function OrganogramChart({
             <Shield className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
             <div className="text-base font-black text-white">Chief Advisor</div>
             <div className="text-xs text-emerald-300 font-bold mt-0.5">Dr. K. M. Sharath Kumar</div>
-            <div className="text-[11px] text-emerald-100/90 font-medium">Dean, FMC - RUAS</div>
+            <div className="text-[11px] text-emerald-100/90 font-medium">Dean, Faculty of Management and Commerce - RUAS</div>
           </button>
 
           {/* Advisor */}
@@ -170,7 +170,7 @@ export default function OrganogramChart({
               <Coins className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
               <div className="text-sm font-extrabold text-amber-100">Finance Advisor and Auditor</div>
               <div className="text-xs text-amber-300 font-bold mt-1">Mr. Ajay R</div>
-              <div className="text-[11px] text-amber-200/80 font-medium">Assistant Professor of FMC, RUAS</div>
+              <div className="text-[11px] text-amber-200/80 font-medium">Assistant Professor of Faculty of Management and Commerce, RUAS</div>
             </div>
 
             {/* Arrow Connector to Finance Officer */}
@@ -186,7 +186,7 @@ export default function OrganogramChart({
             >
               <div className="text-xs font-black text-amber-200">Finance Officer</div>
               <div className="text-xs text-white font-extrabold">Dr. Tapas Kumar Sahoo</div>
-              <div className="text-[10px] text-amber-300/90 font-medium">Assistant Professor of FMC, RUAS</div>
+              <div className="text-[10px] text-amber-300/90 font-medium">Assistant Professor of Faculty of Management and Commerce, RUAS</div>
             </button>
           </div>
 
@@ -203,7 +203,7 @@ export default function OrganogramChart({
             <Building className="w-6 h-6 text-blue-400 mb-2" />
             <div className="text-sm font-extrabold text-white">Head Industry Connect</div>
             <div className="text-xs text-blue-300 font-bold mt-2">Mrs. Sujata Bijwe</div>
-            <div className="text-[11px] text-blue-200/90 font-medium mt-0.5">Adjunct Faculty of FMC, RUAS</div>
+            <div className="text-[11px] text-blue-200/90 font-medium mt-0.5">Adjunct Faculty of Faculty of Management and Commerce, RUAS</div>
           </button>
 
           {/* Head Events RTC */}
@@ -221,7 +221,7 @@ export default function OrganogramChart({
             <div className="text-xs text-rose-300 font-bold mt-2">Dr. Kiran Kumar B M</div>
             <div className="text-[11px] text-rose-200/90 font-medium">Associate Professor, FET</div>
             <div className="mt-2 pt-2 border-t border-rose-400/20 text-[11px] text-rose-200/80">
-              <span className="font-semibold text-white">GG Campus Event Head:</span> Dr. Pallabi Mund (FMC)
+              <span className="font-semibold text-white">GG Campus Event Head:</span> Dr. Pallabi Mund (Faculty of Management and Commerce)
             </div>
           </button>
         </div>
