@@ -9,6 +9,7 @@ export interface ImpactReport {
   featured?: boolean;
   publishedDate?: string;
   highlights?: string[];
+  category?: string;
 }
 
 export const REPORTS_DATA: ImpactReport[] = [
@@ -20,7 +21,7 @@ export const REPORTS_DATA: ImpactReport[] = [
       "The definitive annual impact report for LEADS Next Gen Centre's 2025–26 academic year — documenting institutional growth, flagship programme outcomes, national leadership initiatives, partnership milestones, and the measurable upliftment impact across student, faculty, and executive cohorts.",
     fileSize: "12.4 MB",
     fileUrl: "/reports/LEADS-Impact-Report-2025-2026.pdf",
-    pages: 0,
+    pages: 28,
     featured: true,
     publishedDate: "Annual Edition 2025–2026",
     highlights: [
@@ -48,5 +49,55 @@ export const REPORTS_DATA: ImpactReport[] = [
       "Strategic Collaboration with FMC (Faculty of Management and Commerce)",
     ],
   },
+  {
+    id: "bls-proceedings-2024",
+    title: "Bharath Leadership Summit Proceedings 2024",
+    year: "2024",
+    summary:
+      "Official convention compendium, keynote transcripts, and executive resolutions from India's flagship summit on leadership, innovation, and national capacity building.",
+    fileSize: "3.8 MB",
+    fileUrl: "/reports/BLS-Official-Proceedings-2024.pdf",
+    pages: 36,
+    featured: false,
+    publishedDate: "Summit Edition 2024",
+    highlights: [
+      "Keynote addresses from senior industry captains and policymakers",
+      "Track proceedings across Education, AI Ethics, Governance & Enterprise",
+      "National Leadership Declaration and future talent policy recommendations",
+    ],
+  },
+  {
+    id: "skill-gap-study-2025",
+    title: "National Non-Technical Skill Gap Study 2025",
+    year: "2025",
+    summary:
+      "In-depth empirical research on core non-technical competency deficits across tier-1 and tier-2 higher education institutions in India, with actionable pedagogical frameworks.",
+    fileSize: "2.6 MB",
+    fileUrl: "/reports/LEADS-Skill-Gap-Study-2025.pdf",
+    pages: 24,
+    featured: false,
+    publishedDate: "Research Edition 2025",
+    highlights: [
+      "Survey of 12,000+ engineering and management students nationwide",
+      "Critical gaps in executive presence, critical reasoning, and negotiation",
+      "Benchmarked curriculum interventions with verified upliftment outcomes",
+    ],
+  },
+  {
+    id: "strategic-roadmap-2025-2030",
+    title: "LEADS Strategic Roadmap 2025–2030",
+    year: "2025–2030",
+    summary:
+      "The 5-year vision document outlining the expansion of LEADS Next Gen Centre into a pan-India center of excellence for youth leadership, corporate executive education, and policy advocacy.",
+    fileSize: "1.9 MB",
+    fileUrl: "/reports/LEADS-Strategic-Roadmap-2025-2030.pdf",
+    pages: 18,
+    featured: false,
+    publishedDate: "Strategic Vision 2025–2030",
+    highlights: [
+      "Scaling to 50,000+ certified leaders and 200 partner institutions by 2030",
+      "Incubation of the National Leadership Repository & AI Assessment Engine",
+      "Establishment of regional outreach hubs in North, South, East & Western India",
+    ],
+  },
 ];
-

@@ -8,6 +8,7 @@ import {
   FileText,
   Menu,
   X,
+  ExternalLink,
 } from "lucide-react";
 import { REPORTS_DATA } from "@/lib/reports-data";
 import PlaceholderBadge from "@/components/PlaceholderBadge";
@@ -49,17 +50,17 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ease-out ${
+      className={`fixed top-3 sm:top-4 inset-x-0 z-[9999] mx-auto px-3 sm:px-6 lg:px-8 max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] transition-all duration-500 ease-out ${
         showNav
           ? "opacity-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 -translate-y-full pointer-events-none"
-      } ${
-        scrolled
-          ? "liquid-glass-header py-3 shadow-xl"
-          : "liquid-glass-header py-4 shadow-md"
+          : "opacity-0 -translate-y-8 pointer-events-none"
       }`}
     >
-      <div className="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+      <div
+        className={`liquid-glass-header rounded-2xl lg:rounded-full px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
+          scrolled ? "py-2 sm:py-2.5 shadow-2xl" : "py-2.5 sm:py-3.5 shadow-lg"
+        }`}
+      >
         <div className="flex items-center justify-between">
           {/* Logo & Identity */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3.5 group py-0.5 relative shrink-0">
@@ -210,35 +211,45 @@ export default function Nav() {
               {/* Dropdown Menu Box */}
               {reportsDropdownOpen && (
                 <div className="absolute top-full left-0 pt-1.5 z-50">
-                  <div className="w-84 3xl:w-96 rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
-                      Official Impact Publication
+                  <div className="w-96 3xl:w-[420px] rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1 flex items-center justify-between">
+                      <span>Official Publications & Reports</span>
+                      <span className="text-[10px] text-slate-400 font-normal lowercase tracking-normal">({REPORTS_DATA.length} pdf documents)</span>
                     </div>
-                    {REPORTS_DATA.map((report) => (
-                      <Link
-                        key={report.id}
-                        href="/reports"
-                        className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
-                      >
-                        <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
-                          <FileText className="w-4 h-4 text-[#DE3F11]" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] truncate">
-                            {report.title}
+                    <div className="space-y-1 max-h-[380px] overflow-y-auto pr-1">
+                      {REPORTS_DATA.map((report) => (
+                        <a
+                          key={report.id}
+                          href={report.fileUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                        >
+                          <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5 shrink-0">
+                            <FileText className="w-4 h-4 text-[#DE3F11]" />
                           </div>
-                          <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
-                            {report.year} · {report.fileSize} PDF · Read Online
+                          <div className="flex-1 min-w-0">
+                            <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] leading-tight flex items-center justify-between gap-1">
+                              <span className="truncate">{report.title}</span>
+                              <ExternalLink className="w-3 h-3 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                            </div>
+                            <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium mt-0.5 flex items-center gap-2">
+                              <span>{report.year}</span>
+                              <span>·</span>
+                              <span className="font-semibold text-slate-600">{report.fileSize} PDF</span>
+                              <span>·</span>
+                              <span className="text-[#9C1256] font-semibold">Open PDF ↗</span>
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    ))}
+                        </a>
+                      ))}
+                    </div>
                     <div className="mt-2 pt-2 border-t border-purple-100 text-center">
                       <Link
                         href="/reports"
                         className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
                       >
-                        Open Interactive Reader →
+                        Open Interactive Reader & Hub →
                       </Link>
                     </div>
                   </div>
@@ -281,7 +292,7 @@ export default function Nav() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-2xl border-t border-purple-200/90 mt-3 px-4 pt-4 pb-6 space-y-2.5 text-[#1E0C3D] shadow-2xl animate-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden bg-white/95 backdrop-blur-2xl border border-purple-200/90 mt-2.5 rounded-2xl px-4 pt-4 pb-6 space-y-2.5 text-[#1E0C3D] shadow-2xl animate-in slide-in-from-top-4 duration-300">
           <Link href="/" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/")}>
             Home
           </Link>
@@ -312,9 +323,25 @@ export default function Nav() {
           <Link href="/about" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/about")}>
             About Us
           </Link>
-          <Link href="/reports" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/reports")}>
-            Impact Reports
-          </Link>
+          <div>
+            <Link href="/reports" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/reports")}>
+              Impact Reports & Publications
+            </Link>
+            <div className="pl-4 pr-2 mt-1 space-y-1">
+              {REPORTS_DATA.map((report) => (
+                <a
+                  key={report.id}
+                  href={report.fileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between py-1.5 px-3 rounded-lg text-xs font-medium text-slate-700 hover:text-[#DE3F11] hover:bg-purple-50/80 transition-colors"
+                >
+                  <span className="truncate">{report.title}</span>
+                  <span className="text-[10px] text-[#9C1256] font-bold ml-2 shrink-0">{report.fileSize}</span>
+                </a>
+              ))}
+            </div>
+          </div>
 
           <div className="pt-2 border-t border-purple-100 space-y-2">
             <Link

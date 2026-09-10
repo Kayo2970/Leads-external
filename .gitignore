@@ -18,7 +18,7 @@ out
 tsconfig.tsbuildinfo
 
 # large binary / media files — keep out of git
-reports/
+/reports/
 *.zip
 *.mp4
 *.mov
