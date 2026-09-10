@@ -169,7 +169,7 @@ export default function OrganogramChart({
             <div>
               <Coins className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
               <div className="text-sm font-extrabold text-amber-100">Finance Advisor and Auditor</div>
-              <div className="text-xs text-amber-300 font-bold mt-1">Mr. Ajay R</div>
+              <div className="text-xs text-amber-300 font-bold mt-1">Dr. Ajay R</div>
               <div className="text-[11px] text-amber-200/80 font-medium">Assistant Professor of Faculty of Management and Commerce, RUAS</div>
             </div>
 

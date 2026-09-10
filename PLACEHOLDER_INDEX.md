@@ -17,7 +17,7 @@ Every image and image slot across the website now features a **unique, high-visi
 | **`#4`** | **Dr. Pallabi Mund** | Event Head (GG Campus) | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#5`** | **Dr. Kiran Kumar B M** | Event Head (RTC Campus) | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#6`** | **Ms. Sujata Bijwe** | Head Industry Collaboration | Centre Head & Faculty Leads | `BoardMemberCard` |
-| **`#7`** | **Mr. Ajay R** | Head Finance | Centre Head & Faculty Leads | `BoardMemberCard` |
+| **`#7`** | **Dr. Ajay R** | Head Finance | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#8`** | **Dr. Tapas Kumar Sahoo** | Faculty Lead - Research & Academics | Centre Head & Faculty Leads | `BoardMemberCard` |
 | **`#8`** | **Mr. Gurutejas C** | Sr. President | Student Core Council | `BoardMemberCard` |
 | **`#9`** | **Mr. Abhijit Arya** | Sr. Vice President | Student Core Council | `BoardMemberCard` |

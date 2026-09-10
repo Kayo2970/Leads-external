@@ -88,7 +88,7 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 4, title: "Dr. Pallabi Mund", subtitle: "Event Head (GG Campus)", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 5, title: "Dr. Kiran Kumar B M", subtitle: "Event Head (RTC Campus)", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 6, title: "Ms. Sujata Bijwe", subtitle: "Head Industry Collaboration", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
-  { id: 7, title: "Mr. Ajay R", subtitle: "Head Finance", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
+  { id: 7, title: "Dr. Ajay R", subtitle: "Head Finance", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 8, title: "Dr. Tapas Kumar Sahoo", subtitle: "Faculty Lead - Research & Academics", category: "Faculty Leads", page: "/about", component: "BoardMemberCard" },
   { id: 8, title: "Mr. Gurutejas C", subtitle: "Sr. President", category: "Student Core Council", page: "/about", component: "BoardMemberCard" },
   { id: 9, title: "Mr. Abhijit Arya", subtitle: "Sr. Vice President", category: "Student Core Council", page: "/about", component: "BoardMemberCard" },

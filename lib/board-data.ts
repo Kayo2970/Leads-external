@@ -113,7 +113,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
   {
     id: "ajay-r",
     placeholderId: 7,
-    name: "Mr. Ajay R",
+    name: "Dr. Ajay R",
     role: "Finance Advisor & Auditor",
     designation: "Assistant Professor of Faculty of Management and Commerce, RUAS",
     roleGroup: "Centers Leadership",
