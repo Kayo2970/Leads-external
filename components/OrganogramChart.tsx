@@ -277,9 +277,9 @@ export default function OrganogramChart({
           {/* Alumni Student Council */}
           <button
             type="button"
-            onClick={() => onSelectRoleGroup?.("Student Core Council")}
+            onClick={() => onSelectRoleGroup?.("Alumni Student Council")}
             className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Student Core Council"
+              activeRoleGroup === "Alumni Student Council"
                 ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                 : "bg-blue-950/40 border-blue-400/30 hover:border-blue-300 shadow-lg"
             }`}

@@ -7,6 +7,7 @@ export interface BoardMember {
   roleGroup:
     | "Patron & Chief Advisor"
     | "Centers Leadership"
+    | "Alumni Student Council"
     | "Student Core Council"
     | "Student Advisory Council"
     | "Student Trainee Associates"
@@ -145,7 +146,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Mr. Gurutejas C",
     role: "Sr. President",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "GC",
     image: "/images/committee/gurutejas-c.webp",
     bio: "Spearheading overall student leadership, inter-university alliances, and strategic initiative execution.",
@@ -158,7 +159,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Mr. Abhijit Arya",
     role: "Sr. Vice President",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "AA",
     image: "/images/committee/abhijit-arya.webp",
     bio: "Overseeing summit operations, corporate delegacy integration, and national outreach initiatives.",
@@ -171,7 +172,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Mr. Laksh Soorya Singh",
     role: "Sr. Events & Operations Head",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "LS",
     image: "/images/committee/laksh-soorya-singh.webp",
     bio: "Directing high-stakes event logistics, keynote stage production, and venue management.",
@@ -184,7 +185,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Mr. Bhawen Maroo",
     role: "Sr. Events & Operations Head",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "BM",
     image: "/images/committee/bhawen-maroo.webp",
     bio: "Managing seamless on-ground event protocol, guest hospitality, and delegate operations.",
@@ -197,7 +198,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Ms. Shreesha S.N",
     role: "Sr. Social Media & Design Head",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "SS",
     image: "/images/committee/shreesha-sn.webp",
     bio: "Curating digital brand identity, multimedia storytelling, and national outreach campaigns.",
@@ -210,7 +211,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Ms. Bharvi A Padia",
     role: "Sr. PR Head",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "BP",
     image: "/images/committee/bharvi-padia.webp",
     bio: "Managing press relations, national media coverage, and dignitary public affairs.",
@@ -223,7 +224,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Mr. Arvind Rakshith G",
     role: "Sr. Finance & Sponsorship Head",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "AR",
     image: "/images/committee/arvind-rakshith.webp",
     bio: "Structuring corporate sponsorship packages, partner allocations, and financial accounting.",
@@ -236,7 +237,7 @@ export const CORE_LEADERSHIP: BoardMember[] = [
     name: "Mr. Syed Furqaan Ahmed",
     role: "Sr. Research & Development Head",
     designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Core Council",
+    roleGroup: "Alumni Student Council",
     initials: "SF",
     image: "/images/committee/syed-furqaan.webp",
     bio: "Authoring capability gap whitepapers, academic research surveys, and impact metrics.",

@@ -28,6 +28,7 @@ export default function AboutPage() {
     { label: "Patron & Chief Advisor", value: "Patron & Chief Advisor" },
     { label: "Centers Leadership", value: "Centers Leadership" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
+    { label: "Alumni Student Council", value: "Alumni Student Council" },
     { label: "Student Core Council", value: "Student Core Council" },
     { label: "Student Trainee Associates", value: "Student Trainee Associates" },
   ];
@@ -68,11 +69,22 @@ export default function AboutPage() {
       columns: 3,
     },
     {
+      id: "alumni-student-council",
+      group: "Alumni Student Council" as const,
+      title: "Alumni Student Council",
+      badge: "Governance Tier 04",
+      count: "8 Alumni Officers",
+      description:
+        "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
+      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Alumni Student Council"),
+      columns: 4,
+    },
+    {
       id: "core-council",
       group: "Student Core Council" as const,
       title: "Student Core Council",
-      badge: "Governance Tier 04",
-      count: "8 Senior Officers",
+      badge: "Governance Tier 05",
+      count: "Active Core Officers",
       description:
         "Senior student executive leadership spearheading national summits, public relations, operations, finance, design, and research initiatives.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Core Council"),
@@ -82,7 +94,7 @@ export default function AboutPage() {
       id: "trainee-associates",
       group: "Student Trainee Associates" as const,
       title: "Student Trainee Associates & Organizing Committee",
-      badge: "Governance Tier 05",
+      badge: "Governance Tier 06",
       count: "17 Associates",
       description:
         "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
