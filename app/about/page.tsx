@@ -39,18 +39,18 @@ export default function AboutPage() {
       group: "Patron & Chief Advisor" as const,
       title: "Patron & Chief Advisor",
       badge: "Governance Tier 01",
-      count: "2 Leaders",
+      count: "3 Leaders",
       description:
         "High-level institutional patronage and strategic stewardship guiding the academic and national mission of LEADS.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Patron & Chief Advisor"),
-      columns: 2,
+      columns: 3,
     },
     {
       id: "centers-leadership",
       group: "Centers Leadership" as const,
       title: "Centers Leadership",
       badge: "Governance Tier 02",
-      count: "6 Leaders",
+      count: "5 Leaders",
       description:
         "Executive centre leadership and faculty leads driving daily centre operations, incubation programs, event execution, and fiscal governance.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centers Leadership"),

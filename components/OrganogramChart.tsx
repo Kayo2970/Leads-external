@@ -131,9 +131,9 @@ export default function OrganogramChart({
           {/* Advisor */}
           <button
             type="button"
-            onClick={() => onSelectRoleGroup?.("Centers Leadership")}
+            onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
             className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Centers Leadership"
+              activeRoleGroup === "Patron & Chief Advisor"
                 ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                 : "bg-emerald-950/40 border-emerald-400/40 hover:border-emerald-300 shadow-lg"
             }`}

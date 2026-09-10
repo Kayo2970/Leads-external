@@ -56,7 +56,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     name: "Dr. Subhadeep Mukherjee",
     role: "ADVISOR",
     designation: "CEO of Ramaiah Technology Business Incubator",
-    roleGroup: "Centers Leadership",
+    roleGroup: "Patron & Chief Advisor",
     initials: "SM",
     image: "/images/leadership/subhadeep-mukherjee.webp",
     message:
@@ -83,19 +83,6 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     bio: "Centre Head of LEADS Next Gen Centre & Associate Professor at Faculty of Management and Commerce, directing day-to-day operations, multi-campus student leadership programs, and flagship summits.",
     affiliation: "LEADS Next Gen Centre / Faculty of Management and Commerce, RUAS",
     linkedin: "https://www.linkedin.com/in/dr-pallabi-mund-53163a20",
-  },
-  {
-    id: "kiran-kumar",
-    placeholderId: 5,
-    name: "Dr. Kiran Kumar B.M.",
-    role: "Head Events (RTC Campus)",
-    designation: "Associate Professor of FET, RUAS | Head - IIC, RUAS",
-    roleGroup: "Centers Leadership",
-    initials: "KK",
-    image: "/images/committee/kiran-kumar.webp",
-    bio: "Directing multi-campus operations, engineering school collaborations, and technical-to-leadership transition programs.",
-    affiliation: "Faculty of Engineering & Technology, RUAS",
-    linkedin: "https://www.linkedin.com/in/dr-kiran-kumar-b-m-17539769",
   },
   {
     id: "sujata-bijwe",
@@ -135,6 +122,19 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     bio: "Academician and researcher in Commerce & Management, specializing in corporate finance, financial econometrics, and quantitative research at Faculty of Management and Commerce, RUAS.",
     affiliation: "Faculty of Management and Commerce, RUAS",
     linkedin: null,
+  },
+  {
+    id: "kiran-kumar",
+    placeholderId: 5,
+    name: "Dr. Kiran Kumar B.M.",
+    role: "Head Events (RTC Campus)",
+    designation: "Associate Professor of FET, RUAS | Head - IIC, RUAS",
+    roleGroup: "Centers Leadership",
+    initials: "KK",
+    image: "/images/committee/kiran-kumar.webp",
+    bio: "Directing multi-campus operations, engineering school collaborations, and technical-to-leadership transition programs.",
+    affiliation: "Faculty of Engineering & Technology, RUAS",
+    linkedin: "https://www.linkedin.com/in/dr-kiran-kumar-b-m-17539769",
   },
 ];
 
