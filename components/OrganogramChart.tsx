@@ -251,12 +251,26 @@ export default function OrganogramChart({
             <div className="text-sm font-extrabold text-white">Head Events RTC</div>
             <div className="text-xs text-rose-300 font-bold mt-2">Dr. Kiran Kumar B.M.</div>
             <div className="text-[11px] text-rose-200/90 font-medium leading-snug">Associate Professor, FET</div>
-            <div className="text-[10px] text-rose-300/90 font-semibold mt-0.5">Head - IISc, RUAS</div>
+            <div className="text-[10px] text-rose-300/90 font-semibold mt-0.5">Head - IIC, RUAS</div>
           </button>
         </div>
 
-        {/* Connector Line -> Councils & Wings (touching boxes) */}
-        <div className="w-0.5 h-8 bg-gradient-to-b from-amber-400 to-[#DE3F11]" />
+        {/* Flowchart Connector Tree from Head Professors to Student Councils */}
+        <div className="w-full max-w-6xl relative flex flex-col items-center">
+          {/* Vertical stem down from Tier 4 */}
+          <div className="w-0.5 h-6 bg-gradient-to-b from-amber-400 via-rose-400 to-[#DE3F11]" />
+
+          {/* Horizontal crossbar line connecting across all 4 student columns on larger screens */}
+          <div className="hidden sm:block w-[78%] md:w-[82%] lg:w-[88%] h-0.5 bg-gradient-to-r from-blue-400 via-amber-400 to-purple-400" />
+
+          {/* Vertical drop lines touching into each of the 4 Tier 5 Student Council boxes */}
+          <div className="hidden sm:grid w-full grid-cols-2 lg:grid-cols-4 gap-4 px-0">
+            <div className="flex justify-center"><div className="w-0.5 h-4 bg-blue-400" /></div>
+            <div className="flex justify-center"><div className="w-0.5 h-4 bg-emerald-400" /></div>
+            <div className="flex justify-center"><div className="w-0.5 h-4 bg-amber-400" /></div>
+            <div className="flex justify-center"><div className="w-0.5 h-4 bg-purple-400" /></div>
+          </div>
+        </div>
 
         {/* Tier 5: Councils & Wings */}
         <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
