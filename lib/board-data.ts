@@ -89,7 +89,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     placeholderId: 5,
     name: "Dr. Kiran Kumar B.M.",
     role: "Head Events (RTC Campus)",
-    designation: "Associate Professor of FET, RUAS",
+    designation: "Associate Professor of FET, RUAS | Head - ISC, RUAS",
     roleGroup: "Centers Leadership",
     initials: "KK",
     image: "/images/committee/kiran-kumar.webp",
