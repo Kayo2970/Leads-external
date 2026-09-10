@@ -220,9 +220,6 @@ export default function OrganogramChart({
             <div className="text-sm font-extrabold text-white">Head Events RTC</div>
             <div className="text-xs text-rose-300 font-bold mt-2">Dr. Kiran Kumar B M</div>
             <div className="text-[11px] text-rose-200/90 font-medium">Associate Professor, FET</div>
-            <div className="mt-2 pt-2 border-t border-rose-400/20 text-[11px] text-rose-200/80">
-              <span className="font-semibold text-white">GG Campus Event Head:</span> Dr. Pallabi Mund (Faculty of Management and Commerce)
-            </div>
           </button>
         </div>
 
