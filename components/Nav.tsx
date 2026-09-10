@@ -76,7 +76,7 @@ export default function Nav() {
               alt="LEADS Next Gen Centre - RUAS"
               className="h-9 sm:h-12 lg:h-14 3xl:h-18 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
-            <PlaceholderBadge id={85} position="top-left" className="scale-75 origin-top-left" />
+            <PlaceholderBadge id={85} position="bottom-right" className="scale-75 origin-bottom-right opacity-70 pointer-events-none" />
           </Link>
 
           {/* Desktop Navigation Links */}
