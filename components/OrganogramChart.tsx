@@ -99,8 +99,8 @@ export default function OrganogramChart({
           <div className="w-0.5 h-6 bg-gradient-to-b from-blue-400 to-emerald-400" />
         </div>
 
-        {/* Chief Advisor | CEO of RTBI | Advisor */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        {/* Chief Advisor | Advisor */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
           {/* Chief Advisor */}
           <button
             type="button"
@@ -117,36 +117,20 @@ export default function OrganogramChart({
             <div className="text-[11px] text-emerald-100/90 font-medium">Dean, FMC - RUAS</div>
           </button>
 
-          {/* CEO of RTBI */}
+          {/* Advisor */}
           <button
             type="button"
             onClick={() => onSelectRoleGroup?.("Centers Leadership")}
             className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
               activeRoleGroup === "Centers Leadership"
                 ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                : "bg-emerald-950/50 border-emerald-400/50 hover:border-emerald-300 shadow-lg"
-            }`}
-          >
-            <Building className="w-6 h-6 text-emerald-300 mx-auto mb-1.5" />
-            <div className="text-base font-black text-white">CEO of RTBI</div>
-            <div className="text-xs text-emerald-200 font-bold mt-0.5">Dr. Subhadeep Mukherjee</div>
-            <div className="text-[11px] text-emerald-300/90 font-medium">Ramaiah Tech Business Incubator</div>
-          </button>
-
-          {/* Advisor */}
-          <button
-            type="button"
-            onClick={() => onSelectRoleGroup?.("Governing & Advisory")}
-            className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Governing & Advisory"
-                ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                : "bg-emerald-950/30 border-emerald-400/30 hover:border-emerald-300 shadow-lg"
+                : "bg-emerald-950/40 border-emerald-400/40 hover:border-emerald-300 shadow-lg"
             }`}
           >
             <UserCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
-            <div className="text-base font-extrabold text-emerald-100">Advisor</div>
-            <div className="text-xs text-emerald-200/90 mt-0.5 font-medium">Academic & Mentors</div>
-            <div className="text-[11px] text-emerald-300/80">Governing & Corporate Advisory</div>
+            <div className="text-base font-black text-white">Advisor</div>
+            <div className="text-xs text-emerald-300 font-bold mt-0.5">Dr. Subhadeep Mukherjee</div>
+            <div className="text-[11px] text-emerald-100/90 font-medium">CEO of RTBI</div>
           </button>
         </div>
 

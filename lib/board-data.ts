@@ -54,7 +54,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     id: "subhadeep-mukherjee",
     placeholderId: 3,
     name: "Dr. Subhadeep Mukherjee",
-    role: "CEO OF RTBI",
+    role: "ADVISOR",
     designation: "CEO of RTBI",
     roleGroup: "Centers Leadership",
     initials: "SM",
