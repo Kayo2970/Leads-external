@@ -213,8 +213,8 @@ export default function Nav() {
                 <div className="absolute top-full left-0 pt-1.5 z-50">
                   <div className="w-96 3xl:w-[420px] rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
                     <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1 flex items-center justify-between">
-                      <span>Official Publications & Reports</span>
-                      <span className="text-[10px] text-slate-400 font-normal lowercase tracking-normal">({REPORTS_DATA.length} pdf documents)</span>
+                      <span>Official Annual Publication</span>
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase">Verified Release</span>
                     </div>
                     <div className="space-y-1 max-h-[380px] overflow-y-auto pr-1">
                       {REPORTS_DATA.map((report) => (
