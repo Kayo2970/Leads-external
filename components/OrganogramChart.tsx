@@ -169,7 +169,8 @@ export default function OrganogramChart({
             <div>
               <Coins className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
               <div className="text-sm font-extrabold text-amber-100">Finance Advisor and Auditor</div>
-              <div className="text-[11px] text-amber-200/80 font-medium mt-1">Institutional Audit & Fiscal Governance</div>
+              <div className="text-xs text-amber-300 font-bold mt-1">Mr. Ajay R</div>
+              <div className="text-[11px] text-amber-200/80 font-medium">Assistant Professor of FMC, RUAS</div>
             </div>
 
             {/* Arrow Connector to Finance Officer */}
@@ -184,12 +185,12 @@ export default function OrganogramChart({
               className="p-3 rounded-xl bg-amber-900/50 border border-amber-400/50 hover:bg-amber-800/60 transition-all text-center cursor-pointer"
             >
               <div className="text-xs font-black text-amber-200">Finance Officer</div>
-              <div className="text-xs text-white font-extrabold">Dr. Tapas Kumar Sahoo & Mr. Ajay R</div>
-              <div className="text-[10px] text-amber-300/90 font-medium">Assistant Professors of FMC, RUAS</div>
+              <div className="text-xs text-white font-extrabold">Dr. Tapas Kumar Sahoo</div>
+              <div className="text-[10px] text-amber-300/90 font-medium">Assistant Professor of FMC, RUAS</div>
             </button>
           </div>
 
-          {/* Head Incubation, Industry Connect */}
+          {/* Head Industry Connect */}
           <button
             type="button"
             onClick={() => onSelectRoleGroup?.("Centers Leadership")}
@@ -200,8 +201,8 @@ export default function OrganogramChart({
             }`}
           >
             <Building className="w-6 h-6 text-blue-400 mb-2" />
-            <div className="text-sm font-extrabold text-white">Head Incubation, Industry Connect</div>
-            <div className="text-xs text-blue-300 font-bold mt-2">Ms. Sujata Bijwe</div>
+            <div className="text-sm font-extrabold text-white">Head Industry Connect</div>
+            <div className="text-xs text-blue-300 font-bold mt-2">Mrs. Sujata Bijwe</div>
             <div className="text-[11px] text-blue-200/90 font-medium mt-0.5">Adjunct Faculty of FMC, RUAS</div>
           </button>
 
@@ -232,65 +233,61 @@ export default function OrganogramChart({
 
         {/* Councils & Wings */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {/* Alumni Student Council */}
-            <button
-              type="button"
-              onClick={() => onSelectRoleGroup?.("Student Core Council")}
-              className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-                activeRoleGroup === "Student Core Council"
-                  ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                  : "bg-blue-950/40 border-blue-400/30 hover:border-blue-300 shadow-lg"
-              }`}
-            >
-              <GraduationCap className="w-6 h-6 text-blue-400 mx-auto mb-1.5" />
-              <div className="text-sm font-extrabold text-white">Alumni Student Council</div>
-              <div className="text-[11px] text-blue-200/80 mt-1 font-medium">LEADS Alumni Network & Graduates</div>
-            </button>
+          {/* Alumni Student Council */}
+          <button
+            type="button"
+            onClick={() => onSelectRoleGroup?.("Student Core Council")}
+            className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
+              activeRoleGroup === "Student Core Council"
+                ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
+                : "bg-blue-950/40 border-blue-400/30 hover:border-blue-300 shadow-lg"
+            }`}
+          >
+            <GraduationCap className="w-6 h-6 text-blue-400 mx-auto mb-1.5" />
+            <div className="text-sm font-extrabold text-white">Alumni Student Council</div>
+          </button>
 
-            {/* Student Advisory Committee */}
-            <button
-              type="button"
-              onClick={() => onSelectRoleGroup?.("Student Advisory Council")}
-              className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-                activeRoleGroup === "Student Advisory Council"
-                  ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                  : "bg-emerald-950/40 border-emerald-400/30 hover:border-emerald-300 shadow-lg"
-              }`}
-            >
-              <BookOpenCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
-              <div className="text-sm font-extrabold text-white">Student Advisory Committee</div>
-              <div className="text-[11px] text-emerald-200/80 mt-1 font-medium">Senior Student Advisors</div>
-            </button>
+          {/* Student Advisory Committee */}
+          <button
+            type="button"
+            onClick={() => onSelectRoleGroup?.("Student Advisory Council")}
+            className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
+              activeRoleGroup === "Student Advisory Council"
+                ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
+                : "bg-emerald-950/40 border-emerald-400/30 hover:border-emerald-300 shadow-lg"
+            }`}
+          >
+            <BookOpenCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
+            <div className="text-sm font-extrabold text-white">Student Advisory Committee</div>
+          </button>
 
-            {/* Core Council */}
-            <button
-              type="button"
-              onClick={() => onSelectRoleGroup?.("Student Core Council")}
-              className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-                activeRoleGroup === "Student Core Council"
-                  ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                  : "bg-amber-950/40 border-amber-400/30 hover:border-amber-300 shadow-lg"
-              }`}
-            >
-              <Crown className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
-              <div className="text-sm font-extrabold text-white">Core Council</div>
-              <div className="text-[11px] text-amber-200/80 mt-1 font-medium">Student Executive Officers</div>
-            </button>
+          {/* Core Council */}
+          <button
+            type="button"
+            onClick={() => onSelectRoleGroup?.("Student Core Council")}
+            className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
+              activeRoleGroup === "Student Core Council"
+                ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
+                : "bg-amber-950/40 border-amber-400/30 hover:border-amber-300 shadow-lg"
+            }`}
+          >
+            <Crown className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
+            <div className="text-sm font-extrabold text-white">Core Council</div>
+          </button>
 
-            {/* Trainee Associate */}
-            <button
-              type="button"
-              onClick={() => onSelectRoleGroup?.("Student Trainee Associates")}
-              className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-                activeRoleGroup === "Student Trainee Associates"
-                  ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                  : "bg-purple-950/40 border-purple-400/30 hover:border-purple-300 shadow-lg"
-              }`}
-            >
-              <UserPlus className="w-6 h-6 text-purple-400 mx-auto mb-1.5" />
-              <div className="text-sm font-extrabold text-white">Trainee Associate</div>
-              <div className="text-[11px] text-purple-200/80 mt-1 font-medium">Organizing Committee & Associates</div>
-            </button>
+          {/* Trainee Associate */}
+          <button
+            type="button"
+            onClick={() => onSelectRoleGroup?.("Student Trainee Associates")}
+            className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
+              activeRoleGroup === "Student Trainee Associates"
+                ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
+                : "bg-purple-950/40 border-purple-400/30 hover:border-purple-300 shadow-lg"
+            }`}
+          >
+            <UserPlus className="w-6 h-6 text-purple-400 mx-auto mb-1.5" />
+            <div className="text-sm font-extrabold text-white">Trainee Associate</div>
+          </button>
           </div>
         </div>
       </div>
