@@ -5,7 +5,6 @@ export interface BoardMember {
   role: string;
   designation: string;
   roleGroup:
-    | "Patron & Chief Advisor"
     | "Centers Leadership"
     | "Alumni Student Council"
     | "Student Core Council"
@@ -27,7 +26,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     name: "Prof. Kuldeep Kumar Raina",
     role: "PATRON",
     designation: "Hon. Vice Chancellor, RUAS",
-    roleGroup: "Patron & Chief Advisor",
+    roleGroup: "Centers Leadership",
     initials: "KR",
     image: "/images/leadership/kuldeep-raina.webp",
     message:
@@ -42,7 +41,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     name: "Dr. K. M. Sharath Kumar",
     role: "CHIEF ADVISOR",
     designation: "Dean, Faculty of Management and Commerce - RUAS",
-    roleGroup: "Patron & Chief Advisor",
+    roleGroup: "Centers Leadership",
     initials: "SK",
     image: "/images/leadership/sharath-kumar.webp",
     message:
@@ -57,7 +56,7 @@ export const LEADERSHIP_MESSAGES: BoardMember[] = [
     name: "Dr. Subhadeep Mukherjee",
     role: "ADVISOR",
     designation: "CEO of Ramaiah Technology Business Incubator",
-    roleGroup: "Patron & Chief Advisor",
+    roleGroup: "Centers Leadership",
     initials: "SM",
     image: "/images/leadership/subhadeep-mukherjee.webp",
     message:

@@ -50,9 +50,9 @@ export default function OrganogramChart({
         <div className="w-full max-w-md">
           <button
             type="button"
-            onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
+            onClick={() => onSelectRoleGroup?.("Centers Leadership")}
             className={`w-full p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Patron & Chief Advisor"
+              activeRoleGroup === "Centers Leadership"
                 ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                 : "bg-blue-900/40 border-blue-400/50 hover:border-blue-300 shadow-xl"
             }`}
@@ -115,9 +115,9 @@ export default function OrganogramChart({
           {/* Chief Advisor */}
           <button
             type="button"
-            onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
+            onClick={() => onSelectRoleGroup?.("Centers Leadership")}
             className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Patron & Chief Advisor"
+              activeRoleGroup === "Centers Leadership"
                 ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                 : "bg-emerald-950/40 border-emerald-400/40 hover:border-emerald-300 shadow-lg"
             }`}
@@ -131,9 +131,9 @@ export default function OrganogramChart({
           {/* Advisor */}
           <button
             type="button"
-            onClick={() => onSelectRoleGroup?.("Patron & Chief Advisor")}
+            onClick={() => onSelectRoleGroup?.("Centers Leadership")}
             className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Patron & Chief Advisor"
+              activeRoleGroup === "Centers Leadership"
                 ? "bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                 : "bg-emerald-950/40 border-emerald-400/40 hover:border-emerald-300 shadow-lg"
             }`}

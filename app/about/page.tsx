@@ -25,7 +25,6 @@ export default function AboutPage() {
 
   const tabOptions = [
     { label: "All Members", value: "All" },
-    { label: "Patron & Chief Advisor", value: "Patron & Chief Advisor" },
     { label: "Centers Leadership", value: "Centers Leadership" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Alumni Student Council", value: "Alumni Student Council" },
@@ -36,26 +35,15 @@ export default function AboutPage() {
   // Partition member categories
   const partitions = [
     {
-      id: "patron-advisors",
-      group: "Patron & Chief Advisor" as const,
-      title: "Patron & Chief Advisor",
-      badge: "Governance Tier 01",
-      count: "3 Leaders",
-      description:
-        "High-level institutional patronage and strategic stewardship guiding the academic and national mission of LEADS.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Patron & Chief Advisor"),
-      columns: 3,
-    },
-    {
       id: "centers-leadership",
       group: "Centers Leadership" as const,
       title: "Centers Leadership",
-      badge: "Governance Tier 02",
-      count: "5 Leaders",
+      badge: "Governance Tier 01",
+      count: "8 Leaders",
       description:
-        "Executive centre leadership and faculty leads driving daily centre operations, incubation programs, event execution, and fiscal governance.",
+        "High-level institutional patronage, executive deanship, centre leadership, and faculty leads guiding daily operations, incubation programs, and fiscal governance.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centers Leadership"),
-      columns: 3,
+      columns: 4,
     },
     {
       id: "governing-advisory",
