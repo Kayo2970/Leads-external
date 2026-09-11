@@ -61,10 +61,12 @@ export default function AboutPage() {
       group: "Alumni Student Council" as const,
       title: "Alumni Student Council",
       badge: "Governance Tier 04",
-      count: "8 Alumni Officers",
+      count: "8 Officers",
       description:
         "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Alumni Student Council"),
+      members: BOARD_MEMBERS_DATA.filter(
+        (m) => m.roleGroup === "Alumni Student Council" || m.roleGroup === "Student Core Council"
+      ),
       columns: 4,
     },
     {
@@ -72,7 +74,7 @@ export default function AboutPage() {
       group: "Student Core Council" as const,
       title: "Student Core Council",
       badge: "Governance Tier 05",
-      count: "Active Core Officers",
+      count: "8 Senior Officers",
       description:
         "Senior student executive leadership spearheading national summits, public relations, operations, finance, design, and research initiatives.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Core Council"),
