@@ -29,7 +29,7 @@ export default function AboutPage() {
     { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Alumni Student Council", value: "Alumni Student Council" },
     { label: "Student Core Council", value: "Student Core Council" },
-    { label: "Student Trainee Associates", value: "Student Trainee Associates" },
+    { label: "Core Committee", value: "Student Trainee Associates" },
   ];
 
   // Partition member categories
@@ -61,7 +61,7 @@ export default function AboutPage() {
       group: "Alumni Student Council" as const,
       title: "Alumni Student Council",
       badge: "Governance Tier 04",
-      count: "8 Officers",
+      count: "10 Officers",
       description:
         "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
       members: BOARD_MEMBERS_DATA.filter(
@@ -83,9 +83,9 @@ export default function AboutPage() {
     {
       id: "trainee-associates",
       group: "Student Trainee Associates" as const,
-      title: "Student Trainee Associates & Organizing Committee",
+      title: "Core Committee",
       badge: "Governance Tier 06",
-      count: "17 Associates",
+      count: "15 Members",
       description:
         "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
       members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Trainee Associates"),

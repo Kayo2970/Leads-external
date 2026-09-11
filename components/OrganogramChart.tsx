@@ -327,7 +327,7 @@ export default function OrganogramChart({
             }`}
           >
             <UserPlus className="w-6 h-6 text-purple-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-white">Student Trainee Associates</div>
+            <div className="text-sm font-extrabold text-white">Core Committee</div>
           </button>
         </div>
       </div>
