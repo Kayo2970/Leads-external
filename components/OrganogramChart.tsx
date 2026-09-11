@@ -260,20 +260,19 @@ export default function OrganogramChart({
           {/* Vertical stem down from Tier 4 */}
           <div className="w-0.5 h-6 bg-gradient-to-b from-amber-400 via-rose-400 to-[#DE3F11]" />
 
-          {/* Horizontal crossbar line connecting across all 4 student columns on larger screens */}
-          <div className="hidden sm:block w-[78%] md:w-[82%] lg:w-[88%] h-0.5 bg-gradient-to-r from-blue-400 via-amber-400 to-purple-400" />
+          {/* Horizontal crossbar line connecting across all 3 student columns on larger screens */}
+          <div className="hidden sm:block w-[66%] md:w-[72%] lg:w-[76%] h-0.5 bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400" />
 
-          {/* Vertical drop lines touching into each of the 4 Tier 5 Student Council boxes */}
-          <div className="hidden sm:grid w-full grid-cols-2 lg:grid-cols-4 gap-4 px-0">
+          {/* Vertical drop lines touching into each of the 3 Tier 5 Student Council boxes */}
+          <div className="hidden sm:grid w-full grid-cols-3 gap-4 px-0">
             <div className="flex justify-center"><div className="w-0.5 h-4 bg-blue-400" /></div>
             <div className="flex justify-center"><div className="w-0.5 h-4 bg-emerald-400" /></div>
-            <div className="flex justify-center"><div className="w-0.5 h-4 bg-amber-400" /></div>
             <div className="flex justify-center"><div className="w-0.5 h-4 bg-purple-400" /></div>
           </div>
         </div>
 
         {/* Tier 5: Councils & Wings */}
-        <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-4">
           {/* Alumni Student Council */}
           <button
             type="button"
@@ -300,20 +299,6 @@ export default function OrganogramChart({
           >
             <BookOpenCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
             <div className="text-sm font-extrabold text-white">Student Advisory Committee</div>
-          </button>
-
-          {/* Student Core Council */}
-          <button
-            type="button"
-            onClick={() => onSelectRoleGroup?.("Student Core Council")}
-            className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Student Core Council"
-                ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
-                : "bg-amber-950/40 border-amber-400/30 hover:border-amber-300 shadow-lg"
-            }`}
-          >
-            <Crown className="w-6 h-6 text-amber-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-white">Student Core Council</div>
           </button>
 
           {/* Student Trainee Associates */}

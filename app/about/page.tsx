@@ -28,7 +28,6 @@ export default function AboutPage() {
     { label: "Centers Leadership", value: "Centers Leadership" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Alumni Student Council", value: "Alumni Student Council" },
-    { label: "Student Core Council", value: "Student Core Council" },
     { label: "Core Committee", value: "Student Trainee Associates" },
   ];
 
@@ -49,7 +48,7 @@ export default function AboutPage() {
       id: "governing-advisory",
       group: "Governing & Advisory" as const,
       title: "Governing & Corporate Advisory Board",
-      badge: "Governance Tier 03",
+      badge: "Governance Tier 02",
       count: "6 Distinguished Advisors",
       description:
         "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
@@ -60,7 +59,7 @@ export default function AboutPage() {
       id: "alumni-student-council",
       group: "Alumni Student Council" as const,
       title: "Alumni Student Council",
-      badge: "Governance Tier 04",
+      badge: "Governance Tier 03",
       count: "10 Officers",
       description:
         "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
@@ -70,21 +69,10 @@ export default function AboutPage() {
       columns: 4,
     },
     {
-      id: "core-council",
-      group: "Student Core Council" as const,
-      title: "Student Core Council",
-      badge: "Governance Tier 05",
-      count: "8 Senior Officers",
-      description:
-        "Senior student executive leadership spearheading national summits, public relations, operations, finance, design, and research initiatives.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Core Council"),
-      columns: 4,
-    },
-    {
       id: "trainee-associates",
       group: "Student Trainee Associates" as const,
       title: "Core Committee",
-      badge: "Governance Tier 06",
+      badge: "Governance Tier 04",
       count: "15 Members",
       description:
         "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
