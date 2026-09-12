@@ -139,7 +139,7 @@ export default function Home() {
                   1st
                 </div>
                 <div className="text-xs sm:text-sm 2xl:text-base 3xl:text-xl text-white font-bold mt-2">
-                  Inaugural Bharath Leadership Summit
+                  Inaugural BHARAT LEAD SUMMIT 2026
                 </div>
                 <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#E2D9F3]/70 mt-1">Signature Annual Flagship</div>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
                   <div className="space-y-4 3xl:space-y-6">
                     <div className="liquid-glass-card rounded-2xl p-4 3xl:p-6 group">
                       <div className="text-sm 2xl:text-base 3xl:text-xl font-bold text-white group-hover:text-[#DE3F11] transition-colors">
-                        Bharath Leadership Summit (BLS)
+                        BHARAT LEAD SUMMIT 2026
                       </div>
                       <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
                         India's flagship annual summit convening policy makers, CEOs, and academia.

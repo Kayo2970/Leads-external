@@ -110,7 +110,7 @@ export default function ContactPage() {
                     Flagship Summit Inquiries
                   </h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    For urgent delegation entries or sponsorship details regarding the Bharath Leadership Summit (BLS), select "Bharath Leadership Summit & Events" in the form interest area.
+                    For urgent delegation entries or sponsorship details regarding the BHARAT LEAD SUMMIT 2026, select "BHARAT LEAD SUMMIT 2026 & Events" in the form interest area.
                   </p>
                 </div>
               </BorderGlow>

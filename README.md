@@ -23,7 +23,7 @@ Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`
 
 ### 1. 🧭 Rounded Floating Glassmorphic Navigation (`Nav.tsx`)
 - **Floating Pill Header**: Modern floating navigation bar with rounded borders (`rounded-2xl lg:rounded-full`), saturated backdrop blur, and 360° glassmorphic border highlights.
-- **Dynamic Dropdowns**: Instant access to LEADS Initiatives, Summits (Bharath Leadership Summit), and Official Impact Publications.
+- **Dynamic Dropdowns**: Instant access to LEADS Initiatives, Summits (BHARAT LEAD SUMMIT 2026), and Official Impact Publications.
 - **Responsive Mobile Drawer**: Matching rounded drawer menu with direct access to all flagship programs and documents.
 
 ### 2. 🎬 Cinematic Hero with Logo Scroll Mask (`LogoScrollExpand.tsx`)
@@ -49,7 +49,7 @@ Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`
 
 ### 6. 🎓 Comprehensive Capability Programs (`/programs`)
 - **Flagship Modules**: Comprehensive review of Executive FDP (Faculty Development), LDP (Leadership Development), MDP (Management Development), Vanguard Series, and SDP (Student Development).
-- **Bharath Leadership Summit (BLS)**: Direct integration with India's premier annual leadership convention.
+- **BHARAT LEAD SUMMIT 2026**: Direct integration with India's premier annual leadership convention.
 
 ### 7. 🤝 Institutional & Industry Partners (`/partners`)
 - **Multi-Tier Alliances**: Academic collaborations, corporate partners, industry apex bodies (FICCI, NHRD, AIMS), and government missions.
@@ -110,7 +110,7 @@ Leads-external/
 ├── public/
 │   ├── leads-short-logo.png    # LEADS insignia logo
 │   ├── ruas-logo.png           # Ramaiah University official seal
-│   ├── bls-logo.webp           # Bharath Leadership Summit emblem
+│   ├── bls-logo.webp           # BHARAT LEAD SUMMIT 2026 emblem
 │   ├── reports/                # Official verified PDF publications
 │   └── images/                 # Committee portraits, summits, and campus assets
 ├── tailwind.config.js          # Extended brand colors, shadows, and breakpoints

@@ -144,7 +144,7 @@ export default function Nav() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] flex items-center gap-1.5">
-                          <span>Bharath Leadership Summit</span>
+                          <span>BHARAT LEAD SUMMIT 2026</span>
                           <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-1.5 py-0.5 rounded font-extrabold uppercase">
                             Summit
                           </span>
@@ -314,7 +314,7 @@ export default function Nav() {
                 alt="BLS Logo"
                 className="w-4 h-4 object-contain rounded-full bg-purple-200 p-0.5"
               />
-              <span>Bharath Leadership Summit</span>
+              <span>BHARAT LEAD SUMMIT 2026</span>
             </a>
           </div>
           <Link href="/partners" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass("/partners")}>

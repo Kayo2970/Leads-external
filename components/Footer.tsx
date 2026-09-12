@@ -92,7 +92,7 @@ export default function Footer() {
                     alt="BLS Logo"
                     className="w-4 h-4 object-contain rounded-full bg-white/20 p-0.5 group-hover:scale-110 transition-transform"
                   />
-                  <span>Bharath Leadership Summit</span>
+                  <span>BHARAT LEAD SUMMIT 2026</span>
                 </a>
               </li>
               <li>

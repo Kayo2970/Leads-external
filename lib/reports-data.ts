@@ -26,7 +26,7 @@ export const REPORTS_DATA: ImpactReport[] = [
     publishedDate: "Annual Edition 2025–2026",
     highlights: [
       "Full year review of all flagship programmes and summits",
-      "Bharath Leadership Summit 2026 outcomes and proceedings",
+      "BHARAT LEAD SUMMIT 2026 outcomes and proceedings",
       "National leadership upliftment metrics and delegate impact data",
       "Institutional partnerships, MoUs and strategic roadmap updates",
     ],

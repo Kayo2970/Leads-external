@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "LEADS Next Gen Centre is India's first non-technical leadership and skill upliftment centre — explore our summits, events, impact reports, and initiatives.",
   keywords: [
     "LEADS Next Gen Centre",
-    "Bharath Leadership Summit",
+    "BHARAT LEAD SUMMIT 2026",
     "Skill Upliftment India",
     "Leadership Training Bengaluru",
     "MSRUAS",

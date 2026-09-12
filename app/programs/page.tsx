@@ -28,7 +28,7 @@ interface ProgramItem {
 const PROGRAMS_DATA: ProgramItem[] = [
   {
     id: "bls-summit",
-    title: "Bharath Leadership Summit (BLS)",
+    title: "BHARAT LEAD SUMMIT 2026",
     subtitle: "India's Premier Annual Leadership & Policy Convention",
     badge: "Annual Flagship Summit",
     icon: <Crown className="w-6 h-6 text-[#DE3F11]" />,

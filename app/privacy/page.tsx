@@ -53,7 +53,7 @@ export default function PrivacyPage() {
               <h2 className="text-xl sm:text-2xl font-bold text-white">1. Scope and Applicability</h2>
             </div>
             <p className="text-sm sm:text-base text-[#E2D9F3] leading-relaxed">
-              This Privacy Policy governs the collection, processing, storage, and transfer of personal data collected through the official LEADS public website, summit portals (including the Bharath Leadership Summit), event registrations, and ERP login gateways.
+              This Privacy Policy governs the collection, processing, storage, and transfer of personal data collected through the official LEADS public website, summit portals (including BHARAT LEAD SUMMIT 2026), event registrations, and ERP login gateways.
             </p>
             <p className="text-sm sm:text-base text-[#E2D9F3] leading-relaxed">
               By accessing our web portals or participating in our programmes, you acknowledge and agree to the practices outlined in this policy.
