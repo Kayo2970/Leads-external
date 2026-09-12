@@ -128,7 +128,8 @@ export default function ProgramsPage() {
             {PROGRAMS_DATA.map((program) => (
               <div
                 key={program.id}
-                className="bg-white rounded-3xl p-7 sm:p-9 3xl:p-12 border border-purple-200 shadow-xl flex flex-col justify-between group hover:border-[#DE3F11]/50 hover:shadow-2xl transition-all duration-300"
+                id={program.id}
+                className="scroll-mt-36 sm:scroll-mt-44 bg-white rounded-3xl p-7 sm:p-9 3xl:p-12 border border-purple-200 shadow-xl flex flex-col justify-between group hover:border-[#DE3F11]/50 hover:shadow-2xl transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
