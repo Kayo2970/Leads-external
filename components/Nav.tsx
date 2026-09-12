@@ -14,6 +14,7 @@ import {
   Zap,
   Building2,
   Sparkles,
+  Users,
 } from "lucide-react";
 import { REPORTS_DATA } from "@/lib/reports-data";
 import PlaceholderBadge from "@/components/PlaceholderBadge";
@@ -23,6 +24,7 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [reportsDropdownOpen, setReportsDropdownOpen] = useState(false);
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
+  const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isHomePage = pathname === "/";
   const showNav = !isHomePage || scrolled;
@@ -90,9 +92,217 @@ export default function Nav() {
               Home
             </Link>
 
-            <Link href="/events" className={navLinkClass("/events")}>
-              Events
-            </Link>
+            {/* Events Dropdown Menu */}
+            <div
+              className="relative"
+              onMouseEnter={() => setEventsDropdownOpen(true)}
+              onMouseLeave={() => setEventsDropdownOpen(false)}
+            >
+              <Link href="/events" className={navLinkClass("/events")}>
+                <span>Events</span>
+                <ChevronDown
+                  className={`w-4 h-4 3xl:w-5 3xl:h-5 transition-transform duration-200 ${
+                    eventsDropdownOpen ? "rotate-180 text-[#DE3F11]" : ""
+                  }`}
+                />
+              </Link>
+
+              {/* Events Dropdown Box */}
+              {eventsDropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 z-50">
+                  <div className="w-[460px] 3xl:w-[520px] rounded-2xl bg-white/95 backdrop-blur-2xl p-4 shadow-[0_25px_70px_-15px_rgba(30,12,61,0.3)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200 space-y-2">
+                    
+                    {/* Header with Direct Link to View All Events */}
+                    <div className="flex items-center justify-between px-3 py-1 border-b border-purple-100/80 mb-1.5">
+                      <span className="text-xs font-extrabold uppercase tracking-wider text-[#9C1256]">
+                        Event Categories
+                      </span>
+                      <Link
+                        href="/events"
+                        className="text-xs font-bold px-3 py-1 rounded-lg bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs hover:shadow-md hover:scale-[1.02] transition-all flex items-center gap-1"
+                      >
+                        <span>View All Events</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
+
+                    {/* Category Items List */}
+                    <div className="space-y-1.5 max-h-[420px] overflow-y-auto pr-1">
+                      {/* 1. Stand-alone */}
+                      <Link
+                        href="/events?category=Stand-alone"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Award className="w-4 h-4 text-[#9C1256]" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Stand-alone Ceremonies
+                            </span>
+                            <span className="text-[9px] bg-purple-100 text-[#9C1256] border border-purple-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Flagship
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            Centre Inauguration & Vanguard Retreat
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 2. Outreach */}
+                      <Link
+                        href="/events?category=Outreach"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Users className="w-4 h-4 text-blue-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Outreach Programmes
+                            </span>
+                            <span className="text-[9px] bg-blue-100 text-blue-900 border border-blue-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Delegations
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            New Delhi Delegation, NHRD, BMA, FKCCI & BCIC
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 3. Catalyst Leadership Talk Series (3.0 – 9.0) */}
+                      <Link
+                        href="/events?category=Catalyst%20Leadership%20Talk%20Series"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-orange-100/80 border border-orange-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Zap className="w-4 h-4 text-[#DE3F11]" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Catalyst Leadership Talk Series
+                            </span>
+                            <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0 shadow-xs">
+                              3.0 – 9.0
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            7 Masterclass Editions Grouped Together
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 4. Expert Talks */}
+                      <Link
+                        href="/events?category=Expert%20Talks"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-emerald-100/80 border border-emerald-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <FileText className="w-4 h-4 text-emerald-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Expert Talks
+                            </span>
+                            <span className="text-[9px] bg-emerald-100 text-emerald-900 border border-emerald-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Workshops
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            Data Science with Python & Analytics Workflows
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 5. Fireside Talks */}
+                      <Link
+                        href="/events?category=Fireside%20Talks"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-amber-100/80 border border-amber-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Sparkles className="w-4 h-4 text-amber-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Fireside Talks
+                            </span>
+                            <span className="text-[9px] bg-amber-100 text-amber-900 border border-amber-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Dialogues
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            Global to Local Change Makers & Youth Innovators
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 6. Boardroom Battles */}
+                      <Link
+                        href="/events?category=Boardroom%20Battles"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-rose-100/80 border border-rose-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Award className="w-4 h-4 text-rose-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Boardroom Battles
+                            </span>
+                            <span className="text-[9px] bg-rose-100 text-rose-900 border border-rose-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Simulations
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            Pragati Boardroom Strategy & Crisis Management
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 7. Sustainability */}
+                      <Link
+                        href="/events?category=Sustainability"
+                        className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-9 h-9 rounded-xl bg-teal-100/80 border border-teal-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Users className="w-4 h-4 text-teal-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Sustainability
+                            </span>
+                            <span className="text-[9px] bg-teal-100 text-teal-900 border border-teal-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Community
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
+                            Green Leaders Circle & Janani Sevashrama Drive
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+
+                    <div className="pt-2.5 mt-2 border-t border-purple-100/80 text-center">
+                      <Link
+                        href="/events"
+                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] transition-colors inline-flex items-center gap-1 hover:underline"
+                      >
+                        <span>View All Events</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Programs Dropdown Menu */}
             <div
