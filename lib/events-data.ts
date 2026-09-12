@@ -259,6 +259,37 @@ export const EVENTS_DATA: LEADSEvent[] = [
     editions: []
   },
   {
+    id: "anvaya-innovation-summit-2026",
+    placeholderId: 65,
+    name: "ANVAYA Innovation Summit 2026",
+    seriesName: "Outreach Programmes",
+    category: "Outreach",
+    subCategory: "Outreach",
+    tagline: "Innovation for Impact - From Vision to Action",
+    date: "January 22, 2026",
+    location: "NIMHANS Convention Centre, Bengaluru",
+    attendees: "25 Student LEADS Delegation & Academic Leaders",
+    badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
+    logoSvg: "users",
+    photo: "/images/gallery/g6.webp",
+    gallery: ["/images/gallery/g6.webp", "/images/gallery/g7.webp"],
+    featured: true,
+    description: "LEADS Next Gen Centre attended the Anvaya Innovation Summit 2026 at NIMHANS Convention Centre on 22nd January 2026, structured across four tracks examining how innovation ecosystems transform through the convergence of policy, corporate engagement, and academic leadership. Included the witnessing of an MOA signing between Vision Karnataka Foundation and Kishkinda University.",
+    seriesHighlights: [
+      "Inaugural plenary framing innovation-led governance for societal outcomes",
+      "Policy track reframing regulation as a platform for growth",
+      "Corporate Panel on AI-driven business rebirth & ethical progress",
+      "Academic Panel with RUAS Vice Chancellor Prof. K. K. Raina on university innovation ecosystems",
+      "MOA signing ceremony witnessed by 25-student LEADS delegation"
+    ],
+    outcomes: [
+      "Direct visibility into institutional partnership-building and MOA signing",
+      "Insights into AI-driven business transformation and ethical leadership"
+    ],
+    speakers: ["Prof. K. K. Raina (Vice Chancellor, RUAS)", "Vision Karnataka Foundation Stalwarts"],
+    editions: []
+  },
+  {
     id: "bcic-esg-awards",
     placeholderId: 65,
     name: "BCIC ESG and Sustainability Awards 3.0",

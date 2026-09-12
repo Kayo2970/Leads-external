@@ -169,7 +169,7 @@ export default function Nav() {
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
-                            New Delhi Delegation, NHRD, BMA, FKCCI & BCIC
+                            ANVAYA Innovation Summit, New Delhi Delegation, NHRD, BMA, FKCCI & BCIC
                           </div>
                         </div>
                       </Link>
