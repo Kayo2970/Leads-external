@@ -1,30 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import BorderGlow from "@/components/BorderGlow";
-import AnimatedContent from "@/components/AnimatedContent";
 import {
   GraduationCap,
   Award,
   Users,
-  Building2,
-  Briefcase,
-  TrendingUp,
   ArrowRight,
   CheckCircle,
-  Sparkles,
   Zap,
   Crown,
-  BookOpen,
-  Target,
-  ShieldCheck,
-  Compass,
 } from "lucide-react";
 
 interface ProgramItem {
   id: string;
-  category: "Leadership" | "Faculty & MDP" | "Startup & Student";
   title: string;
   subtitle: string;
   badge: string;
@@ -39,7 +28,6 @@ interface ProgramItem {
 const PROGRAMS_DATA: ProgramItem[] = [
   {
     id: "bls-summit",
-    category: "Leadership",
     title: "Bharath Leadership Summit (BLS)",
     subtitle: "India's Premier Annual Leadership & Policy Convention",
     badge: "Annual Flagship Summit",
@@ -58,7 +46,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
   },
   {
     id: "consolidated-development-program",
-    category: "Leadership",
     title: "FDP, LDP, MDP & SDP Development Programmes",
     subtitle: "Faculty (FDP), Leadership (LDP), Management (MDP) & Student Development (SDP) Track",
     badge: "Integrated Capability Track",
@@ -77,7 +64,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
   },
   {
     id: "vanguard-program",
-    category: "Leadership",
     title: "Vanguard Leadership Retreat",
     subtitle: "Elite Experiential Governance, Off-Campus Team Dynamics & Leadership Initiative",
     badge: "Vanguard Leadership Retreat",
@@ -96,7 +82,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
   },
   {
     id: "energy-refresher-program",
-    category: "Leadership",
     title: "ENERGY REFRESHER PROGRAM",
     subtitle: "Organized by Ministry of Power in collaboration with FICCI",
     badge: "Ministry of Power & FICCI",
@@ -116,15 +101,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
 ];
 
 export default function ProgramsPage() {
-  const [activeTab, setActiveTab] = useState<string>("All");
-
-  const categories = ["All", "Leadership"];
-
-  const filteredPrograms =
-    activeTab === "All"
-      ? PROGRAMS_DATA
-      : PROGRAMS_DATA.filter((p) => p.category === activeTab);
-
   return (
     <div className="min-h-screen bg-[#FDFBFF]">
       {/* SECTION 1 [PURPLE 30%]: HERO HEADER */}
@@ -140,25 +116,8 @@ export default function ProgramsPage() {
             Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Development Programs</span>
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
-            From Faculty Development (FDP), Management Development (MDP), and Vanguard Track to Leadership Development (LDP) & Startup SDP — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
+            Empowering leaders across government, corporate enterprises, academia, and student ventures through our flagship summits and capability-building tracks.
           </p>
-
-          {/* Category Filter Pills in Hero */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveTab(cat)}
-                className={`px-5 py-2.5 3xl:px-8 3xl:py-4 rounded-xl 3xl:rounded-2xl font-bold text-xs sm:text-sm 3xl:text-xl transition-all duration-300 cursor-pointer ${
-                  activeTab === cat
-                    ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg scale-105"
-                    : "bg-white/10 hover:bg-white/20 text-white border border-white/20"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -166,7 +125,7 @@ export default function ProgramsPage() {
       <section className="py-20 3xl:py-32 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:gap-12">
-            {filteredPrograms.map((program) => (
+            {PROGRAMS_DATA.map((program) => (
               <div
                 key={program.id}
                 className="bg-white rounded-3xl p-7 sm:p-9 3xl:p-12 border border-purple-200 shadow-xl flex flex-col justify-between group hover:border-[#DE3F11]/50 hover:shadow-2xl transition-all duration-300"
