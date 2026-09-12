@@ -57,77 +57,22 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: true,
   },
   {
-    id: "fdp-program",
-    category: "Faculty & MDP",
-    title: "Faculty Development Programmes (FDP)",
-    subtitle: "Multidisciplinary Pedagogical & Leadership Upliftment for Educators",
-    badge: "Academic Capacity Building",
-    icon: <BookOpen className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "University Professors, Department Heads, & Faculty Mentors",
-    description:
-      "Designed specifically for academic leaders to integrate non-technical leadership skills, modern mentoring, industry-aligned case studies, and research-driven pedagogy into higher education ecosystems.",
-    highlights: [
-      "Outcome-based education (OBE) & modern leadership pedagogy",
-      "Grant writing, research leadership, and institutional governance",
-      "Mentorship techniques for nurturing student founders",
-      "FDP certification recognized by national academic bodies",
-    ],
-    duration: "5-Day Intensive Cohorts",
-  },
-  {
-    id: "ldp-program",
+    id: "consolidated-development-program",
     category: "Leadership",
-    title: "Leadership Development Programmes (LDP)",
-    subtitle: "Executive Capability & Strategic Governance for Senior Leaders",
-    badge: "Executive Leadership",
-    icon: <ShieldCheck className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Senior Managers, Enterprise Directors, & Public Sector Officers",
+    title: "FDP, LDP, MDP & SDP Development Programmes",
+    subtitle: "Faculty (FDP), Leadership (LDP), Management (MDP) & Student Development (SDP) Track",
+    badge: "Integrated Capability Track",
+    icon: <GraduationCap className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Educators, Senior Executives, Corporate Managers, & Student Founders",
     description:
-      "Targeted intensive modules equipping senior executives with cross-functional leadership capabilities, emotional intelligence, strategic alignment, and crisis resolution frameworks.",
+      "A unified capability-building framework integrating Faculty Development (FDP), Leadership Development (LDP), Management Development (MDP), and Student Development (SDP) into specialized modular cohorts for universities, government bodies, corporate enterprises, and student ventures.",
     highlights: [
-      "Crisis leadership & strategic scenario planning",
-      "Cross-cultural management & stakeholder communication",
-      "Ethics, governance, and sustainable business models",
-      "Individual executive coaching & diagnostic assessments",
+      "Faculty Development (FDP): Multidisciplinary pedagogy, OBE standards & research mentoring for educators",
+      "Leadership Development (LDP): Executive capability, crisis governance & strategic alignment for senior leaders",
+      "Management Development (MDP): Non-technical managerial acumen, operational agility & fiscal discipline",
+      "Student Development (SDP): Venture scaling, pitch mastery, business model canvas & investor readiness for youth founders",
     ],
-    duration: "3-Month Hybrid Modular Track",
-    featured: true,
-  },
-  {
-    id: "mdp-program",
-    category: "Faculty & MDP",
-    title: "Management Development Programmes (MDP)",
-    subtitle: "Non-Technical Managerial & Organizational Excellence",
-    badge: "Corporate MDP",
-    icon: <Briefcase className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Mid-to-Senior Managers, Business Unit Heads, & Entrepreneurs",
-    description:
-      "Focused managerial training programs tailored for corporate enterprises and institutions to elevate team performance, operational agility, decision making, and fiscal discipline.",
-    highlights: [
-      "Operational strategy & agile team management",
-      "Non-technical financial acumen for non-finance managers",
-      "Conflict resolution & high-performance organizational culture",
-      "Customized in-company training modules available",
-    ],
-    duration: "2-Day Workshops & 4-Week Tracks",
-  },
-  {
-    id: "startup-sdp",
-    category: "Startup & Student",
-    title: "Startup Student Development Programmes (SDP)",
-    subtitle: "Empowering Student Founders & Early Venture Innovators",
-    badge: "Venture Accelerator",
-    icon: <TrendingUp className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Student Entrepreneurs, Research Scholars, & Youth Innovators",
-    description:
-      "A hands-on, venture-building development programme designed to instill venture scaling capabilities, pitch mastery, non-technical business strategy, and investor readiness in student founders.",
-    highlights: [
-      "Idea validation, business model canvas, and go-to-market strategy",
-      "Pitch deck refinement & mock investor demo days",
-      "Mentorship from experienced startup founders & VC advisors",
-      "Access to LEADS incubation network & seed grants",
-    ],
-    duration: "6-Week Hands-On Cohort",
+    duration: "Modular Cohorts (2-Day Workshops to 3-Month Modular Tracks)",
     featured: true,
   },
   {
@@ -151,7 +96,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
   },
   {
     id: "energy-refresher-program",
-    category: "Faculty & MDP",
+    category: "Leadership",
     title: "ENERGY REFRESHER PROGRAM",
     subtitle: "Organized by Ministry of Power in collaboration with FICCI",
     badge: "Ministry of Power & FICCI",
@@ -173,7 +118,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
 export default function ProgramsPage() {
   const [activeTab, setActiveTab] = useState<string>("All");
 
-  const categories = ["All", "Leadership", "Faculty & MDP", "Startup & Student"];
+  const categories = ["All", "Leadership"];
 
   const filteredPrograms =
     activeTab === "All"
