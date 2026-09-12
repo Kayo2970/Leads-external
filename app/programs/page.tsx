@@ -169,24 +169,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: true,
   },
   {
-    id: "research-fellowships",
-    category: "Faculty & MDP",
-    title: "Research & Policy Fellowships",
-    subtitle: "National Impact Reports & Multidisciplinary Skill Research",
-    badge: "Research & Policy",
-    icon: <Target className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Postdoctoral Fellows, Policy Analysts, & Academic Researchers",
-    description:
-      "Rigorous empirical research tracks publishing verified national studies on skill gaps, non-technical leadership metrics, and policy recommendations for state and national bodies.",
-    highlights: [
-      "Publication of national skill gap & leadership whitepapers",
-      "Collaboration with Ministry policy bodies & academic partners",
-      "Empirical research methodology & data-driven insights",
-      "Fellowship stipends & national presentation platforms",
-    ],
-    duration: "6 to 12 Months Fellowship Track",
-  },
-  {
     id: "energy-refresher-program",
     category: "Faculty & MDP",
     title: "ENERGY REFRESHER PROGRAM",
