@@ -106,24 +106,25 @@ export default function Nav() {
 
               {/* Programs Dropdown Box */}
               {programsDropdownOpen && (
-                <div className="absolute top-full left-0 pt-1.5 z-50">
-                  <div className="w-88 3xl:w-96 rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1">
-                      LEADS Initiatives & Summits
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 z-50">
+                  <div className="w-[440px] 3xl:w-[480px] rounded-2xl bg-white/95 backdrop-blur-2xl p-4 shadow-[0_25px_70px_-15px_rgba(30,12,61,0.3)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200 space-y-2">
+                    <div className="text-xs 3xl:text-sm font-extrabold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100/80 mb-2 flex items-center justify-between">
+                      <span>LEADS Initiatives & Summits</span>
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-normal">Flagship Hub</span>
                     </div>
 
                     <Link
                       href="/programs"
-                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                      className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                     >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
-                        <FileText className="w-4 h-4 text-[#DE3F11]" />
+                      <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                        <FileText className="w-5 h-5 text-[#9C1256]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
+                        <div className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
                           Programs Overview
                         </div>
-                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                        <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
                           FDP, LDP, MDP & SDP Development Programmes
                         </div>
                       </div>
@@ -133,23 +134,25 @@ export default function Nav() {
                       href="https://www.bharatleadsummit.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                      className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                     >
-                      <div className="p-1.5 rounded-lg bg-purple-100 border border-purple-200 mt-0.5 shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
                         <img
                           src="/bls-logo.webp"
                           alt="BLS Logo"
-                          className="w-5 h-5 object-contain rounded-full"
+                          className="w-6 h-6 object-contain rounded-full"
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] flex items-center gap-1.5">
-                          <span>BHARAT LEAD SUMMIT 2026</span>
-                          <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-1.5 py-0.5 rounded font-extrabold uppercase">
-                            Summit
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                            BHARAT LEAD SUMMIT 2026
+                          </span>
+                          <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0 shadow-xs">
+                            Summit ↗
                           </span>
                         </div>
-                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                        <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
                           India's premier annual policy & leadership convention
                         </div>
                       </div>
@@ -157,27 +160,28 @@ export default function Nav() {
 
                     <Link
                       href="/programs"
-                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                      className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                     >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5">
-                        <FileText className="w-4 h-4 text-[#DE3F11]" />
+                      <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                        <FileText className="w-5 h-5 text-[#DE3F11]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11]">
+                        <div className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
                           Catalyst Leadership Talk Series
                         </div>
-                        <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
+                        <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
                           Monthly executive & non-technical masterclass series
                         </div>
                       </div>
                     </Link>
 
-                    <div className="mt-2 pt-2 border-t border-purple-100 text-center">
+                    <div className="pt-2.5 mt-2 border-t border-purple-100/80 text-center">
                       <Link
                         href="/programs"
-                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
+                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] transition-colors inline-flex items-center gap-1 hover:underline"
                       >
-                        View All Capability Programs →
+                        <span>View All Capability Programs</span>
+                        <span>→</span>
                       </Link>
                     </div>
                   </div>
@@ -210,46 +214,47 @@ export default function Nav() {
 
               {/* Dropdown Menu Box */}
               {reportsDropdownOpen && (
-                <div className="absolute top-full left-0 pt-1.5 z-50">
-                  <div className="w-96 3xl:w-[420px] rounded-2xl bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_20px_60px_-15px_rgba(30,12,61,0.25)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100 mb-1 flex items-center justify-between">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 z-50">
+                  <div className="w-[450px] 3xl:w-[490px] rounded-2xl bg-white/95 backdrop-blur-2xl p-4 shadow-[0_25px_70px_-15px_rgba(30,12,61,0.3)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200 space-y-2">
+                    <div className="text-xs 3xl:text-sm font-extrabold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text px-3 py-1.5 border-b border-purple-100/80 mb-2 flex items-center justify-between">
                       <span>Official Annual Publication</span>
-                      <span className="text-[10px] text-slate-400 font-semibold uppercase">Verified Release</span>
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-normal">Verified Release</span>
                     </div>
-                    <div className="space-y-1 max-h-[380px] overflow-y-auto pr-1">
+                    <div className="space-y-1.5 max-h-[380px] overflow-y-auto pr-1">
                       {REPORTS_DATA.map((report) => (
                         <a
                           key={report.id}
                           href={report.fileUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-purple-50 transition-colors group"
+                          className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                         >
-                          <div className="p-2 rounded-lg bg-gradient-to-r from-[#9C1256]/10 to-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20 mt-0.5 shrink-0">
-                            <FileText className="w-4 h-4 text-[#DE3F11]" />
+                          <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                            <FileText className="w-5 h-5 text-[#9C1256]" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="text-xs 3xl:text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] leading-tight flex items-center justify-between gap-1">
+                            <div className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] leading-snug flex items-center justify-between gap-2">
                               <span className="truncate">{report.title}</span>
-                              <ExternalLink className="w-3 h-3 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                              <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#DE3F11] transition-colors shrink-0" />
                             </div>
-                            <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium mt-0.5 flex items-center gap-2">
+                            <div className="text-xs text-slate-500 font-medium mt-1 flex items-center gap-2">
                               <span>{report.year}</span>
                               <span>·</span>
                               <span className="font-semibold text-slate-600">{report.fileSize} PDF</span>
                               <span>·</span>
-                              <span className="text-[#9C1256] font-semibold">Open PDF ↗</span>
+                              <span className="text-[#9C1256] font-semibold group-hover:underline">Open PDF ↗</span>
                             </div>
                           </div>
                         </a>
                       ))}
                     </div>
-                    <div className="mt-2 pt-2 border-t border-purple-100 text-center">
+                    <div className="pt-2.5 mt-2 border-t border-purple-100/80 text-center">
                       <Link
                         href="/reports"
-                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] hover:underline"
+                        className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] transition-colors inline-flex items-center gap-1 hover:underline"
                       >
-                        Open Interactive Reader & Hub →
+                        <span>Open Interactive Reader & Hub</span>
+                        <span>→</span>
                       </Link>
                     </div>
                   </div>
