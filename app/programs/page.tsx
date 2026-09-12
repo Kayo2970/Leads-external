@@ -152,9 +152,9 @@ const PROGRAMS_DATA: ProgramItem[] = [
   {
     id: "vanguard-program",
     category: "Leadership",
-    title: "Vanguard Executive Leadership Track",
-    subtitle: "Elite Strategic Governance & C-Suite Excellence Initiative",
-    badge: "Executive Vanguard Track",
+    title: "Vanguard Leadership Retreat",
+    subtitle: "Elite Experiential Governance, Off-Campus Team Dynamics & Leadership Initiative",
+    badge: "Vanguard Leadership Retreat",
     icon: <Award className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Board Members, C-Suite Executives, & Senior Institutional Fellows",
     description:

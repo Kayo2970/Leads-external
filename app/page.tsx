@@ -253,7 +253,7 @@ export default function Home() {
                         FDP, LDP, MDP, Vanguard & SDP
                       </div>
                       <div className="text-xs 2xl:text-sm 3xl:text-base text-[#E2D9F3]/80 mt-1">
-                        Faculty Development (FDP), Leadership (LDP), Management Development (MDP), Vanguard Executive Track, and Startup SDP.
+                        Faculty Development (FDP), Leadership (LDP), Management Development (MDP), Vanguard Leadership Retreat, and Startup SDP.
                       </div>
                     </div>
 
