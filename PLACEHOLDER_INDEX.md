@@ -82,7 +82,7 @@ Every image and image slot across the website now features a **unique, high-visi
 | **`#52`** | **Startup Founders Venture Sprint** | Main Event Photo | `EventCard` / `/events` |
 | **`#53`** | **Founders Sprint 2025** | Product Builder to CEO | `EventModal` |
 | **`#54`** | **LEADS Annual Impact Meet** | Main Event Photo | `EventCard` / `/events` |
-| **`#55`** | **Annual Impact Meet 2025** | Year of Transformation | `EventModal` |
+| **`#55`** | **Annual Impact Meet 2025** | Year of Transformation (✅ Updated: `/events/ph55.jpg`) | `EventModal` |
 | **`#56`** | **LEADS Outreach Activities** | Main Event Photo | `EventCard` / `/events` |
 
 ---

@@ -140,9 +140,9 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 51, title: "Executive Fireside & Roundtables", subtitle: "Main Event Photo", category: "Executive Roundtable", page: "/events", component: "EventCard" },
   { id: 52, title: "Fireside Edition 1", subtitle: "CEO Dialogue", category: "Event Edition", page: "/events", component: "EventModal" },
   { id: 53, title: "Fireside Edition 2", subtitle: "Policy & Governance", category: "Event Edition", page: "/events", component: "EventModal" },
-  { id: 54, title: "Founders & Student Leaders Sprint", subtitle: "Main Event Photo", category: "Venture Accelerator", page: "/events", component: "EventCard" },
-  { id: 55, title: "Sprint 2024", subtitle: "Cohort Pitch Day", category: "Event Edition", page: "/events", component: "EventModal" },
-  { id: 56, title: "Sprint 2025", subtitle: "National Scale-up Sprint", category: "Event Edition", page: "/events", component: "EventModal" },
+  { id: 54, title: "LEADS Annual Impact Meet", subtitle: "Main Event Photo", category: "Annual Conclave", page: "/events", component: "EventCard" },
+  { id: 55, title: "Annual Impact Meet 2025", subtitle: "Year of Transformation (Updated Photo)", category: "Event Edition", page: "/events", component: "EventModal" },
+  { id: 56, title: "LEADS Outreach Activities", subtitle: "Main Event Photo", category: "Outreach Initiatives", page: "/events", component: "EventCard" },
 
   // Event Gallery Items (57-72)
   { id: 57, title: "Event Gallery Photo 1", subtitle: "Catalyst Workshop", category: "Gallery", page: "/events", component: "GalleryGrid" },
