@@ -21,8 +21,8 @@ import {
   Filter,
 } from "lucide-react";
 
+// Removed "All Events" from top tabs as requested by user
 const EVENT_CATEGORIES = [
-  "All Events",
   "Stand-alone",
   "Outreach",
   "Catalyst Leadership Talk Series",
@@ -53,19 +53,28 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 
 function EventsContent() {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "All Events";
+  const queryCat = searchParams.get("category");
+  const initialCategory = (queryCat && (EVENT_CATEGORIES.includes(queryCat) || queryCat === "All Events"))
+    ? queryCat
+    : "Stand-alone";
+
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
+  const [showAllEvents, setShowAllEvents] = useState<boolean>(queryCat === "All Events" || queryCat === "all");
   const [selectedEvent, setSelectedEvent] = useState<LEADSEvent | null>(null);
 
   useEffect(() => {
     const cat = searchParams.get("category");
-    if (cat && EVENT_CATEGORIES.includes(cat)) {
+    if (cat === "All Events" || cat === "all") {
+      setShowAllEvents(true);
+      setSelectedCategory("All Events");
+    } else if (cat && EVENT_CATEGORIES.includes(cat)) {
+      setShowAllEvents(false);
       setSelectedCategory(cat);
     }
   }, [searchParams]);
 
   const filteredEvents =
-    selectedCategory === "All Events"
+    showAllEvents || selectedCategory === "All Events"
       ? EVENTS_DATA
       : EVENTS_DATA.filter((e) => e.subCategory === selectedCategory);
 
@@ -104,12 +113,12 @@ function EventsContent() {
       <section className="py-16 sm:py-24 bg-[#FDFBFF] text-[#1E0C3D]">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           
-          {/* CATEGORY TABS / GROUP BAR */}
+          {/* CATEGORY TABS / GROUP BAR (NO ALL EVENTS BUTTON HERE) */}
           <div className="mb-12">
             <div className="flex items-center justify-between mb-4">
               <div className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#9C1256]">
                 <Filter className="w-4 h-4 text-[#DE3F11]" />
-                <span>Filter Events by Subcategory</span>
+                <span>Subcategories</span>
               </div>
               <span className="text-xs text-slate-500 font-semibold">
                 Showing {filteredEvents.length} {filteredEvents.length === 1 ? "Event" : "Events"}
@@ -118,12 +127,15 @@ function EventsContent() {
 
             <div className="flex flex-wrap gap-2 sm:gap-3 p-2 rounded-2xl bg-purple-50/70 border border-purple-100">
               {EVENT_CATEGORIES.map((cat) => {
-                const isActive = selectedCategory === cat;
+                const isActive = !showAllEvents && selectedCategory === cat;
                 return (
                   <button
                     key={cat}
                     type="button"
-                    onClick={() => setSelectedCategory(cat)}
+                    onClick={() => {
+                      setShowAllEvents(false);
+                      setSelectedCategory(cat);
+                    }}
                     className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                       isActive
                         ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md scale-[1.02]"
@@ -141,17 +153,19 @@ function EventsContent() {
           <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-50 to-orange-50/50 border border-purple-200/80 shadow-sm">
             <div className="flex items-center space-x-3 mb-2">
               <span className="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs">
-                Event Group
+                {showAllEvents ? "Complete Archive" : "Event Group"}
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wide">
-                Category Selection
+                Topic Selection
               </span>
             </div>
             <h2 className="text-2xl sm:text-4xl 3xl:text-5xl font-black text-[#1E0C3D] leading-tight">
-              {selectedCategory}
+              {showAllEvents ? "All Events & Assemblies" : selectedCategory}
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-4xl leading-relaxed">
-              {CATEGORY_DESCRIPTIONS[selectedCategory] || CATEGORY_DESCRIPTIONS["All Events"]}
+              {showAllEvents
+                ? CATEGORY_DESCRIPTIONS["All Events"]
+                : CATEGORY_DESCRIPTIONS[selectedCategory] || CATEGORY_DESCRIPTIONS["Stand-alone"]}
             </p>
           </div>
 
@@ -301,6 +315,48 @@ function EventsContent() {
                 </div>
               );
             })}
+          </div>
+
+          {/* BOTTOM SECTION: INTEGRATED VIEW ALL BUTTON */}
+          <div className="mt-16 pt-12 border-t border-purple-100 text-center">
+            {!showAllEvents ? (
+              <div className="bg-gradient-to-r from-purple-50 via-white to-orange-50/50 rounded-3xl p-8 sm:p-10 border border-purple-200 shadow-lg max-w-3xl mx-auto space-y-4">
+                <h3 className="text-xl sm:text-2xl font-black text-[#1E0C3D]">
+                  Want to explore our entire assembly archive?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+                  View all 19 national events, summits, outreach visits, and catalyst talk editions together in one complete list.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowAllEvents(true);
+                    setSelectedCategory("All Events");
+                    window.scrollTo({ top: 400, behavior: "smooth" });
+                  }}
+                  className="px-8 py-3.5 rounded-2xl font-bold text-sm bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2 cursor-pointer"
+                >
+                  <span>View All Events</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            ) : (
+              <div className="bg-purple-50/70 rounded-3xl p-6 border border-purple-200 max-w-2xl mx-auto flex items-center justify-between">
+                <span className="text-xs sm:text-sm font-bold text-[#1E0C3D]">
+                  Currently displaying all 19 events
+                </span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowAllEvents(false);
+                    setSelectedCategory("Stand-alone");
+                  }}
+                  className="px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white hover:scale-105 transition-transform"
+                >
+                  Filter by Category
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
