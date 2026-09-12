@@ -390,7 +390,7 @@ export default function Home() {
                   National Event Calendar
                 </div>
                 <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
-                  Featured Summits & Masterclasses
+                  Featured Programs & Events
                 </h2>
               </div>
               <Link

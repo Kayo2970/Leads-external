@@ -12,6 +12,8 @@ import {
   GraduationCap,
   Award,
   Zap,
+  Building2,
+  Sparkles,
 } from "lucide-react";
 import { REPORTS_DATA } from "@/lib/reports-data";
 import PlaceholderBadge from "@/components/PlaceholderBadge";
@@ -99,7 +101,7 @@ export default function Nav() {
               onMouseLeave={() => setProgramsDropdownOpen(false)}
             >
               <Link href="/programs" className={navLinkClass("/programs")}>
-                <span>Programs Overview</span>
+                <span>Programs</span>
                 <ChevronDown
                   className={`w-4 h-4 3xl:w-5 3xl:h-5 transition-transform duration-200 ${
                     programsDropdownOpen ? "rotate-180 text-[#DE3F11]" : ""
@@ -112,7 +114,7 @@ export default function Nav() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 z-50">
                   <div className="w-[460px] 3xl:w-[520px] rounded-2xl bg-white/95 backdrop-blur-2xl p-4 shadow-[0_25px_70px_-15px_rgba(30,12,61,0.3)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200 space-y-2">
                     
-                    {/* Header with Direct Program Overview Button */}
+                    {/* Header with Direct Link to Programs */}
                     <div className="flex items-center justify-between px-3 py-2 border-b border-purple-100/80 mb-1.5">
                       <span className="text-xs 3xl:text-sm font-extrabold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text">
                         Capability Programs & Summits
@@ -121,14 +123,14 @@ export default function Nav() {
                         href="/programs"
                         className="text-xs font-bold px-3 py-1 rounded-lg bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs hover:shadow-md hover:scale-[1.02] transition-all flex items-center gap-1"
                       >
-                        <span>Program Overview</span>
+                        <span>All Programs</span>
                         <span>→</span>
                       </Link>
                     </div>
 
                     {/* Program Items List */}
                     <div className="space-y-1.5 max-h-[420px] overflow-y-auto pr-1">
-                      {/* 1. BHARAT LEAD SUMMIT 2026 */}
+                      {/* 1. BHARAT LEAD SUMMIT 2026 - ALWAYS ON TOP! */}
                       <a
                         href="https://www.bharatleadsummit.com/"
                         target="_blank"
@@ -148,7 +150,7 @@ export default function Nav() {
                               BHARAT LEAD SUMMIT 2026
                             </span>
                             <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0 shadow-xs">
-                              Summit ↗
+                              Flagship Summit ↗
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
@@ -157,13 +159,36 @@ export default function Nav() {
                         </div>
                       </a>
 
-                      {/* 2. FDP, LDP, MDP & SDP Development Programmes */}
+                      {/* 2. Conferences & Seminars */}
+                      <Link
+                        href="/programs#aims-south-region-conference-2025"
+                        className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                          <Building2 className="w-5 h-5 text-[#9C1256]" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
+                              Conferences & Seminars
+                            </span>
+                            <span className="text-[9px] bg-purple-100 text-[#9C1256] border border-purple-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              8 Symposia
+                            </span>
+                          </div>
+                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
+                            AIMS, ANQ, INNOVA, BMA, AIU VC Meet & GST National Conferences
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 3. FDP, LDP, MDP & SDP Development Programmes */}
                       <Link
                         href="/programs#consolidated-development-program"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
-                          <GraduationCap className="w-5 h-5 text-[#9C1256]" />
+                          <GraduationCap className="w-5 h-5 text-[#DE3F11]" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-2">
@@ -171,18 +196,18 @@ export default function Nav() {
                               FDP, LDP, MDP & SDP Programmes
                             </span>
                             <span className="text-[9px] bg-purple-100 text-[#9C1256] border border-purple-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
-                              Core Track
+                              Core Tracks
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
-                            Faculty (FDP), Leadership (LDP), Management (MDP) & Student (SDP)
+                            Includes CaseCraft 5.0 (5-Day FDP) & Mindfulness Leadership FDP
                           </div>
                         </div>
                       </Link>
 
-                      {/* 3. Vanguard Leadership Retreat */}
+                      {/* 4. National Initiatives */}
                       <Link
-                        href="/programs#vanguard-program"
+                        href="/programs#national-leadership-day-badging"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
@@ -191,37 +216,37 @@ export default function Nav() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-2">
                             <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
-                              Vanguard Leadership Retreat
+                              National Initiatives
                             </span>
-                            <span className="text-[9px] bg-amber-100 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
-                              Executive
+                            <span className="text-[9px] bg-amber-100 text-amber-900 border border-amber-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              Commemoration
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
-                            Elite experiential governance & board dynamics initiative
+                            National Leadership Day - Badging Ceremony & Guest Talks
                           </div>
                         </div>
                       </Link>
 
-                      {/* 4. ENERGY REFRESHER PROGRAM */}
+                      {/* 5. Innovation & Entrepreneurship Tracks */}
                       <Link
-                        href="/programs#energy-refresher-program"
+                        href="/programs#iic-deeptech-startups"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
-                          <Zap className="w-5 h-5 text-[#DE3F11]" />
+                          <Sparkles className="w-5 h-5 text-[#DE3F11]" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-2">
                             <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
-                              ENERGY REFRESHER PROGRAM
+                              Innovation & Entrepreneurship
                             </span>
-                            <span className="text-[9px] bg-orange-100 text-[#DE3F11] border border-orange-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
-                              Ministry & FICCI
+                            <span className="text-[9px] bg-emerald-100 text-emerald-900 border border-emerald-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
+                              DeepTech
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
-                            Organized by Ministry of Power in collaboration with FICCI
+                            IIC Innovation & Entrepreneurship for DeepTech Startups
                           </div>
                         </div>
                       </Link>
@@ -232,7 +257,7 @@ export default function Nav() {
                         href="/programs"
                         className="text-xs 3xl:text-sm font-bold text-[#9C1256] hover:text-[#DE3F11] transition-colors inline-flex items-center gap-1 hover:underline"
                       >
-                        <span>Jump to Program Overview Page</span>
+                        <span>View All Capability Programs</span>
                         <span>→</span>
                       </Link>
                     </div>

@@ -10,12 +10,16 @@ import {
   CheckCircle,
   Zap,
   Crown,
+  FileText,
+  Building2,
+  Sparkles,
 } from "lucide-react";
 
-interface ProgramItem {
+export interface ProgramItem {
   id: string;
   title: string;
   subtitle: string;
+  category: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives" | "Innovation & Entrepreneurship Tracks";
   badge: string;
   icon: React.ReactNode;
   audience: string;
@@ -26,15 +30,17 @@ interface ProgramItem {
 }
 
 const PROGRAMS_DATA: ProgramItem[] = [
+  // 1. STAND-ALONE FLAGSHIP SUMMIT (ALWAYS ON TOP!)
   {
     id: "bls-summit",
     title: "BHARAT LEAD SUMMIT 2026",
-    subtitle: "India's Premier Annual Leadership & Policy Convention",
+    subtitle: "Transforming Vision Towards Viksit Bharat 2047",
+    category: "Flagship Summit",
     badge: "Annual Flagship Summit",
     icon: <Crown className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Policy Makers, Vice-Chancellors, CEOs, & National Delegates",
     description:
-      "The flagship annual convention bringing together India's top policy makers, corporate leaders, and academic stalwarts to shape the future of national leadership, skill upliftment, and sustainable growth.",
+      "The premier national flagship annual summit bringing together central ministers, policy makers, VCs, CEOs, and 1,000+ national delegates to shape India's leadership roadmap for Viksit Bharat 2047.",
     highlights: [
       "Keynote panels with central ministry & state leaders",
       "Unveiling of the annual LEADS National Skill Gap Report",
@@ -44,59 +50,231 @@ const PROGRAMS_DATA: ProgramItem[] = [
     duration: "Annual Multi-Day Convention",
     featured: true,
   },
+
+  // 2. CONFERENCES & SEMINARS / SUMMITS
+  {
+    id: "aims-south-region-conference-2025",
+    title: "AIMS South Region Conference 2025",
+    subtitle: "Emerging Trends in AI & Sustainability",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Management Faculty, Researchers, Industry Executives & Students",
+    description:
+      "Regional conference organized at St. Joseph's College, Bengaluru in collaboration with AIMS, focusing on AI governance, sustainability frameworks, Global Capability Centres (GCCs), and 21st-century management skills.",
+    highlights: [
+      "Sessions on AI market impact & Global Capability Centres (GCCs)",
+      "Keynote addresses by NASSCOM and IBM India stalwarts",
+      "Faculty & student paper presentations on sustainable business models",
+    ],
+    duration: "2-Day Regional Conference",
+    featured: true,
+  },
+  {
+    id: "bma-visualization-leadership-summit",
+    title: "BMA Visualization Leadership Summit",
+    subtitle: "Visual Analytics, Executive Dashboards & Decision Intelligence",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Corporate Executives, Data Leaders & Academic Administrators",
+    description:
+      "Executive leadership summit co-hosted with Bengaluru Management Association, exploring data visualization, executive decision dashboards, and visual storytelling for modern corporate leaders.",
+    highlights: [
+      "Visual analytics & executive dashboard masterclasses",
+      "Panel on data-driven corporate governance",
+      "Interactive case studies from leading enterprise tech firms",
+    ],
+    duration: "1-Day Executive Summit",
+    featured: false,
+  },
+  {
+    id: "anq-congress-2025",
+    title: "ANQ Congress 2025 (Asian Network for Quality)",
+    subtitle: "Global Quality Engineering, TQM & Operational Excellence",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Quality Directors, Industrial Engineers & International Delegates",
+    description:
+      "International quality congress convening international delegates and quality engineering stalwarts to explore Total Quality Management (TQM), ISO standards, and operational excellence.",
+    highlights: [
+      "Global quality standards & TQM frameworks",
+      "Keynote presentations from international quality directors",
+      "Industry-academia exchange on manufacturing excellence",
+    ],
+    duration: "3-Day International Congress",
+    featured: false,
+  },
+  {
+    id: "pre-summit-ai-india-impact",
+    title: "Pre-Summit: AI India Impact Summit 2026",
+    subtitle: "Strategic AI Governance & National Healthcare Integration",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "AI Researchers, Healthcare Directors & Policy Advisors",
+    description:
+      "Executive preparatory summit held at Ramaiah Medical College Board Room, convening AI leaders, medical directors, and policy stalwarts prior to the national summit.",
+    highlights: [
+      "AI integration in healthcare & national infrastructure",
+      "Ethical AI frameworks & data privacy protocols",
+      "Strategic roadmap preparation for Bharat Lead Summit 2026",
+    ],
+    duration: "Pre-Summit Roundtable",
+    featured: false,
+  },
+  {
+    id: "bma-symposium-ai-future-management",
+    title: "BMA Symposium: AI & Future Management Education",
+    subtitle: "Curriculum Transformation & AI-Driven Pedagogy",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Deans, B-School Directors & Management Educators",
+    description:
+      "Academic symposium evaluating AI's transformative impact on business school curricula, digital pedagogy, and corporate readiness for management graduates.",
+    highlights: [
+      "Integrating Generative AI in management curricula",
+      "Industry expectations for AI-literate management graduates",
+      "Interactive panel with BMA leadership and academic deans",
+    ],
+    duration: "1-Day Academic Symposium",
+    featured: false,
+  },
+  {
+    id: "aiu-south-zone-vc-meet",
+    title: "AIU South Zone Vice-Chancellors' Meet",
+    subtitle: "NEP 2020 Implementation & Higher Education Governance",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Vice-Chancellors, Registrars & University Chancellors",
+    description:
+      "Conclave of Vice-Chancellors from southern Indian universities discussing NEP 2020 alignment, multidisciplinary skill integration, research grants, and institutional autonomy.",
+    highlights: [
+      "NEP 2020 strategic implementation benchmarks",
+      "Inter-university research collaboration & grant allocation",
+      "Vice-Chancellors' roundtable on skill-integrated degrees",
+    ],
+    duration: "2-Day Vice-Chancellors' Conclave",
+    featured: false,
+  },
+  {
+    id: "innova-innovation-summit-2026",
+    title: "INNOVA Innovation Summit 2026",
+    subtitle: "Healthcare Tech, Deep-Tech & Sustainable Engineering",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Startup Founders, Tech Researchers & Venture Investors",
+    description:
+      "Four-track national innovation summit hosted at NIMHANS Convention Centre, showcasing deep-tech commercialization, healthcare innovations, and youth venture pitching.",
+    highlights: [
+      "Four specialized tracks: Deep-Tech, Healthcare, ESG & Youth Venturing",
+      "Live startup pitch competition with angel investor panel",
+      "Exhibition of patent-pending university research prototypes",
+    ],
+    duration: "4-Track National Summit",
+    featured: false,
+  },
+  {
+    id: "two-day-gst-conference",
+    title: "Two-Day National Conference on GST 2.0",
+    subtitle: "Tax Policy Reforms, Compliance & National Economic Governance",
+    category: "Conferences & Seminars",
+    badge: "Conferences & Seminars",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Tax Officers, CAs, Policy Researchers & Legal Scholars",
+    description:
+      "National academic conference examining GST reforms, tax compliance, and fiscal federalism, featuring Chief Commissioner of Central Tax Smt. Kajal Singh, IRS and ICSSR dignitaries.",
+    highlights: [
+      "Keynote address by Smt. Kajal Singh, IRS (Chief Commissioner of Central Tax)",
+      "Policy papers on GST 2.0, tax compliance & fiscal federalism",
+      "Interactive workshop for CA & finance scholars",
+    ],
+    duration: "2-Day National Conference",
+    featured: false,
+  },
+
+  // 3. FDP / MDP / LDP / SDP DEVELOPMENT PROGRAMMES
   {
     id: "consolidated-development-program",
     title: "FDP, LDP, MDP & SDP Development Programmes",
     subtitle: "Faculty (FDP), Leadership (LDP), Management (MDP) & Student Development (SDP) Track",
+    category: "FDP / MDP / LDP / SDP Programmes",
     badge: "Integrated Capability Track",
     icon: <GraduationCap className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Educators, Senior Executives, Corporate Managers, & Student Founders",
     description:
-      "A unified capability-building framework integrating Faculty Development (FDP), Leadership Development (LDP), Management Development (MDP), and Student Development (SDP) into specialized modular cohorts for universities, government bodies, corporate enterprises, and student ventures.",
+      "A unified capability-building framework integrating Faculty Development (FDP) including CaseCraft 5.0 5-Day FDP, Leadership Development (LDP), Management Development (MDP), and Student Development (SDP) into specialized modular cohorts for universities, government bodies, corporate enterprises, and student ventures.",
     highlights: [
+      "CaseCraft 5.0 (5-Day FDP): Reimagining Management Education Through Effective Case-Based Pedagogy",
       "Faculty Development (FDP): Multidisciplinary pedagogy, OBE standards & research mentoring for educators",
       "Leadership Development (LDP): Executive capability, crisis governance & strategic alignment for senior leaders",
       "Management Development (MDP): Non-technical managerial acumen, operational agility & fiscal discipline",
-      "Student Development (SDP): Venture scaling, pitch mastery, business model canvas & investor readiness for youth founders",
+      "Student Development (SDP): Venture scaling, pitch mastery, business model canvas & investor readiness",
     ],
     duration: "Modular Cohorts (2-Day Workshops to 3-Month Modular Tracks)",
     featured: true,
   },
   {
-    id: "vanguard-program",
-    title: "Vanguard Leadership Retreat",
-    subtitle: "Elite Experiential Governance, Off-Campus Team Dynamics & Leadership Initiative",
-    badge: "Vanguard Leadership Retreat",
-    icon: <Award className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Board Members, C-Suite Executives, & Senior Institutional Fellows",
+    id: "mindfulness-leadership-fdp",
+    title: "International Workshop on Mindfulness Leadership",
+    subtitle: "Conscious Executive Governance, Emotional Intelligence & Stress Resilience",
+    category: "FDP / MDP / LDP / SDP Programmes",
+    badge: "FDP / MDP / LDP / SDP Programmes",
+    icon: <GraduationCap className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Senior Faculty, Corporate Directors & Executive Cohorts",
     description:
-      "An elite executive vanguard track empowering C-suite executives, directors, and institutional stalwarts to master board governance, strategic realignment, high-stakes negotiation, and disruptive venture stewardship.",
+      "Specialized International FDP & Executive Workshop exploring mindfulness practices, emotional intelligence, stress management, and conscious leadership in corporate and academic settings.",
     highlights: [
-      "Boardroom dynamics & strategic governance masterclasses",
-      "Enterprise resilience, ethics, & crisis scenario navigation",
-      "Peer-to-peer executive roundtables & global benchmarking",
-      "Exclusive access to LEADS senior advisory & policy networks",
+      "Neuroscience of mindfulness & executive focus",
+      "Emotional intelligence & crisis communication techniques",
+      "Guided mindfulness sessions for corporate & academic leaders",
     ],
-    duration: "6-Month Modular Executive Track",
-    featured: true,
+    duration: "3-Day International FDP Workshop",
+    featured: false,
   },
+
+  // 4. NATIONAL INITIATIVES
   {
-    id: "energy-refresher-program",
-    title: "ENERGY REFRESHER PROGRAM",
-    subtitle: "Organized by Ministry of Power in collaboration with FICCI",
-    badge: "Ministry of Power & FICCI",
-    icon: <Zap className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Energy Sector Executives, Engineers, Power Utility Leaders & Policy Professionals",
+    id: "national-leadership-day-badging",
+    title: "National Leadership Day - Badging Ceremony",
+    subtitle: "Student Council Induction & National Leadership Commemoration",
+    category: "National Initiatives",
+    badge: "National Initiatives",
+    icon: <Award className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Student Council Delegates, University Leadership & Guest Dignitaries",
     description:
-      "A flagship national executive refresher programme organized by the Ministry of Power, Government of India, in strategic collaboration with FICCI and LEADS Next Gen Centre. Designed to train power sector executives, grid managers, and policy professionals on clean energy transition, smart grid resilience, and modern utility leadership.",
+      "Institutional celebration marking National Leadership Day, featuring the formal badging of the LEADS Student Council and keynote addresses on youth leadership and national service.",
     highlights: [
-      "Ministry of Power & FICCI joint executive curriculum",
-      "Clean energy transition, smart grid tech & power sector reforms",
-      "Keynote addresses by Ministry stalwarts & energy directors",
-      "Joint Ministry of Power & FICCI Executive Certification",
+      "Formal badging ceremony for the LEADS Student Council",
+      "Keynote addresses by distinguished national leaders",
+      "Unveiling of the annual student leadership charter",
     ],
-    duration: "Modular Executive Cohorts",
-    featured: true,
+    duration: "Annual Commemoration Ceremony",
+    featured: false,
+  },
+
+  // 5. INNOVATION & ENTREPRENEURSHIP TRACKS
+  {
+    id: "iic-deeptech-startups",
+    title: "IIC Innovation & Entrepreneurship for DeepTech Startups",
+    subtitle: "Role of Entrepreneurial Universities in Deep-Tech Commercialization",
+    category: "Innovation & Entrepreneurship Tracks",
+    badge: "Innovation & Entrepreneurship Tracks",
+    icon: <Sparkles className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Incubators, Tech Founders, Patent Attorneys & Investors",
+    description:
+      "International conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
+    highlights: [
+      "Deep-tech commercialization & IP asset protection",
+      "Joint panel with IISc and Adelaide University experts",
+      "University incubator setup & spin-off funding models",
+    ],
+    duration: "2-Day International Conference",
+    featured: false,
   },
 ];
 
@@ -113,7 +291,7 @@ export default function ProgramsPage() {
             <span>LEADS National Leadership & Capability Programs</span>
           </div>
           <h1 className="text-4xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-extrabold text-white tracking-tight max-w-5xl mx-auto leading-tight">
-            Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Development Programs</span>
+            Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Programs</span>
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
             Empowering leaders across government, corporate enterprises, academia, and student ventures through our flagship summits and capability-building tracks.
@@ -169,52 +347,29 @@ export default function ProgramsPage() {
                     <div className="text-xs uppercase font-bold tracking-wider text-[#9C1256]">
                       Key Highlights
                     </div>
-                    {program.highlights.map((h, i) => (
-                      <div key={i} className="flex items-start space-x-2 text-xs sm:text-sm 3xl:text-base text-slate-700">
-                        <CheckCircle className="w-4 h-4 text-[#DE3F11] shrink-0 mt-0.5" />
-                        <span>{h}</span>
+                    {program.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-start space-x-2 text-xs sm:text-sm 3xl:text-base text-slate-700 font-medium">
+                        <CheckCircle className="w-4 h-4 text-[#9C1256] shrink-0 mt-0.5" />
+                        <span>{highlight}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Card Footer Action */}
-                <div className="pt-6 border-t border-purple-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <span className="text-xs 3xl:text-base font-semibold text-slate-500">
-                    🗓️ {program.duration}
+                <div className="pt-6 border-t border-purple-100 flex items-center justify-between">
+                  <span className="text-xs sm:text-sm font-semibold text-slate-500">
+                    {program.duration}
                   </span>
-
                   <Link
                     href="/contact"
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm 3xl:text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2 group/btn"
+                    className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-lg hover:scale-105 transition-all"
                   >
-                    <span>Enquire / Register</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <span>Enquire Now</span>
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* CTA Bottom Banner */}
-          <div className="mt-20 rounded-3xl p-8 sm:p-12 3xl:p-16 bg-[#361C6A] text-white border border-purple-300 shadow-2xl text-center relative overflow-hidden">
-            <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-              <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-                Partner with LEADS for Institutional & Corporate Programs
-              </h2>
-              <p className="text-sm sm:text-lg text-[#E2D9F3] leading-relaxed">
-                We customize Faculty Development (FDP), Executive Leadership (LDP), MDP, Vanguard, and Startup SDP programs for universities, government departments, and corporate enterprises across India.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xl hover:scale-105 transition-all"
-                >
-                  <span>Request Custom Program Brochure</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
