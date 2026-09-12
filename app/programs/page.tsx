@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import ProgramModal from "@/components/ProgramModal";
 import {
   GraduationCap,
   Award,
@@ -21,7 +22,7 @@ export interface ProgramItem {
   id: string;
   title: string;
   subtitle: string;
-  category: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives" | "Innovation & Entrepreneurship Tracks";
+  category: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives";
   badge: string;
   icon: React.ReactNode;
   audience: string;
@@ -32,7 +33,7 @@ export interface ProgramItem {
 }
 
 const PROGRAM_GROUPS: {
-  name: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives" | "Innovation & Entrepreneurship Tracks";
+  name: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives";
   badge: string;
   description: string;
 }[] = [
@@ -46,7 +47,7 @@ const PROGRAM_GROUPS: {
     name: "Conferences & Seminars",
     badge: "National Symposia & Conclaves",
     description:
-      "High-level academic symposia, national quality congresses, AI impact conventions, and policy conferences co-hosted with AIMS, BMA, ANQ, AIU, and state ministries.",
+      "High-level academic symposia, international IIIC deep-tech conventions, national quality congresses, AI impact conventions, and policy conferences co-hosted with IISc, AIMS, BMA, ANQ, AIU, and Adelaide University.",
   },
   {
     name: "FDP / MDP / LDP / SDP Programmes",
@@ -59,12 +60,6 @@ const PROGRAM_GROUPS: {
     badge: "Institutional Commemorations",
     description:
       "Institutional national celebrations, student council badging ceremonies, and public service leadership commemorations.",
-  },
-  {
-    name: "Innovation & Entrepreneurship Tracks",
-    badge: "DeepTech Incubation",
-    description:
-      "Deep-tech commercialization, university incubator frameworks, and technology commercialization programs co-hosted at IISc with Adelaide University.",
   },
 ];
 
@@ -296,17 +291,16 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: false,
   },
 
-  // 5. INNOVATION & ENTREPRENEURSHIP TRACKS
   {
     id: "iic-deeptech-startups",
     title: "IIC Innovation & Entrepreneurship for DeepTech Startups",
     subtitle: "Role of Entrepreneurial Universities in Deep-Tech Commercialization",
-    category: "Innovation & Entrepreneurship Tracks",
-    badge: "Innovation & Entrepreneurship Tracks",
+    category: "Conferences & Seminars",
+    badge: "International IIIC Conference",
     icon: <Sparkles className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Incubators, Tech Founders, Patent Attorneys & Investors",
     description:
-      "International conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
+      "International IIIC conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
     highlights: [
       "Deep-tech commercialization & IP asset protection",
       "Joint panel with IISc and Adelaide University experts",
@@ -321,13 +315,14 @@ function ProgramsContent() {
   const searchParams = useSearchParams();
   const targetCategory = searchParams.get("category");
 
+  const [selectedProgram, setSelectedProgram] = useState<ProgramItem | null>(null);
+
   // Accordion state for each group (open by default)
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
     "Flagship Summit": true,
     "Conferences & Seminars": true,
     "FDP / MDP / LDP / SDP Programmes": true,
     "National Initiatives": true,
-    "Innovation & Entrepreneurship Tracks": true,
   });
 
   useEffect(() => {
@@ -355,6 +350,9 @@ function ProgramsContent() {
 
   return (
     <div className="min-h-screen bg-[#FDFBFF]">
+      {/* Program Detail Pop-up Modal */}
+      <ProgramModal program={selectedProgram} onClose={() => setSelectedProgram(null)} />
+
       {/* SECTION 1 [PURPLE 30%]: HERO HEADER */}
       <section className="pt-36 sm:pt-44 pb-20 3xl:pt-52 bg-[#361C6A] text-white relative overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-[#9C1256]/30 to-[#DE3F11]/30 rounded-full blur-3xl pointer-events-none" />
@@ -434,12 +432,13 @@ function ProgramsContent() {
                         <div
                           key={program.id}
                           id={program.id}
-                          className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md flex flex-col justify-between group/card hover:border-[#DE3F11]/50 hover:shadow-xl transition-all duration-300"
+                          onClick={() => setSelectedProgram(program)}
+                          className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md flex flex-col justify-between group/card hover:border-[#DE3F11]/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
                         >
                           <div>
                             <div className="flex items-center justify-between mb-5">
                               <div className="flex items-center space-x-3">
-                                <div className="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center shadow-sm">
+                                <div className="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center shadow-sm group-hover/card:scale-105 transition-transform">
                                   {program.icon}
                                 </div>
                                 <div>
@@ -483,17 +482,21 @@ function ProgramsContent() {
                             </div>
                           </div>
 
-                          <div className="pt-5 border-t border-purple-100 flex items-center justify-between">
+                          <div className="pt-5 border-t border-purple-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                             <span className="text-xs font-semibold text-slate-500">
                               {program.duration}
                             </span>
-                            <Link
-                              href="/contact"
-                              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-sm hover:shadow-md hover:scale-105 transition-all"
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedProgram(program);
+                              }}
+                              className="inline-flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer"
                             >
-                              <span>Enquire Now</span>
+                              <span>Read Full Details & Agenda</span>
                               <ArrowRight className="w-3.5 h-3.5" />
-                            </Link>
+                            </button>
                           </div>
                         </div>
                       ))}

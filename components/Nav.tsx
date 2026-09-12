@@ -380,11 +380,11 @@ export default function Nav() {
                               Conferences & Seminars
                             </span>
                             <span className="text-[9px] bg-purple-100 text-[#9C1256] border border-purple-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
-                              8 Symposia
+                              National & Intl
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
-                            AIMS, ANQ, INNOVA, BMA, AIU VC Meet & GST National Conferences
+                            IISc IIIC Conference, AIMS, ANQ, INNOVA, BMA, AIU VC Meet & GST National Conferences
                           </div>
                         </div>
                       </Link>
@@ -431,29 +431,6 @@ export default function Nav() {
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
                             National Leadership Day - Badging Ceremony & Guest Talks
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* 5. Innovation & Entrepreneurship Tracks */}
-                      <Link
-                        href="/programs?category=Innovation%20%26%20Entrepreneurship%20Tracks"
-                        className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
-                          <Sparkles className="w-5 h-5 text-[#DE3F11]" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between gap-2">
-                            <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
-                              Innovation & Entrepreneurship
-                            </span>
-                            <span className="text-[9px] bg-emerald-100 text-emerald-900 border border-emerald-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
-                              DeepTech
-                            </span>
-                          </div>
-                          <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
-                            IIC Innovation & Entrepreneurship for DeepTech Startups
                           </div>
                         </div>
                       </Link>
