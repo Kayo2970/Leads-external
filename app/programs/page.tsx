@@ -22,7 +22,7 @@ export interface ProgramItem {
   id: string;
   title: string;
   subtitle: string;
-  category: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives";
+  category: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes";
   badge: string;
   icon: React.ReactNode;
   audience: string;
@@ -33,7 +33,7 @@ export interface ProgramItem {
 }
 
 const PROGRAM_GROUPS: {
-  name: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes" | "National Initiatives";
+  name: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes";
   badge: string;
   description: string;
 }[] = [
@@ -54,12 +54,6 @@ const PROGRAM_GROUPS: {
     badge: "Modular Capability Tracks",
     description:
       "Unified capability-building tracks integrating Faculty Development (FDP) including CaseCraft 5.0 5-Day FDP, Leadership Development (LDP), Management Development (MDP), and Student Development (SDP).",
-  },
-  {
-    name: "National Initiatives",
-    badge: "Institutional Commemorations",
-    description:
-      "Institutional national celebrations, student council badging ceremonies, and public service leadership commemorations.",
   },
 ];
 
@@ -268,26 +262,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
       "Guided mindfulness sessions for corporate & academic leaders",
     ],
     duration: "3-Day International FDP Workshop",
-    featured: false,
-  },
-
-  // 4. NATIONAL INITIATIVES
-  {
-    id: "national-leadership-day-badging",
-    title: "National Leadership Day - Badging Ceremony",
-    subtitle: "Student Council Induction & National Leadership Commemoration",
-    category: "National Initiatives",
-    badge: "National Initiatives",
-    icon: <Award className="w-6 h-6 text-[#9C1256]" />,
-    audience: "Student Council Delegates, University Leadership & Guest Dignitaries",
-    description:
-      "Institutional celebration marking National Leadership Day, featuring the formal badging of the LEADS Student Council and keynote addresses on youth leadership and national service.",
-    highlights: [
-      "Formal badging ceremony for the LEADS Student Council",
-      "Keynote addresses by distinguished national leaders",
-      "Unveiling of the annual student leadership charter",
-    ],
-    duration: "Annual Commemoration Ceremony",
     featured: false,
   },
 

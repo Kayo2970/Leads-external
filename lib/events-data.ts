@@ -111,6 +111,40 @@ export const EVENTS_DATA: LEADSEvent[] = [
     ],
     editions: []
   },
+  {
+    id: "national-leadership-day-badging",
+    placeholderId: 59,
+    name: "National Leadership Day - Badging Ceremony & Guest Talks",
+    seriesName: "Flagship Ceremonies",
+    category: "Conclave",
+    subCategory: "Stand-alone",
+    tagline: "Official Induction of LEADS Student Council & Pinned Badging by National Stalwarts",
+    date: "2025 - 2026",
+    location: "Ramaiah University Campus, Bengaluru",
+    attendees: "400+ Student Delegates, Council Officers & Faculty",
+    badgeColor: "bg-purple-100 text-[#9C1256] border-purple-200",
+    logoSvg: "award",
+    photo: "/images/gallery/g3.webp",
+    gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
+    featured: true,
+    description: "Prestigious celebratory event marking National Leadership Day, highlighted by a formal Badging Ceremony that officially inducted the LEADS Student Council and core committee members. Graced by Chief Guest Padmashree Dr. Vijayalakshmi Deshmane, Mr. Kumar Ravi (Senior VP, BCIC), and Dr. Naganagouda S J (Honorary Secretary, NHRD Bengaluru) who personally pinned badges on student leaders.",
+    seriesHighlights: [
+      "Formal pinned Badging Ceremony for student council leaders",
+      "Keynote by Padmashree Dr. Vijayalakshmi Deshmane on values-based, compassionate leadership",
+      "Industry leadership insights by Mr. Kumar Ravi (BCIC) & Dr. Naganagouda S J (NHRD)",
+      "Bridging corporate expectations with youth leadership ethics"
+    ],
+    outcomes: [
+      "Formal induction of LEADS Student Council and operational charter",
+      "Direct mentorship channels with BCIC and NHRD executive boards"
+    ],
+    speakers: [
+      "Padmashree Dr. Vijayalakshmi Deshmane (Former Director, Kidwai Memorial)",
+      "Mr. Kumar Ravi (Senior Vice President, BCIC Karnataka)",
+      "Dr. Naganagouda S J (Honorary Secretary, NHRD Bengaluru)"
+    ],
+    editions: []
+  },
 
   // 2. Outreach Events
   {

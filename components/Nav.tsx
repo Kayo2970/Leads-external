@@ -146,7 +146,7 @@ export default function Nav() {
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
-                            Centre Inauguration & Vanguard Retreat
+                            Centre Inauguration, Vanguard Retreat & Badging Ceremony
                           </div>
                         </div>
                       </Link>
