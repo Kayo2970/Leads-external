@@ -115,10 +115,7 @@ export default function Nav() {
                   <div className="w-[460px] 3xl:w-[520px] rounded-2xl bg-white/95 backdrop-blur-2xl p-4 shadow-[0_25px_70px_-15px_rgba(30,12,61,0.3)] border border-purple-200/90 animate-in fade-in slide-in-from-top-2 duration-200 space-y-2">
                     
                     {/* Header with Direct Link to Programs */}
-                    <div className="flex items-center justify-between px-3 py-2 border-b border-purple-100/80 mb-1.5">
-                      <span className="text-xs 3xl:text-sm font-extrabold uppercase tracking-wider text-transparent bg-gradient-to-r from-[#9C1256] to-[#DE3F11] bg-clip-text">
-                        Capability Programs & Summits
-                      </span>
+                    <div className="flex items-center justify-end px-3 py-1 border-b border-purple-100/80 mb-1.5">
                       <Link
                         href="/programs"
                         className="text-xs font-bold px-3 py-1 rounded-lg bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs hover:shadow-md hover:scale-[1.02] transition-all flex items-center gap-1"
