@@ -105,7 +105,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* SECTION 1 [PURPLE]: HERO HEADER & ANIMATED LOGO BANNERS */}
-      <section className="pt-32 pb-20 3xl:pt-48 3xl:pb-32 bg-[#361C6A] text-white relative overflow-hidden">
+      <section className="pt-36 sm:pt-44 pb-20 3xl:pt-52 3xl:pb-32 bg-[#361C6A] text-white relative overflow-hidden">
         {/* Ambient Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-80 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none" />
 

@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* SECTION 1 [PURPLE]: HERO HEADER */}
-      <section className="pt-32 pb-20 bg-[#361C6A] text-white">
+      <section className="pt-36 sm:pt-44 pb-20 3xl:pt-52 bg-[#361C6A] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-semibold mb-6 shadow-sm">
             <Mail className="w-3.5 h-3.5 text-[#DE3F11]" />

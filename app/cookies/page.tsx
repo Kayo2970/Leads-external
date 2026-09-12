@@ -15,7 +15,7 @@ export default function CookiesPage() {
   };
 
   return (
-    <div className="bg-[#1E0C3D] text-white min-h-screen py-16 sm:py-24">
+    <div className="bg-[#1E0C3D] text-white min-h-screen pt-36 sm:pt-44 pb-16 sm:pb-24">
       {/* Header Banner */}
       <div className="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border-[#DE3F11]/40 text-[#DE3F11] text-xs font-semibold uppercase tracking-wider mb-4">

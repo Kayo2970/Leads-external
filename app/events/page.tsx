@@ -28,7 +28,7 @@ export default function EventsPage() {
       <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
 
       {/* SECTION 1 [PURPLE]: HERO HEADER */}
-      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 3xl:pt-48 3xl:pb-36 bg-[#361C6A] text-white overflow-hidden relative border-b border-[#DE3F11]/30">
+      <section className="pt-36 sm:pt-44 pb-16 sm:pb-24 3xl:pt-52 3xl:pb-36 bg-[#361C6A] text-white overflow-hidden relative border-b border-[#DE3F11]/30">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#9C1256]/30 via-transparent to-transparent pointer-events-none" />
 
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 relative z-10">

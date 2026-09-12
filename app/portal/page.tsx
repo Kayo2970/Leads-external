@@ -252,7 +252,7 @@ export default function PortalGatewayPage() {
       ───────────────────────────────────────────────────────────── */}
       <div
         ref={containerRef}
-        className="relative z-10 min-h-screen pt-28 sm:pt-32 pb-24"
+        className="relative z-10 min-h-screen pt-36 sm:pt-44 3xl:pt-52 pb-24"
       >
         {/* Ambient background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-gradient-to-r from-[#9C1256]/20 to-[#DE3F11]/20 blur-3xl pointer-events-none" />
