@@ -169,25 +169,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: true,
   },
   {
-    id: "sikhi-program",
-    category: "Faculty & MDP",
-    title: "SIKHI (FICCI Development Program)",
-    subtitle: "FICCI & LEADS Executive Skill & Leadership Development Initiative",
-    badge: "FICCI Development Track",
-    icon: <Compass className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Corporate Professionals, Industry Executives, & Academic Leaders",
-    description:
-      "A prestigious executive development programme conducted in collaboration with FICCI (Federation of Indian Chambers of Commerce & Industry) to elevate managerial capability, non-technical leadership acumen, and institutional excellence across sectors.",
-    highlights: [
-      "FICCI-aligned executive leadership & management modules",
-      "Strategic decision-making & non-technical capability building",
-      "Keynotes & networking with FICCI industry stalwarts",
-      "Joint SIKHI - FICCI & LEADS Executive Certification",
-    ],
-    duration: "Modular Executive Cohorts",
-    featured: true,
-  },
-  {
     id: "research-fellowships",
     category: "Faculty & MDP",
     title: "Research & Policy Fellowships",
@@ -232,7 +213,7 @@ export default function ProgramsPage() {
             Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Development Programs</span>
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
-            From Faculty Development (FDP), Management Development (MDP), Vanguard Track, and SIKHI (FICCI Development Program) to Leadership Development (LDP) & Startup SDP — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
+            From Faculty Development (FDP), Management Development (MDP), and Vanguard Track to Leadership Development (LDP) & Startup SDP — LEADS empowers leaders across government, corporate enterprises, academia, and student ventures.
           </p>
 
           {/* Category Filter Pills in Hero */}
@@ -335,7 +316,7 @@ export default function ProgramsPage() {
                 Partner with LEADS for Institutional & Corporate Programs
               </h2>
               <p className="text-sm sm:text-lg text-[#E2D9F3] leading-relaxed">
-                We customize Faculty Development (FDP), Executive Leadership (LDP), MDP, Vanguard, SIKHI (FICCI Program), and Startup SDP programs for universities, government departments, and corporate enterprises across India.
+                We customize Faculty Development (FDP), Executive Leadership (LDP), MDP, Vanguard, and Startup SDP programs for universities, government departments, and corporate enterprises across India.
               </p>
               <div className="pt-2">
                 <Link

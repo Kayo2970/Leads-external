@@ -86,8 +86,8 @@ const PARTNERS_DATA: PartnerItem[] = [
     type: "Apex Industry & Commerce Partner",
     logo: "/images/partners/ficci.webp",
     description:
-      "Apex national industry chamber collaborating on SIKHI executive development programs, trade leadership, and policy forums.",
-    collaborationScope: "SIKHI Executive Track, Policy Roundtables & Industry Summit",
+      "Apex national industry chamber collaborating on executive development programs, trade leadership, and policy forums.",
+    collaborationScope: "Executive Leadership Track, Policy Roundtables & Industry Summit",
     featured: true,
   },
   {

@@ -124,7 +124,7 @@ export default function Nav() {
                           Programs Overview
                         </div>
                         <div className="text-[11px] 3xl:text-xs text-slate-500 font-medium">
-                          FDP, LDP, MDP, Vanguard, SIKHI (FICCI) & SDP
+                          FDP, LDP, MDP, Vanguard & SDP
                         </div>
                       </div>
                     </Link>

@@ -48,7 +48,7 @@ Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`
 - **Rich Event Modal (`EventModal.tsx`)**: Fullscreen inspection modals with multi-photo carousels, schedule breakdowns, and registration pathways.
 
 ### 6. 🎓 Comprehensive Capability Programs (`/programs`)
-- **Flagship Modules**: Comprehensive review of Executive FDP (Faculty Development), LDP (Leadership Development), MDP (Management Development), Vanguard Series, SIKHI FICCI Initiatives, and SDP (Student Development).
+- **Flagship Modules**: Comprehensive review of Executive FDP (Faculty Development), LDP (Leadership Development), MDP (Management Development), Vanguard Series, and SDP (Student Development).
 - **Bharath Leadership Summit (BLS)**: Direct integration with India's premier annual leadership convention.
 
 ### 7. 🤝 Institutional & Industry Partners (`/partners`)
