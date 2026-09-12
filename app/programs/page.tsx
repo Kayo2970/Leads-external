@@ -172,12 +172,12 @@ const PROGRAMS_DATA: ProgramItem[] = [
     id: "energy-refresher-program",
     category: "Faculty & MDP",
     title: "ENERGY REFRESHER PROGRAM",
-    subtitle: "Organized by Ministry of Power in collaboration with FICCI Development Program",
+    subtitle: "Organized by Ministry of Power in collaboration with FICCI",
     badge: "Ministry of Power & FICCI",
     icon: <Zap className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Energy Sector Executives, Engineers, Power Utility Leaders & Policy Professionals",
     description:
-      "A flagship national executive refresher programme organized by the Ministry of Power, Government of India, in strategic collaboration with the FICCI Development Program and LEADS Next Gen Centre. Designed to train power sector executives, grid managers, and policy professionals on clean energy transition, smart grid resilience, and modern utility leadership.",
+      "A flagship national executive refresher programme organized by the Ministry of Power, Government of India, in strategic collaboration with FICCI and LEADS Next Gen Centre. Designed to train power sector executives, grid managers, and policy professionals on clean energy transition, smart grid resilience, and modern utility leadership.",
     highlights: [
       "Ministry of Power & FICCI joint executive curriculum",
       "Clean energy transition, smart grid tech & power sector reforms",
