@@ -8,9 +8,10 @@ import { FileText, ArrowDownToLine, ExternalLink, Sparkles, CheckCircle } from "
 interface ReportCardProps {
   report: ImpactReport;
   lightMode?: boolean;
+  onPreview?: (report: ImpactReport) => void;
 }
 
-export default function ReportCard({ report, lightMode = false }: ReportCardProps) {
+export default function ReportCard({ report, lightMode = false, onPreview }: ReportCardProps) {
   return (
     <BorderGlow
       edgeSensitivity={30}
@@ -97,26 +98,39 @@ export default function ReportCard({ report, lightMode = false }: ReportCardProp
           </div>
         </div>
 
-        {/* Action Buttons: Direct Native Browser View & Download */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <a
-            href={report.fileUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-[#1E0C3D] hover:bg-[#361C6A] text-white border border-purple-300 shadow-md flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-[1.02]"
-          >
-            <ExternalLink className="w-4 h-4 text-[#DE3F11]" />
-            <span>Open Native Viewer</span>
-          </a>
+        {/* Action Buttons: Direct Live Preview, New Tab & Download */}
+        <div className="flex flex-col gap-2.5 pt-2">
+          {onPreview && (
+            <button
+              type="button"
+              onClick={() => onPreview(report)}
+              className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white hover:opacity-95 shadow-md flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-[1.02] cursor-pointer"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>Launch Live PDF Viewer</span>
+            </button>
+          )}
 
-          <a
-            href={report.fileUrl}
-            download
-            className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white hover:opacity-95 shadow-md flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-[1.02]"
-          >
-            <ArrowDownToLine className="w-4 h-4" />
-            <span>Download PDF</span>
-          </a>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <a
+              href={report.fileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 px-3 rounded-xl font-bold text-xs bg-[#1E0C3D] hover:bg-[#361C6A] text-white border border-purple-300 shadow-sm flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-[1.02]"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-[#DE3F11]" />
+              <span>Open New Tab</span>
+            </a>
+
+            <a
+              href={report.fileUrl}
+              download
+              className="w-full py-3 px-3 rounded-xl font-bold text-xs bg-purple-100 hover:bg-purple-200 text-[#1E0C3D] border border-purple-200 shadow-sm flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-[1.02]"
+            >
+              <ArrowDownToLine className="w-3.5 h-3.5 text-[#9C1256]" />
+              <span>Download PDF</span>
+            </a>
+          </div>
         </div>
       </div>
     </BorderGlow>

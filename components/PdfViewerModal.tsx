@@ -113,26 +113,47 @@ export default function PdfViewerModal({
         </div>
 
         {/* Embedded PDF Frame */}
-        <div className="flex-1 bg-[#120726] relative">
-          <iframe
-            src={`${pdfUrl}#toolbar=1&navpanes=0`}
-            title={title}
-            className="w-full h-full border-0"
-          />
-
-          {/* Fallback overlay (visible if browser blocks iframe embed) */}
-          <noscript>
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white bg-[#1E0C3D]">
-              <p className="mb-4">Unable to display PDF directly in your browser.</p>
-              <a
-                href={pdfUrl}
-                download
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white font-bold"
-              >
-                Download PDF
-              </a>
-            </div>
-          </noscript>
+        <div className="flex-1 bg-[#120726] relative h-full min-h-[500px]">
+          <object
+            data={`${pdfUrl}#toolbar=1&navpanes=1&scrollbar=1`}
+            type="application/pdf"
+            className="w-full h-full border-0 min-h-[500px]"
+          >
+            <iframe
+              src={`${pdfUrl}#toolbar=1&navpanes=1`}
+              title={title}
+              className="w-full h-full border-0 min-h-[500px]"
+            >
+              <div className="flex flex-col items-center justify-center h-full p-8 text-center text-white bg-[#1E0C3D] space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-[#DE3F11]/20 border border-[#DE3F11]/40 flex items-center justify-center">
+                  <FileText className="w-8 h-8 text-[#DE3F11]" />
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-lg text-white">Live PDF Preview</h3>
+                  <p className="text-xs text-[#E2D9F3] max-w-md mt-1 leading-relaxed">
+                    Your current browser configuration requires launching the document in a dedicated viewer tab or downloading it directly.
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                  <a
+                    href={pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-all"
+                  >
+                    Open in New Tab
+                  </a>
+                  <a
+                    href={pdfUrl}
+                    download
+                    className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white font-bold text-xs shadow-md transition-all"
+                  >
+                    Download Official PDF
+                  </a>
+                </div>
+              </div>
+            </iframe>
+          </object>
         </div>
       </div>
     </div>
