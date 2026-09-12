@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   GraduationCap,
@@ -10,9 +11,9 @@ import {
   CheckCircle,
   Zap,
   Crown,
-  FileText,
   Building2,
   Sparkles,
+  Filter,
 } from "lucide-react";
 
 export interface ProgramItem {
@@ -28,6 +29,30 @@ export interface ProgramItem {
   duration: string;
   featured?: boolean;
 }
+
+const PROGRAM_CATEGORIES = [
+  "All Programs",
+  "Flagship Summit",
+  "Conferences & Seminars",
+  "FDP / MDP / LDP / SDP Programmes",
+  "National Initiatives",
+  "Innovation & Entrepreneurship Tracks",
+];
+
+const PROGRAM_CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  "All Programs":
+    "Explore LEADS Next Gen Centre's comprehensive national capability-building programs, flagship annual summits, academic conclaves, and executive development tracks.",
+  "Flagship Summit":
+    "India's premier annual policy and leadership convention convening central ministers, Vice-Chancellors, enterprise CEOs, and 1,000+ delegates to shape Viksit Bharat 2047.",
+  "Conferences & Seminars":
+    "High-level academic symposia, national quality congresses, AI impact conventions, and policy conferences co-hosted with AIMS, BMA, ANQ, AIU, and state ministries.",
+  "FDP / MDP / LDP / SDP Programmes":
+    "Unified capability-building tracks integrating Faculty Development (FDP) including CaseCraft 5.0 5-Day FDP, Leadership Development (LDP), Management Development (MDP), and Student Development (SDP).",
+  "National Initiatives":
+    "Institutional national celebrations, student council badging ceremonies, and public service leadership commemorations.",
+  "Innovation & Entrepreneurship Tracks":
+    "Deep-tech commercialization, university incubator frameworks, and technology commercialization programs co-hosted at IISc with Adelaide University.",
+};
 
 const PROGRAMS_DATA: ProgramItem[] = [
   // 1. STAND-ALONE FLAGSHIP SUMMIT (ALWAYS ON TOP!)
@@ -278,7 +303,23 @@ const PROGRAMS_DATA: ProgramItem[] = [
   },
 ];
 
-export default function ProgramsPage() {
+function ProgramsContent() {
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get("category") || "All Programs";
+  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
+
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat && PROGRAM_CATEGORIES.includes(cat)) {
+      setSelectedCategory(cat);
+    }
+  }, [searchParams]);
+
+  const filteredPrograms =
+    selectedCategory === "All Programs"
+      ? PROGRAMS_DATA
+      : PROGRAMS_DATA.filter((p) => p.category === selectedCategory);
+
   return (
     <div className="min-h-screen bg-[#FDFBFF]">
       {/* SECTION 1 [PURPLE 30%]: HERO HEADER */}
@@ -299,11 +340,64 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* SECTION 2 [WHITE 70%]: PROGRAMS GRID */}
-      <section className="py-20 3xl:py-32 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
+      {/* SECTION 2 [WHITE 70%]: PROGRAMS GRID WITH CATEGORY HEADINGS */}
+      <section className="py-16 sm:py-24 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+          
+          {/* CATEGORY FILTER TABS */}
+          <div className="mb-12">
+            <div className="flex items-center justify-between mb-4">
+              <div className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#9C1256]">
+                <Filter className="w-4 h-4 text-[#DE3F11]" />
+                <span>Filter Programs by Category</span>
+              </div>
+              <span className="text-xs text-slate-500 font-semibold">
+                Showing {filteredPrograms.length} {filteredPrograms.length === 1 ? "Program" : "Programs"}
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-2 sm:gap-3 p-2 rounded-2xl bg-purple-50/70 border border-purple-100">
+              {PROGRAM_CATEGORIES.map((cat) => {
+                const isActive = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md scale-[1.02]"
+                        : "text-[#1E0C3D] hover:bg-purple-100/80 hover:text-[#9C1256]"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* MAIN CATEGORY HEADING DISPLAY */}
+          <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-50 to-orange-50/50 border border-purple-200/80 shadow-sm">
+            <div className="flex items-center space-x-3 mb-2">
+              <span className="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs">
+                Program Group
+              </span>
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wide">
+                Topic Selection
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl 3xl:text-5xl font-black text-[#1E0C3D] leading-tight">
+              {selectedCategory}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-4xl leading-relaxed">
+              {PROGRAM_CATEGORY_DESCRIPTIONS[selectedCategory] || PROGRAM_CATEGORY_DESCRIPTIONS["All Programs"]}
+            </p>
+          </div>
+
+          {/* PROGRAMS GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:gap-12">
-            {PROGRAMS_DATA.map((program) => (
+            {filteredPrograms.map((program) => (
               <div
                 key={program.id}
                 id={program.id}
@@ -374,5 +468,17 @@ export default function ProgramsPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function ProgramsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#361C6A] pt-44 text-center text-white font-bold">
+        Loading Programs...
+      </div>
+    }>
+      <ProgramsContent />
+    </Suspense>
   );
 }

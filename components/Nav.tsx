@@ -161,7 +161,7 @@ export default function Nav() {
 
                       {/* 2. Conferences & Seminars */}
                       <Link
-                        href="/programs#aims-south-region-conference-2025"
+                        href="/programs?category=Conferences%20%26%20Seminars"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
@@ -184,7 +184,7 @@ export default function Nav() {
 
                       {/* 3. FDP, LDP, MDP & SDP Development Programmes */}
                       <Link
-                        href="/programs#consolidated-development-program"
+                        href="/programs?category=FDP%20%2F%20MDP%20%2F%20LDP%20%2F%20SDP%20Programmes"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
@@ -207,7 +207,7 @@ export default function Nav() {
 
                       {/* 4. National Initiatives */}
                       <Link
-                        href="/programs#national-leadership-day-badging"
+                        href="/programs?category=National%20Initiatives"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
@@ -230,7 +230,7 @@ export default function Nav() {
 
                       {/* 5. Innovation & Entrepreneurship Tracks */}
                       <Link
-                        href="/programs#iic-deeptech-startups"
+                        href="/programs?category=Innovation%20%26%20Entrepreneurship%20Tracks"
                         className="flex items-start space-x-3.5 p-3 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-10 h-10 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
