@@ -346,6 +346,31 @@ export const EVENTS_DATA: LEADSEvent[] = [
         ],
       },
       {
+        id: "energy-refresher-program-edition",
+        placeholderId: 5611,
+        title: "Energy Refresher Program (Ministry of Power & FICCI Development Program)",
+        date: "Special Edition 2026",
+        location: "Convention Center & Ministry Outposts, New Delhi / Bengaluru",
+        attendees: "200+ Power Sector Executives & Grid Directors",
+        photo: "/images/gallery/g8.webp",
+        overview:
+          "Organized by the Ministry of Power, Government of India, in strategic collaboration with the FICCI Development Program and LEADS Next Gen Centre. An intensive executive refresher programme training power utility leaders, grid managers, and policy professionals on clean energy transition, smart grid resilience, and modern utility stewardship.",
+        keyTopics: [
+          "Clean Energy Transition & Smart Grid Resilience",
+          "Power Sector Regulatory Frameworks & Efficiency Metrics",
+          "Executive Stewardship in Utility Management & ESG Integration",
+        ],
+        keySpeakers: [
+          "Ministry of Power Senior Officials",
+          "FICCI Energy Committee Directors",
+          "LEADS Policy & Governance Mentors",
+        ],
+        outcomes: [
+          "Upskilled power sector executives on modern grid management and renewable integration.",
+          "Strengthened public-private policy dialogue between Ministry of Power and FICCI energy leadership.",
+        ],
+      },
+      {
         id: "catalyst-series-6",
         placeholderId: 443,
         title: "Catalyst Insight: Leadership Talk Series 6.0 — Strategic Shift in Talent Acquisition",
