@@ -38,25 +38,6 @@ interface ProgramItem {
 
 const PROGRAMS_DATA: ProgramItem[] = [
   {
-    id: "catalyst-talks",
-    category: "Leadership",
-    title: "Catalyst Leadership Talk Series",
-    subtitle: "Flagship Executive & Non-Technical Masterclass Initiative",
-    badge: "Monthly Series",
-    icon: <Zap className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Corporate Executives, Government Officials, & Senior Fellows",
-    description:
-      "A high-impact series convening distinguished leaders from policy, global enterprises, and pioneering startups. Focuses on executive presence, high-stakes negotiation, crisis communication, and organizational culture.",
-    highlights: [
-      "Simulation-driven masterclasses on strategic decision-making",
-      "Executive presence, storytelling, and board communication",
-      "Keynotes by government dignitaries & Fortune 500 leaders",
-      "Verified certification of participation & executive networking",
-    ],
-    duration: "Monthly Cohorts · Hybrid Format",
-    featured: true,
-  },
-  {
     id: "bls-summit",
     category: "Leadership",
     title: "Bharath Leadership Summit (BLS)",
