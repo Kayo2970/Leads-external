@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import EventModal from "@/components/EventModal";
+import CatalystSeriesModal from "@/components/CatalystSeriesModal";
 import AnimatedContent from "@/components/AnimatedContent";
 import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
@@ -25,16 +26,10 @@ import {
 interface CategoryGroup {
   name: string;
   badge: string;
-  icon: React.ReactNode;
   description: string;
-  events: LEADSEvent[];
 }
 
-const CATEGORY_GROUPS: {
-  name: string;
-  badge: string;
-  description: string;
-}[] = [
+const CATEGORY_GROUPS: CategoryGroup[] = [
   {
     name: "Institutional Ceremonies",
     badge: "Institutional Ceremonies",
@@ -96,6 +91,10 @@ function EventsContent() {
 
   const [selectedEvent, setSelectedEvent] = useState<LEADSEvent | null>(null);
 
+  // Catalyst Series Popup Modal State
+  const [isCatalystModalOpen, setIsCatalystModalOpen] = useState<boolean>(false);
+  const [selectedCatalystEditionId, setSelectedCatalystEditionId] = useState<string | null>(null);
+
   useEffect(() => {
     if (targetCategory && CATEGORY_GROUPS.some((g) => g.name === targetCategory)) {
       setExpandedGroups((prev) => ({
@@ -121,8 +120,18 @@ function EventsContent() {
 
   return (
     <div className="relative min-h-screen bg-[#FDFBFF]">
-      {/* Event Detail Modal */}
+      {/* General Event Detail Modal */}
       <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
+
+      {/* Dedicated Catalyst Series Explorer Modal */}
+      <CatalystSeriesModal
+        isOpen={isCatalystModalOpen}
+        onClose={() => {
+          setIsCatalystModalOpen(false);
+          setSelectedCatalystEditionId(null);
+        }}
+        selectedEditionId={selectedCatalystEditionId}
+      />
 
       {/* SECTION 1 [PURPLE]: HERO HEADER */}
       <section className="pt-36 sm:pt-44 pb-16 sm:pb-24 3xl:pt-52 3xl:pb-36 bg-[#361C6A] text-white overflow-hidden relative border-b border-[#DE3F11]/30">
@@ -139,7 +148,7 @@ function EventsContent() {
               </div>
 
               <h1 className="text-3xl sm:text-5xl 3xl:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Our Flagship Summits, Workshops & Conclaves
+                Our National Summits, Workshops & Conclaves
               </h1>
 
               <p className="text-sm sm:text-lg 3xl:text-xl text-white/80 leading-relaxed font-normal">
@@ -177,7 +186,9 @@ function EventsContent() {
                         {group.badge}
                       </span>
                       <span className="text-xs font-bold text-slate-500 uppercase tracking-wide">
-                        {groupEvents.length} {groupEvents.length === 1 ? "Event Edition" : "Editions Grouped"}
+                        {group.name === "Catalyst Leadership Talk Series"
+                          ? `${groupEvents.length} Editions Archived (3.0 – 9.0)`
+                          : `${groupEvents.length} ${groupEvents.length === 1 ? "Event Edition" : "Editions Grouped"}`}
                       </span>
                     </div>
                     <h2 className="text-2xl sm:text-3xl 3xl:text-4xl font-black text-[#1E0C3D] group-hover/header:text-[#DE3F11] transition-colors mt-1">
@@ -193,7 +204,7 @@ function EventsContent() {
                       type="button"
                       className="px-4 py-2 rounded-xl text-xs font-bold bg-white border border-purple-200 text-[#1E0C3D] group-hover/header:border-[#DE3F11] transition-colors flex items-center space-x-2 shadow-xs"
                     >
-                      <span>{isExpanded ? "Collapse Group" : "Expand All Editions"}</span>
+                      <span>{isExpanded ? "Collapse Group" : "Expand Group"}</span>
                       {isExpanded ? (
                         <ChevronUp className="w-4 h-4 text-[#DE3F11]" />
                       ) : (
@@ -206,144 +217,246 @@ function EventsContent() {
                 {/* SUB-ITEMS LIST (VISIBLE WHEN EXPANDED) */}
                 {isExpanded && (
                   <div className="p-6 sm:p-10 space-y-12 bg-[#FDFBFF]">
-                    {groupEvents.map((event, idx) => {
-                      const isContentLeft = idx % 2 === 0;
-                      const mainPhId = event.placeholderId || 44 + idx;
-                      const mainFallback = generateNumberedPlaceholderSvg({
-                        id: mainPhId,
-                        title: event.name,
-                        subtitle: event.seriesName,
-                        category: event.category,
-                      });
+                    {group.name === "Catalyst Leadership Talk Series" ? (
+                      /* SINGLE SERIES MASTER CARD FOR CATALYST TALK SERIES */
+                      <div className="bg-[#180A30] text-white rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#9C1256]/30 to-[#DE3F11]/20 rounded-full blur-3xl pointer-events-none" />
 
-                      return (
-                        <div
-                          key={event.id}
-                          id={event.id}
-                          className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md hover:border-[#DE3F11]/40 hover:shadow-xl transition-all duration-300"
-                        >
-                          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                            {/* TEXT COLUMN */}
-                            <div
-                              className={`lg:col-span-6 space-y-5 ${
-                                isContentLeft ? "lg:order-1" : "lg:order-2"
-                              }`}
-                            >
-                              <div className="space-y-1.5">
-                                <div className="flex flex-wrap items-center gap-2">
-                                  <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
-                                    {event.subCategory}
-                                  </span>
-                                  <span className="text-xs font-bold text-slate-500">
-                                    {event.seriesName}
-                                  </span>
-                                </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                          {/* LEFT COLUMN: SERIES INFO & PREVIEW */}
+                          <div className="lg:col-span-7 space-y-5">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white border border-[#DE3F11]/40 shadow-xs flex items-center gap-1.5">
+                                <Zap className="w-3.5 h-3.5" />
+                                <span>Masterclass Series Archive</span>
+                              </span>
+                              <span className="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-white border border-white/20">
+                                7 Active Editions (3.0 – 9.0) • 1,700+ Student Delegates
+                              </span>
+                            </div>
 
-                                <h3 className="text-xl sm:text-3xl font-extrabold text-[#1E0C3D] leading-tight">
-                                  {event.name}
-                                </h3>
+                            <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+                              Catalyst Insights Leadership Talk Series
+                            </h3>
 
-                                <p className="text-xs sm:text-sm font-semibold text-[#DE3F11]">
-                                  {event.tagline}
-                                </p>
+                            <p className="text-xs sm:text-sm font-semibold text-[#FF8C61]">
+                              "Executive Masterclasses in Non-Technical Acumen, Ethical Governance & Attitude Development"
+                            </p>
+
+                            <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl">
+                              Our signature executive masterclass and leadership talk series designed to build core non-technical business acumen, ethical governance, personal branding, digital adaptability, and attitude development across 7+ active editions.
+                            </p>
+
+                            {/* HIGHLIGHTS PREVIEW OF ACTIVE EDITIONS */}
+                            <div className="space-y-2 pt-2">
+                              <div className="text-[11px] font-extrabold uppercase tracking-wider text-[#DE3F11] flex items-center gap-1">
+                                <Sparkles className="w-3.5 h-3.5" />
+                                <span>Featured Series Editions (Click below to explore all details)</span>
                               </div>
-
-                              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                {event.description}
-                              </p>
-
-                              {/* Metadata Box */}
-                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
-                                <div>
-                                  <div className="text-[10px] uppercase font-bold text-slate-400">
-                                    Date & Schedule
-                                  </div>
-                                  <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
-                                    {event.date}
-                                  </div>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-white/90 font-medium">
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 3.0:</strong> Structured Thinking</span>
+                                  <span className="text-[10px] text-white/50">2025</span>
                                 </div>
-
-                                <div>
-                                  <div className="text-[10px] uppercase font-bold text-slate-400">
-                                    Venue / Location
-                                  </div>
-                                  <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
-                                    {event.location}
-                                  </div>
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 4.0:</strong> Personal Branding</span>
+                                  <span className="text-[10px] text-white/50">2025</span>
                                 </div>
-
-                                <div>
-                                  <div className="text-[10px] uppercase font-bold text-slate-400">
-                                    Reach & Scale
-                                  </div>
-                                  <div className="font-bold text-[#9C1256] mt-0.5 truncate">
-                                    {event.attendees}
-                                  </div>
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 5.0:</strong> Attitude Dev. (Mr. Hemanth)</span>
+                                  <span className="text-[10px] text-white/50">2025</span>
                                 </div>
-                              </div>
-
-                              {/* Highlights Bullet List */}
-                              <div className="space-y-2">
-                                <div className="text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
-                                  Core Highlights & Outcomes
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 6.0:</strong> Digital Leadership</span>
+                                  <span className="text-[10px] text-white/50">2025</span>
                                 </div>
-                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
-                                  {event.seriesHighlights.map((hl, hlIdx) => (
-                                    <li key={hlIdx} className="flex items-start space-x-2">
-                                      <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
-                                      <span>{hl}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-
-                              {/* CTA Button */}
-                              <div className="pt-1">
-                                <button
-                                  type="button"
-                                  onClick={() => setSelectedEvent(event)}
-                                  className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
-                                >
-                                  <span>Explore Details & Speakers</span>
-                                  <ArrowRight className="w-3.5 h-3.5" />
-                                </button>
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 7.0:</strong> Tech Management (IEEE)</span>
+                                  <span className="text-[10px] text-white/50">2025</span>
+                                </div>
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 8.0:</strong> Sustainable Models & ESG</span>
+                                  <span className="text-[10px] text-white/50">2025</span>
+                                </div>
+                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between col-span-1 sm:col-span-2">
+                                  <span><strong className="text-[#DE3F11]">Catalyst 9.0:</strong> Startup Leadership & VC Pitching</span>
+                                  <span className="text-[10px] text-white/50">2026</span>
+                                </div>
                               </div>
                             </div>
 
-                            {/* PHOTO COLUMN */}
-                            <div
-                              className={`lg:col-span-6 space-y-3 ${
-                                isContentLeft ? "lg:order-2" : "lg:order-1"
-                              }`}
-                            >
-                              <div
-                                onClick={() => setSelectedEvent(event)}
-                                className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img"
+                            {/* CTA BUTTON */}
+                            <div className="pt-3">
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setSelectedCatalystEditionId(null);
+                                  setIsCatalystModalOpen(true);
+                                }}
+                                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl font-extrabold text-xs sm:text-sm bg-gradient-to-r from-[#9C1256] via-[#DE3F11] to-[#FF8C61] text-white shadow-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 cursor-pointer border border-white/20"
                               >
-                                <img
-                                  src={event.photo}
-                                  onError={(e) => {
-                                    (e.target as HTMLImageElement).src = mainFallback;
-                                  }}
-                                  alt={event.name}
-                                  className="w-full h-64 sm:h-80 object-cover group-hover/img:scale-105 transition-transform duration-500"
-                                />
-                                <PlaceholderBadge id={mainPhId} position="top-left" />
+                                <span>Explore All Catalyst Series Editions (3.0 – 9.0)</span>
+                                <ArrowRight className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </div>
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-60 group-hover/img:opacity-40 transition-opacity" />
-
-                                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                                  <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-black/60 backdrop-blur-md text-xs font-bold text-white border border-white/20">
-                                    <Camera className="w-3.5 h-3.5 text-[#DE3F11]" />
-                                    <span>Click for Full Details</span>
-                                  </div>
-                                </div>
+                          {/* RIGHT COLUMN: VISUAL COVER IMAGE */}
+                          <div className="lg:col-span-5 relative">
+                            <div
+                              onClick={() => {
+                                setSelectedCatalystEditionId(null);
+                                setIsCatalystModalOpen(true);
+                              }}
+                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] aspect-[4/3]"
+                            >
+                              <img
+                                src="/images/gallery/g8.webp"
+                                alt="Catalyst Leadership Talk Series"
+                                className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-80" />
+                              <div className="absolute bottom-4 left-4 right-4 text-white p-2">
+                                <span className="text-xs font-bold px-3.5 py-1.5 rounded-full bg-[#DE3F11] text-white shadow-md inline-flex items-center gap-1.5 border border-white/20">
+                                  <Zap className="w-3.5 h-3.5 text-yellow-300" />
+                                  <span>Click to Open Series Explorer Popup</span>
+                                </span>
                               </div>
                             </div>
                           </div>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ) : (
+                      /* DEFAULT CARD RENDERING FOR OTHER EVENT CATEGORIES */
+                      groupEvents.map((event, idx) => {
+                        const isContentLeft = idx % 2 === 0;
+                        const mainPhId = event.placeholderId || 44 + idx;
+                        const mainFallback = generateNumberedPlaceholderSvg({
+                          id: mainPhId,
+                          title: event.name,
+                          subtitle: event.seriesName,
+                          category: event.category,
+                        });
+
+                        return (
+                          <div
+                            key={event.id}
+                            id={event.id}
+                            className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md hover:border-[#DE3F11]/40 hover:shadow-xl transition-all duration-300"
+                          >
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                              {/* TEXT COLUMN */}
+                              <div
+                                className={`lg:col-span-6 space-y-5 ${
+                                  isContentLeft ? "lg:order-1" : "lg:order-2"
+                                }`}
+                              >
+                                <div className="space-y-1.5">
+                                  <div className="flex flex-wrap items-center gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
+                                      {event.subCategory}
+                                    </span>
+                                    <span className="text-xs font-bold text-slate-500">
+                                      {event.seriesName}
+                                    </span>
+                                  </div>
+
+                                  <h3 className="text-xl sm:text-3xl font-extrabold text-[#1E0C3D] leading-tight">
+                                    {event.name}
+                                  </h3>
+
+                                  <p className="text-xs sm:text-sm font-semibold text-[#DE3F11]">
+                                    {event.tagline}
+                                  </p>
+                                </div>
+
+                                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                  {event.description}
+                                </p>
+
+                                {/* Metadata Box */}
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
+                                  <div>
+                                    <div className="text-[10px] uppercase font-bold text-slate-400">
+                                      Date & Schedule
+                                    </div>
+                                    <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
+                                      {event.date}
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <div className="text-[10px] uppercase font-bold text-slate-400">
+                                      Venue / Location
+                                    </div>
+                                    <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
+                                      {event.location}
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <div className="text-[10px] uppercase font-bold text-slate-400">
+                                      Reach & Scale
+                                    </div>
+                                    <div className="font-bold text-[#9C1256] mt-0.5 truncate">
+                                      {event.attendees}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Highlights Bullet List */}
+                                <div className="space-y-2">
+                                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
+                                    Core Highlights & Outcomes
+                                  </div>
+                                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
+                                    {event.seriesHighlights.map((hl, hlIdx) => (
+                                      <li key={hlIdx} className="flex items-start space-x-2">
+                                        <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
+                                        <span>{hl}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+
+                                {/* CTA Button */}
+                                <div className="pt-1">
+                                  <button
+                                    type="button"
+                                    onClick={() => setSelectedEvent(event)}
+                                    className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
+                                  >
+                                    <span>Explore Details & Speakers</span>
+                                    <ArrowRight className="w-3.5 h-3.5" />
+                                  </button>
+                                </div>
+                              </div>
+
+                              {/* PHOTO COLUMN */}
+                              <div
+                                className={`lg:col-span-6 space-y-3 ${
+                                  isContentLeft ? "lg:order-2" : "lg:order-1"
+                                }`}
+                              >
+                                <div
+                                  onClick={() => setSelectedEvent(event)}
+                                  className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img"
+                                >
+                                  <img
+                                    src={event.photo}
+                                    onError={(e) => {
+                                      (e.target as HTMLImageElement).src = mainFallback;
+                                    }}
+                                    alt={event.name}
+                                    className="w-full h-64 sm:h-80 object-cover group-hover/img:scale-105 transition-transform duration-500"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })
+                    )}
                   </div>
                 )}
               </div>
