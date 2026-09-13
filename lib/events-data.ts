@@ -612,8 +612,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "150 Students • 18 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g2.webp",
-    gallery: ["/images/gallery/g2.webp", "/images/gallery/g3.webp"],
+    photo: "/images/gallery/two-day-gst-reforms-conference.webp",
+    gallery: ["/images/gallery/two-day-gst-reforms-conference.webp", "/images/gallery/g2.webp", "/images/gallery/g3.webp"],
     featured: true,
     description: "Co-hosted with ICSSR, this two-day national conference gathered tax administrators, economists, and researchers to discuss 'GST Reforms 2.0'. Keynotes by Smt. Kajal Singh, IRS and BCIC President Mr. Prashant Gokhale accompanied 78 research paper presentations analyzing AI tax administration, fiscal federalism, rate rationalization, and MSME growth toward Viksit Bharat 2047.",
     seriesHighlights: [

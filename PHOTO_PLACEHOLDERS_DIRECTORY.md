@@ -116,6 +116,7 @@
 | **ph80** | **IISc & Adelaide Deep-Tech Startups Conference** | **Conclave / Outreach** | `/events` | `EventCard` / `EventModal` | `/images/gallery/iisc-adelaide-deep-tech-conference.webp` | `lib/events-data.ts` (`iisc-adelaide-deep-tech-conference`) |
 | **ph66b** | **ANQ Congress 2025** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/anq-congress-2025.webp` | `lib/events-data.ts` (`anq-congress-2025`) |
 | **ph67b** | **BMA Symposium – AI & Future of Management** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/bma-symposium.webp` | `lib/events-data.ts` (`bma-symposium-ai-management`) |
+| **ph68** | **Two-Day National Conference – GST Reforms 2.0** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/two-day-gst-reforms-conference.webp` | `lib/events-data.ts` (`icssr-national-conference-gst-reforms`) |
 
 ---
 

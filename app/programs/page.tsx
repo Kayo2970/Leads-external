@@ -257,7 +257,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     ],
     duration: "13–14 Mar 2026 • 45 Students • 12 Faculty Benefited",
     location: "National Tax Policy Centre, Bengaluru",
-    photo: "/images/gallery/g10.webp",
+    photo: "/images/gallery/two-day-gst-reforms-conference.webp",
     placeholderId: 68,
     featured: false,
   },
