@@ -51,46 +51,71 @@ export default function ProgramModal({ program, onClose }: ProgramModalProps) {
           <X className="w-5 h-5" />
         </button>
 
-        {/* HEADER HERO BANNER */}
-        <div className="pt-2 border-b border-white/15 pb-6 space-y-4">
-          <div className="flex flex-wrap items-center gap-2.5">
-            <span className="text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#9C1256]/40 text-white border border-[#DE3F11]/50 shadow-sm">
-              {program.category}
-            </span>
-            <span className="text-xs font-bold text-amber-300 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30">
-              {program.badge}
-            </span>
-          </div>
+        {/* HEADER HERO BANNER & 9:16 VISUAL */}
+        <div className="pt-2 border-b border-white/15 pb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left: Metadata & Overview */}
+            <div className={`${program.photo ? "lg:col-span-7" : "lg:col-span-12"} space-y-4`}>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#9C1256]/40 text-white border border-[#DE3F11]/50 shadow-sm">
+                  {program.category}
+                </span>
+                <span className="text-xs font-bold text-amber-300 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30">
+                  {program.badge}
+                </span>
+              </div>
 
-          <h1 className="text-2xl sm:text-4xl 3xl:text-5xl font-black text-white leading-tight">
-            {program.title}
-          </h1>
+              <h1 className="text-2xl sm:text-4xl 3xl:text-5xl font-black text-white leading-tight">
+                {program.title}
+              </h1>
 
-          <p className="text-base sm:text-lg font-semibold text-[#DE3F11]">
-            {program.subtitle}
-          </p>
+              <p className="text-base sm:text-lg font-semibold text-[#DE3F11]">
+                {program.subtitle}
+              </p>
 
-          <p className="text-sm sm:text-base text-white/85 leading-relaxed font-normal">
-            {program.description}
-          </p>
+              <p className="text-sm sm:text-base text-white/85 leading-relaxed font-normal">
+                {program.description}
+              </p>
 
-          {/* Quick Stats Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
-            <div className="flex items-center space-x-3 bg-white/5 p-3.5 rounded-2xl border border-white/10">
-              <Users className="w-5 h-5 text-[#DE3F11] shrink-0" />
-              <div>
-                <div className="text-[10px] uppercase font-bold text-white/50">Target Audience</div>
-                <div className="text-xs font-bold text-white truncate">{program.audience}</div>
+              {/* Quick Stats Bar */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
+                <div className="flex items-center space-x-3 bg-white/5 p-3.5 rounded-2xl border border-white/10">
+                  <Users className="w-5 h-5 text-[#DE3F11] shrink-0" />
+                  <div>
+                    <div className="text-[10px] uppercase font-bold text-white/50">Target Audience</div>
+                    <div className="text-xs font-bold text-white truncate">{program.audience}</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3 bg-white/5 p-3.5 rounded-2xl border border-white/10">
+                  <Clock className="w-5 h-5 text-[#9C1256] shrink-0" />
+                  <div>
+                    <div className="text-[10px] uppercase font-bold text-white/50">Program Duration</div>
+                    <div className="text-xs font-bold text-white truncate">{program.duration}</div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 bg-white/5 p-3.5 rounded-2xl border border-white/10">
-              <Clock className="w-5 h-5 text-[#9C1256] shrink-0" />
-              <div>
-                <div className="text-[10px] uppercase font-bold text-white/50">Program Duration</div>
-                <div className="text-xs font-bold text-white truncate">{program.duration}</div>
+            {/* Right: 9:16 Program Image Holder */}
+            {program.photo && (
+              <div className="lg:col-span-5 flex justify-center items-center">
+                <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group w-full aspect-[9/16] max-w-[340px] mx-auto bg-[#180A30]">
+                  <img
+                    src={program.photo}
+                    alt={program.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-80" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-white bg-gradient-to-r from-[#9C1256] to-[#DE3F11] px-3 py-1.5 rounded-lg shadow-md backdrop-blur-xs flex items-center gap-1.5 border border-white/20">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>Curriculum & Executive Syllabus</span>
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 

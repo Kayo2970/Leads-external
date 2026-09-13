@@ -68,12 +68,12 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
       >
         <div>
           {/* Card Photo Header */}
-          <div className="relative rounded-2xl overflow-hidden mb-4 border border-purple-200/60 h-44">
+          <div className="relative rounded-2xl overflow-hidden mb-4 border border-purple-200/60 aspect-[9/16] w-full max-h-[480px] bg-[#180A30]">
             <img
               src={imgSrc}
               onError={() => setImgSrc(placeholderSvg)}
               alt={event.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
             />
             <PlaceholderBadge id={placeholderId} position="top-left" />
 

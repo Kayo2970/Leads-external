@@ -506,7 +506,7 @@ function ProgramsContent() {
                         id={program.id}
                         className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md hover:border-[#DE3F11]/40 hover:shadow-xl transition-all duration-300"
                       >
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                           {/* TEXT COLUMN */}
                           <div
                             className={`lg:col-span-6 space-y-5 flex flex-col justify-between ${
@@ -608,15 +608,15 @@ function ProgramsContent() {
                             </div>
                           </div>
 
-                          {/* PHOTO COLUMN (EXPANDED TO FULL HEIGHT) */}
+                          {/* PHOTO COLUMN (9:16 ASPECT RATIO) */}
                           <div
-                            className={`lg:col-span-6 flex flex-col h-full min-h-[380px] sm:min-h-[440px] lg:min-h-full ${
+                            className={`lg:col-span-6 flex flex-col justify-center items-center ${
                               isContentLeft ? "lg:order-2" : "lg:order-1"
                             }`}
                           >
                             <div
                               onClick={() => setSelectedProgram(program)}
-                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img w-full h-full flex-1 min-h-[380px] sm:min-h-[440px] lg:min-h-full bg-[#180A30]"
+                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img w-full aspect-[9/16] max-w-[360px] mx-auto lg:max-w-none bg-[#180A30]"
                             >
                               <img
                                 src={program.photo}
@@ -624,7 +624,7 @@ function ProgramsContent() {
                                   (e.target as HTMLImageElement).src = mainFallback;
                                 }}
                                 alt={program.title}
-                                className="w-full h-full min-h-[380px] sm:min-h-[440px] lg:min-h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
+                                className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end p-5">
                                 <span className="text-xs font-bold text-white bg-gradient-to-r from-[#9C1256] to-[#DE3F11] px-3.5 py-1.5 rounded-lg shadow-lg backdrop-blur-xs flex items-center gap-1.5 border border-white/20">

@@ -264,7 +264,7 @@ export default function CatalystSeriesModal({
 
                     {/* RIGHT COLUMN: MEDIA / THUMBNAIL & OUTCOMES */}
                     <div className="lg:col-span-4 space-y-4">
-                      <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-white/20 bg-[#361C6A] shadow-md group">
+                      <div className="relative aspect-[9/16] max-w-[280px] mx-auto rounded-xl overflow-hidden border border-white/20 bg-[#361C6A] shadow-md group">
                         <img
                           src={ev.photo || fallbackSvg}
                           onError={(e) => {
@@ -273,7 +273,7 @@ export default function CatalystSeriesModal({
                             }
                           }}
                           alt={ev.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 absolute inset-0"
                         />
                         {ev.placeholderId && (
                           <PlaceholderBadge id={ev.placeholderId} position="top-right" className="scale-75 origin-top-right" />

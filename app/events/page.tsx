@@ -298,13 +298,13 @@ function EventsContent() {
                           </div>
 
                           {/* RIGHT COLUMN: VISUAL COVER IMAGE */}
-                          <div className="lg:col-span-5 relative flex flex-col order-1 lg:order-2">
+                          <div className="lg:col-span-5 relative flex flex-col justify-center items-center order-1 lg:order-2">
                             <div
                               onClick={() => {
                                 setSelectedCatalystEditionId(null);
                                 setIsCatalystModalOpen(true);
                               }}
-                              className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full h-44 sm:h-64 lg:h-full min-h-[180px] sm:min-h-[260px] lg:min-h-[380px]"
+                              className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full aspect-[9/16] max-w-[360px] mx-auto lg:max-w-none"
                             >
                               <img
                                 src="/images/gallery/g8.webp"
@@ -340,16 +340,16 @@ function EventsContent() {
                             id={event.id}
                             className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-purple-200/90 shadow-sm hover:border-[#DE3F11]/40 hover:shadow-xl transition-all duration-300"
                           >
-                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-stretch">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center">
                               {/* PHOTO COLUMN (TOP ON MOBILE, ALTERNATING ON DESKTOP) */}
                               <div
-                                className={`lg:col-span-5 flex flex-col order-1 ${
+                                className={`lg:col-span-5 flex flex-col justify-center items-center order-1 ${
                                   isContentLeft ? "lg:order-2" : "lg:order-1"
                                 }`}
                               >
                                 <div
                                   onClick={() => setSelectedEvent(event)}
-                                  className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200/80 shadow-xs group/img w-full h-44 sm:h-60 lg:h-full min-h-[180px] sm:min-h-[240px] lg:min-h-[380px] bg-[#180A30]"
+                                  className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200/80 shadow-xs group/img w-full aspect-[9/16] max-w-[360px] mx-auto lg:max-w-none bg-[#180A30]"
                                 >
                                   <img
                                     src={event.photo}

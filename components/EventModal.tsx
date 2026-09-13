@@ -139,15 +139,15 @@ export default function EventModal({ event, onClose }: EventModalProps) {
             </div>
 
             {/* Right Column: High-Res Series Visual Showcase */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group">
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group w-full aspect-[9/16] max-w-[340px] mx-auto bg-[#180A30]">
                 <img
                   src={event.photo}
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = mainFallback;
                   }}
                   alt={event.name}
-                  className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
                 />
                 <PlaceholderBadge id={mainPhId} position="top-left" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-80" />
@@ -199,15 +199,15 @@ export default function EventModal({ event, onClose }: EventModalProps) {
               <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl space-y-8 animate-in fade-in duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Left: Edition Photograph & Snapshot */}
-                  <div className="lg:col-span-5 space-y-4">
-                    <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl">
+                  <div className="lg:col-span-5 space-y-4 flex flex-col items-center">
+                    <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl w-full aspect-[9/16] max-w-[340px] mx-auto bg-[#180A30]">
                       <img
                         src={currentEdition.photo}
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = editionFallback;
                         }}
                         alt={currentEdition.title}
-                        className="w-full h-64 sm:h-72 object-cover"
+                        className="w-full h-full object-cover absolute inset-0"
                       />
                       <PlaceholderBadge id={editionPhId} position="top-left" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-70" />
@@ -221,77 +221,83 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                       </div>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10 space-y-2">
+                    <div className="p-4 rounded-2xl bg-[#241147]/80 border border-white/10 space-y-2 w-full">
                       <div className="flex items-center space-x-2 text-xs text-white/80">
-                        <MapPin className="w-4 h-4 text-[#DE3F11] shrink-0" />
-                        <span>{currentEdition.location}</span>
+                        <MapPin className="w-4 h-4 text-[#9C1256] shrink-0" />
+                        <span className="truncate">{currentEdition.location}</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right: Edition Deep-Dive Content */}
+                  {/* Right: Detailed Session Content */}
                   <div className="lg:col-span-7 space-y-6">
                     <div>
-                      <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#9C1256]/30 text-white border border-[#DE3F11]/40 inline-block mb-3">
-                        Edition Spotlight
-                      </span>
-                      <h3 className="text-2xl font-bold text-white leading-tight">
+                      <div className="text-xs font-bold text-[#DE3F11] uppercase tracking-wider">
+                        Edition Focus & Objectives
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
                         {currentEdition.title}
                       </h3>
-                      <p className="text-sm text-white/85 mt-2 leading-relaxed">
+                      <p className="text-sm text-white/80 mt-3 leading-relaxed">
                         {currentEdition.overview}
                       </p>
                     </div>
 
-                    {/* Key Topics Explored */}
-                    <div className="space-y-3">
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#DE3F11]">
-                        Key Topics & Masterclasses Delivered
-                      </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        {currentEdition.keyTopics.map((topic, i) => (
-                          <div
-                            key={i}
-                            className="flex items-start space-x-2 text-xs text-white p-2.5 rounded-xl bg-[#241147]/60 border border-white/10"
-                          >
-                            <CheckCircle2 className="w-4 h-4 text-[#DE3F11] shrink-0 mt-0.5" />
-                            <span>{topic}</span>
-                          </div>
-                        ))}
+                    {/* Key Topics Checklist */}
+                    {currentEdition.keyTopics && currentEdition.keyTopics.length > 0 && (
+                      <div className="space-y-3">
+                        <div className="text-xs font-bold uppercase tracking-wider text-purple-300">
+                          Key Modules & Themes Discussed
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-white/90">
+                          {currentEdition.keyTopics.map((topic, tIdx) => (
+                            <div key={tIdx} className="flex items-start space-x-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
+                              <CheckCircle2 className="w-4 h-4 text-[#DE3F11] shrink-0 mt-0.5" />
+                              <span>{topic}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
 
-                    {/* Speakers / Mentors Involved */}
-                    <div className="space-y-3">
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#DE3F11]">
-                        Distinguished Faculty & Mentors
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {currentEdition.keySpeakers.map((spk, i) => (
-                          <span
-                            key={i}
-                            className="text-xs px-3 py-1 rounded-lg bg-[#241147] text-white border border-[#9C1256]/40 font-medium"
-                          >
-                            {spk}
-                          </span>
-                        ))}
+                    {/* Key Speakers */}
+                    {currentEdition.keySpeakers && currentEdition.keySpeakers.length > 0 && (
+                      <div className="space-y-3">
+                        <div className="text-xs font-bold uppercase tracking-wider text-purple-300">
+                          Distinguished Mentors & Speakers
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {currentEdition.keySpeakers.map((spk, sIdx) => (
+                            <span
+                              key={sIdx}
+                              className="px-3 py-1.5 rounded-xl bg-purple-900/40 text-purple-200 border border-purple-500/30 text-xs font-semibold"
+                            >
+                              {spk}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
 
-                    {/* Quantified Outcomes */}
-                    <div className="space-y-3 pt-2">
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#DE3F11]">
-                        Measurable Outcomes & Highlights
-                      </h4>
-                      <ul className="space-y-2">
-                        {currentEdition.outcomes.map((outcome, i) => (
-                          <li key={i} className="flex items-start space-x-2.5 text-xs text-white/90">
-                            <Award className="w-4 h-4 text-[#DE3F11] shrink-0 mt-0.5" />
-                            <span>{outcome}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {/* Edition Key Outcomes */}
+                    {currentEdition.outcomes && currentEdition.outcomes.length > 0 && (
+                      <div className="space-y-3 pt-2">
+                        <div className="text-xs font-bold uppercase tracking-wider text-[#DE3F11] flex items-center space-x-1.5">
+                          <Award className="w-4 h-4" />
+                          <span>Student Outcomes & Impact</span>
+                        </div>
+                        <div className="space-y-2">
+                          {currentEdition.outcomes.map((outcome, oIdx) => (
+                            <div
+                              key={oIdx}
+                              className="p-3 rounded-xl bg-gradient-to-r from-purple-900/30 to-[#9C1256]/20 border border-purple-500/20 text-xs text-white/90 leading-relaxed font-medium"
+                            >
+                              {outcome}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -320,14 +326,14 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                         : "glass-panel border-white/10 hover:border-white/30"
                     }`}
                   >
-                    <div className="relative overflow-hidden rounded-2xl mb-4">
+                    <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[9/16] w-full max-h-[280px] bg-[#180A30]">
                       <img
                         src={ed.photo}
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = edFallback;
                         }}
                         alt={ed.title}
-                        className="w-full h-40 object-cover rounded-2xl border border-white/10"
+                        className="w-full h-full object-cover rounded-2xl border border-white/10 absolute inset-0"
                       />
                       <PlaceholderBadge id={edPhId} position="top-left" className="scale-75 origin-top-left" />
                     </div>
