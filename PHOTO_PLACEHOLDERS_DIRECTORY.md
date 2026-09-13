@@ -111,6 +111,7 @@
 | **ph63** | **Educational & Cultural Visit to New Delhi** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/educational-cultural-visit-delhi.png` | `lib/events-data.ts` (`new-delhi-visit`) |
 | **ph64** | **NHRD Bangalore Chapter – Thought Leadership Meet** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/nhrd-bangalore-thought-leadership.png` | `lib/events-data.ts` (`nhrd-bangalore-chapter`) |
 | **ph65** | **BCIC Roundtable Discussion on Generative Economy** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/bcic-roundtable-generative-economy.jpg` | `lib/events-data.ts` (`bma-generative-economies`) |
+| **ph66** | **FKCCI Global MSME Conclave 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/fkcci-global-msme-conclave-2026.jpg` | `lib/events-data.ts` (`fkcci-msme-conclave`) |
 
 ---
 
@@ -127,7 +128,7 @@
 | **ph63** | **Event Gallery Photo 7** | **Educational & Cultural Visit to New Delhi** | `/events` | `GalleryGrid` | `/images/gallery/educational-cultural-visit-delhi.png` *(Updated)* |
 | **ph64** | **Event Gallery Photo 8** | **NHRD Bangalore Chapter Thought Leadership** | `/events` | `GalleryGrid` | `/images/gallery/nhrd-bangalore-thought-leadership.png` *(Updated)* |
 | **ph65** | **Event Gallery Photo 9** | **BCIC Roundtable Discussion on Generative Economy** | `/events` | `GalleryGrid` | `/images/gallery/bcic-roundtable-generative-economy.jpg` *(Updated)* |
-| **ph66** | Event Gallery Photo 10 | Dignitary Group Photo | `/events` | `GalleryGrid` | `/images/gallery/g10.webp` |
+| **ph66** | **Event Gallery Photo 10** | **FKCCI Global MSME Conclave 2026** | `/events` | `GalleryGrid` | `/images/gallery/fkcci-global-msme-conclave-2026.jpg` *(Updated)* |
 | **ph67** | Event Gallery Photo 11 | Fireside Q&A | `/events` | `GalleryGrid` | `/images/gallery/g11.webp` |
 | **ph68** | Event Gallery Photo 12 | National Delegates | `/events` | `GalleryGrid` | `/images/gallery/g12.webp` |
 | **ph69** | Event Gallery Photo 13 | Student Core Team | `/events` | `GalleryGrid` | `/images/gallery/g13.webp` |

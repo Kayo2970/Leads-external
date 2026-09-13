@@ -101,7 +101,7 @@ Every image and image slot across the website now features a **unique, high-visi
 | **`#63`** | **Educational & Cultural Visit to New Delhi** | Experiential Learning Delegation (✅ Updated: `/images/gallery/educational-cultural-visit-delhi.png`) | `EventCard` / `EventModal` |
 | **`#64`** | **NHRD Bangalore Chapter – Thought Leadership Meet** | Market Benchmarking & Compensation (✅ Updated: `/images/gallery/nhrd-bangalore-thought-leadership.png`) | `EventCard` / `EventModal` |
 | **`#65`** | **BCIC Roundtable Discussion on Generative Economy** | Ushering the AI-Driven Industrial Era (✅ Updated: `/images/gallery/bcic-roundtable-generative-economy.jpg`) | `EventCard` / `EventModal` |
-| **`#66`** | **Event Gallery Photo 10** | Dignitary Group Photo | `events/page.tsx` |
+| **`#66`** | **FKCCI Global MSME Conclave 2026** | Sankalp to Siddhi – Local Resolve to Global Realization (✅ Updated: `/images/gallery/fkcci-global-msme-conclave-2026.jpg`) | `EventCard` / `EventModal` |
 | **`#67`** | **Event Gallery Photo 11** | Fireside Q&A | `events/page.tsx` |
 | **`#68`** | **Event Gallery Photo 12** | National Delegates | `events/page.tsx` |
 | **`#69`** | **Event Gallery Photo 13** | Student Core Team | `events/page.tsx` |

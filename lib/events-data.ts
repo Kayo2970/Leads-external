@@ -337,7 +337,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "fkcci-msme-conclave",
-    placeholderId: 64,
+    placeholderId: 66,
     name: "FKCCI Global MSME Conclave 2026",
     seriesName: "Outreach Programmes",
     category: "Conclave",
@@ -348,8 +348,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "8 Students • 2 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g6.webp",
-    gallery: ["/images/gallery/g6.webp"],
+    photo: "/images/gallery/fkcci-global-msme-conclave-2026.jpg",
+    gallery: ["/images/gallery/fkcci-global-msme-conclave-2026.jpg", "/images/gallery/g6.webp"],
     featured: false,
     description: "At the FKCCI Global MSME Conclave at Palace Grounds, student delegates explored strategies supporting India's USD 10 trillion economy. Across Industry 4.0 automation tracks, cash-flow masterclasses, succession frameworks, and vendor development sessions, students connected directly with corporate buyers and visited the engineering and robotics innovation expo.",
     seriesHighlights: [
