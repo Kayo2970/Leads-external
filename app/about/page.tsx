@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
-import ChromaGrid, { ChromaItem } from "@/components/ChromaGrid";
+import ChromaGrid, { ChromaItem } from "./ChromaGrid";
 import OrganogramChart from "@/components/OrganogramChart";
 import AnimatedContent from "@/components/AnimatedContent";
 import {
@@ -361,13 +361,13 @@ export default function AboutPage() {
                   </div>
 
                   {/* Partition ChromaGrid */}
-                  <div className="relative">
+                  <div style={{ position: "relative" }}>
                     <ChromaGrid
                       items={chromaItems}
-                      radius={625}
+                      radius={675}
                       columns={partition.columns}
-                      damping={1.05}
-                      fadeOut={1.15}
+                      damping={1.25}
+                      fadeOut={1.4}
                       ease="power3.out"
                     />
                   </div>
