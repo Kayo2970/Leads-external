@@ -118,11 +118,11 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "national-leadership-day-badging",
     placeholderId: 59,
-    name: "National Leadership Day – Badging Ceremony",
+    name: "National Leadership Day – Badging Ceremony & Distinguished Guest Talks",
     seriesName: "Induction & Badging Ceremony",
     category: "Conclave",
     subCategory: "Institutional Ceremonies",
-    tagline: "Official Induction of LEADS Student Council & Pinned Badging by National Stalwarts",
+    tagline: "Official Induction of LEADS Advisory & Core Council by Padmashree Awardee Dr. Vijayalakshmi Deshmane",
     date: "20 Feb 2026",
     location: "Ramaiah University Campus, Bengaluru",
     attendees: "200 Students • 10 Faculty Benefited",
@@ -131,21 +131,24 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g3.webp",
     gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
     featured: true,
-    description: "Prestigious celebratory event marking National Leadership Day, highlighted by a formal Badging Ceremony that officially inducted the LEADS Student Council and core committee members. Graced by Chief Guest Padmashree Dr. Vijayalakshmi Deshmane, Mr. Kumar Ravi (Senior VP, BCIC), and Dr. Naganagouda S J (Honorary Secretary, NHRD Bengaluru) who personally pinned badges on student leaders.",
+    description: "The LEADS Next Gen Centre at Ramaiah University of Applied Sciences successfully hosted a highly prestigious celebratory event to mark National Leadership Day, highlighted by a formal Badging Ceremony that officially recognized the leadership potential of the Centre's advisory and core student committee members. Formally inducting these emerging student leaders into their vital roles, the milestone event was graced by an elite panel of industry and medical stalwarts who personally pinned the badges on the student leaders, establishing a powerful baseline of accountability and service-oriented dedication. The ceremony was led by Chief Guest and 2025 Padmashree Awardee Dr. Vijayalakshmi Deshmane, the former Director of the Kidwai Memorial Institute of Oncology, who delivered a profound keynote addressing the absolute necessity of values-based, compassionate leadership in high-stakes environments. She was joined by Mr. Kumar Ravi, Senior Vice President of BCIC Karnataka, and Dr. Naganagouda S J, Honorary Secretary of NHRD Bengaluru, both of whom offered deep, strategic inspiration regarding contemporary corporate demands and relationship-centered leadership frameworks. By bridging theoretical leadership concepts with practical, real-world business ethics, this landmark celebration instilled a profound sense of responsibility and strategic foresight within the student leadership core.",
     seriesHighlights: [
-      "Formal pinned Badging Ceremony for student council leaders",
-      "Keynote by Padmashree Dr. Vijayalakshmi Deshmane on values-based, compassionate leadership",
-      "Industry leadership insights by Mr. Kumar Ravi (BCIC) & Dr. Naganagouda S J (NHRD)",
-      "Bridging corporate expectations with youth leadership ethics"
+      "Formal pinned Badging Ceremony inducting LEADS Student Council and Core Committee members",
+      "Keynote address by 2025 Padmashree Awardee Dr. Vijayalakshmi Deshmane on values-based, compassionate leadership",
+      "Strategic corporate insights by Mr. Kumar Ravi (Senior VP, BCIC) & Dr. Naganagouda S J (Honorary Secretary, NHRD)",
+      "Direct reflective interactions establishing elite long-term mentorship and sustained professional networking",
+      "Commitment to value-driven initiatives elevating peer collaboration and ethical nation-building"
     ],
     outcomes: [
-      "Formal induction of LEADS Student Council and operational charter",
-      "Direct mentorship channels with BCIC and NHRD executive boards"
+      "Successfully inducted and badged all advisory and core members by Chief Guest Dr. Vijayalakshmi Deshmane, increasing overall accountability.",
+      "Enhanced student motivation and established strong professional networks by facilitating direct interaction with high-profile corporate and medical leaders."
     ],
     speakers: [
-      "Padmashree Dr. Vijayalakshmi Deshmane (Former Director, Kidwai Memorial)",
+      "Dr. Vijayalakshmi Deshmane (2025 Padmashree Awardee & Former Director, Kidwai Memorial Institute of Oncology)",
       "Mr. Kumar Ravi (Senior Vice President, BCIC Karnataka)",
-      "Dr. Naganagouda S J (Honorary Secretary, NHRD Bengaluru)"
+      "Dr. Naganagouda S J (Honorary Secretary, NHRD Bengaluru)",
+      "Prof. (Dr.) K. M. Sharath Kumar (Dean, FMC, RUAS & Chief Advisor, LEADS)",
+      "Dr. Subhadeep Mukherjee (Centre Head, LEADS)"
     ],
     editions: []
   },
@@ -510,7 +513,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Catalyst Series",
     category: "Catalyst",
     subCategory: "Catalyst Leadership Talk Series",
-    tagline: "Executive Capability, Ethics & Structured Business Thinking",
+    tagline: "Breaking Down Barriers to Success with Ms. Iti Rawat (Founder, WEFT Foundation)",
     date: "29 Aug 2025",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "90 Students • 5 Faculty Benefited",
@@ -519,14 +522,21 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g8.webp",
     gallery: ["/images/gallery/g8.webp"],
     featured: true,
-    description: "3rd edition of the Catalyst Insights Talk Series empowering student leaders with executive insights, ethical governance, and structured business problem-solving.",
+    description: "The LEADS Next Gen Centre successfully organized an inspiring edition of its prestigious Catalyst Insight Leadership Talk Series, featuring Ms. Iti Rawat, the visionary founder of WEFT (Women Entrepreneurship for Transformation) Foundation. Centered on the critical theme of 'Breaking Down Barriers to Success,' Ms. Rawat communicated transformational insights on overcoming systemic gender biases, navigating resource limitations, and building resilience in the professional landscape. Drawing from her comprehensive experience transforming lives through the Red Dot Initiative, she emphasized the fundamental importance of building supportive, inclusive ecosystems rather than narrowly focusing on individual success. The strategic objectives of this high-level session were to inspire young professionals by sharing real-life entrepreneurial pathways for breaking systemic social barriers, and to actively promote true inclusivity and women empowerment within modern corporate leadership. The highly interactive session empowered students to actively challenge societal stereotypes and emerge as confident, value-oriented leaders within their peer groups and future organizations.",
     seriesHighlights: [
-      "Structured thinking & analytical decision frameworks",
-      "Ethical governance in high-growth enterprises",
-      "Interactive Q&A with industry masterclass speakers"
+      "Masterclass on overcoming systemic gender biases and navigating resource limitations in business",
+      "Real-life entrepreneurial pathways and insights from the Red Dot Initiative by Ms. Iti Rawat",
+      "Frameworks for building supportive, inclusive corporate ecosystems over narrow individual success",
+      "Promoting active inclusivity, women empowerment, and value-oriented leadership"
     ],
-    outcomes: ["Practical business problem-solving toolkit", "Student certificate of attendance"],
-    speakers: ["Industry Keynote Masters", "LEADS Faculty Leads"],
+    outcomes: [
+      "Empathetic Leadership and Systemic Awareness: Student participants developed actionable frameworks for identifying and dismantling systemic gender biases and resource limitations within student organizations and future workspaces.",
+      "Resilience and Confidence Building: Participating students cultivated personal leadership identities focused on emotional resilience, self-leadership, and the construction of supportive corporate peer networks."
+    ],
+    speakers: [
+      "Ms. Iti Rawat (Visionary Founder, WEFT Foundation & Red Dot Initiative)",
+      "LEADS Faculty & Student Executive Council"
+    ],
     editions: []
   },
   {
@@ -536,7 +546,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Catalyst Series",
     category: "Catalyst",
     subCategory: "Catalyst Leadership Talk Series",
-    tagline: "Strategic Agility, Personal Branding & Corporate Adaptability",
+    tagline: "Leadership in the Age of AI with Ms. Candida Andrade Halgekar (Accenture)",
     date: "18 Nov 2025",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "98 Students • 5 Faculty Benefited",
@@ -545,14 +555,21 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g9.webp",
     gallery: ["/images/gallery/g9.webp"],
     featured: false,
-    description: "4th edition of the Catalyst series exploring personal branding, executive presence, and cross-functional team dynamics for career growth.",
+    description: "The LEADS Next Gen Centre hosted the Catalyst Insight Leadership Talk Series 4.0, featuring Ms. Candida Andrade Halgekar, an Inclusion and Diversity Leader at Accenture. Centred on the highly relevant theme 'Leadership in the Age of AI', she delivered a profound exploration of how artificial intelligence is transforming conventional leadership paradigms. She expertly highlighted the critical role of predictive analytics and advanced assistive technologies in building universally inclusive corporate environments, emphasizing that AI cannot replace essential human capabilities like intuition, emotional intelligence, and empathy. The strategic objectives of this engaging talk were to demonstrate how emerging leaders can strategically leverage assistive technologies and predictive analysis to enhance inclusivity while highlighting the critical importance of human-centric skills and professional adaptability in an AI-enabled environment. The session perfectly empowered students to strategically leverage digital tools to accelerate learning while simultaneously strengthening their personal branding and robust networking skills.",
     seriesHighlights: [
-      "Personal branding for career advancement",
-      "Executive communication & presence masterclass",
-      "Cross-functional team collaboration dynamics"
+      "Exploration of how AI and predictive analytics are transforming conventional leadership paradigms",
+      "Deploying assistive technologies to build universally inclusive and accessible corporate environments",
+      "Emphasizing irreplaceable human capabilities: intuition, emotional intelligence, and empathy",
+      "Personal branding, digital tool acceleration, and professional adaptability for the AI era"
     ],
-    outcomes: ["Executive presence handbook", "Student career positioning strategies"],
-    speakers: ["Corporate Brand Strategists", "LEADS Trainers"],
+    outcomes: [
+      "Balanced Human-AI Synergy: Students learned to use AI for data analysis while strengthening essential human skills such as empathy, creativity, and problem-solving.",
+      "Inclusive Workplace Design Literacy: Students gained practical insights into using predictive analytics and assistive technologies to create accessible and inclusive workplace environments."
+    ],
+    speakers: [
+      "Ms. Candida Andrade Halgekar (Inclusion & Diversity Leader, Accenture)",
+      "LEADS Faculty Leads & Student Organising Team"
+    ],
     editions: []
   },
   {
@@ -562,7 +579,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Catalyst Series",
     category: "Catalyst",
     subCategory: "Catalyst Leadership Talk Series",
-    tagline: "Attitude Development for Sustainability with Mr. Hemanth K",
+    tagline: "From Campus to Corporate with Mr. Hemanth Kumar V (CEO, Bharat Careerconnect)",
     date: "23 Jan 2026",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "92 Students • 8 Faculty Benefited",
@@ -571,14 +588,21 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g10.webp",
     gallery: ["/images/gallery/g10.webp"],
     featured: false,
-    description: "5th edition featuring Mr. Hemanth K on attitude development, personal sustainability, career resilience, and navigating corporate change.",
+    description: "The LEADS Next Gen Centre hosted the Catalyst Insight Leadership Talk Series 5.0, featuring Mr. Hemanth Kumar V, CEO of Bharat Careerconnect Solutions LLP. Centered around the theme 'From Campus to Corporate,' Mr. Kumar provided an inspiring, pragmatic roadmap for bridging the gap between academic learning and corporate expectations. Drawing from his extensive experience in leading national skilling initiatives, he emphasized the profound importance of professional adaptability, ethical leadership, and continuous learning. The strategic objectives of this highly engaging session were to prepare the student body for transitioning into corporate life by sharing real-world skills demand, and to expose them to contemporary corporate communication frameworks and professional ethics. The talk challenged students to look beyond standard academic qualifications, encouraging them to actively pursue internships, networking opportunities, and real-world problem-solving challenges to emerge as highly confident, purpose-driven professional leaders today.",
     seriesHighlights: [
-      "Attitude development & growth mindset principles",
-      "Personal sustainability & emotional wellbeing in corporate life",
-      "Interactive Q&A session with Mr. Hemanth K"
+      "Pragmatic roadmap for bridging the gap between academic education and corporate expectations",
+      "National skilling insights on professional adaptability, ethical leadership, and continuous learning",
+      "Masterclass on contemporary corporate communication frameworks and professional conduct protocols",
+      "Actionable strategies for internships, networking opportunities, and real-world problem-solving"
     ],
-    outcomes: ["Attitude development roadmap", "Mindset transformation tools"],
-    speakers: ["Mr. Hemanth K", "LEADS Mentors"],
+    outcomes: [
+      "Strategic Professional Transitioning: Student participants developed a concrete personal upskilling and career roadmap, aligning their academic learning with contemporary industry competency benchmarks.",
+      "Ethical Professional Conduct and Adaptability: Participating students established a deep understanding of corporate ethics, professional communication protocols, and the adaptability required to navigate shifting industrial workspaces."
+    ],
+    speakers: [
+      "Mr. Hemanth Kumar V (CEO, Bharat Careerconnect Solutions LLP)",
+      "LEADS Industry Connect Team"
+    ],
     editions: []
   },
   {
@@ -588,7 +612,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Catalyst Series",
     category: "Catalyst",
     subCategory: "Catalyst Leadership Talk Series",
-    tagline: "Digital Leadership & Corporate Intrapreneurship",
+    tagline: "The Strategic Leadership Shift in Talent Acquisition with Mr. Ananth Mallya (CEO, Quan Tech Origin)",
     date: "30 Jan 2026",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "89 Students • 7 Faculty Benefited",
@@ -597,14 +621,21 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g1.webp",
     gallery: ["/images/gallery/g1.webp"],
     featured: false,
-    description: "6th edition focusing on digital leadership, intrapreneurial mindset in corporate organizations, and managing high-performance teams.",
+    description: "The LEADS Next Gen Centre hosted the Catalyst Insight Leadership Talk Series 6.0, featuring Mr. Ananth Mallya, CEO of Quan Tech Origin. Focusing on 'The Strategic Leadership Shift in Talent Acquisition,' he illuminated the rapid corporate transition from rigid role-based hiring to dynamic capability-based evaluation. Through highly interactive mock aptitude evaluations and real-time feedback, he demonstrated how modern recruiters prioritize lateral thinking, adaptability, and conceptual clarity over fixed academic knowledge. The strategic objectives of this highly interactive talk were to provide students with a thorough, practical understanding of the modern industry shift in recruitment methodologies, and to encourage the effective, conceptually grounded use of AI tools and regional innovation platforms for career acceleration. The session provided invaluable strategies for navigating modern interviews, using artificial intelligence as a smart support system rather than a shortcut, and inspired students to cultivate a highly strategic, growth-oriented professional mindset.",
     seriesHighlights: [
-      "Intrapreneurship: Driving innovation within established firms",
-      "Managing remote & hybrid high-performance teams",
-      "Digital transformation leadership strategies"
+      "Analysis of corporate recruitment shift from role-based hiring to capability-based evaluation",
+      "Interactive mock aptitude evaluations with real-time recruiter feedback",
+      "Prioritizing lateral thinking, adaptability, and conceptual clarity in modern competitive interviews",
+      "Strategic, grounded use of AI tools as career acceleration support systems"
     ],
-    outcomes: ["Intrapreneurship project framework", "Digital leadership badge"],
-    speakers: ["Corporate Innovation Directors", "LEADS Faculty"],
+    outcomes: [
+      "Aptitude and Cognitive Skills: Students built practical competence in tackling modern aptitude and cognitive assessments through live mock simulations.",
+      "Capability-Based Profile Positioning: Students learned to effectively showcase critical thinking, adaptability, and technology skills during competitive recruitment processes."
+    ],
+    speakers: [
+      "Mr. Ananth Mallya (CEO, Quan Tech Origin)",
+      "LEADS Career Acceleration Leads"
+    ],
     editions: []
   },
   {
@@ -614,23 +645,31 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Catalyst Series",
     category: "Catalyst",
     subCategory: "Catalyst Leadership Talk Series",
-    tagline: "Technology Leadership & Engineering Management with IEEE",
+    tagline: "Catalysing Innovation and Leadership for Viksit Bharat with Prof. Udaya Raghunath Birje & IEEE",
     date: "9 May 2026",
-    location: "LEADS & IEEE SB RUAS",
+    location: "MSRUAS RTC Campus, Bengaluru",
     attendees: "250 Students • 16 Faculty Benefited",
     badgeColor: "bg-[#DE3F11]/10 text-[#DE3F11] border-[#DE3F11]/20",
     logoSvg: "zap",
     photo: "/images/gallery/g2.webp",
     gallery: ["/images/gallery/g2.webp"],
     featured: false,
-    description: "7th edition organized in collaboration with IEEE Bangalore Section on technology management, engineering ethics, and deep-tech innovation.",
+    description: "The LEADS Next Gen Centre, in collaboration with the IEEE Bangalore Section and IEEE SB RUAS, successfully organized Catalyst Leadership Talk 7.0 at the MSRUAS RTC Campus. Featuring an inspiring, multi-dimensional session by Prof. Udaya Raghunath Birje, Co-Founder & Director of ThinkStreet Technologies, the event focused on the theme 'Catalysing Innovation and Leadership for Viksit Bharat.' The interactive 2.5 hour engagement combined an expert lecture with workshop-style activities, introducing over 250 participants to emerging technological opportunities in AI, semiconductors, quantum missions, and smart green corridors. The strategic objectives of this national-facing talk were to inspire youth innovators to build future-ready leadership mindsets contributing directly to India's vision of Viksit Bharat 2047, and to create strategic awareness regarding emerging opportunities within national semiconductor, quantum, and AI missions. By encouraging the development of critical skills like creative problem-solving and emotional intelligence, the forum empowered student innovators to build ethical, sovereign technology solutions for national self-reliance.",
     seriesHighlights: [
-      "Joint session with IEEE Bangalore Section stalwarts",
-      "Engineering ethics & AI technology governance",
-      "Transitioning from engineer to tech executive"
+      "2.5-hour expert lecture and interactive workshop co-hosted with IEEE Bangalore Section & IEEE SB RUAS",
+      "Keynote by Prof. Udaya Raghunath Birje on emerging opportunities in AI, semiconductors, and quantum missions",
+      "Deep-dive into smart green corridors and India's sovereign technological roadmap for Viksit Bharat 2047",
+      "Developing creative problem-solving, emotional intelligence, and ethical technology governance"
     ],
-    outcomes: ["IEEE joint participation certificate", "Engineering management guide"],
-    speakers: ["IEEE Bangalore Officers", "Tech Executives"],
+    outcomes: [
+      "Strategic National Missions Literacy: Student innovators established deep conceptual knowledge of India's sovereign missions in AI, semiconductors, and quantum systems, identifying concrete spaces for personal and academic contributions.",
+      "Academic-Industry Venture Pipeline: Participating student cohorts initiated strong collaborative networks, motivating student project groups to transition classroom research into scalable, tech-focused startup ventures."
+    ],
+    speakers: [
+      "Prof. Udaya Raghunath Birje (Co-Founder & Director, ThinkStreet Technologies)",
+      "IEEE Bangalore Section Executive Officers",
+      "IEEE SB RUAS Leadership"
+    ],
     editions: []
   },
   {
@@ -640,23 +679,30 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Catalyst Series",
     category: "Catalyst",
     subCategory: "Catalyst Leadership Talk Series",
-    tagline: "Sustainable Business Models & ESG Compliance",
+    tagline: "AI in Healthcare Marketing Systems with Mr. Siddhartha Saha (Co-Founder, DocFyn)",
     date: "25 June 2026",
-    location: "LEADS Next Gen Centre, RUAS",
+    location: "Faculty of Management and Commerce (FMC), RUAS",
     attendees: "50 Students • 6 Faculty Benefited",
     badgeColor: "bg-[#DE3F11]/10 text-[#DE3F11] border-[#DE3F11]/20",
     logoSvg: "zap",
     photo: "/images/gallery/g3.webp",
     gallery: ["/images/gallery/g3.webp"],
     featured: false,
-    description: "8th edition focusing on sustainable business models, corporate social responsibility, ESG reporting, and ethical governance for young leaders.",
+    description: "The LEADS Next Gen Centre, in coordination with the Faculty of Management and Commerce, successfully hosted the Catalyst Leadership Talk Series 8.0 on 25 June 2026 featuring Mr. Siddhartha Saha, Co-Founder of DocFyn, to analyze the strategic role of Artificial Intelligence within modern healthcare marketing systems. The session explored the distinct structural parameters of digital health ecosystems, focusing on how high-stakes clinical decisions, strict data privacy regulations, and patient psychological sensitivities differentiate this domain from standard retail marketing. Deliberations highlighted critical frameworks across multi-specialty and single-specialty hospital marketing, demonstrating how tools like search engine optimization (SEO), answer engine optimization (AEO), automated conversational assistants, and data-driven marketing dashboards actively streamline patient acquisition, engagement, conversion, and retention. By reviewing live practical case studies indicating that nearly 70% of patients perform deep online research on search networks and generative platforms like ChatGPT before selecting healthcare providers, the talk provided a baseline workflow to optimize hospital visibility while emphasizing that algorithmic deployment must remain anchored in absolute transparency, ethical standards, and patient-centric care.",
     seriesHighlights: [
-      "Building circular economy business models",
-      "ESG reporting metrics for modern enterprises",
-      "Corporate social responsibility impact cases"
+      "Analyzing AI, predictive algorithms, and automated workflows in modern healthcare marketing systems",
+      "Navigating clinical decision complexity, strict health data privacy regulations, and patient sensitivities",
+      "Multi-specialty hospital growth frameworks using SEO, AEO (Answer Engine Optimization), and conversational AI",
+      "Practical analysis of consumer digital search behavior across search engines and generative AI platforms"
     ],
-    outcomes: ["ESG compliance introduction badge", "Sustainability model canvas"],
-    speakers: ["Sustainability Consultants", "LEADS ESG Faculty"],
+    outcomes: [
+      "Digital Acquisition Strategies: Students gained practical skills in search visibility, multi-channel marketing, and analytics to better understand consumer digital journeys.",
+      "Ethical Automation Practices: Students learned to balance automation with privacy, ethics, and human-centered decision-making."
+    ],
+    speakers: [
+      "Mr. Siddhartha Saha (Co-Founder, DocFyn)",
+      "Faculty of Management and Commerce (FMC) Healthcare Management Leads"
+    ],
     editions: []
   },
 
@@ -690,11 +736,11 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "expert-talks-python",
     placeholderId: 73,
-    name: "Expert Talk – Data Science with Python",
+    name: "Expert Talk – Exploring Data Science with Python",
     seriesName: "Expert Talks",
     category: "Expert Talk",
     subCategory: "Expert Talks",
-    tagline: "Data-Driven Insights, Python Analytics & ML Workflows",
+    tagline: "An Algorithmic Journey with Python featuring Dr. Rangegowda R (Presidency Business School)",
     date: "04 Sep 2025",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "80 Students • 4 Faculty Benefited",
@@ -702,15 +748,22 @@ export const EVENTS_DATA: LEADSEvent[] = [
     logoSvg: "file-text",
     photo: "/images/gallery/g5.webp",
     gallery: ["/images/gallery/g5.webp"],
-    featured: false,
-    description: "Technical masterclass on data science applications, Python data manipulation libraries, predictive analytics, and data-driven corporate strategy.",
+    featured: true,
+    description: "The LEADS Next Gen Centre hosted a highly engaging Expert Talk titled 'Exploring Data Science: An Algorithmic Journey with Python,' featuring Dr. Rangegowda R from Presidency Business School, to explore the critical intersection of technical computing and modern corporate strategy. The intensive session provided a comprehensive introduction to foundational Data Science principles, highlighting the critical role of Python in algorithmic modeling, machine learning, and business intelligence. Dr. Rangegowda expertly demystified complex mathematical concepts like supervised learning, predictive regression, and advanced classification. The primary strategic objectives of this initiative were to seamlessly bridge complex technical programming frameworks with practical management scenarios, demonstrating how data-driven insights are actively transforming modern market forecasting, corporate decision-making, and global tech entrepreneurship. By establishing data science as a core strategic capability rather than an isolated IT skill, this interdisciplinary session successfully empowered students to strategically leverage predictive algorithms and analytics to drive business model innovation, optimize operational workflows, and secure a sustainable competitive advantage in an increasingly automated, data-centric corporate landscape.",
     seriesHighlights: [
-      "Hands-on Python analytics for business decision making",
-      "Machine learning model evaluation in enterprise settings",
-      "Data visualization & statistical storytelling"
+      "Demystifying foundational Data Science principles, machine learning, and Python algorithmic modeling",
+      "Deep-dive into supervised learning, predictive regression algorithms, and advanced classification",
+      "Bridging complex computational programming frameworks with practical business management scenarios",
+      "Leveraging predictive analytics for market forecasting, workflow optimization, and competitive advantage"
     ],
-    outcomes: ["Python data science code repository", "Analytics masterclass certificate"],
-    speakers: ["Lead Data Scientists", "RUAS Analytics Faculty"],
+    outcomes: [
+      "Algorithmic Modeling Proficiency: Students gained hands-on experience in building and analyzing predictive models using Python-based regression and classification techniques.",
+      "Data-Driven Strategic Decision-Making: Students learned to translate data insights into actionable business decisions and strategic recommendations using analytical tools."
+    ],
+    speakers: [
+      "Dr. Rangegowda R (Faculty & Analytics Mentor, Presidency Business School)",
+      "LEADS Technical & Analytics Faculty Team"
+    ],
     editions: []
   },
 
