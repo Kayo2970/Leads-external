@@ -149,18 +149,9 @@ export default function EventModal({ event, onClose }: EventModalProps) {
 
         {/* SECTION: DETAILED EDITIONS & SESSIONS BREAKDOWN */}
         <section className="space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-4">
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#DE3F11]">
-                Interactive Series Timeline
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Individual Editions & What We Have Done
-              </h2>
-            </div>
-
-            {/* Edition Tabs */}
-            {event.editions && event.editions.length > 1 && (
+          {event.editions && event.editions.length > 1 && (
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-4">
+              {/* Edition Tabs */}
               <div className="flex flex-wrap gap-2">
                 {event.editions.map((edition, idx) => (
                   <button
@@ -176,8 +167,8 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                   </button>
                 ))}
               </div>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* Active Edition Display Card */}
           {currentEdition ? (() => {
