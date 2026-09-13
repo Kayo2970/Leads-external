@@ -485,6 +485,17 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     image: "/images/committee/siddharth-gupta.webp",
     affiliation: "Trainee Associates Wing",
   },
+  {
+    id: "rohit-kumar-raj",
+    placeholderId: 55,
+    name: "Rohit Kumar Raj",
+    role: "Student Trainee Associate",
+    designation: "LEADS Next Gen Centre",
+    roleGroup: "Student Trainee Associates",
+    initials: "RR",
+    image: "/images/committee/rohit-kumar-raj.webp",
+    affiliation: "Trainee Associates Wing",
+  },
 ];
 
 export const ORGANIZING_COMMITTEE = CORE_COMMITTEE;

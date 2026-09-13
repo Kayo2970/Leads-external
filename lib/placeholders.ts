@@ -129,6 +129,7 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 52, title: "Pranav Bansal", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
   { id: 53, title: "Pruthvi Arya Singh", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
   { id: 54, title: "Siddharth Gupta", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 55, title: "Rohit Kumar Raj", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
 
   // Home Featured Leadership (41-43)
   { id: 41, title: "Prof. Kuldeep Kumar Raina", subtitle: "Patron Card", category: "Home Hero", page: "/", component: "ChromaGrid" },
