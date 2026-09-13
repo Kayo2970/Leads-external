@@ -28,7 +28,8 @@ export default function AboutPage() {
     { label: "Centers Leadership", value: "Centers Leadership" },
     { label: "Governing & Advisory", value: "Governing & Advisory" },
     { label: "Alumni Student Council", value: "Alumni Student Council" },
-    { label: "Core Committee", value: "Student Trainee Associates" },
+    { label: "Core Committee", value: "Core Committee" },
+    { label: "Trainee Associates", value: "Student Trainee Associates" },
   ];
 
   // Partition member categories
@@ -37,6 +38,7 @@ export default function AboutPage() {
   const alumniCouncilMembers = BOARD_MEMBERS_DATA.filter(
     (m) => m.roleGroup === "Alumni Student Council" || m.roleGroup === "Student Core Council"
   );
+  const coreCommitteeMembers = BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Core Committee");
   const traineeAssociateMembers = BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Trainee Associates");
 
   // Partition member categories
@@ -75,13 +77,24 @@ export default function AboutPage() {
       columns: 4,
     },
     {
-      id: "trainee-associates",
-      group: "Student Trainee Associates" as const,
+      id: "core-committee",
+      group: "Core Committee" as const,
       title: "Core Committee",
       badge: "Governance Tier 04",
-      count: `${traineeAssociateMembers.length} Members`,
+      count: `${coreCommitteeMembers.length} Members`,
       description:
-        "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
+        "The operational leadership team managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
+      members: coreCommitteeMembers,
+      columns: 4,
+    },
+    {
+      id: "trainee-associates",
+      group: "Student Trainee Associates" as const,
+      title: "Trainee Associates",
+      badge: "Governance Tier 05",
+      count: `${traineeAssociateMembers.length} Associates`,
+      description:
+        "Junior associate student trainees developing core non-technical leadership, operational, and project execution capabilities.",
       members: traineeAssociateMembers,
       columns: 4,
     },
