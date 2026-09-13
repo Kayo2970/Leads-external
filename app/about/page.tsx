@@ -375,17 +375,79 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  {/* Partition ChromaGrid */}
-                  <div style={{ position: "relative" }}>
-                    <ChromaGrid
-                      items={chromaItems}
-                      radius={675}
-                      columns={partition.columns}
-                      damping={1.25}
-                      fadeOut={1.4}
-                      ease="power3.out"
-                    />
-                  </div>
+                  {/* Partition Content */}
+                  {partition.id === "governing-advisory" ? (
+                    <div className="space-y-14">
+                      {[
+                        {
+                          subTitle: "Board of Governing Council",
+                          subBadge: "Governing Council",
+                          subMembers: partition.members.filter(
+                            (m) => m.advisorySubGroup === "Board of Governing Council"
+                          ),
+                          columns: 3,
+                        },
+                        {
+                          subTitle: "Corporate Advisory Council",
+                          subBadge: "Corporate Advisory",
+                          subMembers: partition.members.filter(
+                            (m) => m.advisorySubGroup === "Corporate Advisory Council"
+                          ),
+                          columns: 3,
+                        },
+                        {
+                          subTitle: "Academic Advisory Council",
+                          subBadge: "Academic Advisory",
+                          subMembers: partition.members.filter(
+                            (m) => m.advisorySubGroup === "Academic Advisory Council"
+                          ),
+                          columns: 4,
+                        },
+                      ].map((subGroup, subIdx) => {
+                        if (subGroup.subMembers.length === 0) return null;
+                        const subChromaItems = mapToChromaItems(subGroup.subMembers);
+                        return (
+                          <div key={subIdx} className="space-y-6 pt-6 border-t border-purple-100 first:border-t-0 first:pt-0">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2">
+                              <div className="flex items-center space-x-3">
+                                <span className="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs">
+                                  {subGroup.subBadge}
+                                </span>
+                                <h4 className="text-xl sm:text-2xl font-black text-[#1E0C3D]">
+                                  {subGroup.subTitle}
+                                </h4>
+                              </div>
+                              <span className="text-xs font-bold text-[#DE3F11] bg-purple-50 px-3 py-1 rounded-lg border border-purple-100 w-fit">
+                                {subGroup.subMembers.length} Members
+                              </span>
+                            </div>
+
+                            <div style={{ position: "relative" }}>
+                              <ChromaGrid
+                                items={subChromaItems}
+                                radius={675}
+                                columns={subGroup.columns}
+                                damping={1.25}
+                                fadeOut={1.4}
+                                ease="power3.out"
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div style={{ position: "relative" }}>
+                      <ChromaGrid
+                        items={chromaItems}
+                        radius={675}
+                        columns={partition.columns}
+                        damping={1.25}
+                        fadeOut={1.4}
+                        ease="power3.out"
+                      />
+                    </div>
+                  )}
                 </div>
               );
             })}
