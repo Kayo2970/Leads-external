@@ -55,8 +55,8 @@ export default function ContactPage() {
                         <Building2 className="w-5 h-5" />
                       </div>
                       <div>
-                        <div className="font-bold text-[#1E0C3D]">Institution</div>
-                        <div className="text-slate-600">Faculty of Management and Commerce, RUAS</div>
+                        <div className="font-bold text-[#1E0C3D]">Centre Name</div>
+                        <div className="text-slate-600">Leads Next Gen Centre</div>
                       </div>
                     </div>
 
