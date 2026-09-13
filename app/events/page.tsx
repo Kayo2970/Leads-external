@@ -36,10 +36,10 @@ const CATEGORY_GROUPS: {
   description: string;
 }[] = [
   {
-    name: "Flagship Ceremonies",
-    badge: "Flagship Ceremonies",
+    name: "Institutional Ceremonies",
+    badge: "Institutional Ceremonies",
     description:
-      "Premier flagship institutional ceremonies and executive governance initiatives including the Centre Inauguration and Vanguard Leadership Retreat.",
+      "Premier institutional ceremonies and executive governance initiatives including the Centre Inauguration and Vanguard Leadership Retreat.",
   },
   {
     name: "Outreach",
@@ -85,7 +85,7 @@ function EventsContent() {
 
   // Accordion open/close state for each group (all open by default)
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
-    "Flagship Ceremonies": true,
+    "Institutional Ceremonies": true,
     "Outreach": true,
     "Catalyst Leadership Talk Series": true,
     "Expert Talks": true,

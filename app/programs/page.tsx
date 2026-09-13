@@ -16,13 +16,16 @@ import {
   Sparkles,
   ChevronDown,
   ChevronUp,
+  Layers,
+  Calendar,
+  MapPin,
 } from "lucide-react";
 
 export interface ProgramItem {
   id: string;
   title: string;
   subtitle: string;
-  category: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes";
+  category: "Conclaves & Policy Summits" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes";
   badge: string;
   icon: React.ReactNode;
   audience: string;
@@ -33,19 +36,19 @@ export interface ProgramItem {
 }
 
 const PROGRAM_GROUPS: {
-  name: "Flagship Summit" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes";
+  name: "Conclaves & Policy Summits" | "Conferences & Seminars" | "FDP / MDP / LDP / SDP Programmes";
   badge: string;
   description: string;
 }[] = [
   {
-    name: "Flagship Summit",
-    badge: "Annual Flagship",
+    name: "Conclaves & Policy Summits",
+    badge: "Policy & Executive Conclaves",
     description:
-      "India's premier annual policy and leadership convention convening central ministers, Vice-Chancellors, enterprise CEOs, and 1,000+ delegates to shape Viksit Bharat 2047.",
+      "India's premier annual policy and leadership conventions convening central ministers, Vice-Chancellors, enterprise CEOs, and 1,000+ national delegates to shape Viksit Bharat 2047.",
   },
   {
     name: "Conferences & Seminars",
-    badge: "National Symposia & Conclaves",
+    badge: "National & Intl Symposia",
     description:
       "High-level academic symposia, international IIIC deep-tech conventions, national quality congresses, AI impact conventions, and policy conferences co-hosted with IISc, AIMS, BMA, ANQ, AIU, and Adelaide University.",
   },
@@ -58,17 +61,17 @@ const PROGRAM_GROUPS: {
 ];
 
 const PROGRAMS_DATA: ProgramItem[] = [
-  // 1. ANNUAL FLAGSHIP SUMMIT (ALWAYS ON TOP!)
+  // 1. CONCLAVES & POLICY SUMMITS
   {
     id: "bls-summit",
     title: "BHARAT LEAD SUMMIT 2026",
     subtitle: "Transforming Vision Towards Viksit Bharat 2047",
-    category: "Flagship Summit",
-    badge: "Annual Flagship Summit",
+    category: "Conclaves & Policy Summits",
+    badge: "Annual Policy Summit",
     icon: <Crown className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Policy Makers, Vice-Chancellors, CEOs, & National Delegates",
     description:
-      "The premier national flagship annual summit bringing together central ministers, policy makers, VCs, CEOs, and 1,000+ national delegates to shape India's leadership roadmap for Viksit Bharat 2047.",
+      "The premier national policy and leadership annual summit bringing together central ministers, policy makers, VCs, CEOs, and 1,000+ national delegates to shape India's leadership roadmap for Viksit Bharat 2047.",
     highlights: [
       "Keynote panels with central ministry & state leaders",
       "Unveiling of the annual LEADS National Skill Gap Report",
@@ -78,6 +81,60 @@ const PROGRAMS_DATA: ProgramItem[] = [
     duration: "Annual Multi-Day Convention",
     featured: true,
   },
+  {
+    id: "pre-summit-ai-india-impact",
+    title: "Pre-Summit: AI India Impact Summit 2026",
+    subtitle: "Strategic AI Governance & National Healthcare Integration",
+    category: "Conclaves & Policy Summits",
+    badge: "AI Policy Roundtable",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "AI Researchers, Healthcare Directors & Policy Advisors",
+    description:
+      "Executive preparatory summit held at Ramaiah Medical College Board Room, convening AI leaders, medical directors, and policy stalwarts prior to the national summit.",
+    highlights: [
+      "AI integration in healthcare & national infrastructure",
+      "Ethical AI frameworks & data privacy protocols",
+      "Strategic roadmap preparation for Bharat Lead Summit 2026",
+    ],
+    duration: "Pre-Summit Roundtable",
+    featured: false,
+  },
+  {
+    id: "aiu-south-zone-vc-meet",
+    title: "AIU South Zone Vice-Chancellors' Meet",
+    subtitle: "NEP 2020 Implementation & Higher Education Governance",
+    category: "Conclaves & Policy Summits",
+    badge: "Vice-Chancellors' Conclave",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Vice-Chancellors, Registrars & University Chancellors",
+    description:
+      "Conclave of Vice-Chancellors from southern Indian universities discussing NEP 2020 alignment, multidisciplinary skill integration, research grants, and institutional autonomy.",
+    highlights: [
+      "NEP 2020 strategic implementation benchmarks",
+      "Inter-university research collaboration & grant allocation",
+      "Vice-Chancellors' roundtable on skill-integrated degrees",
+    ],
+    duration: "2-Day Vice-Chancellors' Conclave",
+    featured: false,
+  },
+  {
+    id: "innova-innovation-summit-2026",
+    title: "INNOVA Innovation Summit 2026",
+    subtitle: "Healthcare Tech, Deep-Tech & Sustainable Engineering",
+    category: "Conclaves & Policy Summits",
+    badge: "Deep-Tech & Healthcare Summit",
+    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
+    audience: "Startup Founders, Tech Researchers & Venture Investors",
+    description:
+      "Four-track national innovation summit hosted at NIMHANS Convention Centre, showcasing deep-tech commercialization, healthcare innovations, and youth venture pitching.",
+    highlights: [
+      "Four specialized tracks: Deep-Tech, Healthcare, ESG & Youth Venturing",
+      "Live startup pitch competition with angel investor panel",
+      "Exhibition of patent-pending university research prototypes",
+    ],
+    duration: "4-Track National Summit",
+    featured: false,
+  },
 
   // 2. CONFERENCES & SEMINARS / SUMMITS
   {
@@ -85,7 +142,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     title: "AIMS South Region Conference 2025",
     subtitle: "Emerging Trends in AI & Sustainability",
     category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
+    badge: "Regional Management Conference",
     icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
     audience: "Management Faculty, Researchers, Industry Executives & Students",
     description:
@@ -103,7 +160,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     title: "BMA Futuristic Leadership Summit 2025",
     subtitle: "Futuristic Leadership, Strategic Innovation & Decision Intelligence",
     category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
+    badge: "Executive Leadership Summit",
     icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
     audience: "Corporate Executives, Data Leaders & Academic Administrators",
     description:
@@ -121,7 +178,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     title: "ANQ Congress 2025 (Asian Network for Quality)",
     subtitle: "Global Quality Engineering, TQM & Operational Excellence",
     category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
+    badge: "International Quality Congress",
     icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
     audience: "Quality Directors, Industrial Engineers & International Delegates",
     description:
@@ -135,29 +192,11 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: false,
   },
   {
-    id: "pre-summit-ai-india-impact",
-    title: "Pre-Summit: AI India Impact Summit 2026",
-    subtitle: "Strategic AI Governance & National Healthcare Integration",
-    category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
-    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
-    audience: "AI Researchers, Healthcare Directors & Policy Advisors",
-    description:
-      "Executive preparatory summit held at Ramaiah Medical College Board Room, convening AI leaders, medical directors, and policy stalwarts prior to the national summit.",
-    highlights: [
-      "AI integration in healthcare & national infrastructure",
-      "Ethical AI frameworks & data privacy protocols",
-      "Strategic roadmap preparation for Bharat Lead Summit 2026",
-    ],
-    duration: "Pre-Summit Roundtable",
-    featured: false,
-  },
-  {
     id: "bma-symposium-ai-future-management",
     title: "BMA Symposium: AI & Future Management Education",
     subtitle: "Curriculum Transformation & AI-Driven Pedagogy",
     category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
+    badge: "Academic Pedagogy Symposium",
     icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
     audience: "Deans, B-School Directors & Management Educators",
     description:
@@ -171,47 +210,11 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: false,
   },
   {
-    id: "aiu-south-zone-vc-meet",
-    title: "AIU South Zone Vice-Chancellors' Meet",
-    subtitle: "NEP 2020 Implementation & Higher Education Governance",
-    category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
-    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
-    audience: "Vice-Chancellors, Registrars & University Chancellors",
-    description:
-      "Conclave of Vice-Chancellors from southern Indian universities discussing NEP 2020 alignment, multidisciplinary skill integration, research grants, and institutional autonomy.",
-    highlights: [
-      "NEP 2020 strategic implementation benchmarks",
-      "Inter-university research collaboration & grant allocation",
-      "Vice-Chancellors' roundtable on skill-integrated degrees",
-    ],
-    duration: "2-Day Vice-Chancellors' Conclave",
-    featured: false,
-  },
-  {
-    id: "innova-innovation-summit-2026",
-    title: "INNOVA Innovation Summit 2026",
-    subtitle: "Healthcare Tech, Deep-Tech & Sustainable Engineering",
-    category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
-    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
-    audience: "Startup Founders, Tech Researchers & Venture Investors",
-    description:
-      "Four-track national innovation summit hosted at NIMHANS Convention Centre, showcasing deep-tech commercialization, healthcare innovations, and youth venture pitching.",
-    highlights: [
-      "Four specialized tracks: Deep-Tech, Healthcare, ESG & Youth Venturing",
-      "Live startup pitch competition with angel investor panel",
-      "Exhibition of patent-pending university research prototypes",
-    ],
-    duration: "4-Track National Summit",
-    featured: false,
-  },
-  {
     id: "two-day-gst-conference",
     title: "Two-Day National Conference on GST 2.0",
     subtitle: "Tax Policy Reforms, Compliance & National Economic Governance",
     category: "Conferences & Seminars",
-    badge: "Conferences & Seminars",
+    badge: "National Tax Policy Conference",
     icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
     audience: "Tax Officers, CAs, Policy Researchers & Legal Scholars",
     description:
@@ -224,6 +227,24 @@ const PROGRAMS_DATA: ProgramItem[] = [
     duration: "2-Day National Conference",
     featured: false,
   },
+  {
+    id: "iic-deeptech-startups",
+    title: "IIC Innovation & Entrepreneurship for DeepTech Startups",
+    subtitle: "Role of Entrepreneurial Universities in Deep-Tech Commercialization",
+    category: "Conferences & Seminars",
+    badge: "International IIIC DeepTech Conference",
+    icon: <Sparkles className="w-6 h-6 text-[#DE3F11]" />,
+    audience: "Incubators, Tech Founders, Patent Attorneys & Investors",
+    description:
+      "International IIIC conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
+    highlights: [
+      "Deep-tech commercialization & IP asset protection",
+      "Joint panel with IISc and Adelaide University experts",
+      "University incubator setup & spin-off funding models",
+    ],
+    duration: "2-Day International Conference",
+    featured: false,
+  },
 
   // 3. FDP / MDP / LDP / SDP DEVELOPMENT PROGRAMMES
   {
@@ -231,7 +252,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     title: "FDP, LDP, MDP & SDP Development Programmes",
     subtitle: "Faculty (FDP), Leadership (LDP), Management (MDP) & Student Development (SDP) Track",
     category: "FDP / MDP / LDP / SDP Programmes",
-    badge: "Integrated Capability Track",
+    badge: "Integrated Development Track",
     icon: <GraduationCap className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Educators, Senior Executives, Corporate Managers, & Student Founders",
     description:
@@ -251,7 +272,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     title: "International Workshop on Mindfulness Leadership",
     subtitle: "Conscious Executive Governance, Emotional Intelligence & Stress Resilience",
     category: "FDP / MDP / LDP / SDP Programmes",
-    badge: "FDP / MDP / LDP / SDP Programmes",
+    badge: "International FDP Workshop",
     icon: <GraduationCap className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Senior Faculty, Corporate Directors & Executive Cohorts",
     description:
@@ -264,43 +285,25 @@ const PROGRAMS_DATA: ProgramItem[] = [
     duration: "3-Day International FDP Workshop",
     featured: false,
   },
-
-  {
-    id: "iic-deeptech-startups",
-    title: "IIC Innovation & Entrepreneurship for DeepTech Startups",
-    subtitle: "Role of Entrepreneurial Universities in Deep-Tech Commercialization",
-    category: "Conferences & Seminars",
-    badge: "International IIIC Conference",
-    icon: <Sparkles className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Incubators, Tech Founders, Patent Attorneys & Investors",
-    description:
-      "International IIIC conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
-    highlights: [
-      "Deep-tech commercialization & IP asset protection",
-      "Joint panel with IISc and Adelaide University experts",
-      "University incubator setup & spin-off funding models",
-    ],
-    duration: "2-Day International Conference",
-    featured: false,
-  },
 ];
 
 function ProgramsContent() {
   const searchParams = useSearchParams();
   const targetCategory = searchParams.get("category");
 
+  const [activeTab, setActiveTab] = useState<string>("All");
   const [selectedProgram, setSelectedProgram] = useState<ProgramItem | null>(null);
 
   // Accordion state for each group (open by default)
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
-    "Flagship Summit": true,
+    "Conclaves & Policy Summits": true,
     "Conferences & Seminars": true,
     "FDP / MDP / LDP / SDP Programmes": true,
-    "National Initiatives": true,
   });
 
   useEffect(() => {
     if (targetCategory && PROGRAM_GROUPS.some((g) => g.name === targetCategory)) {
+      setActiveTab(targetCategory);
       setExpandedGroups((prev) => ({
         ...prev,
         [targetCategory]: true,
@@ -322,6 +325,18 @@ function ProgramsContent() {
     }));
   };
 
+  const tabOptions = [
+    { label: "All Programs", value: "All" },
+    { label: "Conclaves & Policy Summits", value: "Conclaves & Policy Summits" },
+    { label: "Conferences & Seminars", value: "Conferences & Seminars" },
+    { label: "FDP / MDP / LDP / SDP", value: "FDP / MDP / LDP / SDP Programmes" },
+  ];
+
+  const visibleGroups =
+    activeTab === "All"
+      ? PROGRAM_GROUPS
+      : PROGRAM_GROUPS.filter((g) => g.name === activeTab);
+
   return (
     <div className="min-h-screen bg-[#FDFBFF]">
       {/* Program Detail Pop-up Modal */}
@@ -340,16 +355,33 @@ function ProgramsContent() {
             Executive & Academic <span className="bg-gradient-to-r from-[#DE3F11] to-[#FF8C61] bg-clip-text text-transparent">Programs</span>
           </h1>
           <p className="mt-5 3xl:mt-8 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl text-[#E2D9F3] max-w-3xl 3xl:max-w-5xl mx-auto leading-relaxed">
-            Empowering leaders across government, corporate enterprises, academia, and student ventures through our flagship summits and capability-building tracks.
+            Empowering leaders across government, corporate enterprises, academia, and student ventures through our national policy summits, academic conferences, and capability-building tracks.
           </p>
         </div>
       </section>
 
       {/* SECTION 2 [WHITE 70%]: GROUPED PROGRAM CATEGORIES & ACCORDIONS */}
       <section className="py-16 sm:py-24 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
-        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 space-y-16">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 space-y-12">
           
-          {PROGRAM_GROUPS.map((group) => {
+          {/* CATEGORY FILTER TABS (UNIFIED WITH EVENTS STRUCTURE) */}
+          <div className="flex flex-wrap items-center justify-center gap-2 3xl:gap-4 mb-4">
+            {tabOptions.map((tab) => (
+              <button
+                key={tab.value}
+                onClick={() => setActiveTab(tab.value)}
+                className={`px-4 py-2.5 3xl:px-7 3xl:py-4 rounded-xl 3xl:rounded-2xl text-xs 3xl:text-lg font-bold transition-all duration-300 ${
+                  activeTab === tab.value
+                    ? "bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md scale-105"
+                    : "bg-white text-[#361C6A] border border-purple-200 shadow-sm hover:border-[#DE3F11]/50 hover:bg-purple-50/50"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {visibleGroups.map((group) => {
             const groupPrograms = PROGRAMS_DATA.filter((p) => p.category === group.name);
             if (groupPrograms.length === 0) return null;
 

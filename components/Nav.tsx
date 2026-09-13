@@ -128,9 +128,9 @@ export default function Nav() {
 
                     {/* Category Items List */}
                     <div className="space-y-1.5 max-h-[420px] overflow-y-auto pr-1">
-                      {/* 1. Flagship Ceremonies */}
+                      {/* 1. Institutional Ceremonies */}
                       <Link
-                        href="/events?category=Flagship%20Ceremonies"
+                        href="/events?category=Institutional%20Ceremonies"
                         className="flex items-start space-x-3.5 p-2.5 rounded-xl hover:bg-purple-50/90 transition-all duration-200 group border border-transparent hover:border-purple-100"
                       >
                         <div className="w-9 h-9 rounded-xl bg-purple-100/80 border border-purple-200/60 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
@@ -139,10 +139,10 @@ export default function Nav() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-2">
                             <span className="text-sm font-bold text-[#1E0C3D] group-hover:text-[#DE3F11] transition-colors">
-                              Flagship Ceremonies
+                              Institutional Ceremonies
                             </span>
                             <span className="text-[9px] bg-purple-100 text-[#9C1256] border border-purple-200 px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0">
-                              Flagship
+                              Ceremonies
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed truncate">
@@ -357,7 +357,7 @@ export default function Nav() {
                               BHARAT LEAD SUMMIT 2026
                             </span>
                             <span className="text-[9px] bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white px-2 py-0.5 rounded-md font-extrabold uppercase shrink-0 shadow-xs">
-                              Flagship Summit ↗
+                              Annual Summit ↗
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
