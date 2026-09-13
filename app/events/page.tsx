@@ -29,12 +29,6 @@ interface CategoryGroup {
 
 const CATEGORY_GROUPS: CategoryGroup[] = [
   {
-    name: "Institutional Ceremonies",
-    badge: "Institutional Ceremonies",
-    description:
-      "Premier institutional ceremonies and executive governance initiatives including the Centre Inauguration and Vanguard Leadership Retreat.",
-  },
-  {
     name: "Outreach",
     badge: "Delegations & Symposia",
     description:
