@@ -159,67 +159,7 @@
   margin-top: 0.2rem;
 }
 
-.chroma-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 3;
-  backdrop-filter: grayscale(0.85) brightness(0.85);
-  -webkit-backdrop-filter: grayscale(0.85) brightness(0.85);
-  background: rgba(0, 0, 0, 0.001);
-
-  mask-image: radial-gradient(
-    circle var(--r) at var(--x) var(--y),
-    transparent 0%,
-    transparent 20%,
-    rgba(0, 0, 0, 0.1) 35%,
-    rgba(0, 0, 0, 0.25) 50%,
-    rgba(0, 0, 0, 0.45) 65%,
-    rgba(0, 0, 0, 0.7) 80%,
-    white 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    circle var(--r) at var(--x) var(--y),
-    transparent 0%,
-    transparent 20%,
-    rgba(0, 0, 0, 0.1) 35%,
-    rgba(0, 0, 0, 0.25) 50%,
-    rgba(0, 0, 0, 0.45) 65%,
-    rgba(0, 0, 0, 0.7) 80%,
-    white 100%
-  );
-}
-
+.chroma-overlay,
 .chroma-fade {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 4;
-  backdrop-filter: grayscale(0.85) brightness(0.85);
-  -webkit-backdrop-filter: grayscale(0.85) brightness(0.85);
-  background: rgba(0, 0, 0, 0.001);
-
-  mask-image: radial-gradient(
-    circle var(--r) at var(--x) var(--y),
-    white 0%,
-    white 20%,
-    rgba(255, 255, 255, 0.9) 35%,
-    rgba(255, 255, 255, 0.75) 50%,
-    rgba(255, 255, 255, 0.55) 65%,
-    rgba(255, 255, 255, 0.3) 80%,
-    transparent 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    circle var(--r) at var(--x) var(--y),
-    white 0%,
-    white 20%,
-    rgba(255, 255, 255, 0.9) 35%,
-    rgba(255, 255, 255, 0.75) 50%,
-    rgba(255, 255, 255, 0.55) 65%,
-    rgba(255, 255, 255, 0.3) 80%,
-    transparent 100%
-  );
-
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  display: none;
 }
