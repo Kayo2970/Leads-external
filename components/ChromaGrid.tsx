@@ -32,7 +32,7 @@ export interface ChromaGridProps {
 export const ChromaGrid: React.FC<ChromaGridProps> = ({
   items,
   className = "",
-  columns = 4,
+  columns = 5,
   rows = 2,
   radius = 325,
   damping = 0.45,

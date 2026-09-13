@@ -52,7 +52,7 @@ export default function AboutPage() {
       description:
         "High-level institutional patronage, executive deanship, centre leadership, and faculty leads guiding daily operations, incubation programs, and fiscal governance.",
       members: centersLeadershipMembers,
-      columns: 4,
+      columns: 5,
     },
     {
       id: "governing-advisory",
@@ -63,7 +63,7 @@ export default function AboutPage() {
       description:
         "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
       members: governingAdvisoryMembers,
-      columns: 3,
+      columns: 5,
     },
     {
       id: "alumni-student-council",
@@ -74,7 +74,7 @@ export default function AboutPage() {
       description:
         "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
       members: alumniCouncilMembers,
-      columns: 4,
+      columns: 5,
     },
     {
       id: "core-committee",
@@ -85,7 +85,7 @@ export default function AboutPage() {
       description:
         "The operational leadership team managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
       members: coreCommitteeMembers,
-      columns: 4,
+      columns: 5,
     },
     {
       id: "trainee-associates",
@@ -96,7 +96,7 @@ export default function AboutPage() {
       description:
         "Junior associate student trainees developing core non-technical leadership, operational, and project execution capabilities.",
       members: traineeAssociateMembers,
-      columns: 4,
+      columns: 5,
     },
   ];
 
@@ -385,7 +385,7 @@ export default function AboutPage() {
                           subMembers: partition.members.filter(
                             (m) => m.advisorySubGroup === "Board of Governing Council"
                           ),
-                          columns: 3,
+                          columns: 5,
                         },
                         {
                           subTitle: "Corporate Advisory Council",
@@ -393,7 +393,7 @@ export default function AboutPage() {
                           subMembers: partition.members.filter(
                             (m) => m.advisorySubGroup === "Corporate Advisory Council"
                           ),
-                          columns: 3,
+                          columns: 5,
                         },
                         {
                           subTitle: "Academic Advisory Council",
@@ -401,7 +401,7 @@ export default function AboutPage() {
                           subMembers: partition.members.filter(
                             (m) => m.advisorySubGroup === "Academic Advisory Council"
                           ),
-                          columns: 4,
+                          columns: 5,
                         },
                       ].map((subGroup, subIdx) => {
                         if (subGroup.subMembers.length === 0) return null;
