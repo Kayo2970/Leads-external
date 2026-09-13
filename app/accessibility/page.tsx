@@ -140,7 +140,7 @@ export default function AccessibilityPage() {
             </p>
             <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="text-xs text-[#E2D9F3]">
-                Contact Accessibility Support: <span className="text-white font-bold">contact@leadsnextgen.in</span>
+                Contact Accessibility Support: <span className="text-white font-bold">leads.ngc@msruas.ac.in</span>
               </div>
               <Link
                 href="/contact"

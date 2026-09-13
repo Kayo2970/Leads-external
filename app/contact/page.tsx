@@ -76,7 +76,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="font-bold text-[#1E0C3D]">Direct Email</div>
-                        <div className="text-slate-600">contact@leadsnextgen.in</div>
+                        <div className="text-slate-600">leads.ngc@msruas.ac.in</div>
                       </div>
                     </div>
 
