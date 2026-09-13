@@ -425,10 +425,10 @@ export default function AboutPage() {
                             <div style={{ position: "relative" }}>
                               <ChromaGrid
                                 items={subChromaItems}
-                                radius={675}
+                                radius={325}
                                 columns={subGroup.columns}
-                                damping={1.25}
-                                fadeOut={1.4}
+                                damping={0.45}
+                                fadeOut={0.6}
                                 ease="power3.out"
                               />
                             </div>
@@ -440,10 +440,10 @@ export default function AboutPage() {
                     <div style={{ position: "relative" }}>
                       <ChromaGrid
                         items={chromaItems}
-                        radius={675}
+                        radius={325}
                         columns={partition.columns}
-                        damping={1.25}
-                        fadeOut={1.4}
+                        damping={0.45}
+                        fadeOut={0.6}
                         ease="power3.out"
                       />
                     </div>
