@@ -92,7 +92,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  aspect-ratio: 1 / 1.08;
+  aspect-ratio: 480 / 600;
   padding: 10px;
   box-sizing: border-box;
   background: transparent;

@@ -21,8 +21,8 @@ export function generateNumberedPlaceholderSvg({
   title = "Placeholder Image",
   subtitle = "",
   category = "",
-  width = 800,
-  height = 800,
+  width = 480,
+  height = 600,
 }: {
   id: number;
   title?: string;
@@ -31,7 +31,7 @@ export function generateNumberedPlaceholderSvg({
   width?: number;
   height?: number;
 }): string {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 800 800">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 480 600">
     <defs>
       <linearGradient id="bgGrad_${id}" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#0f172a" />
@@ -44,33 +44,33 @@ export function generateNumberedPlaceholderSvg({
       </linearGradient>
     </defs>
     <rect width="100%" height="100%" fill="url(#bgGrad_${id})" />
-    <rect x="24" y="24" width="752" height="752" fill="none" stroke="rgba(222, 63, 17, 0.4)" stroke-width="4" rx="32" />
+    <rect x="16" y="16" width="448" height="568" fill="none" stroke="rgba(222, 63, 17, 0.4)" stroke-width="3" rx="24" />
     
-    <circle cx="400" cy="300" r="140" fill="#180A30" stroke="url(#brandGrad_${id})" stroke-width="8" />
+    <circle cx="240" cy="210" r="100" fill="#180A30" stroke="url(#brandGrad_${id})" stroke-width="6" />
     
-    <text x="400" y="245" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="800" font-size="26" letter-spacing="4">
+    <text x="240" y="175" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="800" font-size="20" letter-spacing="3">
       PLACEHOLDER
     </text>
-    <text x="400" y="340" text-anchor="middle" fill="url(#brandGrad_${id})" font-family="system-ui, sans-serif" font-weight="900" font-size="90">
+    <text x="240" y="240" text-anchor="middle" fill="url(#brandGrad_${id})" font-family="system-ui, sans-serif" font-weight="900" font-size="64">
       #${id}
     </text>
     
     ${
       category
-        ? `<rect x="200" y="470" width="400" height="44" rx="22" fill="rgba(222,63,17,0.2)" stroke="rgba(222,63,17,0.5)" stroke-width="2" />
-           <text x="400" y="499" text-anchor="middle" fill="#FF7A00" font-family="system-ui, sans-serif" font-weight="700" font-size="20">
+        ? `<rect x="100" y="345" width="280" height="36" rx="18" fill="rgba(222,63,17,0.2)" stroke="rgba(222,63,17,0.5)" stroke-width="1.5" />
+           <text x="240" y="369" text-anchor="middle" fill="#FF7A00" font-family="system-ui, sans-serif" font-weight="700" font-size="15">
              ${escapeXml(category)}
            </text>`
         : ""
     }
     
-    <text x="400" y="580" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="32">
+    <text x="240" y="440" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="24">
       ${escapeXml(title)}
     </text>
     
     ${
       subtitle
-        ? `<text x="400" y="630" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-weight="500" font-size="22">
+        ? `<text x="240" y="480" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-weight="500" font-size="17">
              ${escapeXml(subtitle)}
            </text>`
         : ""
