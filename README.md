@@ -43,26 +43,34 @@ Designed with an ultra-premium executive aesthetic (Deep Royal Purples `#241147`
 - **Portrait Executive Format**: Optimized `3:3.8` portrait vertical ratio cards for all patrons, faculty heads, advisors, and student council members.
 - **Verified Metadata**: Categorized role badges, designations, campus affiliations, and direct LinkedIn profile integration.
 
-### 5. 📅 Alternating Events Engine & Modal Showcase (`/events`)
-- **Chronological Alternating Grid**: Alternating layout with high-resolution event media, date/venue metadata, and attendee metrics.
-- **Rich Event Modal (`EventModal.tsx`)**: Fullscreen inspection modals with multi-photo carousels, schedule breakdowns, and registration pathways.
+### 5. 📅 Categorized Events Showcase & Interactive Modals (`/events`)
+- **SubCategory Grouping**: Events categorized across:
+  - **Institutional Ceremonies**: Centre Inauguration, Vanguard Leadership Retreat 2026, National Leadership Day & Badging Ceremony.
+  - **Outreach & Delegations**: AIMS South Zone Regional Conference, 9th State Level Seminar, New Delhi Cultural & Educational Visit, NHRD Bangalore Thought Leadership, BCIC Generative Economy Roundtable, FKCCI Global MSME Conclave, and Anvaya Innovation Summit.
+  - **Catalyst Leadership Talk Series**: Signature executive masterclasses spanning editions 3.0 through 9.0 (Structured Thinking, Strategic Negotiation, Cross-Cultural Leadership, Innovation Governance, Executive Communication, Sustainability in Leadership, Digital Transformation Strategy).
+  - **Expert Talks, Fireside Talks, Boardroom Battles & Sustainability Tracks**.
+- **Rich Event Modal (`EventModal.tsx` & `CatalystSeriesModal.tsx`)**: Modal viewer featuring high-resolution photography documentation, speaker rosters, outcomes, and attendee reach metrics.
 
-### 6. 🎓 Comprehensive Capability Programs (`/programs`)
-- **Flagship Modules**: Comprehensive review of Executive FDP (Faculty Development), LDP (Leadership Development), MDP (Management Development), Vanguard Series, and SDP (Student Development).
-- **BHARAT LEAD SUMMIT 2026**: Direct integration with India's premier annual leadership convention.
+### 6. 🎓 Capability Development Programs (`/programs`)
+- **Flagship Modules**: Comprehensive review of Executive FDP (Faculty Development / CaseCraft 5.0), LDP (Leadership Development), MDP (Management Development), Vanguard Leadership Retreat Series, Mindfulness Leadership, and SDP (Student Development).
+- **BHARAT LEAD SUMMIT 2026**: India's premier annual leadership summit integration with speaker lineup and theme tracks.
 
-### 7. 🤝 Institutional & Industry Partners (`/partners`)
-- **Multi-Tier Alliances**: Academic collaborations, corporate partners, industry apex bodies (FICCI, NHRD, AIMS), and government missions.
-- **Interactive Alliances Directory**: Filterable catalog of partner organizations with partnership scopes and verification details.
+### 7. 🤝 Institutional & Industry Alliances (`/partners`)
+- **Multi-Tier Alliances**: Academic collaborations (FMC RUAS), incubation partners (RTBI), state strategic partners (Government of Karnataka, K-TECH), apex industry bodies (FICCI, BCIC, ISTD, BMA, NHRD, AIMS, AIMA).
+- **Interactive Alliances Directory**: Filterable catalog with scope of cooperation and verification documentation.
 
-### 8. 📊 Verified Impact Publications & Interactive Reader (`/reports`)
+### 8. 📊 Verified Impact Publications & Interactive PDF Reader (`/reports`)
 - **Official Annual Impact Report**: Showcases the verified **`LEADS Impact Report 2025–2026`** (12.4 MB PDF).
 - **Interactive Central Reader**: Embedded live PDF reader with fullscreen modal inspection, page jump, and direct verified downloads.
 
 ### 9. 🔐 LEADS Member ERP Gateway (`/portal`)
 - **Internal System Hub**: Access point for executive council members, event managers, attendance registers, and resource vaults.
 
-### 10. 🚀 Performance, Accessibility & SEO
+### 10. 📸 Photo & Visual Documentation System
+- **Real Event Media**: All recent events backed by high-resolution photographic documentation located in `public/images/gallery/` and `public/events/`.
+- **Numbered Placeholder Registry**: Systematic placeholder indexing (`PHOTO_PLACEHOLDERS_DIRECTORY.md` and `PLACEHOLDER_INDEX.md`) covering IDs `#1` through `#89`.
+
+### 11. 🚀 Performance, Accessibility & SEO
 - **Automated Sitemap & Robots**: Generated dynamically via `app/sitemap.ts` and `app/robots.ts`.
 - **4K Ultra-Wide Screen Optimization**: Dedicated layout utilities up to `4xl` breakpoints (3840px) to prevent empty margins on ultra-wide displays.
 - **Full Legal Compliance**: Integrated Cookie Consent Banner, Privacy Policy, Terms of Service, and Accessibility Statement.
@@ -77,7 +85,7 @@ Leads-external/
 │   ├── layout.tsx              # Root layout with fonts, metadata, navbar, and footer
 │   ├── page.tsx                # Home page with hero, values, pillars & flagships
 │   ├── about/page.tsx          # Vision, mission, organogram & leadership directory
-│   ├── events/page.tsx         # Chronological events showcase & modal triggers
+│   ├── events/page.tsx         # Categorized events showcase & modal triggers
 │   ├── programs/page.tsx       # Capability programs (FDP, LDP, MDP, Vanguard, SDP)
 │   ├── partners/page.tsx       # Academic, industry & government alliances directory
 │   ├── reports/page.tsx        # Official annual impact report & interactive reader
@@ -96,23 +104,28 @@ Leads-external/
 │   ├── OrganogramChart.tsx     # Multi-tier interactive governance tree
 │   ├── ChromaGrid.tsx          # Cursor-tracking spotlight member directory
 │   ├── BoardMemberCard.tsx     # Executive portrait profile card
-│   ├── EventCard.tsx           # Alternating event showcase card
+│   ├── EventCard.tsx           # Categorized event showcase card
 │   ├── EventModal.tsx          # Rich modal viewer for event details and media
+│   ├── CatalystSeriesModal.tsx # Dedicated master modal for Catalyst 3.0-9.0 editions
 │   ├── ReportCard.tsx          # Verified publication highlight card
 │   ├── PdfViewerModal.tsx      # Fullscreen interactive PDF viewer modal
 │   ├── CookieBanner.tsx        # GDPR/India compliance cookie banner
 │   └── BorderGlow.tsx          # Hardware-accelerated glowing gradient borders
 ├── lib/
 │   ├── board-data.ts           # Complete leadership and governance registry
-│   ├── events-data.ts          # Summits, masterclasses, and workshop archives
+│   ├── events-data.ts          # Institutional, outreach & series event archives
 │   ├── reports-data.ts         # Verified impact report catalog
-│   └── placeholders.ts         # Numbered visual placeholder system
+│   └── placeholders.ts         # Numbered visual placeholder system (#1 - #89)
 ├── public/
 │   ├── leads-short-logo.png    # LEADS insignia logo
 │   ├── ruas-logo.png           # Ramaiah University official seal
 │   ├── bls-logo.webp           # BHARAT LEAD SUMMIT 2026 emblem
+│   ├── events/                 # High-resolution raw event photographic assets
+│   ├── images/gallery/         # Optimized event showcase and documentation images
 │   ├── reports/                # Official verified PDF publications
 │   └── images/                 # Committee portraits, summits, and campus assets
+├── PHOTO_PLACEHOLDERS_DIRECTORY.md # Complete reference of all visual slots & asset mappings
+├── PLACEHOLDER_INDEX.md        # Numbered placeholder quick-reference registry
 ├── tailwind.config.js          # Extended brand colors, shadows, and breakpoints
 └── package.json                # Project dependencies and build scripts
 ```
@@ -155,7 +168,7 @@ Leads-external/
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3001](http://localhost:3001) in your browser.
+   Open [http://localhost:3000](http://localhost:3000) (or [http://localhost:3001](http://localhost:3001)) in your browser.
 
 4. **Build production bundle**:
    ```bash
