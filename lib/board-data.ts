@@ -616,18 +616,6 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
     linkedin: "https://www.linkedin.com/in/prasadmanoj",
   },
   {
-    id: "govind-kadambi",
-    placeholderId: 44,
-    name: "Prof. Govind R. Kadambi",
-    role: "Governing Advisory Board",
-    designation: "Pro Vice Chancellor (Research), RUAS",
-    roleGroup: "Governing & Advisory",
-    initials: "GK",
-    image: "/images/advisors/govind-kadambi.webp",
-    affiliation: "M. S. Ramaiah University of Applied Sciences",
-    linkedin: "https://www.linkedin.com/in/govind-kadambi-64106a141",
-  },
-  {
     id: "suchit-ahuja",
     placeholderId: 45,
     name: "Dr. Suchit Ahuja",
