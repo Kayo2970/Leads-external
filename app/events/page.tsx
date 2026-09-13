@@ -19,8 +19,6 @@ import {
   Award,
   Zap,
   CheckCircle,
-  ChevronDown,
-  ChevronUp,
 } from "lucide-react";
 
 interface CategoryGroup {
@@ -78,17 +76,6 @@ function EventsContent() {
   const searchParams = useSearchParams();
   const targetCategory = searchParams.get("category");
 
-  // Accordion open/close state for each group (all open by default)
-  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
-    "Institutional Ceremonies": true,
-    "Outreach": true,
-    "Catalyst Leadership Talk Series": true,
-    "Expert Talks": true,
-    "Fireside Talks": true,
-    "Boardroom Battles": true,
-    "Sustainability": true,
-  });
-
   const [selectedEvent, setSelectedEvent] = useState<LEADSEvent | null>(null);
 
   // Catalyst Series Popup Modal State
@@ -97,10 +84,6 @@ function EventsContent() {
 
   useEffect(() => {
     if (targetCategory && CATEGORY_GROUPS.some((g) => g.name === targetCategory)) {
-      setExpandedGroups((prev) => ({
-        ...prev,
-        [targetCategory]: true,
-      }));
       const elId = targetCategory.toLowerCase().replace(/[^a-z0-9]+/g, "-");
       setTimeout(() => {
         const el = document.getElementById(elId);
@@ -110,13 +93,6 @@ function EventsContent() {
       }, 150);
     }
   }, [targetCategory]);
-
-  const toggleGroup = (groupName: string) => {
-    setExpandedGroups((prev) => ({
-      ...prev,
-      [groupName]: !prev[groupName],
-    }));
-  };
 
   return (
     <div className="relative min-h-screen bg-[#FDFBFF]">
@@ -159,15 +135,13 @@ function EventsContent() {
         </div>
       </section>
 
-      {/* SECTION 2 [WHITE]: GROUPED CATEGORIES & EXPANDABLE ACCORDIONS */}
+      {/* SECTION 2 [WHITE]: GROUPED CATEGORIES & EVENT CARDS */}
       <section className="py-16 sm:py-24 bg-[#FDFBFF] text-[#1E0C3D]">
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 space-y-16">
           
           {CATEGORY_GROUPS.map((group) => {
             const groupEvents = EVENTS_DATA.filter((e) => e.subCategory === group.name);
             if (groupEvents.length === 0) return null;
-
-            const isExpanded = expandedGroups[group.name] ?? true;
 
             return (
               <div
@@ -176,10 +150,7 @@ function EventsContent() {
                 className="scroll-mt-36 rounded-3xl bg-white border border-purple-200 shadow-xl overflow-hidden transition-all duration-300"
               >
                 {/* GROUP MAIN HEADER BAR */}
-                <div
-                  onClick={() => toggleGroup(group.name)}
-                  className="cursor-pointer p-6 sm:p-8 bg-gradient-to-r from-purple-50 via-white to-orange-50/40 border-b border-purple-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group/header hover:bg-purple-100/50 transition-colors"
-                >
+                <div className="p-6 sm:p-8 bg-gradient-to-r from-purple-50 via-white to-orange-50/40 border-b border-purple-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="space-y-1">
                     <div className="flex items-center space-x-3">
                       <span className="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs">
@@ -191,32 +162,17 @@ function EventsContent() {
                           : `${groupEvents.length} ${groupEvents.length === 1 ? "Event Edition" : "Editions Grouped"}`}
                       </span>
                     </div>
-                    <h2 className="text-2xl sm:text-3xl 3xl:text-4xl font-black text-[#1E0C3D] group-hover/header:text-[#DE3F11] transition-colors mt-1">
+                    <h2 className="text-2xl sm:text-3xl 3xl:text-4xl font-black text-[#1E0C3D] mt-1">
                       {group.name}
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-600 max-w-3xl leading-relaxed">
                       {group.description}
                     </p>
                   </div>
-
-                  <div className="flex items-center space-x-3 shrink-0">
-                    <button
-                      type="button"
-                      className="px-4 py-2 rounded-xl text-xs font-bold bg-white border border-purple-200 text-[#1E0C3D] group-hover/header:border-[#DE3F11] transition-colors flex items-center space-x-2 shadow-xs"
-                    >
-                      <span>{isExpanded ? "Collapse Group" : "Expand Group"}</span>
-                      {isExpanded ? (
-                        <ChevronUp className="w-4 h-4 text-[#DE3F11]" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4 text-[#9C1256]" />
-                      )}
-                    </button>
-                  </div>
                 </div>
 
-                {/* SUB-ITEMS LIST (VISIBLE WHEN EXPANDED) */}
-                {isExpanded && (
-                  <div className="p-6 sm:p-10 space-y-12 bg-[#FDFBFF]">
+                {/* SUB-ITEMS LIST (ALWAYS EXPANDED) */}
+                <div className="p-6 sm:p-10 space-y-12 bg-[#FDFBFF]">
                     {group.name === "Catalyst Leadership Talk Series" ? (
                       /* SINGLE SERIES MASTER CARD FOR CATALYST TALK SERIES */
                       <div className="bg-[#180A30] text-white rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl relative overflow-hidden">
@@ -458,7 +414,6 @@ function EventsContent() {
                       })
                     )}
                   </div>
-                )}
               </div>
             );
           })}
