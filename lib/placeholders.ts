@@ -120,7 +120,7 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 35, title: "Mr. Ramanan Ramanathan", subtitle: "Governing Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
   { id: 36, title: "Mr. Rishikesh Patankar", subtitle: "Governing Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
   { id: 37, title: "Mr. Balakrishnan I", subtitle: "Governing Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
-  { id: 38, title: "Mr. Anisshh Somani", subtitle: "Governing Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
+  { id: 38, title: "Mr. Anish Somani", subtitle: "Governing Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
   { id: 39, title: "Mr. Vidur Dewan", subtitle: "Corporate Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
   { id: 40, title: "Dr. Praveen Kamath Kumbla", subtitle: "Corporate Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
 

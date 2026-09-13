@@ -49,7 +49,7 @@ Every image and image slot across the website now features a **unique, high-visi
 | **`#35`** | **Mr. Ramanan Ramanathan** | Governing Advisory Board | Governing & Advisory | `BoardMemberCard` |
 | **`#36`** | **Mr. Rishikesh Patankar** | Governing Advisory Board | Governing & Advisory | `BoardMemberCard` |
 | **`#37`** | **Mr. Balakrishnan I** | Governing Advisory Board | Governing & Advisory | `BoardMemberCard` |
-| **`#38`** | **Mr. Anisshh Somani** | Governing Advisory Board | Governing & Advisory | `BoardMemberCard` |
+| **`#38`** | **Mr. Anish Somani** | Governing Advisory Board | Governing & Advisory | `BoardMemberCard` |
 | **`#39`** | **Mr. Vidur Dewan** | Corporate Advisory Board | Governing & Advisory | `BoardMemberCard` |
 | **`#40`** | **Dr. Praveen Kamath Kumbla** | Corporate Advisory Board | Governing & Advisory | `BoardMemberCard` |
 
