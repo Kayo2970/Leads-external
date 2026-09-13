@@ -47,7 +47,7 @@ export default function AboutPage() {
       id: "centers-leadership",
       group: "Centers Leadership" as const,
       title: "Centers Leadership",
-      badge: "Governance Tier 01",
+      badge: "Centers Leadership",
       count: `${centersLeadershipMembers.length} Leaders`,
       description:
         "High-level institutional patronage, executive deanship, centre leadership, and faculty leads guiding daily operations, incubation programs, and fiscal governance.",
@@ -58,7 +58,7 @@ export default function AboutPage() {
       id: "governing-advisory",
       group: "Governing & Advisory" as const,
       title: "Governing & Corporate Advisory Board",
-      badge: "Governance Tier 02",
+      badge: "Governing & Advisory",
       count: `${governingAdvisoryMembers.length} Distinguished Advisors`,
       description:
         "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
@@ -69,7 +69,7 @@ export default function AboutPage() {
       id: "alumni-student-council",
       group: "Alumni Student Council" as const,
       title: "Alumni Student Council",
-      badge: "Governance Tier 03",
+      badge: "Alumni Student Council",
       count: `${alumniCouncilMembers.length} Officers`,
       description:
         "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
@@ -80,7 +80,7 @@ export default function AboutPage() {
       id: "core-committee",
       group: "Core Committee" as const,
       title: "Core Committee",
-      badge: "Governance Tier 04",
+      badge: "Core Committee",
       count: `${coreCommitteeMembers.length} Members`,
       description:
         "The operational leadership team managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
@@ -91,7 +91,7 @@ export default function AboutPage() {
       id: "trainee-associates",
       group: "Student Trainee Associates" as const,
       title: "Trainee Associates",
-      badge: "Governance Tier 05",
+      badge: "Trainee Associates",
       count: `${traineeAssociateMembers.length} Associates`,
       description:
         "Junior associate student trainees developing core non-technical leadership, operational, and project execution capabilities.",
@@ -318,7 +318,7 @@ export default function AboutPage() {
         <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
           <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-10 3xl:mb-16">
             <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
-              Members Directory & Governance Tiers
+              Members Directory
             </div>
             <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
               Leadership, Committees & Advisory Board
