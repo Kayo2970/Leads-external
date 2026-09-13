@@ -271,7 +271,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3 [PURPLE]: ORGANOGRAM / STRUCTURE CHART */}
-      <section className="py-24 3xl:py-36 bg-[#241147] text-white">
+      <section className="py-10 sm:py-24 3xl:py-36 bg-[#241147] text-white">
         <AnimatedContent
           distance={130}
           direction="vertical"
@@ -282,15 +282,15 @@ export default function AboutPage() {
           scale={1.05}
           threshold={0.2}
         >
-          <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
-            <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-16 3xl:mb-24">
-              <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-2">
+          <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-2 sm:px-6 lg:px-8 3xl:px-12">
+            <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-6 sm:mb-16 3xl:mb-24">
+              <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#DE3F11] mb-1 sm:mb-2">
                 Organizational Hierarchy
               </div>
-              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
+              <h2 className="text-2xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-white">
                 Institutional Governance Structure
               </h2>
-              <p className="text-sm 2xl:text-base 3xl:text-xl text-[#E2D9F3] mt-2">
+              <p className="text-xs sm:text-base 3xl:text-xl text-[#E2D9F3] mt-1.5 sm:mt-2">
                 Comprehensive structural organogram representing the executive leadership, faculty leads, and student council governance at LEADS Next-Gen Centre.
               </p>
             </div>
