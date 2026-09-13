@@ -843,7 +843,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "case-cracker-nmc",
     placeholderId: 72,
-    name: "Case Cracker 1.0 – NMC Healthcare's Billion-Dollar Secret",
+    name: "Case Cracker  NMC Healthcare’s Billion-Dollar Secret",
     seriesName: "Case Cracker Series",
     category: "Expert Talk",
     subCategory: "Expert Talks",
@@ -853,8 +853,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "67 Students • 5 Faculty Benefited",
     badgeColor: "bg-emerald-100 text-emerald-900 border-emerald-200",
     logoSvg: "file-text",
-    photo: "/images/gallery/g4.webp",
-    gallery: ["/images/gallery/g4.webp"],
+    photo: "/images/gallery/case-cracker-nmc.webp",
+    gallery: ["/images/gallery/case-cracker-nmc.webp"],
     featured: false,
     description: "Co-hosted with FMC, 'Case Cracker 1.0' conducted an intensive forensic investigation into NMC Healthcare's $6.6 billion concealed debt collapse. Students evaluated dual-ledger accounting frauds, external auditing failures, and corporate governance red flags, learning Alvarez & Marsal turnaround methodologies and the imperative of independent internal controls.",
     seriesHighlights: [
