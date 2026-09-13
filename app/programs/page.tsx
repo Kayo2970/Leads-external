@@ -21,6 +21,7 @@ import {
   MapPin,
   Clock,
   ExternalLink,
+  Camera,
 } from "lucide-react";
 
 export interface ProgramItem {
@@ -505,79 +506,81 @@ function ProgramsContent() {
                         id={program.id}
                         className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md hover:border-[#DE3F11]/40 hover:shadow-xl transition-all duration-300"
                       >
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                           {/* TEXT COLUMN */}
                           <div
-                            className={`lg:col-span-6 space-y-5 ${
+                            className={`lg:col-span-6 space-y-5 flex flex-col justify-between ${
                               isContentLeft ? "lg:order-1" : "lg:order-2"
                             }`}
                           >
-                            <div className="space-y-1.5">
-                              <div className="flex flex-wrap items-center gap-2">
-                                <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
-                                  {program.badge}
-                                </span>
-                                <span className="text-xs font-bold text-slate-500">
-                                  {program.category}
-                                </span>
+                            <div className="space-y-4">
+                              <div className="space-y-1.5">
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
+                                    {program.badge}
+                                  </span>
+                                  <span className="text-xs font-bold text-slate-500">
+                                    {program.category}
+                                  </span>
+                                </div>
+
+                                <h3 className="text-xl sm:text-3xl font-extrabold text-[#1E0C3D] leading-tight">
+                                  {program.title}
+                                </h3>
+
+                                <p className="text-xs sm:text-sm font-semibold text-[#DE3F11]">
+                                  {program.subtitle}
+                                </p>
                               </div>
 
-                              <h3 className="text-xl sm:text-3xl font-extrabold text-[#1E0C3D] leading-tight">
-                                {program.title}
-                              </h3>
-
-                              <p className="text-xs sm:text-sm font-semibold text-[#DE3F11]">
-                                {program.subtitle}
+                              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                {program.description}
                               </p>
-                            </div>
 
-                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                              {program.description}
-                            </p>
-
-                            {/* Metadata Box */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
-                              <div>
-                                <div className="text-[10px] uppercase font-bold text-slate-400">
-                                  Format & Duration
+                              {/* Metadata Box */}
+                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
+                                <div>
+                                  <div className="text-[10px] uppercase font-bold text-slate-400">
+                                    Format & Duration
+                                  </div>
+                                  <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
+                                    {program.duration}
+                                  </div>
                                 </div>
-                                <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
-                                  {program.duration}
+
+                                <div>
+                                  <div className="text-[10px] uppercase font-bold text-slate-400">
+                                    Venue / Location
+                                  </div>
+                                  <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
+                                    {program.location}
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <div className="text-[10px] uppercase font-bold text-slate-400">
+                                    Target Cohort
+                                  </div>
+                                  <div className="font-bold text-[#9C1256] mt-0.5 truncate">
+                                    {program.audience}
+                                  </div>
                                 </div>
                               </div>
 
-                              <div>
-                                <div className="text-[10px] uppercase font-bold text-slate-400">
-                                  Venue / Location
+                              {/* Highlights Bullet List */}
+                              <div className="space-y-2">
+                                <div className="text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
+                                  Core Pillars & Key Deliverables
                                 </div>
-                                <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
-                                  {program.location}
-                                </div>
+                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
+                                  {program.highlights.map((hl, hlIdx) => (
+                                    <li key={hlIdx} className="flex items-start space-x-2">
+                                      <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
+                                      <span>{hl}</span>
+                                    </li>
+                                  ))}
+                                </ul>
                               </div>
-
-                              <div>
-                                <div className="text-[10px] uppercase font-bold text-slate-400">
-                                  Target Cohort
-                                </div>
-                                <div className="font-bold text-[#9C1256] mt-0.5 truncate">
-                                  {program.audience}
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Highlights Bullet List */}
-                            <div className="space-y-2">
-                              <div className="text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
-                                Core Pillars & Key Deliverables
-                              </div>
-                              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
-                                {program.highlights.map((hl, hlIdx) => (
-                                  <li key={hlIdx} className="flex items-start space-x-2">
-                                    <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
-                                    <span>{hl}</span>
-                                  </li>
-                                ))}
-                              </ul>
                             </div>
 
                             {/* CTA Action Buttons */}
@@ -605,15 +608,15 @@ function ProgramsContent() {
                             </div>
                           </div>
 
-                          {/* PHOTO COLUMN */}
+                          {/* PHOTO COLUMN (EXPANDED TO FULL HEIGHT) */}
                           <div
-                            className={`lg:col-span-6 space-y-3 ${
+                            className={`lg:col-span-6 flex flex-col h-full min-h-[380px] sm:min-h-[440px] lg:min-h-full ${
                               isContentLeft ? "lg:order-2" : "lg:order-1"
                             }`}
                           >
                             <div
                               onClick={() => setSelectedProgram(program)}
-                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img aspect-[4/3] bg-purple-50"
+                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img w-full h-full flex-1 min-h-[380px] sm:min-h-[440px] lg:min-h-full bg-[#180A30]"
                             >
                               <img
                                 src={program.photo}
@@ -621,8 +624,14 @@ function ProgramsContent() {
                                   (e.target as HTMLImageElement).src = mainFallback;
                                 }}
                                 alt={program.title}
-                                className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                                className="w-full h-full min-h-[380px] sm:min-h-[440px] lg:min-h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
                               />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                                <span className="text-xs font-bold text-white bg-gradient-to-r from-[#9C1256] to-[#DE3F11] px-3.5 py-1.5 rounded-lg shadow-lg backdrop-blur-xs flex items-center gap-1.5 border border-white/20">
+                                  <Camera className="w-3.5 h-3.5" />
+                                  <span>View Program Visuals & Syllabus</span>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>

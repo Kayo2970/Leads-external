@@ -178,71 +178,73 @@ function EventsContent() {
                       <div className="bg-[#180A30] text-white rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#9C1256]/30 to-[#DE3F11]/20 rounded-full blur-3xl pointer-events-none" />
 
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative z-10">
                           {/* LEFT COLUMN: SERIES INFO & PREVIEW */}
-                          <div className="lg:col-span-7 space-y-5">
-                            <div className="flex flex-wrap items-center gap-2">
-                              <span className="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white border border-[#DE3F11]/40 shadow-xs flex items-center gap-1.5">
-                                <Zap className="w-3.5 h-3.5" />
-                                <span>Masterclass Series Archive</span>
-                              </span>
-                              <span className="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-white border border-white/20">
-                                7 Active Editions (3.0 – 9.0) • 1,700+ Student Delegates
-                              </span>
-                            </div>
-
-                            <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
-                              Catalyst Insights Leadership Talk Series
-                            </h3>
-
-                            <p className="text-xs sm:text-sm font-semibold text-[#FF8C61]">
-                              "Executive Masterclasses in Non-Technical Acumen, Ethical Governance & Attitude Development"
-                            </p>
-
-                            <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl">
-                              Our signature executive masterclass and leadership talk series designed to build core non-technical business acumen, ethical governance, personal branding, digital adaptability, and attitude development across 7+ active editions.
-                            </p>
-
-                            {/* HIGHLIGHTS PREVIEW OF ACTIVE EDITIONS */}
-                            <div className="space-y-2 pt-2">
-                              <div className="text-[11px] font-extrabold uppercase tracking-wider text-[#DE3F11] flex items-center gap-1">
-                                <Sparkles className="w-3.5 h-3.5" />
-                                <span>Featured Series Editions (Click below to explore all details)</span>
+                          <div className="lg:col-span-7 space-y-5 flex flex-col justify-between">
+                            <div className="space-y-4">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white border border-[#DE3F11]/40 shadow-xs flex items-center gap-1.5">
+                                  <Zap className="w-3.5 h-3.5" />
+                                  <span>Masterclass Series Archive</span>
+                                </span>
+                                <span className="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-white border border-white/20">
+                                  7 Active Editions (3.0 – 9.0) • 1,700+ Student Delegates
+                                </span>
                               </div>
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-white/90 font-medium">
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 3.0:</strong> Structured Thinking</span>
-                                  <span className="text-[10px] text-white/50">2025</span>
+
+                              <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+                                Catalyst Insights Leadership Talk Series
+                              </h3>
+
+                              <p className="text-xs sm:text-sm font-semibold text-[#FF8C61]">
+                                "Executive Masterclasses in Non-Technical Acumen, Ethical Governance & Attitude Development"
+                              </p>
+
+                              <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl">
+                                Our signature executive masterclass and leadership talk series designed to build core non-technical business acumen, ethical governance, personal branding, digital adaptability, and attitude development across 7+ active editions.
+                              </p>
+
+                              {/* HIGHLIGHTS PREVIEW OF ACTIVE EDITIONS */}
+                              <div className="space-y-2 pt-2">
+                                <div className="text-[11px] font-extrabold uppercase tracking-wider text-[#DE3F11] flex items-center gap-1">
+                                  <Sparkles className="w-3.5 h-3.5" />
+                                  <span>Featured Series Editions (Click below to explore all details)</span>
                                 </div>
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 4.0:</strong> Personal Branding</span>
-                                  <span className="text-[10px] text-white/50">2025</span>
-                                </div>
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 5.0:</strong> Attitude Dev. (Mr. Hemanth)</span>
-                                  <span className="text-[10px] text-white/50">2025</span>
-                                </div>
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 6.0:</strong> Digital Leadership</span>
-                                  <span className="text-[10px] text-white/50">2025</span>
-                                </div>
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 7.0:</strong> Tech Management (IEEE)</span>
-                                  <span className="text-[10px] text-white/50">2025</span>
-                                </div>
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 8.0:</strong> Sustainable Models & ESG</span>
-                                  <span className="text-[10px] text-white/50">2025</span>
-                                </div>
-                                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between col-span-1 sm:col-span-2">
-                                  <span><strong className="text-[#DE3F11]">Catalyst 9.0:</strong> Startup Leadership & VC Pitching</span>
-                                  <span className="text-[10px] text-white/50">2026</span>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-white/90 font-medium">
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 3.0:</strong> Structured Thinking</span>
+                                    <span className="text-[10px] text-white/50">2025</span>
+                                  </div>
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 4.0:</strong> Personal Branding</span>
+                                    <span className="text-[10px] text-white/50">2025</span>
+                                  </div>
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 5.0:</strong> Attitude Dev. (Mr. Hemanth)</span>
+                                    <span className="text-[10px] text-white/50">2025</span>
+                                  </div>
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 6.0:</strong> Digital Leadership</span>
+                                    <span className="text-[10px] text-white/50">2025</span>
+                                  </div>
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 7.0:</strong> Tech Management (IEEE)</span>
+                                    <span className="text-[10px] text-white/50">2025</span>
+                                  </div>
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 8.0:</strong> Sustainable Models & ESG</span>
+                                    <span className="text-[10px] text-white/50">2025</span>
+                                  </div>
+                                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 truncate flex items-center justify-between col-span-1 sm:col-span-2">
+                                    <span><strong className="text-[#DE3F11]">Catalyst 9.0:</strong> Startup Leadership & VC Pitching</span>
+                                    <span className="text-[10px] text-white/50">2026</span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
 
                             {/* CTA BUTTON */}
-                            <div className="pt-3">
+                            <div className="pt-4">
                               <button
                                 type="button"
                                 onClick={() => {
@@ -258,18 +260,18 @@ function EventsContent() {
                           </div>
 
                           {/* RIGHT COLUMN: VISUAL COVER IMAGE */}
-                          <div className="lg:col-span-5 relative">
+                          <div className="lg:col-span-5 relative flex flex-col h-full min-h-[360px] sm:min-h-[420px] lg:min-h-full">
                             <div
                               onClick={() => {
                                 setSelectedCatalystEditionId(null);
                                 setIsCatalystModalOpen(true);
                               }}
-                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] aspect-[4/3]"
+                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full h-full min-h-[360px] sm:min-h-[420px] lg:min-h-full flex-1"
                             >
                               <img
                                 src="/images/gallery/g8.webp"
                                 alt="Catalyst Leadership Talk Series"
-                                className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                                className="w-full h-full min-h-[360px] sm:min-h-[420px] lg:min-h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-80" />
                               <div className="absolute bottom-4 left-4 right-4 text-white p-2">
@@ -300,83 +302,85 @@ function EventsContent() {
                             id={event.id}
                             className="bg-white rounded-2xl p-6 sm:p-8 border border-purple-200 shadow-md hover:border-[#DE3F11]/40 hover:shadow-xl transition-all duration-300"
                           >
-                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                               {/* TEXT COLUMN */}
                               <div
-                                className={`lg:col-span-6 space-y-5 ${
+                                className={`lg:col-span-6 space-y-5 flex flex-col justify-between ${
                                   isContentLeft ? "lg:order-1" : "lg:order-2"
                                 }`}
                               >
-                                <div className="space-y-1.5">
-                                  <div className="flex flex-wrap items-center gap-2">
-                                    <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
-                                      {event.subCategory}
-                                    </span>
-                                    <span className="text-xs font-bold text-slate-500">
-                                      {event.seriesName}
-                                    </span>
+                                <div className="space-y-4">
+                                  <div className="space-y-1.5">
+                                    <div className="flex flex-wrap items-center gap-2">
+                                      <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
+                                        {event.subCategory}
+                                      </span>
+                                      <span className="text-xs font-bold text-slate-500">
+                                        {event.seriesName}
+                                      </span>
+                                    </div>
+
+                                    <h3 className="text-xl sm:text-3xl font-extrabold text-[#1E0C3D] leading-tight">
+                                      {event.name}
+                                    </h3>
+
+                                    <p className="text-xs sm:text-sm font-semibold text-[#DE3F11]">
+                                      {event.tagline}
+                                    </p>
                                   </div>
 
-                                  <h3 className="text-xl sm:text-3xl font-extrabold text-[#1E0C3D] leading-tight">
-                                    {event.name}
-                                  </h3>
-
-                                  <p className="text-xs sm:text-sm font-semibold text-[#DE3F11]">
-                                    {event.tagline}
+                                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    {event.description}
                                   </p>
-                                </div>
 
-                                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                  {event.description}
-                                </p>
-
-                                {/* Metadata Box */}
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
-                                  <div>
-                                    <div className="text-[10px] uppercase font-bold text-slate-400">
-                                      Date & Schedule
+                                  {/* Metadata Box */}
+                                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
+                                    <div>
+                                      <div className="text-[10px] uppercase font-bold text-slate-400">
+                                        Date & Schedule
+                                      </div>
+                                      <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
+                                        {event.date}
+                                      </div>
                                     </div>
-                                    <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
-                                      {event.date}
+
+                                    <div>
+                                      <div className="text-[10px] uppercase font-bold text-slate-400">
+                                        Venue / Location
+                                      </div>
+                                      <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
+                                        {event.location}
+                                      </div>
+                                    </div>
+
+                                    <div>
+                                      <div className="text-[10px] uppercase font-bold text-slate-400">
+                                        Reach & Scale
+                                      </div>
+                                      <div className="font-bold text-[#9C1256] mt-0.5 truncate">
+                                        {event.attendees}
+                                      </div>
                                     </div>
                                   </div>
 
-                                  <div>
-                                    <div className="text-[10px] uppercase font-bold text-slate-400">
-                                      Venue / Location
+                                  {/* Highlights Bullet List */}
+                                  <div className="space-y-2">
+                                    <div className="text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
+                                      Core Highlights & Outcomes
                                     </div>
-                                    <div className="font-bold text-[#1E0C3D] mt-0.5 truncate">
-                                      {event.location}
-                                    </div>
+                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
+                                      {event.seriesHighlights.map((hl, hlIdx) => (
+                                        <li key={hlIdx} className="flex items-start space-x-2">
+                                          <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
+                                          <span>{hl}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
                                   </div>
-
-                                  <div>
-                                    <div className="text-[10px] uppercase font-bold text-slate-400">
-                                      Reach & Scale
-                                    </div>
-                                    <div className="font-bold text-[#9C1256] mt-0.5 truncate">
-                                      {event.attendees}
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {/* Highlights Bullet List */}
-                                <div className="space-y-2">
-                                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
-                                    Core Highlights & Outcomes
-                                  </div>
-                                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
-                                    {event.seriesHighlights.map((hl, hlIdx) => (
-                                      <li key={hlIdx} className="flex items-start space-x-2">
-                                        <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
-                                        <span>{hl}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
                                 </div>
 
                                 {/* CTA Button */}
-                                <div className="pt-1">
+                                <div className="pt-2">
                                   <button
                                     type="button"
                                     onClick={() => setSelectedEvent(event)}
@@ -388,15 +392,15 @@ function EventsContent() {
                                 </div>
                               </div>
 
-                              {/* PHOTO COLUMN */}
+                              {/* PHOTO COLUMN (EXPANDED TO FULL HEIGHT) */}
                               <div
-                                className={`lg:col-span-6 space-y-3 ${
+                                className={`lg:col-span-6 flex flex-col h-full min-h-[380px] sm:min-h-[460px] lg:min-h-full ${
                                   isContentLeft ? "lg:order-2" : "lg:order-1"
                                 }`}
                               >
                                 <div
                                   onClick={() => setSelectedEvent(event)}
-                                  className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img"
+                                  className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img w-full h-full flex-1 min-h-[380px] sm:min-h-[460px] lg:min-h-full bg-[#180A30]"
                                 >
                                   <img
                                     src={event.photo}
@@ -404,8 +408,19 @@ function EventsContent() {
                                       (e.target as HTMLImageElement).src = mainFallback;
                                     }}
                                     alt={event.name}
-                                    className="w-full h-64 sm:h-80 object-cover group-hover/img:scale-105 transition-transform duration-500"
+                                    className="w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
                                   />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                                    <div className="flex items-center justify-between w-full">
+                                      <span className="text-xs font-bold text-white bg-gradient-to-r from-[#9C1256] to-[#DE3F11] px-3.5 py-1.5 rounded-lg shadow-lg backdrop-blur-xs flex items-center gap-1.5 border border-white/20">
+                                        <Camera className="w-3.5 h-3.5" />
+                                        <span>View High-Res Event Gallery</span>
+                                      </span>
+                                      <span className="text-xs font-semibold text-white/90 bg-black/60 px-2.5 py-1 rounded-md border border-white/20">
+                                        {event.gallery?.length || 1} Photos
+                                      </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
