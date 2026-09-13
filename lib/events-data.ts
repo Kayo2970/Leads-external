@@ -93,8 +93,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "25 Students • 5 Faculty Benefited",
     badgeColor: "bg-amber-100 text-amber-900 border-amber-200",
     logoSvg: "award",
-    photo: "/images/gallery/vanguard-leadership-retreat-2026.png",
-    gallery: ["/images/gallery/vanguard-leadership-retreat-2026.png", "/images/gallery/g1.webp", "/images/gallery/g2.webp"],
+    photo: "/events/vangard.jpg",
+    gallery: ["/events/vangard.jpg", "/images/gallery/g1.webp", "/images/gallery/g2.webp"],
     featured: true,
     description: "The Vanguard Leadership Retreat 2026 at RR Retreat brought student council leaders together for an intensive experiential development day. Through applied team-building challenges and conflict-resolution exercises, participants honed collaboration and crisis management skills. Guided reflective sessions enabled student leaders to articulate personal ethical commitments and core goals, while adventure activities deepened trust and mutual camaraderie for high-impact governance.",
     seriesHighlights: [

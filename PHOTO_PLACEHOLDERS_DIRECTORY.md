@@ -104,7 +104,7 @@
 | **ph55** | Annual Impact Meet 2025 (Transformation) | Event Edition | `/events` | `EventModal` | `/images/gallery/ph55.jpg` | `lib/events-data.ts` |
 | **ph56** | LEADS Outreach Activities | Outreach Initiatives | `/events` | `EventCard` | `/images/gallery/g12.webp` | `lib/events-data.ts` |
 | **ph58** | **LEADS Next Gen Centre – Inauguration** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/ph58.jpg` | `lib/events-data.ts` (`leads-inaugural-function`) |
-| **ph59** | **Vanguard Leadership Retreat 2026** | **Institutional Ceremonies / Programs** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/vanguard-leadership-retreat-2026.png` | `lib/events-data.ts` (`vanguard-leadership-retreat`) |
+| **ph59** | **Vanguard Leadership Retreat 2026** | **Institutional Ceremonies / Programs** | `/events` / `/programs` | `EventCard` / `EventModal` | `/events/vangard.jpg` | `lib/events-data.ts` (`vanguard-leadership-retreat`) |
 | **ph60** | **National Leadership Day – Badging Ceremony** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/national-leadership-day-badging.png` | `lib/events-data.ts` (`national-leadership-day-badging`) |
 | **ph61** | **AIMS South Zone Regional Conference 2025** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/aims-south-zone-conference-2025.png` | `lib/events-data.ts` (`aims-south-region-conference-2025`) |
 | **ph62** | **9th State Level Seminar** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/9th-state-level-seminar.png` | `lib/events-data.ts` (`9th-state-level-seminar`) |
@@ -120,7 +120,7 @@
 |:---|:---|:---|:---|:---|:---|
 | **ph57** | Event Gallery Photo 1 | Catalyst Workshop | `/events` | `GalleryGrid` | `/images/gallery/g1.webp` |
 | **ph58** | **Event Gallery Photo 2** | **Inaugural Plenary & Launch** | `/events` | `GalleryGrid` | `/images/gallery/ph58.jpg` *(Updated)* |
-| **ph59** | **Event Gallery Photo 3** | **Vanguard Leadership Retreat 2026** | `/events` | `GalleryGrid` | `/images/gallery/vanguard-leadership-retreat-2026.png` *(Updated)* |
+| **ph59** | **Event Gallery Photo 3** | **Vanguard Leadership Retreat 2026** | `/events` | `GalleryGrid` | `/events/vangard.jpg` *(Updated)* |
 | **ph60** | **Event Gallery Photo 4** | **National Leadership Day & Badging Ceremony** | `/events` | `GalleryGrid` | `/images/gallery/national-leadership-day-badging.png` *(Updated)* |
 | **ph61** | **Event Gallery Photo 5** | **AIMS South Zone Regional Conference** | `/events` | `GalleryGrid` | `/images/gallery/aims-south-zone-conference-2025.png` *(Updated)* |
 | **ph62** | **Event Gallery Photo 6** | **9th State Level Seminar** | `/events` | `GalleryGrid` | `/images/gallery/9th-state-level-seminar.png` *(Updated)* |

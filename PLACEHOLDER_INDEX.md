@@ -94,7 +94,7 @@ Every image and image slot across the website now features a **unique, high-visi
 |---|---|---|---|
 | **`#57`** | **Event Gallery Photo 1** | Catalyst Workshop | `events/page.tsx` |
 | **`#58`** | **Event Gallery Photo 2** | Executive Keynote (✅ Updated: `/images/gallery/ph58.jpg`) | `events/page.tsx` |
-| **`#59`** | **Vanguard Leadership Retreat 2026** | Experiential Governance & Team Dynamics (✅ Updated: `/images/gallery/vanguard-leadership-retreat-2026.png`) | `EventCard` / `EventModal` / `programs` |
+| **`#59`** | **Vanguard Leadership Retreat 2026** | Experiential Governance & Team Dynamics (✅ Updated: `/events/vangard.jpg`) | `EventCard` / `EventModal` / `programs` |
 | **`#60`** | **National Leadership Day – Badging Ceremony** | Induction & Distinguished Guest Talks (✅ Updated: `/images/gallery/national-leadership-day-badging.png`) | `EventCard` / `EventModal` |
 | **`#61`** | **AIMS South Zone Regional Conference 2025** | Emerging Trends in AI & Sustainability (✅ Updated: `/images/gallery/aims-south-zone-conference-2025.png`) | `EventCard` / `EventModal` |
 | **`#62`** | **9th State Level Seminar** | Transformation for the Nation (✅ Updated: `/images/gallery/9th-state-level-seminar.png`) | `EventCard` / `EventModal` |
