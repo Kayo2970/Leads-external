@@ -140,7 +140,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
 
             {/* Right Column: High-Res Series Visual Showcase */}
             <div className="lg:col-span-5 flex justify-center items-center">
-              <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group w-full aspect-[9/16] max-w-[340px] mx-auto bg-[#180A30]">
+              <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group w-full aspect-[16/9] bg-[#180A30]">
                 <img
                   src={event.photo}
                   onError={(e) => {
@@ -200,7 +200,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Left: Edition Photograph & Snapshot */}
                   <div className="lg:col-span-5 space-y-4 flex flex-col items-center">
-                    <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl w-full aspect-[9/16] max-w-[340px] mx-auto bg-[#180A30]">
+                    <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl w-full aspect-[16/9] bg-[#180A30]">
                       <img
                         src={currentEdition.photo}
                         onError={(e) => {
@@ -326,7 +326,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                         : "glass-panel border-white/10 hover:border-white/30"
                     }`}
                   >
-                    <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[9/16] w-full max-h-[280px] bg-[#180A30]">
+                    <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[16/9] w-full bg-[#180A30]">
                       <img
                         src={ed.photo}
                         onError={(e) => {

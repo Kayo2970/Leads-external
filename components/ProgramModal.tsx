@@ -97,10 +97,10 @@ export default function ProgramModal({ program, onClose }: ProgramModalProps) {
               </div>
             </div>
 
-            {/* Right: 9:16 Program Image Holder */}
+            {/* Right: 16:9 Program Image Holder */}
             {program.photo && (
               <div className="lg:col-span-5 flex justify-center items-center">
-                <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group w-full aspect-[9/16] max-w-[340px] mx-auto bg-[#180A30]">
+                <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl group w-full aspect-[16/9] bg-[#180A30]">
                   <img
                     src={program.photo}
                     alt={program.title}

@@ -304,7 +304,7 @@ function EventsContent() {
                                 setSelectedCatalystEditionId(null);
                                 setIsCatalystModalOpen(true);
                               }}
-                              className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full aspect-[9/16] max-w-[360px] mx-auto lg:max-w-none"
+                              className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full aspect-[16/9]"
                             >
                               <img
                                 src="/images/gallery/g8.webp"
@@ -349,7 +349,7 @@ function EventsContent() {
                               >
                                 <div
                                   onClick={() => setSelectedEvent(event)}
-                                  className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200/80 shadow-xs group/img w-full aspect-[9/16] max-w-[360px] mx-auto lg:max-w-none bg-[#180A30]"
+                                  className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200/80 shadow-xs group/img w-full aspect-[16/9] bg-[#180A30]"
                                 >
                                   <img
                                     src={event.photo}
@@ -362,7 +362,7 @@ function EventsContent() {
                                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent sm:opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end p-3 sm:p-4">
                                     <div className="flex items-center justify-between w-full">
                                       <span className="text-[10px] sm:text-xs font-bold text-white bg-gradient-to-r from-[#9C1256] to-[#DE3F11] px-2.5 sm:px-3 py-1 rounded-lg shadow-md backdrop-blur-xs flex items-center gap-1.5 border border-white/20">
-                                        <Camera className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                                        <Camera className="w-3.5 h-3.5 sm:w-3.5 sm:h-3.5" />
                                         <span>View Photos</span>
                                       </span>
                                       <span className="text-[10px] sm:text-xs font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded-md border border-white/20">

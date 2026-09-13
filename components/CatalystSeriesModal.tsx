@@ -264,7 +264,7 @@ export default function CatalystSeriesModal({
 
                     {/* RIGHT COLUMN: MEDIA / THUMBNAIL & OUTCOMES */}
                     <div className="lg:col-span-4 space-y-4">
-                      <div className="relative aspect-[9/16] max-w-[280px] mx-auto rounded-xl overflow-hidden border border-white/20 bg-[#361C6A] shadow-md group">
+                      <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/20 bg-[#361C6A] shadow-md group">
                         <img
                           src={ev.photo || fallbackSvg}
                           onError={(e) => {

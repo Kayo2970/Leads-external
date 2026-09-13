@@ -68,7 +68,7 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
       >
         <div>
           {/* Card Photo Header */}
-          <div className="relative rounded-2xl overflow-hidden mb-4 border border-purple-200/60 aspect-[9/16] w-full max-h-[480px] bg-[#180A30]">
+          <div className="relative rounded-2xl overflow-hidden mb-4 border border-purple-200/60 aspect-[16/9] w-full bg-[#180A30]">
             <img
               src={imgSrc}
               onError={() => setImgSrc(placeholderSvg)}

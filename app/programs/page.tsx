@@ -608,7 +608,7 @@ function ProgramsContent() {
                             </div>
                           </div>
 
-                          {/* PHOTO COLUMN (9:16 ASPECT RATIO) */}
+                          {/* PHOTO COLUMN (16:9 ASPECT RATIO) */}
                           <div
                             className={`lg:col-span-6 flex flex-col justify-center items-center ${
                               isContentLeft ? "lg:order-2" : "lg:order-1"
@@ -616,7 +616,7 @@ function ProgramsContent() {
                           >
                             <div
                               onClick={() => setSelectedProgram(program)}
-                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img w-full aspect-[9/16] max-w-[360px] mx-auto lg:max-w-none bg-[#180A30]"
+                              className="cursor-pointer relative rounded-2xl overflow-hidden border border-purple-200 shadow-md group/img w-full aspect-[16/9] bg-[#180A30]"
                             >
                               <img
                                 src={program.photo}
