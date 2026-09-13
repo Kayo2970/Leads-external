@@ -113,6 +113,7 @@
 | **ph65** | **BCIC Roundtable Discussion on Generative Economy** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/bcic-roundtable-generative-economy.webp` | `lib/events-data.ts` (`bma-generative-economies`) |
 | **ph66** | **FKCCI Global MSME Conclave 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/fkcci-global-msme-conclave-2026.webp` | `lib/events-data.ts` (`fkcci-msme-conclave`) |
 | **ph67** | **Anvaya Innovation Summit 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/anvaya-innovation-summit-2026.webp` | `lib/events-data.ts` (`anvaya-innovation-summit-2026`) |
+| **ph80** | **IISc & Adelaide Deep-Tech Startups Conference** | **Conclave / Outreach** | `/events` | `EventCard` / `EventModal` | `/images/gallery/iisc-adelaide-deep-tech-conference.webp` | `lib/events-data.ts` (`iisc-adelaide-deep-tech-conference`) |
 
 ---
 

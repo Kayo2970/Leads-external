@@ -497,8 +497,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "621 Delegates • 46 Expert Speakers",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "award",
-    photo: "/images/gallery/g3.webp",
-    gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
+    photo: "/images/gallery/iisc-adelaide-deep-tech-conference.webp",
+    gallery: ["/images/gallery/iisc-adelaide-deep-tech-conference.webp", "/images/gallery/g3.webp", "/images/gallery/g4.webp"],
     featured: true,
     description: "Jointly organized by IISc Bengaluru and Adelaide University (sponsored by ICSSR), this international conference gathered 621 delegates and 46 global speakers. Chaired by Padma Shri Dr. Prahlada Ramarao with Chief Guest Dr. Sujai Shivakumar, technical tracks explored entrepreneurial university ecosystems, AI deep learning, digital twins, and venture funding roadmaps from prototype grants to corporate venture capital for Viksit Bharat 2047.",
     seriesHighlights: [
