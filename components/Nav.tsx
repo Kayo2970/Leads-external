@@ -57,17 +57,13 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-3 sm:top-4 inset-x-0 z-[9999] mx-auto px-3 sm:px-6 lg:px-8 max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] transition-all duration-500 ease-out ${
+      className={`fixed top-0 inset-x-0 z-40 w-full bg-white/95 backdrop-blur-2xl border-b border-purple-200/50 shadow-md transition-all duration-300 ease-out ${
         showNav
           ? "opacity-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 -translate-y-8 pointer-events-none"
+          : "opacity-0 -translate-y-full pointer-events-none"
       }`}
     >
-      <div
-        className={`liquid-glass-header rounded-2xl lg:rounded-full px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
-          scrolled ? "py-2 sm:py-2.5 shadow-2xl" : "py-2.5 sm:py-3.5 shadow-lg"
-        }`}
-      >
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] 4xl:max-w-[2600px] py-2 sm:py-2.5 lg:py-3">
         <div className="flex items-center justify-between">
           {/* Logo & Identity */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3.5 group py-0.5 relative shrink-0">

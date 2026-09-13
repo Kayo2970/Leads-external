@@ -77,7 +77,7 @@ export default function CatalystSeriesModal({
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8 overflow-y-auto bg-black/85 backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-3 sm:p-6 md:p-8 overflow-y-auto bg-black/85 backdrop-blur-xl animate-in fade-in duration-200">
       <div className="relative w-full max-w-6xl max-h-[92vh] flex flex-col bg-[#180A30] text-white rounded-3xl border border-white/20 shadow-[0_25px_80px_-15px_rgba(0,0,0,0.9)] overflow-hidden">
         {/* MODAL HEADER */}
         <div className="p-6 sm:p-8 bg-gradient-to-r from-[#361C6A] via-[#241147] to-[#9C1256]/40 border-b border-white/15 relative shrink-0">

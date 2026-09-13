@@ -67,7 +67,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 overflow-y-auto bg-black/80 backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-3 sm:p-6 md:p-10 overflow-y-auto bg-black/80 backdrop-blur-xl animate-in fade-in duration-200">
       <div className="relative w-full max-w-6xl max-h-[92vh] overflow-y-auto bg-[#180A30] text-white rounded-3xl border border-white/20 shadow-[0_25px_80px_-15px_rgba(0,0,0,0.9)] p-6 sm:p-10 space-y-10 custom-scrollbar">
         {/* Close Button */}
         <button
