@@ -51,8 +51,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "100 Students • 12 Faculty Benefited",
     badgeColor: "bg-purple-100 text-[#9C1256] border-purple-200",
     logoSvg: "graduation-cap",
-    photo: "/images/gallery/g11.webp",
-    gallery: ["/images/gallery/g11.webp", "/images/gallery/g1.webp", "/images/gallery/g2.webp"],
+    photo: "/images/gallery/ph58.jpg",
+    gallery: ["/images/gallery/ph58.jpg", "/images/gallery/g11.webp", "/images/gallery/g1.webp", "/images/gallery/g2.webp"],
     featured: true,
     description:
       "Inaugurated by Dr. C. N. Manjunath and Mr. Ramanan Ramanathan under the theme Sankalp Se Siddhi, the summit opened with a formal badging ceremony inducting the student leadership core committee and defining its operational roadmap. Plenary sessions led by Prof. Dr. K. M. Sharath Kumar, Dr. Subhadeep Mukherjee, and global leaders—including Dr. Kishore Rao (Aequs INFRA), Mr. Shaju Mangalam (FICCI), Mr. Balvir Talwar (BHEL), and Dr. Charles Chow (East-West Group)—focused on deep-tech revolutions, sustainable innovation, financial literacy, and ethical leadership for Viksit Bharat 2047.",
