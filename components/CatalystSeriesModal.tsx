@@ -124,7 +124,9 @@ export default function CatalystSeriesModal({
                 All Editions ({catalystEvents.length})
               </button>
               {catalystEvents.map((ev) => {
-                const edLabel = ev.name.replace("Catalyst Insights Leadership Talk Series ", "Edition ");
+                const edLabel = ev.name
+                  .replace("Catalyst Insight: Leadership Talk Series ", "Edition ")
+                  .replace("Catalyst Insights Leadership Talk Series ", "Edition ");
                 return (
                   <button
                     key={ev.id}
@@ -192,7 +194,9 @@ export default function CatalystSeriesModal({
                     <div className="lg:col-span-8 space-y-4">
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-[11px] font-extrabold uppercase tracking-wider px-3 py-0.5 rounded-md bg-[#DE3F11]/20 text-[#FF8C61] border border-[#DE3F11]/30">
-                          {ev.name.replace("Catalyst Insights Leadership Talk Series ", "Catalyst Edition ")}
+                          {ev.name
+                            .replace("Catalyst Insight: Leadership Talk Series ", "Catalyst Edition ")
+                            .replace("Catalyst Insights Leadership Talk Series ", "Catalyst Edition ")}
                         </span>
                         <span className="text-xs text-white/70 font-semibold flex items-center gap-1">
                           <Calendar className="w-3.5 h-3.5 text-[#DE3F11]" />
