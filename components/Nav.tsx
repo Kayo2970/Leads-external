@@ -588,7 +588,7 @@ export default function Nav() {
               <span className="text-[9px] bg-[#DE3F11] text-white px-1.5 py-0.2 rounded font-bold ml-auto shrink-0">Summit ↗</span>
             </a>
             <Link
-              href="/programs#consolidated-development-program"
+              href="/programs?category=FDP%20%2F%20MDP%20%2F%20LDP%20%2F%20SDP%20Programmes"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-slate-800 hover:text-[#9C1256] hover:bg-purple-100/80 transition-colors"
             >

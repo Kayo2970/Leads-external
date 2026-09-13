@@ -248,26 +248,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
 
   // 3. FDP / MDP / LDP / SDP DEVELOPMENT PROGRAMMES
   {
-    id: "consolidated-development-program",
-    title: "FDP, LDP, MDP & SDP Development Programmes",
-    subtitle: "Faculty (FDP), Leadership (LDP), Management (MDP) & Student Development (SDP) Track",
-    category: "FDP / MDP / LDP / SDP Programmes",
-    badge: "Integrated Development Track",
-    icon: <GraduationCap className="w-6 h-6 text-[#DE3F11]" />,
-    audience: "Educators, Senior Executives, Corporate Managers, & Student Founders",
-    description:
-      "A unified capability-building framework integrating Faculty Development (FDP) including CaseCraft 5.0 5-Day FDP, Leadership Development (LDP), Management Development (MDP), and Student Development (SDP) into specialized modular cohorts for universities, government bodies, corporate enterprises, and student ventures.",
-    highlights: [
-      "CaseCraft 5.0 (5-Day FDP): Reimagining Management Education Through Effective Case-Based Pedagogy",
-      "Faculty Development (FDP): Multidisciplinary pedagogy, OBE standards & research mentoring for educators",
-      "Leadership Development (LDP): Executive capability, crisis governance & strategic alignment for senior leaders",
-      "Management Development (MDP): Non-technical managerial acumen, operational agility & fiscal discipline",
-      "Student Development (SDP): Venture scaling, pitch mastery, business model canvas & investor readiness",
-    ],
-    duration: "Modular Cohorts (2-Day Workshops to 3-Month Modular Tracks)",
-    featured: true,
-  },
-  {
     id: "mindfulness-leadership-fdp",
     title: "International Workshop on Mindfulness Leadership",
     subtitle: "Conscious Executive Governance, Emotional Intelligence & Stress Resilience",
