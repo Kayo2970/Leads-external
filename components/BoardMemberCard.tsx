@@ -55,7 +55,7 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
                     src={imgSrc}
                     onError={handleImageError}
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
                   />
                 ) : (
                   <span>{member.initials}</span>
@@ -141,7 +141,7 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
                   src={imgSrc}
                   onError={handleImageError}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
                 />
               ) : (
                 <span>{member.initials}</span>
