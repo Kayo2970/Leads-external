@@ -66,7 +66,10 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="font-bold text-[#1E0C3D]">Campus Location</div>
-                        <div className="text-slate-600">Faculty of Management and Commerce, RUAS M. S. Ramaiah University of Applied Sciences, Gnanagangothri Campus, Bengaluru 560054</div>
+                        <div className="text-slate-600">
+                          Faculty of Management and Commerce, RUAS<br />
+                          M. S. Ramaiah University of Applied Sciences, Gnanagangothri Campus, Bengaluru 560054
+                        </div>
                       </div>
                     </div>
 
