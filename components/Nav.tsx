@@ -26,17 +26,29 @@ export default function Nav() {
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
   const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
   const isHomePage = pathname === "/";
-  const showNav = !isHomePage || scrolled;
+  const showNav = !isHomePage || scrolled || isMobile;
 
   useEffect(() => {
     const handleScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 80);
     };
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
     handleScroll();
+    handleResize();
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const isActive = (path: string) => pathname === path;
@@ -70,15 +82,15 @@ export default function Nav() {
             <img
               src="/ruas-logo.png"
               alt="Ramaiah University of Applied Sciences"
-              className="h-8 sm:h-11 lg:h-13 3xl:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-7 sm:h-9 lg:h-12 3xl:h-16 w-auto max-w-[110px] sm:max-w-none object-contain group-hover:scale-105 transition-transform duration-300"
             />
 
-            <span className="h-8 sm:h-11 lg:h-12 w-[1.5px] bg-slate-300/80 rounded-full shrink-0" />
+            <span className="h-6 sm:h-8 lg:h-10 w-[1.5px] bg-slate-300/80 rounded-full shrink-0" />
 
             <img
               src="/leads-short-logo.png"
               alt="LEADS Next Gen Centre - RUAS"
-              className="h-13 sm:h-16 lg:h-20 3xl:h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-8 sm:h-11 lg:h-15 3xl:h-20 w-auto max-w-[130px] sm:max-w-none object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
 

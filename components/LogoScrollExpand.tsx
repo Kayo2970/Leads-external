@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import "./LogoScrollExpand.css";
 
 const clamp = (v: number, a: number, b: number) => (v < a ? a : v > b ? b : v);
@@ -39,6 +38,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   const logoBoxRef = useRef<HTMLDivElement | null>(null);
   const maskGroupRef = useRef<SVGGElement | null>(null);
   const hintRef = useRef<HTMLDivElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const propsRef = useRef({
     scrollDistance,
@@ -64,17 +64,23 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     const hint = hintRef.current;
     if (!frame || !curtain || !logoBox) return;
 
-    const e = smoothstep(0, 1, p);
-
-    // Responsive initial logo size per screen width
     const w = typeof window !== "undefined" ? window.innerWidth : 1440;
     const h = typeof window !== "undefined" ? window.innerHeight : 900;
 
+    // On mobile devices, bypass scroll-jack masking entirely
+    if (w < 768) {
+      curtain.style.display = "none";
+      frame.style.opacity = "1";
+      frame.style.transform = "none";
+      frame.style.pointerEvents = "auto";
+      return;
+    }
+
+    const e = smoothstep(0, 1, p);
+
+    // Responsive initial logo size for desktop / tablet
     let startSize = 440;
-    if (w < 640) {
-      // Mobile
-      startSize = clamp(w * 0.75, 250, 310);
-    } else if (w < 1024) {
+    if (w < 1024) {
       // Tablet
       startSize = clamp(w * 0.45, 360, 460);
     } else if (w < 1920) {
@@ -102,7 +108,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     if (maskGroup) {
       const cx = w / 2;
       const cy = h / 2;
-      // Base dimensions of logo inside SVG mask is 500x500
       const maskScale = (startSize / 500) * logoScale;
       maskGroup.setAttribute(
         "transform",
@@ -110,7 +115,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       );
     }
 
-    // Curtain opacity reduces smoothly as user scrolls, revealing the full hero section
+    // Curtain opacity reduces smoothly as user scrolls
     const curtainFade = smoothstep(0.0, 0.85, p);
     curtain.style.opacity = `${1 - curtainFade}`;
     curtain.style.display = curtainFade >= 1 ? "none" : "block";
@@ -130,10 +135,33 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   }, []);
 
   useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      return mobile;
+    };
+    const mobile = checkMobile();
+
     const root = rootRef.current;
     const track = trackRef.current;
     const stage = stageRef.current;
+    const frame = frameRef.current;
+    const curtain = curtainRef.current;
     if (!root || !track || !stage) return;
+
+    if (mobile) {
+      track.style.height = "auto";
+      stage.style.height = "auto";
+      if (frame) {
+        frame.style.opacity = "1";
+        frame.style.transform = "none";
+        frame.style.pointerEvents = "auto";
+      }
+      if (curtain) {
+        curtain.style.display = "none";
+      }
+      return;
+    }
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -144,6 +172,11 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     let running = false;
 
     const measure = () => {
+      if (window.innerWidth < 768) {
+        track.style.height = "auto";
+        stage.style.height = "auto";
+        return;
+      }
       const c = propsRef.current;
       stageH = window.innerHeight;
       if (stageH <= 0) return;
@@ -152,6 +185,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     };
 
     const readProgress = () => {
+      if (window.innerWidth < 768) return 1;
       const c = propsRef.current;
       const span = stageH * Math.max(0.01, c.scrollDistance);
       const top = track.getBoundingClientRect().top;
@@ -187,6 +221,20 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     };
 
     const onResize = () => {
+      const isMob = checkMobile();
+      if (isMob) {
+        track.style.height = "auto";
+        stage.style.height = "auto";
+        if (frame) {
+          frame.style.opacity = "1";
+          frame.style.transform = "none";
+          frame.style.pointerEvents = "auto";
+        }
+        if (curtain) {
+          curtain.style.display = "none";
+        }
+        return;
+      }
       measure();
       target = readProgress();
       current = target;
@@ -225,13 +273,13 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     <div ref={rootRef} className={`logo-scroll-expand ${className}`}>
       <div ref={trackRef} className="logo-scroll-expand__track">
         <div ref={stageRef} className="logo-scroll-expand__stage">
-          {/* Hero Content Section - 100% visible through logo mask and revealed on scroll */}
+          {/* Hero Content Section */}
           <div ref={frameRef} className="logo-scroll-expand__frame">
             {children}
           </div>
 
-          {/* Opening Splash Curtain: Royal Purple Backdrop with White Logo Layer Mask Cutout */}
-          <div ref={curtainRef} className="logo-scroll-expand__curtain">
+          {/* Opening Splash Curtain for Desktop: Royal Purple Backdrop with White Logo Layer Mask Cutout */}
+          <div ref={curtainRef} className="logo-scroll-expand__curtain hidden md:block">
             {/* SVG Vector Layer Mask Cutout */}
             <svg className="logo-scroll-expand__mask-svg" width="100%" height="100%">
               <defs>
@@ -249,10 +297,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
                   width="100%"
                   height="100%"
                 >
-                  {/* Opaque white rect keeps curtain visible */}
                   <rect width="100%" height="100%" fill="white" />
-
-                  {/* Black logo shape group cuts out transparent hole exposing hero */}
                   <g ref={maskGroupRef}>
                     <image
                       href={maskSrc}
@@ -267,7 +312,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
                 </mask>
               </defs>
 
-              {/* Curtain Rectangle masked by white logo cutout */}
               <rect
                 width="100%"
                 height="100%"
@@ -276,7 +320,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
               />
             </svg>
 
-            {/* White Logo Outline Overlay - Aligned with the Layer Mask */}
+            {/* White Logo Outline Overlay */}
             <div ref={logoBoxRef} className="logo-scroll-expand__logo-box">
               <img
                 src={logoSrc}
@@ -285,7 +329,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
               />
             </div>
 
-            {/* Clickable Scroll Down Indicator & Button (Accessibility Feature) */}
+            {/* Clickable Scroll Down Indicator */}
             <div ref={hintRef} className="logo-scroll-expand__scroll-hint">
               <button
                 type="button"
@@ -307,4 +351,3 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
 };
 
 export default LogoScrollExpand;
-

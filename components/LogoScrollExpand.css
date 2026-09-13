@@ -119,3 +119,43 @@
 .animate-pulse-down {
   animation: floatPill 2s ease-in-out infinite;
 }
+
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDE
+   On screens < 768px, bypass sticky scroll curtain so mobile
+   users can naturally scroll and read the hero section.
+   ========================================================= */
+@media (max-width: 767px) {
+  .logo-scroll-expand {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .logo-scroll-expand__track {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .logo-scroll-expand__stage {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+  }
+  .logo-scroll-expand__frame {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    overflow: visible !important;
+  }
+  .logo-scroll-expand__curtain {
+    display: none !important;
+  }
+}
