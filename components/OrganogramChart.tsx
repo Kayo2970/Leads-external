@@ -287,18 +287,18 @@ export default function OrganogramChart({
             <div className="text-sm font-extrabold text-white">Alumni Student Council</div>
           </button>
 
-          {/* Student Advisory Committee */}
+          {/* Core Committee */}
           <button
             type="button"
-            onClick={() => onSelectRoleGroup?.("Student Advisory Council")}
+            onClick={() => onSelectRoleGroup?.("Core Committee")}
             className={`p-5 rounded-2xl text-center border transition-all duration-300 cursor-pointer ${
-              activeRoleGroup === "Student Advisory Council"
+              activeRoleGroup === "Core Committee"
                 ? "bg-gradient-to-b from-[#9C1256]/80 to-[#DE3F11]/80 border-white shadow-xl scale-105"
                 : "bg-emerald-950/40 border-emerald-400/30 hover:border-emerald-300 shadow-lg"
             }`}
           >
-            <BookOpenCheck className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-white">Student Advisory Committee</div>
+            <Users className="w-6 h-6 text-emerald-400 mx-auto mb-1.5" />
+            <div className="text-sm font-extrabold text-white">Core Committee</div>
           </button>
 
           {/* Student Trainee Associates */}
@@ -312,7 +312,7 @@ export default function OrganogramChart({
             }`}
           >
             <UserPlus className="w-6 h-6 text-purple-400 mx-auto mb-1.5" />
-            <div className="text-sm font-extrabold text-white">Core Committee</div>
+            <div className="text-sm font-extrabold text-white">Trainee Associates</div>
           </button>
         </div>
       </div>

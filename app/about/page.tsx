@@ -119,7 +119,9 @@ export default function AboutPage() {
   const visiblePartitions =
     activeTab === "All"
       ? partitions
-      : partitions.filter((p) => p.group === activeTab);
+      : partitions.filter((p) => p.group === activeTab).length > 0
+      ? partitions.filter((p) => p.group === activeTab)
+      : partitions;
 
   return (
     <div className="min-h-screen">
