@@ -98,7 +98,7 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
     roleGroup: "Centers Leadership",
     initials: "SB",
     image: "/images/committee/sujata-bijwe.webp",
-    bio: "Facilitating corporate sponsorships, executive masterclasses, and national leadership board advisory partnerships.",
+    bio: "Head of Industry Connect driving 'Real Exposure, Real Readiness' initiatives. Facilitating corporate partnerships, executive roundtables, fireside sessions, and bridging the gap between academic curricula and industry expectations.",
     affiliation: "Faculty of Management and Commerce, RUAS",
     linkedin: null,
   },

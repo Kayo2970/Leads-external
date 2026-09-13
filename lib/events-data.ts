@@ -392,6 +392,115 @@ export const EVENTS_DATA: LEADSEvent[] = [
     speakers: ["Mr. Prashant Gokhale (President, BCIC)", "ESG Committee Chairs"],
     editions: []
   },
+  {
+    id: "anq-congress-2025",
+    placeholderId: 66,
+    name: "ANQ Congress 2025 \"Quality Innovations Forging a Path to a Sustainable Future\"",
+    seriesName: "Asian Network for Quality (ISQ)",
+    category: "Outreach",
+    subCategory: "Outreach",
+    tagline: "Quality Innovations Forging a Path to a Sustainable Future with Indian Society for Quality (ISQ)",
+    date: "18–19 Sep 2025",
+    location: "Bengaluru (Indian Society for Quality - ISQ)",
+    attendees: "16 Students • 2 Faculty Benefited",
+    badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
+    logoSvg: "users",
+    photo: "/images/gallery/g1.webp",
+    gallery: ["/images/gallery/g1.webp", "/images/gallery/g2.webp"],
+    featured: true,
+    description: "The LEADS Next Gen Centre Student Council provided critical frontline logistical and collaborative support for the international ANQ Congress 2025, hosted by the Indian Society for Quality (ISQ) under the theme 'Quality Innovations Forging a Path to a Sustainable Future.' Deployed across eight parallel presentation halls, students managed on-site registration, guided global delegates from over 20 countries, and directly assisted prominent Session Chairs like Dr. K. V. S. Rajkumar and Dr. V. Swaminathan. By handling technical projector setups and facilitating high-level Q&A interactions, students actively immersed themselves in global academic discourses covering sustainable quality, green manufacturing, digital twin frameworks, and AI-driven management. Ultimately, this comprehensive involvement enabled the student council to gain invaluable, practical event coordination skills by managing a large-scale international congress, while simultaneously exposing them to cutting-edge global research, sustainable manufacturing practices, and modern digital transformation methodologies.",
+    seriesHighlights: [
+      "Critical frontline logistical and collaborative support for international ANQ Congress 2025 with ISQ",
+      "Student deployment across eight parallel presentation halls managing on-site registration for 20+ countries",
+      "Direct assistance to prominent Session Chairs Dr. K. V. S. Rajkumar and Dr. V. Swaminathan",
+      "Handling technical projector setups and facilitating high-level academic Q&A interactions",
+      "Exposure to cutting-edge global research on sustainable quality, green manufacturing, and digital twins"
+    ],
+    outcomes: [
+      "Global Logistics & Event Operations: Managing frontline tasks across eight parallel halls for delegates from over 20 countries provided the student council with hands-on experience in large-scale international event execution, high-pressure problem solving, and professional hospitality.",
+      "Immersive Research & Industry Insights: Assisting prominent Session Chairs and facilitating technical Q&A segments gave students front-row exposure to cutting-edge global discussions on sustainable quality, green manufacturing, digital twin frameworks, and AI-driven management ecosystems."
+    ],
+    speakers: [
+      "Dr. K. V. S. Rajkumar (Session Chair & Quality Management Stalwart)",
+      "Dr. V. Swaminathan (Prominent Session Chair, ANQ Congress)",
+      "Indian Society for Quality (ISQ) Executive Leadership",
+      "Global Delegates & Academic Chairs from 20+ Countries"
+    ],
+    editions: []
+  },
+  {
+    id: "bma-symposium-ai-management",
+    placeholderId: 67,
+    name: "BMA Symposium – \"AI and the Future of Management Education & Practice\"",
+    seriesName: "Bangalore Management Association (BMA)",
+    category: "Outreach",
+    subCategory: "Outreach",
+    tagline: "Addressing Curricula Gaps & Tech Disruption with VTU, Cyware & Government Leadership",
+    date: "24 Oct 2025",
+    location: "KTPO, Bangalore",
+    attendees: "12 Students • 2 Faculty Benefited",
+    badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
+    logoSvg: "users",
+    photo: "/images/gallery/g4.webp",
+    gallery: ["/images/gallery/g4.webp", "/images/gallery/g5.webp"],
+    featured: true,
+    description: "LEADS Next Gen Centre representatives attended the BMA symposium, 'AI and the Future of Management Education & Practice,' addressing the gap between curricula and tech disruption. The delegation joined discussions with dignitaries including Prof. Vidyashankar S (VTU), Mr. Ashwin Hegde Karkala (Cyware), and Sri Pankaj Kumar Pandey, IAS. Participation focused on identifying AI's corporate and educational impacts, fostering industry-academia collaboration, and defining the 'human-in-the-loop' skills recruiters demand. The event emphasized establishing AI as a foundational literacy to prepare graduates for tech-driven environments with ethical clarity.",
+    seriesHighlights: [
+      "High-level delegation addressing the gap between university curricula and technological disruption",
+      "Strategic discussions with Prof. Vidyashankar S (VTU), Mr. Ashwin Hegde Karkala (Cyware), and Sri Pankaj Kumar Pandey, IAS",
+      "Identifying corporate and educational AI impacts and defining 'human-in-the-loop' workforce competencies",
+      "Establishing AI as a foundational literacy to prepare graduates for tech-driven environments with ethical clarity"
+    ],
+    outcomes: [
+      "AI-Driven Business Modeling Literacy: Student delegates developed a sophisticated understanding of generative AI's strategic application across diverse management functions, identifying key methods to integrate AI tools as productivity partners.",
+      "Strategic Capability Assessment: Participating student cohorts established clear insights into recruiter expectations, learning to prioritize critical human-in-the-loop competencies like emotional intelligence and creative problem-solving over rigid technical knowledge."
+    ],
+    speakers: [
+      "Prof. Vidyashankar S (Vice-Chancellor, Visvesvaraya Technological University - VTU)",
+      "Sri Pankaj Kumar Pandey, IAS (Secretary, Government of Karnataka)",
+      "Mr. Ashwin Hegde Karkala (Cyware)",
+      "Bangalore Management Association (BMA) Leadership Panel"
+    ],
+    editions: []
+  },
+  {
+    id: "icssr-national-conference-gst-reforms",
+    placeholderId: 68,
+    name: "Two-Day National Conference on Next-Generation GST Reforms 2.0 (ICSSR)",
+    seriesName: "National Policy & RegTech Conference",
+    category: "Outreach",
+    subCategory: "Outreach",
+    tagline: "In Collaboration with ICSSR: 'Next-Generation GST Reforms 2.0 – A Way towards Viksit Bharat 2047'",
+    date: "12–13 Dec 2025",
+    location: "Ramaiah University Campus, Bengaluru",
+    attendees: "150 Students • 18 Faculty Benefited",
+    badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
+    logoSvg: "users",
+    photo: "/images/gallery/g2.webp",
+    gallery: ["/images/gallery/g2.webp", "/images/gallery/g3.webp"],
+    featured: true,
+    description: "The LEADS Next Gen Centre, in collaboration with the Indian Council of Social Science Research (ICSSR), co-hosted the two-day National Conference on 'Next-Generation GST Reforms 2.0.' The conference brought together policymakers, tax administrators, industry leaders, academicians, and researchers to discuss India's evolving GST framework under the vision of 'One Nation, One Tax.' Distinguished speakers, including Smt. Kajal Singh, IRS (Chief Commissioner of Central Tax), Mr. Prashant Gokhale (President, BCIC), and Prof. K.K. Raina (Vice-Chancellor, RUAS), addressed key themes such as AI-driven tax administration, fiscal federalism, GST rate rationalization, and the expansion of India's taxpayer base beyond 1.5 crore. The conference examined the impact of recent GST reforms on MSMEs, industrial growth, and ease of doing business, while exploring technology-enabled compliance and AI in digital taxation. Through 78 research paper presentations, participants contributed evidence-based policy recommendations. Discussions also highlighted India's strong GST performance, including an average monthly revenue collection of ₹1.84 lakh crore, reinforcing GST 2.0 as a key pillar in achieving the vision of Viksit Bharat.",
+    seriesHighlights: [
+      "Two-day national conference co-hosted in collaboration with Indian Council of Social Science Research (ICSSR)",
+      "Keynotes by Smt. Kajal Singh, IRS (Chief Commissioner of Central Tax) & Mr. Prashant Gokhale (President, BCIC)",
+      "78 research paper presentations delivering evidence-based fiscal policy recommendations",
+      "Deliberations on AI-driven tax administration, GST rate rationalization, and fiscal federalism for Viksit Bharat 2047",
+      "Analysis of India's GST performance and ₹1.84 lakh crore average monthly revenue milestone"
+    ],
+    outcomes: [
+      "Fiscal Policy and Legislative Literacy: Student participants developed a deep, working knowledge of India's dual GST architecture, rate rationalizations, and the constitutional balance of fiscal federalism by directly analyzing tax administration case studies alongside senior IRS tax administrators.",
+      "AI-Enabled RegTech Competency: Students gained practical insights into how AI, machine learning, and automated compliance systems enhance audit processes and streamline digital tax administration.",
+      "Public Policy Synthesis and Advocacy: Student delegates developed advanced competency in cross-disciplinary synthesis, learning to translate dense academic data from 78 national research presentations into concise, actionable executive briefs aimed at improving MSME ease of doing business."
+    ],
+    speakers: [
+      "Smt. Kajal Singh, IRS (Chief Commissioner of Central Tax)",
+      "Mr. Prashant Gokhale (President, Bangalore Chamber of Industry and Commerce - BCIC)",
+      "Prof. K. K. Raina (Vice-Chancellor, Ramaiah University of Applied Sciences - RUAS)",
+      "Prof. (Dr.) K. M. Sharath Kumar (Dean, FMC, RUAS & Chief Advisor, LEADS)",
+      "Dr. Subhadeep Mukherjee (Centre Head, LEADS)"
+    ],
+    editions: []
+  },
 
   // 3. Catalyst Leadership Talk Series (Restarts at 3.0!)
   {
@@ -638,26 +747,34 @@ export const EVENTS_DATA: LEADSEvent[] = [
     id: "pragati-boardroom-battles",
     placeholderId: 75,
     name: "Pravrutti – Boardroom Battles",
-    seriesName: "Boardroom Battles",
+    seriesName: "Pravrutti National Tech Fest",
     category: "Boardroom Battle",
     subCategory: "Boardroom Battles",
-    tagline: "Executive Crisis Management & Boardroom Strategy Simulation",
+    tagline: "Flagship Corporate Crisis Simulation & Strategic Defense at Pravrutti 2025",
     date: "16 Oct 2025",
-    location: "RUAS Campus",
+    location: "RTC Campus, Ramaiah University",
     attendees: "10 Students • 1 Faculty Benefited",
     badgeColor: "bg-rose-100 text-rose-900 border-rose-200",
     logoSvg: "award",
     photo: "/images/gallery/g7.webp",
     gallery: ["/images/gallery/g7.webp"],
-    featured: false,
-    description: "High-stakes crisis management competition simulating executive boardroom decisions, shareholder conflict resolution, and strategic risk management.",
+    featured: true,
+    description: "The L.E.A.D.S Next Gen Centre hosted 'Boardroom Battles,' a flagship management competition during the Pravrutti 2025 National Tech Fest. Acting as corporate executives, students engaged in immersive business simulations to analyze corporate crises, formulate viable recovery strategies, and defend their decisions under intense time pressure. Students pitched their financial and digital transformation solutions directly to an expert judging panel featuring Mr. Moulik Vinod Gajjar (Senior Market Research Analyst, Zyoin Group) and Dr. Praveen Sinha (Professor, Oxford College of Business Management). Concurrently, the student committee took full ownership of the event's execution, managing everything from case study preparation to logistical coordination. Ultimately, this initiative successfully immersed students in simulated boardrooms to apply academic concepts to high-stakes business scenarios, while building vital industry connections, providing a platform for professional feedback, and developing leadership, communication, and creative thinking skills under pressure.",
     seriesHighlights: [
-      "Real-time corporate crisis case simulations",
-      "Shareholder negotiation & board voting exercises",
-      "Evaluation by senior corporate directors"
+      "Flagship management competition and simulated boardroom battle at Pravrutti 2025 National Tech Fest",
+      "Real-time corporate crisis analysis, financial strategy formulation, and time-pressured defense",
+      "Direct solution pitching to industry judge Mr. Moulik Vinod Gajjar and Dr. Praveen Sinha",
+      "End-to-end student committee management from case study preparation to full logistical coordination"
     ],
-    outcomes: ["Boardroom crisis simulation awards", "Executive strategy portfolio"],
-    speakers: ["Corporate Board Directors", "LEADS Competition Jury"],
+    outcomes: [
+      "High-Stakes Crisis Simulation: The competition strengthened critical thinking, financial analysis, and strategic communication through real-world corporate challenges and strategy presentations to industry experts.",
+      "End-to-End Operational Execution: Managing the event from case development to execution gave the student committee practical experience in project management, teamwork, and real-time problem-solving."
+    ],
+    speakers: [
+      "Mr. Moulik Vinod Gajjar (Senior Market Research Analyst, Zyoin Group)",
+      "Dr. Praveen Sinha (Professor, Oxford College of Business Management)",
+      "LEADS Faculty Mentors & Student Organising Committee"
+    ],
     editions: []
   },
 
