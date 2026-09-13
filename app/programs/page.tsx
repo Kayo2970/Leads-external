@@ -50,7 +50,7 @@ const PROGRAM_GROUPS: {
     name: "Conferences & Seminars",
     badge: "National & Intl Symposia",
     description:
-      "High-level academic symposia, international IIIC deep-tech conventions, national quality congresses, AI impact conventions, and policy conferences co-hosted with IISc, AIMS, BMA, ANQ, AIU, and Adelaide University.",
+      "High-level academic symposia, international IISc deep-tech conventions, national quality congresses, AI impact conventions, and policy conferences co-hosted with IISc, AIMS, BMA, ANQ, AIU, and Adelaide University.",
   },
   {
     name: "FDP / MDP / LDP / SDP Programmes",
@@ -228,15 +228,15 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: false,
   },
   {
-    id: "iic-deeptech-startups",
-    title: "IIC Innovation & Entrepreneurship for DeepTech Startups",
+    id: "iisc-deeptech-startups",
+    title: "IISc - Innovation And Entrepreneurship For Deep-Tech Startups",
     subtitle: "Role of Entrepreneurial Universities in Deep-Tech Commercialization",
     category: "Conferences & Seminars",
-    badge: "International IIIC DeepTech Conference",
+    badge: "International IISc Deep-Tech Conference",
     icon: <Sparkles className="w-6 h-6 text-[#DE3F11]" />,
     audience: "Incubators, Tech Founders, Patent Attorneys & Investors",
     description:
-      "International IIIC conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
+      "International conference co-hosted at JN Tata Auditorium, IISc Bengaluru with Adelaide University, focusing on deep-tech commercialization, IP protection, and university-based incubation.",
     highlights: [
       "Deep-tech commercialization & IP asset protection",
       "Joint panel with IISc and Adelaide University experts",
