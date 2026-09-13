@@ -12,7 +12,7 @@ export default function ContactForm({ lightMode = false }: ContactFormProps) {
     name: "",
     email: "",
     organisation: "",
-    interestArea: "Events",
+    interestArea: "General Inquiry",
     message: "",
   });
 
@@ -51,7 +51,7 @@ export default function ContactForm({ lightMode = false }: ContactFormProps) {
           name: "",
           email: "",
           organisation: "",
-          interestArea: "Events",
+          interestArea: "General Inquiry",
           message: "",
         });
       } else {
@@ -177,11 +177,11 @@ export default function ContactForm({ lightMode = false }: ContactFormProps) {
               onChange={handleChange}
               className={inputClass}
             >
+              <option value="General Inquiry" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>General Inquiry</option>
               <option value="Events" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>BHARAT LEAD SUMMIT 2026 & Events</option>
               <option value="Partnerships" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Institutional & Government Partnerships</option>
-              <option value="Leadership Talk Series" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Catalyst Leadership Talk Series</option>
+              <option value="Speaker Partnerships" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Speaker Partnerships</option>
               <option value="Media" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>Media & Academic Research</option>
-              <option value="General Enquiry" className={lightMode ? "text-[#1E0C3D]" : "bg-[#241147] text-white"}>General Enquiry</option>
             </select>
           </div>
 

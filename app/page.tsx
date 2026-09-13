@@ -1,37 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import SoftAurora from "@/components/SoftAurora";
-import BorderGlow from "@/components/BorderGlow";
 import LogoScrollExpand from "@/components/LogoScrollExpand";
-import EventCard from "@/components/EventCard";
-import EventModal from "@/components/EventModal";
 import AnimatedContent from "@/components/AnimatedContent";
-import { EVENTS_DATA, LEADSEvent } from "@/lib/events-data";
 import {
   Sparkles,
   ArrowRight,
   TrendingUp,
   Award,
-  Users,
   Building2,
   GraduationCap,
   Briefcase,
   CheckCircle,
-  ChevronRight,
   Compass,
 } from "lucide-react";
 
 export default function Home() {
-  const [selectedEvent, setSelectedEvent] = useState<LEADSEvent | null>(null);
-
-  const featuredEvents = EVENTS_DATA.filter((e) => e.featured);
-
   return (
     <div className="relative">
-      {/* Event Detail Modal */}
-      <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
 
       {/* SECTION 1 [PURPLE]: OPENING HERO WITH LOGO OUTLINE SCROLLEXPAND & SOFTAURORA */}
       <LogoScrollExpand
@@ -220,12 +208,9 @@ export default function Home() {
               {/* Visual Highlight Card with Liquid Glass */}
               <div className="relative">
                 <div className="liquid-glass rounded-3xl p-8 3xl:p-12 space-y-6 3xl:space-y-8 border border-white/20 shadow-2xl">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                  <div className="border-b border-white/10 pb-4">
                     <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider gold-gradient-text">
                       Core Pillar Breakdown
-                    </span>
-                    <span className="text-xs 3xl:text-base font-semibold px-3 py-1 rounded-full bg-gradient-to-r from-[#9C1256]/40 to-[#DE3F11]/40 text-white border border-[#DE3F11]/40 shadow-sm">
-                      National Impact
                     </span>
                   </div>
 
@@ -371,45 +356,6 @@ export default function Home() {
         </AnimatedContent>
       </section>
 
-      {/* SECTION 5: FEATURED EVENTS PREVIEW */}
-      <section className="py-24 3xl:py-36 bg-[#FDFBFF] text-[#1E0C3D] border-t border-purple-100">
-        <AnimatedContent
-          distance={130}
-          direction="vertical"
-          duration={1.2}
-          ease="power3.out"
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.05}
-          threshold={0.2}
-        >
-          <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 3xl:mb-16">
-              <div>
-                <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
-                  National Event Calendar
-                </div>
-                <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-extrabold text-[#1E0C3D]">
-                  Featured Programs & Events
-                </h2>
-              </div>
-              <Link
-                href="/events"
-                className="mt-4 md:mt-0 text-sm 2xl:text-base 3xl:text-xl font-bold text-[#1E0C3D] hover:text-[#DE3F11] hover:underline inline-flex items-center space-x-1"
-              >
-                <span>Explore All Events</span>
-                <ChevronRight className="w-4 h-4 3xl:w-6 3xl:h-6 text-[#DE3F11]" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 3xl:gap-12">
-              {featuredEvents.map((event) => (
-                <EventCard key={event.id} event={event} lightMode={true} onOpenModal={(e) => setSelectedEvent(e)} />
-              ))}
-            </div>
-          </div>
-        </AnimatedContent>
-      </section>
 
       {/* SECTION 6: CALL TO ACTION BANNER */}
       <section className="py-24 3xl:py-36 px-4 sm:px-6 lg:px-8 3xl:px-12 bg-[#1E0C3D]">
