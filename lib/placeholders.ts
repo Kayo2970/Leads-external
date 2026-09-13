@@ -164,7 +164,7 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 64, title: "NHRD Bangalore Chapter – Thought Leadership Meet", subtitle: "Market Benchmarking & Compensation (Updated Photo)", category: "Outreach", page: "/events", component: "EventCard / EventModal" },
   { id: 65, title: "BCIC Roundtable Discussion on Generative Economy", subtitle: "Ushering the AI-Driven Industrial Era (Updated Photo)", category: "Outreach", page: "/events", component: "EventCard / EventModal" },
   { id: 66, title: "FKCCI Global MSME Conclave 2026", subtitle: "Sankalp to Siddhi – Local Resolve to Global Realization (Updated Photo)", category: "Outreach", page: "/events", component: "EventCard / EventModal" },
-  { id: 67, title: "Event Gallery Photo 11", subtitle: "Fireside Q&A", category: "Gallery", page: "/events", component: "GalleryGrid" },
+  { id: 67, title: "Anvaya Innovation Summit 2026", subtitle: "Innovation for Impact – Vision to Action (Updated Photo)", category: "Outreach", page: "/events", component: "EventCard / EventModal" },
   { id: 68, title: "Event Gallery Photo 12", subtitle: "National Delegates", category: "Gallery", page: "/events", component: "GalleryGrid" },
   { id: 69, title: "Event Gallery Photo 13", subtitle: "Student Core Team", category: "Gallery", page: "/events", component: "GalleryGrid" },
   { id: 70, title: "Event Gallery Photo 14", subtitle: "Certificate Distribution", category: "Gallery", page: "/events", component: "GalleryGrid" },

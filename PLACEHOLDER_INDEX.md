@@ -93,16 +93,16 @@ Every image and image slot across the website now features a **unique, high-visi
 | PH # | Gallery Item Name | Category | Component |
 |---|---|---|---|
 | **`#57`** | **Event Gallery Photo 1** | Catalyst Workshop | `events/page.tsx` |
-| **`#58`** | **Event Gallery Photo 2** | Executive Keynote (✅ Updated: `/images/gallery/ph58.jpg`) | `events/page.tsx` |
-| **`#59`** | **Vanguard Leadership Retreat 2026** | Experiential Governance & Team Dynamics (✅ Updated: `/events/vangard.jpg`) | `EventCard` / `EventModal` / `programs` |
-| **`#60`** | **National Leadership Day – Badging Ceremony** | Induction & Distinguished Guest Talks (✅ Updated: `/images/gallery/national-leadership-day-badging.png`) | `EventCard` / `EventModal` |
-| **`#61`** | **AIMS South Zone Regional Conference 2025** | Emerging Trends in AI & Sustainability (✅ Updated: `/images/gallery/aims-south-zone-conference-2025.png`) | `EventCard` / `EventModal` |
-| **`#62`** | **9th State Level Seminar** | Transformation for the Nation (✅ Updated: `/images/gallery/9th-state-level-seminar.png`) | `EventCard` / `EventModal` |
-| **`#63`** | **Educational & Cultural Visit to New Delhi** | Experiential Learning Delegation (✅ Updated: `/images/gallery/educational-cultural-visit-delhi.png`) | `EventCard` / `EventModal` |
-| **`#64`** | **NHRD Bangalore Chapter – Thought Leadership Meet** | Market Benchmarking & Compensation (✅ Updated: `/images/gallery/nhrd-bangalore-thought-leadership.png`) | `EventCard` / `EventModal` |
-| **`#65`** | **BCIC Roundtable Discussion on Generative Economy** | Ushering the AI-Driven Industrial Era (✅ Updated: `/images/gallery/bcic-roundtable-generative-economy.jpg`) | `EventCard` / `EventModal` |
-| **`#66`** | **FKCCI Global MSME Conclave 2026** | Sankalp to Siddhi – Local Resolve to Global Realization (✅ Updated: `/images/gallery/fkcci-global-msme-conclave-2026.jpg`) | `EventCard` / `EventModal` |
-| **`#67`** | **Event Gallery Photo 11** | Fireside Q&A | `events/page.tsx` |
+| **`#58`** | **LEADS Next Gen Centre – Inauguration** | Executive Keynote (✅ Updated: `/images/gallery/leads-inaugural-function.webp`) | `EventCard` / `EventModal` |
+| **`#59`** | **Vanguard Leadership Retreat 2026** | Experiential Governance & Team Dynamics (✅ Updated: `/images/gallery/vanguard-leadership-retreat-2026.webp`) | `EventCard` / `EventModal` / `programs` |
+| **`#60`** | **National Leadership Day – Badging Ceremony** | Induction & Distinguished Guest Talks (✅ Updated: `/images/gallery/national-leadership-day-badging.webp`) | `EventCard` / `EventModal` |
+| **`#61`** | **AIMS South Zone Regional Conference 2025** | Emerging Trends in AI & Sustainability (✅ Updated: `/images/gallery/aims-south-zone-conference-2025.webp`) | `EventCard` / `EventModal` |
+| **`#62`** | **9th State Level Seminar** | Transformation for the Nation (✅ Updated: `/images/gallery/9th-state-level-seminar.webp`) | `EventCard` / `EventModal` |
+| **`#63`** | **Educational & Cultural Visit to New Delhi** | Experiential Learning Delegation (✅ Updated: `/images/gallery/educational-cultural-visit-delhi.webp`) | `EventCard` / `EventModal` |
+| **`#64`** | **NHRD Bangalore Chapter – Thought Leadership Meet** | Market Benchmarking & Compensation (✅ Updated: `/images/gallery/nhrd-bangalore-thought-leadership.webp`) | `EventCard` / `EventModal` |
+| **`#65`** | **BCIC Roundtable Discussion on Generative Economy** | Ushering the AI-Driven Industrial Era (✅ Updated: `/images/gallery/bcic-roundtable-generative-economy.webp`) | `EventCard` / `EventModal` |
+| **`#66`** | **FKCCI Global MSME Conclave 2026** | Sankalp to Siddhi – Local Resolve to Global Realization (✅ Updated: `/images/gallery/fkcci-global-msme-conclave-2026.webp`) | `EventCard` / `EventModal` |
+| **`#67`** | **Anvaya Innovation Summit 2026** | Innovation for Impact – Vision to Action (✅ Updated: `/images/gallery/anvaya-innovation-summit-2026.webp`) | `EventCard` / `EventModal` |
 | **`#68`** | **Event Gallery Photo 12** | National Delegates | `events/page.tsx` |
 | **`#69`** | **Event Gallery Photo 13** | Student Core Team | `events/page.tsx` |
 | **`#70`** | **Event Gallery Photo 14** | Certificate Distribution | `events/page.tsx` |

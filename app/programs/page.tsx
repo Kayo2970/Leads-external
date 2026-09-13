@@ -346,7 +346,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     ],
     duration: "1 Mar 2026 • 25 Students • 5 Faculty Benefited",
     location: "RR Retreat & Off-Campus Grounds, Bengaluru",
-    photo: "/events/vangard.jpg",
+    photo: "/images/gallery/vanguard-leadership-retreat-2026.webp",
     placeholderId: 59,
     featured: false,
   },

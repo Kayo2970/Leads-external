@@ -101,17 +101,18 @@
 | **ph52** | Fireside Edition 1 (CEO Dialogue) | Event Edition | `/events` | `EventModal` | `/images/gallery/g9.webp` | `lib/events-data.ts` |
 | **ph53** | Fireside Edition 2 (Policy & Governance) | Event Edition | `/events` | `EventModal` | `/images/gallery/g10.webp` | `lib/events-data.ts` |
 | **ph54** | LEADS Annual Impact Meet | Annual Conclave | `/events` | `EventCard` | `/images/gallery/g11.webp` | `lib/events-data.ts` |
-| **ph55** | Annual Impact Meet 2025 (Transformation) | Event Edition | `/events` | `EventModal` | `/images/gallery/ph55.jpg` | `lib/events-data.ts` |
+| **ph55** | Annual Impact Meet 2025 (Transformation) | Event Edition | `/events` | `EventModal` | `/images/gallery/ph55.webp` | `lib/events-data.ts` |
 | **ph56** | LEADS Outreach Activities | Outreach Initiatives | `/events` | `EventCard` | `/images/gallery/g12.webp` | `lib/events-data.ts` |
-| **ph58** | **LEADS Next Gen Centre – Inauguration** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/ph58.jpg` | `lib/events-data.ts` (`leads-inaugural-function`) |
-| **ph59** | **Vanguard Leadership Retreat 2026** | **Institutional Ceremonies / Programs** | `/events` / `/programs` | `EventCard` / `EventModal` | `/events/vangard.jpg` | `lib/events-data.ts` (`vanguard-leadership-retreat`) |
-| **ph60** | **National Leadership Day – Badging Ceremony** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/national-leadership-day-badging.png` | `lib/events-data.ts` (`national-leadership-day-badging`) |
-| **ph61** | **AIMS South Zone Regional Conference 2025** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/aims-south-zone-conference-2025.png` | `lib/events-data.ts` (`aims-south-region-conference-2025`) |
-| **ph62** | **9th State Level Seminar** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/9th-state-level-seminar.png` | `lib/events-data.ts` (`9th-state-level-seminar`) |
-| **ph63** | **Educational & Cultural Visit to New Delhi** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/educational-cultural-visit-delhi.png` | `lib/events-data.ts` (`new-delhi-visit`) |
-| **ph64** | **NHRD Bangalore Chapter – Thought Leadership Meet** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/nhrd-bangalore-thought-leadership.png` | `lib/events-data.ts` (`nhrd-bangalore-chapter`) |
-| **ph65** | **BCIC Roundtable Discussion on Generative Economy** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/bcic-roundtable-generative-economy.jpg` | `lib/events-data.ts` (`bma-generative-economies`) |
-| **ph66** | **FKCCI Global MSME Conclave 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/fkcci-global-msme-conclave-2026.jpg` | `lib/events-data.ts` (`fkcci-msme-conclave`) |
+| **ph58** | **LEADS Next Gen Centre – Inauguration** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/leads-inaugural-function.webp` | `lib/events-data.ts` (`leads-inaugural-function`) |
+| **ph59** | **Vanguard Leadership Retreat 2026** | **Institutional Ceremonies / Programs** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/vanguard-leadership-retreat-2026.webp` | `lib/events-data.ts` (`vanguard-leadership-retreat`) |
+| **ph60** | **National Leadership Day – Badging Ceremony** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/national-leadership-day-badging.webp` | `lib/events-data.ts` (`national-leadership-day-badging`) |
+| **ph61** | **AIMS South Zone Regional Conference 2025** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/aims-south-zone-conference-2025.webp` | `lib/events-data.ts` (`aims-south-region-conference-2025`) |
+| **ph62** | **9th State Level Seminar** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/9th-state-level-seminar.webp` | `lib/events-data.ts` (`9th-state-level-seminar`) |
+| **ph63** | **Educational & Cultural Visit to New Delhi** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/educational-cultural-visit-delhi.webp` | `lib/events-data.ts` (`new-delhi-visit`) |
+| **ph64** | **NHRD Bangalore Chapter – Thought Leadership Meet** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/nhrd-bangalore-thought-leadership.webp` | `lib/events-data.ts` (`nhrd-bangalore-chapter`) |
+| **ph65** | **BCIC Roundtable Discussion on Generative Economy** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/bcic-roundtable-generative-economy.webp` | `lib/events-data.ts` (`bma-generative-economies`) |
+| **ph66** | **FKCCI Global MSME Conclave 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/fkcci-global-msme-conclave-2026.webp` | `lib/events-data.ts` (`fkcci-msme-conclave`) |
+| **ph67** | **Anvaya Innovation Summit 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/anvaya-innovation-summit-2026.webp` | `lib/events-data.ts` (`anvaya-innovation-summit-2026`) |
 
 ---
 
@@ -120,15 +121,16 @@
 | ID | Title / Slot | Subtitle / Focus | Page | Component | Storage Path |
 |:---|:---|:---|:---|:---|:---|
 | **ph57** | Event Gallery Photo 1 | Catalyst Workshop | `/events` | `GalleryGrid` | `/images/gallery/g1.webp` |
-| **ph58** | **Event Gallery Photo 2** | **Inaugural Plenary & Launch** | `/events` | `GalleryGrid` | `/images/gallery/ph58.jpg` *(Updated)* |
-| **ph59** | **Event Gallery Photo 3** | **Vanguard Leadership Retreat 2026** | `/events` | `GalleryGrid` | `/events/vangard.jpg` *(Updated)* |
-| **ph60** | **Event Gallery Photo 4** | **National Leadership Day & Badging Ceremony** | `/events` | `GalleryGrid` | `/images/gallery/national-leadership-day-badging.png` *(Updated)* |
-| **ph61** | **Event Gallery Photo 5** | **AIMS South Zone Regional Conference** | `/events` | `GalleryGrid` | `/images/gallery/aims-south-zone-conference-2025.png` *(Updated)* |
-| **ph62** | **Event Gallery Photo 6** | **9th State Level Seminar** | `/events` | `GalleryGrid` | `/images/gallery/9th-state-level-seminar.png` *(Updated)* |
-| **ph63** | **Event Gallery Photo 7** | **Educational & Cultural Visit to New Delhi** | `/events` | `GalleryGrid` | `/images/gallery/educational-cultural-visit-delhi.png` *(Updated)* |
-| **ph64** | **Event Gallery Photo 8** | **NHRD Bangalore Chapter Thought Leadership** | `/events` | `GalleryGrid` | `/images/gallery/nhrd-bangalore-thought-leadership.png` *(Updated)* |
-| **ph65** | **Event Gallery Photo 9** | **BCIC Roundtable Discussion on Generative Economy** | `/events` | `GalleryGrid` | `/images/gallery/bcic-roundtable-generative-economy.jpg` *(Updated)* |
-| **ph66** | **Event Gallery Photo 10** | **FKCCI Global MSME Conclave 2026** | `/events` | `GalleryGrid` | `/images/gallery/fkcci-global-msme-conclave-2026.jpg` *(Updated)* |
+| **ph58** | **Event Gallery Photo 2** | **Inaugural Plenary & Launch** | `/events` | `GalleryGrid` | `/images/gallery/leads-inaugural-function.webp` *(Updated)* |
+| **ph59** | **Event Gallery Photo 3** | **Vanguard Leadership Retreat 2026** | `/events` | `GalleryGrid` | `/images/gallery/vanguard-leadership-retreat-2026.webp` *(Updated)* |
+| **ph60** | **Event Gallery Photo 4** | **National Leadership Day & Badging Ceremony** | `/events` | `GalleryGrid` | `/images/gallery/national-leadership-day-badging.webp` *(Updated)* |
+| **ph61** | **Event Gallery Photo 5** | **AIMS South Zone Regional Conference** | `/events` | `GalleryGrid` | `/images/gallery/aims-south-zone-conference-2025.webp` *(Updated)* |
+| **ph62** | **Event Gallery Photo 6** | **9th State Level Seminar** | `/events` | `GalleryGrid` | `/images/gallery/9th-state-level-seminar.webp` *(Updated)* |
+| **ph63** | **Event Gallery Photo 7** | **Educational & Cultural Visit to New Delhi** | `/events` | `GalleryGrid` | `/images/gallery/educational-cultural-visit-delhi.webp` *(Updated)* |
+| **ph64** | **Event Gallery Photo 8** | **NHRD Bangalore Chapter Thought Leadership** | `/events` | `GalleryGrid` | `/images/gallery/nhrd-bangalore-thought-leadership.webp` *(Updated)* |
+| **ph65** | **Event Gallery Photo 9** | **BCIC Roundtable Discussion on Generative Economy** | `/events` | `GalleryGrid` | `/images/gallery/bcic-roundtable-generative-economy.webp` *(Updated)* |
+| **ph66** | **Event Gallery Photo 10** | **FKCCI Global MSME Conclave 2026** | `/events` | `GalleryGrid` | `/images/gallery/fkcci-global-msme-conclave-2026.webp` *(Updated)* |
+| **ph67** | **Event Gallery Photo 11** | **Anvaya Innovation Summit 2026** | `/events` | `GalleryGrid` | `/images/gallery/anvaya-innovation-summit-2026.webp` *(Updated)* |
 | **ph67** | Event Gallery Photo 11 | Fireside Q&A | `/events` | `GalleryGrid` | `/images/gallery/g11.webp` |
 | **ph68** | Event Gallery Photo 12 | National Delegates | `/events` | `GalleryGrid` | `/images/gallery/g12.webp` |
 | **ph69** | Event Gallery Photo 13 | Student Core Team | `/events` | `GalleryGrid` | `/images/gallery/g13.webp` |
