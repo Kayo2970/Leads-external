@@ -117,7 +117,8 @@
 | **ph66b** | **ANQ Congress 2025** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/anq-congress-2025.webp` | `lib/events-data.ts` (`anq-congress-2025`) |
 | **ph67b** | **BMA Symposium – AI & Future of Management** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/bma-symposium.webp` | `lib/events-data.ts` (`bma-symposium-ai-management`) |
 | **ph68** | **Two-Day National Conference – GST Reforms 2.0** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/two-day-gst-reforms-conference.webp` | `lib/events-data.ts` (`icssr-national-conference-gst-reforms`) |
-| **ph72** | **Case Cracker – NMC Healthcare’s Billion-Dollar Secret** | **Expert Talks** | `/events` | `EventCard` / `EventModal` | `/images/gallery/case-cracker-nmc.webp` | `lib/events-data.ts` (`case-cracker-nmc`) |
+| **ph72** | **Case Cracker  NMC Healthcare’s Billion-Dollar Secret** | **Expert Talks** | `/events` | `EventCard` / `EventModal` | `/images/gallery/case-cracker-nmc.webp` | `lib/events-data.ts` (`case-cracker-nmc`) |
+| **ph77** | **Case Craft 5.0 – Five-Day FDP** | **Workshop / FDP** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/case-craft-5-fdp.webp` | `lib/events-data.ts` (`case-craft-5-fdp`) |
 
 ---
 

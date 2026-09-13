@@ -302,7 +302,7 @@ const PROGRAMS_DATA: ProgramItem[] = [
     ],
     duration: "8–12 Sep 2025 • 5 Students • 30 Faculty Benefited",
     location: "Faculty of Management and Commerce, RUAS",
-    photo: "/images/gallery/g12.webp",
+    photo: "/images/gallery/case-craft-5-fdp.webp",
     placeholderId: 70,
     featured: true,
   },

@@ -887,8 +887,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "30+ Faculty Educators & Industry Professionals",
     badgeColor: "bg-indigo-100 text-indigo-900 border-indigo-200",
     logoSvg: "file-text",
-    photo: "/images/gallery/g5.webp",
-    gallery: ["/images/gallery/g5.webp", "/images/gallery/g6.webp"],
+    photo: "/images/gallery/case-craft-5-fdp.webp",
+    gallery: ["/images/gallery/case-craft-5-fdp.webp", "/images/gallery/g5.webp", "/images/gallery/g6.webp"],
     featured: false,
     description: "In partnership with the Center for Professional Development (CPD), FMC and LEADS conducted 'Case Craft 5.0,' a 5-day national FDP for 30+ educators. The program trained participants in advanced case study writing, generative AI integration, data analytics pedagogy, and NBA/NAAC outcome-based evaluation frameworks.",
     seriesHighlights: [
