@@ -102,7 +102,7 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 17, title: "Kunal Bhadauria", subtitle: "Vice President", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
   { id: 18, title: "Kayomarz Pavri", subtitle: "Head - Design & Digital Media", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
   { id: 19, title: "Shwetha S", subtitle: "Head - Design & Social Media", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
-  { id: 20, title: "Sudev Mitra", subtitle: "Chief Coordinator", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 20, title: "Sudev Mitra", subtitle: "Student Trainee Associate", category: "Student Trainee Associates", page: "/about", component: "BoardMemberCard" },
   { id: 21, title: "Jyotsna Karn", subtitle: "Chief Coordinator", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
   { id: 22, title: "Pranav P J", subtitle: "Chief Coordinator", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
   { id: 23, title: "Shravya T", subtitle: "Chief Coordinator", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
