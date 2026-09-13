@@ -32,16 +32,24 @@ export default function AboutPage() {
   ];
 
   // Partition member categories
+  const centersLeadershipMembers = BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centers Leadership");
+  const governingAdvisoryMembers = BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Governing & Advisory");
+  const alumniCouncilMembers = BOARD_MEMBERS_DATA.filter(
+    (m) => m.roleGroup === "Alumni Student Council" || m.roleGroup === "Student Core Council"
+  );
+  const traineeAssociateMembers = BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Trainee Associates");
+
+  // Partition member categories
   const partitions = [
     {
       id: "centers-leadership",
       group: "Centers Leadership" as const,
       title: "Centers Leadership",
       badge: "Governance Tier 01",
-      count: "8 Leaders",
+      count: `${centersLeadershipMembers.length} Leaders`,
       description:
         "High-level institutional patronage, executive deanship, centre leadership, and faculty leads guiding daily operations, incubation programs, and fiscal governance.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Centers Leadership"),
+      members: centersLeadershipMembers,
       columns: 4,
     },
     {
@@ -49,10 +57,10 @@ export default function AboutPage() {
       group: "Governing & Advisory" as const,
       title: "Governing & Corporate Advisory Board",
       badge: "Governance Tier 02",
-      count: "6 Distinguished Advisors",
+      count: `${governingAdvisoryMembers.length} Distinguished Advisors`,
       description:
         "Eminent policy makers, government leaders (AIM, NSDC, MeitY, INDIAai), and global corporate executives providing nationwide strategic direction.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Governing & Advisory"),
+      members: governingAdvisoryMembers,
       columns: 3,
     },
     {
@@ -60,12 +68,10 @@ export default function AboutPage() {
       group: "Alumni Student Council" as const,
       title: "Alumni Student Council",
       badge: "Governance Tier 03",
-      count: "10 Officers",
+      count: `${alumniCouncilMembers.length} Officers`,
       description:
         "Alumni student executive leadership spearheading legacy summits, mentorship, public relations, operations, and strategic advisory.",
-      members: BOARD_MEMBERS_DATA.filter(
-        (m) => m.roleGroup === "Alumni Student Council" || m.roleGroup === "Student Core Council"
-      ),
+      members: alumniCouncilMembers,
       columns: 4,
     },
     {
@@ -73,10 +79,10 @@ export default function AboutPage() {
       group: "Student Trainee Associates" as const,
       title: "Core Committee",
       badge: "Governance Tier 04",
-      count: "15 Members",
+      count: `${traineeAssociateMembers.length} Members`,
       description:
         "The operational powerhouse managing ground logistics, digital media, creative design, communications, finance, and summit workflows.",
-      members: BOARD_MEMBERS_DATA.filter((m) => m.roleGroup === "Student Trainee Associates"),
+      members: traineeAssociateMembers,
       columns: 4,
     },
   ];
