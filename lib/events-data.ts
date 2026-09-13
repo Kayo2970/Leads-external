@@ -87,31 +87,30 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Executive Retreat Series",
     category: "Conclave",
     subCategory: "Institutional Ceremonies",
-    tagline: "Elite Experiential Governance, Off-Campus Team Dynamics & Leadership Initiative",
+    tagline: "Experiential Governance, Team Dynamics & Adventure-Based Leadership Development",
     date: "1 Mar 2026",
-    location: "Off-Campus Executive Retreat Venue, Karnataka",
+    location: "RR Retreat, Bengaluru",
     attendees: "25 Students • 5 Faculty Benefited",
     badgeColor: "bg-amber-100 text-amber-900 border-amber-200",
     logoSvg: "award",
     photo: "/images/gallery/g1.webp",
     gallery: ["/images/gallery/g1.webp", "/images/gallery/g2.webp"],
     featured: true,
-    description: "An elite executive vanguard track empowering C-suite executives, directors, and institutional stalwarts to master board governance, strategic realignment, high-stakes negotiation, and disruptive venture stewardship.",
+    description: "The Vanguard Leadership Retreat 2026 at RR Retreat, Bengaluru brought together student leaders for a day designed to develop a strong leadership mindset, encourage teamwork through collaboration and communication, and promote self-discovery around individual strengths and values. Team-building exercises and group discussions built cooperation and conflict-resolution skills in applied settings, while guided reflective sessions pushed students to articulate clear personal goals, ethics, and a sense of purpose. Adventure activities — including swimming and a series of fun games reduced stress while deepening trust and bonding between council members in an informal setting that complemented the day's more structured leadership work, deliberately designed to push students out of their comfort zones and prepare them for genuinely impactful, responsible leadership roles.",
     seriesHighlights: [
-      "Boardroom dynamics & strategic governance masterclasses",
-      "Enterprise resilience, ethics, & crisis scenario navigation",
-      "Peer-to-peer executive roundtables & global benchmarking",
-      "Exclusive access to LEADS senior advisory & policy networks"
+      "Team-building exercises and group discussions building applied cooperation and conflict-resolution skills",
+      "Guided reflective sessions empowering student leaders to articulate personal goals, ethics, and core purpose",
+      "Adventure activities and fun games including swimming to reduce stress and deepen council trust",
+      "Experiential leadership design pushing students out of comfort zones for responsible executive readiness"
     ],
     outcomes: [
-      "Executive governance certification for senior fellows",
-      "Strategic realignment framework for enterprise leaders",
-      "High-stakes negotiation simulations"
+      "Personal Vision & Core Values: Students gained clarity on their personal vision, goals, and core values through guided reflective sessions distinct from the day's recreational activities.",
+      "Interpersonal Trust & Coordination: Participants strengthened trust and interpersonal bonds through adventure-based team activities, directly supporting future coordination on LEADS-led initiatives."
     ],
     speakers: [
       "Prof. (Dr.) K. M. Sharath Kumar (Dean, FMC, RUAS & Chief Advisor, LEADS)",
       "Dr. Subhadeep Mukherjee (Centre Head, LEADS)",
-      "Senior Corporate Advisory Board Members"
+      "LEADS Executive Student Council Mentors"
     ],
     editions: []
   },
@@ -193,11 +192,11 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "9th-state-level-seminar",
     placeholderId: 60,
-    name: "9th State Level Seminar – Transformation for the Nation",
+    name: "9th State Level Seminar – \"Transformation for the Nation\"",
     seriesName: "Outreach Programmes",
     category: "Outreach",
     subCategory: "Outreach",
-    tagline: "State-Wide Administrative Transformation & Youth Leadership Forum",
+    tagline: "Youth Leadership, Personal Transformation & Civic Responsibility for National Progress",
     date: "14 Aug 2025",
     location: "Convention Hall, Bengaluru",
     attendees: "40 Students • 5 Faculty Benefited",
@@ -206,17 +205,28 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g2.webp",
     gallery: ["/images/gallery/g2.webp", "/images/gallery/g3.webp"],
     featured: false,
-    description: "State-level seminar bringing together administrative leaders, policy scholars, and student delegates to discuss nation-building, administrative efficiency, and public sector governance.",
+    description: "The 9th State-Level Seminar on 'Transformation for the Nation', held on 14th August 2025 and co-organised by Vishwamanava Yuva Vedike and Queen's Global Management Solutions, was moderated by Dr. Madhurani Gowda across five sessions focused on personal transformation as the foundation of national progress. Sri Ullas Kamath highlighted higher education's role in fostering critical thinking and entrepreneurship, Dr. C. Somasekhara, IAS emphasized continuous self-reinvention and societal contribution, and Sri Mahesh Masal explored citizen responsibility through the 'I' factor. A cultural segment celebrating resilience and patriotism preceded the closing panel featuring ACP Dr. Priyadarshini Sanikopp, Dr. Varunmurthy (Rebuild India Foundation), Ms. Gangavva Neelappa Harijana, and Dr. Manjunath (Baby Science), who reinforced the importance of civic responsibility, resilience, innovation, and grassroots development in shaping India's transformation.",
     seriesHighlights: [
-      "State-level governance & nation-building panels",
-      "Interactive sessions with public service administrators",
-      "Youth policy whitepaper presentations"
+      "Five focused seminar sessions on personal transformation as the core engine of national progress",
+      "Keynote by Sri Ullas Kamath on higher education fostering critical thinking and entrepreneurship",
+      "Administrative leadership address by Dr. C. Somasekhara, IAS on continuous self-reinvention and societal contribution",
+      "Citizen responsibility masterclass by Sri Mahesh Masal on the personal 'I' factor in civic duty",
+      "Closing panel with ACP Dr. Priyadarshini Sanikopp, Dr. Varunmurthy, Ms. Gangavva Neelappa Harijana, and Dr. Manjunath"
     ],
     outcomes: [
-      "State-wide student delegate representation",
-      "Youth governance recommendations submitted to policy boards"
+      "National Thought Leadership Exposure: Students gained direct exposure to national thought leaders, strengthening their understanding of self-leadership and national development.",
+      "Social Responsibility and Civic Action: Participants were inspired to apply transformation principles toward social responsibility, grassroots innovation, and nation-building."
     ],
-    speakers: ["State Administration Stalwarts", "LEADS Policy Mentors"],
+    speakers: [
+      "Sri Ullas Kamath (Corporate Leader & Entrepreneurship Advocate)",
+      "Dr. C. Somasekhara, IAS (Distinguished Administrator)",
+      "Sri Mahesh Masal (Civic Thought Leader)",
+      "ACP Dr. Priyadarshini Sanikopp (Assistant Commissioner of Police)",
+      "Dr. Varunmurthy (Rebuild India Foundation)",
+      "Ms. Gangavva Neelappa Harijana (Grassroots Leader)",
+      "Dr. Manjunath (Baby Science)",
+      "Dr. Madhurani Gowda (Seminar Moderator)"
+    ],
     editions: []
   },
   {
@@ -226,26 +236,32 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Outreach Programmes",
     category: "Outreach",
     subCategory: "Outreach",
-    tagline: "Experiential Learning Delegation to Rashtrapati Bhavan & Bharat Mandapam",
+    tagline: "Experiential Learning Delegation to Rashtrapati Bhavan, iPHEX 2025 & Bharat Mandapam",
     date: "3–6 Sep 2025",
-    location: "Rashtrapati Bhavan, IITF & Bharat Mandapam, New Delhi",
+    location: "Rashtrapati Bhavan, IITF & Key Landmarks, New Delhi",
     attendees: "6 Students • 1 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
     photo: "/images/gallery/g3.webp",
     gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
     featured: false,
-    description: "Experiential delegation visit to New Delhi, providing student delegates with direct exposure to national governance at Rashtrapati Bhavan, international trade at IITF, and industrial technology at MachTech Expo in Bharat Mandapam.",
+    description: "Six students from the Faculty of Management & Commerce, MSRUAS, undertook a three-day educational and cultural visit to New Delhi from 3rd to 6th September 2025, designed to deliver experiential learning, global industry exposure, and cultural enrichment together. The journey opened with a guided tour of Rashtrapati Bhavan, taking in Durbar Hall where national honours such as the Padma Bhushan and Bharat Ratna are conferred, the Presidential diplomatic rooms, the State Banquet Hall, and a ground-floor tribal heritage exhibition, before moving to Akshardham Temple for reflection. Day two combined the Pharma Med 2025 Expo with visits to the Lotus Temple, the Supreme Court, and ministerial residences across the capital. The final day brought the group to the 11th edition of iPHEX 2025 at Bharat Mandapam, where students engaged directly with international healthcare delegates, before visiting the Pradhan Mantri Sangrahalaya where they experienced an AI-generated photograph with the Hon'ble Prime Minister and closing at India Gate with the tiranga light show, a tribute to India's soldiers that brought the trip's blend of professional exposure and national pride full circle.",
     seriesHighlights: [
-      "Guided delegation tour of Rashtrapati Bhavan & national landmarks",
-      "Industrial technology study at MachTech Expo, Bharat Mandapam",
-      "Interaction with central trade & policy officials"
+      "Guided tour of Rashtrapati Bhavan including Durbar Hall, Presidential diplomatic rooms, and tribal heritage gallery",
+      "Supreme Court of India and ministerial residence educational visit",
+      "Industry networking at Pharma Med 2025 Expo and 11th edition of iPHEX 2025 at Bharat Mandapam",
+      "Interactive digital visit to Pradhan Mantri Sangrahalaya and India Gate tiranga light tribute"
     ],
     outcomes: [
-      "Firsthand exposure to national policy and industrial exhibitions",
-      "Delegation report presented to university chancellor"
+      "Global Industry Exposure: Students gained global industry exposure across two major expos (Pharma Med and iPHEX 2025), building direct professional connections with international healthcare delegates.",
+      "National Heritage & Governance Insight: Participants developed a sharper sense of India's governance and heritage through first-hand access to Rashtrapati Bhavan, the Supreme Court, and the Prime Ministers' Museum."
     ],
-    speakers: ["Rashtrapati Bhavan Officers", "IITF Trade Delegation Leads"],
+    speakers: [
+      "Rashtrapati Bhavan Protocol Officers",
+      "iPHEX 2025 International Healthcare Delegates",
+      "Pharma Med 2025 Industrial Leads",
+      "FMC RUAS Faculty Escort"
+    ],
     editions: []
   },
   {
@@ -255,55 +271,68 @@ export const EVENTS_DATA: LEADSEvent[] = [
     seriesName: "Outreach Programmes",
     category: "Outreach",
     subCategory: "Outreach",
-    tagline: "Future-Ready Talent Management & Organisational Culture",
+    tagline: "\"Getting Market Benchmarking Right: What Works, What Fails, What Matters\" with Mercer India",
     date: "30 Apr 2026",
-    location: "Bengaluru",
+    location: "SJIM's Loyola Auditorium, Bangalore",
     attendees: "2 Students • 1 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
     photo: "/images/gallery/g4.webp",
     gallery: ["/images/gallery/g4.webp"],
     featured: false,
-    description: "Collaborative HR leadership session organized with National HRD Network (NHRD) Bangalore Chapter, addressing non-technical skills gap, modern corporate culture, and workforce agility.",
+    description: "LEADS Next Gen Centre attended the NHRD Bangalore Chapter's Thought Leadership Meet on 30th April 2026 at SJIM's Loyola Auditorium, where a pre-session networking hour gave students direct access to HR practitioners before the keynote by Ms. Malathi KS, Director of Rewards Consulting at Mercer India and a career practitioner across Bosch, Nestlé, Volvo, Infosys, HCL, and Xerox. Her central argument distinguished 'confidence without clarity' from genuine strategic insight, illustrated through four anonymised client cases: a Pune manufacturing firm losing engineers to a nearby IT park paying 35–40% more, costing roughly ₹8 crore over two years against an unquestioned peer group; and a bank that invested ₹22 crore moving roles to the 75th percentile only to see attrition unchanged. The session introduced a three-dimension skill-based pay model: availability, criticality, and replaceability alongside the new Labour Code's 50% basic-wage requirement, closing with a ten-question checklist for evaluating any compensation survey and the framing of benchmarking as 'a compass, not a crutch.'",
     seriesHighlights: [
-      "Bridging university talent with corporate HR expectations",
-      "Panel on 21st-century non-technical skill requirements",
-      "Networking session with NHRD Bangalore executive board"
+      "Keynote address by Ms. Malathi KS (Director of Rewards Consulting, Mercer India) on market benchmarking",
+      "Real-world forensic analysis of ₹8 crore and ₹22 crore compensation misallocation case studies",
+      "Introduction of three-dimension skill-based pay model: availability, criticality, and replaceability",
+      "Navigating the new Labour Code's 50% basic-wage requirement and ten-question survey evaluation checklist",
+      "Pre-session executive networking hour giving direct access to senior HR practitioners"
     ],
     outcomes: [
-      "Joint HR certification initiative",
-      "Corporate mentorship allocations for student leaders"
+      "Compensation & Attrition Dynamics: Students gained practical insights into how compensation decisions influence attrition and business outcomes.",
+      "Skill-Based Pay Framework: Participants gained a practical evaluation checklist and a skill-based pay framework applicable beyond the classroom."
     ],
-    speakers: ["NHRD Chapter President", "Corporate HR Directors"],
+    speakers: [
+      "Ms. Malathi KS (Director of Rewards Consulting, Mercer India)",
+      "NHRD Bangalore Chapter Executive Committee",
+      "Senior HR Leaders across Bosch, Volvo, and Infosys"
+    ],
     editions: []
   },
   {
     id: "bma-generative-economies",
     placeholderId: 63,
-    name: "BMA Roundtable – Generative Economy \"Ushering the AI-Driven Industrial Era\"",
+    name: "BCIC Roundtable Discussion on Generative Economy",
     seriesName: "Outreach Programmes",
-    category: "Outreach",
+    category: "Roundtable",
     subCategory: "Outreach",
-    tagline: "Ushering the AI-Driven Industrial Era with Dassault Systèmes & BMA",
+    tagline: "\"Ushering the AI-Driven Industrial Era\" Hosted by Dassault Systèmes",
     date: "10 May 2026",
-    location: "Dassault Systèmes / BMA, Bengaluru",
+    location: "Dassault Systèmes, Bengaluru",
     attendees: "10 Students • 4 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
     photo: "/images/gallery/g5.webp",
     gallery: ["/images/gallery/g5.webp"],
     featured: false,
-    description: "Industry roundtable co-hosted with Bangalore Management Association and Dassault Systèmes, exploring AI-driven industrial transformation, smart manufacturing, and generative economic models.",
+    description: "The Bangalore Chamber of Industry and Commerce (BCIC) organized an exclusive Expert Committee roundtable titled 'Generative Economy – Ushering the AI-Driven Industrial Era'. Hosted by Dassault Systèmes, the session brought together 35 manufacturing, aerospace, and robotics delegates to analyze digital twins and smart value chains. Following a keynote delivered via an AI voice interface by Chairman G. Prakash, tech leaders from Rolls Royce (IAMPL), Bosch, and ANSCER Robotics addressed rising cost pressures and compressed timelines. The forum successfully enhanced Industry 4.0 readiness among local MSMEs, establishing intelligent, data-driven automation as a core benchmark for sustainable growth and industrial innovation across the regional manufacturing ecosystem.",
     seriesHighlights: [
-      "Generative AI applications in industrial engineering",
-      "Dassault Systèmes 3DEXPERIENCE platform showcase",
-      "Executive panel on digital twins & industrial automation"
+      "Exclusive BCIC Expert Committee roundtable hosted at Dassault Systèmes with 35 industry delegates",
+      "Keynote delivered via an innovative AI voice interface by Chairman G. Prakash",
+      "High-level panel featuring tech leaders from Rolls Royce (IAMPL), Bosch, and ANSCER Robotics",
+      "Strategies for digital twins, smart value chains, rising cost pressures, and compressed delivery cycles",
+      "Enhancing Industry 4.0 readiness and intelligent automation among regional MSMEs"
     ],
     outcomes: [
-      "Strategic industry-academia partnership roadmap",
-      "Executive consensus paper on AI in manufacturing"
+      "Digital Twin Strategy: Delegates and students mapped actionable approaches to manage product complexity and time-to-market constraints using digital twinning.",
+      "Ecosystem Collaboration: Strengthened structural networks between corporate tech providers and local MSMEs to accelerate AI integration."
     ],
-    speakers: ["Dassault Systèmes Directors", "BMA Executive Committee Members"],
+    speakers: [
+      "Chairman G. Prakash (BCIC Expert Committee)",
+      "Executive Leaders from Dassault Systèmes",
+      "Tech Leaders from Rolls Royce (IAMPL)",
+      "Senior Representatives from Bosch & ANSCER Robotics"
+    ],
     editions: []
   },
   {
@@ -311,28 +340,34 @@ export const EVENTS_DATA: LEADSEvent[] = [
     placeholderId: 64,
     name: "FKCCI Global MSME Conclave 2026",
     seriesName: "Outreach Programmes",
-    category: "Outreach",
+    category: "Conclave",
     subCategory: "Outreach",
-    tagline: "Scaling MSME Competitiveness, Export Policy & Financial Infrastructure",
+    tagline: "\"Sankalp to Siddhi – From Local Resolve to Global Realization\" at Palace Grounds",
     date: "29–31 May 2026",
-    location: "FKCCI Convention Center, Bengaluru",
+    location: "Tripuravasini, Palace Grounds, Bangalore",
     attendees: "8 Students • 2 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
     photo: "/images/gallery/g6.webp",
     gallery: ["/images/gallery/g6.webp"],
     featured: false,
-    description: "High-level MSME policy conclave organized by FKCCI with LEADS delegation participating in panels on export competitiveness, credit facilitation, and digital adoption for small enterprises.",
+    description: "LEADS Next Gen Centre attended the FKCCI Global MSME Conclave 2026 at Tripuravasini, Palace Grounds, conceived to strengthen MSMEs' contribution toward India's vision of a USD 10 trillion economy through knowledge-sharing on finance, technology, and global market access. Technical sessions moved across operational challenges, finance and cash-flow planning, and an Operations and Technology track on automation and Industry 4.0 practices, while dedicated sessions on succession planning and IPO readiness equipped enterprises with frameworks for capital-raising and leadership continuity. Vendor Development Master Classes created direct interaction between MSMEs and corporate buyers, while an exhibition spanning engineering, automation, robotics, and renewable energy gave the delegation floor-level access to India's manufacturing ecosystem, culminating in the MSME Excellence Awards recognising standout enterprises for innovation and sustainable growth.",
     seriesHighlights: [
-      "MSME credit facility & government subsidy masterclasses",
-      "Export competitiveness & global market access strategies",
-      "LEADS delegation engagement with FKCCI office bearers"
+      "Strategic conclave aligning MSMEs with India's vision of a USD 10 trillion economy",
+      "Operations & Technology track on automation, robotics, and Industry 4.0 practices",
+      "Masterclasses on cash-flow planning, succession frameworks, and IPO readiness for capital-raising",
+      "Vendor Development Master Classes enabling direct interaction between MSMEs and corporate buyers",
+      "Exhibition floor access and MSME Excellence Awards ceremony"
     ],
     outcomes: [
-      "MSME internship pipeline for university students",
-      "Policy recommendations for state trade boards"
+      "Entrepreneurial & Operational Mastery: LEADS Next Gen Centre members and student delegates gained practical insights into entrepreneurship, MSME business challenges, digital transformation, finance management, export readiness and succession planning.",
+      "Supply Chain & IPO Readiness: Exposure to vendor development, IPO readiness and global supply chain integration; strengthened entrepreneurial mindset and industry awareness."
     ],
-    speakers: ["FKCCI President", "Ministry of MSME Representatives"],
+    speakers: [
+      "FKCCI Office Bearers & Trade Committee Chairs",
+      "Ministry of Micro, Small & Medium Enterprises (MSME) Representatives",
+      "Corporate Supply Chain Directors & Financial Structuring Leads"
+    ],
     editions: []
   },
   {
@@ -340,9 +375,9 @@ export const EVENTS_DATA: LEADSEvent[] = [
     placeholderId: 65,
     name: "Anvaya Innovation Summit 2026",
     seriesName: "Outreach Programmes",
-    category: "Outreach",
+    category: "Summit",
     subCategory: "Outreach",
-    tagline: "Innovation for Impact - From Vision to Action",
+    tagline: "\"Innovation for Impact – From Vision to Action\" at NIMHANS Convention Centre",
     date: "22 Jan 2026",
     location: "NIMHANS Convention Centre, Bengaluru",
     attendees: "25 Students • 5 Faculty Benefited",
@@ -351,48 +386,146 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g6.webp",
     gallery: ["/images/gallery/g6.webp", "/images/gallery/g7.webp"],
     featured: true,
-    description: "LEADS Next Gen Centre attended the Anvaya Innovation Summit 2026 at NIMHANS Convention Centre on 22nd January 2026, structured across four tracks examining how innovation ecosystems transform through the convergence of policy, corporate engagement, and academic leadership. Included the witnessing of an MOA signing between Vision Karnataka Foundation and Kishkinda University.",
+    description: "LEADS Next Gen Centre attended the Anvaya Innovation Summit 2026 at NIMHANS Convention Centre on 22nd January 2026, structured across four tracks designed to examine how innovation ecosystems transform through the convergence of policy, corporate engagement, and academic leadership. The inaugural plenary framed innovation-led governance as a tool for measurable societal outcomes, the Policy Track reframed regulation as a platform rather than a constraint, and the Corporate Panel turned to AI-driven business rebirth, stressing that technological progress must be paired with ethics and purpose-driven leadership. The Academic Panel proved a particular highlight, with RUAS Vice Chancellor Prof. K. K. Raina arguing that universities must function as full innovation ecosystems rather than knowledge-dissemination centres. The day closed with the signing of an MOA between Vision Karnataka Foundation and Kishkinda University, witnessed directly by the 25-student LEADS delegation, followed by a valedictory session reinforcing the collective commitment to sustained, real-world action.",
     seriesHighlights: [
-      "Inaugural plenary framing innovation-led governance for societal outcomes",
-      "Policy track reframing regulation as a platform for growth",
-      "Corporate Panel on AI-driven business rebirth & ethical progress",
-      "Academic Panel with RUAS Vice Chancellor Prof. K. K. Raina on university innovation ecosystems",
-      "MOA signing ceremony witnessed by 25-student LEADS delegation"
+      "Four thematic tracks spanning innovation governance, policy platforms, corporate rebirth, and academia",
+      "Academic Panel keynote by RUAS Vice Chancellor Prof. K. K. Raina on universities as complete innovation ecosystems",
+      "Corporate panel exploring ethical frameworks and purpose-driven leadership in AI transformations",
+      "Witnessed the historic MOA signing between Vision Karnataka Foundation and Kishkinda University",
+      "25-student LEADS delegation engaging in cross-sectoral dialogues and valedictory resolutions"
     ],
     outcomes: [
-      "Direct visibility into institutional partnership-building and MOA signing",
-      "Insights into AI-driven business transformation and ethical leadership"
+      "Institutional Partnership Visibility: Participants gained direct visibility into institutional partnership-building, witnessing the MOA signing as a live collaborative model for sustainable growth.",
+      "Cross-Sectoral Ecosystem Literacy: Students engaged in cross-sectoral dialogue spanning policy, corporate, and academic perspectives, strengthening their understanding of inclusive innovation ecosystems."
     ],
-    speakers: ["Prof. K. K. Raina (Vice Chancellor, RUAS)", "Vision Karnataka Foundation Stalwarts"],
+    speakers: [
+      "Prof. K. K. Raina (Vice Chancellor, Ramaiah University of Applied Sciences - RUAS)",
+      "Vision Karnataka Foundation Leadership",
+      "Kishkinda University Chancellery & Academic Leaders",
+      "Corporate Innovation & Policy Track Panelists"
+    ],
     editions: []
   },
   {
     id: "bcic-esg-awards",
     placeholderId: 65,
-    name: "BCIC EHS & Sustainability Awards, 3rd Edition",
+    name: "BCIC Annual EHS & Sustainability Awards – 3rd Edition",
     seriesName: "Outreach Programmes",
-    category: "Outreach",
+    category: "Sustainability",
     subCategory: "Outreach",
-    tagline: "Recognizing Excellence in Corporate Climate Action & Social Responsibility",
+    tagline: "\"Advancing Sustainability Towards Net Zero\" Recognizing Corporate Climate Leadership",
     date: "14 May 2026",
-    location: "BCIC Auditorium, Bengaluru",
+    location: "Bengaluru",
     attendees: "8 Students • 1 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
     photo: "/images/gallery/g7.webp",
     gallery: ["/images/gallery/g7.webp"],
     featured: false,
-    description: "3rd annual BCIC Sustainability Awards recognizing enterprise leaders across climate action, water stewardship, circular economy, ESG compliance, and community impact.",
+    description: "LEADS Next Gen Centre attended the 3rd Edition of the BCIC Annual EHS & Sustainability Awards, recognising companies across five categories: climate action, water management, circularity, employee diversity, and well-being from over 50 applications spanning Karnataka and beyond. TTK Prestige's Chief Manufacturing Officer detailed a programme tying 20% of employee pay to plant-specific KPIs, anchored by 6.7 MW of installed rooftop solar, a 55% emission cut against 2020 baseline, and a 60.6% improvement in water efficiency, backed by ₹79 crore in sustainability capital expenditure. An IIM Bangalore researcher presented the new India BRSR Index, built on AI-analysed data from all 1,000 top-listed Indian companies, designed to correct global ESG frameworks that measure risk to companies rather than harm caused by them. A major IT firm closed by describing its Global Energy Command Centre, monitoring energy across 90% of 21 campuses at an efficiency index roughly 50% better than industry average, reinforcing sustainability as a measurable business discipline rather than a compliance checkbox.",
     seriesHighlights: [
-      "Felicitation of top corporate ESG achievers in Karnataka",
-      "Best practices in corporate carbon neutrality & waste management",
-      "LEADS student delegation benchmarking corporate ESG frameworks"
+      "Recognition of sustainability leaders across climate action, water management, circularity, and employee diversity",
+      "Case presentation by TTK Prestige on ₹79 crore sustainability capex and tying 20% employee pay to green KPIs",
+      "Presentation of the new AI-powered India BRSR Index benchmarking top 1,000 listed Indian corporations",
+      "Showcase of Global Energy Command Centre monitoring 21 enterprise campuses with 50% higher efficiency",
+      "Benchmarking sustainability as a core operational discipline versus routine compliance checkmarking"
     ],
     outcomes: [
-      "Student council ESG auditing exposure",
-      "Corporate sustainability networking for research fellows"
+      "Frontiers of Sustainable Business Practice: LEADS students gained exposure to frontiers of sustainable business practice; insights into BRSR reporting, ESG rating frameworks, circular economy, Scope 3 supply chain engagement and climate action.",
+      "Embedded Business Discipline: Reinforced that sustainability is an embedded business discipline, not merely a compliance exercise.",
+      "Sustainability Leadership Orientation: Strengthened sustainability-conscious leadership orientation among participating students."
     ],
-    speakers: ["Mr. Prashant Gokhale (President, BCIC)", "ESG Committee Chairs"],
+    speakers: [
+      "Chief Manufacturing Officer, TTK Prestige",
+      "IIM Bangalore BRSR Index Research Team",
+      "Global IT Enterprise Sustainability Directors",
+      "BCIC EHS & Sustainability Committee Office Bearers"
+    ],
+    editions: []
+  },
+  {
+    id: "pre-summit-india-ai-impact-2026",
+    placeholderId: 79,
+    name: "Pre-Summit: India AI Impact Summit 2026",
+    seriesName: "AI Policy & Impact Summits",
+    category: "Roundtable",
+    subCategory: "Outreach",
+    tagline: "\"AI Guidelines and Pathways: Shaping a Human-Centric and Responsible AI Future\"",
+    date: "15 Jan 2026",
+    location: "Ramaiah Medical College Board Room, Bangalore",
+    attendees: "45 Industry Leaders & Academic Experts",
+    badgeColor: "bg-purple-100 text-[#9C1256] border-purple-200",
+    logoSvg: "award",
+    photo: "/images/gallery/g1.webp",
+    gallery: ["/images/gallery/g1.webp", "/images/gallery/g2.webp"],
+    featured: true,
+    description: "The Pre-Summit Knowledge Session for the India AI Impact Summit 2026, held at the Ramaiah Medical College Board Room, was structured around four thematic roundtables spanning Industry Skill Demand & Deployment, the Research & Innovation Ecosystem, the National Security Framework, and Academic Transformation. Roundtable 1 was convened directly by LEADS Centre Head Dr. Subhadeep Mukherjee alongside FMC's Dr. Pallabi Mund and Dr. Jitendra Kumar, under the theme 'AI Guidelines and Pathways: Shaping a Human-Centric and Responsible AI Future for Industries in India.' Moderated by [24]7.ai's Dr. Ganesaraman, the roundtable convened panelists spanning startups, healthcare, HR, and academia, with outcomes designed to feed directly into the main India AI Impact Summit 2026. Deliberations addressed building critical thinking alongside AI fluency, healthcare access beyond metro hubs, auditing data veracity, pure science foundations, disciplined AI adoption via the 4Ds framework, and algorithm-monitoring practices to prevent bias in AI-driven HR recruitment.",
+    seriesHighlights: [
+      "Four thematic roundtables on Industry Skill Demand, Research Innovation, National Security, and Academic Transformation",
+      "Roundtable 1 convened by LEADS Centre Head Dr. Subhadeep Mukherjee, Dr. Pallabi Mund & Dr. Jitendra Kumar",
+      "Moderated by Dr. Ganesaraman ([24]7.ai) with panelists across healthcare, tech startups, HR, and academia",
+      "Expert contributions from SeedlingLabs, BHIVE, RaceHorse Consulting, KrutiBimb, East-West Group, and Alstom",
+      "Strategic policy roadmap designed to directly feed the national India AI Impact Summit 2026"
+    ],
+    outcomes: [
+      "AI-Driven Skill Transitions: Participants developed a shared understanding of AI-driven skill transitions and identified critical priority skill clusters for emerging roles.",
+      "Policy & Curricular Roadmaps: Generated specific, actionable policy inputs and strategic roadmaps for curriculum redesign to be taken forward at the main summit."
+    ],
+    speakers: [
+      "Dr. Ganesaraman (Moderator, [24]7.ai)",
+      "Ms. Shanti Kuropati (SeedlingLabs)",
+      "Mr. Vijetha Shastry (BHIVE)",
+      "Dr. Roy (RaceHorse Consulting)",
+      "Dr. Muthukumaraswamy (KrutiBimb)",
+      "Mr. Charles Chow (East-West Group, Singapore)",
+      "Ms. Nikki Parihar (Alstom)",
+      "Dr. Subhadeep Mukherjee (Centre Head, LEADS)",
+      "Dr. Pallabi Mund & Dr. Jitendra Kumar (FMC, RUAS)"
+    ],
+    editions: []
+  },
+  {
+    id: "iisc-adelaide-deep-tech-conference",
+    placeholderId: 80,
+    name: "International Conference on Innovation & Entrepreneurship for Deep-Tech Startups",
+    seriesName: "IISc & Adelaide University Conference",
+    category: "Conclave",
+    subCategory: "Outreach",
+    tagline: "\"Role of Entrepreneurial Universities\" in Collaboration with IISc, Adelaide University & ICSSR",
+    date: "20–22 Feb 2026",
+    location: "JN Tata Auditorium, IISc Bengaluru",
+    attendees: "621 Delegates • 46 Expert Speakers",
+    badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
+    logoSvg: "award",
+    photo: "/images/gallery/g3.webp",
+    gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
+    featured: true,
+    description: "The International Conference on 'Innovation and Entrepreneurship for Deep-Tech Startups: Role of Entrepreneurial Universities' was held at the JN Tata Auditorium, IISc Bengaluru. Jointly organised by the Indian Institute of Science (IISc) and Adelaide University, and sponsored by the Indian Council of Social Science Research (ICSSR), the conference brought together 621 delegates and 46 expert speakers from academia, venture capital, and industry. Chaired by Padma Shri Dr. Prahlada Ramarao with Dr. Sujai Shivakumar as Chief Guest, the event featured insights from international experts including Prof. Noel J. Lindsay, Prof. Rishikesha T. Krishnan, Prof. M. P. Gupta, Prof. Debabrata Das, and Prof. Milind Atrey. The conference examined the growing importance of deep-tech startups, emphasizing the need for universities to evolve into Entrepreneurial Universities by integrating translational research, flexible IP frameworks, open innovation, and global collaboration. Drawing on models from Stanford, Oxford, and IIT Bombay, technical sessions explored AI deep learning, automation, digital twins across healthcare, logistics, and PropTech, alongside financial sessions mapping funding continuums from government prototype grants and iDEX to corporate venture capital (CVC). Concluding with a roadmap for Viksit Bharat 2047, Shri Ramanan Ramanathan and Dr. Anshuman Awasthi highlighted how domestic corporations must evolve into early-stage innovation partners for indigenous technologies.",
+    seriesHighlights: [
+      "International conference co-organised by IISc Bengaluru and Adelaide University, sponsored by ICSSR",
+      "Chaired by Padma Shri Dr. Prahlada Ramarao with Dr. Sujai Shivakumar as Chief Guest",
+      "46 expert speakers from Stanford, Oxford, IIT Bombay, IIM Bangalore, and IIIT Bangalore",
+      "Technical sessions on AI deep learning, digital twins, automation, asset protection, and PropTech",
+      "Funding continuum masterclasses covering prototype grants, corporate venture capital, and iDEX",
+      "Strategic Viksit Bharat 2047 closing roadmap by Shri Ramanan Ramanathan and Dr. Anshuman Awasthi"
+    ],
+    outcomes: [
+      "Global Innovation Frameworks: Students explored international innovation models and learned how India's strengths can complement global technology and entrepreneurship ecosystems.",
+      "Venture-Building & TRLs: Students learned to transform research into market-ready innovations by understanding Technology Readiness Levels (TRLs) and commercialization pathways.",
+      "Valuation & Pitch Skills: Students developed practical skills in commercialization, IP positioning, and presenting research and venture ideas across technical sessions.",
+      "Multi-Stakeholder Collaboration: Student coordinators managed event logistics while building professional connections with industry leaders, policymakers, and international academic institutions."
+    ],
+    speakers: [
+      "Dr. Prahlada Ramarao (Padma Shri, Conference Chair)",
+      "Dr. Sujai Shivakumar (Chief Guest)",
+      "Prof. Noel J. Lindsay (Adelaide University)",
+      "Prof. Rishikesha T. Krishnan (Director, IIM Bangalore)",
+      "Prof. M. P. Gupta (IIT Delhi)",
+      "Prof. Debabrata Das (Director, IIIT Bangalore)",
+      "Prof. Milind Atrey (IIT Bombay)",
+      "Shri Ramanan Ramanathan (Former Mission Director, AIM)",
+      "Dr. Anshuman Awasthi"
+    ],
     editions: []
   },
   {
@@ -710,11 +843,11 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "case-cracker-nmc",
     placeholderId: 72,
-    name: "Case Cracker – NMC Healthcare Case Study",
-    seriesName: "Expert Talks",
+    name: "Case Cracker 1.0 – NMC Healthcare's Billion-Dollar Secret",
+    seriesName: "Case Cracker Series",
     category: "Expert Talk",
     subCategory: "Expert Talks",
-    tagline: "Clinical Governance, Hospital Administration & Healthcare Case Analysis",
+    tagline: "Corporate Forensic Investigation & Governance Analysis of NMC Healthcare's Collapse",
     date: "03 Sep 2025",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "67 Students • 5 Faculty Benefited",
@@ -723,14 +856,91 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g4.webp",
     gallery: ["/images/gallery/g4.webp"],
     featured: false,
-    description: "Analytical case-cracking workshop focusing on NMC Healthcare, clinical enterprise turnaround strategies, healthcare operations, and financial auditing.",
+    description: "The LEADS Next Gen Centre, in collaboration with the Faculty of Management and Commerce, hosted 'Case Cracker 1.0,' an immersive and highly analytical academic session dedicated to analyzing the dramatic financial collapse of NMC Healthcare. This intensive corporate forensic investigation dissected the meteoric rise and catastrophic collapse of founder B.R. Shetty, whose massive healthcare empire imploded after a Muddy Waters Research exposé brought to light a staggering $6.6 billion in concealed off-book debt. The session meticulously explored the severe corporate governance deficits, dual-ledger accounting frauds, and blatant external auditing failures that shattered global investor confidence and dismantled a prominent multinational enterprise. The primary strategic objective of this case analysis was to train students to systematically master the diagnostic identification of critical corporate red flags, including unrecorded liabilities, complex off-balance-sheet vehicles, and inflated asset valuations. By evaluating the rigorous administrative and business recovery procedures led by Alvarez & Marsal, the workshop challenged participants to evaluate the systemic failure of external auditing bodies and the critical loss of professional skepticism under client pressure. This interdisciplinary exploration successfully bridged theoretical finance with corporate governance, illustrating the non-negotiable role of independent internal audit controls in modern global corporate management.",
     seriesHighlights: [
-      "Empirical case dissection of NMC Healthcare operational model",
-      "Hospital administration & financial restructuring insights",
-      "Interactive group case presentation and juror review"
+      "In-depth forensic dissection of NMC Healthcare's $6.6 billion concealed debt collapse",
+      "Analysis of Muddy Waters Research exposé, dual-ledger accounting frauds, and audit deficits",
+      "Masterclass on identifying corporate red flags, off-balance-sheet vehicles, and asset inflation",
+      "Evaluation of Alvarez & Marsal administrative business recovery procedures and auditor independence failures",
+      "Bridging corporate governance theory with practical forensic accounting and risk controls"
     ],
-    outcomes: ["Healthcare case analysis certification", "Analytical thinking toolkit"],
-    speakers: ["Healthcare Management Experts", "LEADS Case Faculty"],
+    outcomes: [
+      "Forensic Auditing and Red-Flag Analysis: Student analysts developed actionable competence in identifying unrecorded liabilities, duplicate ledger systems, and off-balance-sheet debt within complex multinational corporate reports.",
+      "Governance and Strategic Skepticism Literacy: Participating students acquired professional-grade skepticism and evaluative frameworks to assess auditor independence, evaluate internal control structures, and appreciate the strategic necessity of corporate transparency."
+    ],
+    speakers: [
+      "Faculty of Management and Commerce (FMC) Forensic Finance Leads",
+      "LEADS Corporate Governance Faculty Panel"
+    ],
+    editions: []
+  },
+  {
+    id: "case-craft-5-fdp",
+    placeholderId: 77,
+    name: "Case Craft 5.0 – Five-Day FDP",
+    seriesName: "Faculty Development Programmes",
+    category: "Workshop",
+    subCategory: "Expert Talks",
+    tagline: "\"Reimagining Management Education Through Effective Case-Based Pedagogy\"",
+    date: "15–19 Dec 2025",
+    location: "Faculty of Management and Commerce (FMC), RUAS",
+    attendees: "30+ Faculty Educators & Industry Professionals",
+    badgeColor: "bg-indigo-100 text-indigo-900 border-indigo-200",
+    logoSvg: "file-text",
+    photo: "/images/gallery/g5.webp",
+    gallery: ["/images/gallery/g5.webp", "/images/gallery/g6.webp"],
+    featured: false,
+    description: "The Faculty of Management and Commerce, in strategic partnership with the Center for Professional Development (CPD) and the LEADS Next Gen Centre, successfully conducted 'Case Craft 5.0,' an intensive five-day Faculty Development Programme (FDP) dedicated to redefining business education. This comprehensive program brought together over 30 academic educators and industry professionals from across India, engaging them in a hands-on learning ecosystem focused on mastering advanced case study construction, structured classroom facilitation, and outcome-based pedagogical assessments. The fundamental strategic objective was to elevate academic delivery standards by integrating modern digital imperatives including advanced data analytics and generative Artificial Intelligence into traditional curricula. By aligning teaching practices with elite international standards and the requirements of NBA/NAAC accreditation frameworks, the sessions trained participants in structured case writing and qualitative analysis, transforming classrooms into technology-ready hubs of critical thinking.",
+    seriesHighlights: [
+      "Five-day intensive national FDP co-hosted by FMC, Center for Professional Development (CPD) & LEADS",
+      "Hands-on ecosystem focused on advanced case study construction and structured classroom facilitation",
+      "Integrating generative AI, advanced data analytics, and digital business tools into pedagogical curricula",
+      "Aligning management teaching methodologies with NBA/NAAC accreditation frameworks",
+      "Training 30+ national educators to build technology-ready hubs of lateral and critical thinking"
+    ],
+    outcomes: [
+      "Elevated Pedagogy Engagement: Student cohorts experienced a direct qualitative upgrade in active classroom engagement, benefiting from advanced case-study methods that foster lateral thinking and structured business analysis.",
+      "Data-Driven Problem Solving Readiness: Participating student groups mastered contemporary industry analytical frameworks by solving business cases integrated with artificial intelligence and digital market data."
+    ],
+    speakers: [
+      "Center for Professional Development (CPD) Master Facilitators",
+      "Senior Case Writers & Management Educators",
+      "LEADS Pedagogical Innovation Leads"
+    ],
+    editions: []
+  },
+  {
+    id: "mindful-leadership-heis-workshop",
+    placeholderId: 78,
+    name: "International Workshop: Mindful Leadership and Well-Being in HEIs",
+    seriesName: "International Workshops",
+    category: "Workshop",
+    subCategory: "Expert Talks",
+    tagline: "Conscious Leadership & Stress Resilience with Swami Parameshwar Das Maharaj Ph.D (NYU)",
+    date: "12 Oct 2025",
+    location: "LEADS Next Gen Centre, RUAS",
+    attendees: "75 Students • 15 Faculty Benefited",
+    badgeColor: "bg-teal-100 text-teal-900 border-teal-200",
+    logoSvg: "users",
+    photo: "/images/gallery/g7.webp",
+    gallery: ["/images/gallery/g7.webp"],
+    featured: false,
+    description: "The LEADS Next Gen Centre, with the Faculty of Management and Commerce serving as its Knowledge Partner, organized an impactful International Workshop titled 'Mindful Leadership and Well-Being in Higher Education Institutions.' Featuring an inspiring session by world-renowned spiritual consultant Swami Parameshwar Das Maharaj Ph.D in Organizational Psychology, NYU, the program was designed to introduce academic leaders and administrators to the strategic advantages of transitioning from reactive management styles to an 'awakened,' conscious leadership framework. Swamiji seamlessly bridged ancient Vedic spiritual principles with contemporary organizational psychology to address professional burnout, high cognitive loads, and institutional stress. The primary strategic objective was to provide leaders with actionable practices in emotional literacy, deep breathwork, and sensory mindfulness to manage complex workloads while fostering a highly compassionate, 'Heart-Centered' approach to team management.",
+    seriesHighlights: [
+      "International masterclass by Swami Parameshwar Das Maharaj Ph.D (Organizational Psychology, NYU)",
+      "Bridging ancient Vedic spiritual principles with modern organizational psychology",
+      "Actionable techniques for emotional literacy, deep breathwork, and sensory mindfulness",
+      "Heart-Centered leadership frameworks to prevent burnout and mitigate high cognitive loads",
+      "Reflective fireside segment on values-driven inner development and peer collaboration"
+    ],
+    outcomes: [
+      "Stress Resilience and Self-Awareness: Students learned practical mindfulness, breathwork, and self-reflection techniques to manage stress and enhance performance under pressure.",
+      "Compassionate Team Leadership: Students developed communication and emotional intelligence skills to foster empathy, collaboration, and psychological safety within teams."
+    ],
+    speakers: [
+      "Swami Parameshwar Das Maharaj Ph.D (Organizational Psychology, NYU; World-Renowned Spiritual Consultant)",
+      "Faculty of Management and Commerce (FMC) Academic Mentors"
+    ],
     editions: []
   },
   {
@@ -771,11 +981,11 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "fireside-talks-change-makers",
     placeholderId: 74,
-    name: "Fireside Talks – Global to Local Changemakers",
+    name: "Fireside Talk: Global to Local Changemakers",
     seriesName: "Fireside Talks",
     category: "Fireside Talk",
     subCategory: "Fireside Talks",
-    tagline: "Interactive Dialogue with International & Grassroots Leaders",
+    tagline: "Bridging Global High-Tech Insights with Grassroots Community Transformation",
     date: "10 Oct 2025",
     location: "LEADS Next Gen Centre, RUAS",
     attendees: "96 Students • 8 Faculty Benefited",
@@ -784,14 +994,25 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g6.webp",
     gallery: ["/images/gallery/g6.webp"],
     featured: false,
-    description: "Dynamic interactive dialogue series connecting international changemakers with local youth leaders, discussing social impact, startup journeys, and community transformation.",
+    description: "The LEADS Next Gen Centre at MSRUAS, in collaboration with the Faculty of Management and Commerce, successfully hosted an impactful edition of its signature 'Fireside Talks' series focusing on global-to-local changemakers driving sustainable grassroots transformation. This platform was designed to bridge high-level global industry experiences with strategic local actions, creating meaningful, community-centered societal impact. Featuring a distinguished panel of accomplished global leaders and innovators—including Ms. Padmaja Narsipur, Dr. Malali Gowda, Mr. Ramu Muthangi, and Maj. Arun Sreedharan (Retd.)—the event provided a forum for speakers to share their personal journeys, core values, and evolutionary career pivots. Crucial deliberations centered on the convergence of biotechnology, artificial intelligence, agricultural genomics, and automated hardware manufacturing as primary vehicles for localized job creation and regional economic infrastructure. To prepare emerging leaders, the session explored leveraging cutting-edge assistive technologies to drive scalable national transformation. By examining military-to-defence transitions and Silicon Valley-to-India corporate paths, the panel provided students with guidance on building proactive leadership adaptability, professional resilience, and a commitment to purpose-driven civic solutions.",
     seriesHighlights: [
-      "Unfiltered fireside Q&A with international founders",
-      "Lessons in scaling grassroots social enterprises",
-      "Cross-cultural mentorship for student leaders"
+      "Distinguished panel featuring Ms. Padmaja Narsipur, Dr. Malali Gowda, Mr. Ramu Muthangi, and Maj. Arun Sreedharan (Retd.)",
+      "Deliberations on biotechnology, AI, agricultural genomics, and automated hardware manufacturing",
+      "Examining Silicon Valley-to-India corporate journeys and military-to-defence leadership transitions",
+      "Leveraging cutting-edge assistive technologies for localized job creation and scalable civic impact",
+      "Fostering purpose-driven corporate ethics, lifelong learning, and sustainable commercial models"
     ],
-    outcomes: ["Global changemaker network access", "Social impact project canvas"],
-    speakers: ["International Changemakers", "Social Enterprise Founders"],
+    outcomes: [
+      "Workforce Transformation Literacy: Participants gained immense clarity on the transformative role of AI and robotics in reshaping future global employment structures and workforce dependencies.",
+      "Interdisciplinary Innovation Exposure: Attendees explored innovations at the intersection of digital technology, agriculture, and genetic research.",
+      "Adaptive Leadership Insights: Students gained practical lessons on resilient career growth and adaptive leadership from real-world professional journeys."
+    ],
+    speakers: [
+      "Ms. Padmaja Narsipur (Global Technology & Innovation Leader)",
+      "Dr. Malali Gowda (Distinguished Genomics & Biotechnology Scholar)",
+      "Mr. Ramu Muthangi (Enterprise Technology Stalwart)",
+      "Maj. Arun Sreedharan (Retd.) (Military Veteran & Defence Enterprise Strategist)"
+    ],
     editions: []
   },
 
@@ -835,11 +1056,11 @@ export const EVENTS_DATA: LEADSEvent[] = [
   {
     id: "green-leaders-circle",
     placeholderId: 76,
-    name: "Green Leader's Circle – NGO Visit (Janani Sevashrama)",
-    seriesName: "Sustainability Events",
+    name: "Leadership Green Circle: NGO Outreach At JananiSevashrama",
+    seriesName: "Sustainability & Outreach",
     category: "Sustainability",
     subCategory: "Sustainability",
-    tagline: "Community Impact, Social Welfare & Environmental Outreach",
+    tagline: "Community Outreach, Social Responsibility & Child Educational Empowerment",
     date: "22 Nov 2025",
     location: "Janani Sevashrama, Bengaluru",
     attendees: "20 Students • 3 Faculty Benefited",
@@ -848,14 +1069,24 @@ export const EVENTS_DATA: LEADSEvent[] = [
     photo: "/images/gallery/g8.webp",
     gallery: ["/images/gallery/g8.webp"],
     featured: false,
-    description: "Community outreach initiative by the LEADS Student Council engaging in social welfare, environmental cleanup, and community care at Janani Sevashrama.",
+    description: "The LEADS Next Gen Centre Student Council executed a transformative community outreach initiative with a visit to Janani Sevashrama, Bengaluru. Powered by the Faculty of Management and Commerce, RUAS, this social responsibility event engaged 28 children in a full day of structured recreational activity and meaningful connection, anchored by collaborative formats such as Freeze Dance, Balloon Balance, and a multi-stage Chain Reaction designed to build healthy competition, teamwork, and joy among the participating children through structured, interactive games. Beyond the activities, the Council managed full-scale procurement and distribution of educational supplies — notebooks, stationery, and treats — translating LEADS' theoretical leadership and sustainability principles into independently planned, real-world community impact. The initiative strengthened the student leadership team's organizational, interpersonal, and logistical capabilities through hands-on execution, reinforcing the university's institutional commitment to selfless community upliftment and compassionate social leadership.",
     seriesHighlights: [
-      "On-site community service at Janani Sevashrama",
-      "Environmental awareness & waste segregation drive",
-      "Direct social impact by student volunteers"
+      "Full-day structured recreational and interactive games engaging 28 children at Janani Sevashrama",
+      "Team-building formats including Freeze Dance, Balloon Balance, and multi-stage Chain Reaction",
+      "Full-scale procurement and distribution of educational notebooks, stationery kits, and treats",
+      "Hands-on project execution building organizational, interpersonal, and crisis logistics capabilities",
+      "Demonstrating compassionate social leadership and selfless community upliftment beyond the campus"
     ],
-    outcomes: ["Community impact audit report", "Green Leader service badge"],
-    speakers: ["Janani Sevashrama Directors", "LEADS Sustainability Leads"],
+    outcomes: [
+      "Project Management & Logistics: Participants developed hands-on project management proficiency, independently coordinating resource procurement, activity design, and multi-stage logistical execution for a full-scale outreach event.",
+      "Leadership in Action: Students strengthened leadership and organizational skills by applying classroom learning to deliver purpose-driven community initiatives with measurable social impact.",
+      "Empathetic Leadership Brand: The Council's execution reinforced the LEADS Next Gen Centre's brand as a premier hub for developing empathetic, purposeful leaders dedicated to long-term community welfare."
+    ],
+    speakers: [
+      "Janani Sevashrama Trustees & Administration",
+      "Faculty of Management and Commerce (FMC) Community Mentors",
+      "LEADS Student Council Outreach Leads"
+    ],
     editions: []
   }
 ];
