@@ -104,21 +104,36 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                 {event.description}
               </p>
 
-              {/* Event Metadata Strip */}
-              <div className="pt-3 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-white/90">
-                <div className="flex items-center space-x-2 bg-white/5 p-3 rounded-xl border border-white/10">
-                  <Calendar className="w-4 h-4 text-[#DE3F11] shrink-0" />
-                  <span className="truncate">{event.date}</span>
+              {/* Event Metadata Strip (Prominent Cards) */}
+              <div className="pt-3 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 text-xs">
+                <div className="flex items-center space-x-3 bg-white/10 p-3 rounded-2xl border border-white/20 shadow-xs">
+                  <div className="w-8 h-8 rounded-xl bg-[#DE3F11] text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <Calendar className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] uppercase font-extrabold tracking-wider text-white/50">Date & Schedule</div>
+                    <div className="font-extrabold text-white text-xs sm:text-sm truncate">{event.date}</div>
+                  </div>
                 </div>
 
-                <div className="flex items-center space-x-2 bg-white/5 p-3 rounded-xl border border-white/10">
-                  <MapPin className="w-4 h-4 text-[#DE3F11] shrink-0" />
-                  <span className="truncate">{event.location}</span>
+                <div className="flex items-center space-x-3 bg-white/10 p-3 rounded-2xl border border-white/20 shadow-xs">
+                  <div className="w-8 h-8 rounded-xl bg-[#9C1256] text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <MapPin className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] uppercase font-extrabold tracking-wider text-white/50">Venue / Location</div>
+                    <div className="font-extrabold text-white text-xs sm:text-sm truncate">{event.location}</div>
+                  </div>
                 </div>
 
-                <div className="flex items-center space-x-2 bg-white/5 p-3 rounded-xl border border-white/10">
-                  <Users className="w-4 h-4 text-[#DE3F11] shrink-0" />
-                  <span className="truncate">{event.attendees}</span>
+                <div className="flex items-center space-x-3 bg-gradient-to-r from-[#9C1256]/50 to-[#DE3F11]/40 p-3 rounded-2xl border border-[#DE3F11]/50 shadow-xs">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#9C1256] to-[#DE3F11] text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <Users className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] uppercase font-extrabold tracking-wider text-yellow-300">Reach & Scale</div>
+                    <div className="font-black text-white text-xs sm:text-sm truncate">{event.attendees}</div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -192,22 +192,23 @@ export default function CatalystSeriesModal({
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     {/* LEFT COLUMN: TITLE & OVERVIEW */}
                     <div className="lg:col-span-8 space-y-4">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-[11px] font-extrabold uppercase tracking-wider px-3 py-0.5 rounded-md bg-[#DE3F11]/20 text-[#FF8C61] border border-[#DE3F11]/30">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                        <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-xs">
                           {ev.name
                             .replace("Catalyst Insight: Leadership Talk Series ", "Catalyst Edition ")
                             .replace("Catalyst Insights Leadership Talk Series ", "Catalyst Edition ")}
                         </span>
-                        <span className="text-xs text-white/70 font-semibold flex items-center gap-1">
+                        <span className="text-xs text-white font-bold px-3 py-1 rounded-lg bg-white/10 border border-white/20 flex items-center gap-1.5 shadow-2xs">
                           <Calendar className="w-3.5 h-3.5 text-[#DE3F11]" />
                           <span>{ev.date}</span>
                         </span>
-                        <span className="text-xs text-white/70 font-semibold flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5 text-[#9C1256]" />
+                        <span className="text-xs text-white font-bold px-3 py-1 rounded-lg bg-white/10 border border-white/20 flex items-center gap-1.5 shadow-2xs">
+                          <MapPin className="w-3.5 h-3.5 text-[#FF8C61]" />
                           <span>{ev.location}</span>
                         </span>
-                        <span className="text-xs font-bold text-[#DE3F11] ml-auto">
-                          {ev.attendees}
+                        <span className="text-xs font-black text-white px-3 py-1 rounded-lg bg-gradient-to-r from-[#9C1256]/80 to-[#DE3F11]/80 border border-[#DE3F11]/40 flex items-center gap-1.5 shadow-2xs ml-auto">
+                          <Users className="w-3.5 h-3.5 text-yellow-300" />
+                          <span>{ev.attendees}</span>
                         </span>
                       </div>
 

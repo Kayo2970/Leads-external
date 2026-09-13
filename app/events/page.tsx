@@ -416,29 +416,35 @@ function EventsContent() {
                                     </button>
                                   </div>
 
-                                  {/* Compact Metadata Chips */}
-                                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-2.5 sm:p-3 rounded-xl bg-purple-50/70 border border-purple-100 text-xs">
-                                    <div className="flex items-start gap-1.5">
-                                      <Calendar className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
+                                  {/* Prominent Metadata Box */}
+                                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-2xl bg-gradient-to-r from-purple-50/80 via-white to-orange-50/60 border border-purple-200/90 shadow-2xs">
+                                    <div className="flex items-center gap-2.5 p-2 rounded-xl bg-white/90 border border-purple-100/90 shadow-2xs">
+                                      <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#DE3F11] flex items-center justify-center shrink-0 shadow-xs border border-orange-200/60">
+                                        <Calendar className="w-4 h-4" />
+                                      </div>
                                       <div className="min-w-0">
-                                        <div className="text-[9px] uppercase font-bold text-slate-400">Date</div>
-                                        <div className="font-bold text-[#1E0C3D] text-[11px] sm:text-xs truncate">{event.date}</div>
+                                        <div className="text-[9px] uppercase font-black tracking-wider text-slate-400">Date</div>
+                                        <div className="font-extrabold text-[#1E0C3D] text-xs truncate">{event.date}</div>
                                       </div>
                                     </div>
 
-                                    <div className="flex items-start gap-1.5">
-                                      <MapPin className="w-3.5 h-3.5 text-[#9C1256] shrink-0 mt-0.5" />
+                                    <div className="flex items-center gap-2.5 p-2 rounded-xl bg-white/90 border border-purple-100/90 shadow-2xs">
+                                      <div className="w-8 h-8 rounded-lg bg-purple-100 text-[#9C1256] flex items-center justify-center shrink-0 shadow-xs border border-purple-200/60">
+                                        <MapPin className="w-4 h-4" />
+                                      </div>
                                       <div className="min-w-0">
-                                        <div className="text-[9px] uppercase font-bold text-slate-400">Venue</div>
-                                        <div className="font-bold text-[#1E0C3D] text-[11px] sm:text-xs truncate">{event.location}</div>
+                                        <div className="text-[9px] uppercase font-black tracking-wider text-slate-400">Venue</div>
+                                        <div className="font-extrabold text-[#1E0C3D] text-xs truncate">{event.location}</div>
                                       </div>
                                     </div>
 
-                                    <div className="col-span-2 sm:col-span-1 flex items-start gap-1.5">
-                                      <Users className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
+                                    <div className="flex items-center gap-2.5 p-2 rounded-xl bg-gradient-to-r from-purple-100/70 to-pink-50/90 border border-[#9C1256]/30 shadow-2xs col-span-1">
+                                      <div className="w-8 h-8 rounded-lg bg-[#9C1256] text-white flex items-center justify-center shrink-0 shadow-xs">
+                                        <Users className="w-4 h-4" />
+                                      </div>
                                       <div className="min-w-0">
-                                        <div className="text-[9px] uppercase font-bold text-slate-400">Reach / Scale</div>
-                                        <div className="font-bold text-[#9C1256] text-[11px] sm:text-xs truncate">{event.attendees}</div>
+                                        <div className="text-[9px] uppercase font-black tracking-wider text-[#9C1256]">Reach & Impact</div>
+                                        <div className="font-black text-[#9C1256] text-xs truncate">{event.attendees}</div>
                                       </div>
                                     </div>
                                   </div>
