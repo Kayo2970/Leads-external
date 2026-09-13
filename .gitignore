@@ -8,6 +8,7 @@ out
 
 # misc
 .DS_Store
+desktop.ini
 *.pem
 *.tmp
 

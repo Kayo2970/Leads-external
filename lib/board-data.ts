@@ -366,6 +366,17 @@ export const CORE_COMMITTEE: BoardMember[] = [
     affiliation: "Core Committee",
   },
   {
+    id: "p-koushik-reddy",
+    placeholderId: 56,
+    name: "P Koushik Reddy",
+    role: "Chief Coordinator",
+    designation: "Core Committee",
+    roleGroup: "Core Committee",
+    initials: "PK",
+    image: "/images/committee/p-koushik-reddy.webp",
+    affiliation: "Core Committee",
+  },
+  {
     id: "shriram-sg",
     placeholderId: 24,
     name: "Shriram SG",
