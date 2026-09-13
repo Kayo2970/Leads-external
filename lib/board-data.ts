@@ -511,6 +511,17 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     image: "/images/committee/rohit-kumar-raj.webp",
     affiliation: "Trainee Associates Wing",
   },
+  {
+    id: "jagannadh-r-krishna",
+    placeholderId: 57,
+    name: "Jagannadh R Krishna",
+    role: "Student Trainee Associate",
+    designation: "LEADS Next Gen Centre",
+    roleGroup: "Student Trainee Associates",
+    initials: "JK",
+    image: "/images/committee/jagannadh-r-krishna.webp",
+    affiliation: "Trainee Associates Wing",
+  },
 ];
 
 export const ORGANIZING_COMMITTEE = CORE_COMMITTEE;
