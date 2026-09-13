@@ -432,7 +432,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "SM",
     image: "/images/committee/sudev-mitra.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "archana-s-nair",
@@ -443,7 +443,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "AN",
     image: "/images/committee/archana-s-nair.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "abdul-samad-khatta",
@@ -454,7 +454,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "AK",
     image: "/images/committee/abdul-samad-khatta.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "mohammed-ibrahim",
@@ -465,7 +465,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "MI",
     image: "/images/committee/mohammed-ibrahim.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "pranav-bansal",
@@ -476,7 +476,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "PB",
     image: "/images/committee/pranav-bansal.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "pruthvi-arya-singh",
@@ -487,7 +487,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "PS",
     image: "/images/committee/pruthvi-arya-singh.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "siddharth-gupta",
@@ -498,7 +498,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "SG",
     image: "/images/committee/siddharth-gupta.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "rohit-kumar-raj",
@@ -509,7 +509,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "RR",
     image: "/images/committee/rohit-kumar-raj.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
   {
     id: "jagannadh-r-krishna",
@@ -520,7 +520,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     roleGroup: "Student Trainee Associates",
     initials: "JK",
     image: "/images/committee/jagannadh-r-krishna.webp",
-    affiliation: "Trainee Associates Wing",
+    affiliation: "Trainee Associates",
   },
 ];
 
