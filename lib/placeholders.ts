@@ -123,6 +123,12 @@ export const PLACEHOLDERS_CATALOG: PlaceholderInfo[] = [
   { id: 38, title: "Mr. Anish Somani", subtitle: "Governing Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
   { id: 39, title: "Mr. Vidur Dewan", subtitle: "Corporate Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
   { id: 40, title: "Dr. Praveen Kamath Kumbla", subtitle: "Corporate Advisory Board", category: "Governing & Advisory", page: "/about", component: "BoardMemberCard" },
+  { id: 49, title: "Archana S Nair", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 50, title: "Abdul Samad Khatta", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 51, title: "Mohammed Ibrahim", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 52, title: "Pranav Bansal", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 53, title: "Pruthvi Arya Singh", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
+  { id: 54, title: "Siddharth Gupta", subtitle: "Student Trainee Associate", category: "Core Committee", page: "/about", component: "BoardMemberCard" },
 
   // Home Featured Leadership (41-43)
   { id: 41, title: "Prof. Kuldeep Kumar Raina", subtitle: "Patron Card", category: "Home Hero", page: "/", component: "ChromaGrid" },
