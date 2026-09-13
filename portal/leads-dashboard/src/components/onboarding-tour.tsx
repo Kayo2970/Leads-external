@@ -127,7 +127,7 @@ export function OnboardingTour({ user, isOpen, onClose }: OnboardingTourProps) {
         whatYouCanDo: isSuper || isHead
           ? [
               'Approve, reject, or archive event proposals',
-              'Assign organizing committees and set financial budgets',
+              'Assign core committees and set financial budgets',
               'Monitor cross-campus venue allocations and schedules',
             ]
           : [

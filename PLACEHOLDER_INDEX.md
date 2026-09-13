@@ -27,23 +27,23 @@ Every image and image slot across the website now features a **unique, high-visi
 | **`#13`** | **Ms. Bharvi A Padia** | Sr. PR Head | Student Core Council | `BoardMemberCard` |
 | **`#14`** | **Mr. Arvind Rakshith G** | Sr. Finance & Sponsorship Head | Student Core Council | `BoardMemberCard` |
 | **`#15`** | **Mr. Syed Furqaan Ahmed** | Sr. Research & Development Head | Student Core Council | `BoardMemberCard` |
-| **`#16`** | **Nuthan H** | President | Organizing Committee | `BoardMemberCard` |
-| **`#17`** | **Kunal Bhadauria** | Vice President | Organizing Committee | `BoardMemberCard` |
-| **`#18`** | **Kayomarz Pavri** | Head - Design & Digital Media | Organizing Committee | `BoardMemberCard` |
-| **`#19`** | **Shwetha S** | Head - Design and Social Media | Organizing Committee | `BoardMemberCard` |
-| **`#20`** | **Sudev Mitra** | Chief Coordinator | Organizing Committee | `BoardMemberCard` |
-| **`#21`** | **Jyotsna Karn** | Chief Coordinator | Organizing Committee | `BoardMemberCard` |
-| **`#22`** | **Pranav P J** | Chief Coordinator | Organizing Committee | `BoardMemberCard` |
-| **`#23`** | **Shravya T** | Chief Coordinator | Organizing Committee | `BoardMemberCard` |
-| **`#24`** | **Shriram SG** | General Secretary | Organizing Committee | `BoardMemberCard` |
-| **`#25`** | **S Bhavya Shree** | General Secretary | Organizing Committee | `BoardMemberCard` |
-| **`#26`** | **Manoj Petakamsetty** | General Secretary | Organizing Committee | `BoardMemberCard` |
-| **`#27`** | **Yash Chandak** | Head - Operations & Logistics | Organizing Committee | `BoardMemberCard` |
-| **`#28`** | **Niyati Chawra** | Head - Leadership & Development | Organizing Committee | `BoardMemberCard` |
-| **`#29`** | **Sadiya Sawood** | Head - Leadership & Development | Organizing Committee | `BoardMemberCard` |
-| **`#30`** | **Nimisha K M** | Head - Sustainability & Innovation | Organizing Committee | `BoardMemberCard` |
-| **`#31`** | **Kishan KP** | Head - Marketing & Branding | Organizing Committee | `BoardMemberCard` |
-| **`#32`** | **Aravind Manashetti** | Head - Finance & Sponsorship | Organizing Committee | `BoardMemberCard` |
+| **`#16`** | **Nuthan H** | President | Core Committee | `BoardMemberCard` |
+| **`#17`** | **Kunal Bhadauria** | Vice President | Core Committee | `BoardMemberCard` |
+| **`#18`** | **Kayomarz Pavri** | Head - Design & Digital Media | Core Committee | `BoardMemberCard` |
+| **`#19`** | **Shwetha S** | Head - Design and Social Media | Core Committee | `BoardMemberCard` |
+| **`#20`** | **Sudev Mitra** | Chief Coordinator | Core Committee | `BoardMemberCard` |
+| **`#21`** | **Jyotsna Karn** | Chief Coordinator | Core Committee | `BoardMemberCard` |
+| **`#22`** | **Pranav P J** | Chief Coordinator | Core Committee | `BoardMemberCard` |
+| **`#23`** | **Shravya T** | Chief Coordinator | Core Committee | `BoardMemberCard` |
+| **`#24`** | **Shriram SG** | General Secretary | Core Committee | `BoardMemberCard` |
+| **`#25`** | **S Bhavya Shree** | General Secretary | Core Committee | `BoardMemberCard` |
+| **`#26`** | **Manoj Petakamsetty** | General Secretary | Core Committee | `BoardMemberCard` |
+| **`#27`** | **Yash Chandak** | Head - Operations & Logistics | Core Committee | `BoardMemberCard` |
+| **`#28`** | **Niyati Chawra** | Head - Leadership & Development | Core Committee | `BoardMemberCard` |
+| **`#29`** | **Sadiya Sawood** | Head - Leadership & Development | Core Committee | `BoardMemberCard` |
+| **`#30`** | **Nimisha K M** | Head - Sustainability & Innovation | Core Committee | `BoardMemberCard` |
+| **`#31`** | **Kishan KP** | Head - Marketing & Branding | Core Committee | `BoardMemberCard` |
+| **`#32`** | **Aravind Manashetti** | Head - Finance & Sponsorship | Core Committee | `BoardMemberCard` |
 | **`#33`** | **Sahana Mahadev** | Senior Student Advisor | Student Advisory Council | `BoardMemberCard` |
 | **`#34`** | **Anurag Pandey** | Senior Student Advisor | Student Advisory Council | `BoardMemberCard` |
 | **`#35`** | **Mr. Ramanan Ramanathan** | Governing Advisory Board | Governing & Advisory | `BoardMemberCard` |
