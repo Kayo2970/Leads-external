@@ -93,14 +93,14 @@ Every image and image slot across the website now features a **unique, high-visi
 | PH # | Gallery Item Name | Category | Component |
 |---|---|---|---|
 | **`#57`** | **Event Gallery Photo 1** | Catalyst Workshop | `events/page.tsx` |
-| **`#58`** | **Event Gallery Photo 2** | Executive Keynote | `events/page.tsx` |
-| **`#59`** | **Event Gallery Photo 3** | Student Leadership Panel | `events/page.tsx` |
-| **`#60`** | **Event Gallery Photo 4** | Delegation Networking | `events/page.tsx` |
-| **`#61`** | **Event Gallery Photo 6** | Award Ceremony | `events/page.tsx` |
-| **`#62`** | **Event Gallery Photo 6** | Award Ceremony | `events/page.tsx` |
-| **`#63`** | **Event Gallery Photo 7** | Roundtable Session | `events/page.tsx` |
-| **`#64`** | **Event Gallery Photo 8** | Campus Delegation | `events/page.tsx` |
-| **`#65`** | **Event Gallery Photo 9** | FDP Masterclass | `events/page.tsx` |
+| **`#58`** | **Event Gallery Photo 2** | Executive Keynote (✅ Updated: `/images/gallery/ph58.jpg`) | `events/page.tsx` |
+| **`#59`** | **Vanguard Leadership Retreat 2026** | Experiential Governance & Team Dynamics (✅ Updated: `/images/gallery/vanguard-leadership-retreat-2026.png`) | `EventCard` / `EventModal` / `programs` |
+| **`#60`** | **National Leadership Day – Badging Ceremony** | Induction & Distinguished Guest Talks (✅ Updated: `/images/gallery/national-leadership-day-badging.png`) | `EventCard` / `EventModal` |
+| **`#61`** | **AIMS South Zone Regional Conference 2025** | Emerging Trends in AI & Sustainability (✅ Updated: `/images/gallery/aims-south-zone-conference-2025.png`) | `EventCard` / `EventModal` |
+| **`#62`** | **9th State Level Seminar** | Transformation for the Nation (✅ Updated: `/images/gallery/9th-state-level-seminar.png`) | `EventCard` / `EventModal` |
+| **`#63`** | **Educational & Cultural Visit to New Delhi** | Experiential Learning Delegation (✅ Updated: `/images/gallery/educational-cultural-visit-delhi.png`) | `EventCard` / `EventModal` |
+| **`#64`** | **NHRD Bangalore Chapter – Thought Leadership Meet** | Market Benchmarking & Compensation (✅ Updated: `/images/gallery/nhrd-bangalore-thought-leadership.png`) | `EventCard` / `EventModal` |
+| **`#65`** | **BCIC Roundtable Discussion on Generative Economy** | Ushering the AI-Driven Industrial Era (✅ Updated: `/images/gallery/bcic-roundtable-generative-economy.jpg`) | `EventCard` / `EventModal` |
 | **`#66`** | **Event Gallery Photo 10** | Dignitary Group Photo | `events/page.tsx` |
 | **`#67`** | **Event Gallery Photo 11** | Fireside Q&A | `events/page.tsx` |
 | **`#68`** | **Event Gallery Photo 12** | National Delegates | `events/page.tsx` |

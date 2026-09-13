@@ -93,8 +93,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "25 Students • 5 Faculty Benefited",
     badgeColor: "bg-amber-100 text-amber-900 border-amber-200",
     logoSvg: "award",
-    photo: "/images/gallery/g1.webp",
-    gallery: ["/images/gallery/g1.webp", "/images/gallery/g2.webp"],
+    photo: "/images/gallery/vanguard-leadership-retreat-2026.png",
+    gallery: ["/images/gallery/vanguard-leadership-retreat-2026.png", "/images/gallery/g1.webp", "/images/gallery/g2.webp"],
     featured: true,
     description: "The Vanguard Leadership Retreat 2026 at RR Retreat brought student council leaders together for an intensive experiential development day. Through applied team-building challenges and conflict-resolution exercises, participants honed collaboration and crisis management skills. Guided reflective sessions enabled student leaders to articulate personal ethical commitments and core goals, while adventure activities deepened trust and mutual camaraderie for high-impact governance.",
     seriesHighlights: [
@@ -116,7 +116,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "national-leadership-day-badging",
-    placeholderId: 59,
+    placeholderId: 60,
     name: "National Leadership Day – Badging Ceremony & Distinguished Guest Talks",
     seriesName: "Induction & Badging Ceremony",
     category: "Conclave",
@@ -127,8 +127,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "200 Students • 10 Faculty Benefited",
     badgeColor: "bg-purple-100 text-[#9C1256] border-purple-200",
     logoSvg: "award",
-    photo: "/images/gallery/g3.webp",
-    gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
+    photo: "/images/gallery/national-leadership-day-badging.png",
+    gallery: ["/images/gallery/national-leadership-day-badging.png", "/images/gallery/g3.webp", "/images/gallery/g4.webp"],
     featured: true,
     description: "Celebrating National Leadership Day, the Centre held a formal Badging Ceremony to induct advisory and core student council members. Led by Chief Guest and 2025 Padmashree Awardee Dr. Vijayalakshmi Deshmane, alongside Mr. Kumar Ravi (Senior VP, BCIC) and Dr. Naganagouda S J (Honorary Secretary, NHRD), leaders pinned badges on the inductees. Keynote sessions highlighted compassionate leadership, corporate governance, and professional networking, setting high standards of institutional accountability.",
     seriesHighlights: [
@@ -155,7 +155,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   // 2. Outreach Events
   {
     id: "aims-south-region-conference-2025",
-    placeholderId: 64,
+    placeholderId: 61,
     name: "AIMS South Zone Regional Conference 2025",
     seriesName: "Emerging Trends in AI & Sustainability",
     category: "Outreach",
@@ -166,8 +166,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "7 Students • 1 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g5.webp",
-    gallery: ["/images/gallery/g5.webp", "/images/gallery/g6.webp"],
+    photo: "/images/gallery/aims-south-zone-conference-2025.png",
+    gallery: ["/images/gallery/aims-south-zone-conference-2025.png", "/images/gallery/g5.webp", "/images/gallery/g6.webp"],
     featured: true,
     description:
       "A LEADS student delegation represented the Centre at the AIMS 'Emerging Trends in AI & Sustainability' conference at St. Joseph's College. Participating in panel discussions with experts from NASSCOM and IBM India, students explored AI market transformations, the expanding strategic footprint of Global Capability Centres (GCCs), and essential 21st-century management skills, while establishing direct connections with regional corporate leaders.",
@@ -191,7 +191,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "9th-state-level-seminar",
-    placeholderId: 60,
+    placeholderId: 62,
     name: "9th State Level Seminar – \"Transformation for the Nation\"",
     seriesName: "Outreach Programmes",
     category: "Outreach",
@@ -202,8 +202,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "40 Students • 5 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g2.webp",
-    gallery: ["/images/gallery/g2.webp", "/images/gallery/g3.webp"],
+    photo: "/images/gallery/9th-state-level-seminar.png",
+    gallery: ["/images/gallery/9th-state-level-seminar.png", "/images/gallery/g2.webp", "/images/gallery/g3.webp"],
     featured: false,
     description: "Co-organised by Vishwamanava Yuva Vedike and Queen's Global Management Solutions, the 9th State-Level Seminar examined personal transformation as the cornerstone of national progress. Keynotes by Sri Ullas Kamath and Dr. C. Somasekhara IAS focused on higher education's role in entrepreneurship and continuous self-reinvention. The closing panel, featuring ACP Dr. Priyadarshini Sanikopp and grassroots leaders, reinforced civic duty, innovation, and resilience.",
     seriesHighlights: [
@@ -231,7 +231,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "new-delhi-visit",
-    placeholderId: 61,
+    placeholderId: 63,
     name: "Educational & Cultural Visit to New Delhi",
     seriesName: "Outreach Programmes",
     category: "Outreach",
@@ -242,8 +242,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "6 Students • 1 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g3.webp",
-    gallery: ["/images/gallery/g3.webp", "/images/gallery/g4.webp"],
+    photo: "/images/gallery/educational-cultural-visit-delhi.png",
+    gallery: ["/images/gallery/educational-cultural-visit-delhi.png", "/images/gallery/g3.webp", "/images/gallery/g4.webp"],
     featured: false,
     description: "Six FMC students completed an educational and cultural visit to New Delhi, integrating governance insight with global industry exposure. The delegation toured Rashtrapati Bhavan (Durbar Hall, Presidential diplomatic chambers, tribal heritage gallery), the Supreme Court, Pharma Med 2025, and iPHEX 2025 at Bharat Mandapam, concluding with the Pradhan Mantri Sangrahalaya and India Gate tribute.",
     seriesHighlights: [
@@ -266,7 +266,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "nhrd-bangalore-chapter",
-    placeholderId: 62,
+    placeholderId: 64,
     name: "NHRD Bangalore Chapter – Thought Leadership Meet",
     seriesName: "Outreach Programmes",
     category: "Outreach",
@@ -277,8 +277,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "2 Students • 1 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g4.webp",
-    gallery: ["/images/gallery/g4.webp"],
+    photo: "/images/gallery/nhrd-bangalore-thought-leadership.png",
+    gallery: ["/images/gallery/nhrd-bangalore-thought-leadership.png", "/images/gallery/g4.webp"],
     featured: false,
     description: "Attending NHRD's Thought Leadership Meet at SJIM, students engaged in a masterclass by Ms. Malathi KS (Director of Rewards Consulting, Mercer India). Analyzing corporate case studies of compensation misallocation, the session introduced a three-dimensional skill-based pay model (availability, criticality, replaceability) and practical compensation evaluation frameworks under the new Labour Code standards.",
     seriesHighlights: [
@@ -301,7 +301,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
   },
   {
     id: "bma-generative-economies",
-    placeholderId: 63,
+    placeholderId: 65,
     name: "BCIC Roundtable Discussion on Generative Economy",
     seriesName: "Outreach Programmes",
     category: "Roundtable",
@@ -312,8 +312,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "10 Students • 4 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g5.webp",
-    gallery: ["/images/gallery/g5.webp"],
+    photo: "/images/gallery/bcic-roundtable-generative-economy.jpg",
+    gallery: ["/images/gallery/bcic-roundtable-generative-economy.jpg", "/images/gallery/g5.webp"],
     featured: false,
     description: "BCIC organized an Expert Committee roundtable hosted by Dassault Systèmes on 'Generative Economy – Ushering the AI-Driven Industrial Era.' Tech leaders from Rolls Royce (IAMPL), Bosch, and ANSCER Robotics addressed digital twins, smart value chains, and compressed production cycles, enhancing Industry 4.0 readiness across regional manufacturing ecosystems.",
     seriesHighlights: [
