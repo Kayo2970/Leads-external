@@ -114,6 +114,8 @@
 | **ph66** | **FKCCI Global MSME Conclave 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/fkcci-global-msme-conclave-2026.webp` | `lib/events-data.ts` (`fkcci-msme-conclave`) |
 | **ph67** | **Anvaya Innovation Summit 2026** | **Outreach Programmes** | `/events` | `EventCard` / `EventModal` | `/images/gallery/anvaya-innovation-summit-2026.webp` | `lib/events-data.ts` (`anvaya-innovation-summit-2026`) |
 | **ph80** | **IISc & Adelaide Deep-Tech Startups Conference** | **Conclave / Outreach** | `/events` | `EventCard` / `EventModal` | `/images/gallery/iisc-adelaide-deep-tech-conference.webp` | `lib/events-data.ts` (`iisc-adelaide-deep-tech-conference`) |
+| **ph66b** | **ANQ Congress 2025** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/anq-congress-2025.webp` | `lib/events-data.ts` (`anq-congress-2025`) |
+| **ph67b** | **BMA Symposium – AI & Future of Management** | **Outreach Programmes** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/bma-symposium.webp` | `lib/events-data.ts` (`bma-symposium-ai-management`) |
 
 ---
 

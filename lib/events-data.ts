@@ -541,8 +541,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "16 Students • 2 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g1.webp",
-    gallery: ["/images/gallery/g1.webp", "/images/gallery/g2.webp"],
+    photo: "/images/gallery/anq-congress-2025.webp",
+    gallery: ["/images/gallery/anq-congress-2025.webp", "/images/gallery/g1.webp", "/images/gallery/g2.webp"],
     featured: true,
     description: "The LEADS Student Council provided frontline logistical and technical coordination across eight presentation halls at the international ANQ Congress 2025 with ISQ. Facilitating sessions for delegates from 20+ countries and assisting prominent Session Chairs, students gained hands-on international event management experience while exploring research on green manufacturing and digital twins.",
     seriesHighlights: [
@@ -577,8 +577,8 @@ export const EVENTS_DATA: LEADSEvent[] = [
     attendees: "12 Students • 2 Faculty Benefited",
     badgeColor: "bg-blue-100 text-blue-900 border-blue-200",
     logoSvg: "users",
-    photo: "/images/gallery/g4.webp",
-    gallery: ["/images/gallery/g4.webp", "/images/gallery/g5.webp"],
+    photo: "/images/gallery/bma-symposium.webp",
+    gallery: ["/images/gallery/bma-symposium.webp", "/images/gallery/g4.webp", "/images/gallery/g5.webp"],
     featured: true,
     description: "At the BMA Symposium at KTPO, LEADS delegates engaged with VTU Vice-Chancellor Prof. Vidyashankar S and Cyware leaders to analyze AI disruption in management education. The forum focused on modernizing curricula, establishing foundational AI literacy, and prioritizing human-centric skills like emotional intelligence and creative problem-solving.",
     seriesHighlights: [
