@@ -395,19 +395,11 @@ function EventsContent() {
                                     </p>
                                   </div>
 
-                                  {/* Compact Description with Responsive Clamp */}
+                                  {/* Full Description */}
                                   <div>
-                                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2 sm:line-clamp-3 lg:line-clamp-none">
+                                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                                       {event.description}
                                     </p>
-                                    <button
-                                      type="button"
-                                      onClick={() => setSelectedEvent(event)}
-                                      className="sm:hidden text-[11px] font-bold text-[#DE3F11] hover:underline mt-0.5 inline-flex items-center gap-0.5"
-                                    >
-                                      <span>Read full details</span>
-                                      <ArrowRight className="w-3 h-3" />
-                                    </button>
                                   </div>
 
                                   {/* Prominent Metadata Box */}
@@ -443,48 +435,20 @@ function EventsContent() {
                                     </div>
                                   </div>
 
-                                  {/* Highlights Bullet List (Top 2 on mobile, all on sm+) */}
+                                  {/* Highlights Bullet List */}
                                   <div className="space-y-1.5 sm:space-y-2">
                                     <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#9C1256]">
                                       Key Takeaways & Highlights
                                     </div>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1.5 text-xs text-slate-700">
-                                      {event.seriesHighlights.slice(0, 2).map((hl, hlIdx) => (
+                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
+                                      {event.seriesHighlights.map((hl, hlIdx) => (
                                         <li key={hlIdx} className="flex items-start space-x-1.5">
-                                          <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
-                                          <span className="line-clamp-2 sm:line-clamp-none">{hl}</span>
-                                        </li>
-                                      ))}
-                                      {event.seriesHighlights.slice(2).map((hl, hlIdx) => (
-                                        <li key={hlIdx + 2} className="hidden sm:flex items-start space-x-1.5">
                                           <CheckCircle className="w-3.5 h-3.5 text-[#DE3F11] shrink-0 mt-0.5" />
                                           <span>{hl}</span>
                                         </li>
                                       ))}
                                     </ul>
-                                    {event.seriesHighlights.length > 2 && (
-                                      <button
-                                        type="button"
-                                        onClick={() => setSelectedEvent(event)}
-                                        className="sm:hidden text-[11px] font-bold text-purple-700 hover:text-[#DE3F11] inline-flex items-center gap-1 pt-0.5"
-                                      >
-                                        <span>+ {event.seriesHighlights.length - 2} more key takeaways</span>
-                                        <ArrowRight className="w-3 h-3" />
-                                      </button>
-                                    )}
                                   </div>
-                                </div>
-
-                                {/* CTA Button */}
-                                <div className="pt-2">
-                                  <button
-                                    type="button"
-                                    onClick={() => setSelectedEvent(event)}
-                                    className="w-full sm:w-auto px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
-                                  >
-                                    <span>Explore Details, Agenda & Gallery</span>
-                                    <ArrowRight className="w-3.5 h-3.5" />
-                                  </button>
                                 </div>
                               </div>
                             </div>
