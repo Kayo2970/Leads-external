@@ -384,7 +384,7 @@ export default function Nav() {
                             </span>
                           </div>
                           <div className="text-xs text-slate-500 font-medium mt-0.5 leading-relaxed">
-                            IISc IIIC Conference, AIMS, ANQ, INNOVA, BMA, AIU VC Meet & GST National Conferences
+                            IISc IIIC Conference, AIMS, ANQ, ANVAYA, BMA, AIU VC Meet & GST National Conferences
                           </div>
                         </div>
                       </Link>

@@ -118,8 +118,8 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: false,
   },
   {
-    id: "innova-innovation-summit-2026",
-    title: "INNOVA Innovation Summit 2026",
+    id: "anvaya-innovation-summit-2026",
+    title: "Anvaya Innovation Summit 2026",
     subtitle: "Healthcare Tech, Deep-Tech & Sustainable Engineering",
     category: "Conclaves & Policy Summits",
     badge: "Deep-Tech & Healthcare Summit",
