@@ -18,7 +18,7 @@ export interface LEADSEvent {
   name: string;
   seriesName: string;
   category: "Summit" | "Workshop" | "Roundtable" | "Conclave" | "Outreach" | "Catalyst" | "Expert Talk" | "Fireside Talk" | "Boardroom Battle" | "Sustainability";
-  subCategory: "Stand-alone" | "Outreach" | "Catalyst Leadership Talk Series" | "Expert Talks" | "Fireside Talks" | "Boardroom Battles" | "Sustainability";
+  subCategory: "Flagship Ceremonies" | "Outreach" | "Catalyst Leadership Talk Series" | "Expert Talks" | "Fireside Talks" | "Boardroom Battles" | "Sustainability";
   tagline: string;
   date: string;
   location: string;
@@ -37,14 +37,14 @@ export interface LEADSEvent {
 }
 
 export const EVENTS_DATA: LEADSEvent[] = [
-  // 1. Stand-alone Events
+  // 1. Flagship Ceremonies
   {
     id: "leads-inaugural-function",
     placeholderId: 58,
     name: "LEADS Next Gen Centre Inaugural Function",
     seriesName: "Official Launch & Plenary Sessions",
     category: "Conclave",
-    subCategory: "Stand-alone",
+    subCategory: "Flagship Ceremonies",
     tagline: "Formally opened by Dr. C. N. Manjunath & Mr. Ramanan Ramanathan under theme Sankalp Se Siddhi",
     date: "January 2026",
     location: "Ramaiah University Campus, Bengaluru",
@@ -82,7 +82,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     name: "Vanguard Leadership Retreat",
     seriesName: "Executive Retreat Series",
     category: "Conclave",
-    subCategory: "Stand-alone",
+    subCategory: "Flagship Ceremonies",
     tagline: "Elite Experiential Governance, Off-Campus Team Dynamics & Leadership Initiative",
     date: "2025",
     location: "Off-Campus Executive Retreat Venue, Karnataka",
@@ -117,7 +117,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     name: "National Leadership Day - Badging Ceremony & Guest Talks",
     seriesName: "Flagship Ceremonies",
     category: "Conclave",
-    subCategory: "Stand-alone",
+    subCategory: "Flagship Ceremonies",
     tagline: "Official Induction of LEADS Student Council & Pinned Badging by National Stalwarts",
     date: "2025 - 2026",
     location: "Ramaiah University Campus, Bengaluru",

@@ -58,7 +58,7 @@ const PROGRAM_GROUPS: {
 ];
 
 const PROGRAMS_DATA: ProgramItem[] = [
-  // 1. STAND-ALONE FLAGSHIP SUMMIT (ALWAYS ON TOP!)
+  // 1. ANNUAL FLAGSHIP SUMMIT (ALWAYS ON TOP!)
   {
     id: "bls-summit",
     title: "BHARAT LEAD SUMMIT 2026",
