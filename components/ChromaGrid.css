@@ -38,26 +38,17 @@
   }
 }
 
-@media (min-width: 520px) and (max-width: 767px) {
+/* Phone view (< 768px): 3 photos in 1 row */
+@media (max-width: 767px) {
   .chroma-grid {
-    gap: 1rem;
+    gap: 0.4rem;
+    padding: 0.2rem 0;
   }
   .chroma-card {
-    flex: 0 0 calc((100% - 1rem) / 2);
-    max-width: calc((100% - 1rem) / 2);
-    width: calc((100% - 1rem) / 2);
-  }
-}
-
-@media (max-width: 519px) {
-  .chroma-grid {
-    gap: 1rem;
-    padding: 0.25rem 0;
-  }
-  .chroma-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
+    flex: 0 0 calc((100% - 2 * 0.4rem) / 3);
+    max-width: calc((100% - 2 * 0.4rem) / 3);
+    width: calc((100% - 2 * 0.4rem) / 3);
+    border-radius: 12px;
   }
 }
 
@@ -168,6 +159,36 @@
   opacity: 0.75;
   margin-top: 0.15rem;
   line-height: 1.25;
+}
+
+@media (max-width: 767px) {
+  .chroma-img-wrapper {
+    padding: 5px;
+  }
+  .chroma-img-wrapper img {
+    border-radius: 8px;
+  }
+  .chroma-info {
+    padding: 0.45rem 0.35rem 0.5rem;
+    gap: 0.1rem;
+  }
+  .chroma-info .name {
+    font-size: 0.66rem;
+    line-height: 1.15;
+  }
+  .chroma-info .role {
+    font-size: 0.54rem;
+    line-height: 1.15;
+  }
+  .chroma-info .handle {
+    font-size: 0.5rem;
+    line-height: 1.15;
+  }
+  .chroma-info .location {
+    font-size: 0.46rem;
+    line-height: 1.15;
+    margin-top: 0.05rem;
+  }
 }
 
 .chroma-overlay {

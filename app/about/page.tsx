@@ -315,7 +315,7 @@ export default function AboutPage() {
         id="members-directory-section"
         className="py-24 3xl:py-36 bg-[#F7F4FC] text-[#1E0C3D] border-y border-purple-100 scroll-mt-20"
       >
-        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+        <div className="max-w-7xl 2xl:max-w-[1700px] 3xl:max-w-[2200px] 4xl:max-w-[2800px] mx-auto px-2.5 sm:px-6 lg:px-8 3xl:px-12">
           <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-10 3xl:mb-16">
             <div className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256] mb-2">
               Members Directory
@@ -346,14 +346,14 @@ export default function AboutPage() {
           </div>
 
           {/* PARTITIONS CONTAINER */}
-          <div className="space-y-20 3xl:space-y-28">
+          <div className="space-y-12 sm:space-y-20 3xl:space-y-28">
             {visiblePartitions.map((partition) => {
               const chromaItems = mapToChromaItems(partition.members);
               return (
                 <div
                   key={partition.id}
                   id={partition.id}
-                  className="p-6 sm:p-10 3xl:p-16 rounded-3xl 3xl:rounded-[40px] bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow"
+                  className="p-3.5 sm:p-10 3xl:p-16 rounded-2xl sm:rounded-3xl 3xl:rounded-[40px] bg-white border border-purple-100 shadow-sm hover:shadow-md transition-shadow"
                 >
                   {/* Partition Header */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between border-b border-purple-100 pb-6 3xl:pb-10 mb-8 3xl:mb-12 gap-4">
