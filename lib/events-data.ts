@@ -119,7 +119,7 @@ export const EVENTS_DATA: LEADSEvent[] = [
     id: "national-leadership-day-badging",
     placeholderId: 59,
     name: "National Leadership Day – Badging Ceremony",
-    seriesName: "Institutional Ceremonies",
+    seriesName: "Induction & Badging Ceremony",
     category: "Conclave",
     subCategory: "Institutional Ceremonies",
     tagline: "Official Induction of LEADS Student Council & Pinned Badging by National Stalwarts",

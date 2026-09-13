@@ -312,9 +312,11 @@ function EventsContent() {
                                 <div className="space-y-4">
                                   <div className="space-y-1.5">
                                     <div className="flex flex-wrap items-center gap-2">
-                                      <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
-                                        {event.subCategory}
-                                      </span>
+                                      {event.subCategory !== "Institutional Ceremonies" && (
+                                        <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-100 text-[#9C1256] border border-purple-200">
+                                          {event.subCategory}
+                                        </span>
+                                      )}
                                       <span className="text-xs font-bold text-slate-500">
                                         {event.seriesName}
                                       </span>
