@@ -427,7 +427,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
     id: "sudev-mitra",
     placeholderId: 20,
     name: "Sudev Mitra",
-    role: "Student Trainee Associate",
+    role: "Biggest IN the NECK FOR ALL",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
     initials: "SM",

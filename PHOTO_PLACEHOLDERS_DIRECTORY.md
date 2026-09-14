@@ -53,7 +53,7 @@
 | **ph17** | Kunal Bhadauria | Vice President | Core Committee | `/about` | `BoardMemberCard` | `/images/committee/kunal-bhadauria.webp` | `app/about/page.tsx` |
 | **ph18** | Kayomarz Pavri | Head - Design & Digital Media | Core Committee | `/about` | `BoardMemberCard` | `/images/committee/kayomarz-pavri.webp` | `app/about/page.tsx` |
 | **ph19** | Shwetha S | Head - Design & Social Media | Core Committee | `/about` | `BoardMemberCard` | `/images/committee/shwetha-s.webp` | `app/about/page.tsx` |
-| **ph20** | Sudev Mitra | Student Trainee Associate | Student Trainee Associates | `/about` | `BoardMemberCard` | `/images/committee/sudev-mitra.webp` | `app/about/page.tsx` |
+| **ph20** | Sudev Mitra | Biggest IN the NECK FOR ALL | Student Trainee Associates | `/about` | `BoardMemberCard` | `/images/committee/sudev-mitra.webp` | `app/about/page.tsx` |
 | **ph21** | Jyotsna Karn | Chief Coordinator | Core Committee | `/about` | `BoardMemberCard` | `/images/committee/jyotsna-karn.webp` | `app/about/page.tsx` |
 | **ph22** | Pranav P J | Chief Coordinator | Core Committee | `/about` | `BoardMemberCard` | `/images/committee/pranav-pj.webp` | `app/about/page.tsx` |
 | **ph23** | Shravya T | Chief Coordinator | Core Committee | `/about` | `BoardMemberCard` | `/images/committee/shravya-t.webp` | `app/about/page.tsx` |
