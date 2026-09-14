@@ -57,9 +57,9 @@ export default function OrganogramChart({
             }`}
           >
             <Crown className="w-4 h-4 sm:w-7 sm:h-7 text-amber-400 mx-auto mb-1" />
-            <div className="text-xs sm:text-lg font-black text-white">Patron</div>
-            <div className="text-[11px] sm:text-sm text-amber-300 font-extrabold mt-0.5">Prof. Kuldeep Kumar Raina</div>
-            <div className="text-[9px] sm:text-xs text-blue-200/90 font-medium">Hon. Vice Chancellor, RUAS</div>
+            <div className="text-[19px] sm:text-[25px] font-black text-white">Patron</div>
+            <div className="text-[18px] sm:text-[21px] text-amber-300 font-extrabold mt-0.5">Prof. Kuldeep Kumar Raina</div>
+            <div className="text-[16px] sm:text-[19px] text-blue-200/90 font-medium">Hon. Vice Chancellor, RUAS</div>
           </button>
         </div>
 
@@ -67,16 +67,16 @@ export default function OrganogramChart({
         <div className="md:hidden w-full max-w-xs sm:max-w-md my-0.5 flex flex-col items-center">
           <div className="w-0.5 h-2.5 bg-gradient-to-b from-amber-400 to-blue-400" />
           <div className="w-full p-2 rounded-xl bg-blue-950/60 border border-blue-400/40 backdrop-blur-md shadow-lg">
-            <div className="text-[9px] font-bold text-blue-300 uppercase tracking-wider text-center mb-1.5 flex items-center justify-center gap-1">
-              <Landmark className="w-3 h-3 text-blue-400" />
+            <div className="text-[16px] font-bold text-blue-300 uppercase tracking-wider text-center mb-1.5 flex items-center justify-center gap-1">
+              <Landmark className="w-3.5 h-3.5 text-blue-400" />
               <span>Governing & Advisory Bodies</span>
             </div>
             <div className="grid grid-cols-2 gap-1.5">
               {/* BoG */}
               <div className="p-1.5 rounded-lg bg-blue-900/40 border border-blue-400/30 text-center">
                 <Landmark className="w-3.5 h-3.5 text-blue-400 mx-auto mb-0.5" />
-                <div className="text-[11px] font-black text-blue-100">BoG</div>
-                <div className="text-[8px] text-blue-200/80 font-medium leading-tight">Board of Governors</div>
+                <div className="text-[18px] font-black text-blue-100">BoG</div>
+                <div className="text-[15px] text-blue-200/80 font-medium leading-tight">Board of Governors</div>
               </div>
 
               {/* BoA */}
@@ -90,8 +90,8 @@ export default function OrganogramChart({
                 }`}
               >
                 <Users className="w-3.5 h-3.5 text-blue-400 mx-auto mb-0.5" />
-                <div className="text-[11px] font-black text-blue-100">BoA</div>
-                <div className="text-[8px] text-blue-200/80 font-medium leading-tight">Board of Advisors</div>
+                <div className="text-[18px] font-black text-blue-100">BoA</div>
+                <div className="text-[15px] text-blue-200/80 font-medium leading-tight">Board of Advisors</div>
               </button>
             </div>
           </div>
@@ -118,8 +118,8 @@ export default function OrganogramChart({
                 {/* BoG */}
                 <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-400/30 text-center min-w-[130px]">
                   <Landmark className="w-5 h-5 text-blue-400 mx-auto mb-1" />
-                  <div className="text-xs font-black text-blue-100">BoG</div>
-                  <div className="text-[10px] text-blue-200/80 font-medium">Board of Governors</div>
+                  <div className="text-[19px] font-black text-blue-100">BoG</div>
+                  <div className="text-[17px] text-blue-200/80 font-medium">Board of Governors</div>
                 </div>
 
                 {/* BoA */}
@@ -133,8 +133,8 @@ export default function OrganogramChart({
                   }`}
                 >
                   <Users className="w-5 h-5 text-blue-400 mx-auto mb-1" />
-                  <div className="text-xs font-black text-blue-100">BoA</div>
-                  <div className="text-[10px] text-blue-200/80 font-medium">Board of Advisors</div>
+                  <div className="text-[19px] font-black text-blue-100">BoA</div>
+                  <div className="text-[17px] text-blue-200/80 font-medium">Board of Advisors</div>
                 </button>
               </div>
             </div>
@@ -157,9 +157,9 @@ export default function OrganogramChart({
             }`}
           >
             <Shield className="w-4 h-4 sm:w-6 sm:h-6 text-emerald-400 mb-0.5 sm:mb-1" />
-            <div className="text-[11px] sm:text-base font-black text-white">Chief Advisor</div>
-            <div className="text-[10px] sm:text-xs text-emerald-300 font-bold mt-0.5">Dr. K. M. Sharath Kumar</div>
-            <div className="text-[8px] sm:text-[11px] text-emerald-100/90 font-medium leading-tight mt-0.5">Dean, FMC - RUAS</div>
+            <div className="text-[18px] sm:text-[23px] font-black text-white">Chief Advisor</div>
+            <div className="text-[17px] sm:text-[19px] text-emerald-300 font-bold mt-0.5">Dr. K. M. Sharath Kumar</div>
+            <div className="text-[15px] sm:text-[18px] text-emerald-100/90 font-medium leading-tight mt-0.5">Dean, FMC - RUAS</div>
           </button>
 
           {/* Advisor */}
@@ -173,9 +173,9 @@ export default function OrganogramChart({
             }`}
           >
             <UserCheck className="w-4 h-4 sm:w-6 sm:h-6 text-emerald-400 mb-0.5 sm:mb-1" />
-            <div className="text-[11px] sm:text-base font-black text-white">Advisor</div>
-            <div className="text-[10px] sm:text-xs text-emerald-300 font-bold mt-0.5">Dr. Subhadeep Mukherjee</div>
-            <div className="text-[8px] sm:text-[11px] text-emerald-100/90 font-medium leading-tight mt-0.5">CEO, Ramaiah TBI</div>
+            <div className="text-[18px] sm:text-[23px] font-black text-white">Advisor</div>
+            <div className="text-[17px] sm:text-[19px] text-emerald-300 font-bold mt-0.5">Dr. Subhadeep Mukherjee</div>
+            <div className="text-[15px] sm:text-[18px] text-emerald-100/90 font-medium leading-tight mt-0.5">CEO, Ramaiah TBI</div>
           </button>
         </div>
 
@@ -194,9 +194,9 @@ export default function OrganogramChart({
             }`}
           >
             <Crown className="w-4 h-4 sm:w-7 sm:h-7 text-purple-300 mx-auto mb-1" />
-            <div className="text-xs sm:text-xl font-black text-white">Centre Head</div>
-            <div className="text-[11px] sm:text-sm text-purple-200 font-extrabold mt-0.5">Dr. Pallabi Mund</div>
-            <div className="text-[9px] sm:text-xs text-purple-300/90 font-medium">Centre Head, LEADS Next-Gen Centre</div>
+            <div className="text-[19px] sm:text-[27px] font-black text-white">Centre Head</div>
+            <div className="text-[18px] sm:text-[21px] text-purple-200 font-extrabold mt-0.5">Dr. Pallabi Mund</div>
+            <div className="text-[16px] sm:text-[19px] text-purple-300/90 font-medium">Centre Head, LEADS Next-Gen Centre</div>
           </button>
         </div>
 
@@ -207,7 +207,7 @@ export default function OrganogramChart({
         <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-5 items-stretch">
           {/* Column 1: Unified Finance Department Block (2 columns on mobile, stacked on desktop) */}
           <div className="flex flex-col gap-1.5 sm:gap-2 p-2 sm:p-4 rounded-xl sm:rounded-3xl bg-amber-950/20 border border-amber-500/30 shadow-lg">
-            <div className="text-center text-[9px] sm:text-[11px] font-black text-amber-400 uppercase tracking-widest">
+            <div className="text-center text-[16px] sm:text-[18px] font-black text-amber-400 uppercase tracking-widest">
               Finance Wing
             </div>
 
@@ -223,9 +223,9 @@ export default function OrganogramChart({
                 }`}
               >
                 <Coins className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 mb-0.5 sm:mb-1" />
-                <div className="text-[10px] sm:text-sm font-extrabold text-amber-100 leading-tight">Finance Advisor & Auditor</div>
-                <div className="text-[9.5px] sm:text-xs text-amber-300 font-bold mt-0.5">Dr. Ajay R</div>
-                <div className="text-[8px] sm:text-[11px] text-amber-200/80 font-medium mt-0.5 leading-tight">
+                <div className="text-[17px] sm:text-[21px] font-extrabold text-amber-100 leading-tight">Finance Advisor & Auditor</div>
+                <div className="text-[16.5px] sm:text-[19px] text-amber-300 font-bold mt-0.5">Dr. Ajay R</div>
+                <div className="text-[15px] sm:text-[18px] text-amber-200/80 font-medium mt-0.5 leading-tight">
                   Sr. Asst. Professor, FMC
                 </div>
               </button>
@@ -246,9 +246,9 @@ export default function OrganogramChart({
                 }`}
               >
                 <Coins className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300 mb-0.5" />
-                <div className="text-[10px] sm:text-xs font-extrabold text-amber-100 leading-tight">Finance Officer</div>
-                <div className="text-[9.5px] sm:text-xs text-amber-300 font-bold mt-0.5">Dr. Tapas Kumar Sahoo</div>
-                <div className="text-[8px] sm:text-[10px] text-amber-200/80 font-medium mt-0.5 leading-tight">
+                <div className="text-[17px] sm:text-[19px] font-extrabold text-amber-100 leading-tight">Finance Officer</div>
+                <div className="text-[16.5px] sm:text-[19px] text-amber-300 font-bold mt-0.5">Dr. Tapas Kumar Sahoo</div>
+                <div className="text-[15px] sm:text-[17px] text-amber-200/80 font-medium mt-0.5 leading-tight">
                   Asst. Professor, FMC
                 </div>
               </button>
@@ -268,9 +268,9 @@ export default function OrganogramChart({
               }`}
             >
               <Building className="w-4 h-4 sm:w-6 sm:h-6 text-blue-400 mb-1" />
-              <div className="text-[10px] sm:text-sm font-extrabold text-white leading-tight">Head Industry Connect</div>
-              <div className="text-[9.5px] sm:text-xs text-blue-300 font-bold mt-0.5">Mrs. Sujata Bijwe</div>
-              <div className="text-[8px] sm:text-[11px] text-blue-200/90 font-medium mt-0.5 leading-tight">
+              <div className="text-[17px] sm:text-[21px] font-extrabold text-white leading-tight">Head Industry Connect</div>
+              <div className="text-[16.5px] sm:text-[19px] text-blue-300 font-bold mt-0.5">Mrs. Sujata Bijwe</div>
+              <div className="text-[15px] sm:text-[18px] text-blue-200/90 font-medium mt-0.5 leading-tight">
                 Adjunct Faculty, FMC
               </div>
             </button>
@@ -286,10 +286,10 @@ export default function OrganogramChart({
               }`}
             >
               <CalendarDays className="w-4 h-4 sm:w-6 sm:h-6 text-rose-400 mb-1" />
-              <div className="text-[10px] sm:text-sm font-extrabold text-white leading-tight">Head Events RTC</div>
-              <div className="text-[9.5px] sm:text-xs text-rose-300 font-bold mt-0.5">Dr. Kiran Kumar B.M.</div>
-              <div className="text-[8px] sm:text-[11px] text-rose-200/90 font-medium leading-tight">Assoc. Professor, FET</div>
-              <div className="text-[7.5px] sm:text-[10px] text-rose-300/90 font-semibold mt-0.5">Head - IIC, RUAS</div>
+              <div className="text-[17px] sm:text-[21px] font-extrabold text-white leading-tight">Head Events RTC</div>
+              <div className="text-[16.5px] sm:text-[19px] text-rose-300 font-bold mt-0.5">Dr. Kiran Kumar B.M.</div>
+              <div className="text-[15px] sm:text-[18px] text-rose-200/90 font-medium leading-tight">Assoc. Professor, FET</div>
+              <div className="text-[14.5px] sm:text-[17px] text-rose-300/90 font-semibold mt-0.5">Head - IIC, RUAS</div>
             </button>
           </div>
         </div>
@@ -323,7 +323,7 @@ export default function OrganogramChart({
             }`}
           >
             <GraduationCap className="w-4 h-4 sm:w-6 sm:h-6 text-blue-400 mx-auto mb-1" />
-            <div className="text-[10px] sm:text-sm font-extrabold text-white leading-tight">Alumni Council</div>
+            <div className="text-[17px] sm:text-[21px] font-extrabold text-white leading-tight">Alumni Council</div>
           </button>
 
           {/* Core Committee */}
@@ -337,7 +337,7 @@ export default function OrganogramChart({
             }`}
           >
             <Users className="w-4 h-4 sm:w-6 sm:h-6 text-emerald-400 mx-auto mb-1" />
-            <div className="text-[10px] sm:text-sm font-extrabold text-white leading-tight">Core Committee</div>
+            <div className="text-[17px] sm:text-[21px] font-extrabold text-white leading-tight">Core Committee</div>
           </button>
 
           {/* Student Trainee Associates */}
@@ -351,7 +351,7 @@ export default function OrganogramChart({
             }`}
           >
             <UserPlus className="w-4 h-4 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-1" />
-            <div className="text-[10px] sm:text-sm font-extrabold text-white leading-tight">Trainee Associates</div>
+            <div className="text-[17px] sm:text-[21px] font-extrabold text-white leading-tight">Trainee Associates</div>
           </button>
         </div>
       </div>
