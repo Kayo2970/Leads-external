@@ -301,7 +301,7 @@ function EventsContent() {
                               className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full aspect-[16/9]"
                             >
                               <img
-                                src="/images/gallery/g8.webp"
+                                src="/events/Catalyst Insight Leadership Talk Series 3.0.jpg"
                                 alt="Catalyst Leadership Talk Series"
                                 className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
                               />

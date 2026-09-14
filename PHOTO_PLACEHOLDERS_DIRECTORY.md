@@ -90,19 +90,18 @@
 
 | ID | Event Name / Edition | Category / Type | Page | Component | Current Image Path | Code Reference |
 |:---|:---|:---|:---|:---|:---|:---|
-| **ph44** | Catalyst Leadership Talk Series | Event Workshop | `/events` | `EventCard` | `/images/gallery/g8.webp` | `lib/events-data.ts` |
-| **ph45** | Catalyst Vol. 1 (Strategic Decision Making) | Event Edition | `/events` | `EventModal` | `/images/gallery/g1.webp` | `lib/events-data.ts` |
-| **ph46** | Catalyst Vol. 2 (Executive Presence & Storytelling) | Event Edition | `/events` | `EventModal` | `/images/gallery/g2.webp` | `lib/events-data.ts` |
-| **ph47** | Catalyst Vol. 3 (Advanced Org Psychology) | Event Edition | `/events` | `EventModal` | `/images/gallery/g3.webp` | `lib/events-data.ts` |
-| **ph48** | National Leadership Conclave | Annual Conclave | `/events` | `EventCard` | `/images/gallery/g4.webp` | `lib/events-data.ts` |
-| **ph49** | Conclave 2024 (Inaugural Assembly) | Event Edition | `/events` | `EventModal` | `/images/gallery/g5.webp` | `lib/events-data.ts` |
-| **ph50** | Conclave 2025 (Viksit Bharat Vision) | Event Edition | `/events` | `EventModal` | `/images/gallery/g6.webp` | `lib/events-data.ts` |
-| **ph51** | Executive Fireside & Roundtables | Executive Roundtable | `/events` | `EventCard` | `/images/gallery/g7.webp` | `lib/events-data.ts` |
-| **ph52** | Fireside Edition 1 (CEO Dialogue) | Event Edition | `/events` | `EventModal` | `/images/gallery/g9.webp` | `lib/events-data.ts` |
-| **ph53** | Fireside Edition 2 (Policy & Governance) | Event Edition | `/events` | `EventModal` | `/images/gallery/g10.webp` | `lib/events-data.ts` |
-| **ph54** | LEADS Annual Impact Meet | Annual Conclave | `/events` | `EventCard` | `/images/gallery/g11.webp` | `lib/events-data.ts` |
+| **ph44** | Catalyst Leadership Talk Series 3.0 | Catalyst Series | `/events` | `EventCard` | `/events/Catalyst Insight Leadership Talk Series 3.0.jpg` | `lib/events-data.ts` (`catalyst-3`) |
+| **ph45** | Catalyst Leadership Talk Series 4.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 4.0.jpg` | `lib/events-data.ts` (`catalyst-4`) |
+| **ph46** | Catalyst Leadership Talk Series 5.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 5.0.jpg` | `lib/events-data.ts` (`catalyst-5`) |
+| **ph47** | Catalyst Leadership Talk Series 6.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 6.0.jpg` | `lib/events-data.ts` (`catalyst-6`) |
+| **ph48** | Catalyst Leadership Talk Series 7.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 7.0.jpg` | `lib/events-data.ts` (`catalyst-7`) |
+| **ph49** | Catalyst Leadership Talk Series 8.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 8.0.jpg` | `lib/events-data.ts` (`catalyst-8`) |
+| **ph50** | International Workshop Mindful Leadership in HEIs | Expert Talks | `/events` | `EventCard` / `EventModal` | `/events/International Workshop Mindful Leadership and Well-Being in HEIs.jpg` | `lib/events-data.ts` (`mindful-leadership-heis-workshop`) |
+| **ph51** | Expert Talk – Exploring Data Science with Python | Expert Talks | `/events` | `EventCard` / `EventModal` | `/events/Expert Talk – Exploring Data Science with Python.jpg` | `lib/events-data.ts` (`expert-talks-python`) |
+| **ph52** | Fireside Talk Global to Local Changemakers | Fireside Talks | `/events` | `EventCard` / `EventModal` | `/events/Fireside Talk Global to Local Changemakers.jpg` | `lib/events-data.ts` (`fireside-talks-change-makers`) |
+| **ph53** | Pravrutti – Boardroom Battles | Boardroom Battles | `/events` | `EventCard` / `EventModal` | `/events/Pravrutti – Boardroom Battles.jpg` | `lib/events-data.ts` (`pragati-boardroom-battles`) |
+| **ph54** | Leadership Green Circle: NGO Outreach | Sustainability | `/events` | `EventCard` / `EventModal` | `/events/Leadership Green Circle NGO Outreach At JananiSevashrama.jpg` | `lib/events-data.ts` (`green-leaders-circle`) |
 | **ph55** | Annual Impact Meet 2025 (Transformation) | Event Edition | `/events` | `EventModal` | `/images/gallery/ph55.webp` | `lib/events-data.ts` |
-| **ph56** | LEADS Outreach Activities | Outreach Initiatives | `/events` | `EventCard` | `/images/gallery/g12.webp` | `lib/events-data.ts` |
 | **ph58** | **LEADS Next Gen Centre – Inauguration** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/leads-inaugural-function.webp` | `lib/events-data.ts` (`leads-inaugural-function`) |
 | **ph59** | **Vanguard Leadership Retreat 2026** | **Institutional Ceremonies / Programs** | `/events` / `/programs` | `EventCard` / `EventModal` | `/images/gallery/vanguard-leadership-retreat-2026.webp` | `lib/events-data.ts` (`vanguard-leadership-retreat`) |
 | **ph60** | **National Leadership Day – Badging Ceremony** | **Institutional Ceremonies** | `/events` | `EventCard` / `EventModal` | `/images/gallery/national-leadership-day-badging.webp` | `lib/events-data.ts` (`national-leadership-day-badging`) |

@@ -71,17 +71,17 @@ Every image and image slot across the website now features a **unique, high-visi
 
 | PH # | Event Name / Edition | Series / Type | Component |
 |---|---|---|---|
-| **`#44`** | **Catalyst: Leadership Talk Series** | Main Event Photo | `EventCard` / `/events` |
-| **`#45`** | **Catalyst Vol. 1** | Strategic Decision Making | `EventModal` |
-| **`#46`** | **Catalyst Vol. 2** | Executive Presence & Storytelling | `EventModal` |
-| **`#47`** | **Catalyst Vol. 3** | Advanced Organizational Psychology | `EventModal` |
-| **`#48`** | **Management Development Programs (MDP)** | Main Event Photo | `EventCard` / `/events` |
-| **`#49`** | **MDP Cohort 2025** | Enterprise Leadership & Governance | `EventModal` |
-| **`#50`** | **Vanguard Outreach Series** | Main Event Photo | `EventCard` / `/events` |
-| **`#51`** | **Vanguard Expedition 2025** | Western Ghats Expedition | `EventModal` |
-| **`#52`** | **Startup Founders Venture Sprint** | Main Event Photo | `EventCard` / `/events` |
-| **`#53`** | **Founders Sprint 2025** | Product Builder to CEO | `EventModal` |
-| **`#54`** | **LEADS Annual Impact Meet** | Main Event Photo | `EventCard` / `/events` |
+| **`#44`** | **Catalyst: Leadership Talk Series 3.0** | (✅ Updated: `/events/Catalyst Insight Leadership Talk Series 3.0.jpg`) | `EventCard` / `/events` |
+| **`#45`** | **Catalyst Insight 4.0** | (✅ Updated: `/events/Catalyst Insight Leadership Talk Series 4.0.jpg`) | `EventModal` |
+| **`#46`** | **Catalyst Insight 5.0** | (✅ Updated: `/events/Catalyst Insight Leadership Talk Series 5.0.jpg`) | `EventModal` |
+| **`#47`** | **Catalyst Insight 6.0** | (✅ Updated: `/events/Catalyst Insight Leadership Talk Series 6.0.jpg`) | `EventModal` |
+| **`#48`** | **Catalyst Insight 7.0** | (✅ Updated: `/events/Catalyst Insight Leadership Talk Series 7.0.jpg`) | `EventModal` |
+| **`#49`** | **Catalyst Insight 8.0** | (✅ Updated: `/events/Catalyst Insight Leadership Talk Series 8.0.jpg`) | `EventModal` |
+| **`#50`** | **Mindful Leadership in HEIs** | (✅ Updated: `/events/International Workshop Mindful Leadership and Well-Being in HEIs.jpg`) | `EventCard` / `EventModal` |
+| **`#51`** | **Exploring Data Science with Python** | (✅ Updated: `/events/Expert Talk – Exploring Data Science with Python.jpg`) | `EventCard` / `EventModal` |
+| **`#52`** | **Fireside: Global to Local Changemakers** | (✅ Updated: `/events/Fireside Talk Global to Local Changemakers.jpg`) | `EventCard` / `EventModal` |
+| **`#53`** | **Pravrutti – Boardroom Battles** | (✅ Updated: `/events/Pravrutti – Boardroom Battles.jpg`) | `EventCard` / `EventModal` |
+| **`#54`** | **Leadership Green Circle NGO Outreach** | (✅ Updated: `/events/Leadership Green Circle NGO Outreach At JananiSevashrama.jpg`) | `EventCard` / `EventModal` |
 | **`#55`** | **Annual Impact Meet 2025** | Year of Transformation (✅ Updated: `/events/ph55.jpg`) | `EventModal` |
 | **`#56`** | **LEADS Outreach Activities** | Main Event Photo | `EventCard` / `/events` |
 
