@@ -157,27 +157,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
     featured: true,
   },
   {
-    id: "bma-futuristic-leadership-summit-2025",
-    title: "BMA Futuristic Leadership Summit 2025",
-    subtitle: "Futuristic Leadership, Strategic Innovation & Decision Intelligence",
-    category: "Conferences & Seminars",
-    badge: "Executive Leadership Summit",
-    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
-    audience: "Corporate Executives, Data Leaders & Academic Administrators",
-    description:
-      "Executive leadership summit co-hosted with Bengaluru Management Association, exploring futuristic leadership, strategic innovation, and 21st-century management models for modern corporate leaders.",
-    highlights: [
-      "Futuristic leadership & executive decision-making masterclasses",
-      "Panel on strategic corporate governance & innovation",
-      "Interactive case studies from leading enterprise tech firms",
-    ],
-    duration: "30 Oct 2025 • 148 Students • 10 Faculty Benefited",
-    location: "Bengaluru Management Association",
-    photo: "/events/BMA Futuristic Leadership Summit 2025.jpg",
-    placeholderId: 65,
-    featured: false,
-  },
-  {
     id: "anq-congress-2025",
     title: "ANQ Congress 2025",
     subtitle: "Global Quality Engineering, TQM & Operational Excellence",
