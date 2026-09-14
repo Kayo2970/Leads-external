@@ -76,6 +76,20 @@ function EventsContent() {
   const [isCatalystModalOpen, setIsCatalystModalOpen] = useState<boolean>(false);
   const [selectedCatalystEditionId, setSelectedCatalystEditionId] = useState<string | null>(null);
 
+  // 1-Second Rolling Gallery for Catalyst Series
+  const catalystEvents = EVENTS_DATA.filter(
+    (e) => e.subCategory === "Catalyst Leadership Talk Series" || e.category === "Catalyst"
+  );
+  const [currentCatalystIndex, setCurrentCatalystIndex] = useState<number>(0);
+
+  useEffect(() => {
+    if (catalystEvents.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentCatalystIndex((prev) => (prev + 1) % catalystEvents.length);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [catalystEvents.length]);
+
   useEffect(() => {
     if (targetCategory && CATEGORY_GROUPS.some((g) => g.name === targetCategory)) {
       const elId = targetCategory.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -235,39 +249,65 @@ function EventsContent() {
 
                               {/* HIGHLIGHTS PREVIEW OF ACTIVE EDITIONS */}
                               <div className="space-y-2 pt-1 sm:pt-2">
-                                <div className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#DE3F11] flex items-center gap-1">
-                                  <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                                  <span>Archive Editions Overview (Tap to Explore)</span>
+                                <div className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#DE3F11] flex items-center justify-between">
+                                  <div className="flex items-center gap-1">
+                                    <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                                    <span>Archive Editions Overview (Tap Any to Explore)</span>
+                                  </div>
+                                  <span className="text-[10px] text-white/60 font-semibold hidden sm:inline-block">
+                                    Rolling preview every 1s
+                                  </span>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs text-white/90 font-medium">
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">3.0:</strong> Structured Thinking</span>
-                                    <span className="text-[10px] text-white/50 shrink-0 ml-1">2025</span>
-                                  </div>
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">4.0:</strong> Personal Branding</span>
-                                    <span className="text-[10px] text-white/50 shrink-0 ml-1">2025</span>
-                                  </div>
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">5.0:</strong> Attitude Dev. (Mr. Hemanth)</span>
-                                    <span className="text-[10px] text-white/50 shrink-0 ml-1">2025</span>
-                                  </div>
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">6.0:</strong> Digital Leadership</span>
-                                    <span className="text-[10px] text-white/50 shrink-0 ml-1">2025</span>
-                                  </div>
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between hidden sm:flex">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">7.0:</strong> Tech Management (IEEE)</span>
-                                    <span className="text-[10px] text-white/50 shrink-0 ml-1">2025</span>
-                                  </div>
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between hidden sm:flex">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">8.0:</strong> ESG & Business Models</span>
-                                    <span className="text-[10px] text-white/50 shrink-0 ml-1">2025</span>
-                                  </div>
-                                  <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between col-span-1 sm:col-span-2 hidden sm:flex">
-                                    <span className="truncate"><strong className="text-[#DE3F11]">9.0:</strong> Startup Leadership & VC Pitching</span>
+                                  {[
+                                    { id: "catalyst-3", num: "3.0", title: "Structured Thinking", year: "2025", idx: 0 },
+                                    { id: "catalyst-4", num: "4.0", title: "Personal Branding", year: "2025", idx: 1 },
+                                    { id: "catalyst-5", num: "5.0", title: "Attitude Dev. (Mr. Hemanth)", year: "2025", idx: 2 },
+                                    { id: "catalyst-6", num: "6.0", title: "Digital Leadership", year: "2025", idx: 3 },
+                                    { id: "catalyst-7", num: "7.0", title: "Tech Management (IEEE)", year: "2025", idx: 4, hideMobile: true },
+                                    { id: "catalyst-8", num: "8.0", title: "ESG & Business Models", year: "2025", idx: 5, hideMobile: true },
+                                  ].map((item) => {
+                                    const isCurrent = currentCatalystIndex === item.idx;
+                                    return (
+                                      <button
+                                        key={item.id}
+                                        type="button"
+                                        onClick={() => {
+                                          setSelectedCatalystEditionId(item.id);
+                                          setIsCatalystModalOpen(true);
+                                        }}
+                                        onMouseEnter={() => setCurrentCatalystIndex(item.idx)}
+                                        className={`p-2 sm:p-2.5 rounded-xl border text-left flex items-center justify-between transition-all duration-300 cursor-pointer ${
+                                          isCurrent
+                                            ? "bg-[#DE3F11]/25 border-[#DE3F11] text-white shadow-md scale-[1.02]"
+                                            : "bg-white/5 hover:bg-white/15 border-white/10 text-white/90"
+                                        } ${item.hideMobile ? "hidden sm:flex" : "flex"}`}
+                                      >
+                                        <span className="truncate">
+                                          <strong className={isCurrent ? "text-[#FF8C61]" : "text-[#DE3F11]"}>
+                                            {item.num}:
+                                          </strong>{" "}
+                                          {item.title}
+                                        </span>
+                                        <span className="text-[10px] text-white/50 shrink-0 ml-1">
+                                          {item.year}
+                                        </span>
+                                      </button>
+                                    );
+                                  })}
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      setSelectedCatalystEditionId(null);
+                                      setIsCatalystModalOpen(true);
+                                    }}
+                                    className="p-2 sm:p-2.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-between col-span-1 sm:col-span-2 hidden sm:flex text-left transition-colors cursor-pointer"
+                                  >
+                                    <span className="truncate">
+                                      <strong className="text-[#DE3F11]">9.0:</strong> Startup Leadership & VC Pitching
+                                    </span>
                                     <span className="text-[10px] text-white/50 shrink-0 ml-1">2026</span>
-                                  </div>
+                                  </button>
                                 </div>
                                 <div className="sm:hidden text-[11px] text-[#FF8C61] font-bold text-center pt-0.5">
                                   + 3 More Editions (7.0, 8.0, 9.0) in Explorer
@@ -291,25 +331,71 @@ function EventsContent() {
                             </div>
                           </div>
 
-                          {/* RIGHT COLUMN: VISUAL COVER IMAGE */}
+                          {/* RIGHT COLUMN: 1-SECOND AUTO-ROLLING PHOTO GALLERY */}
                           <div className="lg:col-span-5 relative flex flex-col justify-center items-center order-1 lg:order-2">
                             <div
                               onClick={() => {
-                                setSelectedCatalystEditionId(null);
+                                const currentEv = catalystEvents[currentCatalystIndex];
+                                setSelectedCatalystEditionId(currentEv?.id || null);
                                 setIsCatalystModalOpen(true);
                               }}
-                              className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 shadow-xl group/img bg-[#361C6A] w-full aspect-[16/9]"
+                              className="cursor-pointer relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/25 shadow-2xl group/img bg-[#180A30] w-full aspect-[16/9]"
+                              title="Click to open this Catalyst Edition"
                             >
-                              <img
-                                src="/events/Catalyst Insight Leadership Talk Series 3.0.jpg"
-                                alt="Catalyst Leadership Talk Series"
-                                className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500 absolute inset-0"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-80" />
-                              <div className="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 text-white">
-                                <span className="text-[10px] sm:text-xs font-bold px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-[#DE3F11] text-white shadow-md inline-flex items-center gap-1.5 border border-white/20">
-                                  <Zap className="w-3 h-3 text-yellow-300" />
-                                  <span>Tap to Open Series Explorer</span>
+                              {/* Cross-fade Stacked Images */}
+                              {catalystEvents.map((ev, cIdx) => (
+                                <img
+                                  key={ev.id}
+                                  src={ev.photo}
+                                  alt={ev.name}
+                                  className={`w-full h-full object-cover transition-all duration-700 ease-in-out absolute inset-0 ${
+                                    cIdx === currentCatalystIndex
+                                      ? "opacity-100 scale-100 z-0"
+                                      : "opacity-0 scale-105 pointer-events-none -z-10"
+                                  }`}
+                                />
+                              ))}
+
+                              {/* Dark Gradient Scrim */}
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-black/20 to-black/40 z-10 pointer-events-none" />
+
+                              {/* Top Live Edition Tag */}
+                              <div className="absolute top-2.5 sm:top-3.5 left-2.5 sm:left-3.5 right-2.5 sm:right-3.5 z-20 flex items-center justify-between gap-2">
+                                <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-black text-white shadow-lg">
+                                  <span className="w-2 h-2 rounded-full bg-[#DE3F11] animate-ping shrink-0" />
+                                  <span className="truncate max-w-[200px] sm:max-w-none">
+                                    {catalystEvents[currentCatalystIndex]?.name
+                                      .replace("Catalyst Insight: Leadership Talk Series ", "Edition ")
+                                      .replace("Catalyst Insights Leadership Talk Series ", "Edition ") || "Catalyst Masterclass"}
+                                  </span>
+                                </div>
+                                <span className="px-2 py-0.5 rounded-md bg-[#9C1256]/80 text-[10px] font-bold text-white border border-white/20 shadow-xs">
+                                  {currentCatalystIndex + 1} / {catalystEvents.length}
+                                </span>
+                              </div>
+
+                              {/* Rolling Indicator Progress Dots */}
+                              <div className="absolute bottom-11 sm:bottom-12 left-3 sm:left-4 z-20 flex items-center gap-1.5">
+                                {catalystEvents.map((ev, cIdx) => (
+                                  <span
+                                    key={ev.id}
+                                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                                      cIdx === currentCatalystIndex
+                                        ? "w-6 bg-[#DE3F11] shadow-sm shadow-[#DE3F11]"
+                                        : "w-1.5 bg-white/40"
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+
+                              {/* Bottom Interactive Action Strip */}
+                              <div className="absolute bottom-2.5 sm:bottom-3.5 left-2.5 sm:left-3.5 right-2.5 sm:right-3.5 text-white z-20 flex items-center justify-between">
+                                <span className="text-[10px] sm:text-xs font-black px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white shadow-lg inline-flex items-center gap-1.5 border border-white/30 group-hover/img:scale-105 transition-transform">
+                                  <Zap className="w-3 h-3 text-yellow-300 fill-yellow-300" />
+                                  <span>Open Edition Explorer</span>
+                                </span>
+                                <span className="text-[9px] sm:text-[10px] font-bold text-white/80 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/15">
+                                  ⚡ 1s Rolling
                                 </span>
                               </div>
                             </div>
