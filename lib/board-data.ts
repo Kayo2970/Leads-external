@@ -322,6 +322,17 @@ export const CORE_COMMITTEE: BoardMember[] = [
     affiliation: "Core Committee",
   },
   {
+    id: "sudev-mitra",
+    placeholderId: 20,
+    name: "Sudev Mitra",
+    role: "Chief Coordinator",
+    designation: "Core Committee",
+    roleGroup: "Core Committee",
+    initials: "SM",
+    image: "/images/committee/sudev-mitra.webp",
+    affiliation: "Core Committee",
+  },
+  {
     id: "jyotsna-karn",
     placeholderId: 21,
     name: "Jyotsna Karn",
@@ -423,17 +434,6 @@ export const CORE_COMMITTEE: BoardMember[] = [
 ];
 
 export const TRAINEE_ASSOCIATES: BoardMember[] = [
-  {
-    id: "sudev-mitra",
-    placeholderId: 20,
-    name: "Sudev Mitra",
-    role: "Biggest IN the NECK FOR ALL",
-    designation: "LEADS Next Gen Centre",
-    roleGroup: "Student Trainee Associates",
-    initials: "SM",
-    image: "/images/committee/sudev-mitra.webp",
-    affiliation: "Trainee Associates",
-  },
   {
     id: "archana-s-nair",
     placeholderId: 49,
