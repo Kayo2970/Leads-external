@@ -56,7 +56,7 @@ const PROGRAM_GROUPS: {
     name: "Conferences & Seminars",
     badge: "National & Intl Symposia",
     description:
-      "High-level academic symposia, international deep-tech conventions, national quality congresses, AI impact conventions, and policy conferences co-hosted with IISc, AIMS, BMA, ANQ, AIU, and Adelaide University.",
+      "High-level academic symposia, international deep-tech conventions, national quality congresses, AI impact conventions, and policy conferences co-hosted with IISc, AIMS, BMA, ANQ, and Adelaide University.",
   },
   {
     name: "FDP / MDP / LDP / SDP Programmes",
@@ -109,27 +109,6 @@ const PROGRAMS_DATA: ProgramItem[] = [
     location: "Ramaiah Medical College Board Room",
     photo: "/images/gallery/g2.webp",
     placeholderId: 61,
-    featured: false,
-  },
-  {
-    id: "aiu-south-zone-vc-meet",
-    title: "AIU South Zone Vice Chancellors' Meet",
-    subtitle: "NEP 2020 Implementation & Higher Education Governance",
-    category: "Conclaves & Policy Summits",
-    badge: "Vice-Chancellors' Conclave",
-    icon: <Building2 className="w-6 h-6 text-[#9C1256]" />,
-    audience: "Vice-Chancellors, Registrars & University Chancellors",
-    description:
-      "Conclave of Vice-Chancellors from southern Indian universities discussing NEP 2020 alignment, multidisciplinary skill integration, research grants, and institutional autonomy.",
-    highlights: [
-      "NEP 2020 strategic implementation benchmarks",
-      "Inter-university research collaboration & grant allocation",
-      "Vice-Chancellors' roundtable on skill-integrated degrees",
-    ],
-    duration: "20–21 Jan 2026 • 26 Students • 5 Faculty Benefited",
-    location: "M. S. Ramaiah University of Applied Sciences",
-    photo: "/images/gallery/g3.webp",
-    placeholderId: 62,
     featured: false,
   },
   {
