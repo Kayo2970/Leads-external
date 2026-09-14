@@ -29,6 +29,12 @@ interface CategoryGroup {
 
 const CATEGORY_GROUPS: CategoryGroup[] = [
   {
+    name: "Institutional Ceremonies",
+    badge: "Official Convocations & Inductions",
+    description:
+      "Milestone ceremonies, official Centre inaugurations, badging convocations, and executive council leadership inductions.",
+  },
+  {
     name: "Outreach",
     badge: "Delegations & Symposia",
     description:
