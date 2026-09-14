@@ -76,7 +76,7 @@ function EventsContent() {
   const [isCatalystModalOpen, setIsCatalystModalOpen] = useState<boolean>(false);
   const [selectedCatalystEditionId, setSelectedCatalystEditionId] = useState<string | null>(null);
 
-  // 1-Second Rolling Gallery for Catalyst Series
+  // 2-Second Rolling Gallery for Catalyst Series
   const catalystEvents = EVENTS_DATA.filter(
     (e) => e.subCategory === "Catalyst Leadership Talk Series" || e.category === "Catalyst"
   );
@@ -86,7 +86,7 @@ function EventsContent() {
     if (catalystEvents.length <= 1) return;
     const timer = setInterval(() => {
       setCurrentCatalystIndex((prev) => (prev + 1) % catalystEvents.length);
-    }, 1000);
+    }, 2000);
     return () => clearInterval(timer);
   }, [catalystEvents.length]);
 
@@ -255,7 +255,7 @@ function EventsContent() {
                                     <span>Archive Editions Overview (Tap Any to Explore)</span>
                                   </div>
                                   <span className="text-[10px] text-white/60 font-semibold hidden sm:inline-block">
-                                    Rolling preview every 1s
+                                    Rolling preview every 2s
                                   </span>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs text-white/90 font-medium">
@@ -331,7 +331,7 @@ function EventsContent() {
                             </div>
                           </div>
 
-                          {/* RIGHT COLUMN: 1-SECOND AUTO-ROLLING PHOTO GALLERY */}
+                          {/* RIGHT COLUMN: 2-SECOND AUTO-ROLLING PHOTO GALLERY */}
                           <div className="lg:col-span-5 relative flex flex-col justify-center items-center order-1 lg:order-2">
                             <div
                               onClick={() => {
@@ -395,7 +395,7 @@ function EventsContent() {
                                   <span>Open Edition Explorer</span>
                                 </span>
                                 <span className="text-[9px] sm:text-[10px] font-bold text-white/80 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/15">
-                                  ⚡ 1s Rolling
+                                  ⚡ 2s Rolling
                                 </span>
                               </div>
                             </div>
