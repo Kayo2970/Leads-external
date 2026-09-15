@@ -554,19 +554,6 @@ export const STUDENT_ADVISORY_COUNCIL: BoardMember[] = [
 export const GOVERNING_ADVISORS: BoardMember[] = [
   // 1. BOARD OF GOVERNING COUNCIL
   {
-    id: "rishikesh-patankar",
-    placeholderId: 36,
-    name: "Dr. Rishikesh Patankar",
-    role: "Governing Council",
-    designation: "Vice President, National Skill Development Corporation",
-    roleGroup: "Governing & Advisory",
-    advisorySubGroup: "Board of Governing Council",
-    initials: "RP",
-    image: "/images/advisors/rishikesh-patankar.webp",
-    affiliation: "National Skill Development Corporation (NSDC)",
-    linkedin: "https://www.linkedin.com/in/rishikesh-patankar-ph-d-a0bb0863",
-  },
-  {
     id: "ramanan-ramanathan",
     placeholderId: 35,
     name: "Dr. Ramanan Ramanathan",
@@ -578,6 +565,19 @@ export const GOVERNING_ADVISORS: BoardMember[] = [
     image: "/images/advisors/ramanan-ramanathan.webp",
     affiliation: "Department of Science & Technology, Govt of India",
     linkedin: "https://www.linkedin.com/in/rramanan27",
+  },
+  {
+    id: "rishikesh-patankar",
+    placeholderId: 36,
+    name: "Dr. Rishikesh Patankar",
+    role: "Governing Council",
+    designation: "Vice President, National Skill Development Corporation",
+    roleGroup: "Governing & Advisory",
+    advisorySubGroup: "Board of Governing Council",
+    initials: "RP",
+    image: "/images/advisors/rishikesh-patankar.webp",
+    affiliation: "National Skill Development Corporation (NSDC)",
+    linkedin: "https://www.linkedin.com/in/rishikesh-patankar-ph-d-a0bb0863",
   },
   {
     id: "balakrishnan-i",

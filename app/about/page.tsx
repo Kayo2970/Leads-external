@@ -385,7 +385,7 @@ export default function AboutPage() {
                           subMembers: partition.members.filter(
                             (m) => m.advisorySubGroup === "Board of Governing Council"
                           ),
-                          columns: 5,
+                          columns: 3,
                         },
                         {
                           subTitle: "Corporate Advisory Council",
