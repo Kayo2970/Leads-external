@@ -52,20 +52,9 @@ export default function ApprovalsPage() {
   const [decisionNoteFor, setDecisionNoteFor] = useState<{ id: string; decision: 'approved' | 'rejected' } | null>(null);
   const [decisionNoteInput, setDecisionNoteInput] = useState('');
 
-  const [highlightId, setHighlightId] = useState<string | null>(null);
-  const [hasScrolled, setHasScrolled] = useState(false);
-
   useEffect(() => {
     const refreshData = () => setRequests(getApprovalRequests());
     refreshData();
-
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const target = params.get('id') || params.get('highlight') || params.get('entityId');
-      if (target) {
-        setHighlightId(target);
-      }
-    }
 
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
@@ -83,15 +72,6 @@ export default function ApprovalsPage() {
       window.removeEventListener('storage', refreshData);
     };
   }, []);
-
-  useEffect(() => {
-    if (!highlightId || hasScrolled || requests.length === 0) return;
-    const el = document.getElementById(`appr-${highlightId}`);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setHasScrolled(true);
-    }
-  }, [highlightId, hasScrolled, requests]);
 
   const triggerSuccess = (msg: string) => {
     setSuccessMsg(msg);
@@ -215,15 +195,8 @@ export default function ApprovalsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {list.map(req => {
             const Icon = entityIcon(req.entityType);
-            const isHighlighted = highlightId && (req.id === highlightId || req.entityId === highlightId);
             return (
-              <div
-                key={req.id}
-                id={`appr-${req.id}`}
-                className={`glass-panel rounded-2xl p-4 space-y-3 text-xs transition-all ${
-                  isHighlighted ? 'border-accent ring-2 ring-accent/50 bg-accent/5' : 'border-theme-border/20 border'
-                }`}
-              >
+              <div key={req.id} className="glass-panel rounded-2xl p-4 space-y-3 text-xs border border-theme-border/20">
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-start gap-2.5">
                     <div className="p-2 rounded-xl bg-accent/15 text-accent shrink-0">
