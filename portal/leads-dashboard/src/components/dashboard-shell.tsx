@@ -331,7 +331,13 @@ export default function DashboardShell({ children }: { children: React.ReactNode
 
     const savedUser = localStorage.getItem('user');
     if (!savedUser) {
-      // Route guard: Redirect to login if unauthenticated
+      // Route guard: Save intended target URL so user returns to clicked link after login
+      if (typeof window !== 'undefined') {
+        const fullPath = window.location.pathname + window.location.search + window.location.hash;
+        if (fullPath && fullPath !== '/' && fullPath !== '/dashboard/home') {
+          sessionStorage.setItem('redirect_after_login', fullPath);
+        }
+      }
       router.replace('/');
       return;
     }

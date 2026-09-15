@@ -220,10 +220,12 @@ export default function LoginPage() {
       localStorage.removeItem('logoutReason');
     }
 
-    // If already logged in, route to home
+    // If already logged in, route to stored redirect target or home
     const currentUser = localStorage.getItem('user');
     if (currentUser) {
-      router.push('/dashboard/home');
+      const redirectTarget = sessionStorage.getItem('redirect_after_login') || '/dashboard/home';
+      sessionStorage.removeItem('redirect_after_login');
+      router.push(redirectTarget);
     }
   }, [router]);
 
@@ -429,11 +431,17 @@ export default function LoginPage() {
   if (!themeLoaded) return null;
 
   if (showLoginSplash) {
+    const handleLoginComplete = () => {
+      const redirectTarget = sessionStorage.getItem('redirect_after_login') || '/dashboard/home';
+      sessionStorage.removeItem('redirect_after_login');
+      router.push(redirectTarget);
+    };
+
     return (
       <LoadingScreen
         duration={1000}
         subtitle="Signing you in..."
-        onComplete={() => router.push('/dashboard/home')}
+        onComplete={handleLoginComplete}
       />
     );
   }

@@ -60,6 +60,9 @@ export default function EventReportsPage() {
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
+  const [highlightId, setHighlightId] = useState<string | null>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
   useEffect(() => {
     const refresh = () => {
       setEvents(getEvents());
@@ -67,6 +70,14 @@ export default function EventReportsPage() {
       setTasks(getTasks());
     };
     refresh();
+
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const target = params.get('id') || params.get('highlight');
+      if (target) {
+        setHighlightId(target);
+      }
+    }
 
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
@@ -84,6 +95,15 @@ export default function EventReportsPage() {
       window.removeEventListener('storage', refresh);
     };
   }, []);
+
+  useEffect(() => {
+    if (!highlightId || hasScrolled || reports.length === 0) return;
+    const el = document.getElementById(`report-${highlightId}`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setHasScrolled(true);
+    }
+  }, [highlightId, hasScrolled, reports]);
 
   const triggerSuccess = (msg: string) => {
     setSuccessMsg(msg);
@@ -358,38 +378,47 @@ export default function EventReportsPage() {
             <EmptyState icon={FileCheck2} title="Nothing pending" description="Every submitted event report has been decided." />
           ) : (
             <div className="space-y-3">
-              {pendingForReview.map(report => (
-                <div key={report.id} className="p-4 bg-theme-border/10 border border-theme-border/20 rounded-xl space-y-2.5 text-xs">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <h4 className="font-bold text-theme-text-primary text-xs">{report.eventTitle}</h4>
-                      <span className="text-[10px] text-theme-text-secondary">Submitted by {report.submittedBy} &middot; {report.fileName}</span>
+              {pendingForReview.map(report => {
+                const isHighlighted = highlightId && (report.id === highlightId || report.eventId === highlightId);
+                return (
+                  <div
+                    key={report.id}
+                    id={`report-${report.id}`}
+                    className={`p-4 rounded-xl space-y-2.5 text-xs transition-all ${
+                      isHighlighted ? 'bg-accent/10 border-2 border-accent ring-2 ring-accent/50' : 'bg-theme-border/10 border border-theme-border/20'
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <h4 className="font-bold text-theme-text-primary text-xs">{report.eventTitle}</h4>
+                        <span className="text-[10px] text-theme-text-secondary">Submitted by {report.submittedBy} &middot; {report.fileName}</span>
+                      </div>
+                      {statusBadge(report)}
                     </div>
-                    {statusBadge(report)}
-                  </div>
-                  {approvalChecklist(report)}
-                  <div className="flex items-center gap-2 pt-1">
-                    {report.fileUrl && (
-                      <a href={report.fileUrl} target="_blank" rel="noopener noreferrer" className="p-1.5 text-accent hover:bg-accent/10 rounded-lg transition-all" title="Download report">
-                        <Download className="h-3.5 w-3.5" />
-                      </a>
-                    )}
-                    {viewerIsCentreHead && !report.centreHeadApproved && (
-                      <button onClick={() => handleApprove(report, 'centre_head')} className="flex-1 py-1.5 bg-success/15 hover:bg-success/25 text-success border border-success/30 text-[11px] font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5">
-                        <Check className="h-3 w-3" /> Approve as Centre Head
+                    {approvalChecklist(report)}
+                    <div className="flex items-center gap-2 pt-1">
+                      {report.fileUrl && (
+                        <a href={report.fileUrl} target="_blank" rel="noopener noreferrer" className="p-1.5 text-accent hover:bg-accent/10 rounded-lg transition-all" title="Download report">
+                          <Download className="h-3.5 w-3.5" />
+                        </a>
+                      )}
+                      {viewerIsCentreHead && !report.centreHeadApproved && (
+                        <button onClick={() => handleApprove(report, 'centre_head')} className="flex-1 py-1.5 bg-success/15 hover:bg-success/25 text-success border border-success/30 text-[11px] font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5">
+                          <Check className="h-3 w-3" /> Approve as Centre Head
+                        </button>
+                      )}
+                      {viewerIsGgEventsHead && !report.eventsHeadGgApproved && (
+                        <button onClick={() => handleApprove(report, 'gg_events_head')} className="flex-1 py-1.5 bg-success/15 hover:bg-success/25 text-success border border-success/30 text-[11px] font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5">
+                          <Check className="h-3 w-3" /> Approve as GG Events Head
+                        </button>
+                      )}
+                      <button onClick={() => setRejectingId(report.id)} className="flex-1 py-1.5 bg-danger/15 hover:bg-danger/25 text-danger border border-danger/30 text-[11px] font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5">
+                        <X className="h-3 w-3" /> Reject
                       </button>
-                    )}
-                    {viewerIsGgEventsHead && !report.eventsHeadGgApproved && (
-                      <button onClick={() => handleApprove(report, 'gg_events_head')} className="flex-1 py-1.5 bg-success/15 hover:bg-success/25 text-success border border-success/30 text-[11px] font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5">
-                        <Check className="h-3 w-3" /> Approve as GG Events Head
-                      </button>
-                    )}
-                    <button onClick={() => setRejectingId(report.id)} className="flex-1 py-1.5 bg-danger/15 hover:bg-danger/25 text-danger border border-danger/30 text-[11px] font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5">
-                      <X className="h-3 w-3" /> Reject
-                    </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

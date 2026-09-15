@@ -1390,25 +1390,7 @@ export default function DesignPortalPage() {
                   </p>
                 )}
 
-                {file && !isReadingFile && fileData.startsWith('data:') && (
-                  <div className="pt-1">
-                    <button
-                      type="button"
-                      onClick={handleScanFile}
-                      disabled={isScanning}
-                      className="w-full py-2 rounded-lg bg-muted border border-border text-foreground font-medium hover:bg-muted/70 text-xs flex items-center justify-center gap-1.5 disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
-                    >
-                      <Search className="h-3.5 w-3.5" />
-                      {isScanning ? 'Scanning for typos... this can take a while for multi-page PDFs' : 'Scan for Typos & Spelling'}
-                    </button>
-                    <OcrScanPanel
-                      result={ocrScanResult}
-                      error={scanError}
-                      showExtractedText={showExtractedText}
-                      onToggleExtractedText={() => setShowExtractedText(v => !v)}
-                    />
-                  </div>
-                )}
+
               </div>
 
               {/* Mandatory Proofreading Notice — every design, regardless of
@@ -1721,25 +1703,7 @@ export default function DesignPortalPage() {
                     </div>
                   </div>
                 )}
-                {replaceFile && !isReadingReplaceFile && replaceFileData.startsWith('data:') && (
-                  <div>
-                    <button
-                      type="button"
-                      onClick={handleScanReplaceFile}
-                      disabled={isScanningReplace}
-                      className="w-full py-2 rounded-lg bg-muted border border-border text-foreground font-medium hover:bg-muted/70 text-xs flex items-center justify-center gap-1.5 disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
-                    >
-                      <Search className="h-3.5 w-3.5" />
-                      {isScanningReplace ? 'Scanning for typos...' : 'Scan for Typos & Spelling'}
-                    </button>
-                    <OcrScanPanel
-                      result={replaceOcrScanResult}
-                      error={replaceScanError}
-                      showExtractedText={showExtractedText}
-                      onToggleExtractedText={() => setShowExtractedText(v => !v)}
-                    />
-                  </div>
-                )}
+
               </form>
             )}
 
@@ -2024,21 +1988,7 @@ export default function DesignPortalPage() {
               </div>
             )}
 
-            {/* Automated OCR + Spell-Check pass (run by the designer at upload time) */}
-            {selectedDesign.ocrScan && (
-              <div className="border-t border-border pt-4 space-y-2">
-                <h3 className="text-sm font-bold flex items-center gap-2">
-                  <Search className="h-4 w-4 text-accent" />
-                  Automated Spelling Scan
-                </h3>
-                <OcrScanPanel
-                  result={selectedDesign.ocrScan}
-                  error=""
-                  showExtractedText={showExtractedText}
-                  onToggleExtractedText={() => setShowExtractedText(v => !v)}
-                />
-              </div>
-            )}
+
 
             {/* Proofreading Action Form (for Assigned Proofreader / Admins) */}
             <div className="border-t border-border pt-4 space-y-4">
