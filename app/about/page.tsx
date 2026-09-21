@@ -16,7 +16,6 @@ import {
   BookOpen,
   Building2,
   Compass,
-  CheckCircle,
   Sparkles,
 } from "lucide-react";
 
@@ -233,10 +232,6 @@ export default function AboutPage() {
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
                   To empower future leaders to be purpose-driven, ethical changemakers who champion sustainable innovation, non-technical capability excellence, and shape an equitable, resilient future for Bharat and the world.
                 </p>
-                <div className="pt-2 flex items-center space-x-2 text-xs 2xl:text-sm 3xl:text-base font-bold text-[#9C1256]">
-                  <CheckCircle className="w-4 h-4 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
-                  <span>Reshaping India's Human Capital Frontier</span>
-                </div>
               </div>
             </BorderGlow>
 
@@ -260,10 +255,6 @@ export default function AboutPage() {
                 <p className="text-xs sm:text-sm 2xl:text-base 3xl:text-lg text-slate-600 leading-relaxed">
                   To build an active ecosystem where experiential learning, high-stakes leadership simulations, and executive mentorship elevate individuals, enterprises, and communities — turning raw knowledge into purposeful, sustainable leadership action.
                 </p>
-                <div className="pt-2 flex items-center space-x-2 text-xs 2xl:text-sm 3xl:text-base font-bold text-[#9C1256]">
-                  <CheckCircle className="w-4 h-4 3xl:w-5 3xl:h-5 text-[#DE3F11]" />
-                  <span>Nation Building Through Skill Excellence</span>
-                </div>
               </div>
             </BorderGlow>
           </div>
