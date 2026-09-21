@@ -67,7 +67,6 @@ export default function ReportsPage() {
                 key={report.id}
                 report={report}
                 lightMode={true}
-                onPreview={(rep) => setSelectedPdfReport(rep)}
               />
             ))}
           </div>
