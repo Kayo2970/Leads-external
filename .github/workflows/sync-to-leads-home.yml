@@ -1,0 +1,30 @@
+name: Sync to Leads-Home
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Leads-external
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Push to Leads-Home
+        env:
+          TARGET_TOKEN: ${{ secrets.LEADS_HOME_SYNC_TOKEN }}
+        run: |
+          if [ -z "$TARGET_TOKEN" ]; then
+            echo "LEADS_HOME_SYNC_TOKEN secret is not set. Add a token with push access to Leads-Next-Gen-Centre/Leads-Home."
+            exit 1
+          fi
+          git remote add leads-home "https://x-access-token:${TARGET_TOKEN}@github.com/Leads-Next-Gen-Centre/Leads-Home.git"
+          git fetch leads-home main || true
+          git merge leads-home/main --allow-unrelated-histories -X ours -m "Merge leads-home/main for sync" || true
+          git push leads-home HEAD:main
