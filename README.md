@@ -108,7 +108,6 @@ Leads-external/
 │   ├── EventModal.tsx          # Rich modal viewer for event details and media
 │   ├── CatalystSeriesModal.tsx # Dedicated master modal for Catalyst 3.0-9.0 editions
 │   ├── ReportCard.tsx          # Verified publication highlight card
-│   ├── PdfViewerModal.tsx      # Fullscreen interactive PDF viewer modal
 │   ├── CookieBanner.tsx        # GDPR/India compliance cookie banner
 │   └── BorderGlow.tsx          # Hardware-accelerated glowing gradient borders
 ├── lib/

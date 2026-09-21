@@ -8,10 +8,9 @@ import { FileText, ArrowDownToLine, ExternalLink, Sparkles, CheckCircle } from "
 interface ReportCardProps {
   report: ImpactReport;
   lightMode?: boolean;
-  onPreview?: (report: ImpactReport) => void;
 }
 
-export default function ReportCard({ report, lightMode = false, onPreview }: ReportCardProps) {
+export default function ReportCard({ report, lightMode = false }: ReportCardProps) {
   return (
     <BorderGlow
       edgeSensitivity={30}
@@ -98,19 +97,8 @@ export default function ReportCard({ report, lightMode = false, onPreview }: Rep
           </div>
         </div>
 
-        {/* Action Buttons: Direct Live Preview, New Tab & Download */}
+        {/* Action Buttons: New Tab & Download */}
         <div className="flex flex-col gap-2.5 pt-2">
-          {onPreview && (
-            <button
-              type="button"
-              onClick={() => onPreview(report)}
-              className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#9C1256] to-[#DE3F11] text-white hover:opacity-95 shadow-md flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-[1.02] cursor-pointer"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Launch Live PDF Viewer</span>
-            </button>
-          )}
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <a
               href={report.fileUrl}

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import AnimatedContent from "@/components/AnimatedContent";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 import {
   Building2,
@@ -253,7 +252,6 @@ export default function PartnersPage() {
                         alt={partner.name}
                         className="max-h-16 w-auto object-contain"
                       />
-                      <PlaceholderBadge id={partner.placeholderId} position="top-left" className="scale-75 origin-top-left" />
                     </div>
 
                     <span className="text-xs 3xl:text-base font-bold uppercase tracking-wider text-[#9C1256]">
