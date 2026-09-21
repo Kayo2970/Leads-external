@@ -130,21 +130,21 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
 
           {/* Event Quick Snapshot */}
           <div className="space-y-2 mb-5">
-            <div className="flex items-center space-x-2 text-xs">
+            <div className="flex items-center space-x-2 text-[17px]">
               <Calendar className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
               <span className={lightMode ? "text-slate-700 font-medium" : "text-white/80 font-medium"}>
                 {event.date}
               </span>
             </div>
 
-            <div className="flex items-center space-x-2 text-xs truncate">
+            <div className="flex items-center space-x-2 text-[17px] truncate">
               <MapPin className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
               <span className={`truncate ${lightMode ? "text-slate-600" : "text-white/70"}`}>
                 {event.location}
               </span>
             </div>
 
-            <div className="flex items-center space-x-2 text-xs">
+            <div className="flex items-center space-x-2 text-[17px]">
               <Users className="w-3.5 h-3.5 text-[#DE3F11] shrink-0" />
               <span className={`font-semibold ${lightMode ? "text-[#9C1256]" : "text-white/90"}`}>
                 {event.attendees}
