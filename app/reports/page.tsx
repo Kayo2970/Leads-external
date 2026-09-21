@@ -82,9 +82,6 @@ export default function ReportsPage() {
                   <div>
                     <h3 className="text-lg font-bold text-white flex items-center gap-2">
                       <span>Live Interactive PDF Preview</span>
-                      <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-[#DE3F11] text-white">
-                        Live Box
-                      </span>
                     </h3>
                     <p className="text-xs text-[#E2D9F3]">
                       {featuredReport.title} ({featuredReport.fileSize})
