@@ -145,19 +145,6 @@ export const EXECUTIVE_COUNCIL: BoardMember[] = [
 
 export const CORE_LEADERSHIP: BoardMember[] = [
   {
-    id: "gurutejas-c",
-    placeholderId: 8,
-    name: "Mr. Gurutejas C",
-    role: "Sr. President",
-    designation: "LEADS Next Gen Centre",
-    roleGroup: "Alumni Student Council",
-    initials: "GC",
-    image: "/images/committee/gurutejas-c.webp",
-    bio: "Spearheading overall student leadership, inter-university alliances, and strategic initiative execution.",
-    affiliation: "LEADS Next Gen Centre",
-    linkedin: "https://www.linkedin.com/in/gurutejas-c-215216291/",
-  },
-  {
     id: "abhijit-arya",
     placeholderId: 9,
     name: "Mr. Abhijit Arya",
@@ -324,7 +311,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "sudev-mitra",
     placeholderId: 20,
-    name: "Sudev Mitra",
+    name: "Sudev Mutraa",
     role: "Chief Coordinator",
     designation: "Core Committee",
     roleGroup: "Core Committee",
