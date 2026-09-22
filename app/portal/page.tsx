@@ -16,7 +16,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const ERP_PORTAL_URL = "https://leadsnextgencentre.online/";
+const ERP_PORTAL_URL = "https://portal-leads.msruas.ac.in/";
 
 export default function PortalGatewayPage() {
   const [isFallen, setIsFallen] = useState(false);
