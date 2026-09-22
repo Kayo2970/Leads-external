@@ -623,7 +623,7 @@ export function generateNewMemberWelcomeTemplate(member: {
     `• Division: ${divisionStr}${departmentStr}\n` +
     `• Registered Email: ${member.email}\n\n` +
     `Password Setup:\n` +
-    `When you log in for the first time at https://leadsnextgencentre.online using your email (${member.email}), you will be prompted directly to set your password.\n\n` +
+    `When you log in for the first time at https://portal-leads.msruas.ac.in using your email (${member.email}), you will be prompted directly to set your password.\n\n` +
     `Regards,\nLEADS Next Gen Centre, MSRUAS`;
 
   const bodyHtml = wrapInMasterEmailTemplate({
@@ -648,7 +648,7 @@ export function generateNewMemberWelcomeTemplate(member: {
       </div>
 
       <div style="text-align: center; margin: 28px 0;">
-        <a href="https://leadsnextgencentre.online" style="display: inline-block; background: #0284c7; color: #ffffff; font-weight: 700; font-size: 14px; padding: 12px 28px; border-radius: 10px; text-decoration: none;">
+        <a href="https://portal-leads.msruas.ac.in" style="display: inline-block; background: #0284c7; color: #ffffff; font-weight: 700; font-size: 14px; padding: 12px 28px; border-radius: 10px; text-decoration: none;">
           Log In & Set Up Password &rarr;
         </a>
       </div>
@@ -754,7 +754,7 @@ export function generateAnnouncementEmailTemplate(memberName: string, title: str
       <p style="margin-top: 0; color: #334155;">Hello <strong>${memberName}</strong>,</p>
       <p style="color: #0f172a; white-space: pre-wrap; font-size: 14px; line-height: 1.7;">${content}</p>
       <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid #e2e8f0; text-align: center;">
-        <a href="https://leadsnextgencentre.online/dashboard/announcements" style="background: #0284c7; color: #ffffff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 12px; display: inline-block;">View in Dashboard &rarr;</a>
+        <a href="https://portal-leads.msruas.ac.in/dashboard/announcements" style="background: #0284c7; color: #ffffff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 12px; display: inline-block;">View in Dashboard &rarr;</a>
       </div>
     `
   });
@@ -796,7 +796,7 @@ export function generateTaskEmailTemplate(memberName: string, taskTitle: string,
       </table>
 
       <div style="margin-top: 20px; text-align: center;">
-        <a href="https://leadsnextgencentre.online/dashboard/tasks" style="background: #0284c7; color: #ffffff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 12px; display: inline-block;">Open Tasks Desk &rarr;</a>
+        <a href="https://portal-leads.msruas.ac.in/dashboard/tasks" style="background: #0284c7; color: #ffffff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 12px; display: inline-block;">Open Tasks Desk &rarr;</a>
       </div>
     `
   });
@@ -828,7 +828,7 @@ export function generateEventRosterEmailTemplate(memberName: string, eventTitle:
       </div>
 
       <div style="margin-top: 20px; text-align: center;">
-        <a href="https://leadsnextgencentre.online/dashboard/events" style="background: #0284c7; color: #ffffff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 12px; display: inline-block;">View Event Details &rarr;</a>
+        <a href="https://portal-leads.msruas.ac.in/dashboard/events" style="background: #0284c7; color: #ffffff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 12px; display: inline-block;">View Event Details &rarr;</a>
       </div>
     `
   });
