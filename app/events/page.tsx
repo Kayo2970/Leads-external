@@ -5,7 +5,6 @@ import { useSearchParams } from "next/navigation";
 import EventModal from "@/components/EventModal";
 import CatalystSeriesModal from "@/components/CatalystSeriesModal";
 import AnimatedContent from "@/components/AnimatedContent";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 import { EVENTS_DATA, LEADSEvent } from "@/lib/events-data";
 import {

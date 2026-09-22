@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import { LEADSEvent } from "@/lib/events-data";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 import { Calendar, MapPin, Users, Crown, Zap, Shield, Rocket, Sparkles, UserCheck, Star, ArrowUpRight, Compass, GraduationCap } from "lucide-react";
 
@@ -75,7 +74,6 @@ export default function EventCard({ event, onOpenModal, lightMode = false }: Eve
               alt={event.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
             />
-            <PlaceholderBadge id={placeholderId} position="top-left" />
 
             <div
               className={`absolute inset-0 ${

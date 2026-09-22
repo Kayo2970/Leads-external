@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { LEADSEvent, LEADSEventEdition } from "@/lib/events-data";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 import {
   X,
@@ -149,7 +148,6 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                   alt={event.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
                 />
-                <PlaceholderBadge id={mainPhId} position="top-left" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-80" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-bold text-white border border-white/20">
@@ -209,7 +207,6 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                         alt={currentEdition.title}
                         className="w-full h-full object-cover absolute inset-0"
                       />
-                      <PlaceholderBadge id={editionPhId} position="top-left" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#180A30] via-transparent to-transparent opacity-70" />
                       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white font-bold">
                         <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/20">
@@ -335,7 +332,6 @@ export default function EventModal({ event, onClose }: EventModalProps) {
                         alt={ed.title}
                         className="w-full h-full object-cover rounded-2xl border border-white/10 absolute inset-0"
                       />
-                      <PlaceholderBadge id={edPhId} position="top-left" className="scale-75 origin-top-left" />
                     </div>
                     <div className="text-[11px] font-bold text-[#DE3F11] uppercase tracking-wider">
                       {ed.date}

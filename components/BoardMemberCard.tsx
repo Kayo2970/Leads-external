@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import BorderGlow from "@/components/BorderGlow";
 import { BoardMember } from "@/lib/board-data";
 import { ShieldCheck, Linkedin } from "lucide-react";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 
 interface BoardMemberCardProps {
@@ -59,9 +58,6 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
                   />
                 ) : (
                   <span>{member.initials}</span>
-                )}
-                {member.placeholderId && (
-                  <PlaceholderBadge id={member.placeholderId} position="bottom-right" className="scale-75 origin-bottom-right" />
                 )}
               </div>
 
@@ -145,9 +141,6 @@ export default function BoardMemberCard({ member, lightMode = false }: BoardMemb
                 />
               ) : (
                 <span>{member.initials}</span>
-              )}
-              {member.placeholderId && (
-                <PlaceholderBadge id={member.placeholderId} position="bottom-right" className="scale-75 origin-bottom-right" />
               )}
             </div>
 
