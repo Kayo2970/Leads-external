@@ -268,9 +268,9 @@ function EventsContent() {
                                     { id: "catalyst-3", num: "3.0", title: "Structured Thinking", year: "2025", idx: 0 },
                                     { id: "catalyst-4", num: "4.0", title: "Personal Branding", year: "2025", idx: 1 },
                                     { id: "catalyst-5", num: "5.0", title: "Attitude Dev. (Mr. Hemanth)", year: "2025", idx: 2 },
-                                    { id: "catalyst-6", num: "6.0", title: "Digital Leadership", year: "2025", idx: 3 },
-                                    { id: "catalyst-7", num: "7.0", title: "Tech Management (IEEE)", year: "2025", idx: 4, hideMobile: true },
-                                    { id: "catalyst-8", num: "8.0", title: "ESG & Business Models", year: "2025", idx: 5, hideMobile: true },
+                                    { id: "catalyst-6", num: "6.0", title: "Digital Leadership", year: "2026", idx: 3 },
+                                    { id: "catalyst-7", num: "7.0", title: "Tech Management (IEEE)", year: "2026", idx: 4, hideMobile: true },
+                                    { id: "catalyst-8", num: "8.0", title: "AI in Healthcare", year: "2026", idx: 5, hideMobile: true },
                                   ].map((item) => {
                                     const isCurrent = currentCatalystIndex === item.idx;
                                     return (
@@ -303,19 +303,27 @@ function EventsContent() {
                                   <button
                                     type="button"
                                     onClick={() => {
-                                      setSelectedCatalystEditionId(null);
+                                      setSelectedCatalystEditionId("catalyst-9");
                                       setIsCatalystModalOpen(true);
                                     }}
-                                    className="p-2 sm:p-2.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-between col-span-1 sm:col-span-2 hidden sm:flex text-left transition-colors cursor-pointer"
+                                    onMouseEnter={() => setCurrentCatalystIndex(6)}
+                                    className={`p-2 sm:p-2.5 rounded-xl border flex items-center justify-between col-span-1 sm:col-span-2 text-left transition-all duration-300 cursor-pointer ${
+                                      currentCatalystIndex === 6
+                                        ? "bg-[#DE3F11]/25 border-[#DE3F11] text-white shadow-md scale-[1.02]"
+                                        : "bg-white/5 hover:bg-white/15 border-white/10 text-white/90"
+                                    }`}
                                   >
                                     <span className="truncate">
-                                      <strong className="text-[#DE3F11]">9.0:</strong> Startup Leadership & VC Pitching
+                                      <strong className={currentCatalystIndex === 6 ? "text-[#FF8C61]" : "text-[#DE3F11]"}>
+                                        9.0:
+                                      </strong>{" "}
+                                      Strategic Negotiation & Digital Transformation
                                     </span>
                                     <span className="text-[10px] text-white/50 shrink-0 ml-1">2026</span>
                                   </button>
                                 </div>
                                 <div className="sm:hidden text-[11px] text-[#FF8C61] font-bold text-center pt-0.5">
-                                  + 3 More Editions (7.0, 8.0, 9.0) in Explorer
+                                  + 2 More Editions (7.0 & 8.0) in Modal Explorer
                                 </div>
                               </div>
                             </div>

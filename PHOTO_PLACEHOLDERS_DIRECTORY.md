@@ -96,6 +96,7 @@
 | **ph47** | Catalyst Leadership Talk Series 6.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 6.0.jpg` | `lib/events-data.ts` (`catalyst-6`) |
 | **ph48** | Catalyst Leadership Talk Series 7.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 7.0.jpg` | `lib/events-data.ts` (`catalyst-7`) |
 | **ph49** | Catalyst Leadership Talk Series 8.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 8.0.jpg` | `lib/events-data.ts` (`catalyst-8`) |
+| **ph74** | Catalyst Leadership Talk Series 9.0 | Catalyst Series | `/events` | `EventModal` | `/events/Catalyst Insight Leadership Talk Series 9.0.jpg` | `lib/events-data.ts` (`catalyst-9`) |
 | **ph50** | International Workshop Mindful Leadership in HEIs | Expert Talks | `/events` | `EventCard` / `EventModal` | `/events/International Workshop Mindful Leadership and Well-Being in HEIs.jpg` | `lib/events-data.ts` (`mindful-leadership-heis-workshop`) |
 | **ph51** | Expert Talk – Exploring Data Science with Python | Expert Talks | `/events` | `EventCard` / `EventModal` | `/events/Expert Talk – Exploring Data Science with Python.jpg` | `lib/events-data.ts` (`expert-talks-python`) |
 | **ph52** | Fireside Talk Global to Local Changemakers | Fireside Talks | `/events` | `EventCard` / `EventModal` | `/events/Fireside Talk Global to Local Changemakers.jpg` | `lib/events-data.ts` (`fireside-talks-change-makers`) |

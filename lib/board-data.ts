@@ -280,7 +280,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "nuthan-h",
     placeholderId: 16,
-    name: "Nuthan H",
+    name: "Mr. Nuthan H",
     role: "President",
     designation: "Core Committee, LEADS",
     roleGroup: "Core Committee",
@@ -291,7 +291,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "kunal-bhadauria",
     placeholderId: 17,
-    name: "Kunal Bhadauria",
+    name: "Mr. Kunal Bhadauria",
     role: "Vice President",
     designation: "Core Committee, LEADS",
     roleGroup: "Core Committee",
@@ -302,7 +302,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "kayomarz-pavri",
     placeholderId: 18,
-    name: "Kayomarz Pavri",
+    name: "Mr. Kayomarz Pavri",
     role: "Head - Design & Digital Media",
     designation: "Core Committee & Tech Lead",
     roleGroup: "Core Committee",
@@ -313,7 +313,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "shwetha-s",
     placeholderId: 19,
-    name: "Shwetha S",
+    name: "Ms. Shwetha S",
     role: "Head - Design and Social Media",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -324,7 +324,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "sudev-mitra",
     placeholderId: 20,
-    name: "Sudev Mitra",
+    name: "Mr. Sudev Mitra",
     role: "Chief Coordinator",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -335,7 +335,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "jyotsna-karn",
     placeholderId: 21,
-    name: "Jyotsna Karn",
+    name: "Ms. Jyotsna Karn",
     role: "Chief Coordinator",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -346,7 +346,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "pranav-pj",
     placeholderId: 22,
-    name: "Pranav P J",
+    name: "Mr. Pranav P J",
     role: "Chief Coordinator",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -357,7 +357,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "shravya-t",
     placeholderId: 23,
-    name: "Shravya T",
+    name: "Ms. Shravya T",
     role: "Chief Coordinator",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -368,7 +368,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "p-koushik-reddy",
     placeholderId: 56,
-    name: "P Koushik Reddy",
+    name: "Mr. P Koushik Reddy",
     role: "Chief Coordinator",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -379,7 +379,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "shriram-sg",
     placeholderId: 24,
-    name: "Shriram SG",
+    name: "Mr. Shriram SG",
     role: "General Secretary",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -390,7 +390,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "manoj-petakamsetty",
     placeholderId: 26,
-    name: "Manoj Petakamsetty",
+    name: "Mr. Manoj Petakamsetty",
     role: "General Secretary",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -401,7 +401,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "yash-chandak",
     placeholderId: 27,
-    name: "Yash Chandak",
+    name: "Mr. Yash Chandak",
     role: "Head - Operations and Logistics",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -412,7 +412,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "niyati-chawra",
     placeholderId: 28,
-    name: "Niyati Chawra",
+    name: "Ms. Niyati Chawra",
     role: "Head - Leadership and Development",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -423,7 +423,7 @@ export const CORE_COMMITTEE: BoardMember[] = [
   {
     id: "aravind-manashetti",
     placeholderId: 32,
-    name: "Aravind Manashetti",
+    name: "Mr. Aravind Manashetti",
     role: "Head - Finance and Sponsorship",
     designation: "Core Committee",
     roleGroup: "Core Committee",
@@ -437,7 +437,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "archana-s-nair",
     placeholderId: 49,
-    name: "Archana S Nair",
+    name: "Ms. Archana S Nair",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -448,7 +448,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "abdul-samad-khatta",
     placeholderId: 50,
-    name: "Abdul Samad Khatta",
+    name: "Mr. Abdul Samad Khatta",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -459,7 +459,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "mohammed-ibrahim",
     placeholderId: 51,
-    name: "Mohammed Ibrahim",
+    name: "Mr. Mohammed Ibrahim",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -470,7 +470,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "pranav-bansal",
     placeholderId: 52,
-    name: "Pranav Bansal",
+    name: "Mr. Pranav Bansal",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -481,7 +481,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "pruthvi-arya-singh",
     placeholderId: 53,
-    name: "Pruthvi Arya Singh",
+    name: "Mr. Pruthvi Arya Singh",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -492,7 +492,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "siddharth-gupta",
     placeholderId: 54,
-    name: "Siddharth Gupta",
+    name: "Mr. Siddharth Gupta",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -503,7 +503,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "rohit-kumar-raj",
     placeholderId: 55,
-    name: "Rohit Kumar Raj",
+    name: "Mr. Rohit Kumar Raj",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -514,7 +514,7 @@ export const TRAINEE_ASSOCIATES: BoardMember[] = [
   {
     id: "jagannadh-r-krishna",
     placeholderId: 57,
-    name: "Jagannadh R Krishna",
+    name: "Mr. Jagannadh R Krishna",
     role: "Student Trainee Associate",
     designation: "LEADS Next Gen Centre",
     roleGroup: "Student Trainee Associates",
@@ -530,7 +530,7 @@ export const STUDENT_ADVISORY_COUNCIL: BoardMember[] = [
   {
     id: "sahana-mahadev",
     placeholderId: 33,
-    name: "Sahana Mahadev",
+    name: "Ms. Sahana Mahadev",
     role: "Sr. Student Advisor",
     designation: "Student Advisory Council, LEADS",
     roleGroup: "Student Advisory Council",
@@ -541,7 +541,7 @@ export const STUDENT_ADVISORY_COUNCIL: BoardMember[] = [
   {
     id: "anurag-pandey",
     placeholderId: 34,
-    name: "Anurag Pandey",
+    name: "Mr. Anurag Pandey",
     role: "Sr. Student Advisor",
     designation: "Student Advisory Council, LEADS",
     roleGroup: "Student Advisory Council",

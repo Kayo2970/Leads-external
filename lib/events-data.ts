@@ -538,6 +538,39 @@ export const EVENTS_DATA: LEADSEvent[] = [
     ],
     editions: []
   },
+  {
+    id: "catalyst-9",
+    placeholderId: 74,
+    name: "Catalyst Insight: Leadership Talk Series 9.0",
+    seriesName: "Catalyst Series",
+    category: "Catalyst",
+    subCategory: "Catalyst Leadership Talk Series",
+    tagline: "Strategic Negotiation & Digital Transformation Leadership with Industry Executives",
+    date: "14 Jul 2026",
+    location: "LEADS Next Gen Centre, RUAS Campus, Bengaluru",
+    attendees: "120 Students • 10 Faculty Benefited",
+    badgeColor: "bg-[#DE3F11]/10 text-[#DE3F11] border-[#DE3F11]/20",
+    logoSvg: "zap",
+    photo: "/events/Catalyst Insight Leadership Talk Series 9.0.jpg",
+    gallery: ["/events/Catalyst Insight Leadership Talk Series 9.0.jpg", "/events/catalyst-workshop.webp"],
+    featured: true,
+    description: "Catalyst 9.0 convened senior industry practitioners and student leaders for an advanced masterclass on 'Strategic Negotiation, Innovation Governance, and Digital Transformation Strategy.' The session delivered structured frameworks on cross-cultural negotiation protocols, stakeholder consensus building, enterprise agile adaptability, and ethical technology governance for next-generation leaders driving India's Viksit Bharat 2047 economic roadmap.",
+    seriesHighlights: [
+      "Executive masterclass on high-stakes strategic negotiation and cross-cultural decision dynamics",
+      "Frameworks for agile enterprise transformation, AI-driven innovation governance, and operational resilience",
+      "Interactive boardroom dispute-resolution simulations with senior corporate mentors",
+      "Structuring value-creating win-win partnerships and ethical leadership under market uncertainty"
+    ],
+    outcomes: [
+      "Strategic Negotiation & Conflict Resolution: Students mastered principled negotiation frameworks, BATNA evaluation, and stakeholder alignment techniques in high-pressure scenarios.",
+      "Digital Transformation & Governance Literacy: Participants developed actionable roadmaps for navigating organizational change, digital disruption, and ethical leadership in modern enterprise ecosystems."
+    ],
+    speakers: [
+      "Executive Industry Mentors & Corporate Strategy Directors",
+      "LEADS Centre Leadership & Faculty Mentors"
+    ],
+    editions: []
+  },
 
   // 4. Expert Talks & Case Cracker
   {
