@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import BorderGlow from "@/components/BorderGlow";
 import {
   Mail,
@@ -12,7 +11,6 @@ import {
   Shield,
   Calendar,
   Sparkles,
-  ArrowRight,
   Handshake,
 } from "lucide-react";
 
@@ -351,18 +349,6 @@ export default function ContactPage() {
                     </div>
                     <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0A66C2] transition-colors" />
                   </a>
-
-                  {/* Portal Access */}
-                  <Link
-                    href="/portal"
-                    className="flex items-center justify-between p-3 rounded-xl bg-purple-50/60 hover:bg-[#361C6A]/10 border border-purple-100 hover:border-[#361C6A]/40 text-slate-700 hover:text-[#361C6A] transition-all group"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <Building2 className="w-4 h-4 text-[#361C6A]" />
-                      <span className="text-xs font-semibold">LEADS ERP &amp; Member Portal</span>
-                    </div>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#361C6A] group-hover:translate-x-0.5 transition-all" />
-                  </Link>
                 </div>
               </div>
             </BorderGlow>
