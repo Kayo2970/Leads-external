@@ -48,13 +48,10 @@ export function generateNumberedPlaceholderSvg({
     
     <circle cx="240" cy="210" r="100" fill="#180A30" stroke="url(#brandGrad_${id})" stroke-width="6" />
     
-    <text x="240" y="175" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="800" font-size="20" letter-spacing="3">
+    <text x="240" y="218" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="800" font-size="20" letter-spacing="3">
       PLACEHOLDER
     </text>
-    <text x="240" y="240" text-anchor="middle" fill="url(#brandGrad_${id})" font-family="system-ui, sans-serif" font-weight="900" font-size="64">
-      #${id}
-    </text>
-    
+
     ${
       category
         ? `<rect x="100" y="345" width="280" height="36" rx="18" fill="rgba(222,63,17,0.2)" stroke="rgba(222,63,17,0.5)" stroke-width="1.5" />
