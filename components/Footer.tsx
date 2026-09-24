@@ -239,6 +239,9 @@ export default function Footer() {
             <Link href="/accessibility" className="hover:text-white transition-colors">
               Accessibility
             </Link>
+            <Link href="/sitemap" className="hover:text-white transition-colors">
+              Site Map
+            </Link>
             <button
               type="button"
               onClick={openCookiePreferences}
