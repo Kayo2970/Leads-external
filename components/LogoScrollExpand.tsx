@@ -24,8 +24,8 @@ export interface LogoScrollExpandProps {
 export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
   logoSrc = "/leads-white-logo.png",
   maskSrc = "/leads-mask.svg",
-  scrollDistance = 1.0,
-  holdDistance = 0.2,
+  scrollDistance = 0.8,
+  holdDistance = 0.15,
   smoothing = 0.1,
   children,
   className = "",
@@ -67,20 +67,17 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     const w = typeof window !== "undefined" ? window.innerWidth : 1440;
     const h = typeof window !== "undefined" ? window.innerHeight : 900;
 
-    // On mobile devices, bypass scroll-jack masking entirely
-    if (w < 768) {
-      curtain.style.display = "none";
-      frame.style.opacity = "1";
-      frame.style.transform = "none";
-      frame.style.pointerEvents = "auto";
-      return;
-    }
-
     const e = smoothstep(0, 1, p);
 
-    // Responsive initial logo size for desktop / tablet
+    // Responsive initial logo size for desktop / tablet / mobile
     let startSize = 440;
-    if (w < 1024) {
+    if (w < 480) {
+      // Small to standard mobile
+      startSize = clamp(w * 0.75, 220, 320);
+    } else if (w < 768) {
+      // Large mobile / phablet
+      startSize = clamp(w * 0.6, 280, 380);
+    } else if (w < 1024) {
       // Tablet
       startSize = clamp(w * 0.45, 360, 460);
     } else if (w < 1920) {
@@ -95,7 +92,8 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     logoBox.style.height = `${startSize}px`;
 
     // Flythrough: layer mask logo expands toward camera exposing the hero section
-    const logoScale = 1 + Math.pow(e, 1.85) * 7.5;
+    const expansionFactor = w < 768 ? 9.5 : 7.5;
+    const logoScale = 1 + Math.pow(e, 1.85) * expansionFactor;
 
     // Scale and position the white logo outline overlay
     logoBox.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
@@ -140,7 +138,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
       setIsMobile(mobile);
       return mobile;
     };
-    const mobile = checkMobile();
+    checkMobile();
 
     const root = rootRef.current;
     const track = trackRef.current;
@@ -148,20 +146,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     const frame = frameRef.current;
     const curtain = curtainRef.current;
     if (!root || !track || !stage) return;
-
-    if (mobile) {
-      track.style.height = "auto";
-      stage.style.height = "auto";
-      if (frame) {
-        frame.style.opacity = "1";
-        frame.style.transform = "none";
-        frame.style.pointerEvents = "auto";
-      }
-      if (curtain) {
-        curtain.style.display = "none";
-      }
-      return;
-    }
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -172,11 +156,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     let running = false;
 
     const measure = () => {
-      if (window.innerWidth < 768) {
-        track.style.height = "auto";
-        stage.style.height = "auto";
-        return;
-      }
       const c = propsRef.current;
       stageH = window.innerHeight;
       if (stageH <= 0) return;
@@ -185,7 +164,6 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     };
 
     const readProgress = () => {
-      if (window.innerWidth < 768) return 1;
       const c = propsRef.current;
       const span = stageH * Math.max(0.01, c.scrollDistance);
       const top = track.getBoundingClientRect().top;
@@ -221,20 +199,7 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
     };
 
     const onResize = () => {
-      const isMob = checkMobile();
-      if (isMob) {
-        track.style.height = "auto";
-        stage.style.height = "auto";
-        if (frame) {
-          frame.style.opacity = "1";
-          frame.style.transform = "none";
-          frame.style.pointerEvents = "auto";
-        }
-        if (curtain) {
-          curtain.style.display = "none";
-        }
-        return;
-      }
+      checkMobile();
       measure();
       target = readProgress();
       current = target;
@@ -278,8 +243,8 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
             {children}
           </div>
 
-          {/* Opening Splash Curtain for Desktop: Royal Purple Backdrop with White Logo Layer Mask Cutout */}
-          <div ref={curtainRef} className="logo-scroll-expand__curtain hidden md:block">
+          {/* Opening Splash Curtain: Royal Purple Backdrop with White Logo Layer Mask Cutout */}
+          <div ref={curtainRef} className="logo-scroll-expand__curtain">
             {/* SVG Vector Layer Mask Cutout */}
             <svg className="logo-scroll-expand__mask-svg" width="100%" height="100%">
               <defs>
@@ -371,12 +336,12 @@ export const LogoScrollExpand: React.FC<LogoScrollExpandProps> = ({
               <button
                 type="button"
                 onClick={handleScrollDown}
-                aria-label="Scroll or click here to explore website content"
-                title="Scroll or click here to explore website"
+                aria-label="Scroll or tap here to explore website content"
+                title="Scroll or tap here to explore website"
                 className="logo-scroll-expand__scroll-pill animate-pulse-down hover:scale-105 hover:border-[#DE3F11] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#DE3F11] focus:ring-offset-2 focus:ring-offset-[#1E0C3D]"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#DE3F11]" />
-                <span>Scroll or Click Here to Explore</span>
+                <span>Scroll or Tap to Explore</span>
                 <ChevronDown className="w-4 h-4 text-[#DE3F11] animate-bounce" />
               </button>
             </div>
