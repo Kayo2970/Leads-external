@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { LEADSEvent, EVENTS_DATA } from "@/lib/events-data";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 import {
   X,
@@ -275,9 +274,6 @@ export default function CatalystSeriesModal({
                           alt={ev.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 absolute inset-0"
                         />
-                        {ev.placeholderId && (
-                          <PlaceholderBadge id={ev.placeholderId} position="top-right" className="scale-75 origin-top-right" />
-                        )}
                       </div>
 
                       {/* OUTCOMES BADGES */}

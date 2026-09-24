@@ -3,7 +3,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./ChromaGrid.css";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { generateNumberedPlaceholderSvg } from "@/lib/placeholders";
 
 export interface ChromaItem {
@@ -181,13 +180,6 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
                   }
                 }}
               />
-              {phId && (
-                <PlaceholderBadge
-                  id={phId}
-                  position="top-left"
-                  className="scale-90 origin-top-left"
-                />
-              )}
             </div>
             <footer className="chroma-info">
               <h3 className="name">{c.title}</h3>

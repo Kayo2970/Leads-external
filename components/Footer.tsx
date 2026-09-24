@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import PlaceholderBadge from "@/components/PlaceholderBadge";
 import { Mail, MapPin, Shield, Handshake, Sliders, Phone } from "lucide-react";
 
 export default function Footer() {
