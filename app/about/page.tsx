@@ -353,9 +353,6 @@ export default function AboutPage() {
                         <span className="px-3 py-1 3xl:px-5 3xl:py-2 rounded-full text-[11px] 3xl:text-base font-bold uppercase tracking-wider bg-[#361C6A] text-white">
                           {partition.badge}
                         </span>
-                        <span className="px-2.5 py-0.5 3xl:px-4 3xl:py-1.5 rounded-md text-xs 3xl:text-base font-semibold bg-[#DE3F11]/10 text-[#DE3F11] border border-[#DE3F11]/20">
-                          {partition.count}
-                        </span>
                       </div>
                       <h3 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-extrabold text-[#1E0C3D]">
                         {partition.title}
@@ -408,9 +405,6 @@ export default function AboutPage() {
                                   {subGroup.subTitle}
                                 </h4>
                               </div>
-                              <span className="text-xs font-bold text-[#DE3F11] bg-purple-50 px-3 py-1 rounded-lg border border-purple-100 w-fit">
-                                {subGroup.subMembers.length} Members
-                              </span>
                             </div>
 
                             <div style={{ position: "relative" }}>
