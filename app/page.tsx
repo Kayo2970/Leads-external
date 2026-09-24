@@ -64,7 +64,7 @@ export default function Home() {
 
             {/* Subheading */}
             <p className="mt-6 3xl:mt-10 text-base sm:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl text-[#E2D9F3] max-w-3xl 2xl:max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl mx-auto leading-relaxed font-normal">
-              A national centre for leadership and non-technical skill upliftment — for founders, professionals, government leaders, students, and researchers who want to achieve something more.
+              A centre for leadership and non-technical skill upliftment — for founders, professionals, government leaders, students, and researchers who want to achieve something more.
             </p>
 
             {/* CTA Buttons */}
