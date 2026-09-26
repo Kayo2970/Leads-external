@@ -598,8 +598,18 @@ async function readCollectionFile<T = any>(key: keyof DbSchema): Promise<T[]> {
         const decryptedText = decryptData(parsed);
         jsonContent = JSON.parse(decryptedText);
       } catch (decErr) {
-        console.error(`[server-db] Decryption failed for collection "${String(key)}":`, decErr);
-        return ((EMPTY_DB[key] as any[]) ?? []) as T[];
+        // NEVER treat a decryption failure as "this collection is empty" — that
+        // silently made real records (e.g. design submissions) vanish from every
+        // GET, and worse, a write shortly after (mutateCollection reads via this
+        // same function) would then persist an empty/partial array over the
+        // still-encrypted-but-unreadable original data, destroying it for good.
+        // A wrong/rotated DATA_ENCRYPTION_KEY (or a restart that lost the .env
+        // value) must surface as a loud error, not a quiet "0 submissions".
+        console.error(`[server-db] Decryption failed for collection "${String(key)}" — refusing to report this as empty:`, decErr);
+        throw new Error(
+          `Failed to decrypt collection "${String(key)}". DATA_ENCRYPTION_KEY may be missing or has changed since this data was written. ` +
+          `Fix the key rather than resubmitting — writing new data now would overwrite the existing (still-intact) encrypted file.`
+        );
       }
     }
 
@@ -607,7 +617,13 @@ async function readCollectionFile<T = any>(key: keyof DbSchema): Promise<T[]> {
     if (key === 'designs') arr = processDesignRetention(arr);
     return arr as T[];
   } catch (err: any) {
-    if (err?.code !== 'ENOENT') return ((EMPTY_DB[key] as any[]) ?? []) as T[];
+    if (err?.code !== 'ENOENT') {
+      // A corrupted/unreadable/undecryptable collection file must fail loudly
+      // (500, logged) rather than silently reporting "empty" — see the
+      // decryption-failure comment above for why treating this as empty is
+      // actively dangerous (it can lead to genuine data loss on the next write).
+      throw err;
+    }
     // First boot for this specific collection: seed it from local-data.ts's initial* export.
     const seeded = ((SEED_DB[key] as any[]) ?? []) as T[];
     try {
@@ -638,12 +654,33 @@ async function touchMeta(): Promise<void> {
   }
 }
 
-/** Read every collection and assemble the full DbSchema shape (used by the /api/data aggregate poll). */
-export async function readDb(): Promise<DbSchema> {
+/**
+ * Read every collection and assemble the full DbSchema shape (used by the /api/data aggregate poll).
+ *
+ * A single corrupted/undecryptable collection must not take the whole poll down (every dashboard
+ * page reads through this one endpoint) — but it also must never be silently reported as "empty"
+ * the way it used to be, since that looked indistinguishable from genuinely having no records and
+ * previously masked real data loss. So a per-collection failure here is caught, logged loudly, and
+ * surfaced via `corruptedCollections` for the client to show a real warning on — never swallowed.
+ * This function only reads; the actual write-time protection against overwriting a corrupted
+ * collection with an empty array lives in readCollectionFile()/mutateCollection(), which still
+ * throw hard and are never routed through this catch.
+ */
+export async function readDb(): Promise<DbSchema & { corruptedCollections?: string[] }> {
+  const corrupted: string[] = [];
   const entries = await Promise.all(
-    COLLECTION_KEYS.map(async key => [key, await readCollectionFile(key)] as const)
+    COLLECTION_KEYS.map(async key => {
+      try {
+        return [key, await readCollectionFile(key)] as const;
+      } catch (err) {
+        console.error(`[server-db] readDb: collection "${String(key)}" failed to read, reporting as unavailable (NOT empty) in this poll:`, err);
+        corrupted.push(String(key));
+        return [key, (EMPTY_DB[key] as any[]) ?? []] as const;
+      }
+    })
   );
-  const db = Object.fromEntries(entries) as unknown as DbSchema;
+  const db = Object.fromEntries(entries) as unknown as DbSchema & { corruptedCollections?: string[] };
+  if (corrupted.length) db.corruptedCollections = corrupted;
   try {
     const metaRaw = await fs.readFile(META_PATH, 'utf-8');
     db.lastUpdated = JSON.parse(metaRaw)?.lastUpdated;
